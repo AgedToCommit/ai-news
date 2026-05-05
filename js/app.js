@@ -223,8 +223,13 @@ async function render() {
     bottomLabel = "Yesterday's afternoon";
   }
 
-  const topSnap = topId ? await fetchJson(manifest.snapshots.find(s => s.id === topId).file.startsWith(dataDir) ? manifest.snapshots.find(s => s.id === topId).file : `${dataDir}/${topId}.json`) : null;
-  const bottomSnap = bottomId ? await fetchJson(manifest.snapshots.find(s => s.id === bottomId).file.startsWith(dataDir) ? manifest.snapshots.find(s => s.id === bottomId).file : `${dataDir}/${bottomId}.json`) : null;
+  const topMeta = topId ? findSnapshotMeta(manifest, topId) : null;
+  const topFile = topMeta ? (topMeta.file.startsWith(dataDir) ? topMeta.file : `${dataDir}/${topId}.json`) : null;
+  const topSnap = topFile ? await fetchJson(topFile) : null;
+
+  const bottomMeta = bottomId ? findSnapshotMeta(manifest, bottomId) : null;
+  const bottomFile = bottomMeta ? (bottomMeta.file.startsWith(dataDir) ? bottomMeta.file : `${dataDir}/${bottomId}.json`) : null;
+  const bottomSnap = bottomFile ? await fetchJson(bottomFile) : null;
 
   top.innerHTML = topLabel ? renderSection(topLabel, topSnap) : '';
   bottom.innerHTML = bottomLabel ? renderSection(bottomLabel, bottomSnap) : '';
