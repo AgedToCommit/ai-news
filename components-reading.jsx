@@ -3,9 +3,6 @@
 // =====================================================================
 
 function ReadingView({ item, onClose }) {
-  const scrollRef = useRef(null);
-  const closedRef = useRef(false);
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -16,22 +13,8 @@ function ReadingView({ item, onClose }) {
     };
   }, [onClose]);
 
-  // Scroll to bottom → return to front page (with small overscroll grace).
-  // Guard: only triggers if the user has actually scrolled meaningfully,
-  // so short articles don't auto-close on open.
-  function handleScroll(e) {
-    if (closedRef.current) return;
-    const el = e.currentTarget;
-    const remaining = el.scrollHeight - el.scrollTop - el.clientHeight;
-    const scrolled = el.scrollTop > 200;
-    if (scrolled && remaining < 20) {
-      closedRef.current = true;
-      onClose();
-    }
-  }
-
   return (
-    <div ref={scrollRef} onScroll={handleScroll} className="fade-in" style={{
+    <div className="fade-in" style={{
       position: "fixed", inset: 0,
       background: "var(--paper)", zIndex: 100, overflowY: "auto"
     }}>
@@ -49,7 +32,7 @@ function ReadingView({ item, onClose }) {
         <div className="page flex between center" style={{ padding: "14px var(--margin)" }}>
           <span className="mono">The Daily Signal · Reading View</span>
           <span className="mono" style={{ color: "var(--ink-faint)" }}>
-            Scroll to end or press Esc to return ↓
+            Press Esc to return
           </span>
           <button onClick={onClose} className="btn">← Back to Front Page</button>
         </div>
