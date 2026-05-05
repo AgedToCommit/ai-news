@@ -133,7 +133,12 @@ function App() {
       </div>
 
       {openItem && (
-        <ReadingView item={openItem} onClose={handleClose}/>
+        <ReadingView
+          item={openItem}
+          onClose={handleClose}
+          items={[...(cycle.top ? cycle.top.items : []), ...(cycle.bottom ? cycle.bottom.items : [])]}
+          onNext={handleOpen}
+        />
       )}
     </>
   );
