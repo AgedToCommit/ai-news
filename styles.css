@@ -219,11 +219,127 @@ a { color: inherit; text-decoration: none; }
 .gap-m { gap: 18px; }
 .gap-l { gap: 32px; }
 
-/* Responsive — collapse grid below 900px */
-@media (max-width: 900px) {
-  :root { --margin: 20px; --gutter: 16px; }
-  .grid-12 { grid-template-columns: 1fr; }
+/* =============================================================
+   MOBILE — Tablet & Phone breakpoints
+   The page is built on a 12-col desktop grid; on smaller screens
+   we collapse to a 2-col tablet grid then a single column phone.
+   ============================================================= */
+
+/* ---------- Tablet (≤ 960px) ---------- */
+@media (max-width: 960px) {
+  :root {
+    --margin: 28px;
+    --gutter: 20px;
+  }
+  html, body { font-size: 16px; }
+
+  /* Collapse the 12-col grid: every "span N" becomes either 1 or 2 of 2 */
+  .grid-12 { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; }
+  .grid-12 > [style*="span 12"],
+  .grid-12 > [style*="span 7"],
+  .grid-12 > [style*="span 6"],
+  .grid-12 > [style*="span 5"],
+  .grid-12 > [style*="span 4"],
+  .grid-12 > [style*="span 3"] {
+    grid-column: span 2 !important;
+  }
+
+  /* Section markers wrap to two lines */
+  .section-marker {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding-bottom: 10px;
+  }
+  .section-marker .title { font-size: 22px; }
+  .section-marker .spacer { display: none; }
+}
+
+/* ---------- Phone (≤ 640px) ---------- */
+@media (max-width: 640px) {
+  :root {
+    --margin: 18px;
+    --gutter: 16px;
+  }
+  html, body { font-size: 15px; }
+
+  .page { padding: 0 var(--margin); }
+
+  /* Single column on phones */
+  .grid-12 { grid-template-columns: 1fr; gap: 28px; }
   .grid-12 > * { grid-column: span 1 !important; }
+
+  /* Masthead */
+  .page > header { padding-top: 16px; }
+  .page > header .display {
+    font-size: clamp(36px, 10vw, 56px) !important;
+    letter-spacing: -0.025em !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  /* Top mono strip stacks */
+  .page > header > .flex.between.center.mono {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    font-size: 10px;
+  }
+
+  /* Nav: scroll horizontally so all five tabs are reachable */
+  .page > header > nav {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 14px;
+  }
+  .page > header > nav > .flex.gap-l {
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    gap: 18px !important;
+    padding-bottom: 6px;
+    margin: 0 calc(-1 * var(--margin));
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+    scrollbar-width: none;
+  }
+  .page > header > nav > .flex.gap-l::-webkit-scrollbar { display: none; }
+  .page > header > nav > .flex.gap-l > a { flex: 0 0 auto; }
+  .page > header > nav > .flex.center.gap-s input {
+    width: 100% !important;
+  }
+  .page > header > nav > .flex.center.gap-s {
+    width: 100%;
+  }
+
+  /* Section markers: stack vertically, hide tier counts */
+  .section-marker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .section-marker .title { font-size: 20px; }
+
+  /* Lead story display headline cap */
+  .display { line-height: 0.96; }
+
+  /* Buttons go full-width-ish */
+  .btn { padding: 10px 14px; font-size: 11px; }
+
+  /* Reading view: tighter padding, smaller title */
+  body > div[style*="position: fixed"] article.page,
+  body > div.fade-in article.page {
+    padding: 30px var(--margin) 60px !important;
+  }
+
+  /* Footer/colophon stack */
+  footer .grid-12 > div { padding-bottom: 12px; }
+}
+
+/* ---------- Tiny phones (≤ 380px) ---------- */
+@media (max-width: 380px) {
+  :root { --margin: 14px; }
+  html, body { font-size: 14px; }
+  .page > header .display {
+    font-size: 44px !important;
+  }
 }
 
 /* Scrollbar paper-themed */
