@@ -1,0 +1,232 @@
+/* ============================================================
+   THE DAILY SIGNAL — Midcentury Editorial Tokens
+   Aesthetic: 1958–1965 American editorial design.
+   Push Pin Studios x Vignelli Unimark x Westvaco Inspirations.
+   ============================================================ */
+
+:root {
+  /* Paper & Ink */
+  --paper: #f1ead8;          /* warm cream pulp */
+  --paper-deep: #e8dfc6;     /* shadow paper */
+  --paper-light: #f7f1e1;    /* highlight paper */
+  --ink: #1a1410;            /* not pure black — rich brown-black */
+  --ink-soft: #3a2f25;
+  --ink-faint: #6b5e4f;
+  --rule: #1a1410;
+
+  /* Accents — restrained, ink-mixed */
+  --persimmon: #d94a26;      /* primary hot accent */
+  --persimmon-deep: #a8341a;
+  --teal: #3a7a78;           /* cool counterpoint */
+  --ochre: #c89028;          /* tertiary */
+  --olive: #6b6230;
+
+  /* Typography */
+  --serif: "DM Serif Display", "Playfair Display", Georgia, serif;
+  --serif-text: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --grotesk: "Archivo", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Scale */
+  --r-sm: 2px;
+  --r: 0;
+
+  /* Grid */
+  --gutter: 28px;
+  --margin: 56px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif-text);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle paper grain — single CSS layer, no external image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+  background-image:
+    radial-gradient(rgba(60, 40, 20, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(60, 40, 20, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+  mix-blend-mode: multiply;
+}
+
+/* ----- Typography helpers ----- */
+.eyebrow {
+  font-family: var(--grotesk);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ----- Rules & dividers ----- */
+.rule { border: 0; border-top: 1px solid var(--ink); margin: 0; }
+.rule-thick { border: 0; border-top: 4px solid var(--ink); margin: 0; }
+.rule-double {
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  height: 5px;
+  margin: 0;
+}
+.rule-persimmon { border: 0; border-top: 2px solid var(--persimmon); margin: 0; }
+
+/* Layout building blocks */
+.page {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--margin);
+  position: relative;
+  z-index: 2;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+}
+
+/* Halftone-ish placeholder image */
+.halftone {
+  position: relative;
+  background: var(--paper-deep);
+  overflow: hidden;
+  isolation: isolate;
+}
+.halftone::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: radial-gradient(var(--ink) 22%, transparent 23%);
+  background-size: 4px 4px;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+.halftone::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 30%, rgba(217, 74, 38, 0.0) 30%);
+}
+.halftone .htlabel {
+  position: absolute;
+  bottom: 8px; left: 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--paper);
+  padding: 2px 6px;
+  z-index: 2;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  font-family: var(--grotesk);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn-primary { background: var(--persimmon); color: var(--paper); border-color: var(--persimmon); }
+.btn-primary:hover { background: var(--ink); border-color: var(--ink); }
+
+/* ===== Atomic shapes (hand-friendly geometric marks) ===== */
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.diamond { width: 10px; height: 10px; transform: rotate(45deg); display: inline-block; }
+
+/* Section markers like in the references */
+.section-marker {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 8px;
+  margin-bottom: 28px;
+}
+.section-marker .num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.section-marker .label {
+  font-family: var(--grotesk);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.section-marker .title {
+  font-family: var(--serif);
+  font-size: 28px;
+  letter-spacing: -0.01em;
+}
+.section-marker .spacer { flex: 1; }
+
+/* ===== Article reading view fade-in ===== */
+.fade-in {
+  animation: fade 0.45s ease both;
+}
+@keyframes fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* small util */
+.flex { display: flex; }
+.between { justify-content: space-between; }
+.center { align-items: center; }
+.gap-s { gap: 10px; }
+.gap-m { gap: 18px; }
+.gap-l { gap: 32px; }
+
+/* Responsive — collapse grid below 900px */
+@media (max-width: 900px) {
+  :root { --margin: 20px; --gutter: 16px; }
+  .grid-12 { grid-template-columns: 1fr; }
+  .grid-12 > * { grid-column: span 1 !important; }
+}
+
+/* Scrollbar paper-themed */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--paper-deep); }
+::-webkit-scrollbar-thumb { background: var(--ink); border: 2px solid var(--paper-deep); }
