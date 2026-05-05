@@ -286,9 +286,15 @@ a { color: inherit; text-decoration: none; }
 
   /* Masthead center: allow eyebrow lines to wrap */
   .masthead-center .eyebrow {
-    white-space: normal;
+    white-space: normal !important;
     letter-spacing: 0.1em;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
+
+  /* Prevent anything from bleeding horizontally off-screen */
+  html, body { overflow-x: hidden; }
+  .page { overflow-x: hidden; }
 
   /* Nav: stack to column, links scroll horizontally */
   .masthead-nav {
@@ -297,17 +303,9 @@ a { color: inherit; text-decoration: none; }
     gap: 14px;
   }
   .masthead-nav-links {
-    overflow-x: auto;
-    flex-wrap: nowrap !important;
-    gap: 18px !important;
-    padding-bottom: 6px;
-    margin: 0 calc(-1 * var(--margin));
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-    scrollbar-width: none;
+    flex-wrap: wrap !important;
+    gap: 10px 18px;
   }
-  .masthead-nav-links::-webkit-scrollbar { display: none; }
-  .masthead-nav-links > a { flex: 0 0 auto; }
   .masthead-search { width: 100%; }
   .masthead-search input { width: 100% !important; }
 
@@ -333,6 +331,8 @@ a { color: inherit; text-decoration: none; }
 
   /* Footer/colophon stack */
   footer .grid-12 > div { padding-bottom: 12px; }
+
+  .next-story-block { display: block; }
 }
 
 /* ---------- Tiny phones (≤ 380px) ---------- */
@@ -343,6 +343,9 @@ a { color: inherit; text-decoration: none; }
     font-size: 44px !important;
   }
 }
+
+/* Next story block — mobile reading flow only */
+.next-story-block { display: none; }
 
 /* Scrollbar paper-themed */
 ::-webkit-scrollbar { width: 10px; height: 10px; }

@@ -2,7 +2,9 @@
 // THE DAILY SIGNAL — Reading view + Banners + Footer + Archive
 // =====================================================================
 
-function ReadingView({ item, onClose }) {
+function ReadingView({ item, onClose, items, onNext }) {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -13,8 +15,19 @@ function ReadingView({ item, onClose }) {
     };
   }, [onClose]);
 
+  const currentIdx = items ? items.findIndex(i => i.id === item.id) : -1;
+  const nextItem = (items && currentIdx >= 0 && currentIdx < items.length - 1)
+    ? items[currentIdx + 1]
+    : null;
+
+  function handleNext() {
+    if (!nextItem || !onNext) return;
+    if (containerRef.current) containerRef.current.scrollTop = 0;
+    onNext(nextItem);
+  }
+
   return (
-    <div className="fade-in" style={{
+    <div ref={containerRef} className="fade-in" style={{
       position: "fixed", inset: 0,
       background: "var(--paper)", zIndex: 100, overflowY: "auto"
     }}>
@@ -138,6 +151,20 @@ function ReadingView({ item, onClose }) {
             Read at {item.source.name} ↗
           </a>
         </div>
+
+        {nextItem && (
+          <div className="next-story-block">
+            <hr className="rule" style={{ margin: "36px 0 20px" }}/>
+            <div className="mono" style={{ color: "var(--ink-faint)", marginBottom: 10 }}>Up Next</div>
+            <h3 className="display" style={{ fontSize: 24, margin: "0 0 18px", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
+              {nextItem.title}
+            </h3>
+            <button className="btn btn-primary" onClick={handleNext}
+                    style={{ width: "100%", padding: "14px", fontSize: 13 }}>
+              Next Story →
+            </button>
+          </div>
+        )}
       </article>
     </div>
   );
