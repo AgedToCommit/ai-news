@@ -59,7 +59,7 @@ function HeroFigure({ item, height, aspect, style = {} }) {
 function Masthead({ onNav, current, onSearch, query, dateLabel, refreshLabel }) {
   return (
     <header style={{ paddingTop: 28 }}>
-      <div className="flex between center mono" style={{ paddingBottom: 8 }}>
+      <div className="flex between center mono masthead-meta" style={{ paddingBottom: 8 }}>
         <span>Vol. I · No. 001 · A Personal Edition</span>
         <span>{dateLabel}</span>
         <span>Last Refresh · {refreshLabel}</span>
