@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI News — for Gabe</title>
+<style>
+  :root { --bg:#0b0d10; --panel:#14181d; --ink:#e8eaed; --muted:#8b95a1; --accent:#7cc5ff; --warn:#ffb86b; --danger:#ff7b7b; --tier1:#ff7b7b; --tier2:#7cc5ff; --tier3:#8b95a1; --border:#1f262d; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; line-height:1.55; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 28px; margin: 0 0 8px; letter-spacing:-0.02em; }
+  h2 { font-size: 18px; margin: 32px 0 16px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+  .banner { background: var(--panel); border:1px solid var(--border); border-left:3px solid var(--accent); padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
+  .banner.warn { border-left-color: var(--warn); }
+  .banner.danger { border-left-color: var(--danger); color: var(--ink); }
+  .item { background: var(--panel); border:1px solid var(--border); border-radius:8px; padding: 18px 20px; margin-bottom: 14px; }
+  .item .meta { display:flex; gap:8px; font-size:12px; color:var(--muted); margin-bottom:8px; flex-wrap:wrap; }
+  .tag { background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 999px; }
+  .tag.tier1 { color: var(--tier1); border:1px solid var(--tier1); }
+  .tag.tier2 { color: var(--tier2); border:1px solid var(--tier2); }
+  .tag.tier3 { color: var(--tier3); border:1px solid var(--tier3); }
+  .tag.region { color: var(--muted); }
+  .tag.updated { color: var(--accent); }
+  .tag.promoted { color: var(--warn); }
+  .item h3 { font-size: 17px; margin: 0 0 8px; }
+  .item .summary { color: var(--ink); margin: 0 0 8px; }
+  .item .why { color: var(--muted); font-style: italic; font-size: 14px; margin: 8px 0; padding: 8px 12px; border-left: 2px solid var(--border); }
+  .item .source-row { color: var(--muted); font-size: 13px; }
+  .item .source-row a { color: var(--accent); text-decoration: none; }
+  .item .source-row a:hover { text-decoration: underline; }
+  .item .hero { width: 100%; max-height: 280px; object-fit: cover; border-radius: 6px; margin-bottom: 12px; display: block; background: #1a1f24; }
+  .archive { margin-top: 48px; }
+  .archive summary { cursor: pointer; color: var(--muted); padding: 12px 0; }
+  .archive ul { list-style: none; padding-left: 0; }
+  .archive li { padding: 6px 0; color: var(--muted); font-size: 14px; }
+  .archive li button { background: none; border: none; color: var(--accent); cursor: pointer; padding: 0; font: inherit; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+  .takes { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .takes blockquote { margin: 8px 0; padding: 8px 12px; border-left: 2px solid var(--accent); color: var(--ink); font-size: 14px; }
+  .takes blockquote cite { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; font-style: normal; }
+  a { color: var(--accent); }
+  .empty { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI News</h1>
+  <p class="sub">Curated daily for Gabe. <a href="#" id="back-link" hidden>← back</a></p>
+
+  <div id="banner-area"></div>
+  <div id="top-section"></div>
+  <div id="bottom-section"></div>
+
+  <details class="archive">
+    <summary>Archive</summary>
+    <div id="archive-content"></div>
+  </details>
+
+  <footer id="footer"></footer>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
