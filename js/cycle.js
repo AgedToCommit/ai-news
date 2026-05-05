@@ -27,9 +27,13 @@ function estParts(d) {
 // still labeled "Today" until the 2am enrichment runs).
 function cycleDate(estDate, estHour) {
   if (estHour < 2) {
-    const d = new Date(`${estDate}T12:00:00`);
-    d.setUTCDate(d.getUTCDate() - 1);
-    return d.toISOString().slice(0, 10);
+    const [y, m, d] = estDate.split('-').map(Number);
+    const dt = new Date(Date.UTC(y, m - 1, d));
+    dt.setUTCDate(dt.getUTCDate() - 1);
+    const yy = dt.getUTCFullYear();
+    const mm = String(dt.getUTCMonth() + 1).padStart(2, '0');
+    const dd = String(dt.getUTCDate()).padStart(2, '0');
+    return `${yy}-${mm}-${dd}`;
   }
   return estDate;
 }

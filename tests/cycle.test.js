@@ -71,6 +71,7 @@ test('7am EST when am file does NOT exist yet: top hidden, bottom = newest pm, b
   const r = pickSnapshots(est('2026-05-05T07:30:00'), manifest);
   assert.equal(r.topId, null);
   assert.equal(r.bottomId, '2026-05-04-pm');
+  assert.match(r.banner, /morning refresh runs at 7am/i);
 });
 
 test('1pm EST after a fresh digest: top = today pm, bottom = today am', () => {
