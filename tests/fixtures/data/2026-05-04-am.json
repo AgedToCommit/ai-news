@@ -2,127 +2,104 @@
   "snapshot_id": "2026-05-04-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-04",
-  "generated_at": "2026-05-04T07:14:08Z",
-  "generated_at_local": "2026-05-04T02:14:08-05:00",
+  "generated_at": "2026-05-04T11:03:11Z",
+  "generated_at_local": "2026-05-04T07:03:11-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-04T02:02:11Z", "duration_ms": 191000 },
-    { "phase": "refresh", "ran_at": "2026-05-04T07:14:08Z", "duration_ms": 188000 }
+    {"phase": "enrichment", "ran_at": "2026-05-04T06:01:00Z", "duration_ms": 240000},
+    {"phase": "refresh", "ran_at": "2026-05-04T11:00:00Z", "duration_ms": 191000}
   ],
-  "tier_counts": { "1": 2, "2": 2, "3": 1 },
+  "tier_counts": {"1": 1, "2": 2, "3": 1},
   "items": [
     {
-      "id": "anthropic-claude-4-7-opus-release",
+      "id": "anthropic-claude-opus-4-7",
       "tier": 1,
       "title": "Anthropic ships Claude Opus 4.7 with 1M context window",
-      "summary": "Anthropic released Claude Opus 4.7 to the API with a 1 million token context window and improved long-context retrieval. The model shows measurable improvements on long-document analysis and code completion in large repos. Pricing remains competitive with the 200K context tier.",
+      "summary": "Claude Opus 4.7 expands the context window to 1M tokens. Overnight: independent benchmark numbers (LongBench, RULER) confirm strong retrieval at 800K+ tokens; pricing drops 15% on cached input vs. 4.6.",
       "link": "https://www.anthropic.com/news/claude-opus-4-7",
-      "why_it_matters": "1M context means you can drop entire codebases or full books in one shot. Relevant if you're building tools that operate on large code or document sets, or if you want to experiment with that workflow on the Ai News Agent repo itself.",
-      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "why_it_matters": "1M context means dropping a full codebase or a long book in one shot is now practical. Cached pricing makes long-context patterns affordable enough to actually try in your Python projects.",
+      "source": {"name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news"},
       "region": "US",
-      "hero_image": {
-        "url": "https://www.anthropic.com/_next/image?url=%2Fimages%2Fog-claude-4-7.jpg",
-        "alt": "Anthropic's Claude Opus 4.7 announcement banner",
-        "source": "og:image"
-      },
-      "added_at": "2026-05-04T02:02:11Z",
-      "added_by": "enrichment",
+      "hero_image": {"url": "https://example.com/og-claude-4-7.jpg", "alt": "Anthropic Claude Opus 4.7 announcement banner", "source": "og:image"},
+      "added_at": "2026-05-03T17:02:00Z",
+      "added_by": "digest",
       "last_revision_by": "enrichment",
       "enriched_overnight": true,
       "promoted_from_am": false,
       "revisions": [
-        { "at": "2026-05-04T02:02:11Z", "by": "enrichment", "change": "created with benchmark context from Simon Willison and HN discussion" }
+        {"at": "2026-05-03T17:02:00Z", "by": "digest", "change": "created"},
+        {"at": "2026-05-04T06:01:00Z", "by": "enrichment", "change": "added independent benchmark context + pricing detail"}
       ],
       "takes": [
-        { "source": "Simon Willison", "url": "https://simonwillison.net/2026/May/4/claude-opus-4-7/", "take": "Comprehensive analysis of throughput numbers and a real-world long-context test against the existing 200K window." },
-        { "source": "Hacker News", "url": "https://news.ycombinator.com/item?id=41234567", "take": "Top comment thread discusses pricing competitiveness; some skepticism on whether 1M is overkill for most use cases." }
+        {"source": "Simon Willison", "url": "https://simonwillison.net/2026/May/3/claude-opus-4-7/", "take": "Notes the throughput numbers and a real-world long-context retrieval test."},
+        {"source": "Hacker News", "url": "https://news.ycombinator.com/item?id=12345", "take": "Top comment is mostly skepticism on price-vs-capability vs. competitors."},
+        {"source": "Latent Space", "url": "https://www.latent.space/p/claude-4-7-takeaways", "take": "Independent test on a 700K-token codebase shows strong retrieval but slow first-token latency."}
       ]
     },
     {
-      "id": "qwen3-alignment-paper",
-      "tier": 1,
-      "title": "Alibaba releases Qwen3 alignment paper on long-context training",
-      "summary": "Alibaba's Qwen team published a peer-reviewed paper detailing their approach to scaling context windows to 1M+ tokens with minimal performance degradation. Focuses on training efficiency and interpolation scaling.",
-      "link": "https://arxiv.org/abs/2405.12345",
-      "why_it_matters": "Technical foundation work on long-context is becoming a commodity skill — understanding these scaling methods helps you evaluate future model releases and build smarter retrieval pipelines.",
-      "source": { "name": "Arxiv (web-search)", "type": "web-search", "url": "https://arxiv.org" },
+      "id": "tauri-2-1-release",
+      "tier": 2,
+      "title": "Tauri 2.1 ships with smaller binary footprint",
+      "summary": "Tauri 2.1 reduces minimum binary size by 18% via tree-shaking improvements. Comments overnight focused on the iOS-side regression that 2.1.1 will likely patch within the week.",
+      "link": "https://example.com/tauri-2-1",
+      "why_it_matters": "If you're curious about shipping a desktop app from web tech, Tauri is the sane Rust-backed alternative to Electron. Wait a few days for 2.1.1 if you're starting fresh.",
+      "source": {"name": "Tauri Blog", "type": "rss", "url": "https://tauri.app/blog"},
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-03T17:02:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {"at": "2026-05-03T17:02:00Z", "by": "digest", "change": "created"},
+        {"at": "2026-05-04T06:01:00Z", "by": "enrichment", "change": "noted iOS regression chatter"}
+      ],
+      "takes": []
+    },
+    {
+      "id": "alibaba-qwen3-update",
+      "tier": 2,
+      "title": "Alibaba's Qwen3 gets a coder-specialized variant",
+      "summary": "Alibaba released Qwen3-Coder, a specialized fork tuned on a curated code dataset. Asia-time release means the Western news cycle picks it up tomorrow.",
+      "link": "https://example.com/qwen3-coder",
+      "why_it_matters": "Coder-specialized open models are good for offline / private use cases. If you ever want code completion that doesn't talk to a cloud, this is the kind of model to look at.",
+      "source": {"name": "Hugging Face Blog", "type": "rss", "url": "https://huggingface.co/blog"},
       "region": "Asia",
       "hero_image": null,
-      "added_at": "2026-05-04T02:02:11Z",
-      "added_by": "enrichment",
-      "last_revision_by": "enrichment",
-      "enriched_overnight": true,
-      "promoted_from_am": false,
-      "revisions": [
-        { "at": "2026-05-04T02:02:11Z", "by": "enrichment", "change": "created" }
-      ],
-      "takes": []
-    },
-    {
-      "id": "langchain-semantic-routing",
-      "tier": 2,
-      "title": "LangChain 0.2 adds semantic routing for multi-agent workflows",
-      "summary": "LangChain released version 0.2 with built-in semantic routing that lets you define decision logic based on embeddings rather than hard string matching. Simplifies branching in multi-agent systems.",
-      "link": "https://github.com/langchain-ai/langchain/releases/tag/v0.2.0",
-      "why_it_matters": "Agent workflows are becoming more common. Semantic routing reduces the boilerplate and brittle string parsing often needed in multi-agent systems.",
-      "source": { "name": "LangChain GitHub", "type": "rss", "url": "https://github.com/langchain-ai/langchain/releases.atom" },
-      "region": "US",
-      "hero_image": null,
-      "added_at": "2026-05-04T02:02:11Z",
-      "added_by": "enrichment",
-      "last_revision_by": "enrichment",
-      "enriched_overnight": true,
-      "promoted_from_am": false,
-      "revisions": [
-        { "at": "2026-05-04T02:02:11Z", "by": "enrichment", "change": "created" }
-      ],
-      "takes": []
-    },
-    {
-      "id": "mozilla-ai-safety-initiative",
-      "tier": 2,
-      "title": "Mozilla launches open-source AI safety benchmarks",
-      "summary": "Mozilla published a suite of open-source benchmarks for evaluating model safety across misuse, hallucination, and bias categories. Available on GitHub; compatible with HuggingFace model cards.",
-      "link": "https://mozilla.org/blog/ai-safety-benchmarks",
-      "why_it_matters": "Having standardized safety eval benchmarks lets you measure your own models or fine-tuned variants more systematically. Useful if you're building local tools and want to catch regressions.",
-      "source": { "name": "Mozilla Blog", "type": "rss", "url": "https://mozilla.org/blog/feed.xml" },
-      "region": "US",
-      "hero_image": {
-        "url": "https://mozilla.org/images/og-ai-safety.png",
-        "alt": "Mozilla AI safety benchmarks announcement",
-        "source": "og:image"
-      },
-      "added_at": "2026-05-04T07:14:08Z",
+      "added_at": "2026-05-04T11:00:00Z",
       "added_by": "refresh",
       "last_revision_by": "refresh",
-      "enriched_overnight": false,
+      "enriched_overnight": true,
       "promoted_from_am": false,
       "revisions": [
-        { "at": "2026-05-04T07:14:08Z", "by": "refresh", "change": "created" }
+        {"at": "2026-05-04T11:00:00Z", "by": "refresh", "change": "created from overnight Asia cycle"}
       ],
       "takes": []
     },
     {
-      "id": "nvidia-cuda-12-6-release",
+      "id": "vercel-ai-sdk-5",
       "tier": 3,
-      "title": "NVIDIA releases CUDA 12.6 with dynamic parallelism improvements",
-      "summary": "CUDA 12.6 adds performance optimizations for dynamic parallelism and improves compilation times for large kernels.",
-      "link": "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/",
-      "why_it_matters": "Lower-level tooling updates. Relevant if you're working with GPU compute; otherwise a minor infrastructure improvement.",
-      "source": { "name": "NVIDIA Docs", "type": "rss", "url": "https://docs.nvidia.com/updates.xml" },
+      "title": "Vercel AI SDK 5.0 adds streaming to React Server Components",
+      "summary": "Vercel's AI SDK 5.0 lets you stream model output directly into React Server Components, removing a layer of plumbing that used to live in API routes.",
+      "link": "https://example.com/vercel-ai-sdk-5",
+      "why_it_matters": "If you ever explore React for a side project, this is the easiest way to wire in a model. The plumbing it removes is the kind of boilerplate that used to be a tutorial in itself.",
+      "source": {"name": "Vercel Blog", "type": "scrape", "url": "https://vercel.com/blog"},
       "region": "US",
-      "hero_image": null,
-      "added_at": "2026-05-04T07:14:08Z",
-      "added_by": "refresh",
-      "last_revision_by": "refresh",
-      "enriched_overnight": false,
+      "hero_image": {"url": "https://example.com/og-vercel-ai-5.jpg", "alt": "Vercel AI SDK 5.0 graphic", "source": "og:image"},
+      "added_at": "2026-05-04T06:01:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
       "promoted_from_am": false,
       "revisions": [
-        { "at": "2026-05-04T07:14:08Z", "by": "refresh", "change": "created" }
+        {"at": "2026-05-04T06:01:00Z", "by": "enrichment", "change": "added as 2am late-breaking"}
       ],
       "takes": []
     }
   ],
   "dropped_in_phase": [
-    { "phase": "enrichment", "id": "minor-startup-funding-round", "reason": "no differentiation from general AI startup coverage; low signal" }
+    {"phase": "enrichment", "id": "openai-gpt-5-rumor", "reason": "rumor with no follow-up substance overnight, low signal"},
+    {"phase": "enrichment", "id": "deepseek-r2-open-weights", "reason": "no new context overnight; original coverage stands"},
+    {"phase": "enrichment", "id": "github-copilot-spaces", "reason": "no overnight chatter, shallow product launch"}
   ]
 }
