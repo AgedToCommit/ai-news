@@ -67,7 +67,7 @@ function Masthead({ onNav, current, onSearch, query, dateLabel, refreshLabel }) 
 
       <hr className="rule"/>
 
-      <div style={{ padding: "20px 0 14px", textAlign: "center" }}>
+      <div className="masthead-center" style={{ padding: "20px 0 14px", textAlign: "center" }}>
         <div className="eyebrow" style={{ color: "var(--persimmon)", marginBottom: 10 }}>
           ◆ &nbsp;Curated By A Scheduled Agent · Read By A Human&nbsp; ◆
         </div>
@@ -86,8 +86,8 @@ function Masthead({ onNav, current, onSearch, query, dateLabel, refreshLabel }) 
 
       <hr className="rule-double"/>
 
-      <nav className="flex between center" style={{ padding: "12px 0", flexWrap: "wrap", gap: 12 }}>
-        <div className="flex gap-l" style={{ flexWrap: "wrap" }}>
+      <nav className="flex between center masthead-nav" style={{ padding: "12px 0", flexWrap: "wrap", gap: 12 }}>
+        <div className="flex gap-l masthead-nav-links" style={{ flexWrap: "wrap" }}>
           {["Front Page", "Frontier", "Tools & Libraries", "Products & Industry", "Archive"].map(n => (
             <a key={n}
                onClick={() => onNav(n)}
@@ -103,7 +103,7 @@ function Masthead({ onNav, current, onSearch, query, dateLabel, refreshLabel }) 
           ))}
         </div>
 
-        <div className="flex center gap-s">
+        <div className="flex center gap-s masthead-search">
           <span className="mono">Find:</span>
           <input
             value={query}

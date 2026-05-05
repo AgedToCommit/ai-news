@@ -284,13 +284,19 @@ a { color: inherit; text-decoration: none; }
     font-size: 10px;
   }
 
-  /* Nav: scroll horizontally so all five tabs are reachable */
-  .page > header > nav {
-    flex-direction: column;
+  /* Masthead center: allow eyebrow lines to wrap */
+  .masthead-center .eyebrow {
+    white-space: normal;
+    letter-spacing: 0.1em;
+  }
+
+  /* Nav: stack to column, links scroll horizontally */
+  .masthead-nav {
+    flex-direction: column !important;
     align-items: stretch !important;
     gap: 14px;
   }
-  .page > header > nav > .flex.gap-l {
+  .masthead-nav-links {
     overflow-x: auto;
     flex-wrap: nowrap !important;
     gap: 18px !important;
@@ -300,14 +306,10 @@ a { color: inherit; text-decoration: none; }
     padding-right: var(--margin);
     scrollbar-width: none;
   }
-  .page > header > nav > .flex.gap-l::-webkit-scrollbar { display: none; }
-  .page > header > nav > .flex.gap-l > a { flex: 0 0 auto; }
-  .page > header > nav > .flex.center.gap-s input {
-    width: 100% !important;
-  }
-  .page > header > nav > .flex.center.gap-s {
-    width: 100%;
-  }
+  .masthead-nav-links::-webkit-scrollbar { display: none; }
+  .masthead-nav-links > a { flex: 0 0 auto; }
+  .masthead-search { width: 100%; }
+  .masthead-search input { width: 100% !important; }
 
   /* Section markers: stack vertically, hide tier counts */
   .section-marker {
