@@ -14,6 +14,7 @@ This repo is owned and maintained by [@AgedToCommit](https://github.com/AgedToCo
 - `agent/profile.md` — reader profile the agent reads at the start of every run
 - `agent/sources.json` — source seed list, structured
 - `agent/control.json` — kill switch (pause / per-phase enable)
+- `agent/prompts/` — agent prompt files read by scheduled tasks at runtime (`common.md` is the shared harness; `digest.md`, `enrichment.md`, `refresh.md` are phase-specific)
 - `data/` — JSON snapshots, manifest, run log
 - `tests/` — Node test runner unit tests + fixture snapshots
 - `docs/superpowers/` — design specs and implementation plans
