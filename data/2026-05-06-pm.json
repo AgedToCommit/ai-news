@@ -1,0 +1,161 @@
+{
+  "snapshot_id": "2026-05-06-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-06",
+  "generated_at": "2026-05-06T17:14:00Z",
+  "generated_at_local": "2026-05-06T13:14:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-06T17:14:00Z", "duration_ms": 480000 }
+  ],
+  "tier_counts": { "1": 2, "2": 3, "3": 2 },
+  "items": [
+    {
+      "id": "anthropic-spacex-compute-deal-2026-05",
+      "tier": 1,
+      "title": "Anthropic signs compute deal with SpaceX to keep up with Claude demand",
+      "summary": "Bloomberg reports Anthropic has agreed a computing-capacity deal with SpaceX to support Claude. The arrangement is framed as a response to surging demand and a hedge against the usual hyperscaler concentration.",
+      "link": "https://www.bloomberg.com/news/articles/2026-05-06/anthropic-inks-computing-deal-with-spacex-to-meet-ai-demand",
+      "why_it_matters": "When a frontier lab starts shopping for compute outside the big three clouds, that says something about both the supply crunch and where new GPU footprints are showing up. Worth knowing if you're following who's actually running these models.",
+      "source": { "name": "Bloomberg", "type": "scrape", "url": "https://www.bloomberg.com/news/articles/2026-05-06/anthropic-inks-computing-deal-with-spacex-to-meet-ai-demand" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": []
+    },
+    {
+      "id": "openai-gpt-5-5-instant-default",
+      "tier": 1,
+      "title": "OpenAI swaps in GPT-5.5 Instant as the new ChatGPT default",
+      "summary": "GPT-5.5 Instant is now the default model for ChatGPT, with OpenAI claiming better accuracy, fewer hallucinations, and tighter personalization controls. It can also reach back into past conversations, files, and Gmail when you opt in, currently rolling out to Plus and Pro on the web.",
+      "link": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/",
+      "why_it_matters": "Default-model swaps are the single biggest behaviour change most ChatGPT users will notice all year. If any of your prompts depend on quirks of the previous default, expect them to shift — and the new memory-of-files-and-Gmail integration is the kind of feature most people won't realise is on until it surfaces something in an answer.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": []
+    },
+    {
+      "id": "cloudflare-stripe-agent-commerce-protocol",
+      "tier": 2,
+      "title": "Cloudflare and Stripe ship a protocol for AI agents to buy services on their own",
+      "summary": "Cloudflare and Stripe co-designed a protocol, launched alongside Stripe Projects, that lets AI agents discover services, get scoped credentials, and pay using a Stripe-issued payment token — no card numbers ever exposed to the agent. Default cap is $100/month per provider; Cloudflare is the first integration, letting an agent register domains, start subscriptions, and deploy apps end to end.",
+      "link": "https://blog.cloudflare.com/agents-stripe-projects/",
+      "why_it_matters": "This is the first real \"agents with wallets\" pattern from credible infrastructure providers, with sane defaults (spend caps, no raw card data). Even if you never write an agent that spends money, the discovery + auth + payment design here is worth reading as a template for how multi-vendor agent integrations might actually work.",
+      "source": { "name": "Cloudflare Blog", "type": "scrape", "url": "https://blog.cloudflare.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "CoinDesk", "url": "https://www.coindesk.com/tech/2026/05/05/ai-agents-are-breaking-web-economics-but-cloudflare-says-x402-can-help", "take": "Frames the protocol as Cloudflare's pitch that the existing web payment model (humans paying per page) doesn't survive contact with agents." },
+        { "source": "InfoWorld", "url": "https://www.infoworld.com/article/4165857/are-we-ready-to-give-ai-agents-the-keys-to-the-cloud-cloudflare-thinks-so.html", "take": "Asks the obvious safety question and notes the $100/month default cap as a backstop." }
+      ]
+    },
+    {
+      "id": "google-workspace-intelligence",
+      "tier": 2,
+      "title": "Google bolts Gemini into Workspace as 'Workspace Intelligence'",
+      "summary": "Workspace Intelligence is a semantic layer that gives Gemini default read access to Gmail, Chat, Calendar, and Drive (Docs, Sheets, Slides) so prompts don't need manual context. Sheets gets natural-language spreadsheet building plus HubSpot/Salesforce imports, Slides gets one-pass deck generation with company templates, Gmail gets AI Inbox and AI Overviews, and admins can scope which data sources are in play.",
+      "link": "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
+      "why_it_matters": "If you've ever pasted an email into a chat to ask a model about it, this is the polished version. The interesting design problem for builders: how do you scope an LLM to a user's whole inbox without it leaking everywhere? The Admin-console controls are worth a read as a reference for that.",
+      "source": { "name": "Google Workspace Blog", "type": "scrape", "url": "https://workspace.google.com/blog/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Google Workspace Updates", "url": "https://workspaceupdates.googleblog.com/2026/04/introducing-workspace-intelligence-with-admin-controls.html", "take": "Documents the admin controls for which data sources Gemini can see across Workspace." }
+      ]
+    },
+    {
+      "id": "deeink-31-rust-cli-tools",
+      "tier": 2,
+      "title": "Dev open-sources 31 Rust CLI tools and argues CLIs beat MCP for agent workflows",
+      "summary": "An open-source project called dee.ink ships 31 small Rust command-line tools intended to be wired up to AI agents. The author argues plain CLIs are roughly 35x more efficient than running a Model Context Protocol server for many agent tasks — fewer round trips, less protocol overhead, and a much smaller attack surface.",
+      "link": "https://www.yuyjo.com/archives/62664",
+      "why_it_matters": "Worth a read even if you stick to Python. It's one of the few specific arguments-with-numbers about whether MCP is the right abstraction, and it lands at a moment when every vendor is pushing their own MCP server. If you've been thinking about wiring tools into Claude or another agent, this is the contrarian take.",
+      "source": { "name": "Yuyjo", "type": "scrape", "url": "https://www.yuyjo.com/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": []
+    },
+    {
+      "id": "salesforce-headless-360",
+      "tier": 3,
+      "title": "Salesforce goes headless: every capability becomes an API, MCP tool, or CLI command",
+      "summary": "At TDX 2026, Salesforce unveiled Headless 360 — exposing the full platform as APIs, MCP tools, and CLI commands so AI agents can drive it without a browser. Agentforce Vibes 2.0 adds multi-model support (Claude Sonnet, GPT-5), and AgentExchange unifies 10,000 Salesforce apps, 2,600+ Slack apps, and 1,000+ partner agents/MCP servers. A new Agent Fabric provides centralized governance across vendors.",
+      "link": "https://venturebeat.com/technology/salesforce-launches-headless-360-to-turn-its-entire-platform-into-infrastructure-for-ai-agents",
+      "why_it_matters": "An MCP-everywhere strategy from a major SaaS vendor is a bigger deal than it sounds — it normalises the idea that the API surface is for agents, not just for partner integrations. Useful background even if you never touch Salesforce; the architectural pattern is the one everyone is converging on.",
+      "source": { "name": "VentureBeat", "type": "scrape", "url": "https://venturebeat.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Salesforce", "url": "https://www.salesforce.com/news/stories/salesforce-headless-360-announcement/", "take": "Salesforce's own framing leans on the line: \"No browser required.\"" }
+      ]
+    },
+    {
+      "id": "microsoft-agent-365-ga",
+      "tier": 3,
+      "title": "Microsoft Agent 365 hits GA as a control plane for AI agents",
+      "summary": "Microsoft Agent 365 went generally available May 1 at $15 per user, alongside the new Microsoft 365 E7 'Frontier Suite' at $99/user/month bundling E5, Copilot, Agent 365, and the Entra Suite. Agent 365 is positioned as the place to observe, govern, and secure both Microsoft and third-party agents in one console.",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/",
+      "why_it_matters": "If agents become normal at work, somebody needs to track what they did and which permissions they used. Microsoft's bet is that the answer is a new SKU — and given how much of corporate IT runs on Microsoft, the design choices here will probably set the template for how agent governance gets done elsewhere.",
+      "source": { "name": "Microsoft Security Blog", "type": "scrape", "url": "https://www.microsoft.com/en-us/security/blog/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": []
+    }
+  ],
+  "dropped_in_phase": []
+}

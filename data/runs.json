@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-06T17:09:18Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-06T17:09:18Z",
+      "ended_at": "2026-05-06T17:16:16Z",
+      "wall_time_ms": 418000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 1200,
+        "scrape_sweep": 1200,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 10500,
+        "output_write": 1100
+      },
+      "fetches_made": 18,
+      "items_input": 16,
+      "items_output": 7,
+      "items_added": 7,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-06-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned 403 across all attempted RSS/HTML feeds in this sandbox (consistent with prior runs); sourcing done via WebSearch (~13 queries). 2026-05-06-am already contained 17 items, so promotion-rule dedup dropped 6 candidate items already covered in am (Mistral Medium 3.5 + Vibe agents, Nemotron 3 family, ml-intern, Anthropic finance agents + Claude for Creative Work, Anthropic enterprise services co subsumed by am takes). Final pm focuses on 7 net-new items: SpaceX/Anthropic compute deal (May 6 Bloomberg), GPT-5.5 Instant default swap (May 5), Cloudflare+Stripe agent-commerce protocol (May 5), Workspace Intelligence, dee.ink Rust CLI tools, Salesforce Headless 360, and Microsoft Agent 365 GA (May 1). Hero images uniformly null since meta-tag scraping was unavailable. Initial push hit a fast-forward conflict (refresh phase had pushed concurrently); resolved via reset-to-origin/main and re-curate against the latest am file."
+    },
+    {
       "run_id": "2026-05-06T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
