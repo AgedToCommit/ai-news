@@ -1,0 +1,344 @@
+{
+  "snapshot_id": "2026-05-06-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-06",
+  "generated_at": "2026-05-06T06:14:00Z",
+  "generated_at_local": "2026-05-06T02:14:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-06T06:14:00Z", "duration_ms": 840000 }
+  ],
+  "tier_counts": { "1": 6, "2": 6, "3": 2 },
+  "items": [
+    {
+      "id": "anthropic-financial-agents-launch",
+      "tier": 1,
+      "title": "Anthropic ships 10 prebuilt finance agents and finishes its Microsoft 365 Office suite integration",
+      "summary": "At its New York event on May 5, Anthropic released ten Claude-based agents covering pitchbooks, earnings analysis, credit memos, underwriting, KYC, month-end close, statement audits, and insurance claims, alongside a Moody's data partnership and the Word add-in that completes its Word/Excel/PowerPoint suite with shared cross-app context. Overnight follow-ups: FIS announced a banking partnership starting with financial-crimes workflows, The Register and Yahoo Finance reframed the launch around an OpenAI vs. Anthropic Wall Street arms race, and Anthropic disclosed roughly 80x annualized revenue growth in the most recent quarter — about 8x its own internal projection. FactSet still ended the day down ~8%; S&P Global and Moody's also sold off.",
+      "link": "https://www.anthropic.com/news/finance-agents",
+      "why_it_matters": "This is the clearest look yet at what \"agentic AI for business\" actually ships as — not a chat product, but a library of preconfigured workflows wired into the apps people already use. The Claude Cowork / Managed Agents \"cookbook\" pattern is also a template you could borrow for your own Python projects: package an agent's prompts, tools, and guardrails as a reusable bundle rather than scripting it from scratch each time.",
+      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added FIS banking partnership, OpenAI-vs-Anthropic framing, and 80x revenue-growth disclosure" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-05/anthropic-unveils-ai-agents-to-field-financial-services-tasks", "take": "Frames this as Anthropic's bid to win Wall Street ahead of an IPO." },
+        { "source": "Fortune", "url": "https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/", "take": "Notes the Moody's data partnership and follows up on the Goldman/Blackstone services-firm JV announced May 4." },
+        { "source": "The Register", "url": "https://www.theregister.com/2026/05/05/anthropic_unleashes_finance_agents_claude/", "take": "Reads the launch as Anthropic pivoting from frontier-model lab to financial-services platform." },
+        { "source": "FIS", "url": "https://www.fisglobal.com/about-us/media-room/press-release/2026/fis-brings-agentic-ai-to-banking-with-anthropic-starting-with-financial-crimes", "take": "FIS will deploy Claude in banking workflows starting with anti-fraud and financial-crime checks." }
+      ]
+    },
+    {
+      "id": "openai-on-aws-bedrock-gpt-5-5",
+      "tier": 1,
+      "title": "OpenAI brings GPT-5.5, Codex, and Managed Agents to AWS Bedrock",
+      "summary": "On April 28, AWS and OpenAI ended OpenAI's seven-year Microsoft Azure exclusivity, putting GPT-5.5 and GPT-5.4, the Codex coding agent, and OpenAI Managed Agents into Amazon Bedrock in limited preview. GPT-5.5, released April 23, scores 93.6% on GPQA Diamond and 82.7% on Terminal-Bench 2.0. AWS confirmed in its May 4 weekly roundup that Codex on Bedrock authenticates with AWS credentials, runs through the Bedrock API (CLI, desktop app, and a VS Code extension), and lets eligible customers count Codex usage against existing AWS cloud commitments.",
+      "link": "https://openai.com/index/openai-on-aws/",
+      "why_it_matters": "Multi-cloud access to OpenAI's frontier models is now real — if you've avoided OpenAI because your stack lives in AWS, that excuse is gone. Bedrock also opens up the Codex coding agent for IAM-controlled experimentation alongside whatever Python services you already run there, with usage billed against AWS commitments rather than a separate OpenAI account.",
+      "source": { "name": "OpenAI Blog", "type": "scrape", "url": "https://openai.com/news/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added Codex-on-Bedrock auth + billing details from AWS May 4 roundup" }
+      ],
+      "takes": [
+        { "source": "AWS Blog", "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-whats-next-with-aws-2026-amazon-quick-openai-partnership-and-more-may-4-2026/", "take": "Highlights Codex-on-Bedrock as the developer-facing piece of the partnership and ties it to AWS commit consumption." }
+      ]
+    },
+    {
+      "id": "deepseek-v4-pro-flash-release",
+      "tier": 1,
+      "title": "DeepSeek releases V4-Pro and V4-Flash with 1M-token context",
+      "summary": "DeepSeek shipped V4 on April 23: V4-Pro at 1.6T total / 49B active and V4-Flash at 284B / 13B, both MIT-licensed and pushing a 1M-token context window via a new Hybrid Attention Architecture. Flash is priced at $0.14 per million input tokens; Pro at $1.74. Benchmark write-ups now have V4-Pro at 80.6% on SWE-bench Verified and 3,206 on Codeforces — narrowly edging Claude Opus 4.7 at roughly 1/7th to 1/10th the cost — while V4-Flash at \"max effort\" scores 47 on the Artificial Analysis Intelligence Index, putting it within striking distance of V4-Pro on reasoning. DeepSeek is running a promotional price through May 31, 2026 that's roughly 5x cheaper than the post-promo rate.",
+      "link": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "why_it_matters": "A frontier-class open-weight model at near-throwaway pricing, trained on non-NVIDIA hardware. The 1M-token window means whole-codebase prompts are no longer just an Anthropic/Google trick, and MIT licensing means you can self-host and fine-tune without legal friction — and if you only need fast turn-around chat, V4-Flash is now close enough to Pro on reasoning that it's the obvious default.",
+      "source": { "name": "Hugging Face", "type": "rss", "url": "https://huggingface.co/blog" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added SWE-bench / Codeforces numbers, Flash@max parity claim, and promo-pricing detail" }
+      ],
+      "takes": [
+        { "source": "Codersera", "url": "https://codersera.com/blog/deepseek-v4-pro-review-benchmarks-pricing-2026/", "take": "Argues V4-Pro beats GPT-5.5 on coding tasks at roughly 1/7th the price." },
+        { "source": "Artificial Analysis", "url": "https://artificialanalysis.ai/models/deepseek-v4-flash", "take": "Independent index puts V4-Flash@max within ~3 points of V4-Pro on reasoning." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-design-anthropic-labs",
+      "tier": 1,
+      "title": "Anthropic Labs launches Claude Design, a visual-work product powered by Opus 4.7",
+      "summary": "Claude Design is a research-preview Anthropic Labs product where Claude collaborates on designs, prototypes, slides, and one-pagers, with one-click export into Canva via the Canva MCP. It runs on Opus 4.7 and is open to Pro, Max, Team, and Enterprise subscribers. Hands-on coverage now confirms the loop is faster than Claude Code for visual iteration: MacStories called the chat→preview→comment→revise cycle \"better than expected,\" and Brilliant said pages that took 20+ prompts in other tools needed only ~2 in Claude Design. Figma, Adobe, and Wix shares all sold off on the news.",
+      "link": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "why_it_matters": "It's Anthropic's first real swing at putting Claude in front of designers rather than developers, and the early hands-on reads suggest the iteration loop is genuinely tighter than coding-agent UIs. If you make landing pages or marketing visuals on top of your HTML/CSS, this is a different way to iterate on layouts — and it's a useful look at how the MCP protocol turns into a product handoff between two apps.",
+      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added MacStories/Brilliant hands-on reactions and Figma/Adobe/Wix market reaction" }
+      ],
+      "takes": [
+        { "source": "MacStories", "url": "https://www.macstories.net/stories/hands-on-with-anthropic-labs-claude-design-preview/", "take": "Hands-on review: design iteration loop is faster and more legible than Claude Code's." },
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm", "take": "Frames Opus 4.7 (Claude Design's underlying model) as narrowly retaking the generally-available LLM lead." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-creative-connectors",
+      "tier": 1,
+      "title": "Anthropic ships nine Claude connectors for Blender, Adobe, Autodesk, Ableton, and more",
+      "summary": "Anthropic released connectors on April 28 that let Claude drive Adobe Creative Cloud, Blender, Autodesk Fusion, Ableton, Splice, SketchUp, Resolume, and Affinity by Canva by natural language. The Adobe connector reaches 50+ pro tools across Photoshop, Illustrator, Firefly, Express, Premiere, Lightroom, InDesign, and Stock; the Blender connector — built by Blender's own developers and partly funded by an Anthropic donation to the project — wraps the app's Python API so Claude can analyse scenes, batch-edit objects, and add new tools to Blender's UI. DEVELOP3D and 9to5Mac have framed the Autodesk Fusion piece as effectively \"Claude for CAD.\"",
+      "link": "https://www.anthropic.com/news/claude-for-creative-work",
+      "why_it_matters": "These connectors are a pretty clear template for how an MCP-style integration with a desktop app actually works in practice — most of them are thin wrappers around each app's existing Python API, and Anthropic is paying maintainers to keep those APIs healthy. Worth poking at if you ever want to script Blender, Fusion, or Adobe from your own Python tools, even without Claude in the loop.",
+      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added Adobe 50-tool reach, Anthropic-to-Blender donation, and \"Claude for CAD\" framing" }
+      ],
+      "takes": [
+        { "source": "DEVELOP3D", "url": "https://develop3d.com/ai/claude-for-cad-blender-autodesk-fusion/", "take": "Calls the Fusion + Blender connectors the first credible \"Claude for CAD\" play." },
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/04/28/anthropic-releases-9-new-claude-connectors-for-creative-tools-including-blender-and-adobe/", "take": "Notes Anthropic's funding contribution to Blender to keep the Python API healthy enough to support the connector." }
+      ]
+    },
+    {
+      "id": "google-gemini-3-1-pro-deep-research-max",
+      "tier": 1,
+      "title": "Google rolls out Deep Research and Deep Research Max on Gemini 3.1 Pro",
+      "summary": "Google launched two long-horizon research agents on April 21: Deep Research, tuned for fast interactive use, and Deep Research Max, which spends extended test-time compute on background workflows. Both add MCP support and native visualizations. Updated benchmarks: Gemini 3.1 Pro hits 94.3% on GPQA Diamond, 80.6% on SWE-Bench Verified, and 77.1% on ARC-AGI-2 (more than double Gemini 3 Pro's 31.1%); Deep Research Max climbs to 93.3% on DeepSearchQA (up from 66.1% in December) and 54.6% on Humanity's Last Exam, leading on DeepSearchQA and BrowseComp but trailing GPT-5.4 on HLE.",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/",
+      "why_it_matters": "An asynchronous \"go think for an hour\" research agent is a different mode than the chat-first tools Gabe is used to — closer to running a build than talking to a model. The MCP support also means these agents can drop into the same connector ecosystem Anthropic is pushing, which is the closest the field has come to a shared standard.",
+      "source": { "name": "Google DeepMind", "type": "scrape", "url": "https://deepmind.google/discover/blog/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added GPQA/SWE-bench/ARC-AGI-2 numbers and DeepSearchQA + HLE deltas" }
+      ],
+      "takes": [
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/googles-new-deep-research-and-deep-research-max-agents-can-search-the-web-and-your-private-data", "take": "Highlights that the agents can now search a user's private workspace data alongside the public web." }
+      ]
+    },
+    {
+      "id": "openai-codex-multiagentv2-update",
+      "tier": 2,
+      "title": "OpenAI Codex update adds persisted /goal workflows and MultiAgentV2",
+      "summary": "Codex got a broad update with persisted /goal workflows, richer TUI controls, expanded permission profiles, stronger plugin and external-agent integration, and a clearer MultiAgentV2 configuration with explicit thread caps, wait-time controls, and root/subagent hints. Resume reliability, terminal stability, and Windows / Bedrock support also improved. OpenAI says Codex usage inside ChatGPT Business and Enterprise grew roughly 6x between January and April 2026, framing this release as the response to six months of Claude Code eating share in the agentic-coding category.",
+      "link": "https://releasebot.io/updates/openai/codex",
+      "why_it_matters": "Codex is OpenAI's terminal coding agent and the most direct competitor to Claude Code — and it's now growing fast enough that the two are converging on the same set of patterns (persisted goals, multi-agent orchestration, permission profiles). The /goal workflow is the same idea Gabe's already seen in agent-mode IDEs, and MultiAgentV2 is worth peeking at if you're curious how teams orchestrate several agents working on one repo.",
+      "source": { "name": "Releasebot (OpenAI Codex)", "type": "scrape", "url": "https://releasebot.io/updates/openai/codex" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added 6x Codex-usage growth and competitive framing vs Claude Code" }
+      ],
+      "takes": [
+        { "source": "OpenAI", "url": "https://openai.com/index/codex-for-almost-everything/", "take": "OpenAI's framing pitches Codex as a general agent rather than a code-only tool." }
+      ]
+    },
+    {
+      "id": "nvidia-nemotron-3-open-models",
+      "tier": 2,
+      "title": "NVIDIA debuts the Nemotron 3 family of open models",
+      "summary": "NVIDIA announced Nemotron 3, a family of open-weight models targeting reasoning and agentic workflows on its own GPU stack. Nemotron 3 Super now sits at the top of the open-source model leaderboard with an average of 27.3 across the cited benchmarks, ahead of DeepSeek and GPT-OSS variants on the same suite. The companion Nemotron 3 Nano Omni — 30B total / 3B active per token, runnable in 25GB of RAM — is a unified multimodal (text, vision, audio, video) model that NVIDIA claims gives 7-9x higher system efficiency than other open omni models on document and video workloads.",
+      "link": "https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models",
+      "why_it_matters": "NVIDIA's open models are usually a good place to look at modern deployment plumbing — quantization, NIM microservices, TensorRT-LLM — even if you don't end up using the models themselves. Nano Omni is unusually interesting because a 30B/3B-active multimodal model that fits in 25GB of RAM is realistically runnable on a single workstation GPU, which makes \"hook a Python script up to a model that can also see and listen\" a much closer thing for hobbyists.",
+      "source": { "name": "NVIDIA Newsroom", "type": "scrape", "url": "https://nvidianews.nvidia.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added Nemotron 3 Super leaderboard position and Nano Omni size/efficiency numbers" }
+      ],
+      "takes": [
+        { "source": "Wccftech", "url": "https://wccftech.com/nvidia-nemotron-3-super-tops-the-open-source-ai-model-chart-beating-deepseek-gpt-oss/", "take": "Calls out Nemotron 3 Super topping the open-source benchmark chart over DeepSeek and GPT-OSS." },
+        { "source": "NVIDIA Blog", "url": "https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/", "take": "Pitches Nano Omni as a 9x-more-efficient base for unified vision/audio/language agents." }
+      ]
+    },
+    {
+      "id": "multiverse-computing-littlelamb-models",
+      "tier": 2,
+      "title": "Multiverse Computing puts the LittleLamb 0.3B model family on Hugging Face",
+      "summary": "Spain's Multiverse Computing released three ~0.3B compressed variants on April 28 — a general model, a tool-calling variant, and a mobile build — all built from Qwen3-0.6B via their CompactifAI compression. CompactifAI uses quantum-inspired tensor-network math to compress models by up to 95% with only a 2-3% precision loss, vs. the 20-30% accuracy hit typical of conventional compression at the same ratio. Both LittleLamb 0.3B and its tool-calling variant outperform their Qwen3-0.6B parent and beat models in the Gemma 270M class on Humanity's Last Exam, while improving throughput, latency, and time-to-first-token.",
+      "link": "https://huggingface.co/MultiverseComputingCAI/LittleLamb",
+      "why_it_matters": "Sub-billion-parameter models that still beat their parent are the practical answer to \"can I run this on my laptop / a Raspberry Pi / in a browser?\" The CompactifAI angle also matters: it's one of the few compression schemes shipping in production where the accuracy hit is small enough that the smaller model is a real swap-in, not just a research-paper curiosity.",
+      "source": { "name": "Hugging Face", "type": "rss", "url": "https://huggingface.co/blog" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added CompactifAI methodology details and HLE comparison vs Qwen3-0.6B / Gemma 270M" }
+      ],
+      "takes": [
+        { "source": "Multiverse Computing", "url": "https://multiversecomputing.com/resources/introducing-the-littlelamb-0-3b-model-family", "take": "Frames the family as a deployment-ready edge/agentic stack rather than a research demo." }
+      ]
+    },
+    {
+      "id": "hugging-face-ml-intern-post-training-agent",
+      "tier": 2,
+      "title": "Hugging Face open-sources ml-intern, an agent that runs the LLM post-training loop for you",
+      "summary": "Released April 21, ml-intern is an open-source agent (built on Hugging Face's smolagents framework) that handles the boring parts of post-training — running supervised fine-tuning, DPO, and eval sweeps end-to-end, picking hyperparameters, and reporting results. It also reads arXiv and HF Papers, traces citations to find datasets, reformats them, and diagnoses common failures like reward collapse before retrying. In the launch demo, ml-intern took Qwen3-1.7B from a ~10% GPQA baseline to 32% in under 10 hours, and several writeups now claim it edges Claude Code on scientific-reasoning benchmarks.",
+      "link": "https://github.com/huggingface/ml-intern",
+      "why_it_matters": "Post-training has been the pricey, opaque step that gates anyone trying to fine-tune their own model. An open agent that drives that pipeline — and is wired into HF Hub, HF Jobs compute, and Trackio for experiment tracking — is the kind of tool a hobbyist with a single GPU can actually use, and it's a clean example of an agent that's narrow, useful, and not pretending to be AGI.",
+      "source": { "name": "Hugging Face GitHub", "type": "scrape", "url": "https://github.com/huggingface" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "swapped link to canonical GitHub repo, added Qwen3-1.7B GPQA jump and Claude Code comparison" }
+      ],
+      "takes": [
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/", "take": "Walks through the literature-review → dataset-discovery → train → eval loop in detail." },
+        { "source": "EdTech Innovation Hub", "url": "https://www.edtechinnovationhub.com/news/hugging-face-releases-ml-intern-the-ai-agent-teaching-itself-to-beat-claude-code-on-scientific-reasoning", "take": "Claims ml-intern beats Claude Code on a scientific-reasoning benchmark." }
+      ]
+    },
+    {
+      "id": "microsoft-vibevoice-open-source-speech",
+      "tier": 2,
+      "title": "Microsoft releases VibeVoice as an open-source frontier speech model",
+      "summary": "Microsoft published VibeVoice on April 29 — an open-weights speech stack aimed at expressive long-form synthesis and natural multi-speaker dialogue, plus VibeVoice-ASR for speech-to-text and a Realtime-0.5B variant for low-latency streaming. The flagship model can process up to 90 minutes of audio in a single pass, including speaker IDs and timestamps. The release pitches it as a permissive-license alternative to closed providers like ElevenLabs, and the underlying paper picked up an ICLR 2026 Oral.",
+      "link": "https://github.com/microsoft/VibeVoice",
+      "why_it_matters": "Open speech models lag well behind open text models, so a credible Microsoft entry is a real shift. If you've ever wanted to add a TTS step to a Python script — narration for a tutorial, voice output for a small app — this is the kind of model you can run locally without paying per character, and the Realtime-0.5B variant means it can plausibly run inside an interactive web app rather than as a batch render.",
+      "source": { "name": "Microsoft GitHub", "type": "scrape", "url": "https://github.com/microsoft" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "swapped link to canonical GitHub repo, added 90-min-pass capability, Realtime-0.5B variant, and ICLR Oral note" }
+      ],
+      "takes": [
+        { "source": "Microsoft VibeVoice", "url": "https://microsoft.github.io/VibeVoice/", "take": "Project page documents the Realtime-0.5B and ASR variants alongside the flagship." },
+        { "source": "DEV.to", "url": "https://dev.to/wonderlab/one-open-source-project-a-day-no51-vibevoice-microsofts-speech-ai-that-processes-90-minutes-3k6p", "take": "Highlights the 90-minute single-pass audio processing as the standout capability." }
+      ]
+    },
+    {
+      "id": "caisi-frontier-ai-national-security-evals",
+      "tier": 3,
+      "title": "Google DeepMind, Microsoft, and xAI sign up for US pre-deployment AI evaluations",
+      "summary": "On May 5, NIST's Center for AI Standards and Innovation (CAISI) signed agreements with Google DeepMind, Microsoft, and xAI to do pre-deployment national-security testing of frontier models, joining existing arrangements with OpenAI and Anthropic. CAISI says it has now completed more than 40 evaluations, including on unreleased state-of-the-art systems. New context overnight: testing happens in classified environments, and labs are routinely handing over copies with safeguards reduced or removed so red-teamers can probe worst-case behaviour. The agreements update the 2024 Anthropic/OpenAI MOUs to reflect CAISI's directives under America's AI Action Plan.",
+      "link": "https://www.nist.gov/news-events/news/2026/05/caisi-signs-agreements-regarding-frontier-ai-national-security-testing",
+      "why_it_matters": "This is the closest thing the US has to a coordinated frontier-model review process, and the \"safeguards-removed copy in a classified environment\" detail is the most concrete look yet at how that actually works in practice. Worth tracking alongside the recent International AI Safety Report's warning that pre-deployment evals are getting less reliable as models learn to detect they're being tested.",
+      "source": { "name": "NIST", "type": "scrape", "url": "https://www.nist.gov/news-events" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added classified-env + safeguards-removed evaluation details and 2024 MOU lineage" }
+      ],
+      "takes": [
+        { "source": "Al Jazeera", "url": "https://www.aljazeera.com/economy/2026/5/5/microsoft-google-xai-give-us-access-to-ai-models-for-security-testing", "take": "Notes the testing happens in classified environments with reduced-safeguards copies of the models." },
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/05/us-frontier-ai-testing-white-house-pivots-safety", "take": "Reads the announcement as a White House pivot back toward safety after the post-AI-Action-Plan period." }
+      ]
+    },
+    {
+      "id": "pentagon-ai-deal-excludes-anthropic",
+      "tier": 3,
+      "title": "Pentagon's eight-vendor AI deal excludes Anthropic over warfare-use safeguards",
+      "summary": "On May 1 the Defense Department signed deals with OpenAI, Google, Microsoft, AWS, NVIDIA, SpaceX, Reflection AI, and Oracle to put their AI tools on classified networks; Anthropic was left off the list because it refused to drop its warfare-use guardrails — specifically the rules against autonomous lethal use and mass domestic surveillance. The DoD has since labelled Anthropic a \"supply chain risk,\" a designation it normally reserves for vendors tied to foreign adversaries, and Anthropic has filed two separate lawsuits (in San Francisco and Washington, D.C.) asking federal judges to overturn the order. The White House is reportedly reopening talks separately.",
+      "link": "https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic",
+      "why_it_matters": "An unusually public case of a frontier lab refusing to relax its usage policy for a major customer — and now actually suing the federal government over the consequences. However it shakes out, it's a real-world test of whether \"acceptable use policies\" survive contact with government procurement, and a useful counterweight when reading marketing copy about AI safety.",
+      "source": { "name": "CNN Business", "type": "scrape", "url": "https://www.cnn.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-05T17:13:05Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-05T17:13:05Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "added \"supply chain risk\" designation, two-lawsuit response, and updated vendor list" }
+      ],
+      "takes": [
+        { "source": "CBS News", "url": "https://www.cbsnews.com/news/pentagon-anthropic-feud-ai-military-says-it-made-compromises/", "take": "Pentagon official: \"You have to trust your military to do the right thing.\"" },
+        { "source": "Military Times", "url": "https://www.militarytimes.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/", "take": "Reads the freeze-out as an unusually direct response to a vendor's refusal to relax usage policy." }
+      ]
+    },
+    {
+      "id": "openai-low-latency-voice-webrtc",
+      "tier": 2,
+      "title": "OpenAI publishes how it rebuilt WebRTC for low-latency voice AI at scale",
+      "summary": "OpenAI engineers Yi Zhang and William McDonald posted a technical writeup on May 5 detailing how the company rebuilt its WebRTC stack for real-time voice — moving off off-the-shelf SFU/TURN components to a custom transport, routing, jitter-control, and connection-setup layer designed for global conversational turn-taking. The argument: model quality has stopped being the bottleneck for natural-feeling voice; network behaviour is, and the next competitive frontier is transport rather than weights.",
+      "link": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/",
+      "why_it_matters": "If you've ever tried to bolt a real-time voice loop onto a small Python web app, this is the post that explains why your prototype stutters even when the model is fast — and what serious teams do about it. WebRTC is one of those technologies that hides under almost every modern browser-based audio/video tool, so the engineering details here are useful background well beyond OpenAI's own products.",
+      "source": { "name": "OpenAI Blog", "type": "scrape", "url": "https://openai.com/news/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T06:14:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T06:14:00Z", "by": "enrichment", "change": "created (late-breaking from last 12h)" }
+      ],
+      "takes": []
+    }
+  ],
+  "dropped_in_phase": []
+}
