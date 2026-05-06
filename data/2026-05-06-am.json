@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-06-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-06",
-  "generated_at": "2026-05-06T06:14:00Z",
-  "generated_at_local": "2026-05-06T02:14:00-04:00",
+  "generated_at": "2026-05-06T11:20:00Z",
+  "generated_at_local": "2026-05-06T07:20:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-06T06:14:00Z", "duration_ms": 840000 }
+    { "phase": "enrichment", "ran_at": "2026-05-06T06:14:00Z", "duration_ms": 840000 },
+    { "phase": "refresh",    "ran_at": "2026-05-06T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 6, "2": 6, "3": 2 },
+  "tier_counts": { "1": 7, "2": 7, "3": 3 },
   "items": [
     {
       "id": "anthropic-financial-agents-launch",
@@ -154,6 +155,29 @@
       ]
     },
     {
+      "id": "xiaomi-mimo-v2-5-pro",
+      "tier": 1,
+      "title": "Xiaomi open-sources MiMo-V2.5-Pro, a 1T-parameter agentic coding model that outperforms DeepSeek-V4",
+      "summary": "Xiaomi released MiMo-V2.5 on April 29 as two MIT-licensed open-weight models: MiMo-V2.5-Pro (1.02T total / 42B active MoE) targeting agentic coding and long-horizon software engineering, and MiMo-V2.5 (310B / 15B active) for multimodal workflows with native visual and audio understanding. Both support 1M-token context windows and can sustain 1,000+ tool-call sequences. Independent benchmarks on the ClawBench agentic evaluation (153 real production tasks across 144 live websites) put MiMo-V2.5-Pro ahead of DeepSeek-V4 and Kimi K2.6 for agentic efficiency and cost. Xiaomi is offering 100 trillion free tokens over 30 days through its MiMo API platform to accelerate developer adoption.",
+      "link": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+      "why_it_matters": "A phone company just dropped a trillion-parameter open-weight model that outperforms DeepSeek on coding agents. The MoE architecture (42B active out of 1T total) means inference cost isn't proportional to parameter count, and MIT licensing means self-host, fine-tune, and commercial deployment without extra permission. The 100T free-token offer is unusual and the 1M-context window is now table stakes in this class — whole-codebase prompts aren't a frontier-lab exclusive anymore.",
+      "source": { "name": "Hugging Face", "type": "rss", "url": "https://huggingface.co/blog" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-06T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T11:20:00Z", "by": "refresh", "change": "created (overnight Asia cycle)" }
+      ],
+      "takes": [
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/open-source-xiaomi-mimo-v2-5-and-v2-5-pro-are-among-the-most-efficient-and-affordable-at-agentic-claw-tasks", "take": "ClawBench evaluation puts MiMo-V2.5-Pro ahead of DeepSeek-V4 and Kimi K2.6 on agentic task efficiency and cost." },
+        { "source": "Medium / Data Science in Your Pocket", "url": "https://medium.com/data-science-in-your-pocket/xiaomi-mimo-v2-5-pro-best-open-source-llm-is-here-beats-kimi-k2-6-glm-5-1-8f12007b444a", "take": "Claims MiMo-V2.5-Pro tops the open-source leaderboard at launch over GLM-5.1 and Kimi K2.6." }
+      ]
+    },
+    {
       "id": "openai-codex-multiagentv2-update",
       "tier": 2,
       "title": "OpenAI Codex update adds persisted /goal workflows and MultiAgentV2",
@@ -272,6 +296,29 @@
       ]
     },
     {
+      "id": "mistral-medium-3-5-vibe-agents",
+      "tier": 2,
+      "title": "Mistral ships Medium 3.5 — a 128B open-weight model — alongside async remote coding agents for Vibe",
+      "summary": "Mistral released Medium 3.5 on April 29 as a 128B dense open-weight model (modified MIT license, commercial use requires an enterprise deal for companies over $20M/month revenue) that consolidates three prior products — Medium 3.1, Magistral, and Devstral 2 — into one set of weights with configurable reasoning. It has a 256K-token context window, scores 77.6% on SWE-Bench Verified, and is self-hostable on four consumer-grade GPUs. Alongside the model, Mistral launched remote agents in Vibe, its coding platform: tasks run async in the cloud, local CLI sessions can be teleported mid-work to the cloud, and when the task is done the agent opens a pull request on GitHub.",
+      "link": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "why_it_matters": "Medium 3.5 is Europe's answer to the open-weight arms race — one model that does reasoning, coding, and vision instead of three separate products, runnable on hardware most teams already have. The Vibe remote agent pattern (start a task, walk away, review a PR later) is the same async direction Anthropic's background Claude Code and OpenAI's Codex are moving toward, and Mistral's version is live now. If you're curious about self-hosting a frontier-class coder, this is the most practical option since it fits on four GPUs.",
+      "source": { "name": "Mistral AI", "type": "scrape", "url": "https://mistral.ai/news" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-06T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T11:20:00Z", "by": "refresh", "change": "created (overnight EU cycle)" }
+      ],
+      "takes": [
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/", "take": "Comprehensive breakdown of the model and the remote-agent workflow, including the 'teleport' feature for moving local CLI sessions to the cloud." },
+        { "source": "InfoQ", "url": "https://www.infoq.com/news/2026/05/mistral-agents-lechat/", "take": "Notes that Medium 3.5 also powers Mistral's Le Chat in 'Work Mode' — a separate async task runner inside the chat app." }
+      ]
+    },
+    {
       "id": "caisi-frontier-ai-national-security-evals",
       "tier": 3,
       "title": "Google DeepMind, Microsoft, and xAI sign up for US pre-deployment AI evaluations",
@@ -317,6 +364,28 @@
       "takes": [
         { "source": "CBS News", "url": "https://www.cbsnews.com/news/pentagon-anthropic-feud-ai-military-says-it-made-compromises/", "take": "Pentagon official: \"You have to trust your military to do the right thing.\"" },
         { "source": "Military Times", "url": "https://www.militarytimes.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/", "take": "Reads the freeze-out as an unusually direct response to a vendor's refusal to relax usage policy." }
+      ]
+    },
+    {
+      "id": "eu-ai-omnibus-high-risk-deferral",
+      "tier": 3,
+      "title": "EU AI Act high-risk deferral stalls in trilogue; August 2 deadline remains live",
+      "summary": "The EU's second political trilogue on the Digital AI Omnibus on April 28 ended without agreement; a third session is scheduled for May 13. The central question is whether the high-risk AI compliance deadline moves from August 2, 2026 to December 2027 — 16 months of extra runway for companies using AI in healthcare, critical infrastructure, law enforcement, and hiring. If the Omnibus isn't formally adopted before August 2, the original AI Act's high-risk provisions kick in as written. As of March 2026, only 8 of 27 EU member states have registered the single-contact-point enforcement infrastructure the Act requires.",
+      "link": "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act",
+      "why_it_matters": "If you're using or building AI tools that touch anything the EU classifies as high-risk — hiring tools, educational scoring, credit decisions, safety systems — the August 2 date is the one to watch, and the legislative clock is tight. The enforcement gap (only 8 of 27 countries have set up their enforcement contact points) is also a useful signal of how early-stage real AI regulation still is, regardless of what the regulations say on paper.",
+      "source": { "name": "DLA Piper GENIE", "type": "scrape", "url": "https://knowledge.dlapiper.com" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-06T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T11:20:00Z", "by": "refresh", "change": "created (overnight EU cycle)" }
+      ],
+      "takes": [
+        { "source": "Morrison Foerster", "url": "https://www.mofo.com/resources/insights/260501-european-digital-compliance-key-digital-regulation", "take": "May 1 EU digital compliance roundup covering the Omnibus status alongside the NIS2 and CRA timelines." }
       ]
     },
     {
