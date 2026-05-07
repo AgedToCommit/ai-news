@@ -1,0 +1,229 @@
+{
+  "snapshot_id": "2026-05-07-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-07",
+  "generated_at": "2026-05-07T06:18:33Z",
+  "generated_at_local": "2026-05-07T02:18:33-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-07T06:18:33Z", "duration_ms": 600000 }
+  ],
+  "tier_counts": { "1": 2, "2": 4, "3": 3 },
+  "items": [
+    {
+      "id": "anthropic-spacex-compute-deal-2026-05",
+      "tier": 1,
+      "title": "Anthropic signs SpaceX compute deal, takes the entire Colossus 1 data center",
+      "summary": "Anthropic is taking all of the compute capacity at Elon Musk's SpaceX/xAI Colossus 1 data center in Memphis — over 300MW and roughly 220,000 NVIDIA GPUs spinning up within the month. Anthropic immediately raised Claude Opus API rate limits and doubled Claude Code's five-hour usage limits for paid and enterprise customers, and floated future interest in multi-gigawatt compute capacity in space.",
+      "link": "https://www.anthropic.com/news/higher-limits-spacex",
+      "why_it_matters": "The practical takeaway for Claude Code users: your 5-hour limits just doubled overnight. The bigger story is the Anthropic/Musk thaw — Musk publicly said this week he was 'impressed' with the team after a string of prior jabs — and that Anthropic is willing to take all of someone else's data center to keep up with demand.",
+      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added Colossus 1 / 300MW / 220K GPU specifics, Claude Code 5-hour limit doubling, in-space compute interest" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/06/anthropic-spacex-data-center-capacity.html", "take": "Notes the deal includes language around developing gigawatt-scale compute in space." },
+        { "source": "CoinDesk", "url": "https://www.coindesk.com/tech/2026/05/06/anthropic-signs-elon-musk-s-spacex-for-colossus-1-compute-ahead-of-june-ipo", "take": "Frames the timing as a load-bearing announcement ahead of Anthropic's expected June IPO." }
+      ]
+    },
+    {
+      "id": "openai-gpt-5-5-instant-default",
+      "tier": 1,
+      "title": "OpenAI swaps in GPT-5.5 Instant as the new ChatGPT default",
+      "summary": "GPT-5.5 Instant is now the default ChatGPT model, replacing GPT-5.3 Instant. OpenAI claims a 52.5% drop in hallucinated claims on high-stakes prompts (medicine, law, finance), AIME 2025 climbing from 65.4 to 81.2, and MMMU-Pro multimodal reasoning from 69.2 to 76. The new default also explicitly cuts back on 'gratuitous emojis' and aims for terser replies, with personalisation that can opt-in to past conversations, files, and Gmail.",
+      "link": "https://openai.com/index/introducing-gpt-5-5/",
+      "why_it_matters": "Default-model swaps are the single biggest behaviour change most ChatGPT users will notice all year. If your prompts depended on the old model's hedging, emoji habits, or quirks, expect drift — and the new memory-of-files-and-Gmail integration is the kind of feature most people won't realise is on until it surfaces something in an answer.",
+      "source": { "name": "OpenAI", "type": "scrape", "url": "https://openai.com/blog" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added concrete benchmark deltas (AIME 65.4→81.2, MMMU-Pro 69.2→76), 52.5% hallucination drop, emoji/tone change, GPT-4o backlash precedent" }
+      ],
+      "takes": [
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/05/gpt-5-5-instant-makes-chatgpt-more-accurate-while-nixing-gratuitous-emojis/", "take": "Highlights the explicit 'fewer gratuitous emojis' design choice as a tone reset users will feel right away." },
+        { "source": "The Decoder", "url": "https://the-decoder.com/chatgpt-update-rolls-out-gpt-5-5-instant-with-fewer-hallucinations-and-more-personalized-answers/", "take": "Notes the 37.3% reduction in inaccurate claims specifically on conversations users had previously flagged." }
+      ]
+    },
+    {
+      "id": "cloudflare-stripe-agent-commerce-protocol",
+      "tier": 2,
+      "title": "Cloudflare and Stripe ship a protocol for AI agents to buy services on their own",
+      "summary": "Cloudflare and Stripe co-designed a protocol — launched alongside Stripe Projects — that lets AI agents discover services, get scoped credentials, and pay using a Stripe-issued payment token, with no card numbers ever exposed to the agent. Default cap is $100/month per provider; Cloudflare is the first integration, letting an agent register domains, start subscriptions, and deploy apps end to end. The work sits inside the broader x402 ecosystem (now a Linux Foundation project as of April 2026) where Cloudflare alone is processing about a billion HTTP 402 responses a day across 22 launch members including AWS, Google, Microsoft, Mastercard, Visa, and Shopify.",
+      "link": "https://blog.cloudflare.com/agents-stripe-projects/",
+      "why_it_matters": "This is the first real 'agents with wallets' pattern from credible infrastructure providers, with sane defaults (spend caps, no raw card data). The x402 numbers — 69,000 active agents, 165M transactions, ~$50M cumulative volume by end of April — suggest this is no longer a thought experiment. The discovery + auth + payment design is worth reading as a template even if you never write an agent that spends money.",
+      "source": { "name": "Cloudflare Blog", "type": "scrape", "url": "https://blog.cloudflare.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added x402 Linux Foundation context, Cloudflare ~1B 402-responses/day stat, Coinbase 69K agents / 165M txns / $50M volume figures, 22-member launch list" }
+      ],
+      "takes": [
+        { "source": "CoinDesk", "url": "https://www.coindesk.com/tech/2026/05/05/ai-agents-are-breaking-web-economics-but-cloudflare-says-x402-can-help", "take": "Frames the protocol as Cloudflare's pitch that the existing web payment model (humans paying per page) doesn't survive contact with agents." },
+        { "source": "Linux Foundation", "url": "https://www.linuxfoundation.org/press/linux-foundation-is-launching-the-x402-foundation-and-welcoming-the-contribution-of-the-x402-protocol", "take": "Confirms x402 was contributed to a Linux Foundation project at the MCP Dev Summit on April 2." },
+        { "source": "InfoWorld", "url": "https://www.infoworld.com/article/4165857/are-we-ready-to-give-ai-agents-the-keys-to-the-cloud-cloudflare-thinks-so.html", "take": "Asks the obvious safety question and notes the $100/month default cap as a backstop." }
+      ]
+    },
+    {
+      "id": "google-workspace-intelligence",
+      "tier": 2,
+      "title": "Google bolts Gemini into Workspace as 'Workspace Intelligence'",
+      "summary": "Workspace Intelligence — announced at Cloud Next '26 on April 22 — is a semantic layer that gives Gemini real-time read access to Gmail, Chat, Calendar, and Drive (Docs, Sheets, Slides) so prompts don't need manual context. It rolls out to nearly every paid tier (Business Starter through Enterprise Plus, Education Plus, Frontline Plus, Nonprofits) and is ON by default — admins must explicitly disable data sources at the domain, OU, or group level. A separate AI control center lets admins govern which AI tools and agents can touch Workspace data at all.",
+      "link": "https://workspace.google.com/blog/product-announcements/introducing-workspace-intelligence",
+      "why_it_matters": "If you've ever pasted an email into a chat to ask a model about it, this is the polished version. The 'on by default, admins opt out' rollout is the design choice worth noticing — it's the opposite of how most data-access features ship, and it's going to land in millions of orgs whether IT teams notice or not. The new AI control center is the reference implementation for how to scope an LLM across an inbox.",
+      "source": { "name": "Google Workspace Blog", "type": "scrape", "url": "https://workspace.google.com/blog/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added Cloud Next '26 context, full SKU coverage list, ON-by-default rollout posture, separate AI control center for agent governance" }
+      ],
+      "takes": [
+        { "source": "Google Workspace Updates", "url": "https://workspaceupdates.googleblog.com/2026/04/introducing-workspace-intelligence-with-admin-controls.html", "take": "Documents the on-by-default posture and the per-OU/group/domain disable controls." },
+        { "source": "Google Workspace Updates", "url": "https://workspaceupdates.googleblog.com/2026/05/securely-manage-AI-and-agent-access-to-Workspace-data-with-the-AI-control-center.html", "take": "Introduces the AI control center as the broader governance surface for which AI tools and agents can touch Workspace data." }
+      ]
+    },
+    {
+      "id": "deeink-31-rust-cli-tools",
+      "tier": 2,
+      "title": "Dev open-sources 31 Rust CLI tools and argues CLIs beat MCP for agent workflows",
+      "summary": "An open-source project called dee.ink ships 31 small Rust CLIs (Hacker News querying, arXiv parsing, invoicing, exchange rates, contacts, SSL monitoring, etc.) intended to be wired up to AI agents. The author benchmarks them at roughly 35x more token-efficient than equivalent Model Context Protocol servers, citing Scalekit's 4–32x range and a separate Microsoft Graph comparison that landed near the same 35x figure ($3.20/month vs $55.20/month at 10K ops). The argument: fewer round trips, direct exit codes, smaller attack surface, easier to debug.",
+      "link": "https://www.yuyjo.com/archives/62664",
+      "why_it_matters": "Worth a read even if you stick to Python. It's one of the few specific arguments-with-numbers about whether MCP is the right abstraction, and it lands at a moment when every vendor is pushing their own MCP server. If you've been thinking about wiring tools into Claude or another agent, this is the contrarian take — and the specific dollar figures make it harder to wave away.",
+      "source": { "name": "Yuyjo", "type": "scrape", "url": "https://www.yuyjo.com/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added independent corroboration (Scalekit 4–32x range, Jannik Reinhard's Microsoft Graph 35x figure, $3.20 vs $55.20 at 10K ops) and HN debate context" }
+      ],
+      "takes": [
+        { "source": "HackerNoon", "url": "https://hackernoon.com/the-case-for-cli-tools-over-mcp-servers-in-agentic-ai", "take": "Generalises the argument: CLI exit codes and stderr beat framework-wrapped MCP errors for debugging." },
+        { "source": "Hacker News", "url": "https://news.ycombinator.com/item?id=47208398", "take": "The 'when does MCP make sense vs CLI?' thread captures the live community pushback — most of it agreeing CLIs win for established tools, MCP for stateful servers." }
+      ]
+    },
+    {
+      "id": "openai-self-serve-ads-platform",
+      "tier": 3,
+      "title": "OpenAI opens ChatGPT ads to small businesses with a self-serve manager and CPC bidding",
+      "summary": "OpenAI launched a beta self-serve Ads Manager for US advertisers on May 5, dropping the $50,000 minimum spend from the pilot phase. The platform adds CPC bidding, a Conversions API, and a measurement pixel, with launch ad-tech partners including Adobe, Criteo, Kargo, Pacvue, and StackAdapt and agency tie-ins via Dentsu, Omnicom, Publicis, and WPP. OpenAI is on the record targeting $2.5B in ad revenue this year, $100B by 2030.",
+      "link": "https://www.searchenginejournal.com/openai-launches-self-serve-ads-manager-for-chatgpt/573971/",
+      "why_it_matters": "ChatGPT becoming a small-business ad channel is a directional shift worth noticing — until now, ads in ChatGPT were a closed pilot for big brands. The interesting design problem is OpenAI's claim that ads 'do not influence the core organic model'; how that gets enforced (and whether anyone can audit it) is the story to watch.",
+      "source": { "name": "Search Engine Journal", "type": "scrape", "url": "https://www.searchenginejournal.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T06:18:33Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "created (late-breaking, May 5 launch surfaced in overnight pass)" }
+      ],
+      "takes": [
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/05/openai-self-serve-ad-platform", "take": "Frames it as the shift from a $50K-floor pilot for big brands to a self-serve channel anyone can buy." },
+        { "source": "The Decoder", "url": "https://the-decoder.com/chatgpt-ads-are-now-open-to-small-businesses-as-openai-builds-a-full-self-serve-ad-platform/", "take": "Reads the move against OpenAI's stated $2.5B-this-year, $100B-by-2030 ad targets." }
+      ]
+    },
+    {
+      "id": "google-gemini-3-2-flash-leak",
+      "tier": 2,
+      "title": "Gemini 3.2 Flash leaks in Google's iOS app two weeks ahead of I/O",
+      "summary": "Gemini 3.2 Flash quietly appeared inside the official iOS Gemini app and AI Studio on May 5, with users on r/GeminiAI watching their app cycle through model versions in real time. Leaked LM Arena and AI Studio metadata pegs it above Gemini 3 Flash and at or above Gemini 3.1 Pro on coding tasks, with pricing of about $0.25 per million input tokens and $2.00 per million output — roughly 33% cheaper output than Gemini 3 Flash. A redesigned 'Liquid Glass' interface (pill-shaped prompt box, top-left model picker) leaked with it. Google I/O is May 19–20.",
+      "link": "https://www.aixploria.com/en/ai-radar/google-gemini-3-2-flash-leaked-ios-lm-arena/",
+      "why_it_matters": "If the leaked numbers hold up, Gemini 3.2 Flash beats the previous Pro on coding at roughly Flash pricing — that's the kind of shift that makes you rethink which model your scripts default to. Worth tracking through I/O on May 19; Polymarket has 83% odds it ships before the end of the month.",
+      "source": { "name": "AIxploria", "type": "scrape", "url": "https://www.aixploria.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T06:18:33Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "created (late-breaking, leaked iOS app build May 5)" }
+      ],
+      "takes": [
+        { "source": "Piunika Web", "url": "https://piunikaweb.com/2026/05/05/gemini-3-2-flash-3-1-lite-ios-liquid-glass/", "take": "Catches Gemini 3.2 Flash and 3.1 Lite in the same iOS build alongside the 'Liquid Glass' UI redesign." },
+        { "source": "Geeky Gadgets", "url": "https://www.geeky-gadgets.com/google-gemini-flash-leak-lm-arena/", "take": "Confirms the LM Arena performance leak and the leaked $0.25/$2.00 per million token pricing." }
+      ]
+    },
+    {
+      "id": "salesforce-headless-360",
+      "tier": 3,
+      "title": "Salesforce goes headless: every capability becomes an API, MCP tool, or CLI command",
+      "summary": "At TDX 2026, Salesforce unveiled Headless 360 — exposing the full platform as APIs, MCP tools, and CLI commands so AI agents can drive it without a browser. Agentforce Vibes 2.0 ships with Claude Sonnet 4.5 as the default coding model, multi-model support (Claude, GPT-5), full org awareness, and free Vibes IDE access in every Developer Edition org. AgentExchange unifies 10,000 Salesforce apps, 2,600+ Slack apps, and 1,000+ partner agents/MCP servers, while a new Agent Fabric governance plane adds 'Guided Determinism' (Agent Script) for locking down which agent steps must follow business logic versus reason freely.",
+      "link": "https://venturebeat.com/technology/salesforce-launches-headless-360-to-turn-its-entire-platform-into-infrastructure-for-ai-agents",
+      "why_it_matters": "An MCP-everywhere strategy from a major SaaS vendor normalises the idea that the API surface is for agents, not just for partner integrations. The 'Guided Determinism' design — explicitly marking which steps an agent can reason about and which it must execute literally — is a practical pattern that's likely to show up in other vendors' agent runtimes. Useful background even if you never touch Salesforce.",
+      "source": { "name": "VentureBeat", "type": "scrape", "url": "https://venturebeat.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added Agent Script / 'Guided Determinism' detail, Claude Sonnet 4.5 default in Vibes IDE, free Vibes IDE in every Developer Edition org, analyst framing about Trailblazer ecosystem split" }
+      ],
+      "takes": [
+        { "source": "Salesforce", "url": "https://www.salesforce.com/news/stories/agent-fabric-control-plane-announcement/", "take": "Salesforce's own framing of Agent Fabric leans on the 'governed control plane for multi-vendor AI' line." },
+        { "source": "SalesforceDevops.net", "url": "https://salesforcedevops.net/index.php/2026/04/15/tdx-2026-reporters-notebook-salesforce-goes-headless-and-widens-the-builder-gap/", "take": "Reads the move as a deliberate pivot toward Cursor/Windsurf/Claude Code-style developers, at the cost of the traditional declarative Trailblazer crowd." }
+      ]
+    },
+    {
+      "id": "microsoft-agent-365-ga",
+      "tier": 3,
+      "title": "Microsoft Agent 365 hits GA as a control plane for AI agents",
+      "summary": "Microsoft Agent 365 went generally available May 1 at $15 per user, with the first 10,000 managed agents per tenant free and a graduated ~$0.15/agent/month consumption charge after that. It's also bundled into the new Microsoft 365 E7 'Frontier Suite' at $99/user/month (E5 + Copilot + Agent 365 + Entra Suite). Defender and Intune can now surface and block unmanaged local agents — starting with the OpenClaw platform on Windows endpoints — and registry sync with AWS Bedrock and Google Cloud Gemini Enterprise Agent Platform launched in public preview the same day, putting Agent 365 among the first multicloud agent governance planes.",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/",
+      "why_it_matters": "If agents become normal at work, somebody has to track what they did and which permissions they used. Microsoft's bet is a new SKU — and it's specifically calling out OpenClaw (the popular open-source local-agent runtime) as the kind of unmanaged tool IT will start blocking. Given how much of corporate IT runs on Microsoft, the design choices here will set the template for how agent governance gets done elsewhere.",
+      "source": { "name": "Microsoft Security Blog", "type": "scrape", "url": "https://www.microsoft.com/en-us/security/blog/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-06T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-06T17:14:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-07T06:18:33Z", "by": "enrichment", "change": "added per-agent consumption pricing (10K free, ~$0.15/agent/mo after), explicit Defender/Intune blocking of OpenClaw, AWS Bedrock + Gemini Enterprise registry sync preview" }
+      ],
+      "takes": [
+        { "source": "Winbuzzer", "url": "https://winbuzzer.com/2026/05/02/microsoft-agent-365-general-availability-local-ai-agents-xcxwbn/", "take": "Reads the Defender/Intune local-agent controls as Microsoft drawing the line on shadow-AI in the enterprise." },
+        { "source": "Windows News", "url": "https://windowsnews.ai/article/microsoft-agent-365-ga-control-plane-for-governing-ai-agents-across-windows-and-multicloud.416288", "take": "Highlights AWS Bedrock + Gemini Enterprise registry sync as a real multicloud commitment, not just Microsoft-only governance." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
