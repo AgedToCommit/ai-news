@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-07-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-07",
-  "generated_at": "2026-05-07T06:18:33Z",
-  "generated_at_local": "2026-05-07T02:18:33-04:00",
+  "generated_at": "2026-05-07T11:00:00Z",
+  "generated_at_local": "2026-05-07T07:00:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-07T06:18:33Z", "duration_ms": 600000 }
+    { "phase": "enrichment", "ran_at": "2026-05-07T06:18:33Z", "duration_ms": 600000 },
+    { "phase": "refresh",    "ran_at": "2026-05-07T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 2, "2": 4, "3": 3 },
+  "tier_counts": { "1": 4, "2": 4, "3": 4 },
   "items": [
     {
       "id": "anthropic-spacex-compute-deal-2026-05",
@@ -55,6 +56,53 @@
       "takes": [
         { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/05/gpt-5-5-instant-makes-chatgpt-more-accurate-while-nixing-gratuitous-emojis/", "take": "Highlights the explicit 'fewer gratuitous emojis' design choice as a tone reset users will feel right away." },
         { "source": "The Decoder", "url": "https://the-decoder.com/chatgpt-update-rolls-out-gpt-5-5-instant-with-fewer-hallucinations-and-more-personalized-answers/", "take": "Notes the 37.3% reduction in inaccurate claims specifically on conversations users had previously flagged." }
+      ]
+    },
+    {
+      "id": "pentagon-dod-ai-contracts-anthropic-excluded",
+      "tier": 1,
+      "title": "Pentagon awards classified AI contracts to 8 companies — Anthropic not on the list",
+      "summary": "The Department of Defense signed IL6/IL7 classified-network AI agreements with AWS, Google, Microsoft, OpenAI, SpaceX, Nvidia, Oracle, and stealth startup Reflection AI on May 1, explicitly not including Anthropic. The exclusion stems from DoD's March supply-chain-risk designation after Anthropic refused to permit Claude to be used for 'all lawful' purposes, citing autonomous weapons and domestic surveillance concerns. Anthropic sued, won a preliminary injunction in California but lost in the DC appeals court in April; a further hearing is set for May 19. Separately, Trump told CNBC a deal is 'possible' and the NSA is already using a non-public Anthropic model called Mythos.",
+      "link": "https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic",
+      "why_it_matters": "This is AI policy playing out at the sharpest possible level — one of the three biggest frontier labs locked out of the defense market because it wouldn't surrender safety guardrails. The supply-chain-risk designation radiates into the whole defense-contractor ecosystem, not just direct Pentagon buys. The Mythos/NSA subplot is worth tracking: the DoD is already using Anthropic's tech through a side door while publicly blacklisting the company. And Reflection AI — a 2-year-old stealth startup with no public model, backed by Nvidia and 1789 Capital (where Trump Jr. is a partner), negotiating at a $25B valuation — is the wild card in this story.",
+      "source": { "name": "CNN Business", "type": "scrape", "url": "https://www.cnn.com/business" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T11:00:00Z", "by": "refresh", "change": "created (May 1 contract awards and ongoing legal/political context surfaced in overnight sweep)" }
+      ],
+      "takes": [
+        { "source": "Defense News", "url": "https://www.defensenews.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/", "take": "Notes the supply-chain designation blocks defense contractors from using Claude — the blast radius extends well beyond direct Pentagon buys." },
+        { "source": "Winbuzzer", "url": "https://winbuzzer.com/2026/05/03/pentagon-classified-ai-agreements-nvidia-microsoft-aws-google-openai-spacex-oracle-reflection-xcxwbn/", "take": "Profiles Reflection AI: 2 years old, no public model, backed by Nvidia and 1789 Capital, negotiating a $25B valuation, led by former Google DeepMind researchers." },
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/01/pentagon-anthropic-blacklist-mythos-michael.html", "take": "DoD CTO Emil Michael says Anthropic is still a supply-chain risk, but Mythos is a 'separate national security moment' — confirming NSA use of the model through a different channel." }
+      ]
+    },
+    {
+      "id": "deepseek-v4-open-weight-release",
+      "tier": 1,
+      "title": "DeepSeek V4 released: MIT-licensed, 1.6T-parameter model that ties Claude Opus 4.7 on coding",
+      "summary": "DeepSeek released V4-Pro (1.6T parameters, 49B activated) and V4-Flash (284B, 13B activated) on April 24, both under the MIT license with 1-million-token context windows. V4-Pro tops LiveCodeBench at 93.5, edges GPT-5.5 on Codeforces ELO (3206 vs 3168), and ties Claude Opus 4.7 on SWE-bench Verified (80.6 vs 80.8). The model ships with three inference modes — Non-think, Think High, and Think Max — and was trained on Huawei Ascend hardware. NIST's CAISI group evaluated V4-Pro in early May.",
+      "link": "https://api-docs.deepseek.com/news/news260424",
+      "why_it_matters": "An MIT-licensed model that matches or beats the best closed-source coding models is the kind of release that changes the 'which API do I default to?' decision for any Python project. V4-Pro input pricing is $0.30/MTok, and the 1M-token context means you can feed in a whole codebase at once. The Huawei-Ascend training angle also shows that US chip export controls haven't stopped Chinese labs from reaching the frontier on coding benchmarks.",
+      "source": { "name": "DeepSeek API Docs", "type": "scrape", "url": "https://api-docs.deepseek.com/" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-07T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T11:00:00Z", "by": "refresh", "change": "created (April 24 Asia-cycle release not captured in prior runs)" }
+      ],
+      "takes": [
+        { "source": "DataCamp", "url": "https://www.datacamp.com/blog/deepseek-v4", "take": "Side-by-side benchmarks against GPT-5.5, Claude Opus 4.7, and Gemini 3.1 Pro with concrete numbers across all major evals." },
+        { "source": "NIST CAISI", "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro", "take": "NIST's CAISI evaluation pegs V4-Pro's capability level at roughly 8 months behind the current frontier — comparable to where GPT-5 was at its release." }
       ]
     },
     {
@@ -222,6 +270,29 @@
       "takes": [
         { "source": "Winbuzzer", "url": "https://winbuzzer.com/2026/05/02/microsoft-agent-365-general-availability-local-ai-agents-xcxwbn/", "take": "Reads the Defender/Intune local-agent controls as Microsoft drawing the line on shadow-AI in the enterprise." },
         { "source": "Windows News", "url": "https://windowsnews.ai/article/microsoft-agent-365-ga-control-plane-for-governing-ai-agents-across-windows-and-multicloud.416288", "take": "Highlights AWS Bedrock + Gemini Enterprise registry sync as a real multicloud commitment, not just Microsoft-only governance." }
+      ]
+    },
+    {
+      "id": "apple-siri-ai-250m-settlement",
+      "tier": 3,
+      "title": "Apple agrees to pay $250M to settle suit over overpromised Apple Intelligence features",
+      "summary": "Apple filed for preliminary approval of a $250 million class action settlement on May 5, covering iPhone 16-era device purchases from June 2024 through March 2025 — the window when Apple marketed a dramatically upgraded Siri that turned out to take far longer than implied. Eligible class members could receive $25–$95 per device depending on claim volume. A final hearing is set for June 17, one week after WWDC on June 8, where Apple is expected to preview yet another version of its AI-enhanced Siri.",
+      "link": "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/",
+      "why_it_matters": "The first significant US class action to result in a real payout specifically for overpromising AI features on a shipping product. The timing — immediately before WWDC where Apple will demo AI Siri improvements again — is going to make Apple very careful about what its demos imply versus what actually ships. If you bought an iPhone 16, you can file a claim.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T11:00:00Z", "by": "refresh", "change": "created (May 5 settlement filing surfaced in morning sweep)" }
+      ],
+      "takes": [
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/05/apple-reaches-250m-settlement-over-siri-delays-users-could-get-up-to-95-per-device/", "take": "Details the eligible purchase window (Jun 2024–Mar 2025) and the per-device payout range up to $95." },
+        { "source": "Qz.com", "url": "https://qz.com/apple-siri-ai-false-advertising-lawsuit-settlement-050626", "take": "Notes the settlement arrives as Apple prepares to make another round of AI Siri promises at WWDC on June 8." }
       ]
     }
   ],
