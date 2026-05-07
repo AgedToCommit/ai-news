@@ -1,0 +1,200 @@
+{
+  "snapshot_id": "2026-05-07-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-07",
+  "generated_at": "2026-05-07T17:14:00Z",
+  "generated_at_local": "2026-05-07T13:14:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-07T17:14:00Z", "duration_ms": 540000 }
+  ],
+  "tier_counts": { "1": 3, "2": 2, "3": 3 },
+  "items": [
+    {
+      "id": "anthropic-glasswing-claude-mythos-preview",
+      "tier": 1,
+      "title": "Anthropic gives 12 partners early access to Claude Mythos Preview to find zero-days before attackers do",
+      "summary": "Project Glasswing — announced April 7 and gaining momentum through May — gives AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan Chase, the Linux Foundation, Microsoft, Nvidia, and Palo Alto Networks early access to Claude Mythos Preview, an unreleased Anthropic frontier model that's strikingly good at finding and exploiting software vulnerabilities. Mythos has already autonomously identified thousands of zero-days across every major OS and browser, including a 17-year-old FreeBSD remote-code-execution flaw (CVE-2026-4747) that gives root from an unauthenticated NFS request, and chained four vulns to escape a browser's renderer and OS sandboxes. Anthropic is committing $100M in Mythos credits and $4M in donations to open-source security orgs; access is also being extended to 40+ additional critical-infrastructure maintainers.",
+      "link": "https://www.anthropic.com/project/glasswing",
+      "why_it_matters": "This is the clearest public signal yet that frontier models have crossed the line into 'better at offensive security than almost any human.' The way Anthropic is handling it — give defenders early access, fund open-source security work, hold the model back from public release — is the practical version of the abstract 'AI safety' debates. Worth reading the Schneier post and Anthropic's own write-up to see the specific exploit chains; if you administer any FreeBSD/NFS box, CVE-2026-4747 is the one to patch this week.",
+      "source": { "name": "Anthropic", "type": "scrape", "url": "https://www.anthropic.com/project/glasswing" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Schneier on Security", "url": "https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html", "take": "Calls Glasswing 'a useful experiment in selectively releasing dangerous capabilities' — defenders move first, then the model goes public." },
+        { "source": "The Hacker News", "url": "https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html", "take": "Documents the scale of zero-day discovery — 'thousands' across major operating systems and browsers, with the FreeBSD NFS RCE singled out as the canary case." },
+        { "source": "Fortune", "url": "https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/", "take": "Frames it as Anthropic's bet that defenders need a head start over the inevitable public-model parity moment." }
+      ]
+    },
+    {
+      "id": "caisi-frontier-testing-deepmind-microsoft-xai",
+      "tier": 1,
+      "title": "Commerce's CAISI signs pre-deployment AI testing pacts with Google DeepMind, Microsoft, and xAI",
+      "summary": "The Center for AI Standards and Innovation, sitting under NIST at the Department of Commerce, announced agreements on May 5–6 with Google DeepMind, Microsoft, and xAI to evaluate frontier models before they're publicly released. Each company will hand over its latest models — frequently with safeguards reduced or removed — for classified-environment testing of cybersecurity, biosecurity, and chemical-weapons risks, plus assessment of foreign AI systems for backdoors. The deals build on (and renegotiate) the original 2024 OpenAI and Anthropic agreements under the new America's AI Action Plan directives.",
+      "link": "https://www.nist.gov/news-events/news/2026/05/caisi-signs-agreements-regarding-frontier-ai-national-security-testing",
+      "why_it_matters": "Government pre-deployment review used to be a voluntary OpenAI/Anthropic thing; it's now a five-lab club, including xAI, with explicit access to safeguard-stripped models. The CAISI evals are also where a lot of the public benchmark commentary on Chinese open-weight models (DeepSeek V4, Kimi K2.6) is coming from — same agency, same methodology. Worth tracking how this interacts with Anthropic's Pentagon exclusion: CAISI is doing safety evals at the same time DoD is freezing Anthropic out for being too cautious about safety.",
+      "source": { "name": "NIST", "type": "scrape", "url": "https://www.nist.gov/news-events/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html", "take": "Reads the deals as the Trump admin extending the same pre-deployment-review template to a broader slate of labs." },
+        { "source": "Nextgov/FCW", "url": "https://www.nextgov.com/artificial-intelligence/2026/05/commerce-ai-center-will-evaluate-google-deepmind-microsoft-and-xai-models/413349/", "take": "Highlights the 'reduced or removed safeguards' provision as the most consequential clause for what kind of testing is actually possible." },
+        { "source": "The Hill", "url": "https://thehill.com/homenews/5863937-google-microsoft-xai-ai-testing/", "take": "Notes the agreements are flexible enough to expand to new model families without renegotiation." }
+      ]
+    },
+    {
+      "id": "chinese-open-weight-coding-cluster-2026-04",
+      "tier": 1,
+      "title": "Four Chinese labs ship open-weight coding models in 12 days, all clustered at the closed-frontier ceiling",
+      "summary": "In a 12-day window in late April, Z.ai dropped GLM-5.1 (754B params, MIT) on April 7, Moonshot released Kimi K2.6 (1T params, Modified MIT) on April 20, MiniMax shipped M2.7 (10B activated), and DeepSeek shipped V4-Pro/V4-Flash (1.6T/284B, MIT) on April 24. All four sit within a few points of each other on SWE-Bench Verified (~80%) and at or above closed peers like Claude Opus 4.6 and GPT-5.5 on agentic coding evals. Kimi K2.6 ships an Agent Swarm runtime with up to 300 sub-agents and 4,000 coordinated steps; MiniMax M2.7 prices at $0.30/M input tokens with 56.22% on SWE-Bench Pro. NIST CAISI's evaluation of V4-Pro pegged it about 8 months behind the current frontier overall.",
+      "link": "https://dev.to/bean_bean/the-late-april-2026-chinese-llm-stack-qwen-36-deepseek-v4plus-kimi-k26-minimax-m27-glm-51-2bif",
+      "why_it_matters": "Today's am file covered DeepSeek V4 in isolation — but the bigger pattern is that four labs hit the same capability ceiling within two weeks, all under permissive licenses, all at meaningfully lower inference cost than US closed models. If you're spinning up a Python project that defaults to an API, this is the moment when 'pull the weights and run them somewhere cheap' becomes a real default option for coding workloads. Kimi K2.6's 300-agent swarm in particular is worth a look as a reference architecture even if you never deploy it.",
+      "source": { "name": "DEV Community", "type": "scrape", "url": "https://dev.to/" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "DeepLearning.AI The Batch", "url": "https://www.deeplearning.ai/the-batch/kimi-k2-6-matches-open-qwen3-6-max-anddeepseek-v4-falls-just-behind-top-closed-models/", "take": "Pegs Kimi K2.6 at parity with Qwen3.6 Max and DeepSeek V4, just behind top closed models on agentic coding." },
+        { "source": "Atlas Cloud", "url": "https://www.atlascloud.ai/blog/guides/kimi-k2-6-vs-glm-5-1-vs-qwen-3-6-plus-vs-minimax-m2-7-coding-2026", "take": "Side-by-side numbers across the four — SWE-Bench Verified, SWE-Bench Pro, and per-token pricing — with MiniMax M2.7 winning the price column at $0.30/M." },
+        { "source": "Towards AI (Medium)", "url": "https://medium.com/@chewloongnian/i-tested-kimi-k2-6-2daa40001fd6", "take": "Real-task tests on 15 coding problems: the 0.2-point SWE-Bench gap between Kimi K2.6 and GLM-5.1 hides a 43% price gap, and Kimi codes 11 points better in practice." }
+      ]
+    },
+    {
+      "id": "huggingface-transformers-5-8-0",
+      "tier": 2,
+      "title": "Hugging Face Transformers 5.8.0 lands with DeepSeek-V4, Granite Speech Plus, and Poolside's Laguna",
+      "summary": "Transformers 5.8.0 shipped May 5 and adds first-class support for DeepSeek-V4 (Flash and Pro variants, with the hybrid local + long-range attention reimplemented), IBM Granite Speech Plus (audio transcription with speaker annotation and word-level timestamps), Granite Vision 4.1 (enterprise document/chart/table extraction), and Laguna — Poolside's MoE language model with per-layer head counts and a sigmoid-router auxiliary-loss-free load-balancing scheme. The library now claims 400+ supported architectures and over 750,000 model checkpoints on the Hub.",
+      "link": "https://github.com/huggingface/transformers/releases",
+      "why_it_matters": "If you write Python and load models from the Hub, this is the most direct path to running V4-Pro locally instead of via the API. The Laguna implementation is also worth a read just for the auxiliary-loss-free MoE balancing — it's an active research question that's now sitting in the Transformers source tree. Granite Vision 4.1's chart-and-table extraction is the kind of thing that quietly replaces a couple of bash + tesseract scripts.",
+      "source": { "name": "Hugging Face / GitHub Releases", "type": "scrape", "url": "https://github.com/huggingface/transformers/releases" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Hugging Face Models Timeline", "url": "https://huggingface.co/docs/transformers/en/models_timeline", "take": "Documents the per-release model cadence; the 5.8.0 cluster is the largest single-release additions in months." }
+      ]
+    },
+    {
+      "id": "nvidia-ising-quantum-ai-models",
+      "tier": 2,
+      "title": "Nvidia open-sources Ising — AI models built specifically for quantum-computer error correction and calibration",
+      "summary": "Nvidia released the Ising family of open-source models at GTC and continued promoting them through May 5. Ising Calibration is a vision-language model that reads instrument measurements off quantum processors and replaces multi-day manual calibration runs with hour-scale automation. Ising Decoding ships two 3D-CNN variants (one tuned for speed, one for accuracy) for real-time quantum-error-correction decoding — Nvidia's benchmarks claim 2.5x faster and 3x more accurate than traditional decoders. Ising integrates with CUDA-Q and NVQLink, and is hosted on Hugging Face, GitHub, and Nvidia's own platforms. Launch adopters include Academia Sinica, Fermilab, Harvard SEAS, IQM, LBNL's Advanced Quantum Testbed, and the UK's National Physical Laboratory.",
+      "link": "https://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers",
+      "why_it_matters": "Quantum computing has had its own AI-tooling story going for a while; Ising is Nvidia making the bet that the path to fault-tolerant quantum runs through transformer-style models trained on calibration and decoding data. The interesting cross-stack idea: calibration is a vision-language model — it reads scope traces — and the decoder is a 3D CNN treating the syndrome graph as a volume. Worth a skim even if you'll never touch a qubit; it's a clean example of LLM-style architectures being repurposed for tasks that look nothing like text.",
+      "source": { "name": "Nvidia Newsroom", "type": "scrape", "url": "https://nvidianews.nvidia.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-releases-ising-open-ai-models", "take": "Frames the 2.5x/3x decoding numbers as a credible reset to the QEC-decoder timeline — vendors had been quoting late-decade horizons that Ising compresses." },
+        { "source": "Nvidia Developer Blog", "url": "https://developer.nvidia.com/blog/nvidia-ising-introduces-ai-powered-workflows-to-build-fault-tolerant-quantum-systems/", "take": "The technical companion piece: how the calibration VLM reads measurement plots and the decoder treats syndrome data as a 3D volume." },
+        { "source": "Campus Technology", "url": "https://campustechnology.com/articles/2026/05/05/nvidia-unveils-ising-quantum-ai-model.aspx", "take": "Higher-ed angle on the launch adopters — Academia Sinica, Harvard SEAS, LBNL — and what classroom labs gain by skipping bespoke calibration code." }
+      ]
+    },
+    {
+      "id": "sierra-15b-valuation-fundraise",
+      "tier": 3,
+      "title": "Bret Taylor's Sierra raises $950M at $15B valuation as agent-platform consolidation accelerates",
+      "summary": "Sierra Technologies — Bret Taylor's customer-service agent platform, co-founded with former Google exec Clay Bavor in early 2024 — closed a $950M round at a $15B valuation on May 4, led by Alphabet's GV and Tiger Global, with Benchmark, Sequoia, and Greenoaks among others. Sierra reports adoption by nearly half the Fortune 50 and $150M annual recurring revenue. Taylor remains chair of OpenAI's board; the fundraise lands during the same week OpenAI and Anthropic both announced enterprise-services joint ventures.",
+      "link": "https://www.cnbc.com/2026/05/04/bret-taylor-sierra-fundraise-openai.html",
+      "why_it_matters": "$150M ARR for a two-year-old agent company explains why every major SaaS vendor — Salesforce, Microsoft, Google — is racing to ship its own agent platform. The valuation multiple (~100x ARR) is also the data point that's reshaping what 'reasonable AI startup pricing' looks like for late-stage rounds. Bret Taylor wearing both the Sierra-CEO and OpenAI-board-chair hats while OpenAI launches its own agent product is the conflict-of-interest setup worth watching.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "SiliconANGLE", "url": "https://siliconangle.com/2026/05/04/ai-agent-startup-sierra-valued-15b-new-950m-funding-round/", "take": "Notes the GV + Tiger Global lead and the Fortune-50 adoption stat as the case for the multiple." }
+      ]
+    },
+    {
+      "id": "elevenlabs-500m-arr-series-d-investors",
+      "tier": 3,
+      "title": "ElevenLabs crosses $500M ARR, lists BlackRock, Nvidia, Salesforce Ventures, and Jamie Foxx in Series D close",
+      "summary": "ElevenLabs disclosed on May 5 that its $500M Series D — first announced in February at an $11B valuation — closed with a roster including BlackRock, Wellington, D.E. Shaw, Nvidia, Salesforce Ventures, Deutsche Telekom, and celebrity backers Jamie Foxx, Eva Longoria, and Squid Game creator Hwang Dong-hyuk. The company says it crossed $500M annual recurring revenue in Q1 2026 (up from $350M at end of 2025), driven by enterprise voice-agent deployments in support, sales, hiring, and marketing. ElevenLabs also closed a $100M employee tender — its second in under a year.",
+      "link": "https://techcrunch.com/2026/05/05/elevenlabs-lists-blackrock-jamie-foxx-and-eva-longoria-as-new-investors/",
+      "why_it_matters": "Voice was the area most analysts wrote off as a rounding error a year ago; ElevenLabs is now at half a billion ARR with mainstream-finance investors and a celebrity index. The interesting detail is how much of that revenue is enterprise voice-agent infrastructure rather than creator/consumer use — that's the shift that justifies BlackRock and Wellington showing up. If you've been ignoring the voice stack for Python projects, this is the data point arguing it's now production-grade enough to wire in.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "SiliconANGLE", "url": "https://siliconangle.com/2026/05/05/elevenlabs-adds-high-profile-investors-annualized-revenue-tops-500m/", "take": "Reads the ARR jump as evidence that voice-agent deployment is the dominant growth lever, not consumer usage." },
+        { "source": "Tech.eu", "url": "https://tech.eu/2026/05/05/elevenlabs-adds-blackrock-nvidia-and-jamie-foxx-to-550m-series-d/", "take": "European angle on what the Deutsche Telekom + BlackRock combination signals for the EU voice market specifically." }
+      ]
+    },
+    {
+      "id": "openai-chatgpt-data-sharing-class-action",
+      "tier": 3,
+      "title": "Class action accuses OpenAI of routing ChatGPT queries to Meta and Google via Pixel + Analytics",
+      "summary": "A proposed class action filed in the Northern District of California on May 5 (Saje Lim v. OpenAI) alleges OpenAI embedded Meta's Facebook Pixel and Google Analytics tracking on the ChatGPT website, automatically transmitting users' queries and identifying information to both companies without consent. It's one of the first federal-court suits specifically alleging AI-chatbot user-data disclosure to ad/analytics platforms, and lands on the same Northern District docket already hosting Perplexity's similar class action filed in early April.",
+      "link": "https://news.bloomberglaw.com/privacy-and-data-security/openai-sued-over-sharing-of-chatbot-queries-with-meta-google",
+      "why_it_matters": "If you've been pasting work or personal stuff into ChatGPT through the web app, this complaint is alleging that the visible text — plus identifying cookies — got sent to Meta and Google's analytics pipelines. Whether or not it survives a motion to dismiss, the allegation will pressure every AI chat product to audit and document its embedded trackers. For Python web devs, it's also a concrete reminder that 'I just dropped in Pixel and GA' is increasingly load-bearing legal exposure on any product that takes user free-text input.",
+      "source": { "name": "Bloomberg Law", "type": "scrape", "url": "https://news.bloomberglaw.com/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-07T17:14:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-07T17:14:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Law360", "url": "https://www.law360.com/articles/2473960/openai-accused-of-giving-chatgpt-user-info-to-meta-google", "take": "Walks through the specific claims — Pixel and GA scripts on the ChatGPT site automatically firing on every query — and the Wiretap Act / CIPA theories." },
+        { "source": "Local News Matters", "url": "https://localnewsmatters.org/2026/04/02/class-action-lawsuit-alleges-perplexity-sent-user-chats-to-google-meta-without-consent/", "take": "Notes the parallel Perplexity suit from early April, which establishes the venue and the wiretap-statute theory the OpenAI complaint is borrowing." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
