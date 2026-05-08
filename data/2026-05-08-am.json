@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-08-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-08",
-  "generated_at": "2026-05-08T06:14:00Z",
-  "generated_at_local": "2026-05-08T02:14:00-04:00",
+  "generated_at": "2026-05-08T11:22:00Z",
+  "generated_at_local": "2026-05-08T07:22:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-08T06:14:00Z", "duration_ms": 840000 }
+    { "phase": "enrichment", "ran_at": "2026-05-08T06:14:00Z", "duration_ms": 840000 },
+    { "phase": "refresh",    "ran_at": "2026-05-08T11:22:00Z", "duration_ms": 1320000 }
   ],
-  "tier_counts": { "1": 3, "2": 3, "3": 4 },
+  "tier_counts": { "1": 4, "2": 4, "3": 5 },
   "items": [
     {
       "id": "anthropic-glasswing-claude-mythos-preview",
@@ -34,6 +35,30 @@
         { "source": "Anthropic Red", "url": "https://red.anthropic.com/2026/mythos-preview/", "take": "Anthropic's own red-team page reframes Mythos as 'a general-purpose language model that performs strongly across the board, but is strikingly capable at computer security tasks' — i.e., the offensive capability is a property of a future general-release Claude, not a niche security tool." },
         { "source": "CrowdStrike Blog", "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-founding-member-anthropic-mythos-frontier-model-to-secure-ai/", "take": "Founding-member walkthrough of how CrowdStrike is integrating Mythos for vulnerability triage — concrete defender-side workflow, not just an endorsement quote." },
         { "source": "Fortune", "url": "https://fortune.com/2026/04/07/anthropic-claude-mythos-model-project-glasswing-cybersecurity/", "take": "Frames it as Anthropic's bet that defenders need a head start over the inevitable public-model parity moment." }
+      ]
+    },
+    {
+      "id": "openai-gpt-5-5-instant-chatgpt-default",
+      "tier": 1,
+      "title": "OpenAI makes GPT-5.5 Instant the new ChatGPT default — 52.5% fewer hallucinations, Gmail memory, chat-latest API alias",
+      "summary": "OpenAI rolled out GPT-5.5 Instant on May 5 as the new default model for all ChatGPT users, replacing GPT-5.3 Instant, and aliased it as `chat-latest` in the API. Internal evals report 52.5% fewer hallucinated claims on high-stakes prompts (medicine, law, finance) and 30.2% shorter responses compared to its predecessor. The update also ships a new memory-sources interface that shows users what context — saved memories, past chats, connected Gmail — informed a given response, with per-source deletion controls. Enhanced personalization from past chats, files, and Gmail is rolling out to Plus/Pro users on web first, then to Free/Business/Enterprise. For API developers, GPT-5.3 Instant remains available to paid users for three months before deprecation; any code pointing at `chat-latest` now resolves to GPT-5.5 Instant.",
+      "link": "https://openai.com/index/gpt-5-5-instant/",
+      "why_it_matters": "The 52.5% fewer hallucinations claim on medicine, law, and finance prompts is the one to flag if you're using ChatGPT for anything that needs accurate information — internal evals are self-reported, but that's still a large enough gap to affect practical behavior. The Gmail read integration is the first time a frontier model has a standard path into most people's email archives, which is meaningful for personalization and also a privacy question worth thinking through. For developers: `chat-latest` in the API now resolves to GPT-5.5 Instant — if you're testing for deterministic behavior, pin to a versioned model ID instead. The three-month deprecation clock on GPT-5.3 starts now.",
+      "source": { "name": "OpenAI", "type": "scrape", "url": "https://openai.com/index/gpt-5-5-instant/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-08T11:22:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-08T11:22:00Z", "by": "refresh", "change": "created (overnight sweep — May 5 announcement absent from prior am cycle)" }
+      ],
+      "takes": [
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/", "take": "Notes the 30.2% word-count reduction and the move away from gratuitous emoji formatting as meaningful behavioral changes, not just benchmark improvements." },
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/05/openai-chatgpt-update-default-model", "take": "Frames the Gmail connection as OpenAI's clearest push yet into the personal-productivity layer, building on the memory and web-search capabilities from prior updates." },
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/05/gpt-5-5-instant-makes-chatgpt-more-accurate-while-nixing-gratuitous-emojis/", "take": "Highlights the response-style changes — fewer emojis, less over-formatted output — as the user-experience signal that separates 5.5 Instant from its predecessor in day-to-day use." }
       ]
     },
     {
@@ -136,6 +161,30 @@
         { "source": "Nvidia Developer Blog", "url": "https://developer.nvidia.com/blog/nvidia-ising-introduces-ai-powered-workflows-to-build-fault-tolerant-quantum-systems/", "take": "The technical companion piece: how the calibration VLM reads measurement plots and the decoder treats syndrome data as a 3D volume." },
         { "source": "Northwestern Quantum", "url": "https://quantum.northwestern.edu/news-and-stories/2026/northwestern-and-fermilab-quantum-data-helps-build-a-new-ai-benchmark-for-quantum-calibration-with-nvidia-ising-open-models.html", "take": "Northwestern's own writeup of how its NEXUS-facility data fed into the Ising calibration training set — the experimental side of the loop." },
         { "source": "Campus Technology", "url": "https://campustechnology.com/articles/2026/05/05/nvidia-unveils-ising-quantum-ai-model.aspx", "take": "Higher-ed angle on the launch adopters — Academia Sinica, Harvard SEAS, LBNL — and what classroom labs gain by skipping bespoke calibration code." }
+      ]
+    },
+    {
+      "id": "zyphra-zaya1-8b-amd-reasoning-model",
+      "tier": 2,
+      "title": "Zyphra releases ZAYA1-8B — a reasoning MoE with under 1B active parameters, trained entirely on AMD Instinct GPUs",
+      "summary": "Zyphra released ZAYA1-8B on May 6, an open-weight reasoning mixture-of-experts model trained on a 1,024 AMD Instinct MI300X GPU cluster with AMD Pensando Pollara interconnect on IBM Cloud infrastructure. At under one billion active parameters, ZAYA1-8B is competitive with models many times its size on AIME, HMMT, LiveCodeBench, and GPQA-Diamond, using three novel components: Compressed Convolutional Attention (CCA) instead of standard multi-head attention, an MLP-based expert router that improves routing stability over the standard linear approach, and learned residual scaling. The model is available for free as a serverless endpoint on Zyphra Cloud and on Hugging Face under Apache 2.0 license. Zyphra also announced an 80B parameter model in the ZAYA1 family is upcoming.",
+      "link": "https://www.zyphra.com/post/zaya1-8b",
+      "why_it_matters": "Most of the small-model-big-performance story this year has run on Nvidia hardware. Zyphra training exclusively on AMD MI300X is a meaningful signal — both that AMD clusters are becoming a credible production option for frontier-adjacent model training, and that the 'intelligence density per parameter' framing is catching on as a design goal distinct from raw parameter count. For Python developers, the Apache 2.0 license and free Zyphra Cloud endpoint means you can wire ZAYA1-8B into a math or coding workflow without API cost pressure. The 80B model upcoming means this is a family to keep an eye on.",
+      "source": { "name": "Zyphra", "type": "scrape", "url": "https://www.zyphra.com/post/zaya1-8b" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-08T11:22:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-08T11:22:00Z", "by": "refresh", "change": "created (overnight sweep — May 6 release)" }
+      ],
+      "takes": [
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/meet-zaya1-8b-a-super-efficient-open-reasoning-model-trained-on-amd-instinct-mi300-gpus", "take": "Frames ZAYA1-8B as an 'efficiency-first' counterpoint to the parameter-race — intelligence density per active parameter rather than raw scale." },
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/05/06/zyphra-releases-zaya1-8b-a-reasoning-moe-trained-on-amd-hardware-that-punches-far-above-its-weight-class/", "take": "Walks through the CCA and MLP-router design choices and how they differ from standard MoE implementations — useful for understanding what 'punches above its weight class' actually means architecturally." },
+        { "source": "HPC Wire / AIwire", "url": "https://www.hpcwire.com/aiwire/2026/05/07/zyphra-releases-zaya1-8b-reasoning-model/", "take": "Covers the AMD Pensando Pollara networking angle — the interconnect choice is as notable as the GPU choice for teams thinking about non-Nvidia training stacks." }
       ]
     },
     {
@@ -259,6 +308,30 @@
         { "source": "DLA Piper", "url": "https://www.dlapiper.com/en-us/insights/publications/2026/05/unpacking-connecticuts-new-ai-law", "take": "Practitioner-side breakdown of the AI-companion definition and the hourly-disclosure requirement; flags it as the broadest US 'AI companion' definition to date." },
         { "source": "Pluribus News", "url": "https://pluribusnews.com/news-and-events/connecticut-legislators-pass-sweeping-ai-bill/", "take": "Frames SB 5 as the most comprehensive state AI bill yet and notes Lamont's reversal — the political angle on why this passed now after years of stalling." },
         { "source": "Troutman Privacy + Cyber + AI", "url": "https://www.troutmanprivacy.com/2026/05/proposed-state-ai-law-update-may-4-2026/", "take": "Roll-up of the seven-state chatbot-law cluster — Connecticut, NY, CA, WA, OR, ID, IA — with the per-state diffs in scope, exemptions, and enforcement." }
+      ]
+    },
+    {
+      "id": "eu-ai-act-high-risk-delay-2027",
+      "tier": 3,
+      "title": "EU Council and Parliament provisionally agree to delay AI Act high-risk rules until December 2027",
+      "summary": "On May 7, the EU Council and the European Parliament reached a provisional political agreement on targeted amendments to the AI Act as part of the Digital Omnibus initiative. The deal delays high-risk AI systems under Annex III (biometrics, critical infrastructure, employment tools, access to essential services) from the original August 2, 2026 deadline to December 2, 2027 — a 16-month extension. High-risk AI embedded in regulated products under Annex I is pushed further to August 2, 2028. Alongside the delays, the agreement adds a new prohibition on AI systems that generate non-consensual intimate imagery (NCII) and CSAM, including so-called 'nudifiers.' Watermarking obligations under Article 50(2) are delayed to December 2, 2026, but with a shorter grace period than originally proposed. Small and medium-sized companies get existing exemptions extended to small mid-caps. The provisional deal must still be formally endorsed by both co-legislators before taking effect.",
+      "link": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+      "why_it_matters": "The August 2026 high-risk deadline was the single most consequential compliance date for any organization deploying AI in recruitment, credit scoring, biometrics, or critical infrastructure with EU users — that date is now gone, replaced by December 2027. If you're building anything that makes automated decisions about people (hiring tools, loan scoring, content moderation at scale) and have EU users, your planning horizon just extended by 16 months. The NCII/CSAM prohibition is the tightening that came with the relaxation — new hard ban, not a compliance delay. The watermarking obligation (AI-generated content disclosure) is the one that kicks in soonest at December 2026.",
+      "source": { "name": "EU Council", "type": "scrape", "url": "https://www.consilium.europa.eu/" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-08T11:22:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-08T11:22:00Z", "by": "refresh", "change": "created (overnight EU cycle — May 7 Council/Parliament provisional agreement)" }
+      ],
+      "takes": [
+        { "source": "Hogan Lovells", "url": "https://www.hoganlovells.com/en/publications/eu-legislators-agree-to-delay-for-highrisk-ai-rules", "take": "Practitioner breakdown of the new Annex III and Annex I deadlines and what the 'targeted amendments' route means for the formal legislative timetable." },
+        { "source": "DPO Centre", "url": "https://www.dpocentre.com/news/eu-ai-act-delay-high-risk-ai-deadlines/", "take": "Notes that the delay was driven by business complaints about overlapping regulations and red tape hampering competitiveness against US and Asian rivals — the political economy behind the concession." },
+        { "source": "DLA Piper GENIE", "url": "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/The-Digital-AI-Omnibus-Proposed-deferral-of-high-risk-AI-obligations-under-the-AI-Act", "take": "Full breakdown of the Digital Omnibus scope — what's delayed, what's new (NCII ban), and what's tightened (watermarking shorter grace period) under the provisional deal." }
       ]
     }
   ],
