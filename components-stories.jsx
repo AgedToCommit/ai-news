@@ -46,6 +46,7 @@ function Lead({ item, onOpen }) {
           fontSize: 19, lineHeight: 1.5,
           color: "var(--ink-soft)",
           margin: "0 0 18px",
+          maxWidth: 640,
           textWrap: "pretty"
         }}>
           {item.summary}
