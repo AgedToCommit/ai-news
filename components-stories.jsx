@@ -99,12 +99,35 @@ function StoryCard({ item, onOpen, span = 4 }) {
         {item.title}
       </h3>
 
+      {item.why_it_matters && (
+        <p style={{
+          fontFamily: "var(--serif-text)",
+          fontStyle: "italic",
+          fontSize: 13,
+          lineHeight: 1.5,
+          color: "var(--ink-soft)",
+          margin: "0 0 8px",
+          paddingLeft: 10,
+          borderLeft: "2px solid var(--persimmon)",
+          overflow: "hidden",
+          display: "-webkit-box",
+          WebkitLineClamp: 1,
+          WebkitBoxOrient: "vertical"
+        }}>
+          {item.why_it_matters}
+        </p>
+      )}
+
       <p style={{
         fontFamily: "var(--serif-text)",
         fontSize: 14, lineHeight: 1.5,
         color: "var(--ink-soft)",
         margin: "0 0 12px",
-        textWrap: "pretty"
+        textWrap: "pretty",
+        overflow: "hidden",
+        display: "-webkit-box",
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical"
       }}>
         {item.summary}
       </p>
