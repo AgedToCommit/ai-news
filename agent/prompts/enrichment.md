@@ -21,7 +21,7 @@ Iterate through yesterday's pm `items[]`:
 For each item:
 1. Do a focused web search: `<item.title> OR <relevant keywords> last:24h` (or use the canonical URL as a search anchor). Look for new context, comments, follow-up posts, benchmark numbers, contradicting takes.
 2. **Decide:**
-   - **KEEP + ENRICH** if there's meaningful new info → update `summary` to incorporate it. Append a revision entry: `{at: <now>, by: "enrichment", change: "<one-line description>"}`. Set `enriched_overnight: true`. Set `last_revision_by: "enrichment"`.
+   - **KEEP + ENRICH** if there's meaningful new info → update `summary` to incorporate it. If `why_it_matters` changes, also update `why_it_matters_brief`. Append a revision entry: `{at: <now>, by: "enrichment", change: "<one-line description — mention both if brief was updated, e.g. 'updated why_it_matters and brief'>"}`. Set `enriched_overnight: true`. Set `last_revision_by: "enrichment"`.
    - **DROP** if no new substance → record in `dropped_in_phase` with `reason: "<short>"`. Don't include this item in the new file.
 
 Goal: every item Gabe sees in the morning has either survived enrichment (got new context) or been added by enrichment/refresh.
