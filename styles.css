@@ -6,9 +6,9 @@
 
 :root {
   /* Paper & Ink */
-  --paper: #f1ead8;          /* warm cream pulp */
-  --paper-deep: #e8dfc6;     /* shadow paper */
-  --paper-light: #f7f1e1;    /* highlight paper */
+  --paper: #faf8f4;          /* cooler off-white — less fatiguing */
+  --paper-deep: #f0ece2;     /* shadow paper */
+  --paper-light: #fdfcf9;    /* highlight paper */
   --ink: #1a1410;            /* not pure black — rich brown-black */
   --ink-soft: #3a2f25;
   --ink-faint: #6b5e4f;
@@ -219,6 +219,20 @@ a { color: inherit; text-decoration: none; }
 .gap-m { gap: 18px; }
 .gap-l { gap: 32px; }
 
+/* Lead hero float-wrap (newspaper layout) */
+.lead-hero-float {
+  float: right;
+  width: 42%;
+  margin-left: 28px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.lead-float-wrap::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* =============================================================
    MOBILE — Tablet & Phone breakpoints
    The page is built on a 12-col desktop grid; on smaller screens
@@ -252,6 +266,12 @@ a { color: inherit; text-decoration: none; }
   }
   .section-marker .title { font-size: 22px; }
   .section-marker .spacer { display: none; }
+
+  /* Lead: soften float width at tablet to prevent cramped text column */
+  .lead-hero-float {
+    width: 38%;
+    margin-left: 20px;
+  }
 }
 
 /* ---------- Phone (≤ 640px) ---------- */
@@ -327,6 +347,18 @@ a { color: inherit; text-decoration: none; }
   body > div[style*="position: fixed"] article.page,
   body > div.fade-in article.page {
     padding: 30px var(--margin) 60px !important;
+  }
+
+  /* Lead: collapse float to stacked cinematic strip */
+  .lead-hero-float {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 20px;
+  }
+  .lead-hero-float figure {
+    height: auto !important;
+    aspect-ratio: 3 / 1 !important;
   }
 
   /* Footer/colophon stack */

@@ -65,30 +65,10 @@ function ReadingView({ item, onClose, items, onNext }) {
 
         <h1 className="display" style={{
           fontSize: "clamp(40px, 5.2vw, 80px)",
-          margin: "0 0 22px", letterSpacing: "-0.02em", textWrap: "balance"
+          margin: "0 0 28px", letterSpacing: "-0.02em", textWrap: "balance"
         }}>
           {item.title}
         </h1>
-
-        <p style={{
-          fontFamily: "var(--serif-text)", fontStyle: "italic",
-          fontSize: 21, lineHeight: 1.45,
-          color: "var(--ink-soft)", margin: "0 0 32px",
-          textWrap: "pretty", maxWidth: 780
-        }}>
-          {item.summary}
-        </p>
-
-        <div className="flex between center" style={{
-          padding: "12px 0",
-          borderTop: "1px solid var(--ink)",
-          borderBottom: "1px solid var(--ink)",
-          marginBottom: 36, flexWrap: "wrap", gap: 12
-        }}>
-          <span className="mono">Source · {item.source.name}</span>
-          <span className="mono">{item.source.type.toUpperCase()}</span>
-          <span className="mono">Added {new Date(item.added_at).toLocaleDateString()}</span>
-        </div>
 
         <HeroFigure item={item} aspect="16/9" style={{ marginBottom: 12 }} />
         <div className="mono" style={{ color: "var(--ink-faint)", marginBottom: 32 }}>
@@ -99,7 +79,27 @@ function ReadingView({ item, onClose, items, onNext }) {
 
         <WhyItMatters text={item.why_it_matters} />
 
-        <div style={{ marginTop: 26 }}><StatusPills item={item} /></div>
+        <div className="flex between center" style={{
+          padding: "12px 0",
+          borderTop: "1px solid var(--ink)",
+          borderBottom: "1px solid var(--ink)",
+          margin: "26px 0 32px", flexWrap: "wrap", gap: 12
+        }}>
+          <span className="mono">Source · {item.source.name}</span>
+          <span className="mono">{item.source.type.toUpperCase()}</span>
+          <span className="mono">Added {new Date(item.added_at).toLocaleDateString()}</span>
+        </div>
+
+        <p style={{
+          fontFamily: "var(--serif-text)", fontStyle: "italic",
+          fontSize: 21, lineHeight: 1.45,
+          color: "var(--ink-soft)", margin: "0 0 26px",
+          textWrap: "pretty", maxWidth: 780
+        }}>
+          {item.summary}
+        </p>
+
+        <div style={{ marginTop: 0 }}><StatusPills item={item} /></div>
 
         {item.takes && item.takes.length > 0 &&
           <div style={{ marginTop: 40 }}>
