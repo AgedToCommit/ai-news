@@ -6,50 +6,28 @@
 function Lead({ item, onOpen }) {
   return (
     <section style={{ padding: "44px 0 36px" }}>
-      <div className="grid-12">
-        <div style={{ gridColumn: "span 7" }}>
-          <div className="flex center gap-m" style={{ marginBottom: 18, flexWrap: "wrap" }}>
-            <span className="mono" style={{ color: "var(--persimmon)" }}>● Lead Story</span>
-            <span className="eyebrow">{item._tierLabel}</span>
-            <TierMark tier={item.tier}/>
-            <RegionBadge region={item.region}/>
-          </div>
+      <div className="flex center gap-m" style={{ marginBottom: 18, flexWrap: "wrap" }}>
+        <span className="mono" style={{ color: "var(--persimmon)" }}>● Lead Story</span>
+        <span className="eyebrow">{item._tierLabel}</span>
+        <TierMark tier={item.tier}/>
+        <RegionBadge region={item.region}/>
+      </div>
 
-          <h2 className="display"
-              onClick={() => onOpen(item)}
-              style={{
-                fontSize: "clamp(44px, 5.2vw, 78px)",
-                margin: "0 0 22px",
-                cursor: "pointer",
-                letterSpacing: "-0.02em",
-                textWrap: "balance"
-              }}>
-            {item.title}
-          </h2>
-
-          <p style={{
-            fontFamily: "var(--serif-text)",
-            fontSize: 19, lineHeight: 1.5,
-            color: "var(--ink-soft)",
-            margin: "0 0 18px",
-            maxWidth: 580, textWrap: "pretty"
+      <h2 className="display"
+          onClick={() => onOpen(item)}
+          style={{
+            fontSize: "clamp(44px, 5.2vw, 78px)",
+            margin: "0 0 24px",
+            cursor: "pointer",
+            letterSpacing: "-0.02em",
+            textWrap: "balance"
           }}>
-            {item.summary}
-          </p>
+        {item.title}
+      </h2>
 
-          <WhyItMatters text={item.why_it_matters}/>
-
-          <div className="flex center gap-l" style={{ marginTop: 22, flexWrap: "wrap", rowGap: 12 }}>
-            <button className="btn btn-primary" onClick={() => onOpen(item)}>Read the Story →</button>
-            <span className="mono">
-              {item.source.name} · {item.source.type.toUpperCase()}
-            </span>
-            <StatusPills item={item}/>
-          </div>
-        </div>
-
-        <div style={{ gridColumn: "span 5", position: "relative" }}>
-          <HeroFigure item={item} height={420}/>
+      <div className="lead-float-wrap">
+        <div className="lead-hero-float">
+          <HeroFigure item={item} height={340}/>
           <div style={{
             position: "absolute", top: -10, right: -10,
             background: "var(--ink)", color: "var(--paper)",
@@ -61,6 +39,26 @@ function Lead({ item, onOpen }) {
           <div className="mono" style={{ marginTop: 10, color: "var(--ink-faint)" }}>
             Fig. — {item.hero_image ? "From source." : "Editorial illustration."}
           </div>
+        </div>
+
+        <p style={{
+          fontFamily: "var(--serif-text)",
+          fontSize: 19, lineHeight: 1.5,
+          color: "var(--ink-soft)",
+          margin: "0 0 18px",
+          textWrap: "pretty"
+        }}>
+          {item.summary}
+        </p>
+
+        <WhyItMatters text={item.why_it_matters}/>
+
+        <div className="flex center gap-l" style={{ marginTop: 22, flexWrap: "wrap", rowGap: 12 }}>
+          <button className="btn btn-primary" onClick={() => onOpen(item)}>Read the Story →</button>
+          <span className="mono">
+            {item.source.name} · {item.source.type.toUpperCase()}
+          </span>
+          <StatusPills item={item}/>
         </div>
       </div>
     </section>
