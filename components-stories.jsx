@@ -99,7 +99,7 @@ function StoryCard({ item, onOpen, span = 4 }) {
         {item.title}
       </h3>
 
-      {item.why_it_matters && (
+      {(item.why_it_matters_brief ?? item.why_it_matters) && (
         <p style={{
           fontFamily: "var(--serif-text)",
           fontStyle: "italic",
@@ -114,7 +114,7 @@ function StoryCard({ item, onOpen, span = 4 }) {
           WebkitLineClamp: 2,
           WebkitBoxOrient: "vertical"
         }}>
-          {item.why_it_matters}
+          {item.why_it_matters_brief ?? item.why_it_matters}
         </p>
       )}
 
