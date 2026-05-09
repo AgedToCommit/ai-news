@@ -25,8 +25,9 @@ git config user.email "agent@ai-news.local"
 git config user.name "AI News Agent"
 ```
 
-### 1. Read config files (read all four — they're tiny)
+### 1. Read config files
 
+- `agent/prompts/index.md` — map of every prompt file and when to read it. Read this before the phase-specific prompt.
 - `agent/profile.md` — reader profile. Use this to write `why_it_matters` tags in the right voice.
 - `agent/sources.json` — structured source list (YouTube channels, blogs, podcasts, lab sites, conferences). Each source has `name`, `url`, `access` (`rss` | `scrape` | `youtube`), and optional `rss_url`.
 - `agent/control.json` — kill switch. Schema: `{paused, paused_reason, paused_until, phases: {digest: {enabled}, enrichment: {enabled}, refresh: {enabled}}}`.
@@ -113,6 +114,7 @@ If a Tier-1 source already produced enough strong items, you may skip this pass.
 - When 2+ sources cover the same story, fold them into a single item with `takes[]` populated
 - Write 1–2 sentence summaries
 - Write the `why_it_matters` tag — connect to Gabe's stack when natural; don't force it. NO HYPE LANGUAGE.
+- **Read `agent/prompts/brief.md` once now.** Use that guidance to write `why_it_matters_brief` for every item in this pass.
 - Assign tier (1, 2, or 3)
 - Assign region (`US` | `EU` | `Asia` | `Global`)
 - Generate alt text for hero images if `og:image` doesn't include one
@@ -155,6 +157,7 @@ Write atomically:
       "summary": "1–2 sentences",
       "link": "https://canonical/url",
       "why_it_matters": "Plain-English connection to Gabe.",
+      "why_it_matters_brief": "One sharp sentence for card preview — complete thought, ~150 chars.",
       "source": { "name": "Anthropic News", "type": "scrape", "url": "https://anthropic.com/news" },
       "region": "US",
       "hero_image": { "url": "...", "alt": "...", "source": "og:image" } | null,
