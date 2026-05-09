@@ -111,7 +111,7 @@ function StoryCard({ item, onOpen, span = 4 }) {
           borderLeft: "2px solid var(--persimmon)",
           overflow: "hidden",
           display: "-webkit-box",
-          WebkitLineClamp: 1,
+          WebkitLineClamp: 2,
           WebkitBoxOrient: "vertical"
         }}>
           {item.why_it_matters}
