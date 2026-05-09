@@ -1,6 +1,36 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-09T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-09T11:00:00Z",
+      "ended_at": "2026-05-09T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 41000,
+        "curation": 6500,
+        "output_write": 2000
+      },
+      "fetches_made": 7,
+      "items_input": 16,
+      "items_output": 16,
+      "items_added": 3,
+      "items_kept": 13,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-09-am",
+      "fallback_did_enrichment": true,
+      "error": "no 2026-05-08-pm.json and no 2026-05-09-am.json found — fallback carried 13 items from 2026-05-08-am.json unchanged (already enriched); enrichment prune+enrich skipped per enrichment.md fallback rule (no pm file); mini late-breaking sweep added 3 overnight items",
+      "partial": false,
+      "push_status": "failed — git push returned HTTP 403 after 4 retries (2s/4s/8s/16s backoff); commit 69c95f6 is staged locally on main and will be pushed by the next run",
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); sweep done via WebSearch (7 queries). Both the 2026-05-08-pm (1pm digest) and 2026-05-09-am (2am enrichment) files were absent, triggering refresh fallback. Three overnight items added: (1) OpenAI GPT-5.5-Cyber (May 7-8, US, Tier 1) — limited preview for vetted cybersecurity teams via Trusted Access for Cyber, parallel to Anthropic's Glasswing/Mythos program, supports authorized red teaming and pen testing; (2) Anthropic 'dreaming' for Claude Managed Agents (May 6-7, US, Tier 2) — scheduled async memory-consolidation process that rewrites memory stores between sessions without touching model weights; Harvey reports 6x completion-rate improvement; research preview alongside public-beta outcomes + multiagent orchestration; (3) Anthropic Akamai $1.8B seven-year compute deal (May 8, US, Tier 3) — Akamai stock +27% (largest single-day rally in 22 years), largest deal in Akamai's history; driven by 80x Q1 annualized revenue growth; multi-vendor compute stack now includes Google Cloud + SpaceX/xAI Colossus + Akamai edge. Hero images uniformly null."
+    },
+    {
       "run_id": "2026-05-08T11:22:00Z-refresh",
       "phase": "refresh",
       "status": "success",
