@@ -157,7 +157,7 @@ Write atomically:
       "summary": "1–2 sentences",
       "link": "https://canonical/url",
       "why_it_matters": "Plain-English connection to Gabe.",
-      "why_it_matters_brief": "One sharp sentence for card preview — complete thought, ~150 chars.",
+      "why_it_matters_brief": "One sharp sentence for card preview — complete thought, ~150 chars. (optional — omit if not set)",
       "source": { "name": "Anthropic News", "type": "scrape", "url": "https://anthropic.com/news" },
       "region": "US",
       "hero_image": { "url": "...", "alt": "...", "source": "og:image" } | null,
