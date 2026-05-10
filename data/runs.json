@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-10T17:25:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-10T17:00:00Z",
+      "ended_at": "2026-05-10T17:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 44000,
+        "curation": 9500,
+        "output_write": 2000
+      },
+      "fetches_made": 13,
+      "items_input": 18,
+      "items_output": 10,
+      "items_added": 10,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-10-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned HTTP 403 in this sandbox (consistent with prior runs); discovery done entirely via WebSearch (13 queries). No 2026-05-10-am.json existed (2am enrichment + 7am refresh both appear to have not produced today's am file), so no promotion logic applied — ran the digest fresh per digest.md edge case. Local main was 41 commits ahead of origin/main on entry (prior runs' 'push_status: failed — HTTP 403' notes accumulated); reset main to the prior local HEAD (01b91b3) to preserve that history before adding today's commit. Ten items shipped: T1=5, T2=3, T3=2. Tier 1 cluster is dominated by Anthropic infrastructure + financial-services moves from May 5–7 (Google Cloud $200B/5GW TPU deal, SpaceX Colossus 1 lease with orbital-DC interest and immediate Claude Code rate-limit doubling, ten-agent Wall Street suite with Opus 4.7 + Microsoft 365 + Moody's, $50B fundraise at $900B valuation), plus OpenAI Realtime API GA (GPT-Realtime-2/Translate/Whisper, May 7). Tier 2: SAP/Prior Labs €1B+ TFM acquisition (May 4), the six-team AI-coding-agent credential-exploit roundup (BeyondTrust/Adversa et al, week of May 4–8), and Karpathy's Sequoia AI Ascent 2026 written summary. Tier 3: DeepMind UK 98% union vote over the Pentagon Gemini contract (May 5), Pennsylvania AG suing Character.AI for unauthorized practice of medicine (filed May 1, reported May 5–9). Hero images uniformly null (no WebFetch). Dedup checked against 2026-05-09-am.json — no overlap.",
+      "push_status": "pending"
+    },
+    {
       "run_id": "2026-05-09T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
