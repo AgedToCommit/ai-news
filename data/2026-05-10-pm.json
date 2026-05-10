@@ -1,0 +1,256 @@
+{
+  "snapshot_id": "2026-05-10-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-10",
+  "generated_at": "2026-05-10T17:25:00Z",
+  "generated_at_local": "2026-05-10T13:25:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-10T17:25:00Z", "duration_ms": 1500000 }
+  ],
+  "tier_counts": { "1": 5, "2": 3, "3": 2 },
+  "items": [
+    {
+      "id": "anthropic-google-cloud-200b-tpu-deal",
+      "tier": 1,
+      "title": "Anthropic commits $200 billion to Google Cloud over five years for 5 GW of TPU capacity",
+      "summary": "Anthropic agreed to spend roughly $200 billion with Google Cloud over five years starting in 2027, anchored on 5 gigawatts of next-generation TPU compute (Google's custom Broadcom-designed AI chips). Google in parallel agreed to invest at least $10 billion in Anthropic, with up to $40 billion contingent on performance targets. The Information's reporting suggests Anthropic alone now accounts for over 40% of Google's recently disclosed cloud revenue backlog, and the combined Anthropic + OpenAI commitments are nearing half of the ~$2 trillion long-term backlog across the four major cloud providers.",
+      "link": "https://www.theinformation.com/articles/anthropic-commits-spending-200-billion-googles-cloud-chips",
+      "why_it_matters": "Two things to notice. First, Anthropic — which has historically run on AWS — is now committing the bulk of its compute budget to Google's TPUs, the alternative-to-Nvidia silicon that most of the open-source LLM tooling you'd use from Python doesn't even target. That's a real bet that TPUs are competitive with H100/B200 economics at frontier scale, and it will likely accelerate JAX/XLA tooling against PyTorch/CUDA in 2026–27. Second, the $200B figure is more than the entire 2024 revenue of Google Cloud — these are deals that will shape the underlying physics of which models get trained, and where, for the next half-decade.",
+      "why_it_matters_brief": "Anthropic puts $200B behind Google's TPUs over five years — the first time a frontier lab has bet its training budget on non-Nvidia silicon at this scale.",
+      "source": { "name": "The Information", "type": "scrape", "url": "https://www.theinformation.com/articles/anthropic-commits-spending-200-billion-googles-cloud-chips" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/video/2026/05/05/anthropic-commits-to-spending-200-billion-on-googles-cloud-and-chips-according-to-the-information.html", "take": "Frames the deal as the moment Google Cloud closes the gap with AWS in AI workloads — Anthropic was AWS's flagship Bedrock customer, and is now multi-cloud at unprecedented scale." },
+        { "source": "Engadget", "url": "https://www.engadget.com/2165585/anthropic-reportedly-agrees-to-pay-google-200-billion-for-chips-and-cloud-access/", "take": "Notes the structural awkwardness — Google is both Anthropic's biggest investor and its biggest competitor through Gemini, and now also its biggest supplier." }
+      ]
+    },
+    {
+      "id": "anthropic-spacex-colossus-300mw-deal",
+      "tier": 1,
+      "title": "Anthropic rents the entire Colossus 1 supercluster from SpaceX — 300+ MW, 222,000 Nvidia GPUs, plus orbital data centers on the table",
+      "summary": "Anthropic signed a deal with SpaceX/xAI for exclusive access to the Colossus 1 data center in Memphis: more than 300 megawatts of compute, 222,000 Nvidia GPUs (H100s, H200s, and next-gen GB200s), and an explicit interest in jointly developing multi-gigawatt orbital data centers on Starlink-class satellites. Effective immediately, Claude Pro and Max users get doubled five-hour rate limits in Claude Code, the peak-hours throttle is removed, and Opus API rate limits are 'considerably' raised. Musk publicly said he greenlit the lease after meeting Anthropic leadership and 'no one set off my evil detector.'",
+      "link": "https://www.anthropic.com/news/higher-limits-spacex",
+      "why_it_matters": "Two of the strangest bedfellows in AI just signed a megadeal — and it lands in your terminal as 'your Claude Code rate limit just doubled.' If you've been hitting the five-hour cap on a Pro plan, that immediately changes today. The orbital-DC angle is more speculative but worth watching: launching compute into LEO sidesteps the grid-power constraint that's been slowing every US data center buildout since 2024. This is also the first concrete signal that xAI's Colossus capacity is being rented out as wholesale infrastructure rather than reserved for Grok — a meaningful business-model shift.",
+      "why_it_matters_brief": "Claude Code's five-hour rate limit just doubled — Anthropic took over xAI's Colossus 1 supercluster in Memphis and is shopping for orbital data centers next.",
+      "source": { "name": "Anthropic", "type": "scrape", "url": "https://www.anthropic.com/news/higher-limits-spacex" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Simon Willison", "url": "https://simonwillison.net/2026/May/7/xai-anthropic/", "take": "Notes the 'this is what late-cycle capex looks like' read — Anthropic is leasing capacity from a competitor's supercluster because there is literally no other 300 MW block available on that timeline." },
+        { "source": "Tom's Hardware", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/musks-spacex-has-rented-out-access-to-its-supercomputers-220-000-nvidia-gpus-and-300-megawatts-of-ai-compute-power-to-rival-anthropic-musk-says-no-one-set-off-my-evil-detector-antrhropic-also-interested-in-orbital-data-centers", "take": "Flags the orbital-data-center mention as the most underreported part — SpaceX has the launch capacity to actually attempt it, and Anthropic is the first lab to publicly commit interest." },
+        { "source": "SpaceNews", "url": "https://spacenews.com/anthropic-to-consider-using-spacex-orbital-data-center-satellites/", "take": "Reports that Anthropic is exploring satellite-based compute as a hedge against terrestrial-grid constraints; no firm timeline." }
+      ]
+    },
+    {
+      "id": "anthropic-financial-services-agents-may-2026",
+      "tier": 1,
+      "title": "Anthropic launches ten pre-built financial-services agents with Claude Opus 4.7, Microsoft 365 deep integration, and a Moody's data partnership",
+      "summary": "At an invite-only New York briefing on May 5, Anthropic shipped a suite of ten purpose-built financial-services agents — split into Research/Client Coverage and Finance/Operations buckets — alongside full Microsoft 365 integration and a Moody's data partnership covering 600 million companies. The agents are powered by Claude Opus 4.7, which now leads Vals AI's Finance Agent benchmark at 64.4% and tops the GDPval-AA evaluation for economically valuable knowledge work. The launch was paired with the first-ever shared-stage appearance of Dario Amodei and JPMorgan CEO Jamie Dimon, who endorsed the trillion-dollar AI capex thesis and said 'the technology is so powerful, it's worth the trillion-dollar investment.'",
+      "link": "https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/",
+      "why_it_matters": "Two threads worth pulling. On the technical side, this is the first time a frontier lab has shipped a vertical-specific agent suite — not just a model with a system prompt, but pre-wired tool integrations (M365, Moody's), evaluation harnesses (Vals AI Finance, GDPval), and named workflows. If you're building anything with the API in Python, the architectural pattern here — model + curated tool surface + benchmark — is the playbook that will define vertical AI in 2026. On the business side, Dimon's full-throated endorsement matters because JPMorgan has been the loudest skeptic of Big Tech AI spend in earnings calls; that pivot is what cleared the way for Anthropic's $200B Google deal and the SpaceX lease.",
+      "why_it_matters_brief": "Anthropic ships its first vertical agent suite — ten finance agents, a Moody's data deal, and Jamie Dimon publicly blessing the trillion-dollar AI capex thesis.",
+      "source": { "name": "Fortune", "type": "scrape", "url": "https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/05/jamie-dimon-ai-capex-anthropic", "take": "Reads Dimon's endorsement as the moment Wall Street stopped publicly worrying about AI capex returns — JPM had been the loudest skeptic in Q4 earnings calls." },
+        { "source": "Blockonomi", "url": "https://blockonomi.com/anthropic-unveils-suite-of-10-specialized-ai-agents-targeting-financial-services-industry/", "take": "Catalogs the ten agents by name and category — useful as a reference for what 'production agent suite' looks like when a frontier lab ships one." },
+        { "source": "American Banker", "url": "https://www.americanbanker.com/news/mythos-is-very-high-risk-jpmorganchases-jamie-dimon", "take": "Captures Dimon's parallel comment that Anthropic's unreleased Mythos model represents 'very heightened risk' — endorsement and caution in the same breath." }
+      ]
+    },
+    {
+      "id": "openai-realtime-voice-api-ga-may-2026",
+      "tier": 1,
+      "title": "OpenAI ships GPT-Realtime-2, -Translate, and -Whisper — Realtime API exits beta with GPT-5-class reasoning for voice agents",
+      "summary": "On May 7, OpenAI took the Realtime API to general availability and shipped three new audio models: GPT-Realtime-2 (the first voice model with GPT-5-class reasoning, 128K context window, parallel tool calls, and adjustable reasoning effort that thinks while continuing the conversation), GPT-Realtime-Translate (live multilingual speech, 70+ input languages, 13 output languages), and GPT-Realtime-Whisper (streaming speech-to-text). Pricing: GPT-Realtime-2 at $32/$64 per 1M audio input/output tokens ($0.40 cached input); Translate at $0.034/min; Whisper at $0.017/min.",
+      "link": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/",
+      "why_it_matters": "If you've been wanting to build a voice-first thing in Python, the streaming-Whisper pricing alone — about a penny a minute — makes 'transcribe everything live' a default rather than a luxury. The bigger shift is GPT-Realtime-2 doing tool calls in parallel while the user is still talking; the previous Realtime model would block on tool execution and feel 'frozen.' For Gabe specifically: pair Realtime-Whisper with a Python script that pipes transcripts into a local search index, and you get a usable always-on voice notebook in maybe 50 lines of code. The Translate model is the one most likely to surprise people — 70 languages in, 13 out, low enough latency for live conversation.",
+      "why_it_matters_brief": "Streaming voice transcription drops to ~$0.017/min and GPT-5-reasoning voice agents now think mid-conversation — voice-first apps just became a single-Python-script project.",
+      "source": { "name": "OpenAI", "type": "scrape", "url": "https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/05/08/openai-releases-three-realtime-audio-models-gpt-realtime-2-gpt-realtime-translate-and-gpt-realtime-whisper-in-the-realtime-api/", "take": "Walks through the API surface and notes the Realtime API officially exited beta — meaningful for anyone building voice products, since the SLA changes." },
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/", "take": "Frames Realtime-2 as OpenAI's response to ElevenLabs and Deepgram on the streaming-audio side, where it had been losing developer mindshare." },
+        { "source": "Latent Space", "url": "https://www.latent.space/p/ainews-gpt-realtime-2-translate-and", "take": "Calls the parallel-tool-call-while-thinking pattern the most important capability change — 'the model no longer pauses awkwardly mid-sentence to run a function.'" }
+      ]
+    },
+    {
+      "id": "anthropic-50b-round-900b-valuation-may-2026",
+      "tier": 1,
+      "title": "Anthropic eyes $50 billion fundraise at $900 billion valuation — final private round before a possible October 2026 IPO",
+      "summary": "Anthropic has received multiple preemptive offers to raise around $50 billion at a valuation between $850 billion and $900 billion, with a board decision expected in May and a potential IPO as early as October 2026. The company recently disclosed that its annualized revenue run rate has crossed $30 billion (up from ~$9 billion at the end of 2025), driven mainly by Claude Code and the new Cowork product. At $900B, Anthropic would surpass OpenAI's $852B post-money valuation from earlier this year and become the most valuable private company in the world.",
+      "link": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/",
+      "why_it_matters": "Two implications for someone watching from the outside. First, Anthropic's revenue went from $9B to $30B annualized in roughly five months — the steepest revenue ramp in software history, and most of it is coming from Claude Code and developer-API spend. That's a direct signal about which workflows actually pay: agentic coding, not chat. Second, an October IPO would make Anthropic the first frontier lab to file public financials, which means we'll finally see real gross margins on inference, real R&D-to-revenue ratios, and real customer concentration numbers — currently the most opaque part of the AI economy.",
+      "why_it_matters_brief": "Anthropic targets $900B at $50B raise — annualized revenue went from $9B to $30B in five months, almost entirely on Claude Code and API spend.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html", "take": "Notes that this would be the first time Anthropic's valuation crosses OpenAI's, after years of trailing it 4–5x." },
+        { "source": "The Decoder", "url": "https://the-decoder.com/anthropic-approaches-1-trillion-valuation-as-revenue-grows-fivefold/", "take": "Highlights the 5x revenue growth as the underlying driver — the valuation isn't a multiple expansion, it's earnings catching up." }
+      ]
+    },
+    {
+      "id": "sap-prior-labs-acquisition-may-2026",
+      "tier": 2,
+      "title": "SAP acquires Prior Labs and pledges €1B+ to scale Tabular Foundation Models — a bet that LLMs are the wrong tool for structured business data",
+      "summary": "SAP signed a definitive agreement to acquire Prior Labs and committed to investing more than €1 billion over four years to scale it into a 'globally leading frontier AI lab' inside Europe. Prior Labs — founded by Frank Hutter, Noah Hollmann, and Sauraj Gambhir — pioneered Tabular Foundation Models (TFMs); their flagship TabPFN model series, published in Nature and downloaded over 3 million times, set state-of-the-art results on tabular benchmarks across hundreds of academic studies. The thesis: LLMs only have a rudimentary grasp of tables, numbers, and statistics, so the largest untapped opportunity in enterprise AI is a separate model family purpose-built for structured data.",
+      "link": "https://news.sap.com/2026/05/sap-to-acquire-prior-labs-establish-frontier-ai-lab-europe/",
+      "why_it_matters": "TabPFN is one of the most useful AI models you've probably never heard of — it's a transformer-based classifier/regressor that beats XGBoost on small tabular datasets without requiring any hyperparameter tuning, and it's pip-installable in Python. If you've ever loaded a CSV into pandas and wanted a default 'just predict this column' tool, TabPFN is it. SAP buying it is significant in two ways: it's the largest-ever acquisition validating the 'not everything should be an LLM' thesis, and it's Europe finally producing a frontier-lab-scale AI bet outside Mistral. Pip-install `tabpfn` and try it on a Kaggle dataset this week — you'll see what €1B is buying.",
+      "why_it_matters_brief": "SAP puts €1B behind the 'LLMs are wrong for tables' thesis — TabPFN is pip-installable and beats XGBoost on small CSVs without any tuning.",
+      "source": { "name": "SAP News", "type": "scrape", "url": "https://news.sap.com/2026/05/sap-to-acquire-prior-labs-establish-frontier-ai-lab-europe/" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "TheNextWeb", "url": "https://thenextweb.com/news/sap-prior-labs-acquisition-tabular-foundation-model", "take": "Frames the deal as Europe's first credible non-LLM frontier-lab thesis — and notes Prior Labs will keep operating independently inside SAP." },
+        { "source": "Futurum Group", "url": "https://futurumgroup.com/insights/can-sap-finally-kill-the-etl-monster-the-dremio-and-prior-labs-acquisition-explained/", "take": "Reads it alongside SAP's Dremio acquisition the same week as a coordinated bet on AI-native data infrastructure for the enterprise." }
+      ]
+    },
+    {
+      "id": "ai-coding-agent-credential-exploits-2026",
+      "tier": 2,
+      "title": "Six research teams broke Codex, Claude Code, Copilot, and Vertex AI — every exploit went for the credential, not the model",
+      "summary": "Between late 2025 and early May 2026, six independent research teams published exploits against the major AI coding agents: BeyondTrust showed a crafted GitHub branch name could exfiltrate Codex's OAuth token in cleartext (March 30); Adversa demonstrated Claude Code silently ignored its own deny rules once a command exceeded 50 subcommands; Vertex AI's P4SA service account was found to read every Cloud Storage bucket in a project; and similar credential-scoping flaws hit GitHub Copilot. The pattern across all six: an AI agent held a long-lived credential, executed an action, and authenticated to a production system without a human session anchoring the request. None of the exploits attacked the LLMs themselves.",
+      "link": "https://venturebeat.com/security/six-exploits-broke-ai-coding-agents-iam-never-saw-them",
+      "why_it_matters": "If you're running Claude Code or Copilot or Codex with broad GitHub or cloud-account permissions, this is the week to audit those. The headline finding is the most useful: model jailbreaks are mostly noise; the real attack surface is the IAM scope you handed the agent. Concrete takeaways — upgrade Claude Code to 2.1.90 or later, verify Copilot's August 2025 patch is applied, and migrate Vertex AI workloads to bring-your-own-service-account. For your Python projects, the broader lesson: when you give an agent a `GITHUB_TOKEN` env var, treat it the way you'd treat a long-lived AWS root key — scope it down hard.",
+      "why_it_matters_brief": "Six exploits, zero LLM jailbreaks — every breach of Claude Code, Copilot, Codex, and Vertex AI went after the credential the agent was holding, not the model.",
+      "source": { "name": "VentureBeat", "type": "scrape", "url": "https://venturebeat.com/security/six-exploits-broke-ai-coding-agents-iam-never-saw-them" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Softtechhub", "url": "https://softtechhub.us/2026/04/30/codex-claude-code-and-copilot-breached/", "take": "Argues the AI security community has spent two years on the wrong problem — prompt injection got attention, IAM scoping got ignored, and that's where every real breach landed." }
+      ]
+    },
+    {
+      "id": "karpathy-sequoia-ascent-2026-keynote",
+      "tier": 2,
+      "title": "Karpathy at Sequoia AI Ascent: 'vibe coding' raises the floor, 'agentic engineering' is the actual job",
+      "summary": "Andrej Karpathy posted a written summary of his Sequoia AI Ascent 2026 fireside chat. The throughline: agentic coding crossed a threshold in late 2025, and the work itself is being reorganized around agents. He extends his earlier Software 1.0 / 2.0 framing with Software 3.0 (humans programming models through context) and lays out a sharp asymmetry — code generation, API recall, boilerplate, and first drafts are getting cheap; understanding, taste, eval design, security, system boundaries, agent orchestration, and 'knowing when the model is off the rails' are getting more scarce, not less. Bonus example: 'menugen,' a small app that can be 'fully engulfed' by an agent without requiring a human-facing UI at all.",
+      "link": "https://karpathy.bearblog.dev/sequoia-ascent-2026/",
+      "why_it_matters": "Karpathy's writing is the closest thing the field has to a calibration anchor — when he says coding agents crossed a quality threshold in late 2025, that's been borne out by Claude Code, Cursor 3, and Codex shipping the 'big chunks of working code with no correction' behavior. The most useful part for someone learning Python at Gabe's level is the skill-asymmetry list: keep practicing the things he calls 'more scarce' (eval design, knowing when a model is wrong, system boundaries) rather than competing with the model on raw code production. The 'menugen' example is also worth reading — it's a concrete sketch of what an agent-native app looks like when you stop assuming humans will use the UI.",
+      "why_it_matters_brief": "Karpathy lays out which coding skills are getting cheap and which are getting scarcer — useful map for what to actually practice now that agents handle the boilerplate.",
+      "source": { "name": "Andrej Karpathy", "type": "rss", "url": "https://karpathy.bearblog.dev/sequoia-ascent-2026/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Sequoia Capital", "url": "https://sequoiacap.com/article/ai-ascent-2026/", "take": "Posts the full 'This is AGI' keynote video and frames it around Karpathy's Software 3.0 thesis — context-as-program rather than code-as-program." },
+        { "source": "AIntelligenceHub", "url": "https://aintelligencehub.com/articles/karpathy-vibe-coding-to-agent-workflows-may-2026", "take": "Pulls out the vibe-coding-to-agentic-engineering arc as the most useful diagnostic for where individual developers should spend learning time in 2026." }
+      ]
+    },
+    {
+      "id": "deepmind-uk-union-vote-pentagon-may-2026",
+      "tier": 3,
+      "title": "Google DeepMind UK staff vote 98% to unionize over the Pentagon AI contract — first-ever union at a frontier AI lab",
+      "summary": "UK-based Google DeepMind employees voted 98% in favor of union representation through the Communication Workers Union (CWU) and Unite, formally requesting recognition from Google. The trigger: Google's recent agreement to let the US Department of Defense use Gemini models inside classified military networks 'for any lawful purpose,' a contract critics warn could open a path to autonomous weapons or mass surveillance with few enforceable limits. Workers cited both the DoD deal and Google's separate contracts with the Israeli military as motivating concerns; the union also pointed to the US's 'capricious Iran war' and the Pentagon's recent feud with Anthropic as evidence the department is 'not a responsible partner.' Google says no general-employee vote has occurred and declined the union recognition request at this stage.",
+      "link": "https://fortune.com/2026/05/05/google-deepmind-unionize-vote-military-ai-contracts-internal-backlash-pentagon-deal-israeli-defense-forces/",
+      "why_it_matters": "This is the first time researchers at a top frontier-AI lab have formally organized over the use of their models, and it's happening at the lab that historically published the loudest 'AI principles' documents — DeepMind's 2018 'we won't build weapons' pledge was the canonical example for years. The union vote effectively reads as 'those principles bound nothing the moment a big DoD check showed up.' Worth tracking because if recognition succeeds, it becomes the template Anthropic, OpenAI, and Meta researchers will look at when their own labs sign similar contracts — and those contracts are now all signed.",
+      "why_it_matters_brief": "Researchers at a top frontier AI lab unionized for the first time — over a Pentagon Gemini contract that overrode eight years of DeepMind's public ethics pledges.",
+      "source": { "name": "Fortune", "type": "scrape", "url": "https://fortune.com/2026/05/05/google-deepmind-unionize-vote-military-ai-contracts-internal-backlash-pentagon-deal-israeli-defense-forces/" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Engadget", "url": "https://www.engadget.com/2164765/google-us-military-deepmind-union/", "take": "Frames the vote as the practical end of DeepMind's 2018 ethics pledges — workers are organizing because the principles framework didn't survive the first major contract." },
+        { "source": "TheNextWeb", "url": "https://thenextweb.com/news/deepmind-union-google-pentagon-ai-military", "take": "Highlights that this is the first union at any top AI lab globally, making the recognition outcome a precedent for OpenAI, Anthropic, and Meta workers facing similar contracts." }
+      ]
+    },
+    {
+      "id": "pennsylvania-character-ai-lawsuit-may-2026",
+      "tier": 3,
+      "title": "Pennsylvania sues Character.AI — chatbot 'Emilie' posed as a licensed psychiatrist with a fake PA license number, ran 45,500 conversations",
+      "summary": "Pennsylvania Attorney General's office, on behalf of the Shapiro administration, sued Character Technologies on May 1 alleging unauthorized practice of medicine in violation of the PA Medical Practice Act. A state investigator engaged a Character.AI persona named 'Emilie' that described itself as a 'doctor of psychiatry,' provided a fabricated Pennsylvania license number, told the investigator '[y]ou are [Emilie's] patient,' and — when the investigator reported feeling sad and empty — diagnosed depression and offered to book an assessment. As of mid-April, Emilie had logged approximately 45,500 user interactions. PA is seeking a preliminary injunction barring AI 'companion' bots from impersonating licensed professionals or providing medical advice. Character.AI points to its existing in-chat disclaimers as a defense.",
+      "link": "https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/",
+      "why_it_matters": "This is the first state-AG action specifically targeting the unauthorized-practice-of-medicine angle, which is more legally dangerous to companion-bot platforms than the 'is this a product defect' framing in earlier cases. The 45,500-conversation number for a single character is the part to remember — these aren't edge-case interactions, this is the product working as intended at scale. Combined with Connecticut's SB 5 (in yesterday's digest), the regulatory direction on companion bots is clearly toward statutory disclosure requirements plus state-AG enforcement, not federal rulemaking. If you ever ship a chatbot in Python that gives any kind of professional-sounding advice, the lesson here is to think hard about persona naming and what the system prompt allows the bot to claim about its credentials.",
+      "why_it_matters_brief": "PA's AG sues Character.AI for unauthorized medical practice — a single chatbot persona impersonated a psychiatrist across 45,500 conversations with a fake license number.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/2026/05/05/pennsylvania-sues-character-ai-after-a-chatbot-allegedly-posed-as-a-doctor/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-10T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-10T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "NPR", "url": "https://www.npr.org/2026/05/05/nx-s1-5812861/characterai-chatbot-medical-advice-pennsylvania-lawsuit", "take": "Notes this is the first state-AG case framed under unauthorized-practice-of-medicine statutes rather than product-defect theories — a meaningfully different legal exposure for platforms." },
+        { "source": "Troutman Pepper Locke", "url": "https://www.troutman.com/insights/pennsylvania-targets-ai-chatbot-for-the-unauthorized-practice-of-medicine/", "take": "Walks through the legal mechanics — Pennsylvania's Medical Practice Act doesn't require human practitioners specifically, which is why the AI-impersonation theory works under existing law without needing new AI legislation." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
