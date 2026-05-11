@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-11-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-11",
-  "generated_at": "2026-05-11T06:30:00Z",
-  "generated_at_local": "2026-05-11T02:30:00-04:00",
+  "generated_at": "2026-05-11T11:25:00Z",
+  "generated_at_local": "2026-05-11T07:25:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-11T06:30:00Z", "duration_ms": 1500000 }
+    { "phase": "enrichment", "ran_at": "2026-05-11T06:30:00Z", "duration_ms": 1500000 },
+    { "phase": "refresh",    "ran_at": "2026-05-11T11:25:00Z", "duration_ms": 1620000 }
   ],
-  "tier_counts": { "1": 6, "2": 4, "3": 2 },
+  "tier_counts": { "1": 7, "2": 4, "3": 3 },
   "items": [
     {
       "id": "anthropic-google-cloud-200b-tpu-deal",
@@ -167,6 +168,31 @@
       ]
     },
     {
+      "id": "openai-microsoft-multicloud-amendment-april-2026",
+      "tier": 1,
+      "title": "OpenAI ends Microsoft exclusivity — models deployable on any cloud, Azure keeps first-access rights through 2032, AGI clause removed",
+      "summary": "On April 27, OpenAI and Microsoft announced a sweeping amendment to their partnership. The headline change: OpenAI can now deploy all of its products to customers on any cloud provider — including AWS and Google Cloud — ending Microsoft Azure's exclusivity. Azure retains 'right of first access' to new OpenAI models through 2032 and remains the primary compute partner, but loses exclusivity if it cannot support required capabilities. Revenue-share payments from OpenAI to Microsoft are now capped at a total amount and run through 2030 independently of OpenAI's technology milestones. The amendment also removes the AGI clause: Microsoft no longer holds a contractual right to halt or restructure the partnership if OpenAI declares it has achieved artificial general intelligence — a provision Microsoft had held since 2023.",
+      "link": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+      "why_it_matters": "OpenAI was effectively locked into Microsoft Azure as its sole cloud provider since the $13B deal — that's why 'GPT-4' and 'Azure OpenAI Service' were synonymous in enterprise procurement for two years. The amendment ends that. OpenAI models can now land on AWS Bedrock, Google Vertex AI, and any other provider, which means enterprise teams that wanted GPT-5.5 without touching Azure now have a path. For developers, the practical impact is that the OpenAI API becomes cloud-agnostic: you'll increasingly be able to run GPT-series models through whatever cloud you're already on rather than routing everything through Azure. The AGI clause removal is the most structurally interesting part: Microsoft had held a contractual trigger tied to an AGI declaration and negotiated it away in exchange for a capped but guaranteed revenue stream through 2030. Combined with the $900B valuation round and a probable October IPO, the amendment is part of a pattern of OpenAI systematically clearing the contractual obligations that accrued during its dependent-startup phase.",
+      "why_it_matters_brief": "OpenAI can now sell on AWS or Google Cloud — Azure exclusivity is gone, and the AGI trigger clause that gave Microsoft a contractual foothold was removed in exchange for a capped revenue guarantee.",
+      "source": { "name": "OpenAI", "type": "scrape", "url": "https://openai.com/index/next-phase-of-microsoft-partnership/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T11:25:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T11:25:00Z", "by": "refresh", "change": "created (April 27 announcement slipped through prior sweeps — no items found in strict 5-hour window; picked up as gap item)" }
+      ],
+      "takes": [
+        { "source": "Microsoft Blog", "url": "https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/", "take": "Microsoft frames the amendment as a 'maturation' of the partnership — Azure keeps first access and IP licensing through 2032, which Microsoft casts as its long-term core interest even without exclusivity." },
+        { "source": "Engadget", "url": "https://www.engadget.com/big-tech/openai-breaks-out-of-exclusivity-agreements-in-its-partnership-with-microsoft-162829584.html", "take": "Frames the exclusivity breakout as OpenAI clearing the deck ahead of its October IPO — systematically removing the contractual dependencies from its startup phase." },
+        { "source": "eWeek", "url": "https://www.eweek.com/news/microsoft-openai-deal-multi-cloud-ai-infrastructure/", "take": "Notes the deal creates a tiered supply arrangement: Azure is the preferred supplier, but OpenAI now has negotiating leverage at renewal time by being able to route volume to GCP or AWS." }
+      ]
+    },
+    {
       "id": "sap-prior-labs-acquisition-may-2026",
       "tier": 2,
       "title": "SAP acquires Prior Labs and pledges €1B+ to scale Tabular Foundation Models — a bet that LLMs are the wrong tool for structured business data",
@@ -318,6 +344,30 @@
         { "source": "NPR", "url": "https://www.npr.org/2026/05/05/nx-s1-5812861/characterai-chatbot-medical-advice-pennsylvania-lawsuit", "take": "Notes this is the first state-AG case framed under unauthorized-practice-of-medicine statutes rather than product-defect theories — a meaningfully different legal exposure for platforms." },
         { "source": "Pennsylvania Governor's Office", "url": "https://www.pa.gov/governor/newsroom/2026-press-releases/shapiro-administration-sues-character-ai-over-fake-medical-claim", "take": "The state's own press release lays out the specific transcript excerpts being entered as evidence — useful primary source for what the AG actually saw in the 'Emilie' conversations." },
         { "source": "Troutman Pepper Locke", "url": "https://www.troutman.com/insights/pennsylvania-targets-ai-chatbot-for-the-unauthorized-practice-of-medicine/", "take": "Walks through the legal mechanics — Pennsylvania's Medical Practice Act doesn't require human practitioners specifically, which is why the AI-impersonation theory works under existing law without needing new AI legislation." }
+      ]
+    },
+    {
+      "id": "nvidia-40b-equity-investment-strategy-2026",
+      "tier": 3,
+      "title": "Nvidia's equity bets top $40 billion — IREN (5 GW infrastructure), Corning (fiber optics), OpenAI ($30B) — chip seller becomes platform investor",
+      "summary": "As of May 9, Nvidia has crossed $40 billion in equity commitments in 2026 alone, across seven-plus multibillion-dollar investments in public companies and roughly two dozen private rounds. The largest single bet is $30 billion in OpenAI; recent additions include $3.2 billion in Corning (which will build three new US facilities dedicated to fiber-optic cables for Nvidia's rack-scale systems) and $2.1 billion in IREN (the data center operator commits to deploy up to 5 gigawatts of Nvidia DSX-branded infrastructure globally). The pattern across every deal: Nvidia's equity checks are paired with supply agreements that lock in hardware demand — IREN gets capital and deploys Nvidia DSX, Corning gets capital and supplies the fiber-optic interconnects Nvidia needs as it moves from copper to fiber at rack scale.",
+      "link": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html",
+      "why_it_matters": "The Nvidia-as-chip-seller story and the Nvidia-as-investor story are now the same story. By writing equity checks tied to supply commitments, Nvidia is structuring demand at the infrastructure layer — an IREN or CoreWeave can't easily switch to AMD if Nvidia holds equity and the DSX infrastructure design is Nvidia's proprietary architecture. This is how a chip moat gets converted into a platform moat: you don't just sell the GPUs, you become a co-owner of the data centers running them. The Corning fiber angle is the most underreported detail: as Nvidia's rack-scale designs require fiber-optic interconnects rather than copper, it's investing in securing the supply chain for a technology transition it's driving. For someone watching the AI stack from the outside, this is the story behind why Nvidia's position is more durable than 'they sell the chips that happen to win right now' — the equity deals are the defensive layer.",
+      "why_it_matters_brief": "Nvidia's $40B equity strategy ties investment checks to supply lock-in — IREN gets capital, Nvidia gets 5 GW of committed GPU demand; chip lead becomes platform moat.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T11:25:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T11:25:00Z", "by": "refresh", "change": "created (May 9 story slipped through prior sweeps — no items found in strict 5-hour window; picked up as gap item)" }
+      ],
+      "takes": [
+        { "source": "The Next Web", "url": "https://thenextweb.com/news/nvidia-40bn-ai-equity-investments-2026", "take": "Notes that Nvidia's shift toward public equities provides market optionality but also increases exposure to AI-sector volatility." },
+        { "source": "European Business Review", "url": "https://www.europeanbusinessreview.com/nvidia-expands-ai-investments-as-spending-tops-40-billion/", "take": "Reads the $40B figure as Nvidia using its stock-market premium to acquire ecosystem lock-in — most deals are equity swaps, not cash outlays, so the cost to Nvidia is dilution, not liquidity." }
       ]
     }
   ],
