@@ -1,0 +1,266 @@
+{
+  "snapshot_id": "2026-05-11-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-11",
+  "generated_at": "2026-05-11T17:00:00Z",
+  "generated_at_local": "2026-05-11T13:00:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-11T17:00:00Z", "duration_ms": 1500000 }
+  ],
+  "tier_counts": { "1": 4, "2": 3, "3": 3 },
+  "items": [
+    {
+      "id": "openai-gpt55-cyber-eu-access-may-2026",
+      "tier": 1,
+      "title": "OpenAI ships GPT-5.5-Cyber and offers the EU a preview — Anthropic still holding Mythos back as the cyber-model arms race takes shape",
+      "summary": "On May 7, OpenAI rolled out GPT-5.5-Cyber — a variant of its latest model trained to be more permissive on offensive-security workflows — to vetted cybersecurity teams via its new Trusted Access for Cyber (TAC) program, with stronger account controls and verification gates rather than blanket guardrails. On May 11, CNBC reported OpenAI has now offered the EU formal preview access for review by the EU AI Office and member-state cyber authorities, while Anthropic — after four to five meetings — has still not agreed to open Claude Mythos Preview for EU evaluation. The two labs are running opposite playbooks: Anthropic released Mythos on April 7 to roughly 40 hand-picked organizations (Apple, Amazon, JPMorgan, Palo Alto Networks) and is refusing wider rollout; OpenAI is opening a broader application channel with stricter operational guardrails. The UK AISI evaluation, also out this week, has GPT-5.5-Cyber completing a 32-step simulated corporate cyberattack in 2/10 runs vs Mythos's 3/10 — roughly on par. Separately, CNBC reported May 8 that cybersecurity firms are calling the post-Mythos panic 'hysteria' — watchTowr CEO Ben Harris said researchers are reproducing Mythos-grade results with clever orchestration of public models, and that AI-assisted vulnerability discovery has been operational since 2025; the new problem is the widening gap between AI-accelerated discovery and human-paced patching.",
+      "link": "https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html",
+      "why_it_matters": "Two threads to pull. First, the cyber-model story is the clearest current example of a real safety/access tradeoff at the frontier — Anthropic's 'release to 40 trusted customers' approach versus OpenAI's 'open the application channel, gate at the account level' approach is the same disagreement that will recur for every dual-use model from here on, and the EU's leverage as a single-market regulator is going to keep growing. Second, the watchTowr point is the more useful technical one: if researchers are reproducing Mythos-grade vulnerability discovery with public models and clever orchestration, the operational meaning is that any production system you build in Python should assume an attacker has the capability today, not 'eventually.' Patch cadence is now the defense bottleneck. The AISI evaluation framework itself (32-step simulated corporate attack, scored as success rate over 10 runs) is also worth knowing as a public reference for how cyber capability is being measured.",
+      "why_it_matters_brief": "OpenAI offers the EU GPT-5.5-Cyber for review, Anthropic still won't release Mythos — and watchTowr says the panic is overblown because public models already match these capabilities with clever orchestration.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/07/openai-gpt-55-cybersecurity-model", "take": "Frames GPT-5.5-Cyber as OpenAI's deliberate counter-positioning to Anthropic's restrictive Mythos rollout — a 'broader access, tighter gating' philosophy that lets OpenAI argue Anthropic's approach is the more dangerous one." },
+        { "source": "TechRadar", "url": "https://www.techradar.com/pro/security/openai-rolls-out-new-model-for-cybersecurity-teams-a-month-after-anthropics-mythos-debut", "take": "Walks through the TAC (Trusted Access for Cyber) program structure — application-based, account-level controls, intended use cases include authorized red teaming, penetration testing, and controlled validation." },
+        { "source": "UK AISI", "url": "https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities", "take": "Publishes the methodology behind the 32-step simulated corporate cyberattack benchmark and the side-by-side numbers (GPT-5.5-Cyber 2/10, Mythos 3/10) — useful as a public reference for cyber capability evaluation." },
+        { "source": "CNBC (Mythos hysteria)", "url": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html", "take": "Quotes watchTowr CEO Ben Harris calling industry response to Mythos 'hysteria' — researchers are reproducing Mythos-grade vulnerability discovery using orchestration over public models, which means the threat profile predates Mythos." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-dreaming-managed-agents-may-2026",
+      "tier": 1,
+      "title": "Anthropic ships 'Dreaming' for Claude Managed Agents — a scheduled offline pass that prunes memory, finds patterns, and consolidates learning across sessions",
+      "summary": "On May 6, Anthropic introduced 'Dreaming' as a research-preview feature for Claude Managed Agents: a scheduled offline process that scans an agent's accumulated state across sessions, extracts recurring patterns (mistakes, workflows, team preferences), resolves contradictions, prunes stale references, and writes a clean consolidated memory back. The system runs between sessions rather than during inference, so users don't pay latency for the pattern-finding pass. Anthropic published two named early-customer results: legal-AI startup Harvey saw task-completion rates jump roughly 6× after enabling Dreaming, and Wisedocs (medical-document review) cut document-review time by 50% when combining Dreaming with other newly-shipped Managed Agents features. Dreaming shipped alongside two other Managed Agents updates the same week — Outcomes (a typed-return framework for agent results) and an expanded webhook event surface — all part of Anthropic's push to move agents from one-off conversation primitives to long-running, self-updating systems.",
+      "link": "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes",
+      "why_it_matters": "Dreaming is the architectural answer to the 'my agent keeps making the same mistake' problem — instead of trying to fix it during the live session, you let an offline pass review past sessions, find the pattern, and update the agent's memory. For someone writing Python agents, this is the pattern to copy: keep your live agent loop simple and stateless, run a separate scheduled job that reads through session logs and updates a memory store. The 6× completion-rate result at Harvey is the number worth noting because Harvey is a real production legal-AI shop, not a benchmark — that's roughly the same kind of capability jump you'd get from a model upgrade, but achieved through better memory hygiene rather than a smarter model. The broader shift this represents — from agents-as-conversations to agents-as-services that improve while you sleep — is the same direction Hermes Agent and ml-intern are pointing, and the pattern that will define what 'production agent' means by year-end.",
+      "why_it_matters_brief": "Anthropic ships scheduled offline 'dreaming' for agents — Harvey saw 6× task-completion lift, and the pattern (live agent stays simple, separate job consolidates memory) is the one to copy in your own Python agents.",
+      "source": { "name": "VentureBeat", "type": "scrape", "url": "https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "The New Stack", "url": "https://thenewstack.io/anthropic-managed-agents-dreaming-outcomes/", "take": "Reads Dreaming alongside the Outcomes typed-return framework as Anthropic's clearest 'agents are a platform, not a feature' statement — and the move that makes Claude Managed Agents directly competitive with what AWS Bedrock Agents and Azure AI Studio offer at the orchestration layer." },
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/", "take": "Catalogs the three-feature drop (Dreaming + Outcomes + expanded webhook events) — useful as a reference for what shipped together and how the pieces compose." },
+        { "source": "Quasa", "url": "https://quasa.io/media/anthropic-s-claude-agents-can-now-dream-and-they-re-learning-from-their-mistakes-while-you-sleep", "take": "Highlights the 'while you sleep' framing — Dreaming runs in scheduled batches between sessions, so the cost model is cheap compared to doing the pattern-finding inside a live conversation." }
+      ]
+    },
+    {
+      "id": "caisi-frontier-ai-testing-google-microsoft-xai-may-2026",
+      "tier": 1,
+      "title": "CAISI signs pre-deployment evaluation agreements with Google DeepMind, Microsoft, and xAI — frontier-AI national-security testing moves into classified environments",
+      "summary": "On May 5, NIST's Center for AI Standards and Innovation (CAISI) — the Commerce Department successor to the AI Safety Institute — announced expanded collaborations with Google DeepMind, Microsoft, and xAI for pre-deployment evaluations and targeted research on frontier AI capabilities. The agreements cover cyber, biosecurity, and chemical-weapons risks, and explicitly allow private-sector models to undergo safety testing in classified environments — a meaningful change from the older AISI agreements, which mostly worked from unclassified versions. Evaluators come from CAISI plus the TRAINS Taskforce, an interagency body drawing on DoD, DoE, DHS, and other agencies. CAISI says it has now completed more than 40 such pre-deployment evaluations to date — many on state-of-the-art models that remain unreleased — and this expanded set of agreements builds on the original 2024 OpenAI and Anthropic deals, bringing the three remaining major US frontier labs into the same program.",
+      "link": "https://www.hpcwire.com/off-the-wire/nists-caisi-announces-new-frontier-ai-testing-agreements-with-google-deepmind-microsoft-xai/",
+      "why_it_matters": "Two things to notice. First, this is the first time xAI has formally signed up to pre-deployment safety evaluation — Grok had been a holdout, and the deal closes the last gap among major US labs. Second, the 'classified environments' language is the underreported detail: it means the government's evaluators can now test models with classified threat scenarios (e.g., specific biological agents, specific cyber-target details) that labs themselves can't see, which closes a longstanding gap in how the cyber/bio/chem benchmarks were being run. For someone watching the AI policy stack, this is the practical scaffolding under the recent CAISI Trump-era 'oversight without new legislation' approach — instead of EU-style regulation, US frontier labs are voluntarily submitting models to classified national-security evaluation in exchange for not getting new laws. It's the model the rest of the world will be measured against.",
+      "why_it_matters_brief": "Google DeepMind, Microsoft, and xAI now submit pre-release models to CAISI for classified-environment safety testing — xAI's first formal signup closes the last major-lab gap in US frontier evaluation.",
+      "source": { "name": "HPCwire", "type": "scrape", "url": "https://www.hpcwire.com/off-the-wire/nists-caisi-announces-new-frontier-ai-testing-agreements-with-google-deepmind-microsoft-xai/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Nextgov/FCW", "url": "https://www.nextgov.com/artificial-intelligence/2026/05/commerce-ai-center-will-evaluate-google-deepmind-microsoft-and-xai-models/413349/", "take": "Frames the agreements as Commerce's pivot from regulation to evaluation — CAISI is positioned as the body that vouches for frontier-model safety so individual agencies don't have to build their own evaluation capacity." },
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html", "take": "Reads the deal as the Trump administration's preferred posture — voluntary cooperation with frontier labs, classified-environment testing, no new statutory authority — which contrasts directly with the EU's enforcement-driven AI Act path." },
+        { "source": "The Hill", "url": "https://thehill.com/homenews/5863937-google-microsoft-xai-ai-testing/", "take": "Notes that 40+ pre-deployment evaluations have already been completed (including on unreleased state-of-the-art models) — the new agreements are an expansion of an already-active program, not a fresh start." }
+      ]
+    },
+    {
+      "id": "deepseek-v4-chinese-open-coding-wave-april-2026",
+      "tier": 1,
+      "title": "Chinese labs ship a four-model open-coding wave in 18 days — DeepSeek V4 Pro/Flash leads, GLM-5.1 / Kimi K2.6 / MiniMax M2.7 land at frontier capability with MIT-licensed weights",
+      "summary": "Between April 7 and April 24, four Chinese labs shipped open-weights coding models within an 18-day window: Z.ai's GLM-5.1 (754B MoE, MIT license, claimed to beat GPT-5.4 and Claude Opus 4.6 on SWE-Bench Pro), MiniMax M2.7, Moonshot's Kimi K2.6 (1T parameters with 384 experts, plan-write-test-debug agentic loop, coordinates up to 300 sub-agents, currently #2 on OpenRouter behind Hermes Agent), and DeepSeek V4 (Pro at 1.6T total / 49B active, Flash at 284B total / 13B active, hybrid thinking/non-thinking, 1M-token context). On Artificial Analysis's GDPval-AA agentic real-world work benchmark, DeepSeek V4 Pro (Max) leads open weights at 1554, with GLM-5.1 at 1535, MiniMax M2.7 at 1514, and Kimi K2.6 at 1484. All four are released under permissive (MIT or near-MIT) licenses with weights directly downloadable from Hugging Face. The frontier moved in parallel — Anthropic shipped Claude Opus 4.7 on April 16 in the middle of the wave, and OpenAI shipped GPT-5.5 on April 23, the day before DeepSeek V4.",
+      "link": "https://artificialanalysis.ai/articles/deepseek-is-back-among-the-leading-open-weights-models-with-v4-pro-and-v4-flash",
+      "why_it_matters": "If you've been tracking open-weights LLMs since Llama 3, this is the moment open-weights pulled even with the closed frontier on agentic coding — and the labs doing it are all Chinese. For someone running Python locally or on a rented GPU, that has a concrete meaning: a 13B-active model (DeepSeek V4 Flash) that scores in the 1300s on GDPval-AA is something you can actually run on a single H100, and the 49B-active V4 Pro fits on a couple of consumer-grade GPUs in 4-bit. The MIT license is what makes this matter for everyone else — you can ship products on these weights without a license negotiation. The strategic read is that the per-flop-cost and Huawei-Ascend-training threads from earlier this year have now produced a stable wave of competitive open models from Chinese labs, and the gap to the Western frontier is measured in weeks rather than months. Worth picking one (V4 Flash is the most accessible) and running it locally this week.",
+      "why_it_matters_brief": "DeepSeek V4 Pro leads open-weights agentic coding at GDPval-AA 1554 with three other Chinese MIT-licensed coding models inside ~10 points — the open-weights/closed-frontier gap is now measured in weeks.",
+      "source": { "name": "Artificial Analysis", "type": "scrape", "url": "https://artificialanalysis.ai/articles/deepseek-is-back-among-the-leading-open-weights-models-with-v4-pro-and-v4-flash" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "DeepLearning.AI The Batch", "url": "https://www.deeplearning.ai/the-batch/kimi-k2-6-matches-open-qwen3-6-max-anddeepseek-v4-falls-just-behind-top-closed-models", "take": "Reads Kimi K2.6 as the model that 'fell just behind' the top closed models — useful as a calibration anchor for how close the open-weights wave actually got." },
+        { "source": "Medium (Can Demir)", "url": "https://medium.com/@candemir13/three-weeks-four-chinese-coding-models-whats-actually-real-and-what-s-overstated-4cb58199e83d", "take": "Argues benchmark numbers overstate the wave — actual production usage and agentic-loop reliability still favor closed-frontier models in his testing, especially for long multi-file tasks." },
+        { "source": "Hugging Face", "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro", "take": "Primary source — weights and a README confirming MIT licensing and the Pro/Flash architecture split. The model card is where the 1M-token context and hybrid-thinking flags are documented." },
+        { "source": "NIST CAISI", "url": "https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro", "take": "Posts the US government's pre-release evaluation of V4 Pro — CAISI ran it through the same cyber/bio/chem battery as US frontier labs, which is the first time a Chinese open-weight model has been formally evaluated under the program." }
+      ]
+    },
+    {
+      "id": "nous-hermes-agent-openrouter-tenacity-may-2026",
+      "tier": 2,
+      "title": "Nous Research's Hermes Agent hits #1 on OpenRouter — open-source self-improving agent passes OpenClaw at 224B daily tokens, v0.13.0 'Tenacity' adds a Kanban task board with zombie detection",
+      "summary": "On May 10, Nous Research's Hermes Agent overtook OpenClaw to take the #1 spot on OpenRouter's global daily app-and-agent rankings, generating roughly 224 billion daily tokens against OpenClaw's 186 billion. Hermes Agent launched February 25 as an open-source long-running agent designed to run on infrastructure the user controls (VPS, home server, laptop, or serverless host) and reach the user through 20 supported messaging platforms — terminal, Telegram, Discord, Slack, WhatsApp, and as of May 7's v0.13.0 'Tenacity' release, Google Chat. Tenacity also introduced Kanban, a durable multi-agent task board with heartbeat monitoring, zombie-task detection, and hallucination recovery; a /goal command that locks the agent on a target across turns; Checkpoints v2 with real state pruning; and gateway auto-resume after restarts. The release closed 8 P0 security issues — redaction on by default, Discord role-allowlists scoped per-guild, WhatsApp rejecting unknown senders by default, and TOCTOU windows closed across auth.json and the MCP OAuth flow. The agent's distinguishing architectural bet is a built-in learning loop that creates skills from experience and rewrites them between sessions, which is what made the OpenRouter token volume tick up.",
+      "link": "https://www.marktechpost.com/2026/05/10/openclaw-vs-hermes-agent-why-nous-researchs-self-improving-agent-now-leads-openrouters-global-rankings/",
+      "why_it_matters": "OpenRouter rankings are usage-weighted, so Hermes Agent at #1 means it's not just popular among open-source fans — actual token spend is flowing through it. That matters because Hermes is the clearest production-grade example of the self-improving-agent pattern (offline session review, skill curation, persistent memory) that Anthropic's Dreaming feature ships today as a managed service. For someone interested in running an agent on their own hardware in Python, the architectural read is that you don't need a frontier model to compete — Hermes wraps whatever model you point it at (Claude, GPT, local Qwen) and lets the agent loop and the persistent skill store carry most of the leverage. The Tenacity release is also a useful study in what 'production agent' security looks like — the 8 P0 fixes (TOCTOU on auth.json, role-allowlists per Discord guild, default-deny on WhatsApp strangers) are the kinds of issues you'll hit yourself the first time you wire an agent into a real chat platform. Worth at least cloning the repo and reading the Kanban + Checkpoints v2 design notes.",
+      "why_it_matters_brief": "Open-source Hermes Agent overtakes OpenClaw at #1 on OpenRouter — 224B daily tokens flowing through a self-improving agent you can run on your own laptop, plus a clinic on production agent security in the v0.13.0 release notes.",
+      "source": { "name": "MarkTechPost", "type": "scrape", "url": "https://www.marktechpost.com/2026/05/10/openclaw-vs-hermes-agent-why-nous-researchs-self-improving-agent-now-leads-openrouters-global-rankings/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Nous Research (X)", "url": "https://x.com/NousResearch/status/2052904761087729897", "take": "The lab's own announcement — 'while our journey together has just begun' framing suggests they treat this as a milestone, not a peak, and the messaging is community-thanks rather than benchmark-flexing." },
+        { "source": "Build Fast With AI", "url": "https://www.buildfastwithai.com/blogs/hermes-agent-openrouter-number-one-2026", "take": "Walks through the architectural difference vs OpenClaw — Hermes's persistent skill store and offline learning loop are the structural reason its tokens-per-active-user climbed faster than OpenClaw's." },
+        { "source": "Submit MyPress Release (FlyHermes)", "url": "https://newsroom.submitmypressrelease.com/2026/05/06/flyhermes-and-hermes-agent-five-ways-to-run-the-self-improving-ai-agent-from-60-second-cloud-to-fully-local-hardware_2376537.html", "take": "Catalogs the five deployment paths (60-second cloud via FlyHermes, VPS, home server, laptop, serverless) — the practical 'how do I actually run this' reference. Useful for anyone deciding where to host." }
+      ]
+    },
+    {
+      "id": "mistral-medium-3-5-vibe-cloud-agents-may-2026",
+      "tier": 2,
+      "title": "Mistral ships Medium 3.5 (128B dense, 256K context) and moves Vibe coding agents to the cloud — 77.6% SWE-Bench Verified, async sessions with local-to-cloud teleport",
+      "summary": "Mistral released Medium 3.5 on May 2 as a single 128B dense model with a 256K-token context window, merging instruction-following, reasoning, and coding into one set of weights (no separate Instruct/Reasoner variants). It scores 77.6% on SWE-Bench Verified — ahead of Mistral's own Devstral 2 and competitive with Qwen3.5 397B A17B at a fraction of the active-parameter count. Released as open weights under a modified MIT license. Simultaneously, Mistral moved its Vibe coding agent from a local-CLI tool into a cloud-hosted async runtime: sessions can be spawned from the CLI or from Le Chat, run asynchronously in isolated sandboxes, and a local CLI session can be 'teleported' to the cloud without losing history or task state. Le Chat itself got a new 'Work' mode in preview — a multi-step agent powered by Medium 3.5 that calls tools in parallel for research, analysis, and cross-tool actions.",
+      "link": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "why_it_matters": "Two practical handles. First, a 128B-dense model that scores 77.6% on SWE-Bench Verified is the most capable single-tensor-load model in that size range with open weights — it fits in 4-bit on a workstation GPU, and the SWE-Bench number is competitive with the closed-frontier coding models from a year ago. If you've been waiting for a self-hostable coding model that's actually good enough to do real Python work, this is probably it. Second, the 'teleport a local CLI session to the cloud' design is the most useful UX idea in the space right now — you start a long-running task on your laptop, hit a key, and the same agent context resumes in a Mistral-hosted sandbox while you close your laptop. That's the same async-cloud-coding pattern OpenAI's hosted Codex and Anthropic's Claude Managed Agents are converging on, but Mistral's version is the only one where the local component is fully open-source. The 'Work' mode in Le Chat is the EU's clearest answer to ChatGPT Agents — same primitive (multi-step tool-calling), different model and jurisdiction.",
+      "why_it_matters_brief": "Open-weights Mistral Medium 3.5 hits 77.6% on SWE-Bench Verified with a single 128B dense load — plus Vibe coding agents now teleport local CLI sessions to a Mistral-hosted sandbox.",
+      "source": { "name": "Mistral AI", "type": "scrape", "url": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/05/02/mistral-ai-launches-remote-agents-in-vibe-and-mistral-medium-3-5-with-77-6-swe-bench-verified-score/", "take": "Pulls out the SWE-Bench Verified 77.6% number and contextualizes it against Devstral 2 and Qwen3.5 397B A17B — useful for understanding where Medium 3.5 actually sits in the open-weights coding leaderboard." },
+        { "source": "InfoQ", "url": "https://www.infoq.com/news/2026/05/mistral-agents-lechat/", "take": "Walks through Work mode's parallel-tool-calling architecture inside Le Chat — the clearest EU-jurisdiction analogue to ChatGPT Agents and Claude Managed Agents, with the same multi-step-research-and-act pattern." },
+        { "source": "DevOps.com", "url": "https://devops.com/mistral-moves-coding-agents-to-the-cloud-and-gets-out-of-your-way/", "take": "Reads the local-to-cloud teleport as Mistral's actual product differentiator — every major coding-agent vendor is converging on cloud-hosted async sandboxes, but Mistral is the only one where the local half stays fully open." }
+      ]
+    },
+    {
+      "id": "huggingface-ml-intern-llm-post-training-april-2026",
+      "tier": 2,
+      "title": "Hugging Face ships ml-intern — an open-source agent that runs the full LLM post-training loop and beat Claude Code on GPQA in under 10 hours on a single H100",
+      "summary": "Hugging Face released ml-intern on April 21, an open-source autonomous agent built on its smolagents framework that runs the end-to-end LLM post-training loop: literature review, dataset assessment, training-script authoring, evaluation, and iteration. In the launch benchmark, ml-intern took a Qwen3-1.7B model from a 10% GPQA baseline to 32% in under 10 hours on a single H100 — beating Claude Code's 22.99% on the same task. Architecturally, ml-intern uses a ContextManager that maintains message history with auto-compaction at 170K tokens, a ToolRouter that dispatches calls to Hugging Face docs/repos/datasets/jobs/papers/GitHub code search and external MCP servers, and a doom-loop detector that watches for repeated tool patterns and injects corrective prompts. It ships as both an interactive CLI and a headless mode that takes a single prompt, plus a mobile/desktop web app. In a healthcare-domain test case Hugging Face published, ml-intern assessed available medical datasets, decided their quality was insufficient for reliable fine-tuning, and wrote a synthetic-data-generation script focused on medical hedging language and multilingual emergency scenarios — i.e., it didn't just train, it decided not to train and built data first.",
+      "link": "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/",
+      "why_it_matters": "Two reasons this matters more than its modest launch coverage suggests. First, the GPQA-beats-Claude-Code number is concrete proof that a small, focused agent with good tool routing can outperform a general-purpose coding agent on a specific scientific-reasoning task — and that's the playbook for most useful AI engineering work going forward. Second, the architectural pieces (ContextManager with auto-compaction at 170K, doom-loop detector that watches tool-call patterns, headless single-prompt mode) are the parts to copy in your own Python agents, regardless of whether you ever post-train a model. The doom-loop detector in particular is the kind of thing every agent-building project re-invents poorly — it's worth reading ml-intern's implementation rather than rolling your own. The healthcare case study is the most striking demo: an agent that decided 'the data is bad, so I'll generate better data first' is much closer to what a junior ML engineer actually does than to a code-completion tool. The whole project is MIT-licensed on GitHub.",
+      "why_it_matters_brief": "Open-source ml-intern took Qwen3-1.7B from 10% to 32% on GPQA in under 10 hours and beat Claude Code on the same task — the ContextManager / doom-loop-detector design is worth lifting into your own agents.",
+      "source": { "name": "MarkTechPost", "type": "scrape", "url": "https://www.marktechpost.com/2026/04/21/hugging-face-releases-ml-intern-an-open-source-ai-agent-that-automates-the-llm-post-training-workflow/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "GitHub (huggingface/ml-intern)", "url": "https://github.com/huggingface/ml-intern", "take": "Primary source — the MIT-licensed code, the smolagents-based architecture, and the documented CLI/headless modes. The README is also the cleanest reference for the ToolRouter and ContextManager designs." },
+        { "source": "EdTech Innovation Hub", "url": "https://www.edtechinnovationhub.com/news/hugging-face-releases-ml-intern-the-ai-agent-teaching-itself-to-beat-claude-code-on-scientific-reasoning", "take": "Leads on the Claude-Code-comparison framing and the GPQA-from-10%-to-32%-in-10-hours number — the clearest single-number summary of why ml-intern matters for narrow agentic tasks." },
+        { "source": "Hugging Face Blog", "url": "https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026", "take": "Places ml-intern in the broader 'open-source on HF spring 2026' picture — alongside the Fortune 500 verified-account growth and the platform crossing 1M models, ml-intern is the new evidence that HF is building infrastructure for autonomous post-training, not just hosting checkpoints." }
+      ]
+    },
+    {
+      "id": "eu-ai-act-omnibus-simplification-may-2026",
+      "tier": 3,
+      "title": "EU Council and Parliament agree to slim down the AI Act — high-risk system deadlines pushed to 2027/2028, AI Office gets clearer GPAI supervision, non-consensual sexual deepfakes banned",
+      "summary": "On May 7, the EU Council presidency and the European Parliament reached a provisional 'omnibus' deal that materially reshapes the AI Act ahead of full enforcement. Key changes: the application date for stand-alone high-risk AI systems moves from August 2026 to December 2 2027; the date for high-risk systems embedded in products slips to August 2 2028; the deadline for member states to establish AI regulatory sandboxes is pushed to August 2 2027; and the grace period for providers to deploy transparency markers on AI-generated content is shortened from 6 months to 3, with the new deadline now December 2 2026. The deal extends SME regulatory exemptions to 'small mid-cap' companies (SMCs), expands the ability to process sensitive personal data for bias-detection purposes, and clarifies the AI Office's supervision of AI systems built on general-purpose AI models — with carve-outs for law enforcement, border management, judiciary, and financial institutions, where national authorities remain primary. A new prohibition was added banning non-consensual sexual or intimate AI-generated content and CSAM. The Commission's existing enforcement powers for GPAI providers (fines up to €15M or 3% of global revenue) remain on track for August 2 2026.",
+      "link": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/",
+      "why_it_matters": "If you've been wondering when the EU AI Act actually bites for ordinary developers, this deal is the answer for the high-risk side: not until December 2027, with another year for embedded systems. That's a meaningful slip for anyone building products that touch credit scoring, medical devices, or hiring — there's now another 18 months before compliance is non-negotiable. The GPAI side, by contrast, is unchanged — the Commission's fining authority for foundation-model providers still kicks in this August. For non-EU developers, the most useful detail is the 3-month transparency-marker deadline for AI-generated content (December 2 2026) — that's the rule that will affect anyone shipping image/video generation tools to EU users, and it just got shorter, not longer. The non-consensual-sexual-content prohibition is the first time a major jurisdiction has banned that category of generation outright (rather than just as CSAM-adjacent), and it'll be the test case for whether platforms can enforce it.",
+      "why_it_matters_brief": "EU AI Act high-risk deadlines slip 18 months to late 2027 — but GPAI enforcement still starts this August, and AI-generated-content transparency markers get a shorter 3-month grace period.",
+      "source": { "name": "Council of the EU", "type": "scrape", "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Lewis Silkin", "url": "https://www.lewissilkin.com/insights/2026/05/07/the-council-and-parliament-agree-to-slim-down-and-delay-parts-of-the-eu-ai-act-102ms0v", "take": "Walks through the SME-to-SMC exemption expansion and the implications for mid-sized providers — the most consequential change for non-Big-Tech companies, since 'small mid-cap' status now confers some of the lighter-touch compliance treatment previously reserved for true SMEs." },
+        { "source": "TechPolicy.Press", "url": "https://www.techpolicy.press/what-the-eu-ai-omnibus-deal-changes-for-the-ai-act-and-what-lies-ahead/", "take": "Reads the omnibus deal as a quiet retreat by the Commission — most material changes loosen rather than tighten, and Brussels is responding to industry pressure that compliance timelines were unworkable for anyone smaller than a hyperscaler." },
+        { "source": "IAPP", "url": "https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules", "take": "Focuses on the machinery-regulation overlap clarification — practical detail for anyone building physical products with embedded AI, since the EU Machinery Regulation and AI Act both apply and the new text reduces double-compliance burden." }
+      ]
+    },
+    {
+      "id": "sierra-950m-15b-valuation-may-2026",
+      "tier": 3,
+      "title": "Sierra raises $950M at a $15B valuation — Bret Taylor's customer-service-agent startup hits $150M ARR in 8 quarters, serves 40%+ of the Fortune 50",
+      "summary": "On May 4, Sierra — co-founded in early 2024 by OpenAI board chair Bret Taylor and former Google product chief Clay Bavor — closed a $950 million round at a $15 billion post-money valuation, led by Tiger Global and Alphabet's GV, with Benchmark, Sequoia, Greenoaks, and other existing investors participating. The company sells AI-powered customer-service agents that replace traditional call centers — the agents handle conversations end-to-end across voice and chat, route to humans only on escalation, and integrate with the existing CRM/order/billing systems. Sierra disclosed it has hit $150 million in annual recurring revenue, up from $100 million in late November 2025 — a 50% ARR jump in roughly 10 weeks. Customer count is unusually concentrated up-market: more than 40% of the Fortune 50 are now Sierra customers, including Prudential, Cigna, and Rocket Mortgage. The round was preemptive — Sierra wasn't actively raising — and is the second large round in under a year (its previous round was August 2025).",
+      "link": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/",
+      "why_it_matters": "Two things to notice. First, Sierra is the clearest example of the 'AI agent replaces an entire enterprise workflow' thesis actually working at large-enterprise scale — 40%+ of the Fortune 50 is a customer concentration that the rest of the AI-agent category (Cresta, Decagon, Forethought) hasn't approached. Customer service is the wedge because it's high-volume, high-cost, and the existing tooling (Salesforce Service Cloud, Genesys) was clunky enough that an agent can plausibly replace large chunks of human work without too much UX argument. Second, the ARR ramp from $100M to $150M in 10 weeks is the more interesting number than the $15B valuation — that's a faster-than-Anthropic-pace expansion at the application layer, and it's almost entirely from upsell into existing accounts, not new logos. If you've ever wondered what 'AI eats workflows' actually looks like as a P&L, Sierra is the case study.",
+      "why_it_matters_brief": "Sierra's $950M at $15B is the application-layer answer to 'do AI agents actually replace workflows' — 40%+ of Fortune 50 customers, $100M to $150M ARR in 10 weeks, almost entirely upsell.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/2026/05/04/sierra-raises-950m-as-the-race-to-own-enterprise-ai-gets-serious/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/04/bret-taylor-sierra-fundraise-openai.html", "take": "Frames the round around Taylor's dual role — he's still OpenAI's board chair, and the GV-led check is the clearest evidence that the OpenAI/Google relationship is becoming less zero-sum at the investor level as both labs see customer-service agents as a category they want exposure to but not direct competition in." },
+        { "source": "SiliconANGLE", "url": "https://siliconangle.com/2026/05/04/ai-agent-startup-sierra-valued-15b-new-950m-funding-round/", "take": "Lists named customers (Prudential, Cigna, Rocket Mortgage) and notes the round was preemptive — Sierra wasn't actively raising, which is the cleaner read on how investor demand currently looks for proven application-layer AI." },
+        { "source": "CMSWire", "url": "https://www.cmswire.com/customer-experience/sierra-raises-950m-at-15b-valuation-eyes-transformation-beyond-customer-support/", "take": "Reports Sierra's stated intent to expand beyond customer support into broader enterprise workflows — the read here is that customer service was the wedge, not the destination, and the next year is about Sierra's product surface growing horizontally inside existing accounts." }
+      ]
+    },
+    {
+      "id": "moonshot-2b-funding-kimi-k26-may-2026",
+      "tier": 3,
+      "title": "Moonshot AI raises $2B at $20B+ valuation — Kimi K2.6 sits at #2 on OpenRouter, $200M ARR, $3.9B raised in under six months",
+      "summary": "On May 7, Bloomberg reported that Kimi developer Moonshot AI is closing a $2 billion funding round at a valuation above $20 billion, led by Meituan's Long-Z Investment (committing more than $200 million alone) with participation from China Mobile, Tsinghua Holdings, and CPE. The deal makes Moonshot the most-funded private LLM startup in China — Moonshot had already raised $1.9 billion across three earlier rounds in January and February, so total fresh capital raised in under six months now exceeds $3.9 billion. Annual recurring revenue topped $200 million in April, driven by paid subscriptions and API usage. The capital is anchored on Kimi K2.6, the company's open-weights 1-trillion-parameter MoE coding model released April 20 — currently the #2 most-used LLM on OpenRouter (behind Hermes Agent), with a documented ability to coordinate up to 300 sub-agents across 13-hour coding sessions producing 4,000+ lines of code in a single run.",
+      "link": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/",
+      "why_it_matters": "The Moonshot number is the clearest external read on how Chinese open-weights models are being valued by the market. $20B for an open-weights lab is roughly an order of magnitude below Anthropic's $900B, but it's also more than 20× any other Chinese open-weights player and approaches the valuation of Mistral (which has roughly comparable revenue). The $200M ARR figure is the more useful one — it confirms that 'open weights' isn't synonymous with 'no revenue,' and that the route is paid API + subscriptions over the same weights you can download for free. For someone interested in how the open-weights-LLM business actually works at scale, Moonshot is now the case study. The Kimi K2.6 architectural notes (300 sub-agents, 13-hour sessions, 4,000+ lines per run) also matter as a reference point — those are upper-bound numbers for what a single agent run can produce on this class of model, which is a calibration anchor when you're sizing your own agent loops.",
+      "why_it_matters_brief": "$2B at $20B+ for Moonshot makes it China's top-funded LLM startup — and Kimi K2.6's $200M ARR shows open weights and paid API/subscription revenue aren't mutually exclusive.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-11T17:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-07/kimi-chatbot-maker-moonshot-ai-valued-at-20-billion-in-meituan-led-round", "take": "Original reporting on the Meituan-led round and the China Mobile / Tsinghua / CPE participation — useful as primary source for the cap-table structure, since the Meituan strategic check explicitly ties Kimi into Meituan's consumer-app distribution." },
+        { "source": "TechNode", "url": "https://technode.com/2026/05/07/kimi-reportedly-nears-2-billion-funding-round-at-over-20-billion-valuation/", "take": "Notes the $3.9B-in-six-months total — putting Moonshot's pace of capital raising at roughly Anthropic's, just one valuation tier down — and the $200M ARR detail that confirms Kimi's open-weights strategy converts to paid revenue at scale." },
+        { "source": "CTOL Digital", "url": "https://www.ctol.digital/news/kimi-moonshot-ai-2b-funding-20b-valuation-paradox/", "take": "Frames the deal as 'weaponizing the commoditization of intelligence' — the strategic read that Moonshot is happy to give the weights away because the moat is the deployment platform, the data pipeline, and the consumer-side Kimi app." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
