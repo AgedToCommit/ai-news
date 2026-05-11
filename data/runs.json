@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-11T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-11T06:05:00Z",
+      "ended_at": "2026-05-11T06:30:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 49000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 7500,
+        "output_write": 2000
+      },
+      "fetches_made": 12,
+      "items_input": 12,
+      "items_output": 12,
+      "items_added": 2,
+      "items_kept": 10,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-11-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable (sandbox 403 pattern continues); all enrichment + late-breaking sweep done via WebSearch (12 queries total — one per yesterday-pm item plus two general late-breaking + two targeted verification queries). All 10 items from 2026-05-10-pm survived enrichment with substantive new context: (1) Google-TPU deal — added 40-50% per-FLOP discount vs Nvidia and $460B Google cloud backlog with 40% Anthropic share; (2) SpaceX Colossus — added peak-hours throttle removal, 30-day GPU rollout window, SpaceX FCC million-satellite filing, Musk's follow-up 'impressed' comment; (3) finance agents — added Claude-for-Excel add-in capability and same-day $1.5B Blackstone/Goldman/H&F JV that will commercialize them; (4) Realtime API — added Scale AI MultiChallenge S2S benchmark (36.7%→70.8% APR), Artificial Analysis 96.6% Big Bench Audio, Boris Power adversarial 26pt lift; (5) $900B valuation — added reported $40B run rate per sources vs disclosed $30B+; (6) SAP/Prior Labs — added Microsoft/Google/AWS TFM-space response and SAP AI Core + Joule productization path; (7) coding-agent exploits — added TrustFall/Orca/comment-prompt-injection details and Gravitee 21.9% PAM survey; (8) Karpathy — added Dec-2025 inflection date, 80/20 agent-delegation ratio, closing 'outsource thinking not understanding' quote; (9) DeepMind union — added 10-working-day recognition deadline and Google's official response; (10) Character.AI/PA — added Character.AI 'fictional roleplay' defense and AG's pre-emptive disclaimer-doesn't-substitute argument. Two late-breaking items added: (A) Claude Code Auto Mode + Agent SDK GA at Code w/ Claude (May 6-8, US, Tier 1) — classifier-gated permission tier between full-approval and YOLO; Agent SDK exposes the same loop powering Claude Code as a Python/TS library; multiagent sessions + outcomes + webhooks now in public beta; (B) Gemini 3.1 Flash-Lite GA (May 8, Global, Tier 2) — $0.25/$1.50 per 1M tokens, sub-second classification, 2.5x faster TTFT vs Gemini 2.5 Flash, positioned against GPT-5.1-Nano and Haiku 4.6 on cost. No items dropped from yesterday's pm (every item had substantive overnight follow-up coverage). Hero images uniformly null (WebFetch still unavailable). Final tier_counts: T1=6, T2=4, T3=2."
+    },
+    {
       "run_id": "2026-05-10T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
