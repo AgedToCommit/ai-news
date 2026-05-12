@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-12T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-12T06:10:00Z",
+      "ended_at": "2026-05-12T06:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 11000,
+        "output_write": 2000
+      },
+      "fetches_made": 11,
+      "items_input": 11,
+      "items_output": 11,
+      "items_added": 1,
+      "items_kept": 10,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); enrichment sweep done via 11 WebSearch queries. All 10 items from 2026-05-11-pm received meaningful new context and were kept+enriched. Summary of enrichments: (1) GPT-5.5-Cyber/Mythos — added ENISA/AI Office/DG Connect named recipients and EU Parliament's May 13 ENISA session on Mythos risks; (2) Anthropic Dreaming — added 'doesn't modify model weights' detail and clarified Outcomes/multi-agent orchestration are public beta vs Dreaming research-preview only; (3) CAISI — added 'developers frequently provide CAISI with models that have safeguards reduced or removed' detail and Trump AI Action Plan renegotiation framing; (4) DeepSeek V4 wave — added V4 Pro 80.6% SWE-Bench Verified, ~7× cost gap to Claude Opus 4.6, AkitaOnRails Tier-A placement for Kimi K2.6 (10-pt Opus gap, 3.6× cheaper), Simon Willison's 'almost on the frontier, a fraction of the price' framing, plus two new takes (Willison + AkitaOnRails); (5) Hermes Agent — added 864 commits / 588 PRs / 295 contributors / 13 P0 / 36 P1 Tenacity volume stats, /goal 'Ralph loop' framing, OpenRouter response caching; (6) Mistral Medium 3.5 — added $7.50/M output-token API pricing and reviewer skepticism that the 5-pt gap vs Qwen 3.6 justifies the premium, plus new take from RevolutionInAI; (7) ml-intern — corrected GPQA baseline (8.5% not 10%), added GRPO + Trackio + HF Jobs integration details; (8) EU AI Act omnibus — added reinstated registration obligation for exempted high-risk systems and strict-necessity standard for special-category personal data; (9) Sierra — added 15-model 'constellation of models' architecture, Blue Cross Blue Shield to named customers, billions-of-interactions-per-quarter volume; (10) Moonshot — added 5× valuation lift since end-2025 ($4.3B → $20B+), $100M → $200M ARR jump in one month, K2.6 spec (32B active params, 262K context, Agent Swarm 300 sub-agents). One late-breaking item added: OpenAI Deployment Company launch May 11 (Tier 3) — $4B initial / ~$14B valuation, 19 partners (TPG/Advent/Bain Capital/Brookfield co-lead + Goldman Sachs/SoftBank/Warburg Pincus + Bain & Co/Capgemini/McKinsey), Tomoro acquisition for 150 Forward Deployed Engineers; this is the clearest 'AI deployment is the bottleneck, not capability' signal yet at $4B scale. Anthropic-Google $200B (May 5) and Meta Muse Spark (April 8) considered for late-breaking pass but rejected as not within the strict 12-hour window. Hero images uniformly null (no WebFetch). Final tier_counts: T1=4, T2=3, T3=4."
+    },
+    {
       "run_id": "2026-05-11T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
