@@ -2,19 +2,20 @@
   "snapshot_id": "2026-05-12-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-12",
-  "generated_at": "2026-05-12T06:30:00Z",
-  "generated_at_local": "2026-05-12T02:30:00-04:00",
+  "generated_at": "2026-05-12T11:15:00Z",
+  "generated_at_local": "2026-05-12T07:15:00-04:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-05-11T17:00:00Z", "duration_ms": 1500000 },
-    { "phase": "enrichment", "ran_at": "2026-05-12T06:30:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-05-12T06:30:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh", "ran_at": "2026-05-12T11:15:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 4, "2": 3, "3": 4 },
+  "tier_counts": { "1": 5, "2": 5, "3": 4 },
   "items": [
     {
       "id": "openai-gpt55-cyber-eu-access-may-2026",
       "tier": 1,
       "title": "OpenAI ships GPT-5.5-Cyber and offers the EU a preview — Anthropic still holding Mythos back as the cyber-model arms race takes shape",
-      "summary": "On May 7, OpenAI rolled out GPT-5.5-Cyber — a variant of its latest model trained to be more permissive on offensive-security workflows — to vetted cybersecurity teams via its new Trusted Access for Cyber (TAC) program, with stronger account controls and verification gates rather than blanket guardrails. On May 11, CNBC reported OpenAI has now offered the EU formal preview access, with the offer explicitly naming ENISA, the EU AI Office, and DG Connect as potential recipients alongside member-state cyber authorities and EU businesses and governments. Anthropic — after four to five meetings — has still not agreed to open Claude Mythos Preview for EU evaluation; the Commission described its talks with Anthropic as 'not yet at the same stage' as the OpenAI offer. The European Parliament is holding a session on Mythos risks with the Commission and ENISA on Wednesday May 13. The two labs are running opposite playbooks: Anthropic released Mythos on April 7 to roughly 40 hand-picked organizations (Apple, Amazon, JPMorgan, Palo Alto Networks) and is refusing wider rollout; OpenAI is opening a broader application channel with stricter operational guardrails. The UK AISI evaluation, also out this week, has GPT-5.5-Cyber completing a 32-step simulated corporate cyberattack in 2/10 runs vs Mythos's 3/10 — roughly on par. Separately, CNBC reported May 8 that cybersecurity firms are calling the post-Mythos panic 'hysteria' — watchTowr CEO Ben Harris said researchers are reproducing Mythos-grade results with clever orchestration of public models, and that AI-assisted vulnerability discovery has been operational since 2025; the new problem is the widening gap between AI-accelerated discovery and human-paced patching.",
+      "summary": "On May 7, OpenAI rolled out GPT-5.5-Cyber — a variant of its latest model trained to be more permissive on offensive-security workflows — to vetted cybersecurity teams via its new Trusted Access for Cyber (TAC) program, with stronger account controls and verification gates rather than blanket guardrails. On May 11, CNBC reported OpenAI has now offered the EU formal preview access, with the offer explicitly naming ENISA, the EU AI Office, and DG Connect as potential recipients alongside member-state cyber authorities and EU businesses and governments. Anthropic — after four to five meetings — has still not agreed to open Claude Mythos Preview for EU evaluation; the Commission described its talks with Anthropic as 'not yet at the same stage' as the OpenAI offer. The European Parliament is holding a session on Mythos risks with the Commission and ENISA on Wednesday May 13. The two labs are running opposite playbooks: Anthropic released Mythos on April 7 to roughly 40 hand-picked organizations (Apple, Amazon, JPMorgan, Palo Alto Networks) and is refusing wider rollout; OpenAI is opening a broader application channel with stricter operational guardrails. The UK AISI evaluation, also out this week, has GPT-5.5-Cyber completing a 32-step simulated corporate cyberattack in 2/10 runs vs Mythos's 3/10 — roughly on par. Separately, CNBC reported May 8 that cybersecurity firms are calling the post-Mythos panic 'hysteria' — watchTowr CEO Ben Harris said researchers are reproducing Mythos-grade results with clever orchestration of public models, and that AI-assisted vulnerability discovery has been operational since 2025; the new problem is the widening gap between AI-accelerated discovery and human-paced patching. That thesis received an empirical datapoint on May 11: Google's Threat Intelligence Group confirmed a criminal hacker group used an AI model to generate working zero-day exploit code (a 2FA bypass) aimed at a mass exploitation campaign — the first confirmed in-the-wild AI-built attack, not just AI-assisted scanning.",
       "link": "https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html",
       "why_it_matters": "Two threads to pull. First, the cyber-model story is the clearest current example of a real safety/access tradeoff at the frontier — Anthropic's 'release to 40 trusted customers' approach versus OpenAI's 'open the application channel, gate at the account level' approach is the same disagreement that will recur for every dual-use model from here on, and the EU's leverage as a single-market regulator is going to keep growing. Second, the watchTowr point is the more useful technical one: if researchers are reproducing Mythos-grade vulnerability discovery with public models and clever orchestration, the operational meaning is that any production system you build in Python should assume an attacker has the capability today, not 'eventually.' Patch cadence is now the defense bottleneck. The AISI evaluation framework itself (32-step simulated corporate attack, scored as success rate over 10 runs) is also worth knowing as a public reference for how cyber capability is being measured.",
       "why_it_matters_brief": "OpenAI hands the EU AI Office, ENISA, and DG Connect a Mythos-class cyber model while Anthropic stalls — and Parliament's mid-week ENISA session puts EU regulatory leverage on display in real time.",
@@ -23,18 +24,20 @@
       "hero_image": null,
       "added_at": "2026-05-11T17:00:00Z",
       "added_by": "digest",
-      "last_revision_by": "enrichment",
+      "last_revision_by": "refresh",
       "enriched_overnight": true,
       "promoted_from_am": false,
       "revisions": [
         { "at": "2026-05-11T17:00:00Z", "by": "digest", "change": "created" },
-        { "at": "2026-05-12T06:30:00Z", "by": "enrichment", "change": "added ENISA/AI Office/DG Connect named recipients, May 13 EU Parliament session detail, and updated brief" }
+        { "at": "2026-05-12T06:30:00Z", "by": "enrichment", "change": "added ENISA/AI Office/DG Connect named recipients, May 13 EU Parliament session detail, and updated brief" },
+        { "at": "2026-05-12T11:00:00Z", "by": "refresh", "change": "added Google zero-day finding (May 11) as final sentence in summary and as take — first in-the-wild AI-built attack code corroborates watchTowr thesis" }
       ],
       "takes": [
         { "source": "Axios", "url": "https://www.axios.com/2026/05/07/openai-gpt-55-cybersecurity-model", "take": "Frames GPT-5.5-Cyber as OpenAI's deliberate counter-positioning to Anthropic's restrictive Mythos rollout — a 'broader access, tighter gating' philosophy that lets OpenAI argue Anthropic's approach is the more dangerous one." },
         { "source": "TechRadar", "url": "https://www.techradar.com/pro/security/openai-rolls-out-new-model-for-cybersecurity-teams-a-month-after-anthropics-mythos-debut", "take": "Walks through the TAC (Trusted Access for Cyber) program structure — application-based, account-level controls, intended use cases include authorized red teaming, penetration testing, and controlled validation." },
         { "source": "UK AISI", "url": "https://www.aisi.gov.uk/blog/our-evaluation-of-openais-gpt-5-5-cyber-capabilities", "take": "Publishes the methodology behind the 32-step simulated corporate cyberattack benchmark and the side-by-side numbers (GPT-5.5-Cyber 2/10, Mythos 3/10) — useful as a public reference for cyber capability evaluation." },
-        { "source": "CNBC (Mythos hysteria)", "url": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html", "take": "Quotes watchTowr CEO Ben Harris calling industry response to Mythos 'hysteria' — researchers are reproducing Mythos-grade vulnerability discovery using orchestration over public models, which means the threat profile predates Mythos." }
+        { "source": "CNBC (Mythos hysteria)", "url": "https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html", "take": "Quotes watchTowr CEO Ben Harris calling industry response to Mythos 'hysteria' — researchers are reproducing Mythos-grade vulnerability discovery using orchestration over public models, which means the threat profile predates Mythos." },
+        { "source": "Google / Bloomberg (May 11)", "url": "https://www.bloomberg.com/news/articles/2026-05-11/hackers-used-ai-to-build-zero-day-attack-google-researchers-say", "take": "Google's Threat Intelligence Group confirmed a criminal group used an AI model to generate a working zero-day exploit code aimed at mass exploitation — the first confirmed in-the-wild AI-built attack, which closes the gap between theoretical risk and live threat." }
       ]
     },
     {
@@ -119,6 +122,31 @@
       ]
     },
     {
+      "id": "meta-muse-spark-superintelligence-labs-april-2026",
+      "tier": 1,
+      "title": "Meta's Superintelligence Labs ships Muse Spark — Alexandr Wang's first model abandons Llama's open-source playbook and lands in top-5 on the AI Intelligence Index",
+      "summary": "On April 8, Meta Superintelligence Labs — the unit created for Alexandr Wang after Meta spent $14.3 billion for a 49% stake in Scale AI — released Muse Spark, its first model. Muse Spark is a closed-source natively multimodal reasoning model: it accepts voice, text, and image input and produces text output, with visual chain-of-thought, tool-use, and multi-agent orchestration built in. It scores 52 on the Artificial Analysis Intelligence Index, placing it in the top five among frontier models (behind GPT-5.4 at 57, Gemini 3.1 Pro at 57, and Claude Opus 4.6 at 53). Its benchmark profile is lopsided: Muse Spark leads on health benchmarks (HealthBench Hard 42.8 vs GPT-5.4's 40.1), scientific reasoning (Humanity's Last Exam 50.2% in Contemplating mode vs GPT-5.4 Pro's 43.9%), and chart understanding (CharXiv 86.4), but trails in coding (Terminal-Bench 59.0 vs GPT-5.4's 75.1), abstract reasoning (ARC-AGI-2 42.5 vs 76.1), and agentic real-world tasks (GDPval-AA 1,444 ELO vs 1,672). The model was nine months in the making — described as a ground-up rebuild of Meta's AI stack — and Wang describes the direction as 'small and fast' with an efficiency-first scaling philosophy. Muse Spark is deploying inside Facebook, Instagram, WhatsApp, Messenger, and Ray-Ban Meta AI glasses. Meta acknowledges the coding and agentic gaps and says more models in the Muse family are in progress.",
+      "link": "https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/",
+      "why_it_matters": "Two things to untangle. First, the closed-source decision is the strategic pivot: Meta spent the last three years building open-source credibility with Llama, and Muse Spark quietly abandons that for the Superintelligence Labs product line. Whether that's a one-model tactical decision or a directional shift matters for everyone building on Llama-derived weights — the next Meta flagship may not be freely downloadable. Second, the benchmark profile reveals what Alexandr Wang's team optimized for: Muse Spark leads on health and science reasoning, which is where Scale AI's data-labeling work was strongest. The gap to GPT-5.4 on Terminal-Bench (16 points) makes Muse Spark a non-starter for coding workflows today, but watching whether the next Muse model closes that gap is one of the better signals for whether Meta re-enters the coding-AI race in the second half of 2026.",
+      "why_it_matters_brief": "Meta Muse Spark scores top-5 on the AI Intelligence Index but lags 16 points behind GPT-5.4 on coding — and it's closed-source, a deliberate break from Llama's open-weight playbook under Alexandr Wang.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com/2026/04/08/meta-debuts-the-muse-spark-model-in-a-ground-up-overhaul-of-its-ai/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-12T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-12T11:00:00Z", "by": "refresh", "change": "created (gap item — April 8 announcement missed in prior sweeps)" }
+      ],
+      "takes": [
+        { "source": "Axios", "url": "https://www.axios.com/2026/04/08/meta-muse-alexandr-wang", "take": "Frames the closed-source decision as deliberate — a Meta executive told Axios that Muse Spark is competitive 'at certain tasks' (multimodal, health) but the company acknowledges a coding gap, and more Muse models are planned." },
+        { "source": "The Next Web", "url": "https://thenextweb.com/news/meta-muse-spark-msl-first-model", "take": "Reads the Llama pivot through the open-source community lens — ecosystem builders are now uncertain whether the next flagship weights will be freely available, which is the actual risk if you've been building Llama-based tools." },
+        { "source": "DataCamp", "url": "https://www.datacamp.com/blog/muse-spark", "take": "Breaks down the GDPval-AA agentic gap (1,444 ELO vs 1,672 for GPT-5.4) and the Terminal-Bench deficit — the clearest single summary of why Muse Spark is not yet a coding-agent contender." }
+      ]
+    },
+    {
       "id": "nous-hermes-agent-openrouter-tenacity-may-2026",
       "tier": 2,
       "title": "Nous Research's Hermes Agent hits #1 on OpenRouter — open-source self-improving agent passes OpenClaw at 224B daily tokens, v0.13.0 'Tenacity' adds a Kanban task board with zombie detection",
@@ -198,6 +226,31 @@
       ]
     },
     {
+      "id": "google-ai-zero-day-exploit-hacker-may-2026",
+      "tier": 2,
+      "title": "Google's Threat Intelligence Group catches hackers using AI to generate a zero-day exploit — the first confirmed in-the-wild AI-built attack code",
+      "summary": "On May 11, Google's Threat Intelligence Group published findings that it had detected — and likely disrupted — a criminal threat actor's use of an AI model to discover and exploit a previously unknown zero-day vulnerability, with the apparent goal of deploying it in a mass exploitation campaign. The zero-day was a two-factor-authentication bypass: AI was used to discover the flaw, write working exploit code, and plan the deployment against the target organization, not merely to scan for known weaknesses. Google said it does not believe Gemini was the AI tool involved; available reporting points to other accessible models including OpenClaw. Google notified the affected company and law enforcement, and says the disruption likely prevented mass use. Threat Intelligence chief analyst John Hultquist described it as 'a moment cybersecurity experts have warned about for years.' Bloomberg confirmed on the same day that this is the first time Google's group has caught AI-generated zero-day exploit code used in an active attack chain — the previous baseline was AI-assisted scanning for known CVEs, which has been operational since at least 2025. This is distinct from the Mythos/GPT-5.5-Cyber story in that no cyber-model lab product was involved — a criminal actor used commercially accessible AI to do what frontier-lab researchers have been demonstrating in controlled settings.",
+      "link": "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html",
+      "why_it_matters": "This closes the gap between 'theoretical risk' and 'live threat' for AI-assisted exploitation. The watchTowr CEO's point in the GPT-5.5-Cyber story — that researchers are reproducing Mythos-grade results with clever orchestration of public models — just got its first criminal-sector datapoint. For anyone writing Python code that handles auth flows, 2FA, or user sessions: the attacker capability to find and exploit auth-layer vulnerabilities with AI assistance is confirmed operational, not theoretical. The patch-cadence problem is the defense bottleneck. The Bloomberg framing is also important: this is the threshold between AI-assisted scanning (old) and AI-generated zero-day code (new) — the latter requires the AI to do novel vulnerability research, not just pattern-match known CVEs. That distinction defines what defenders need to prepare for.",
+      "why_it_matters_brief": "Google's Threat Intelligence Group confirms the first in-the-wild AI-built zero-day (a 2FA bypass) aimed at a mass exploitation campaign — the threshold between AI-assisted scanning and AI-generated novel exploit code is crossed.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-12T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-12T11:00:00Z", "by": "refresh", "change": "created (overnight item — published May 11, missed by enrichment sweep)" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-11/hackers-used-ai-to-build-zero-day-attack-google-researchers-say", "take": "Primary technical reporting — Bloomberg is explicit that this is the first confirmed AI-generated zero-day (not AI-assisted scanning), which is the threshold distinction that defines the new threat model." },
+        { "source": "Fortune", "url": "https://fortune.com/2026/05/11/google-catches-hackers-cybersecurity-warning-ai-anthropic-mythos/", "take": "Connects the finding to the Anthropic Mythos debate — headlines 'It's here' and reads the Google disclosure as the practitioner confirmation that the watchTowr 'hysteria' framing was the correct minority view." },
+        { "source": "Washington Post", "url": "https://www.washingtonpost.com/business/2026/05/11/google-ai-cybersecurity-exploitation-mythos/011cb008-4d3f-11f1-97e7-22c6c29ff0d8_story.html", "take": "Adds context on patching timelines — the WaPo framing is that security teams are now in a race where the offense just got a material speed advantage, and the bottleneck has shifted from 'can attackers find this?' to 'can defenders patch before mass exploitation?'" }
+      ]
+    },
+    {
       "id": "eu-ai-act-omnibus-simplification-may-2026",
       "tier": 3,
       "title": "EU Council and Parliament agree to slim down the AI Act — high-risk system deadlines pushed to 2027/2028, AI Office gets clearer GPAI supervision, non-consensual sexual deepfakes banned",
@@ -221,6 +274,31 @@
         { "source": "Lewis Silkin", "url": "https://www.lewissilkin.com/insights/2026/05/07/the-council-and-parliament-agree-to-slim-down-and-delay-parts-of-the-eu-ai-act-102ms0v", "take": "Walks through the SME-to-SMC exemption expansion and the implications for mid-sized providers — the most consequential change for non-Big-Tech companies, since 'small mid-cap' status now confers some of the lighter-touch compliance treatment previously reserved for true SMEs." },
         { "source": "TechPolicy.Press", "url": "https://www.techpolicy.press/what-the-eu-ai-omnibus-deal-changes-for-the-ai-act-and-what-lies-ahead/", "take": "Reads the omnibus deal as a quiet retreat by the Commission — most material changes loosen rather than tighten, and Brussels is responding to industry pressure that compliance timelines were unworkable for anyone smaller than a hyperscaler." },
         { "source": "IAPP", "url": "https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules", "take": "Focuses on the machinery-regulation overlap clarification — practical detail for anyone building physical products with embedded AI, since the EU Machinery Regulation and AI Act both apply and the new text reduces double-compliance burden." }
+      ]
+    },
+    {
+      "id": "subquadratic-subq-12m-context-window-may-2026",
+      "tier": 2,
+      "title": "Subquadratic launches SubQ with a 12-million-token context window — first claimed frontier model to drop quadratic attention, ships a whole-repo CLI coding agent",
+      "summary": "On May 5, Miami-based startup Subquadratic launched out of stealth with $29 million in seed funding and SubQ, claiming to be the first frontier-class LLM built on a fully sub-quadratic attention mechanism. The core claim: by replacing the standard transformer's O(n²) self-attention with a sub-quadratic mechanism, SubQ scales context length to 12 million tokens — approximately 120 books of text — without a proportional compute blowup. At full 12M-token context, Subquadratic claims roughly 1,000× compute reduction versus transformer-based models at equivalent length; at 1 million tokens, the company says SubQ is over 50× faster and 50× cheaper than leading frontier models while reporting higher retrieval accuracy on long-context benchmarks. Independent verification of the 1,000× efficiency claim has not yet been published, and VentureBeat reported that researchers are calling for independent benchmarks before accepting the numbers. Two products launched simultaneously: a gated 12M-token API (available to research partners and select enterprise customers) and SubQ Code, a CLI coding agent that loads an entire repository into its context in a single pass. The seed round investors were not publicly named.",
+      "link": "https://siliconangle.com/2026/05/05/subquadratic-launches-29m-bring-12m-token-context-windows-ai/",
+      "why_it_matters": "Context length is the current bottleneck for useful coding-agent work — if your repo has more tokens than the context window, you're summarizing or chunking and losing information. SubQ Code's 'load the whole repo in one pass' positioning is the concrete use case, and if the efficiency claims hold under independent testing, the economics of long-context coding workflows change meaningfully. The standard 'wait for independent replication' caution applies hard here — the 1,000× claim is large enough to be implausible if taken at face value. But the architectural direction is legitimate: sub-quadratic and linear-complexity attention alternatives (Mamba, RWKV, GLA) have been pushing in this direction for two years, and this is the first company claiming frontier-quality output from a fully sub-quadratic system. Worth watching the independent evals when they land. For Python developers specifically, the SubQ Code repo-load feature is the most immediately testable claim — at 12M tokens, even large production codebases (CPython is around 2M tokens) load in one pass.",
+      "why_it_matters_brief": "SubQ claims to load 12 million tokens — an entire large codebase — in one context pass by replacing transformer self-attention, and ships a CLI coding agent today; the 1,000× efficiency number needs independent verification.",
+      "source": { "name": "SiliconANGLE", "type": "scrape", "url": "https://siliconangle.com/2026/05/05/subquadratic-launches-29m-bring-12m-token-context-windows-ai/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-12T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-12T11:00:00Z", "by": "refresh", "change": "created (gap item — May 5 announcement missed in prior sweeps)" }
+      ],
+      "takes": [
+        { "source": "The New Stack", "url": "https://thenewstack.io/subquadratic-12-million-context-window/", "take": "Frames SubQ as the first real-world deployment of sub-quadratic attention at claimed frontier quality — not a research paper, a product — and explains why the architectural bet matters beyond just the context length headline." },
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/miami-startup-subquadratic-claims-1-000x-ai-efficiency-gain-with-subq-model-researchers-demand-independent-proof", "take": "The skeptic read — researchers are demanding independent benchmarks before accepting the 1,000× efficiency claim, which is the correct prior given how far the number is from established results." },
+        { "source": "eWeek", "url": "https://www.eweek.com/news/subquadratic-subq-12m-token-llm-neuron/", "take": "Technical walkthrough of SubQ Code's whole-repo load mechanism and the gating on the 12M API (research and select enterprise only at launch)." }
       ]
     },
     {
