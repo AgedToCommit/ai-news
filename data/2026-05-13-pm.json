@@ -1,0 +1,153 @@
+{
+  "snapshot_id": "2026-05-13-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-13",
+  "generated_at": "2026-05-13T17:25:00Z",
+  "generated_at_local": "2026-05-13T13:25:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-13T17:25:00Z", "duration_ms": 1500000 }
+  ],
+  "tier_counts": { "1": 0, "2": 2, "3": 4 },
+  "items": [
+    {
+      "id": "anthropic-claude-code-agent-view-routines-may-2026",
+      "tier": 2,
+      "title": "Anthropic ships Agent View, Routines, and /ultrareview for Claude Code — a multi-agent control panel plus event-triggered execution",
+      "summary": "Claude Code 2.1.139 introduced Agent View, a dashboard for running and monitoring many Claude Code sessions in parallel from a single screen — filter by status, project, or environment, and resume only when a session needs input. Two companion features landed alongside it: Routines fire agents automatically on a schedule or GitHub event (PR opened, release published, custom webhook) even when your machine is off; /ultrareview runs an automated parallel multi-agent code-review pass over the working tree. Anthropic positions the trio as the post-vibe-coding phase: a lead agent fans work out to specialist sub-agents, sub-agents work in parallel on a shared file system, and the lead checks in mid-workflow to verify direction.",
+      "link": "https://claude.com/blog/claude-code-desktop-redesign",
+      "why_it_matters": "For a Python developer driving Claude Code from a terminal, this changes the workflow from one-prompt-at-a-time to orchestrating a small fleet. Routines on a GitHub-event trigger lets you wire Claude into your own repos as a pre-merge reviewer or a release-notes drafter without ever opening a terminal. /ultrareview gives you a second-opinion code review without context-switching to a colleague — useful for solo projects where peer review otherwise doesn't exist.",
+      "why_it_matters_brief": "Claude Code becomes a fleet dashboard, with agents firing on GitHub events even when your laptop is asleep — solo coding crosses into orchestration.",
+      "source": { "name": "Anthropic / Claude", "type": "scrape", "url": "https://claude.com/blog" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "VentureBeat", "url": "https://venturebeat.com/orchestration/we-tested-anthropics-redesigned-claude-code-desktop-app-and-routines-heres-what-enterprises-should-know", "take": "Tested the dashboard in production and called out Routines as the headline shift — agents triggered by GitHub events change the loop from interactive to ambient." }
+      ]
+    },
+    {
+      "id": "xai-grok-eight-model-retirement-may-15-2026",
+      "tier": 2,
+      "title": "xAI retires eight Grok API models Friday — grok-4.3 is the recommended successor for reasoning and code",
+      "summary": "xAI published a migration notice setting Friday, May 15 at 12pm PT as the cutoff for eight Grok API models: grok-4-1-fast-reasoning, grok-4-1-fast-non-reasoning, grok-4-fast-reasoning, grok-4-fast-non-reasoning, grok-4-0709, grok-code-fast-1, grok-3, and grok-imagine-image-pro. Recommended swaps: grok-4.3 for reasoning and code workloads, grok-4.20-non-reasoning for fast non-reasoning, grok-imagine-image for image generation. grok-4.3 itself ships with a 1M-token context, native video input, and computer-use for documents and spreadsheets, priced at $1.25/M input tokens.",
+      "link": "https://docs.x.ai/developers/migration/may-15-retirement",
+      "why_it_matters": "If anything you've built — Python scripts, Replit projects, n8n workflows — points at a Grok endpoint, Friday is the deadline. The retirement list spans both reasoning and fast variants, so a one-line model-string swap is rarely enough; you'll want to re-run any prompts that relied on the old behavior. Useful as a reference example of how frontier-model providers handle deprecation timelines: ~30 days' notice and a published mapping.",
+      "why_it_matters_brief": "Eight Grok models go dark Friday at 3pm ET, including grok-3 and grok-code-fast-1 — grok-4.3 is the recommended successor for reasoning and code.",
+      "source": { "name": "xAI Docs", "type": "scrape", "url": "https://docs.x.ai" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": []
+    },
+    {
+      "id": "anthropic-claude-for-small-business-may-13-2026",
+      "tier": 3,
+      "title": "Anthropic launches Claude for Small Business with QuickBooks, PayPal, HubSpot integrations and a 10-city free training tour",
+      "summary": "Anthropic released Claude for Small Business on May 13, bundling 15 ready-to-run workflows — plan payroll, reconcile monthly books, surface business insights, chase invoices, run marketing campaigns, onboard new employees — with connectors to Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, and Microsoft 365. Starting May 14, Anthropic runs a free half-day AI-fluency tour and hands-on workshop for 100 local business owners per stop in Chicago, Tulsa, Dallas, New Jersey, Baton Rouge, Birmingham, Salt Lake City, Baltimore, San Jose, and Indianapolis; attendees get a one-month Claude Max subscription. Anthropic also published a free PayPal-co-developed on-demand 'AI fluency' course taught by small business owners.",
+      "link": "https://www.anthropic.com/news/claude-for-small-business",
+      "why_it_matters": "Anthropic is moving past coders and law firms toward the long tail of US business. The QuickBooks + PayPal + HubSpot + Canva stack is a clean look at how a frontier lab packages workflows when the audience isn't expected to write a single line of code — every interaction is a preconfigured skill, not a prompt. The 10-city tour with a per-stop cap of 100 is an unusual ground-game move from an AI company.",
+      "why_it_matters_brief": "A frontier lab packaging Claude as preconfigured QuickBooks/HubSpot/PayPal workflows with a 10-city training tour — the SMB tier of LLM distribution finally has a flagship product.",
+      "source": { "name": "Anthropic News", "type": "scrape", "url": "https://www.anthropic.com/news" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/13/anthropic-courts-a-new-kind-of-customer-small-business-owners/", "take": "Frames the launch as Anthropic courting a customer class — small business owners — that has so far underused AI relative to enterprise." },
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/13/anthropic-claude-small-business-smb", "take": "Notes the Claude Code tooling angle: small business workflows wrap the same skills/connectors model Anthropic ships to developers." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-for-legal-may-12-2026",
+      "tier": 3,
+      "title": "Anthropic ships 'Claude for Legal' — 12 practice-area plugins, 20+ MCP connectors, and a Microsoft 365 integration that carries context across Word/Outlook/Excel/PowerPoint",
+      "summary": "Anthropic launched Claude for Legal on May 12 with twelve practice-area plugins (Commercial, Corporate/M&A with diligence and closing checklists, Employment, Privacy, Product, Regulatory, AI Governance, IP, Litigation) and more than 20 MCP connectors covering every segment of legal-tech: Ironclad, DocuSign, Definely, iManage, NetDocuments for contracts; Relativity, Everlaw, Consilio for e-discovery; Box and Datasite for deal rooms; Midpage, Trellis, and Legal Data Hunter (31M+ documents across 160+ jurisdictions) for research; Harvey and Solve Intelligence as peer-AI integrations. Thomson Reuters confirmed CoCounsel integration on May 13. A Microsoft 365 integration carries context across Word, Outlook, Excel, and PowerPoint so a redline completed in Word doesn't need to be re-explained in an Outlook cover note or PowerPoint board summary. An Access to Justice initiative with the Free Law Project and Justice Tech Association ships connectors for Courtroom5 (the ~80% of civil litigants without an attorney) and BoardWise.",
+      "link": "https://www.lawnext.com/2026/05/anthropic-goes-all-in-on-legal-releasing-more-than-20-connectors-and-12-practice-area-plugins-for-claude.html",
+      "why_it_matters": "Same playbook as Small Business but with much deeper plumbing — this is one of the first real-world tests of MCP as the orchestration protocol for a vertical AI bundle. Worth watching as a template: model + 12 workflow plugins + 20+ MCP connectors into the existing tool chain, all sold as one suite. Also interesting that Harvey, itself a leading legal AI vendor and heavy Claude user, shipped as a Claude connector rather than as a competitor.",
+      "why_it_matters_brief": "Twelve practice-area plugins plus 20+ MCP connectors into the legal-tech stack — a real-world test of MCP as the orchestration protocol for vertical AI suites.",
+      "source": { "name": "LawSites (LawNext)", "type": "scrape", "url": "https://www.lawnext.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Artificial Lawyer", "url": "https://www.artificiallawyer.com/2026/05/12/claude-for-legal-launches-may-reshape-the-legal-tech-world/", "take": "Frames the suite as positioning Anthropic at the heart of the legal-tech market rather than a peripheral assistant." },
+        { "source": "Fortune", "url": "https://fortune.com/2026/05/12/anthropic-legal-plug-in-release-claude-cowork-big-law/", "take": "Notes Big Law adopting despite ongoing hallucinations in legal filings — pressure to ship outweighs caution." },
+        { "source": "Legal IT Insider", "url": "https://legaltechnology.com/2026/05/13/claude-for-legal-what-the-industry-needs-to-know/", "take": "A May 13 follow-up walks through what in-house counsel and IT teams need to know — practical adoption guide." }
+      ]
+    },
+    {
+      "id": "microsoft-linkedin-five-percent-layoffs-may-13-2026",
+      "tier": 3,
+      "title": "Microsoft cuts 5% of LinkedIn staff — ~900 employees — even as LinkedIn revenue grew 12% last quarter",
+      "summary": "A memo from LinkedIn CEO Daniel Shapero, reported by Bloomberg and Reuters on May 13, set out cuts of roughly 5% of LinkedIn's 17,500-strong global workforce — about 875–900 employees — affecting engineering, product, and marketing. Sources told Reuters the cuts aren't framed as AI directly replacing roles, but as reorganization toward business areas Microsoft considers growth-bearing. LinkedIn revenue grew 12% YoY last quarter per Microsoft's filings. The cut puts LinkedIn on a year-long tech-sector layoff list that has now exceeded 100,000 displaced workers.",
+      "link": "https://www.bloomberg.com/news/articles/2026-05-13/microsoft-s-linkedin-is-cutting-jobs-in-latest-industry-cull",
+      "why_it_matters": "A revealing data point on how 'AI-era restructuring' actually executes inside Big Tech — not as 'an LLM replaced this role' but as headcount reallocation while revenue keeps climbing. The pattern is what matters: growing businesses still cutting because the org-chart slope around AI is changing. Useful context for understanding the Stanford AI Index's claim that AI workforce disruption has 'moved from prediction to reality, hitting young workers first.'",
+      "why_it_matters_brief": "900 LinkedIn jobs cut while LinkedIn revenue grew 12% — a clean read on what AI-era restructuring actually looks like inside a profitable Big Tech business.",
+      "source": { "name": "Bloomberg", "type": "scrape", "url": "https://www.bloomberg.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Reuters (via BNN Bloomberg)", "url": "https://www.bnnbloomberg.ca/business/2026/05/13/linkedin-planning-to-lay-off-5-of-staff-in-latest-tech-sector-cuts-source-says-reuters-exclusive/", "take": "Source told Reuters the layoffs aren't AI replacing jobs — it's reorganization toward areas of business growth." }
+      ]
+    },
+    {
+      "id": "perplexity-comet-ios-preorder-may-2026",
+      "tier": 3,
+      "title": "Perplexity opens Comet iOS pre-orders with a model picker for Claude Sonnet 4.6 and Gemini 3.1 Pro",
+      "summary": "Perplexity opened iOS pre-orders for its Comet agentic browser through the Apple App Store, with two new agent-model options at launch — Anthropic's Claude Sonnet 4.6 and Google's Gemini 3.1 Pro. Comet Max subscribers on desktop can now also pick Opus 4.6 (the new default) or Sonnet 4.5 for the browser agent. Perplexity separately added Personal Computer on Mac inside its upgraded desktop app — local file editing, voice orchestration, local browsing via Comet. Perplexity's APIs now power Bixby and Samsung Internet on the Galaxy S26, with Perplexity available as an optional default search engine.",
+      "link": "https://www.perplexity.ai/comet",
+      "why_it_matters": "'Browser as agent runtime' is becoming a real product category, and Perplexity's model-picker UI is one of the clearest examples of how agentic apps now treat the underlying LLM as a configurable backend instead of a fixed dependency. Worth watching as a template: same browser, swap Claude for Gemini, see what changes. Also a quiet sign of frontier-lab disintermediation — users can drive an Anthropic or Google model without ever opening Claude.ai or Gemini.",
+      "why_it_matters_brief": "Comet ships with a Claude-or-Gemini toggle baked into the iOS browser — agent apps are treating frontier models as swappable runtimes, not single-vendor lock-in.",
+      "source": { "name": "Perplexity", "type": "scrape", "url": "https://www.perplexity.ai" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-13T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-13T17:25:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "IBM Think", "url": "https://www.ibm.com/think/news/comet-perplexity-take-agentic-browser", "take": "Frames Comet as a personal-agentic browser — context follows the user across tabs rather than the user feeding context per query." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
