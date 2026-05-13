@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-13T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-13T06:10:00Z",
+      "ended_at": "2026-05-13T06:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 33000,
+        "curation": 11500,
+        "output_write": 2500
+      },
+      "fetches_made": 11,
+      "items_input": 9,
+      "items_output": 9,
+      "items_added": 1,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-13-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); enrichment sweep done via 11 WebSearch queries (8 per-item + 3 late-breaking discovery). All 8 items from 2026-05-12-pm received meaningful new context and were kept+enriched. Summary of enrichments: (1) OpenAI Daybreak — added TAC program scale ('hundreds of organizations and thousands of individual defenders'), named US/EU finance adopters (BofA/BBVA/BlackRock/BNY/Citibank/Goldman Sachs/JPMorgan Chase/Morgan Stanley/US Bank), EU Commission in active access discussions, Palo Alto Unit 42's Sam Rubin partner quote; updated brief; (2) Claude Platform on AWS — added prompt caching and citations to the feature inventory, full 17-region list confirmed (Virginia/Ohio/Oregon/Canada Central/São Paulo/Dublin/London/Frankfurt/Milan/Zurich/Paris/Stockholm/Tokyo/Seoul/Jakarta/Sydney/Melbourne), Anthropic's Claude.com framing as a take; (3) Gemini Embedding 2 — added preview-to-GA timeline (March 10 preview → May 11 GA), MTEB 68.16 benchmark leading public field, $0.20/M text-token pricing ($0.10/M batch) and 33% premium over gemini-embedding-001, Google's 768-dim-near-peak-quality guidance, video retrieval lead on Vatex/MSR-VTT/Youcook2; (4) NVIDIA Nemotron 3 Nano Omni — corrected release timeline (April 27 release with technical report, this week is OCI Enterprise AI availability + partner-roster expansion), added 30B-A3B MoE architectural detail (30B total / 3B active per token, 256K context), decomposed 9× headline into 7.4× document / 9.2× video efficiency at same interactivity threshold, expanded adopter list (Aible, Applied Scientific Intelligence, Eka Care, H Company, Pyler beyond Foxconn/Palantir) and evaluator list (Dell/Docusign/Infosys/K-Dense/Lila/Oracle/Zefr); (5) LangGraph — added DeltaChannel's `snapshot_frequency=K` parameter for periodic full snapshots bounding read latency on long thread replay; (6) SAP Sapphire — added Mistral on SAP Business AI Platform GA-now and Cohere North GA-June 2026 timing, Forrester's 'credible but with concentration risk' framing as new take; (7) Helsing — added Bundestag's February 2026 €269M initial HX-2 contract with €1.46B / 7-year framework ceiling, oversubscribed-multiple-times detail; (8) White Circle — added Denis Shilov's universal-jailbreak mechanism ('pretend you're an API endpoint, not a chatbot with safety rules' reframing, conceived late 2024 while watching a crime thriller), full enforcement-layer capability list (hallucinations, data leaks, impossible refunds, destructive actions). One late-breaking item added: Google Android Show I/O Edition (May 12 1pm ET, Global, Tier 1) — Gemini Intelligence ships cross-app multistep agent automation, vibe-coded widgets via 'Create My Widget' natural-language → home-screen-widget pipeline (on-device via Gemma 4 ML Kit GenAI Prompt API), passport/loyalty-number autofill from password manager, plus Googlebook premium AI-PC line from Acer/ASUS/Dell/HP/Lenovo with 'Glowbar' visual signifier shipping fall 2026, expansion to Wear OS / Android Auto / Android XR. Timing: the show started at 1pm ET on May 12 — right at the pm digest cutoff — so this is the cleanest late-breaking pickup. The Android Show is the warm-up for the May 19 main Google I/O keynote which is expected to land Gemini model updates and Firebase agent-native platform. Hero images uniformly null (no WebFetch). Final tier_counts: T1=3, T2=3, T3=3."
+    },
+    {
       "run_id": "2026-05-12T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
