@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-14T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-14T06:07:00Z",
+      "ended_at": "2026-05-14T06:15:00Z",
+      "wall_time_ms": 480000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7500,
+        "output_write": 1700
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-14-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); all enrichment + late-breaking via WebSearch (9 queries total: 6 per-item enrichment + 3 late-breaking sweeps). All 6 yesterday-pm items kept and enriched — no drops. Material enrichments: (1) Claude Code Agent View — added Opus 4.7 default-on-Max-and-Team-Premium context (this is the practical change most users will actually feel) and The New Stack's trust-gap critique that visibility is not the same as reliability; (2) Grok retirement — added grok-4.3 output token price ($2.50/M) and the three-reasoning-effort detail (low/medium/high), tightened deadline to 'tomorrow'; (3) Claude for Small Business — confirmed no SMB surcharge, clarified Hamilton Township NJ tour stop, framed Chicago tour as kicking off today; (4) Claude for Legal — added Freshfields all-in detail, Thomson Reuters CoCounsel MCP confirmation, and Law.com's 'ecosystem' framing positioning incumbents as having to adapt; (5) LinkedIn layoffs — corrected CEO attribution from Daniel Shapero (COO) to Ryan Roslansky (CEO) per Reuters memo coverage, added Graz Austria office closure, sharpened the AI-narrative-absence as the distinguishing angle; (6) Perplexity Comet — corrected 'pre-order' framing to general-availability cut (Comet was limited release March 18, GA this week). One late-breaking item added: Ramp May 2026 AI Index showing Anthropic at 34.4% US business adoption vs OpenAI's 32.3% — first time Anthropic leads in spending data; overall AI adoption crossed 50% for the first time; included VentureBeat's three-threats critique (token-incentive misalignment, outages/rate limits, output dissatisfaction) for balance. Considered but did not add: SpaceX/Colossus 1 compute deal (announced May 6, not late-breaking); Google Gemini-on-Android intelligence-system framing (already in 2026-05-13-am as google-android-show-gemini-intelligence-googlebook-may-2026). Snapshot at 7 items: T1=0, T2=3, T3=4. Hero images uniformly null (no WebFetch). Brief field written for all items per agent/prompts/brief.md."
+    },
+    {
       "run_id": "2026-05-13T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
