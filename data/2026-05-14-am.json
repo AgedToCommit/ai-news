@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-14-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-14",
-  "generated_at": "2026-05-14T06:15:00Z",
-  "generated_at_local": "2026-05-14T02:15:00-04:00",
+  "generated_at": "2026-05-14T11:15:00Z",
+  "generated_at_local": "2026-05-14T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-14T06:15:00Z", "duration_ms": 480000 }
+    { "phase": "enrichment", "ran_at": "2026-05-14T06:15:00Z", "duration_ms": 480000 },
+    { "phase": "refresh",    "ran_at": "2026-05-14T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 0, "2": 3, "3": 4 },
+  "tier_counts": { "1": 1, "2": 4, "3": 4 },
   "items": [
     {
       "id": "anthropic-claude-code-agent-view-routines-may-2026",
@@ -186,6 +187,55 @@
         { "source": "VentureBeat", "url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead", "take": "Walks through the three risks to Anthropic's lead: token-incentive misalignment, outages/rate limits, and dissatisfaction with output quality." },
         { "source": "Axios", "url": "https://www.axios.com/2026/05/13/anthropic-openai-workplace-ai-adoption", "take": "Frames the shift as 'workplace AI adoption' rather than consumer, anchoring it as a B2B not a chatbot story." },
         { "source": "The Decoder", "url": "https://the-decoder.com/anthropic-overtakes-openai-in-b2b-adoption-for-the-first-time-according-to-ramp-spending-data/", "take": "Anchors the move in spending data specifically — Ramp tracks actual corporate-card transactions, not stated preferences." }
+      ]
+    },
+    {
+      "id": "deepseek-first-external-fundraise-50b-2026",
+      "tier": 1,
+      "title": "DeepSeek abandons self-funding after years — $7.35B round at $50B valuation nears close, led by China's national AI fund",
+      "summary": "DeepSeek is finalizing its first-ever external funding round, seeking $7.35 billion at a valuation of up to $50 billion, according to reporting from The Information, Bloomberg, and the South China Morning Post. The round is led by China's Big Fund III — the national semiconductor and AI investment vehicle — with Tencent participating and founder Liang Wenfeng contributing approximately $2.94 billion personally (20 billion yuan). The deal marks a complete reversal of DeepSeek's founding philosophy: the lab that disrupted the industry by training frontier-class models at a fraction of Western compute costs has concluded that self-funding is no longer sufficient to compete at scale. Proceeds are earmarked for expanding computing infrastructure and improving employee compensation.",
+      "link": "https://www.theinformation.com/articles/deepseek-raise-7-billion-startup-plots-revenue-efforts",
+      "why_it_matters": "DeepSeek's self-funding posture was a core part of its identity — a hedge fund spinout that proved you didn't need billions in VC to build a frontier model. The reversal signals that even the most capital-efficient Chinese AI lab has hit a compute ceiling it can't clear alone. For anyone tracking China's AI posture: state money (Big Fund III) leading a $7.35B round at a $50B valuation is the clearest signal yet that Beijing is treating AI labs as strategic national assets requiring sovereign capital, not just commercial competitors. The $50B figure also means DeepSeek is now valued above Mistral, Cohere, and most Western frontier labs except Anthropic, xAI, and OpenAI.",
+      "why_it_matters_brief": "DeepSeek's first external raise ($7.35B at $50B) ends the era of the self-funded frontier lab — China's national AI fund is leading, and founder Liang Wenfeng is personally writing a ~$3B check.",
+      "source": { "name": "The Information", "type": "scrape", "url": "https://www.theinformation.com" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-14T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-14T11:15:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-06/china-chip-fund-in-talks-to-lead-mega-deepseek-funding-ft-says", "take": "First to report Big Fund III's lead role; sourced from FT corroboration of the China state-fund angle." },
+        { "source": "South China Morning Post", "url": "https://www.scmp.com/tech/tech-trends/article/3352945/deepseek-soon-close-first-external-fundraising-us50b-valuation-sources", "take": "Exclusive report framing the round as 'soon to close' at $50B valuation — positions DeepSeek as joining the national-champion cohort." },
+        { "source": "Dataconomy", "url": "https://dataconomy.com/2026/05/11/deepseek-record-funding-735b-china/", "take": "Published the $7.35B raise figure and confirmed Liang Wenfeng's personal $2.94B contribution alongside the state fund." }
+      ]
+    },
+    {
+      "id": "google-gemini-omni-leak-io-2026",
+      "tier": 2,
+      "title": "Gemini Omni surfaces in leaked UI strings and video clips — Google's unified model is likely the centerpiece of I/O 2026 on May 19",
+      "summary": "A UI string reading 'Powered by Omni' appeared inside Gemini's video generation tab on May 2, spotted by TestingCatalog. On May 11, actual generated video clips began surfacing from Gemini Pro user accounts — a spaghetti-and-seaside restaurant scene and a professor working through trigonometry on a chalkboard, both with photorealistic quality. Three interpretations are circulating: Omni is a rebrand of the existing Veo 3.x video pipeline; it's a new standalone video model under the Gemini brand; or it's a true omni-model handling text, image, and video generation in a single unified system — comparable to how GPT-4o unified text, image, and audio. Google has confirmed AI and Gemini model updates are on the keynote agenda at Google I/O on May 19 at 10am PT.",
+      "link": "https://chromeunboxed.com/an-impressive-new-gemini-omni-video-model-just-leaked-ahead-of-google-i-o/",
+      "why_it_matters": "If Omni is a true unified model rather than a Veo rebrand, it would put Google ahead of Anthropic (no native image or video generation) and on par with OpenAI's GPT-4o direction. The leaked clip quality is the part worth watching — photorealistic video from a model that also handles text and image in the same call would be a meaningful product shift, not just a benchmark number. For developers: the practical question is whether Google opens an API for the video generation side at I/O or keeps it Gemini.ai consumer-only for the initial rollout. Google I/O is May 19, five days from now.",
+      "why_it_matters_brief": "Gemini Omni leaked via UI strings and actual video clips ahead of I/O (May 19) — if it's a true unified text/image/video model rather than a Veo rebrand, Google is about to close a major gap with GPT-4o.",
+      "source": { "name": "Chrome Unboxed", "type": "scrape", "url": "https://chromeunboxed.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-14T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-14T11:15:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "WaveSpeed Blog", "url": "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/", "take": "Breaks down the three interpretations (rebrand / new video model / true omni-model) and leans toward the unified interpretation based on architectural clues in the UI." },
+        { "source": "Android Authority", "url": "https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/", "take": "Corroborates that Omni is the centerpiece AI announcement expected at the I/O 2026 keynote." }
       ]
     }
   ],

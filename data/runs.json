@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-14T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-14T11:00:00Z",
+      "ended_at": "2026-05-14T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 24500,
+        "curation": 2200,
+        "output_write": 500
+      },
+      "fetches_made": 11,
+      "items_input": 2,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); sweep done via WebSearch (11 queries). Two items added that had slipped through prior sweeps: (1) DeepSeek first external fundraise (Asia, May 6-13 reporting, Tier 1) — DeepSeek is finalizing its first-ever external funding round at ~$7.35B and a $50B valuation, led by China's Big Fund III (national AI/semiconductor fund) with Tencent participating and founder Liang Wenfeng personally contributing ~$2.94B (20B yuan). Represents a complete strategic reversal from the lab's founding philosophy of rejecting outside capital; proceeds earmarked for compute infrastructure and compensation; round 'soon to close' per SCMP. Not picked up by prior enrichment run which focused on enriching the 6 May-13-pm digest items. (2) Gemini Omni leak ahead of Google I/O May 19 (Global, May 2-11, Tier 2) — UI string 'Powered by Omni' first appeared in Gemini's video generation tab on May 2 (TestingCatalog); actual generated video clips leaked from Gemini Pro accounts on May 11 showing photorealistic restaurant and classroom scenes. Three circulating interpretations: Veo rebrand, new standalone video model, or true unified text/image/video omni-model. Google confirmed Gemini model updates are on the I/O keynote agenda (May 19, 10am PT). Hero images uniformly null (WebFetch unavailable)."
+    },
+    {
       "run_id": "2026-05-14T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
