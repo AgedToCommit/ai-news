@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-15-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-15",
-  "generated_at": "2026-05-15T06:35:00Z",
-  "generated_at_local": "2026-05-15T02:35:00-04:00",
+  "generated_at": "2026-05-15T11:15:00Z",
+  "generated_at_local": "2026-05-15T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-15T06:35:00Z", "duration_ms": 1100000 }
+    { "phase": "enrichment", "ran_at": "2026-05-15T06:35:00Z", "duration_ms": 1100000 },
+    { "phase": "refresh",    "ran_at": "2026-05-15T11:15:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 3, "2": 5, "3": 0 },
+  "tier_counts": { "1": 3, "2": 8, "3": 0 },
   "items": [
     {
       "id": "anthropic-agent-sdk-credits-openclaw-may-14-2026",
@@ -235,6 +236,82 @@
         { "source": "Reuters (via TradingView)", "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q1FJ:0-anthropic-gates-foundation-launch-200-million-partnership-for-ai-in-health-education/", "take": "Wire-service framing — pegs the headline at AI for health and education, treats the deal as a category-defining philanthropic-frontier-lab pact." },
         { "source": "PYMNTS", "url": "https://www.pymnts.com/partnerships/2026/anthropic-gates-foundation-form-200-million-dollar-health-focused-pact/", "take": "Reads the pact as health-focused first, education and agriculture second — useful corrective to coverage that flattens the four tranches into one line." },
         { "source": "Tech Startups", "url": "https://techstartups.com/2026/05/14/anthropic-and-gates-foundation-launch-200m-partnership-to-bring-ai-to-healthcare-education-and-underserved-communities/", "take": "Emphasizes the underserved-communities angle and the four-year duration — useful framing of the partnership as a sustained program rather than a one-time grant." }
+      ]
+    },
+    {
+      "id": "claude-code-weekly-limits-50pct-anticodex-may-2026",
+      "tier": 2,
+      "title": "Anthropic raises Claude Code weekly limits 50% through July 13 — third rate-limit move in six weeks, framed as a direct response to Codex",
+      "summary": "Starting May 13, Anthropic increased Claude Code weekly token limits by 50% for all paid plans (Pro, Max, Team, and seat-based Enterprise) through July 13, 2026 at 6pm PDT. This is the third rate-limit intervention in roughly six weeks of competitive pressure from OpenAI Codex: an April 'Claude 2x' promo, a May 6 change that doubled hourly limits and removed peak-hour restrictions, and now the 50% weekly bump. The free plan is excluded. Anthropic has not indicated whether the new ceiling becomes permanent after July 13 — the temporary framing keeps flexibility while signaling competitive intent. The Latent Space AINews framing covers both of the week's Anthropic moves under a single headline — 'Codex Rises, Claude Meters Programmatic Usage' — and the pairing reads as a deliberate bundle: meter the headless programmatic pool (Agent SDK credits), boost the interactive head room, match Codex on the terminal experience. BridgeMind AI summarizes the sequence: 'SpaceX/AI deal doubled the five-hour limits. Removed peak-hour limits. Now weekly limits up 50%. Three rate limit increases.' Hacker News thread is live.",
+      "link": "https://news.ycombinator.com/item?id=48126429",
+      "why_it_matters": "If you use Claude Code interactively in the terminal for day-to-day coding, this is a concrete improvement that goes live immediately and runs two months. The post-July question is the real strategic one: if Anthropic sustains the higher ceiling permanently, the rate-limiter complaints that have been the main friction point for heavy users go away; if the limit resets on July 13, developers who've adapted their workflow to the higher ceiling will feel that sharply. The 'anti-Codex' label is accurate — each prior limit increase has been publicly framed against Codex as the comparison. The most relevant pairing for Gabe is reading this item alongside the Agent SDK credits split: the metering hits headless programmatic workflows starting June 15, while the 50% weekly boost benefits interactive terminal sessions immediately. Taken together, Anthropic is sharpening the line between 'interactive coding session' and 'headless agent run' not just in billing but in available head room.",
+      "why_it_matters_brief": "Claude Code weekly limits jump 50% for all paid plans through July 13 — third move in a competitive sequence against Codex, and the key question is whether the new ceiling becomes permanent after the window closes.",
+      "source": { "name": "Latent Space AINews", "type": "rss", "url": "https://www.latent.space" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-15T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-15T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Latent Space AINews", "url": "https://www.latent.space/p/ainews-codex-rises-claude-meters", "take": "Frames both moves — Agent SDK credits metering AND the weekly-limit increase — as a competitive bundle: restrict headless billing, boost interactive head room, match Codex on the terminal." },
+        { "source": "APIdog", "url": "https://apidog.com/blog/claude-code-weekly-limits-50-percent-increase-july-2026/", "take": "Walks the practical impact for Pro/Max/Team — 50% more tokens per week, temporary until July 13, free plan excluded." },
+        { "source": "Hacker News (48126429)", "url": "https://news.ycombinator.com/item?id=48126429", "take": "Community thread confirming the increase is live — top comments track the sequence of Codex-competitive moves and debate whether the ceiling will hold post-July." },
+        { "source": "BridgeMind AI (X)", "url": "https://x.com/bridgemindai/status/2054642739200016754", "take": "Summarizes the full competitive sequence: 'SpaceX/AI deal doubled the five-hour limits. Removed peak hours. Now weekly limits up 50%. Three rate limit increases.'" }
+      ]
+    },
+    {
+      "id": "openai-codex-mobile-chatgpt-may-2026",
+      "tier": 2,
+      "title": "OpenAI brings Codex into the ChatGPT mobile app — monitor live agentic coding sessions, approve commands, and review diffs from iOS and Android",
+      "summary": "OpenAI has integrated Codex into the ChatGPT mobile apps for iOS and Android, putting live agentic coding session monitoring in a developer's pocket. The feature is currently in preview and available across all ChatGPT plans. The mobile view loads live context synced from the machine running Codex — project context, approval queues, terminal output, diffs, test results, and screenshots — and lets users approve or reject commands, switch the underlying model, and start new Codex tasks directly from the phone. The integration extends Codex's surface: background desktop operations and a browser extension for live sessions were the prior surface area; mobile is the third leg. 'Available across all plans' means access is not restricted to paid ChatGPT tiers. The timing is directly competitive: the mobile integration landed the same week Anthropic bumped Claude Code weekly limits by 50% and metered the Agent SDK credit pool.",
+      "link": "https://dig.watch/updates/openai-brings-codex-into-chatgpt-mobile",
+      "why_it_matters": "Agentic coding tools are increasingly designed for long-running sessions that outlast a developer's direct attention. Mobile monitoring is the natural answer to 'what happens while the agent is working and I step away from my laptop.' Being able to catch a diverging Codex session or approve a command from your phone before it lands on the wrong branch is the difference between 'I trust this tool for unsupervised runs' and 'I have to baby-sit it.' The 'all plans' detail matters: developers who've been price-sensitive about ChatGPT Pro can access Codex mobile monitoring without an upgrade. For Python developers who run longer test suites or refactoring jobs and check in periodically, the Codex mobile view is the closest thing to a CI/CD dashboard for an agentic coding session. Compare directly to Claude Code's remote monitoring features to see which supervision model fits your workflow — the two products are now competing on both the compute-limit dimension and the supervision-surface dimension simultaneously.",
+      "why_it_matters_brief": "Codex is now in the ChatGPT mobile app — live terminal output, diffs, and command approvals from iOS/Android, available across all plans, landing the same week Anthropic boosted Claude Code limits and metered the programmatic pool.",
+      "source": { "name": "Digital Watch Observatory", "type": "scrape", "url": "https://dig.watch" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-15T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-15T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Digital Watch Observatory", "url": "https://dig.watch/updates/openai-brings-codex-into-chatgpt-mobile", "take": "Frames the mobile integration as Codex's move to meet developers wherever they are — 'monitor and manage agentic coding workflows from iOS and Android.'" },
+        { "source": "Build Fast with AI", "url": "https://www.buildfastwithai.com/blogs/openai-codex-mobile-chatgpt-app-2026", "take": "Covers the live-context sync in detail — diffs, test results, screenshots, and approval queues all streaming from the desktop Codex session to mobile." }
+      ]
+    },
+    {
+      "id": "trump-xi-beijing-summit-close-no-deal-may-15-2026",
+      "tier": 2,
+      "title": "Trump-Xi Beijing summit closes: warm rhetoric, no H200 chip deal, no AI governance document signed",
+      "summary": "President Trump's 36-hour state visit to Beijing concluded on May 15 after summit sessions with Xi Jinping on Thursday and Friday. The meeting produced no signed agreement on Nvidia H200 chip deliveries — Chinese firms continue holding their orders pending Beijing guidance — and a proposed bilateral AI governance framework produced no signed document, despite US Treasury Secretary Scott Bessent confirming delegations had discussed AI guardrails. The headline trade deliverable: China agreed to purchase 200 Boeing jets (first major US commercial aircraft order in nearly a decade), though Boeing shares fell more than 4% as the number came in below market expectations. US export controls on advanced semiconductors remain in place and were not a major discussion topic. Jensen Huang, who joined the delegation last-minute after a personal Trump invitation, did not announce any resolved deal structure. Huang went viral during the trip after social media footage of him eating noodles and taking selfies on Beijing sidewalks spread widely. TechTimes summary: 'warm rhetoric, H200 deliveries remain stalled, rare-earth flows lag.'",
+      "link": "https://www.techtimes.com/articles/316674/20260515/trump-xi-close-beijing-summit-warm-rhetoric-nvidia-h200-deliveries-remain-stalled-rare-earth.htm",
+      "why_it_matters": "The summit closing without a chip deal updates every ongoing story about US-China AI compute in the same direction: the H200 licensing framework exists, the 10-firm approvals are real, but not one chip has moved. The bilateral AI governance gap is arguably the more significant long-run miss — a US-China agreement on AI guardrails would have been the first major multilateral AI governance document between the world's two largest AI powers, and its absence leaves the governance question unresolved going into the Google I/O and WWDC season. The Boeing-deal optics are also informative: if the biggest announced trade win from a 36-hour summit with a dozen tech executives in tow falls short of market expectations, it tells you something about where both governments' actual priorities are on AI and chips. For the DeepSeek funding and domestic-accelerator stories also in this file, the summit closing reinforces the same theme: Beijing's preference for sovereign compute is not softening under diplomatic pressure.",
+      "why_it_matters_brief": "Trump-Xi summit closed with no H200 deal and no AI governance document — the largest trade win (200 Boeing jets) disappointed markets, leaving US-China AI compute and governance unresolved.",
+      "source": { "name": "TechTimes", "type": "scrape", "url": "https://www.techtimes.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-15T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-15T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "TechTimes", "url": "https://www.techtimes.com/articles/316674/20260515/trump-xi-close-beijing-summit-warm-rhetoric-nvidia-h200-deliveries-remain-stalled-rare-earth.htm", "take": "Summary read: 'warm rhetoric, H200 deliveries remain stalled, rare-earth flows lag' — covers all three tech flashpoints in one headline." },
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/14/trump-xi-summit-tech-flashpoints.html", "take": "Pre-summit analysis of the two critical tech flashpoints — chips and rare earths — that proved accurate in predicting no breakthrough." },
+        { "source": "The News (Pakistan)", "url": "https://www.thenews.com.pk/latest/1402626-trumps-beijing-summit-2026-did-any-deals-emerge-for-tech-and-wall-street-ceos", "take": "Asks the direct question: 'Did any deals emerge for tech and Wall Street CEOs?' — frames the gap between executive presence and deal output." },
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/videos/2026-05-15/nvidia-s-ceo-spotted-eating-noodles-on-beijing-sidewalk-video", "take": "The Huang noodle video — the most-watched clip from the summit, capturing the informal side of a trip that produced more optics than agreements." }
       ]
     }
   ],
