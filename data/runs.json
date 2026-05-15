@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-15T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-15T06:17:00Z",
+      "ended_at": "2026-05-15T06:35:00Z",
+      "wall_time_ms": 1100000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 11500,
+        "output_write": 1700
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 8,
+      "items_added": 1,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-15-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable in sandbox (consistent with prior runs); enrichment + late-breaking done via WebSearch (10 queries: 7 per-item enrichment + 2 late-breaking + 1 broad sweep). All 7 yesterday-pm items kept and enriched — no drops. Material enrichments: (1) Anthropic Agent SDK split — added developer-reaction context, non-rollover and Pro-$20-exhaustion concerns, and three additional outlets (The New Stack, Register, SiliconANGLE). (2) Thinking Machines TML-Interaction-Small — added benchmark numbers (FD-bench v1.5 77.8 vs Gemini 54.3, GPT-Realtime-2.0 47.8; Audio MultiChallenge APR 43.4%; latency comparison 0.40s vs 1.18s), and the lab's own acknowledgement of scaling limits. (3) Cerebras IPO — biggest update: the stock actually traded today, opened at $350, closed +68% at $311.07, ~$95B market cap, biggest US tech IPO since Snowflake 2020; rewrote title, summary, why_it_matters and brief to reflect post-market reality. (4) Google GTIG zero-day — added technical attribution fingerprints (hallucinated CVSS score, _C ANSI color class, hard-coded trust assumption pattern) and GTIG's note that Gemini was not the model used; brief now leads with the fingerprinting playbook angle. (5) US H200 China — added Chinese-made AI accelerator share (41% of domestic server market) as the structural context for Beijing's block. (6) VS2026 May Update — added skills-panel UI detail (tools icon in chat window), multi-file summary diff view, and Microsoft's 'one of the most useful Copilot features of the year' framing. (7) Nvidia × Ineffable — added Huang and Silver framing quotes, confirmed Google as a seed investor alongside Sequoia/Lightspeed/Nvidia, noted Ineffable will be among the first on Vera Rubin. One late-breaking item added: Anthropic × Gates Foundation $200M four-year partnership announced May 14 — global health (polio/HPV/eclampsia priority), K-12 evidence-based tutoring + sub-Saharan Africa/India literacy apps, smallholder-agriculture Claude improvements + AgriBench-style public-goods benchmarks; Tier 2, Global region. Considered but did not add as second late-breaking item: Anthropic × PwC enterprise deployment (May 14, Tier 3 fit, less relevant for Gabe); IBM Foundation Delivery Units announcement (May 14, marketing-heavy, doesn't move the AI-engineering needle); Visual Studio Magazine IntelliSense-priority detail (April story, stale). Snapshot at 8 items: T1=3, T2=5, T3=0. Hero images uniformly null (no WebFetch). Brief field written for all items per agent/prompts/brief.md."
+    },
+    {
       "run_id": "2026-05-14T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
