@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-15T17:25:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-15T17:00:00Z",
+      "ended_at": "2026-05-15T17:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 32500,
+        "curation": 9300,
+        "output_write": 3000
+      },
+      "fetches_made": 15,
+      "items_input": 12,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-15-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned 403 on anthropic.com/news (consistent with prior runs); all sweeps done via WebSearch (15 queries). Today's 2026-05-15-am.json existed with 11 enriched/refreshed items — applied promotion rule (default exclude). Five fresh PM items shipped: T1=1, T2=4, T3=0. Items: (1) Anthropic in talks for $30-50B raise at $950B valuation — would top OpenAI for first time, bundled with Ramp May AI Index showing Anthropic at 34.4% of US business AI spend vs OpenAI at 32.3% (first crossover); NYT mid-May reporting walked the upper bound from $900B (TC April 29) to $950B; VentureBeat names three threats that could erase the lead; Inc./AI Insider tie the three Anthropic threads (adoption crossover, Small Business launch, $950B raise) into one consolidated story. (2) GitHub Copilot App technical preview May 14 — standalone desktop app for Windows/macOS/Linux, three primitives: Parallel Sessions (per-agent git work trees), Agent Merge (auto-fixes PR-lifecycle friction), Repository Maintenance (NL prompt spawns sub-agents in parallel work trees); Pro/Pro+ early access immediate, Business/Enterprise rolling through the week; GitHub Changelog + DevOps Journal + Neowin + Windows Report coverage. (3) OpenAI Codex Windows sandbox May 14 — two dedicated local accounts (CodexSandboxOffline / CodexSandboxOnline), OS-level firewall boundary at the kernel layer (not application), closes the gap since Codex team joined MSFT in Sept 2025; OpenAI engineering post + Running Codex Safely companion + WinBuzzer + StartupHub coverage; three Microsoft-aligned agentic-coding products (Copilot App, Codex Windows, VS 2026 skills) landing in the same week is the through-line. (4) Claude for Small Business May 13 — 15 prebuilt agentic workflows, 15 reusable skills, 8 connectors (QuickBooks/PayPal/HubSpot/Canva/DocuSign/GWorkspace/M365/Slack), 10-city free workshop tour starting May 14 Chicago; the 'skill' abstraction now spans Claude Code, VS 2026, and a non-engineering product line; Anthropic/TechCrunch/SiliconANGLE/Inc/Axios/9to5Mac/Fast Company. (5) Cursor Bugbot usage-based billing + effort levels May 14 — drops $40/seat/month, switches to pure usage-based at June 8 renewal, three effort levels (Default/High/Custom); 'high effort' finds 35% more bugs at same 80% merge-time resolve rate per Cursor's internal benchmark; third agentic-coding tool this month to restructure billing (after Anthropic Agent SDK split June 15 and Claude Code 50% weekly boost). No promotion from am applied — all 11 am items are deepening but no afternoon news materially changed any of them. Hero images uniformly null (no WebFetch). Considered but did not include: xAI Grok legacy model retirement executing 12pm PT today (refresh already declined this — execution of prior announcement, not new news); OpenAI EU access for GPT-5.5-Cyber + Anthropic Mythos still restricted (May 11, four days stale); Sierra $950M raise at $15.8B (May 4, stale); CAISI/Microsoft/Google/xAI testing agreements (May 5, ten days stale); Nathan Lambert 'How Open Model Ecosystems Compound' (May 12, three days stale and thought-piece rather than news); Gemini Omni pre-I/O leaks (already declined in prior runs, I/O is May 19 and these are speculation); Mistral Medium 3.5 / Vibe remote agents (May 1, two weeks stale)."
+    },
+    {
       "run_id": "2026-05-15T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
