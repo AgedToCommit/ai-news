@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-16T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-16T11:00:00Z",
+      "ended_at": "2026-05-16T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22500,
+        "curation": 3500,
+        "output_write": 1500
+      },
+      "fetches_made": 9,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-16-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable (consistent with prior runs); sweep done via WebSearch (9 queries). Saturday morning light news cycle with no major May-16-specific model or product drops. No items found within strict 5-hour window since 06:20 UTC. Two gap items added that slipped through prior digest and enrichment sweeps: (1) Meta WhatsApp Incognito Chat (May 13, Global, Tier 2) — Meta launched private AI chat for WhatsApp on May 13 using Private Processing, a confidential-computing architecture that routes inference through Trusted Execution Environments (TEE) on Meta's servers in a hardware-enforced enclave that even Meta cannot access; relay routing, remote attestation, stateless session clearing; text-only at launch; missed by the May 13 digest sweep which was focused on the agentic-coding cluster (GitHub Copilot App, Codex Windows, Claude for Small Business, Cursor Bugbot), and by the May 16 enrichment which focused on enriching the same five items; notable as the first TEE-based private AI deployed at 3B-user scale; TechCrunch / Help Net Security / TechTimes / Engadget coverage; the Instagram encryption removal in the same week creates a useful contrast framing. (2) Anthropic '2028: Two Scenarios for Global AI Leadership' (May 14, Global, Tier 2) — Anthropic published a policy paper on May 14 presenting two 2028 futures for US-China AI competition; first time Anthropic has publicly attached a specific year to an AGI-proximity claim; key policy asks include sustained chip export controls, active disruption of model-distillation pathways, and accelerated US-AI adoption globally; missed by the May 14 digest (focused on Agent SDK split / Thinking Machines / Cerebras IPO / H200 export licenses / Nvidia-Ineffable) and by the May 15 digest and May 16 enrichment; Interesting Engineering / eWeek / Digit.in / YourStory coverage. Tier 1 re-pass: refined the Anthropic $950B valuation item with the Salesforce/Benioff $300M token-spend disclosure from the All-In podcast (May 16) — largest known single-enterprise token commitment to any AI provider, almost entirely on coding agents, and the clearest concrete denominator published so far for the $44B ARR claim. Considered and declined: Five Eyes 'Careful Adoption of Agentic AI Services' guidance (May 1, two weeks stale); Google I/O pre-keynote speculation (keynote is May 19, no confirmed model drops today); Novo Nordisk/OpenAI full-business partnership (earlier May, broader context already captured); Microsoft Asia infrastructure pledges (multi-year announcements, not May-16 news)."
+    },
+    {
       "run_id": "2026-05-16T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
