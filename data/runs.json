@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-16T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-16T06:02:00Z",
+      "ended_at": "2026-05-16T06:20:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 10000,
+        "output_write": 1400
+      },
+      "fetches_made": 9,
+      "items_input": 9,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned 403 (consistent with prior runs); all enrichment + late-breaking research done via WebSearch (8 queries) plus 1 failed WebFetch. All 5 of yesterday-pm's items kept and enriched — no drops; the agentic-coding-tools cluster is still the live narrative. Enrichments: (1) Anthropic $950B raise — added Dario Amodei's May developer-conference figures ($44B annualized revenue, up from $30B announced April 7; inference gross margins 38%->70%+) and the end-of-May expected close; Bloomberg reported the round at $900B on May 12 before NYT walked it to $950B; updated why_it_matters and brief. (2) GitHub Copilot App — added preview-rollout progress (Pro/Pro+ -> Business/Enterprise) and an early dogfooding signal (a team merged 368 PRs through the app over a 30-day window, predating the public preview). (3) Codex Windows sandbox — clarified the native Windows sandbox first shipped March 2026 for PowerShell environments and the May 14 post is the architecture writeup; noted recent edge-case hardening (pseudoconsole startup, elevated runner processes, named-pipe validation). (4) Claude for Small Business — added the one-month Claude Max attendee perk, Tenex.co as tour operator, the free 'AI Fluency for Small Business' course / 4D Framework, and PayPal's parallel 'Close the AI Gap' partnership; corrected the tour-partner attribution from 'co-developed with PayPal' to Tenex.co. (5) Cursor Bugbot — added Cursor's published per-run economics ($1.00-$1.50/run; ~0.7 bugs on Default with 79%+ resolved at merge, ~0.95 on High), annual-sub grandfathering through May 2027, and dashboard-rollout friction reported on the Cursor forum; updated why_it_matters and brief. Late-breaking pass added one item: xAI Grok Build (Tier 2, US) — early-beta coding agent and CLI launched May 15, runs up to 8 parallel agents (plan/search/build), 'Arena Mode' has agents compete and ranks outputs (confirmed but not yet live in beta), local-first, npm install, runs on grok-code-fast-1 (70.8% SWE-Bench Verified, 256k context), SuperGrok Heavy only at $299/mo ($99/mo intro for 6 months); fourth dedicated agentic-coding surface this month and the multi-agent-orchestration bet. Considered but did not add as a second late-breaking item: Google Cloud Next TPU 8t/8i (April 22, three weeks stale); Gemini Omni pre-I/O coverage (still speculation, Google I/O is May 19, declined by prior runs); Thinking Machines interaction models (already in 2026-05-15-am.json as TML-Interaction-Small); Airia Form Review Step (Tier 3, enterprise document extraction, not relevant for Gabe). Snapshot at 6 items: T1=1, T2=5, T3=0. Hero images uniformly null (no WebFetch)."
+    },
+    {
       "run_id": "2026-05-15T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
