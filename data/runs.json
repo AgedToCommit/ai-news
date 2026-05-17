@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-17T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-17T06:00:00Z",
+      "ended_at": "2026-05-17T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 14000,
+        "output_write": 2500
+      },
+      "fetches_made": 15,
+      "items_input": 9,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 1,
+      "snapshot_written": "2026-05-17-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unavailable (HTTP 403, consistent with prior runs); all prune/enrich and late-breaking work done via WebSearch (15 queries). Sub-task 1 (prune + enrich yesterday's 2026-05-16-pm, 6 items): 5 kept + enriched, 1 dropped. Enriched: (1) openai-friar-compute-crunch — added Friar's comment that public markets are 'significantly bigger' than private markets, the clearest hint of an eventual IPO path; (2) recursive-superintelligence — added co-founders Tim Rocktaschel (UCL / ex-DeepMind), Peter Norvig, Cresta's Tim Shi, and the 'open-endedness' method (co-evolution via iterative competition rather than human benchmarks / supervised fine-tuning), plus Socher's 'quarters, not years' product timeline; (3) notion-developer-platform — corrected External Agents launch partners to Claude Code, Cursor, Codex, Decagon (digest had 'Anthropic's Claude, OpenAI's Codex, Decagon', missing Cursor) and added the app-to-platform / workflow-automation-competitor framing from InfoWorld; (4) microsoft-delegate-52 — added the RS@k Reconstruction Score metric, the six model families tested (OpenAI, Anthropic, Google, Mistral, xAI, Moonshot), and the stat that severe corruption (>=20% degradation) appears in ~80% of simulated conditions, plus The Register coverage; (5) google-io-2026-preview — added the reported 'Remy' name for Gemini's proactive agentic mode, an expected larger context window, and the Android 17 reveal. Dropped: runway-world-models-pivot (Tier 3 May 15 profile) — focused search surfaced no new developments overnight. Sub-task 2 (late-breaking, last-12h Tier-1 sweep): 0 items added. Strict 12h window (May 16 ~18:00 UTC onward) empty — thin Saturday-night / Sunday-morning cycle, no May-16/17 frontier model or lab announcements (confirmed across model-release trackers; latest frontier ceiling unchanged since GPT-5.5; Mistral Medium 3.5 Apr 29, xAI release notes May 6). Gap candidates evaluated and declined: OpenAI Deployment Company already covered in data/2026-05-12-am.json (openai-deployment-company-launch-may-2026); Google 'AI threats in the wild' prompt-injection report dated April 23, too stale; NASA AI space chip (May 15) too marginal and off-core for a Tier-1 add. All hero_image null: WebFetch blocked, so og:image extraction and 200-OK verification not possible (consistent with the 2026-05-16 am and pm files). Final am file: 5 items, tier counts 1:2 / 2:2 / 3:1."
+    },
+    {
       "run_id": "2026-05-16T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
