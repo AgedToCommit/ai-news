@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-17T11:40:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-17T11:10:00Z",
+      "ended_at": "2026-05-17T11:40:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 5500,
+        "output_write": 1500
+      },
+      "fetches_made": 17,
+      "items_input": 0,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-17-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch blocked (HTTP 403, consistent with all prior runs); all discovery done via WebSearch (14 queries + 3 WebFetch attempts = 17 fetches total). Quiet Sunday overnight window — 5-hour sweep (2026-05-17T06:20Z to 2026-05-17T11:10Z) yielded 0 new items: no new model releases, no new lab announcements from Asia or Europe cycles. Gap items evaluated and declined: (1) Anthropic/Gates Foundation $200M partnership (May 14) — confirmed already covered in 2026-05-15-am.json; (2) Anthropic Claude for Small Business (May 13) — confirmed already covered in 2026-05-15-am.json; (3) Android Show I/O Edition Gemini Intelligence/Googlebook announcements (May 12) — confirmed already covered in 2026-05-13-am.json; (4) Mistral Vibe remote agents/Medium 3.5 (Apr 29) — too stale, not verified in snapshots but outside 5-hour window; (5) OpenAI ChatGPT/Codex/Atlas super-app merger (Mar 19) — too stale. Re-pass on Tier-1 items: (1) openai-friar-compute-crunch — added $50B annual compute burn figure and $600B through 2030 projection, plus CFO revenue-lag warning from ainvest.com; updated why_it_matters and brief. Re-pass on Tier-3 item (pre-I/O, 2 days out): (2) google-io-2026-preview — added 'Gemini Omni' UI string leak (TestingCatalog, surfaced May 2 in Gemini video tab) and 'Gemini Spark' as alternate agentic-mode name alongside 'Remy'; added NokiaPowerUser take. Final am file: 5 items, tier counts unchanged (1:2 / 2:2 / 3:1)."
+    },
+    {
       "run_id": "2026-05-17T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
