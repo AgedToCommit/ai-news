@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-18T17:19:38Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-18T17:00:00Z",
+      "ended_at": "2026-05-18T17:19:38Z",
+      "wall_time_ms": 1178000,
+      "tokens_used": 64000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 49000,
+        "curation": 11000,
+        "output_write": 2000
+      },
+      "fetches_made": 39,
+      "items_input": 22,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-18-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch confirmed blocked (HTTP 403 on anthropic.com/news), consistent with every run since May 5; entire sweep done via WebSearch (38 queries). All hero_image null for the same reason. Genuine news drought on the eve of Google I/O 2026 (keynote May 19): nearly every viable candidate was already covered in recent snapshots and was excluded by canonical-URL dedup. Verified-and-declined as duplicates: OpenAI Codex mobile app + Codex Windows sandbox (covered 2026-05-17-am), Claude for Small Business (2026-05-15/16), Isomorphic Labs $2.1B Series B (2026-05-13-am), OpenAI Deployment Company (2026-05-12-am), GPT-5.5-Cyber + Daybreak (multiple), xAI Grok Build (covered), Claude Mythos/Glasswing (covered), Thinking Machines TML-Interaction-Small (2026-05-14-pm), DELEGATE-52 benchmark (2026-05-16-pm), Anthropic+Gates Foundation $200M (2026-05-15-am), Anthropic $950B valuation raise / EU AI Act Omnibus / Googlebook (prior snapshots). Declined as stale (pre-window, April or early May): DeepSeek V4 Pro/Flash (Apr 24), Tencent Hunyuan Hy3 (Apr 22), Mistral Medium 3.5 (Apr 29), Meta Muse Spark (Apr 8), Microsoft Legal Agent for Word (Apr 30), Baidu Ernie 5.0 (Jan) / 5.1 (May 8), Rhoda AI FutureVision (Mar). Today's am file items (Microsoft Claude Code licenses, ChatGPT personal finance, ChatGPT sensitive conversations, Suleyman 18-month automation, Europe AI energy costs) excluded by the digest promotion rule; none had materially deepened, so no promotions. Three genuinely fresh, uncovered items written: (1) google-io-2026-opens-may-19-gemini-keynote — I/O-eve curtain-raiser, Tier 3 / Global; the May-17 snapshot carried an earlier I/O preview but the day-before keynote is the legitimate digest anchor; (2) musk-altman-trial-jury-deliberations-may-18-2026 — jury began deliberating Monday May 18 and the remedies phase opened; the trial last appeared in a snapshot on 2026-05-11, so this milestone is uncovered; Tier 3 / US; (3) cursor-cloud-agent-dev-environments-may-2026 — Cursor's mid-May release of configurable dev environments for cloud agent fleets (multi-repo workspaces, Docker build secrets, version history, audit logs); the only prior Cursor item in the archive is the unrelated Bugbot billing change; Tier 2 / US. Small digest (3 items) is an honest reflection of a slow pre-I/O day after two-plus weeks of thorough daily coverage; no padding or duplication."
+    },
+    {
       "run_id": "2026-05-18T11:18:00Z-refresh",
       "phase": "refresh",
       "status": "success",
