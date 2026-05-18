@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-18T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-18T06:00:00Z",
+      "ended_at": "2026-05-18T06:18:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 10000,
+        "output_write": 1400
+      },
+      "fetches_made": 6,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-18-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch left untried this run — every prior run since May 5 records consistent HTTP 403, so all work done via WebSearch (6 queries). Sub-task 1 (prune+enrich): all 3 items from 2026-05-17-pm surfaced meaningful new context and were KEPT + ENRICHED; 0 dropped. (1) microsoft-pulls-claude-code-licenses-copilot-cli-may-2026 — added developer-reaction angle (engineers reportedly unhappy about a forced migration off the tool their adoption data showed they preferred; The Verge's Tom Warren credited as first to report; roughly six-month launch-to-cancellation framed as one of Microsoft's fastest internal-tool reversals); updated summary, why_it_matters, brief; added Yahoo Tech take. (2) openai-chatgpt-personal-finance-plaid-may-15-2026 — added the sharply negative early reaction centered on trust: no stated policy on training/sharing linked financial data, no published retention details, launch landed alongside a class-action lawsuit alleging OpenAI shared user conversations with Meta and Google; updated summary, why_it_matters, brief; added Tom's Guide take. (3) openai-chatgpt-sensitive-conversations-safety-update-may-14-2026 — added the human-review pipeline detail (contact must accept an invite within a week; trained human reviewers assess a flagged conversation before any notification; alerts 'intentionally limited', no transcripts) and measured criticism (OECD.ai-style hazard framing, Futurism tying timing to AI-linked mental-health litigation); updated summary, why_it_matters, brief; added TechCrunch take. Sub-task 2 (late-breaking): quiet overnight window — 4 WebSearch sweeps over the last-12h window found no genuine late-breaking Tier-1 item. Google I/O 2026 keynote (May 19) already covered in 2026-05-17-am.json google-io-2026-preview; agentic-framework chatter (NeMoCLAW/OpenCLAW, NVIDIA Agent Toolkit) traces to the earlier GTC 2026 cycle, not the overnight window; Runpod Flash SDK surfaced undated and unverifiable to the window. 0 items added, consistent with the prior two runs' quiet-window outcomes. Final am file: 3 items, tier counts 1:0 / 2:1 / 3:2. All hero_image remain null: WebFetch blocked, so og:image extraction and 200-OK verification not possible (consistent with the source pm file and all prior runs)."
+    },
+    {
       "run_id": "2026-05-17T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
