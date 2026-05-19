@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-19T06:15:30Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-19T06:00:00Z",
+      "ended_at": "2026-05-19T06:15:30Z",
+      "wall_time_ms": 930000,
+      "tokens_used": 23000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 7000,
+        "output_write": 1400
+      },
+      "fetches_made": 7,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-19-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch left untried — every run since May 5 records consistent HTTP 403 and the May 18 digest re-confirmed it the same day; all work done via WebSearch (7 queries). Sub-task 1 (prune+enrich): all 3 items from 2026-05-18-pm surfaced meaningful new context and were KEPT + ENRICHED; 0 dropped. (1) google-io-2026-opens-may-19-gemini-keynote — keynote is today (May 19, 1pm ET); updated title and summary off 'tomorrow', sharpened the leak detail (Gemini Spark always-on agent, Gemini Omni text-image-video pipeline, Gemini 3.2 Flash sub-200ms latency), updated why_it_matters/brief timing, added an Android Headlines leaks take. (2) musk-altman-trial-jury-deliberations-may-18-2026 — major verdict: a nine-member advisory jury rejected all claims in under two hours on May 18 as time-barred (three-year statute of limitations); Judge Gonzalez Rogers immediately adopted the verdict and dismissed the case; the merits of the charitable-trust claim were never reached and the $134B remedies hearing was cut short; Musk called it a 'calendar technicality' and will appeal to the 9th Circuit. Rewrote the now-stale 'jury begins deliberating' title plus summary, why_it_matters and brief; added an NPR verdict take. (3) cursor-cloud-agent-dev-environments-may-2026 — added developer-reaction context (multi-repo support widely seen as the change that makes cloud agents practical for cross-repo enterprise work; pricing the recurring complaint for heavy users) and pinned the May 13 release date; added a PrimeAIcenter hands-on take. Sub-task 2 (late-breaking): 1 item added — anthropic-acquires-stainless-sdk-may-2026 (Tier 2 / US): Anthropic acquired Stainless, the New York startup whose tooling auto-generates SDKs from API specs and is used by OpenAI, Google, Cloudflare, Replicate and Runway; The Information first reported the deal at >$300M (vs a ~$150M Dec-2024 valuation); Anthropic will wind down hosted Stainless products while existing customers keep rights to already-generated SDKs. Not covered in any prior snapshot. Gemini I/O leaks (Spark/Omni/3.2 Flash) were folded into the existing I/O item rather than added as a separate item to avoid duplication; no other genuine Tier-1 model release surfaced in the overnight window. Final am file: 4 items, tier counts 1:0 / 2:2 / 3:2. All hero_image null: WebFetch blocked, consistent with the source pm file and all prior runs."
+    },
+    {
       "run_id": "2026-05-18T17:19:38Z-digest",
       "phase": "digest",
       "status": "success",
