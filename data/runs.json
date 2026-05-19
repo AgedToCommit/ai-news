@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-19T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-19T17:00:00Z",
+      "ended_at": "2026-05-19T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1800,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 6500,
+        "output_write": 1700
+      },
+      "fetches_made": 18,
+      "items_input": 11,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-19-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch confirmed blocked (HTTP 403 on anthropic.com/news), consistent with every run since May 5; entire sweep done via WebSearch (17 queries). All hero_image null for the same reason. The digest ran at 1pm ET exactly as the Google I/O 2026 keynote opened, so the keynote's centerpiece — a new frontier Gemini model — had not been confirmed in indexed coverage when the snapshot was written; the I/O item reports only confirmed announcements (Gemini at 900M MAU / ~3.2 quadrillion tokens/month, new 'Thinking level' menu, Gemini Intelligence Android features, Ask Maps, Android XR glasses, Googlebooks) and flags the model as expected-but-unconfirmed for overnight enrichment to deepen. Today's am file (5 items: I/O preview, Musk-Altman verdict, Cursor cloud agents, Anthropic-Stainless, Firebase AI Logic/Genkit GA) excluded by the digest promotion rule; the am I/O entry is a Tier-3 preview while the pm I/O item reports the keynote as a live event with confirmed announcements and a distinct canonical URL, so it is new content rather than a promotion. Four fresh, uncovered items written: (1) karpathy-joins-anthropic-pretraining-may-2026 — Tier 1 / US; Andrej Karpathy joined Anthropic's pre-training team under Nick Joseph and is building a team to use Claude to accelerate pretraining research; confirmed by TechCrunch, Axios, CNBC, VentureBeat, Bloomberg and Reuters. (2) google-io-2026-keynote-gemini-underway-may-19 — Tier 1 / Global; I/O keynote underway. (3) fedora-ai-developer-desktop-blocked-may-2026 — Tier 2 / Global; Fedora's AI Developer Desktop initiative was unanimously approved May 6 then blocked after two council members reversed to -1 over LTS-kernel, CUDA and proprietary-software objections, council escalation deadline May 22; ongoing story not covered in prior snapshots. (4) anthropic-tops-cnbc-disruptor-50-2026 — Tier 3 / US; Anthropic No. 1 on CNBC's 2026 Disruptor 50, OpenAI No. 2. Declined as stale or already covered: NVIDIA Nemotron 3 family (Dec 2025), HiDream-O1-Image (May 8), open-weight Chinese coding models GLM-5.1/MiniMax M2.7/Kimi K2.6/DeepSeek V4 (April-early May), Zyphra ZAYA1-8B (May 6-7), Notion Developer Platform (May 13), Microsoft MDASH security harness (May 12), Google AI Studio/Antigravity vibe-coding (March 2026). Honest 4-item digest on a day dominated by one big confirmed story (Karpathy) and one live-but-still-unconfirmed event (the I/O keynote)."
+    },
+    {
       "run_id": "2026-05-19T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
