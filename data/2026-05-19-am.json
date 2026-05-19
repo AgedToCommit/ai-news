@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-19-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-19",
-  "generated_at": "2026-05-19T06:15:30Z",
-  "generated_at_local": "2026-05-19T02:15:30-04:00",
+  "generated_at": "2026-05-19T11:00:00Z",
+  "generated_at_local": "2026-05-19T07:00:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-19T06:15:30Z", "duration_ms": 930000 }
+    { "phase": "enrichment", "ran_at": "2026-05-19T06:15:30Z", "duration_ms": 930000 },
+    { "phase": "refresh",    "ran_at": "2026-05-19T11:00:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 2 },
+  "tier_counts": { "1": 0, "2": 3, "3": 2 },
   "items": [
     {
       "id": "google-io-2026-opens-may-19-gemini-keynote",
@@ -108,6 +109,27 @@
         { "source": "The Information", "url": "https://www.theinformation.com/articles/anthropic-talks-buy-developer-tools-startup-used-openai-google", "take": "First reported the talks, putting the deal north of $300M against Stainless's roughly $150M valuation in late 2024." },
         { "source": "Anthropic", "url": "https://www.anthropic.com/news/anthropic-acquires-stainless", "take": "Says hosted Stainless products will be wound down while existing customers keep full rights to SDKs already generated." }
       ]
+    },
+    {
+      "id": "firebase-ai-logic-genkit-ga-io-2026",
+      "tier": 2,
+      "title": "Firebase AI Logic SDK and Genkit 2.0 both hit GA at Google I/O, adding on-device Gemini and MCP integration",
+      "summary": "Google is confirming two GA releases at I/O 2026 today that are specifically for developers building apps. Firebase AI Logic SDK (formerly Vertex AI in Firebase) goes generally available, giving Android, iOS, Flutter, web, and React Native apps direct access to Gemini models with Firestore-equivalent security rules — no API key in client code, with built-in usage monitoring and automatic key management. Android apps also get hybrid on-device/cloud inference: the SDK can route requests to Gemini Nano 4 running on the device for low-latency tasks and fall back to the cloud model for heavier ones. Alongside it, Firebase Genkit 2.0 reaches GA — Genkit is Google's open-source framework for wiring AI features into apps, comparable in spirit to LangChain but designed to integrate natively with Firebase and Google Cloud. Version 2.0 adds native MCP server integration (using the same Model Context Protocol now standard in Claude Code, Cursor, and a growing list of AI tools), streaming support, improved observability via Cloud Trace, and Python support alongside the existing JavaScript and Go paths.",
+      "link": "https://firebase.google.com/products/firebase-ai-logic",
+      "why_it_matters": "Firebase AI Logic and Genkit 2.0 are the 'how do I actually ship AI in my app' story from I/O — they get less attention than the Gemini model news but are probably more immediately useful for a developer. Two things worth taking. First, the on-device hybrid inference pattern: your app runs a small model on the device for fast, low-cost calls and routes harder prompts to the cloud — this is a real architectural shift, not just a feature toggle, and the same logic applies to any client-side AI integration you might build. Second, MCP integration in Genkit 2.0 connects your app-layer orchestration to the same protocol ecosystem that Claude Code, Cursor, and other tools already use, which means tools you build there can be reused across that ecosystem. For Gabe specifically, Genkit now has Python support, so it is in your stack — and it is worth knowing what problem it solves before deciding whether to use it. The short version: Genkit handles the orchestration wiring (tool calls, streaming, routing between models) so you do not have to re-implement that plumbing yourself each time.",
+      "why_it_matters_brief": "Firebase AI Logic + Genkit 2.0 hit GA at I/O today — on-device Gemini Nano 4 hybrid routing and native MCP integration are the developer pieces alongside the keynote model news.",
+      "source": { "name": "Firebase", "type": "scrape", "url": "https://firebase.google.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-19T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-19T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": []
     }
   ],
   "dropped_in_phase": []
