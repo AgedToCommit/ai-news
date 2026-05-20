@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-20T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-20T06:00:00Z",
+      "ended_at": "2026-05-20T06:18:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 7800,
+        "output_write": 1400
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 1,
+      "snapshot_written": "2026-05-20-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch left untried — every run since May 5 has recorded consistent HTTP 403 on lab/news domains; all work done via WebSearch (8 queries). Sub-task 1 (prune+enrich): yesterday's 2026-05-19-pm.json had 4 items. (1) google-io-2026-keynote-gemini-underway-may-19 — heavy enrichment. The keynote that was 'underway' at digest time is now over: Gemini 3.5 Flash shipped same-day (Terminal-Bench 2.1 76.2%, GDPval-AA 1656 Elo, MCP Atlas 83.6%, 4× faster output tokens/sec than rivals, priced $1.50 in / $9.00 out per M, ~40% under 3.1 Pro), Gemini 3.5 Pro (codenamed Cappuccino) held back to 'next month' to audible groans from the room, Gemini Spark 24/7 personal agent rolling out on a new $100/mo Ultra tier (top tier cut $250→$200), Gemini Omni Flash fusing reasoning with DeepMind's Nano Banana / Veo / Genie, Antigravity 2.0 agent-first dev platform demoing a 12-hour OS build. Retitled, full summary rewrite, why_it_matters + brief rewritten, three new takes (Engadget, CNBC, Cybernews, 9to5Google) added alongside dropping the now-stale Engadget live-blog as the primary link in favor of the Google Developers Blog roundup. (2) karpathy-joins-anthropic-pretraining-may-2026 — light enrichment. Added the Fortune 'inventor of vibe coding' framing (referencing his Feb 2025 post coining the term), the ~3M X-post views-in-an-hour reaction stat, and explicit linkage to the same-week Stainless acquisition; updated why_it_matters and brief to lead on the vibe-coding angle. Added Fortune and The New Stack takes. (3) fedora-ai-developer-desktop-blocked-may-2026 — light enrichment. Pinned the May 22 deadline now days away, added that submitter Gordon is circulating a revised proposal to reviewers before reposting, and added the Flock 2026 fallback path if the council deadlocks. Updated why_it_matters and brief, added a pbxscience take. (4) anthropic-tops-cnbc-disruptor-50-2026 — DROPPED. Overnight searches turned up only restatements of the ranking, $30B+ run rate and reported $900B funding round already captured in the original; the investor commitments surfaced (Microsoft $5B, Nvidia $10B, Amazon $25B, Google up to $40B) were also baked into prior coverage. A leaderboard story without new context is not worth holding a Tier-3 slot a second day. Sub-task 2 (late-breaking): 1 item added — openai-content-provenance-c2pa-synthid-may-19-2026 (Tier 2 / Global): OpenAI announced May 19 it is adding C2PA Content Credentials conformance plus durable SynthID watermarking to its AI-generated images, opening a public verifier; Kakao, ElevenLabs and Nvidia simultaneously confirmed SynthID adoption, and Google said it will surface verification in Search and Chrome — the multi-vendor alignment is the story, not the OpenAI side on its own. Final am file: 4 items, tier counts 1:2 / 2:2 / 3:0. All hero_image null: WebFetch blocked, consistent with the source pm file and all prior runs."
+    },
+    {
       "run_id": "2026-05-19T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
