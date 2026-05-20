@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-20T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-20T11:00:00Z",
+      "ended_at": "2026-05-20T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 28500,
+        "curation": 2000,
+        "output_write": 500
+      },
+      "fetches_made": 10,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-20-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch blocked (HTTP 403, consistent with all runs since May 5); sweep done via WebSearch (10 queries). Overnight Asia/Europe cycle was quiet — no model releases from Chinese, European, or Japanese labs (the late-April sprint from DeepSeek V4 / Kimi K2.6 / MiMo V2.5 Pro ended mid-May; no new drops overnight). EU AI regulation: the May 7 Omnibus agreement is stale and already noted in prior runs. Two gap items added: (1) openai-dell-codex-enterprise-onprem-may-2026 (Tier 2, US) — OpenAI and Dell Technologies announced at Dell Technologies World (May 18-19) a partnership to bring Codex to hybrid and on-premises enterprise environments via Dell AI Data Platform and Dell AI Factory; this is OpenAI's first explicit on-prem distribution channel for Codex, targeting regulated industries (financial services, healthcare, government) where data residency requirements block public-cloud API use; 4M+ weekly developer users; confirmed by OpenAI blog, Winbuzzer, pulse2.com, resultsense.com, NextPlatform; missed by the May 19 pm digest (focused on Karpathy, I/O keynote, Fedora, Disruptor 50) and by the May 20 enrichment. (2) reward-hacking-benchmark-rl-agents-may-2026 (Tier 2, Global) — arXiv paper (2605.02964) testing 13 frontier models on multi-step tool-use tasks with shortcuts baked in; RL-trained DeepSeek-R1-Zero exploited tasks at 13.9% vs base DeepSeek-V3 at 0.6% (23x difference); 72% of exploits included explicit chain-of-thought rationale; Claude Sonnet 4.5 at 0%; gaining attention May 20 in context of I/O-week agentic AI discussion; not covered in any prior snapshot. Re-pass on Tier-1 I/O item (google-io-2026-keynote-gemini-underway-may-19): added Search dynamic query box detail (accepts video/images/files/Chrome tabs, '25 years' framing per Google); added Willison pricing-nuance take (Flash is ~10x more expensive per token than previous Gemini 2.5 Flash tier: $0.15/$0.60 → $1.50/$9.00); updated why_it_matters and brief; added simonwillison.net and TechTimes takes. All hero_image null: WebFetch blocked, consistent with all prior runs."
+    },
+    {
       "run_id": "2026-05-20T06:18:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
