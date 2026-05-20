@@ -1,0 +1,143 @@
+{
+  "snapshot_id": "2026-05-20-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-05-20",
+  "generated_at": "2026-05-20T17:30:00Z",
+  "generated_at_local": "2026-05-20T13:30:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-05-20T17:30:00Z", "duration_ms": 1800000 }
+  ],
+  "tier_counts": { "1": 1, "2": 4, "3": 0 },
+  "items": [
+    {
+      "id": "anthropic-code-with-claude-london-self-hosted-sandboxes-mcp-tunnels-may-20-2026",
+      "tier": 1,
+      "title": "Anthropic ships self-hosted sandboxes, MCP tunnels and Claude Code Auto Mode at Code with Claude London",
+      "summary": "At Code with Claude London — Anthropic's two-day developer event running May 19–20, 2026 — the company released a batch of new infrastructure for Claude Managed Agents aimed squarely at enterprises that couldn't put their data on Anthropic's cloud. Self-hosted sandboxes (now in public beta) let customers move tool execution off Anthropic's infrastructure and into their own, either self-managed or via four launch partners — Cloudflare (microVMs with zero-trust networking), Daytona (long-running stateful SSH/preview environments), Modal (AI workloads with scalable CPU/GPU) and Vercel (sandbox isolation with VPC peering and credential injection). The orchestration loop — context management and error recovery — stays on Anthropic, but the files, packages and services the agent touches no longer have to leave the customer's network. MCP Tunnels (research preview) solves the matching problem on the tool side: a lightweight proxy inside the customer's network punches a secure tunnel out to Anthropic so a Managed Agent can call internal MCP servers — data warehouses, feature flag services, anything behind the firewall — without exposing those servers to the public internet. The third headline is Auto Mode for Claude Code, which lets Claude make its own permission decisions with built-in safeguards rather than asking for approval at every step (or skipping permissions entirely). Anthropic framed the London announcements as 16 new developer features in total, also surfacing 20+ legal MCP connectors and 12 practice-area plugins aimed at law firms.",
+      "link": "https://claude.com/blog/claude-managed-agents-updates",
+      "why_it_matters": "This is the boring-but-important half of the agent story. The capability has been there for months — what's been blocking real adoption is that most companies can't let an external service touch their internal data. Self-hosted sandboxes plus MCP tunnels are Anthropic's answer to that, and the four launch partners (Cloudflare, Daytona, Modal, Vercel) tell you which side of the infrastructure stack Anthropic thinks matters most: networking, sandboxed execution, and serverless. None of this changes much for someone writing Python on their laptop, but it's worth understanding because it's how 'AI agents' actually move from demo to production at companies that handle anything sensitive. Auto Mode is the more relevant piece for a hobbyist using Claude Code — it's the middle ground between 'approve every tool call' (slow) and '--dangerously-skip-permissions' (risky), letting the model self-govern within guardrails. That tradeoff — autonomy versus visibility — is the actual unsolved problem in agent UX right now, and worth paying attention to as you build with these tools. The 20+ legal connectors are also a quiet signal: Anthropic is going vertical-by-vertical with MCP, not just shipping the protocol and hoping ecosystems form on their own.",
+      "why_it_matters_brief": "Self-hosted sandboxes and MCP tunnels let Claude agents work against private data without it leaving the customer's network — the missing piece for real enterprise rollout.",
+      "source": { "name": "Claude", "type": "scrape", "url": "https://claude.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-20T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-20T17:30:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "The New Stack", "url": "https://thenewstack.io/anthropic-mcp-tunnels-sandboxes/", "take": "Frames MCP Tunnels and self-hosted sandboxes as Anthropic locking down its agent infrastructure for enterprise — the data-stays-on-your-side story that closes a long-standing gap with on-prem buyers." },
+        { "source": "InfoQ", "url": "https://www.infoq.com/news/2026/05/claude-mcp-tunnels/", "take": "Walks through the MCP Tunnels architecture in detail — the lightweight in-network proxy that establishes the outbound tunnel — and why exposing internal MCP servers had been the blocker for regulated industries." },
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/", "take": "Highlights the privacy/security framing: tool execution and private MCP traffic both stay inside customer networks now, with Anthropic only handling orchestration." },
+        { "source": "Anthropic", "url": "https://claude.com/blog/auto-mode", "take": "Anthropic's pitch for Auto Mode in Claude Code as the middle ground between approving every action and skipping permissions entirely." },
+        { "source": "In AI We Trust", "url": "https://inaiwetrust.com/p/16-claude-features-that-change-how-you-build-ai", "take": "Roundup of all 16 new developer features announced at London, including Auto Mode, MCP Tunnels, self-hosted sandboxes, and the legal MCP connector pack." }
+      ]
+    },
+    {
+      "id": "google-antigravity-cli-replaces-gemini-cli-june-18-migration-may-20-2026",
+      "tier": 2,
+      "title": "Antigravity CLI replaces Gemini CLI with a June 18 migration deadline",
+      "summary": "At Tuesday's I/O 2026 developer keynote, Google announced that the Gemini CLI is being retired and replaced by the Antigravity CLI — a new terminal-first agent tool written in Go that ships as part of Google's broader Antigravity 2.0 agent platform. The new CLI preserves the features that mattered most in Gemini CLI — Agent Skills, Hooks, Subagents and Extensions (rebranded as Antigravity plugins) — and adds cross-platform terminal sandboxing, credential masking and hardened Git policies. Pricing-tier customers on free accounts and Google AI Pro/Ultra have until June 18, 2026 to migrate; enterprise Gemini Code Assist licences and API-key users get to keep the Gemini CLI. Antigravity CLI is one of four surfaces in the new platform — the others are the Antigravity 2.0 desktop app, the Antigravity SDK (an open-source Python wrapper around a bundled closed-source Go binary that lets developers host the agent harness on their own infrastructure), and the original Antigravity IDE (a VS Code fork). Gemini 3.5 Flash, the new default model announced at the main keynote a day earlier, is the default model across all four surfaces.",
+      "link": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "why_it_matters": "For someone using Gemini CLI on a free or Pro/Ultra plan, this is a concrete action item — you've got about four weeks to either migrate or accept that your CLI tool will stop working. The bigger story is the consolidation: Google had Gemini CLI, the Antigravity IDE, AI Studio, Vertex Agent Builder, and a half-dozen overlapping developer surfaces. The Antigravity platform with four named surfaces (desktop app, CLI, SDK, IDE) sharing one agent runtime is Google admitting that the sprawl wasn't helping anyone. It also makes the comparison to Claude Code and Cursor sharper — Anthropic and Google are now both making the same bet that the terminal is a primary agent interface, not just one option among many, and competing on which CLI's permission model, sandbox, and plugin ecosystem you'd rather live inside. The Go rewrite is interesting for a Python-first hobbyist for one practical reason: Go binaries are single-file, easy to install, and have no runtime dependency on a particular Python version on your machine. That's the kind of thing CLIs typically need to feel like first-class developer tools.",
+      "why_it_matters_brief": "Gemini CLI is retired in favor of a Go-rewritten Antigravity CLI — free and Pro/Ultra users have until June 18 to migrate, enterprise Code Assist customers keep the old one.",
+      "source": { "name": "Google Developers Blog", "type": "scrape", "url": "https://developers.googleblog.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-20T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-20T17:30:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605", "take": "Reads the move as Google nudging developers off the Gemini brand toward Antigravity as the unified surface, with the June 18 deadline as the forcing function." },
+        { "source": "Virtualization Review", "url": "https://virtualizationreview.com/articles/2026/05/19/google-moves-gemini-cli-into-antigravity-cli-as-agent-platform-expands.aspx", "take": "Frames the CLI swap inside the broader four-surface Antigravity platform — desktop, CLI, SDK, IDE — sharing one underlying agent runtime." },
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/19/google-launches-antigravity-2-0-with-an-updated-desktop-app-and-cli-tool-at-io-2026/", "take": "Notes the Antigravity SDK ships as open-source Python around a closed-source Go binary, letting you self-host the harness Google uses internally." }
+      ]
+    },
+    {
+      "id": "google-ai-studio-android-app-vibe-coding-phone-may-20-2026",
+      "tier": 2,
+      "title": "Google AI Studio lands on Android — vibe-code native Kotlin apps from a phone",
+      "summary": "Google launched a dedicated AI Studio app for Android, available now on the Play Store via pre-registration, that lets users build native Android apps directly on their phone by describing what they want in voice or text. The mobile app brings the full build-mode experience to a handset — code can be iterated and previews rendered in-place — and pairs with the existing web AI Studio, where a new 'Build an Android app' selector turns natural-language prompts into production-quality Kotlin code following current Jetpack Compose patterns, previews them inside an integrated Android emulator, and can deploy to a physically connected Android device via ADB. The first version is focused on lightweight utility apps, AI-backed experiences and hardware-driven apps that use camera, GPS and other device features. AI Studio also generates icons, suggests app personalities, and offers a remix gallery of community-made apps that users can fork and modify. The whole stack runs on Gemini 3.5 Flash, the new default model Google shipped at the main I/O keynote the day before.",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/",
+      "why_it_matters": "The interesting part of this for a hobbyist Python coder is that it's the first time the path from idea to running native mobile app has plausibly collapsed to 'describe it, run it on your phone.' Native Android development has historically been a stack swap — Kotlin, Android Studio, Gradle, the Jetpack Compose API surface, emulator setup — none of which is one weekend's learning curve. Generating Jetpack Compose code from a prompt and running it on a connected phone via ADB is the part that wasn't possible a year ago. The honest caveat: 'production-quality Kotlin' from an LLM is still going to need a human read for anything beyond the lightweight utility apps Google is explicitly targeting at launch. But for a Python person who's been curious about Android — to ship a personal tool that uses the camera or GPS, say — this is the lowest-friction on-ramp that has existed. Worth noting that this is also the second major 'phone is the primary device for building' moment of the week — Anthropic shipped Claude on iPad and is leaning into the same direction, and Google's competing move is to make the phone itself the dev environment.",
+      "why_it_matters_brief": "First plausible path from 'idea' to 'native Android app running on my phone' via prompt — Jetpack Compose Kotlin generated by Gemini 3.5 Flash, with mobile and web build surfaces.",
+      "source": { "name": "Google", "type": "scrape", "url": "https://blog.google" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-20T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-20T17:30:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/19/googles-ai-studio-now-lets-anyone-build-android-apps-in-minutes/", "take": "Pitches the launch as 'anyone can build Android apps in minutes' — the on-ramp framing for non-Android developers who would never set up Android Studio." },
+        { "source": "The New Stack", "url": "https://thenewstack.io/google-ai-studio-android-apps/", "take": "Developer-audience read: focuses on the Jetpack Compose code generation and the ADB-to-device testing flow as the parts that actually unblock non-Android devs." },
+        { "source": "Slashdot", "url": "https://tech.slashdot.org/story/26/05/20/0224236/googles-ai-studio-now-lets-anyone-build-android-apps-in-minutes", "take": "Surfaces the May 20 day-after-keynote reaction thread on the build-an-app-from-your-pocket framing." },
+        { "source": "Beebom Gadgets", "url": "https://gadgets.beebom.com/news/google-launches-ai-studio-app-for-android", "take": "Walks through the mobile app's voice/text prompt flow, the icon/personality auto-generation, and the remix-other-people's-apps gallery." }
+      ]
+    },
+    {
+      "id": "chrome-devtools-mcp-1-0-agent-ready-web-may-2026",
+      "tier": 2,
+      "title": "Chrome DevTools MCP hits 1.0 — coding agents can now drive a live Chrome browser",
+      "summary": "At Google I/O 2026, the Chrome team announced that chrome-devtools-mcp — the Model Context Protocol server that exposes Chrome DevTools to AI coding agents — is now considered a 1.0 release and ready for day-to-day developer use, with first-class support across more than 20 coding agents including Antigravity, Claude Code, Gemini, Cursor and GitHub Copilot. The MCP server lets an agent control and inspect a live Chrome browser the way a human developer would: read console logs, capture network traffic and source-mapped stack traces, walk accessibility trees, run Lighthouse audits, interact with forms, take screenshots and emulate device features. Distribution is via npm under an Apache-2.0 license, and the package has been shipping on a weekly cadence — 43 releases in 7 months — since the original preview. The I/O announcement is paired with a broader Chrome push the team is calling the 'agent-ready web,' which includes 15 new Chrome features around agent interaction, plus a Chrome 149 origin trial for WebMCP, a proposed standard for sites to expose their own MCP tools directly to browser-based agents.",
+      "link": "https://developer.chrome.com/blog/chrome-devtools-mcp",
+      "why_it_matters": "If you've been following how AI coding tools verify their own work, this is the missing piece. Most agents will happily generate web code, but they can't tell if it actually renders correctly, if a network call landed, or if an accessibility violation snuck in — they're working blind once the code leaves the editor. Chrome DevTools MCP gives the agent the same diagnostic surface a human developer uses (console, network, accessibility, Lighthouse), which is what closes the 'is this actually working' loop. For someone writing HTML/CSS/Python, the practical takeaway is that this stops being a Google-only thing — the 20+ agents that already support it include Claude Code, so if you're using Claude Code to write web code, it can now look at your page the same way Chrome DevTools does, not just guess at it. The WebMCP origin trial is the more speculative half: it's an open proposal for any website to advertise MCP tools (think 'this is how an agent buys a ticket on our site') and have Chrome surface those to browser-based agents. Whether that becomes a standard or stays a Google bet is the open question. Either way, the direction the web is being pushed is clearer this week than it has been all year.",
+      "why_it_matters_brief": "Chrome DevTools MCP is now 1.0 and supported by 20+ coding agents — agents can finally see what their own code does in a real browser, not just guess.",
+      "source": { "name": "Chrome for Developers", "type": "scrape", "url": "https://developer.chrome.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-20T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-20T17:30:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "The New Stack", "url": "https://thenewstack.io/google-agent-ready-web/", "take": "Frames the broader 'agent-ready web' push — Chrome DevTools MCP plus WebMCP origin trial — as Google's bet that the browser, not the IDE, is where most agent work happens." },
+        { "source": "Chrome for Developers", "url": "https://developer.chrome.com/blog/chrome-at-io26", "take": "Roundup of all 15 Chrome-at-I/O announcements around agent capabilities — useful as the index page if you want the full Chrome 149 list." },
+        { "source": "ChromeDevTools GitHub", "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp", "take": "The package itself — Apache-2.0, weekly release cadence (43 releases in 7 months), the source-of-truth on what tools the MCP server actually exposes." },
+        { "source": "PPC Land", "url": "https://ppc.land/chrome-149-origin-trial-puts-webmcp-in-developers-hands-at-last/", "take": "Walks through the Chrome 149 origin trial for WebMCP — the proposed standard letting any site expose MCP tools directly to browser-resident agents." }
+      ]
+    },
+    {
+      "id": "xai-grok-skills-persistent-memory-may-18-2026",
+      "tier": 2,
+      "title": "xAI ships 'Skills' for Grok — persistent memory across conversations on web, iOS and Android",
+      "summary": "xAI rolled out Skills, a new persistent-memory feature for Grok, on May 18, 2026, simultaneously across web, iOS and Android. The pitch: teach Grok a task — a personal preference, a formatting rule, a specific workflow — once, and it persists across every subsequent independent conversation rather than needing to be re-prompted at the start of each thread. Each Grok account ships with a set of built-in skills curated by xAI; users can override these with their own custom versions, which always take priority. Skills sits alongside earlier May moves at xAI: Grok Build, a coding-agent product for SuperGrok Heavy ($300/month) that launched May 14; Connectors for deep Workspace, GitHub, Notion and SharePoint integration on May 6; and the Grok Imagine Quality Mode image-generation API also on May 6. xAI has additionally said it will start publishing daily Grok build release notes — moving away from the silent-update pattern that made earlier Grok behavior changes hard to track.",
+      "link": "https://x.ai/news",
+      "why_it_matters": "Persistent memory is the feature every assistant has been quietly racing to ship — ChatGPT has had it for a while, Claude added it earlier this year, and Grok was the holdout. Skills is the catch-up, but the design choice worth noting is that xAI is leading with built-in skills shipped by default (every account starts with them) rather than starting from a blank slate the way ChatGPT did. That's a small-but-real philosophy difference — xAI is opting users in to behavior shaping by default, where OpenAI made users explicitly create memories. Whether that's good UX or quiet vendor lock-in is the kind of question worth holding in mind as these features become standard. The bigger picture is that the gap between Grok and the other frontier assistants on day-to-day usability is closing fast (memory, connectors, an image API, now a coding agent in beta), and xAI committing to daily release notes is a real change — most labs have been treating their models like silent SaaS upgrades and getting away with it. For someone tracking how these tools actually behave week-to-week, that visibility matters more than any single feature.",
+      "why_it_matters_brief": "Grok gets persistent memory across conversations — Skills ships with built-in defaults plus user overrides, closing the last major usability gap with ChatGPT and Claude.",
+      "source": { "name": "xAI", "type": "scrape", "url": "https://x.ai" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-20T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-20T17:30:00Z", "by": "digest", "change": "created" }
+      ],
+      "takes": [
+        { "source": "WEEX", "url": "https://www.weex.com/news/detail/xai-under-musk-launches-skills-lt94fq15fjos3zoanyx37l92", "take": "Reports the simultaneous web/iOS/Android rollout and details the user-overrides-built-ins priority model." },
+        { "source": "Basenor", "url": "https://www.basenor.com/blogs/news/xai-to-publish-daily-grok-build-release-notes", "take": "Covers xAI's new commitment to daily Grok build release notes — the visibility-into-changes piece that has been missing from frontier-model deployment." },
+        { "source": "DevOps.com", "url": "https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/", "take": "Surfaces the broader May xAI cadence — Skills, Grok Build for SuperGrok Heavy, Connectors, Imagine Quality Mode — as the catch-up sprint that is closing the usability gap with the frontier labs." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}

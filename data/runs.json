@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-20T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-20T17:00:00Z",
+      "ended_at": "2026-05-20T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36500,
+        "curation": 6500,
+        "output_write": 1500
+      },
+      "fetches_made": 14,
+      "items_input": 9,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-20-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch left untried — every run since May 5 has recorded consistent HTTP 403 on lab/news domains; entire sweep done via WebSearch (14 queries). All hero_image null for the same reason. Today's am file has 6 items (the I/O keynote, Karpathy-to-Anthropic, Fedora AI desktop, OpenAI C2PA+SynthID, OpenAI+Dell Codex on-prem, RL reward-hacking benchmark) — all excluded by the digest promotion rule; none materially deepened during the day to warrant promotion (Karpathy commentary was opinion blogs without new facts; I/O coverage continued but the main story was already comprehensive in the am file). Five fresh, uncovered items written: (1) anthropic-code-with-claude-london-self-hosted-sandboxes-mcp-tunnels-may-20-2026 — Tier 1 / Global; Anthropic's two-day developer event (May 19-20) shipped self-hosted sandboxes (public beta, with Cloudflare/Daytona/Modal/Vercel as launch partners), MCP Tunnels (research preview, private MCP servers via in-network proxy), Auto Mode for Claude Code, and 20+ legal MCP connectors — confirmed by Claude blog, The New Stack, InfoQ, 9to5Mac. (2) google-antigravity-cli-replaces-gemini-cli-june-18-migration-may-20-2026 — Tier 2 / Global; Gemini CLI retired in favor of Antigravity CLI (Go-rewritten), free and AI Pro/Ultra users have until June 18, 2026 to migrate, enterprise Code Assist customers keep it; confirmed by Google Developers Blog, The Register, Virtualization Review, TechCrunch. (3) google-ai-studio-android-app-vibe-coding-phone-may-20-2026 — Tier 2 / Global; AI Studio for Android launches with vibe-coding native Kotlin apps via Jetpack Compose, mobile-app build mode plus web 'Build an Android app' selector, deploys to physical devices via ADB; confirmed by Google blog, TechCrunch, The New Stack, Slashdot (May 20). (4) chrome-devtools-mcp-1-0-agent-ready-web-may-2026 — Tier 2 / Global; chrome-devtools-mcp announced as 1.0-ready at I/O 2026, first-class support across 20+ coding agents (Antigravity, Claude Code, Gemini, Cursor, Copilot), part of the broader 'agent-ready web' push including 15 Chrome agent features and WebMCP origin trial in Chrome 149; confirmed by developer.chrome.com, The New Stack, ChromeDevTools GitHub, PPC Land. (5) xai-grok-skills-persistent-memory-may-18-2026 — Tier 2 / US; Grok ships Skills (persistent memory across conversations) on May 18 across web/iOS/Android, with built-in defaults plus user overrides, alongside the broader May xAI sprint (Grok Build $300/mo coding agent May 14, Workspace/GitHub/Notion/SharePoint Connectors May 6, Imagine Quality Mode API May 6) and a new commitment to daily Grok build release notes; confirmed by xAI news, WEEX, Basenor, DevOps.com. Items considered and declined: Karpathy-Anthropic commentary blogs (no new facts beyond am file); Anthropic-PwC partnership (announced earlier in May, already absorbed); Microsoft MDASH security harness (May 12, prior coverage); SocialReasoning-Bench from Microsoft Research (May 11, prior cycle); Notion Custom Agents in Slack (May 1, prior cycle); Hugging Face ml-intern (April 21, stale). Honest 5-item digest on a day with one big confirmed story (Anthropic London) and several solid Tier-2 follow-throughs from yesterday's I/O developer keynote."
+    },
+    {
       "run_id": "2026-05-20T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
