@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-21T11:45:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-21T11:15:00Z",
+      "ended_at": "2026-05-21T11:45:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 23000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18500,
+        "curation": 3000,
+        "output_write": 1000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch blocked (HTTP 403, consistent with all runs since May 5); sweep done via WebSearch (9 queries). Overnight Asia/Europe cycle was quiet — no major model releases from Chinese, European, or Japanese labs on May 21 morning; DeepSeek V4 was April 24, Kimi K2.6 April 20, Mistral Medium 3.5 April 29, all stale. No I/O follow-up drops in the 06:18-11:15 UTC window. Two gap items added that slipped through all prior sweeps this week: (1) cursor-composer-2-5-coding-model-may-18-2026 (Tier 2, US) — Cursor's first in-house AI coding model, released May 18, built on Moonshot AI's open-source Kimi K2.5 checkpoint with heavy post-training (textual feedback RL, 25× synthetic tasks, MoE infra). 79.8% SWE-Bench Multilingual and 63.2% CursorBench v3.1 — benchmark parity with Claude Opus 4.7 and GPT-5.5 at $0.50/$2.50 per million tokens (standard tier), roughly 10× cheaper. Multiple independent reviewers confirmed parity. Missed by the May 18 pm digest (focused on I/O preview, Musk-Altman verdict, Cursor cloud agent dev environments — note: that Cursor item covers cloud dev environments, not the Composer model), by the May 19 enrichment (those 3 items), and by all subsequent sweeps through May 21 enrichment. (2) pope-leo-xiv-magnifica-humanitas-ai-encyclical-may-2026 (Tier 3, Global) — Pope Leo XIV's first encyclical Magnifica Humanitas on AI and human dignity drops May 25; Christopher Olah (Anthropic co-founder, head of interpretability research) is a speaker at the Vatican presentation; encyclical signed May 15 (135-year Rerum Novarum parallel); US political dimension (Trump admin restrictions on Anthropic). Announced/reported May 15-18 per Vatican News, America Magazine, PBS NewsHour, Washington Post. Not covered in any prior snapshot. Items considered and declined: Cohere acquires Reliant AI (May 19, flagged by enrichment) — healthcare-vertical enterprise deal explicitly declined by enrichment for low learning value for Gabe's stack; refreshed assessment agrees; declining. ChatGPT Ads Manager broader rollout — Axios URL confirms May 5 announcement, well outside the 5-hour window. Optional Tier-1 re-pass: no Tier-1 items flagged overnight chatter since 06:18 UTC; all 5 enrichment items stable; no refinements made. All hero_image null (WebFetch blocked, consistent with all prior runs)."
+    },
+    {
       "run_id": "2026-05-21T06:18:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-21-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-21",
-  "generated_at": "2026-05-21T06:18:00Z",
-  "generated_at_local": "2026-05-21T02:18:00-04:00",
+  "generated_at": "2026-05-21T11:45:00Z",
+  "generated_at_local": "2026-05-21T07:45:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-21T06:18:00Z", "duration_ms": 360000 }
+    { "phase": "enrichment", "ran_at": "2026-05-21T06:18:00Z", "duration_ms": 360000 },
+    { "phase": "refresh",    "ran_at": "2026-05-21T11:45:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 1, "2": 4, "3": 0 },
+  "tier_counts": { "1": 1, "2": 5, "3": 1 },
   "items": [
     {
       "id": "anthropic-code-with-claude-london-self-hosted-sandboxes-mcp-tunnels-may-20-2026",
@@ -143,6 +144,58 @@
         { "source": "Social Media Today", "url": "https://www.socialmediatoday.com/news/grok-adds-conversation-memory-to-customize-future-responses/745718/", "take": "Frames Skills as Grok adding conversation memory to customize future responses — the straightforward catch-up to ChatGPT and Claude memory." },
         { "source": "Basenor", "url": "https://www.basenor.com/blogs/news/xai-to-publish-daily-grok-build-release-notes", "take": "Covers xAI's new commitment to daily Grok build release notes — the visibility-into-changes piece that has been missing from frontier-model deployment." },
         { "source": "DevOps.com", "url": "https://devops.com/xai-enters-the-coding-agent-race-with-grok-build/", "take": "Surfaces the broader May xAI cadence — Skills, Grok Build for SuperGrok Heavy, Connectors, Imagine Quality Mode — as the catch-up sprint that is closing the usability gap with the frontier labs." }
+      ]
+    },
+    {
+      "id": "cursor-composer-2-5-coding-model-may-18-2026",
+      "tier": 2,
+      "title": "Cursor ships Composer 2.5 — its own coding model, matching Opus 4.7 at one-tenth the standard price",
+      "summary": "On May 18, 2026, Cursor released Composer 2.5, its first in-house AI coding model trained specifically for how its agent loop works. The model is built on Moonshot AI's open-source Kimi K2.5 checkpoint with extensive post-training: 25× more synthetic tasks than Composer 2 (including 'feature deletion' rebuild puzzles), textual feedback RL that provides localized hints at failed tool calls rather than only end-of-run reward signals, and MoE-scale infrastructure using sharded Muon optimizers and dual-mesh HSDP. The result is a 79.8% score on SWE-Bench Multilingual (up from 73.7% on Composer 2) and 63.2% on Cursor's own CursorBench v3.1 — both at parity with Claude Opus 4.7 and GPT-5.5 on those benchmarks. Terminal-Bench improved from 61.7% to 69.3%. Standard tier pricing is $0.50 per million input / $2.50 per million output tokens — roughly one-tenth the cost of comparable frontier models; the fast tier (default for interactive sessions inside Cursor) is $3.00 in / $15.00 out. Composer 2.5 is tuned specifically for the tasks that happen inside Cursor's agent mode — file edits, terminal commands, and MCP-style tool calls — and is not designed for general-purpose chat. Multiple independent reviewers confirmed benchmark parity with flagship frontier models, with some noting slightly faster response times in interactive use compared with API routing to Anthropic or OpenAI.",
+      "link": "https://cursor.com/blog/composer-2-5",
+      "why_it_matters": "Cursor is no longer just a model-agnostic IDE that routes your prompts to Anthropic, OpenAI, or Google — it now has its own model, trained specifically for how its agent loop works. That's a real shift. When an IDE trains its model on its own synthetic tasks and benchmarks (CursorBench), the model gets better at tasks that happen inside that specific tool while potentially drifting from tasks outside it. This is what vertical specialization looks like in practice: not a general-purpose model competing with Claude or GPT-5.5 across every task, but a tool-specific model that's very good at the one thing it was built for. The pricing is the immediate practical fact: if you're paying for Opus 4.7 or GPT-5.5 API calls routed through Cursor, Composer 2.5 at $0.50/M standard is a significant cost reduction for roughly equivalent agentic coding quality. The Kimi K2.5 base is also worth noting — that's Moonshot AI's model, a Chinese open-source checkpoint, which Cursor fine-tuned heavily with its own training regime. The broader picture: the IDE layer is becoming a place where models get specialized and trained on tool-specific data, not just selected from a frontier lab menu. Cursor's model economics and training choices are now a thing worth tracking alongside the lab releases — because if enough users switch to Composer 2.5, that's real API revenue shifting away from Anthropic and OpenAI.",
+      "why_it_matters_brief": "Cursor trained its own coding model on Kimi K2.5 — Composer 2.5 matches Claude Opus 4.7 on SWE-Bench at one-tenth the standard-tier price, and Cursor now competes on model economics, not just UX.",
+      "source": { "name": "Cursor", "type": "scrape", "url": "https://cursor.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-21T11:45:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T11:45:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Cursor Blog", "url": "https://cursor.com/blog/composer-2-5", "take": "The canonical launch post — benchmark numbers, training methodology (textual feedback RL, 25× synthetic tasks, MoE infra), and the pricing table." },
+        { "source": "TechTimes", "url": "https://www.techtimes.com/articles/316917/20260520/cursor-composer-25-matches-claude-opus-47-coding-benchmarks-one-tenth-cost.htm", "take": "Benchmarks Composer 2.5 directly against Claude Opus 4.7 and GPT-5.5 — finds parity on SWE-Bench Multilingual and CursorBench v3.1 at roughly one-tenth the cost per token." },
+        { "source": "DevOps.com", "url": "https://devops.com/cursors-composer-2-5-brings-smarter-more-reliable-ai-coding-agents/", "take": "Frames the launch as Cursor's bet that specialized model training for a specific tool loop produces better results than routing to frontier models — and at far lower cost." },
+        { "source": "PrimeAIcenter", "url": "https://primeaicenter.com/cursor-composer-2-5-review/", "take": "Real-world testing review: confirms benchmark parity in practice and notes slightly faster response times for interactive use compared with frontier API routing." }
+      ]
+    },
+    {
+      "id": "pope-leo-xiv-magnifica-humanitas-ai-encyclical-may-2026",
+      "tier": 3,
+      "title": "Pope Leo XIV's AI encyclical 'Magnifica Humanitas' drops May 25 — with Anthropic's Christopher Olah on stage",
+      "summary": "Pope Leo XIV's first encyclical letter, Magnifica Humanitas ('Magnificent Humanity'), on safeguarding the human person in the age of artificial intelligence, will be published May 25, 2026 — four days from now. Leo signed the document on May 15, 135 years to the day after his namesake Pope Leo XIII signed Rerum Novarum, which addressed workers' rights at the height of the Industrial Revolution; the historical parallel is deliberate. The Vatican has invited Christopher Olah — co-founder of Anthropic and head of the lab's interpretability research team, the group working to understand what is actually happening inside large language models — to speak at the encyclical's formal presentation on May 25 at the Vatican's Synod Hall at 11:30am. Breaking with precedent, Pope Leo himself will also speak at the presentation and give a final blessing. Anna Rowlands, who teaches ethics and political theology at Durham University and was also a panelist at the presentation of Pope Francis's 2020 encyclical Fratelli Tutti, is the other external speaker. The Vatican's choice of Olah specifically — rather than a policy or ethics figure — signals that the encyclical is engaging with safety and interpretability at a technical level. The announcement carries political context in the US: the Trump administration cut Anthropic off from federal contracts and imposed other restrictions over disagreements about military AI access; Olah's Vatican appearance alongside the Pope is being read in Washington as an implicit rebuke of that stance.",
+      "link": "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html",
+      "why_it_matters": "Papal encyclicals are one of the few remaining forms of communication that command attention simultaneously across the political, policy, and public-intellectual spheres — and this one is timed to drop four days from now, in the middle of an already-busy AI week. The Rerum Novarum parallel is intentional: that encyclical didn't change the Industrial Revolution, but it shaped how Catholic social thought (and a lot of secular political thought that drew on it) framed the relationship between capital, labor, and human dignity for the next century. Leo XIV is explicitly planting Magnifica Humanitas in that lineage. The Olah choice is the most telling detail. Anthropic's interpretability team studies whether AI models are behaving consistently with their stated goals — not whether AI is good for society in the abstract, but whether the thing running inside the model matches what the model says it's doing. Putting Olah on stage rather than an ethicist or a governance figure suggests the encyclical is going to engage with that technical question directly: can we actually know what these systems are doing? The political dimension is real too — Olah's presence in Rome while Anthropic is under US federal restrictions is a visible marker of Anthropic's positioning, placing its safety research on the same stage as a once-in-a-generation papal document on the same subject.",
+      "why_it_matters_brief": "The first papal encyclical on AI drops May 25 with Anthropic's Christopher Olah — head of interpretability research — on stage, the clearest signal yet that the Vatican is engaging with the technical safety question, not just the ethics one.",
+      "source": { "name": "Vatican News", "type": "scrape", "url": "https://www.vaticannews.va" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-21T11:45:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T11:45:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Vatican News", "url": "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html", "take": "Official Vatican announcement — encyclical title, May 25 release, presentation format with the Pope himself speaking, and the list of external speakers." },
+        { "source": "America Magazine", "url": "https://www.americamagazine.org/vatican-dispatch/2026/05/18/pope-leo-encyclical-artifical-intelligence-anthropic/", "take": "In-depth Vatican dispatch: the Rerum Novarum historical parallel, Olah's role as the technical AI voice at the presentation, and the significance of an American-born pope taking AI head-on as his first major document." },
+        { "source": "PBS NewsHour", "url": "https://www.pbs.org/newshour/world/pope-leo-xiv-to-launch-his-first-encylical-a-document-on-artificial-intelligence-with-anthropics-co-founder", "take": "Surfaces the US political dimension: Olah's Vatican appearance alongside the Pope coming while the Trump administration has restricted Anthropic from federal contracts." },
+        { "source": "National Catholic Reporter", "url": "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder", "take": "Notes the choice of Olah (interpretability/safety researcher) over a policy or ethics figure as the key signal about the encyclical's likely technical framing." }
       ]
     }
   ],
