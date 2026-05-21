@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-21T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-21T06:13:00Z",
+      "ended_at": "2026-05-21T06:18:00Z",
+      "wall_time_ms": 300000,
+      "tokens_used": 30000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 6000,
+        "output_write": 1400
+      },
+      "fetches_made": 8,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start and again returned HTTP 403 (anthropic.com/news), consistent with every run since May 5; all work done via WebSearch (7 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-20-pm.json had 5 items, all KEPT + ENRICHED, 0 dropped — the digest shipped them only ~12h earlier and all are mid-I/O-week / Code-with-Claude-week stories still developing. (1) anthropic-code-with-claude-london-... — added that London was the European leg of a multi-city week (SF/London/Tokyo), that demand forced a second London day (May 20) of hands-on sessions for indie devs/early-stage founders, and the attendee 'features not a model' framing tying Auto Mode/Routines/Work Trees/MCP Tunnels/self-hosted sandboxes into one trust-it-to-run-unattended story; tightened MCP-tunnel detail (single outbound end-to-end-encrypted connection, no inbound firewall rules); updated why_it_matters + brief; added The Decoder and Every takes. Held back single-source aggregator specifics ('Dreaming/Outcomes/Claude Finance' feature list from one blog) to avoid synthesizing unconfirmed claims. (2) google-antigravity-cli-... — added the GitHub developer backlash on lead-PM Dmitry Lyalin's migration thread (discussion #27274): Antigravity CLI is not open source (vs Gemini CLI's open codebase), users hitting weekly quota after a couple of requests, volunteer contributors questioning unpaid work feeding a closed enterprise codebase; updated why_it_matters + brief to lead on the openness/trust angle; added GitHub-discussion and TechRadar takes. (3) google-ai-studio-android-app-... — added one-click publish to Play Internal Test Track via a connected Play Developer account, the fully-native (not web-wrapper) detail with offline/background-services/hardware sensors (GPS/Bluetooth/NFC/camera/accelerometer), and the companion Android Studio iOS-porting move; updated why_it_matters + brief; added Android Developers Blog and 9to5Google takes. (4) chrome-devtools-mcp-1-0-... — added the WebMCP trajectory (behind-a-flag prototype in Chrome 146 to public Chrome 149 origin trial, companion docs May 18), the sibling agent-ready-web features (Modern Web Guidance, HTML-in-Canvas API), and built-in-Chrome-MCP-server vs Chrome-DevTools-CLI distribution; switched link to the canonical devtools-for-agents-v1 1.0 post; updated why_it_matters + brief; added the 1.0 Chrome for Developers take. (5) xai-grok-skills-... — added the Grok 4.3 attribution, the long-horizon-agentic-coding race framing (alongside same-week Gemini 3.5 Flash and Z.ai GLM-5.1), and Musk confirming the daily-release-notes cadence shift from ~2 updates/week; updated why_it_matters + brief; added Social Media Today take. Sub-task 2 (late-breaking, last-12h Tier-1 sweep): 0 items added. The overnight window (May 20 ~18:00 UTC onward) was quiet — no new frontier model release; Gemini 3.5 Pro remains 'next month', DeepSeek V4 is April 24, MiniMax M2.7 Highspeed is May 18 (outside the 12h window). Cohere's acquisition of Reliant AI (sovereign enterprise AI for biopharma; Cohere's second buy in a month after Aleph Alpha) is a genuine uncovered story but dated May 19 (outside the 12h window) and a healthcare-vertical enterprise deal with low learning value for Gabe's HTML/CSS/Python broadening goal — considered and declined, noted here for the next run. Final am file: 5 items, tier counts 1:1 / 2:4 / 3:0."
+    },
+    {
       "run_id": "2026-05-20T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
