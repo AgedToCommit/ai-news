@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-22T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-22T06:05:00Z",
+      "ended_at": "2026-05-22T06:18:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 9000,
+        "output_write": 1400
+      },
+      "fetches_made": 10,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; all work done via WebSearch (9 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-21-pm.json had 4 items, all KEPT + ENRICHED, 0 dropped. (1) qwen3-7-max-... — added the 1M-token context window, the quiet May 14 LM Arena debut (5 days before the summit), the more precise public Text Arena placement (#13 overall, Elo ~1,475, leading Chinese models but behind top US systems — nuancing the 'tops Arena' claim), the self-reported caveat on the headline 35-hour kernel run (1,158 tool calls / 432 evals / ~10x speedup, not yet independently reproduced), the AA-Omniscience abstention/recall trade-off, and the Qwen3.6 Max 51.8 baseline; updated why_it_matters + brief; added MarkTechPost and CryptoBriefing takes. (2) anthropic-first-profitable-quarter-... — added that the $559M operating profit lands ~2 years ahead of the prior 'not before 2028' projection, clarified the $1.25B/month deal is now with SpaceX for the Colossus cluster (via SpaceX's Feb 2026 all-stock xAI acquisition, detailed in the SpaceX S-1), and folded in Ed Zitron's skeptical 'profitability swindle' counter-read; updated why_it_matters + brief; added wheresyoured.at take. (3) openai-confidential-ipo-filing-... — added the parallel SpaceX S-1 (publicly circulated May 20, confidentially submitted Apr 1; $18.67B combined SpaceX-xAI 2025 revenue; ~$135B combined new equity supply), the Labor Day-Thanksgiving 2026 listing window, the Axios 'two hours that changed AI' framing, and the still-expected-not-confirmed filing status (today, Fri May 22, is the earliest possible file date and it had not landed as of this run); updated title/summary/why_it_matters/brief; added Axios and Fortune takes. (4) hark-brett-adcock-... — expanded the syndicate (ARK Invest, Greycroft, Align Ventures, Prime Movers Lab, Tamarack Global) and noted Adcock's Archer Aviation history alongside Figure; added BusinessWire take. Sub-task 2 (late-breaking, last-12h Tier-1 sweep): 1 item added — openai-model-disproves-erdos-unit-distance-conjecture-may-2026 (Tier 1, Global). An internal OpenAI general-purpose reasoning model autonomously disproved Paul Erdős's 1946 planar unit-distance conjecture by routing it through algebraic number theory (infinite class field towers), finding an infinite family of arrangements beating the square-grid bound; the proof was externally verified by Fields medalist Tim Gowers; OpenAI says the model was not math-specialized or scaffolded; TechCrunch's 'for real this time' framing flags the credibility-vs-prior-overclaims angle. Announced May 20 (OpenAI blog, TechCrunch, Interesting Engineering, Slashdot, YourStory) — a genuine gap item the May 20 pm digest, the May 21 enrichment/refresh, and the May 21 pm digest all missed entirely; added despite being just outside the strict 12h window because it's the single most significant uncovered AI-capability story of the cycle and high learning value for Gabe. Considered and declined: Trump AI executive-order signing (reported voluntary framework for labs to share new models with the government 90 days before release) — genuinely newsworthy but surfaced only in a single aggregated summary this run, so declined rather than synthesize under-verified specifics; noted here for the next run. No new frontier model release in the overnight window (Gemini 3.5 Pro still 'next month', DeepSeek V4 Apr 24, Qwen3.7-Max is the May 20 item already carried). Final am file: 5 items, tier counts 1:3 / 2:0 / 3:2."
+    },
+    {
       "run_id": "2026-05-21T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
