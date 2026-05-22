@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-22T17:28:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-22T17:05:00Z",
+      "ended_at": "2026-05-22T17:28:00Z",
+      "wall_time_ms": 1380000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 33000,
+        "curation": 6300,
+        "output_write": 1500
+      },
+      "fetches_made": 30,
+      "items_input": 14,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-22-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; entire sweep done via WebSearch (29 queries). All hero_image null for the same reason. Today's 2026-05-22-am.json has 6 items (Erdos unit-distance disproof, Qwen3.7-Max, Anthropic first profitable quarter, OpenAI confidential IPO + SpaceX S-1, Hark $700M Series A, Trump scraps AI executive order) — all excluded by the digest promotion rule; none materially deepened in the afternoon window (the IPO item was already updated to 'filed' by the 11:20 refresh, and the post-refresh window surfaced no new substantive developments on any of the six), so no promotions. Genuinely quiet post-I/O Friday: nearly every big story of the day is already comprehensively covered in the am section. Three fresh, uncovered items written. Tier 2: (1) datasette-agent-simon-willison-may-2026 (Global) — Simon Willison's new Datasette Agent (0.1a1 May 14 through 0.1a3 May 21), a model-agnostic AI assistant for his Python/SQLite Datasette tool that turns plain-English questions into SQLite queries, built on his `llm` library, demo on Gemini 3.1 Flash-Lite, extensible via plugins (datasette-agent-charts May 20-21 via Observable Plot, openai-imagegen, sprites sandbox); seed-list creator, strong Gabe fit, verified via simonwillison.net + substack + Mastodon. (2) vercel-claude-managed-agents-sandbox-may-2026 (US) — Vercel shipped support to run Claude Managed Agents' self-hosted sandboxes on Vercel infra, one isolated Firecracker microVM per session, credentials brokered at the firewall (key never enters the VM), deny-by-default egress; a concrete worked example of the sandbox-the-agent pattern. Builds on the mid-May Anthropic self-hosted-sandbox launch (covered in 2026-05-20-pm) but is a distinct, uncovered partner implementation with new technical substance (the 'how'), different canonical URL (vercel.com/changelog); confirmed via Vercel changelog + 9to5Mac (May 19) + michaellivs.com comparison. Tier 3: (3) state-ai-legislation-surge-chatbot-bills-may-2026 (US) — pairs with the am Trump-EO item: as federal oversight retreats, ~78 state chatbot bills are alive across 27 states; concrete recent actions include Georgia SB 540 (signed), Colorado AI Act repeal/replace + chatbot + 2 health-care AI bills, California SB 1000 out of Senate Appropriations (17 AI bills past the May 15 fiscal deadline), and NY Assembly's AI Training Data Transparency Act; verified via Transparency Coalition, Troutman, Cooley, Lexology. Items considered and declined: Novo Nordisk-OpenAI partnership (April 14, stale; mis-attributed to May 22 by an aggregator); JPMorgan $19.8B AI 'core infrastructure' budget (February investor day, stale); OpenAI acqui-hire of Hiro Finance (April 13, stale, and overlaps the covered May-15 ChatGPT personal-finance item); Cursor marketplace plugins (launched Feb 17 / May 1 team-marketplace update, stale); NVIDIA Alpamayo/Nemotron open models (CES, January, stale); Mistral/Cohere (no new May release); xAI Grok 4.3/Skills/Connectors/Build (May 4-18, already covered); LlamaIndex template for Google's Agents API (May 20, too small/derivative); ServiceNow Build Agent GA, Honeycomb agent observability, TD Bank agentic mortgage, Bristol Myers Squibb Claude Enterprise, Shield AI $1.5B, Martha Stewart's Hint, AMI Labs/LeCun $1B (enterprise-vertical or off-core / low learning value for Gabe's HTML/CSS/Python broadening goal); Simon Willison 'last six months in LLMs in five minutes' (May 19 PyCon talk, a retrospective rather than news and a second Willison item — declined to keep the digest fresh and avoid doubling one source); Microsoft/Browserbase 'Building Verifiers for Computer Use Agents' (arXiv April 5, stale). No fresh frontier model dropped in the window (Gemini 3.5 Flash is the I/O/covered release; no new DeepSeek/Kimi/Mistral/Meta/Qwen-open drop). Honest 3-item digest (0 Tier-1, 2 Tier-2, 1 Tier-3) on a quiet post-I/O Friday, deliberately filling the am file's zero-Tier-2 gap with two developer-tooling items in Gabe's wheelhouse; no padding or duplication."
+    },
+    {
       "run_id": "2026-05-22T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
