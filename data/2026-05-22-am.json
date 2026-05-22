@@ -1,0 +1,149 @@
+{
+  "snapshot_id": "2026-05-22-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-22",
+  "generated_at": "2026-05-22T06:12:00Z",
+  "generated_at_local": "2026-05-22T02:12:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-22T06:12:00Z", "duration_ms": 600000 }
+  ],
+  "tier_counts": { "1": 3, "2": 0, "3": 2 },
+  "items": [
+    {
+      "id": "openai-model-disproves-erdos-unit-distance-conjecture-may-2026",
+      "tier": 1,
+      "title": "An OpenAI model disproved an 80-year-old geometry conjecture on its own — and mathematicians checked the proof",
+      "summary": "OpenAI said on May 20 that an internal general-purpose reasoning model autonomously disproved a long-open problem in discrete geometry: Paul Erdős's planar unit distance conjecture, untouched since 1946. The question sounds simple — if you scatter n points on a flat plane, how many pairs can sit exactly one unit apart? — but for nearly 80 years mathematicians believed the best arrangements looked roughly like square grids. Rather than tweaking known grids, the model routed the problem through algebraic number theory (specifically infinite class field towers) and found an infinite family of point arrangements that produce significantly more unit-distance pairs than the grid, breaking the assumed bound. OpenAI stresses the model was not trained specifically for mathematics and was not scaffolded to search through proof strategies — it worked the problem as a general reasoner. The proof was verified by external mathematicians, including Fields medalist Tim Gowers. TechCrunch's headline — 'for real this time' — nods to a string of earlier, overstated AI-does-math claims, which is why the independent, named verification is the load-bearing detail here.",
+      "link": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "why_it_matters": "This is a different kind of AI milestone than 'model X tops benchmark Y.' A benchmark measures performance on problems with known answers; here a general-purpose reasoning model — not a math-specific system, and not hand-held through a search of proof strategies — produced a genuinely new result that no human had found, and it was checked and confirmed by professional mathematicians including a Fields medalist (the field's rough equivalent of a Nobel). The long-assumed best answer to the problem was a square grid; the model found a whole family of arrangements that beat it by connecting the geometry to a corner of number theory most people would never link to it. The 'for real this time' in the coverage is worth noticing too — there's been a run of overstated AI-cracks-math claims, so the fact that this one shipped with external, named verification is what makes it credible rather than a press release. For a hobbyist there's nothing to install, but it's a concrete data point on what 'reasoning' models can now do beyond writing code and summarizing text: occasionally, original work that holds up to expert scrutiny.",
+      "why_it_matters_brief": "An internal OpenAI model disproved an 80-year-old Erdős conjecture on its own — verified by a Fields medalist, and the first major open math problem cracked autonomously by a general-purpose model.",
+      "source": { "name": "OpenAI", "type": "scrape", "url": "https://openai.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-22T06:12:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-22T06:12:00Z", "by": "enrichment", "change": "created (late-breaking gap item — May 20 announcement missed by the May 20-21 digest/enrichment/refresh sweeps)" }
+      ],
+      "takes": [
+        { "source": "TechCrunch", "url": "https://techcrunch.com/2026/05/20/openai-claims-it-solved-an-80-year-old-math-problem-for-real-this-time/", "take": "Frames it as 'for real this time' — credible because the result came with external verification, unlike a string of earlier overstated AI-math claims." },
+        { "source": "Interesting Engineering", "url": "https://interestingengineering.com/ai-robotics/openai-paul-erdos-geometry-problem-cracked", "take": "Walks through the deep-number-theory route the model took to the disproof rather than iterating on the classic square-grid construction." },
+        { "source": "Slashdot", "url": "https://science.slashdot.org/story/26/05/21/0351218/openai-claims-it-solved-an-80-year-old-math-problem", "take": "Aggregates the skeptical-but-convinced reception, centering on the role of Fields medalist Tim Gowers in checking the proof." }
+      ]
+    },
+    {
+      "id": "qwen3-7-max-alibaba-full-stack-agentic-may-20-2026",
+      "tier": 1,
+      "title": "Alibaba unveils Qwen3.7-Max — top Chinese model on the Artificial Analysis index, plus a homegrown AI chip",
+      "summary": "At the 2026 Alibaba Cloud Summit on May 20, Alibaba revealed Qwen3.7-Max, the new flagship of its Qwen line and the headline of a wider 'full-stack AI upgrade for the agentic era.' The model is positioned for long-horizon agent work with a 1M-token context window, and Alibaba says it can run continuously for up to 35 hours and chain over 1,000 tool calls without performance degradation, aimed at code generation/debugging, office-workflow automation, and multi-step tasks. On third-party measures it is the strongest Chinese model to date — 56.6 on the Artificial Analysis Intelligence Index (fifth overall, ahead of Google's just-shipped Gemini 3.5 Flash, and up 4.8 points from Qwen3.6 Max Preview's 51.8), a GPQA Diamond of 92.4 (edging Claude Opus 4.6's 91.3) and 41.4 on Humanity's Last Exam (vs Opus 4.6's 40.0). Two Preview versions (Max and Plus) quietly appeared on LM Arena on May 14, five days before the summit and with no announcement; on the public Text Arena leaderboard the Max-Preview sits at Elo ~1,475 (#13 overall — #7 Math, #9 Expert Prompts/Software, #10 Coding), leading every other Chinese model while trailing the top US frontier systems. The headline 35-hour agent demo (a self-reported run that executed 1,158 tool calls and 432 kernel evaluations, iterating through five architectural redesigns to a ~10x speedup over a reference Triton kernel) has not yet been independently reproduced, and on the AA-Omniscience factual benchmark the model abstained far more (attempt rate fell from 67.3% to 48.0%), hallucinating less but also recalling fewer facts. Qwen3.7-Max is proprietary (the Max tier is served via Alibaba Cloud and the Qwen chatbot, not released as open weights, unlike the smaller open Qwen3.6 models). The model was one piece of a stack-wide announcement: Alibaba also showed the Panjiu AL128 Supernode Server for large-scale agent inference and training, and — through its T-Head silicon arm — the Zhenwu M890, a new AI training/inference processor with high-capacity memory, strong inter-chip bandwidth and native FP4 precision support.",
+      "link": "https://www.alibabacloud.com/blog/alibaba-announces-comprehensive-full-stack-ai-upgrade-for-the-agentic-era_603149",
+      "why_it_matters": "Two things make this worth a look beyond 'another model topped a leaderboard.' First, the gap between Chinese frontier models and the US labs is now measured in fractions of a point on hard reasoning benchmarks — Qwen3.7-Max edging Claude Opus 4.6 on GPQA and Humanity's Last Exam is the kind of result that was a clear US lead six months ago — though the picture is more mixed than the headline: on the public Text Arena it's still #13, leading Chinese models but behind the top US ones, and its flashiest claim (a 35-hour self-coding run) is so far self-reported. Second, and more interesting for someone trying to understand the whole stack rather than just the chat box: Alibaba announced the model, the server it runs on, and the chip inside that server in the same breath. The Zhenwu M890 with native FP4 support is the part to notice — FP4 is a 4-bit number format that lets you run far more of a model per unit of memory and power, and a Chinese-designed training chip is a direct response to US export controls cutting off NVIDIA hardware. You don't need to buy any of this to benefit; the practical downstream effect for a hobbyist is cheaper API access and more open-ish models to experiment with, because this kind of vertical competition is what's been driving inference prices down all year. It also reframes 'Qwen' for anyone who only knows the small open models you can run locally — the Max tier is the closed, frontier-chasing sibling, and it's now genuinely close to the top.",
+      "why_it_matters_brief": "Alibaba's Qwen3.7-Max edges Claude Opus 4.6 on GPQA and HLE and adds a 1M-token window — but it's still #13 on public Text Arena, and its 35-hour agent demo is so far self-reported.",
+      "source": { "name": "Alibaba Cloud", "type": "scrape", "url": "https://www.alibabacloud.com" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-21T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T17:25:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-22T06:12:00Z", "by": "enrichment", "change": "added 1M-token context window, the quiet May 14 LM Arena debut and #13 Text Arena placement, the self-reported caveat on the 35-hour run, the AA-Omniscience abstention/recall trade-off, and the Qwen3.6 Max baseline; updated why_it_matters and brief; added MarkTechPost and CryptoBriefing takes" }
+      ],
+      "takes": [
+        { "source": "Office Chai", "url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/", "take": "Notes Qwen3.7-Max is the highest-placed Chinese model on the Artificial Analysis Intelligence Index and sits ahead of Gemini 3.5 Flash on the leaderboard." },
+        { "source": "China Biz Insider", "url": "https://chinabizinsider.com/alibabas-qwen3-7-max-tops-china-ai-rankings-closes-gap-with-claude-and-gpt-in-agentic-benchmarks/", "take": "Reads the release as Alibaba unseating Kimi K2.6, DeepSeek V4-Pro and GLM-5.1 in blind Arena evals and closing the agentic-benchmark gap with Claude and GPT." },
+        { "source": "TechNode", "url": "https://technode.com/2026/05/21/alibaba-introduces-qwen3-7-max-as-next-gen-ai-agent-model/", "take": "Frames Qwen3.7-Max as a next-gen agent model built for long-horizon execution — 35 hours of continuous operation and 1,000+ tool calls." },
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/05/21/qwen-introduces-qwen3-7-max-a-reasoning-agent-model-with-a-1m-token-context-window/", "take": "Centers the 1M-token context window and positions Qwen3.7-Max as a reasoning agent model rather than a chat upgrade." },
+        { "source": "CryptoBriefing", "url": "https://cryptobriefing.com/alibaba-qwen-3-7-max-preview-ai-ranking/", "take": "Points out the Preview quietly hit LM Arena on May 14 and ranks #13 in Text Arena — ahead of most Western rivals but still behind the top US models." },
+        { "source": "Decrypt", "url": "https://decrypt.co/368499/alibaba-qwen-3-7-max-preview-review", "take": "Hands-on preview review weighing what the model gets right and where the 'Preview' label still shows its seams." }
+      ]
+    },
+    {
+      "id": "anthropic-first-profitable-quarter-q2-may-2026",
+      "tier": 1,
+      "title": "Anthropic says it's on track for its first profitable quarter, with $10.9B in Q2 revenue",
+      "summary": "Anthropic told investors it expects to post its first-ever profitable quarter in the three months ending June 2026, on projected revenue of about $10.9 billion — a figure that would more than double its first-quarter revenue of $4.8 billion and exceed the company's total sales for all of last year. The disclosure, reported May 20 by Bloomberg, TechCrunch and CNBC, puts the expected operating profit at roughly $559 million for the June quarter, and arrives about two years ahead of internal projections — as recently as last summer Anthropic had told investors it didn't expect full-year profitability until at least 2028. The numbers were shared as part of Anthropic's ongoing fundraising; the company is in talks to raise at a valuation around $900 billion. Profitability may not hold for the rest of the year: Anthropic is carrying enormous committed compute costs, including a deal to pay $1.25 billion per month — reportedly through 2029 — to SpaceX for access to the Colossus supercomputer cluster (the data centers that came to SpaceX through its February 2026 all-stock acquisition of xAI, and which SpaceX detailed in its own IPO prospectus this week). The revenue surge is being driven largely by enterprise adoption of Claude for coding and agentic workflows, the same demand the company has been building toward with Claude Code, the Managed Agents platform, and this week's Code with Claude developer events.",
+      "link": "https://techcrunch.com/2026/05/20/anthropic-says-its-about-to-have-its-first-profitable-quarter/",
+      "why_it_matters": "Frontier AI labs have been famous for spending far more than they earn, so a major one turning an operating profit — even for a single quarter — is a real marker, not a vanity stat, and hitting it roughly two years early says how fast the coding-and-agents money is arriving. The detail worth holding onto is the tension baked into the same announcement: Anthropic expects to be profitable this quarter and explicitly warns it may not stay that way, because it has signed up for $1.25 billion a month in compute. That's the actual economics of the AI business in one sentence — revenue is climbing fast, but the cost of training and serving the next model climbs just as fast, and the bill is locked in years ahead. It's also why skeptics (Ed Zitron's 'profitability swindle' piece is the sharpest example) argue a single operating-profit quarter that sits on top of those committed costs isn't durable profitability so much as favorable timing. For someone who mostly experiences this as 'I pay for a Claude subscription,' it's useful context for why pricing, rate limits, and usage tiers keep shifting: the company is racing revenue against an enormous fixed compute commitment. And the fact that the growth is coming from coding and agent use specifically tells you where the money actually is right now — developers and the tools they build, not chatbots.",
+      "why_it_matters_brief": "Anthropic projects its first operating profit two years early on $10.9B Q2 revenue — but it's locked into $1.25B/month for Colossus compute, which skeptics call a profitability asterisk.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-21T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T17:25:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-22T06:12:00Z", "by": "enrichment", "change": "added that the profit arrives ~2 years ahead of the prior 2028 projection, clarified the $1.25B/month deal is now with SpaceX for Colossus (via its Feb 2026 xAI acquisition, per the SpaceX S-1), and folded in the skeptical 'profitability swindle' counter-read; updated why_it_matters and brief; added wheresyoured.at take" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-20/anthropic-on-pace-for-first-profitable-quarter-as-revenue-surges", "take": "Reports Anthropic on pace for its first profitable quarter as revenue surges, framing it against the company's ongoing raise at a ~$900B valuation." },
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/20/anthropic-revenue-explosive-growth-ipo-profitable-quarter.html", "take": "Details the $10.9B Q2 projection (up from $4.8B in Q1) and the ~$559M expected operating profit, in the context of a possible IPO path." },
+        { "source": "The AI Insider", "url": "https://theaiinsider.tech/2026/05/21/anthropic-nears-first-profit-on-10-9b-quarter-while-paying-xai-1-25b-monthly-for-compute/", "take": "Puts the profit milestone next to the $1.25B/month compute bill — the cost commitment that could erase profitability later in the year." },
+        { "source": "Ed Zitron (Where's Your Ed At)", "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/", "take": "The skeptical counter-read: a single quarter of operating profit sitting on top of multi-year, billion-a-month compute commitments isn't durable profitability." }
+      ]
+    },
+    {
+      "id": "openai-confidential-ipo-filing-cheap-ai-pressure-may-2026",
+      "tier": 3,
+      "title": "OpenAI prepares a confidential IPO filing — alongside SpaceX, and as cheap models pressure the valuation case",
+      "summary": "OpenAI could confidentially file a draft IPO prospectus as soon as Friday (May 22), per reporting from CNBC and the Wall Street Journal on May 20. The company is working with Goldman Sachs and Morgan Stanley, is valued by private investors at more than $850 billion, and has internally discussed targeting a valuation of up to $1 trillion, with a public listing window between Labor Day and Thanksgiving 2026 (i.e. as early as September). It is not filing in a vacuum: on May 20 SpaceX publicly circulated its own S-1 (confidentially submitted April 1), disclosing $18.67 billion in consolidated 2025 revenue for the combined SpaceX-xAI entity after its February 2026 all-stock acquisition of xAI — so two trillion-dollar-scale tech IPOs are now moving at once, with combined new equity supply that could approach or exceed $135 billion, a scale with little modern precedent. The timing also collides with a competing storyline: a CNBC analysis the same day argued cheap AI could undercut the IPO case for both OpenAI and Anthropic, citing OpenRouter usage data showing Chinese open-weight models climbing from roughly 1% of routed developer traffic in 2024 to more than 60% by May 2026, at a fraction of Claude's per-workload cost. The argument: the two US leaders are pitching public-market investors on a premium moat that is eroding fastest in exactly the enterprise segments they need to dominate, as companies adopt a 'cheap open model by default, call a frontier model only when needed' pattern. (Axios dubbed the whole stretch — OpenAI's filing prep, Anthropic's profit news, SpaceX's filing, and OpenAI's math result — 'two hours that changed AI.')",
+      "link": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "why_it_matters": "Several of these stories landing together is the whole picture: the US frontier labs are sprinting toward the public markets at near-trillion-dollar valuations — now with SpaceX racing alongside them — at the exact moment their pricing advantage is getting squeezed by much cheaper open-weight competitors. You don't have to care about IPOs to find the underlying number striking: Chinese open models going from ~1% to ~60% of routed developer traffic in about 18 months is a real shift in what developers actually reach for, and it's the same dynamic behind Qwen3.7-Max topping leaderboards and Cursor training its own cheaper in-house model on a Chinese base. For a hobbyist, the practical read-through is that 'which model should I use' is becoming a genuine cost-vs-capability decision rather than 'just use the famous one' — OpenRouter exists precisely so you can route a task to whatever's cheapest that's good enough. The IPO mechanics matter mostly as a signal: a confidential filing lets a company prep the paperwork privately before committing publicly, so this is OpenAI getting ready to move, not the move itself — and as of this writing the filing was still expected, not confirmed.",
+      "why_it_matters_brief": "OpenAI may file confidentially this week toward a $1T listing — alongside SpaceX's own mega-IPO, and just as cheap Chinese models, now ~60% of OpenRouter traffic, erode the premium moat both pitches depend on.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-21T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T17:25:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-22T06:12:00Z", "by": "enrichment", "change": "added the parallel SpaceX S-1 ($18.67B combined SpaceX-xAI 2025 revenue, ~$135B combined equity supply), the Labor Day-Thanksgiving listing window, the 'two hours that changed AI' framing, and the still-expected-not-confirmed status; updated title, summary, why_it_matters and brief; added Axios and Fortune takes" }
+      ],
+      "takes": [
+        { "source": "CNBC", "url": "https://www.cnbc.com/2026/05/20/cheap-ai-could-derail-openai-and-anthropics-ipos.html", "take": "The counter-narrative: cheap Chinese models (DeepSeek, Kimi, GLM) priced at a fraction of Claude/GPT are eroding the enterprise moat both IPO pitches rely on, with Chinese models now >60% of OpenRouter usage." },
+        { "source": "The Motley Fool", "url": "https://www.fool.com/investing/2026/05/20/wsj-report-openai-could-confidentially-file-for-an/", "take": "Summarizes the WSJ report on the confidential filing and what a public OpenAI would mean for investors — and why 'confidential' is a normal early step, not a commitment to list." },
+        { "source": "Fortune", "url": "https://fortune.com/2026/05/21/rollout-complete-spacex-files-ipo-prospectus/", "take": "Covers SpaceX's IPO prospectus landing alongside OpenAI's imminent filing — the two mega-listings being tracked as a pair." },
+        { "source": "Axios", "url": "https://www.axios.com/2026/05/21/ai-news-cycle-openai-anthropic-spacex", "take": "'Two hours that changed AI' — frames OpenAI's IPO prep, Anthropic's profit news, SpaceX's filing and OpenAI's math result as a single dense news window." }
+      ]
+    },
+    {
+      "id": "hark-brett-adcock-700m-series-a-ai-hardware-may-21-2026",
+      "tier": 3,
+      "title": "Figure's founder raises $700M for Hark, a vertically integrated 'universal AI interface'",
+      "summary": "Brett Adcock — founder of humanoid-robot company Figure and eVTOL maker Archer Aviation — announced May 21 that his newest startup, Hark, has raised over $700 million in a Series A at a $6 billion post-money valuation. The round was led by Parkway Venture Capital, with a notably broad syndicate: NVIDIA, AMD Ventures, Intel Capital and Qualcomm Ventures (all four major chipmakers' venture arms), plus Brookfield, Salesforce Ventures, ARK Invest, Greycroft, Align Ventures, Prime Movers Lab and Tamarack Global. Hark is deliberately broad in scope: rather than picking one layer of the stack, it is building its own foundation models, software, custom hardware devices and new interfaces together from the start, pitching a 'universal interface between humans and machines' — a personal AI meant to anticipate needs and act more like a collaborative partner than an app. The company has been quiet about specifics (TechCrunch called it a 'secretive universal AI interface'), but Adcock has said it will roll out its AI models later this summer to give early users access to the platform ahead of any hardware. Adcock founded Hark in late 2025 and seeded it with $100 million of his own money.",
+      "link": "https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/",
+      "why_it_matters": "The eye-catching part isn't the dollar figure — it's that a $6 billion valuation on a Series A went to a company that hasn't shipped a product, on the strength of a founder's track record and a 'we'll build the whole stack ourselves' thesis. That thesis is the thing to notice: most AI startups pick a layer (a model, an app, a chip) and lean on partners for the rest, but Hark is betting that the model, the software, and a custom hardware device have to be designed together to make a personal-AI device that actually works. It's the same vertical-integration argument Apple has always made about phones, now aimed at AI hardware — and the investor list is a striking who's-who: every major chipmaker's venture arm (NVIDIA, AMD, Intel, Qualcomm) in one round, alongside Cathie Wood's ARK Invest. For a hobbyist coder, there's nothing to use here yet, but it's a useful data point on where the frontier is heading after the chatbot era: away from 'AI inside an app you open' and toward dedicated devices, which is the same direction the rumored OpenAI/Jony Ive hardware and Google's Android XR push are pointing. Worth filing away and watching whether the summer model release is real or just a teaser.",
+      "why_it_matters_brief": "Figure's founder raised a $700M Series A at $6B for Hark before shipping anything — a bet that personal-AI hardware needs the model, software and device built together, with every major chipmaker backing it.",
+      "source": { "name": "TechCrunch", "type": "scrape", "url": "https://techcrunch.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-21T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-21T17:25:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-22T06:12:00Z", "by": "enrichment", "change": "expanded the investor syndicate (ARK Invest, Greycroft, Align Ventures, Prime Movers Lab, Tamarack Global) and noted Adcock's Archer Aviation history alongside Figure; added BusinessWire take" }
+      ],
+      "takes": [
+        { "source": "Bloomberg", "url": "https://www.bloomberg.com/news/articles/2026-05-21/ai-hardware-startup-hark-valued-at-6-billion-in-new-funding-round", "take": "Reports the $6B valuation and the chipmaker-heavy investor syndicate (NVIDIA, AMD Ventures, Intel Capital, Qualcomm Ventures) backing an AI hardware bet." },
+        { "source": "eWeek", "url": "https://www.eweek.com/news/brett-adcock-hark-ai-devices/", "take": "Frames Hark as Adcock betting on a 'family' of AI devices — the personal-hardware angle and how it relates to his Figure robotics work." },
+        { "source": "The Next Web", "url": "https://thenextweb.com/news/hark-series-a-funding-adcock-ai-hardware", "take": "Covers the raise and the vertically integrated thesis — foundation models plus custom hardware built together rather than assembled from partners." },
+        { "source": "BusinessWire", "url": "https://www.businesswire.com/news/home/20260521171628/en/Hark-Raises-$700M-Series-A-at-a-$6B-Valuation", "take": "Official release confirming the $6B post-money valuation and the full investor list, including ARK Invest, Greycroft and Prime Movers Lab alongside the chipmakers." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
