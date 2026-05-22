@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-22T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-22T11:00:00Z",
+      "ended_at": "2026-05-22T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 17500,
+        "curation": 3100,
+        "output_write": 1000
+      },
+      "fetches_made": 7,
+      "items_input": 1,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 on all lab/news domains across every run since May 5); all discovery done via WebSearch (7 queries). All hero_image null for same reason. One item added: trump-scraps-ai-executive-order-frontier-models-may-2026 (Tier 3, US). Trump abruptly cancelled signing an AI executive order on May 21 — hours before the ceremony — that would have established a voluntary framework for frontier AI labs to share models with the NSA up to 90 days before public release for classified evaluation, alongside federal cybersecurity hardening mandates. Stated reason: didn't like 'certain aspects' and worried it would 'get in the way' of the US AI lead over China; insiders described Trump as someone who 'just hates regulation' and called the order 'something doomers wanted.' The order's catalyst: Anthropic's Mythos Preview model's ability to autonomously find thousands of critical software vulnerabilities prompted JD Vance and others to push for a pre-release government evaluation window. Flagged by enrichment at 06:18 UTC as genuinely newsworthy but single-source at that time; now confirmed by NBC News, Axios, CNBC, Semafor, and CyberScoop — added as fully verified. Optional Tier-1 re-pass: no meaningful overnight chatter on the three Tier-1 items (Erdős proof, Qwen3.7-Max, Anthropic profitability). Minor re-pass on the OpenAI IPO Tier-3 item: updated title and summary from 'OpenAI prepares' to 'OpenAI files' based on AI Weekly alert ('OpenAI Files Confidential IPO With Goldman, Morgan Stanley'), removing the enrichment's 'still expected, not confirmed' caveat; also added AI Weekly as a take. Asia/Europe overnight cycle (06:18-11:00 UTC) was quiet — no new frontier model drops from Chinese, European or Japanese labs (DeepSeek V4 April 24, Kimi K2.6 April 20, Mistral Small 4 March 16 all stale; no new Gemini 3.5 Pro, GLM, MiniMax, or Sakana announcement in the window). Considered and declined: Google DeepMind Magic Pointer (May 12-13, well outside the 5-hour window and already within prior I/O coverage scope); Mistral Small 4 (March 16, far too stale). Final am file: 6 items, tier counts 1:3 / 2:0 / 3:3."
+    },
+    {
       "run_id": "2026-05-22T06:18:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
