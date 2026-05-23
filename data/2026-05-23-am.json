@@ -1,0 +1,92 @@
+{
+  "snapshot_id": "2026-05-23-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-23",
+  "generated_at": "2026-05-23T06:18:00Z",
+  "generated_at_local": "2026-05-23T02:18:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-23T06:18:00Z", "duration_ms": 780000 }
+  ],
+  "tier_counts": { "1": 0, "2": 2, "3": 1 },
+  "items": [
+    {
+      "id": "datasette-agent-simon-willison-may-2026",
+      "tier": 2,
+      "title": "Simon Willison ships Datasette Agent — a plug-in AI assistant that writes SQL for your data",
+      "summary": "Simon Willison released Datasette Agent, a new AI assistant for Datasette, his open-source Python tool for exploring and publishing data as a browsable website with a JSON API. First alpha'd on May 14 and iterated through a 0.1a3 release on May 21, it adds a conversational layer on top of a database: you ask a question in plain English, the model writes a SQLite query, runs it against your data, and shows you both the result and the query it generated. It's built on Willison's own `llm` Python library, so it's model-agnostic — it can drive hundreds of tool-calling models from OpenAI, Anthropic and Google down to open-weight models you run on your own hardware. There's a hosted public demo at agent.datasette.io (you sign in with a GitHub account to deter abuse) running on Google's cheap, fast Gemini 3.1 Flash-Lite, which has no trouble writing SQLite. Like the rest of Datasette, it's extensible through plugins: datasette-agent-charts (released May 20-21) renders results as charts via Observable Plot, datasette-agent-openai-imagegen adds image generation, and datasette-agent-sprites runs code in a persistent sandbox. It is early, alpha-stage software.",
+      "link": "https://simonwillison.net/2026/May/21/datasette-agent/",
+      "why_it_matters": "This one is squarely in your wheelhouse. Datasette is a Python tool that turns a SQLite database (or a CSV you import) into a browsable website with a JSON API — a popular, approachable way to publish and poke at data, and exactly the kind of HTML-plus-Python project you'd enjoy. Datasette Agent bolts a natural-language layer on top: instead of writing the SQL yourself, you ask 'which months had the most signups?' and the model writes and runs the query, showing you both the answer and the SQL it generated, so you can learn from it or correct it. If you just want to feel how it behaves before installing anything, the hosted demo at agent.datasette.io lets you try it against sample data with a GitHub login. The design choice worth noticing if you care how these tools are built: it's model-agnostic, built on Willison's `llm` library, so swapping the underlying model is a config change rather than a rewrite — and the demo deliberately runs on a cheap, fast model to make the point that you no longer need a frontier model to write decent SQLite. The plugin system is a clean example too: charts, image generation, and sandboxed code execution are each separate installable pieces rather than baked in. It's alpha, so it's more 'read the code and try it' than 'depend on it,' but it's a rare AI tool you could actually run end-to-end on your own laptop against your own data.",
+      "why_it_matters_brief": "Simon Willison's new Datasette Agent turns plain-English questions into SQLite queries against your own data — a model-agnostic AI tool a Python hobbyist can run end-to-end locally.",
+      "source": { "name": "Simon Willison's Weblog", "type": "rss", "url": "https://simonwillison.net/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-22T17:28:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-22T17:28:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-23T06:18:00Z", "by": "enrichment", "change": "enriched summary with the hosted public demo (agent.datasette.io, GitHub sign-in, Gemini 3.1 Flash-Lite) and the 'hundreds of tool-calling models incl. open-weight' framing; added official Datasette Blog take" }
+      ],
+      "takes": [
+        { "source": "Simon Willison (Substack)", "url": "https://simonw.substack.com/p/datasette-agent-an-ai-assistant-for", "take": "The fuller writeup: built on the `llm` library, and the case that open-weight and cheap models can now reliably produce SQLite queries against real data." },
+        { "source": "Datasette Blog", "url": "https://datasette.io/blog/2026/datasette-agent/", "take": "The official project announcement — frames Datasette Agent as an extensible AI assistant supporting hundreds of tool-calling models, with the live demo at agent.datasette.io." },
+        { "source": "Datasette Agent Charts release notes", "url": "https://simonwillison.net/2026/May/21/datasette-agent-charts/", "take": "Companion plugin that renders agent query results as charts using Observable Plot — an example of the plugin-extensibility model in practice." }
+      ]
+    },
+    {
+      "id": "vercel-claude-managed-agents-sandbox-may-2026",
+      "tier": 2,
+      "title": "Vercel lets you run Claude's Managed Agents in your own sandbox, isolated per session",
+      "summary": "Following Anthropic's mid-May launch of self-hosted sandboxes for Claude Managed Agents — where an agent's tool calls run on infrastructure you control rather than Anthropic's — Vercel shipped support to host those sandboxes on its own platform. Each agent session gets its own isolated Firecracker microVM (the same lightweight-VM technology that powers Vercel's 1B+ deployments) that spins up in milliseconds when Anthropic's control plane sends a webhook, and is destroyed when the session ends. The security design is the notable part: credentials are brokered at the firewall — the API key is injected onto outbound requests for that one session and never enters the VM itself, so a compromised sandbox can't extract or reuse it — and network egress is deny-by-default, meaning the agent can only reach endpoints you explicitly allow. Vercel is one of several launch partners for Anthropic's self-hosted sandboxes (now in public beta), alongside Cloudflare, Daytona, and Modal; the feature was shown at Anthropic's Code with Claude London event on May 19. Vercel has since published a step-by-step Knowledge Base guide walking through wiring a Claude Managed Agent up to a Vercel Sandbox.",
+      "link": "https://vercel.com/changelog/run-claude-managed-agents-with-vercel-sandbox",
+      "why_it_matters": "If you've ever wondered how it's actually safe to let an AI agent 'run code' or 'use tools' on your behalf, this is a concrete look at the answer. The pattern is: don't let the agent loose on a real machine — give each session a disposable, locked-down sandbox that's thrown away when it's done. Two ideas are worth taking away even if you never touch Vercel. First, per-session isolation using microVMs: Firecracker is the same tech behind AWS Lambda — tiny, fast-booting virtual machines that are cheaper to start than a full VM but more isolated than a container. Second, credential brokering: the secret key lives at the firewall and gets attached to outbound requests, rather than being handed to the code that could leak it — which is the same instinct behind not hard-coding API keys into your Python scripts, just enforced at the infrastructure level. The deny-by-default egress piece is the network version of that: assume the agent can't phone home anywhere unless you said so. If you want to see the moving parts, Vercel's Knowledge Base now has a walkthrough that sets one up end to end. For now this is enterprise-flavored plumbing, but it's the clearest worked example yet of the sandbox-the-agent pattern that every coding-agent tool is converging on.",
+      "why_it_matters_brief": "Vercel runs each Claude agent session in a throwaway Firecracker microVM with keys brokered at the firewall — a concrete worked example of how to safely let an AI agent run code.",
+      "source": { "name": "Vercel", "type": "scrape", "url": "https://vercel.com/changelog" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-22T17:28:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-22T17:28:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-23T06:18:00Z", "by": "enrichment", "change": "enriched summary with the Code with Claude London (May 19) launch context, the millisecond microVM startup / 1B+ deployments scale detail, and Vercel's new step-by-step Knowledge Base guide; added the guide as a take" }
+      ],
+      "takes": [
+        { "source": "9to5Mac", "url": "https://9to5mac.com/2026/05/19/anthropic-enhances-claude-managed-agents-with-two-new-privacy-and-security-features/", "take": "Covers the Anthropic side: self-hosted sandboxes and the two new privacy/security features that the partner integrations build on." },
+        { "source": "Vercel Knowledge Base", "url": "https://vercel.com/kb/guide/run-claude-managed-agent-tools-with-vercel-sandbox", "take": "A hands-on guide that walks through actually building a Claude Managed Agent on a Vercel Sandbox — the practical follow-up to the changelog announcement." },
+        { "source": "Michael Livshin (blog)", "url": "https://michaellivs.com/blog/sandboxing-ai-agents-2026/", "take": "Compares how Anthropic and Vercel approach sandboxing AI agents, and the trade-offs between the different isolation models." }
+      ]
+    },
+    {
+      "id": "state-ai-legislation-surge-chatbot-bills-may-2026",
+      "tier": 3,
+      "title": "As Trump scraps a federal AI order, states keep passing their own — ~78 chatbot bills across 27 states",
+      "summary": "While the White House pulled back its planned AI executive order this week, US state legislatures kept moving on AI rules. Trackers covering the 2026 legislative season count roughly 78 'chatbot' bills alive across 27 states — rules covering AI conversational systems, including bot-disclosure requirements, protections for minors, and mental-health safeguards. Recent concrete actions: Georgia enacted a chatbot law (SB 540, signed by Gov. Brian Kemp); Connecticut's SB 5 — a broad bill covering frontier models, chatbots, employment, and content provenance — cleared the legislature and Gov. Ned Lamont says he plans to sign it; Colorado passed a bill to repeal and replace its Colorado AI Act, plus a separate chatbot bill (HB 1263) and two health-care AI bills, before adjourning; and California saw five chatbot bills clear Appropriations ahead of the May 15 fiscal deadline, including AB 1988 (crisis-interruption pauses for companion chatbots) and SB 867 (companion chatbots in toys). The Future of Privacy Forum groups the wave into six recurring themes — transparency, age verification and access controls, content safety, professional-licensure limits, data protection, and liability. The throughline: with federal action stalling, the practical rules for deploying AI in the US are increasingly being written state by state, producing a patchwork that anyone shipping an AI feature has to navigate.",
+      "link": "https://www.transparencycoalition.ai/news/ai-legislative-update-may22-2026",
+      "why_it_matters": "This is the other half of a story already sitting in your morning section. The Trump administration just scrapped an order that would have created federal oversight of frontier models; meanwhile, states are passing a steady stream of narrower AI laws, mostly aimed at chatbots — disclosure that you're talking to a bot, protections for minors, guardrails on mental-health conversations, and transparency about what data models were trained on. Why it matters even if you're 'just building a little app': in the US, the rules you'd actually have to follow if you put an AI feature in front of real users are increasingly state-level and inconsistent. A chatbot that's fine in one state might need a disclosure banner or an age gate in another. It's the same patchwork dynamic that already exists for data-privacy laws, where California's rules became a de facto national floor because it's easier to comply everywhere than to maintain a special version per state. You don't need to read the bills, but it's worth knowing the shape of it: federal AI regulation is stalling, state AI regulation is accelerating, and 'which state is the user in' is becoming a real question for anyone deploying this stuff — not just the big labs.",
+      "why_it_matters_brief": "With the federal AI order scrapped, ~78 state chatbot bills are advancing across 27 states — the practical rules for shipping an AI feature in the US are being written state by state.",
+      "source": { "name": "Transparency Coalition", "type": "scrape", "url": "https://www.transparencycoalition.ai" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-22T17:28:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-22T17:28:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-23T06:18:00Z", "by": "enrichment", "change": "enriched summary with Connecticut SB 5 (passed, Gov. Lamont to sign), the Colorado chatbot bill number (HB 1263), specific California bills (AB 1988, SB 867), and the FPF six-theme framing; added the FPF 2026 Chatbot Legislation Tracker as a take" }
+      ],
+      "takes": [
+        { "source": "Troutman (Privacy + Cyber + AI)", "url": "https://www.troutmanprivacy.com/2026/05/proposed-state-privacy-and-ai-law-update-may-18-2026/", "take": "Law-firm tracker detailing the specific state bills moving in mid-May — useful for seeing exactly which states are passing what." },
+        { "source": "Future of Privacy Forum — 2026 Chatbot Legislation Tracker", "url": "https://fpf.org/2026-chatbot-legislation-tracker/", "take": "The canonical running tracker behind the '78 bills in 27 states' figure, grouping the bills into six recurring regulatory themes." },
+        { "source": "Cooley", "url": "https://www.cooley.com/news/insight/2026/2026-04-24-state-ai-laws-where-are-they-now", "take": "Overview of the state-by-state patchwork and how the lack of a federal framework is shaping where the binding rules actually come from." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
