@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-23T17:22:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-23T17:05:00Z",
+      "ended_at": "2026-05-23T17:22:00Z",
+      "wall_time_ms": 1020000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 27000,
+        "curation": 4000,
+        "output_write": 1000
+      },
+      "fetches_made": 15,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-23-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; entire sweep done via WebSearch (14 queries). All hero_image null for the same reason. Today's 2026-05-23-am.json has 4 items (Datasette Agent, Vercel Claude-sandbox, state chatbot legislation, Meta 8,000 layoffs) — all excluded by the digest promotion rule; none are Tier-1 so the promotion exception (Tier-1 materially deepened) does not apply, and none materially deepened in the afternoon window anyway. Three fresh, uncovered items written. Tier 2: (1) microsoft-rampart-clarity-agent-safety-tools-may-2026 (Global) — Microsoft open-sourced RAMPART (Risk Assessment and Measurement Platform for Agentic Red Teaming), a pytest-native safety/security testing framework for AI agents built on top of PyRIT (the distinction: PyRIT is black-box probing after build, RAMPART is engineer-written tests gated in CI as you build), plus Clarity, a pre-code 'sounding board' to validate an agent's permissions/tool-access/trust-boundary assumptions; both on GitHub, announced May 20 on the Microsoft Security Blog; strong Gabe fit (pytest/Python/CI), verified across The Hacker News, The Register, CyberScoop, DevOps.com, CSO Online, Winbuzzer. Tier 3: (2) meta-employee-tracking-ai-training-leaked-audio-may-2026 (US) — leaked April 30 town-hall audio (published by More Perfect Union, going viral May 22-23) has Zuckerberg defending the internal 'Model Capability Initiative' that logs employee keystrokes/mouse/screen across Gmail, VSCode and Metamate to train AI by 'watching really smart people do things,' with CTO Bosworth saying there is no opt-out on a work laptop; lands the same week as the ~8,000 layoffs / 7,000 AI-team moves. Deliberately framed as a DISTINCT story from the am layoffs item (different canonical URL, different angle: the surveillance/training-data-provenance dimension, which is the day's actually 'popping off' story — #3 in buildfastwithai's May 23 list) rather than a duplicate; verified across eWeek, The Neuron Daily, WION, TechStory, The News. (3) jack-clark-oxford-nobel-prediction-essay-may-2026 (Global) — Anthropic co-founder and Import AI author Jack Clark's May 20 Oxford lecture: concrete timelines (AI-assisted Nobel within 12 months, bipedal robots assisting tradespeople within 2 years, AI-only companies earning millions within 18 months, AI designing its own successors by end of 2028) paired with a blunt restatement that there is 'a non-zero chance of killing everyone on the planet' and the risk 'hasn't gone away'; Import AI is a seed-list source so this is on-list creator content; published an accompanying essay; verified across TechCentral, AI Weekly, resultsense, Inshorts, Cosmos Institute. Items considered and declined: SubQ / Subquadratic (first commercial subquadratic LLM, 12M-token context, SSA sparse attention, ~52x faster than FlashAttention at 1M tokens) — flagged by the May 23 enrichment as a never-covered Tier-2 architecture story for a future digest, but dated May 5 (~18 days stale, well past the digest's own staleness bar that has been declining April-dated items all week) and vendor-run claims still not independently reproduced; declined on staleness, re-flag for a future fresher hook. Anthropic-Google-Broadcom expanded compute deal (3.5 GW) — April 6-7, stale. NVIDIA verified-agent-skills pipeline and Antigravity 2.0 SDK — May 19, part of the already-covered I/O / agent-infra cluster and enterprise-flavored. ServiceNow Project Arc, Camunda ProcessOS, Salesforce Agentforce Coworker — enterprise-vertical product launches with low learning value for Gabe's HTML/CSS/Python broadening goal (consistent with prior enterprise declines). ml-intern (Apr 21), HiDream-O1-Image (May 8), ZAYA1-8B (May 6-7) — stale and/or previously declined. No fresh frontier model dropped in the window (no new DeepSeek/Qwen/Kimi/MiniMax/Mistral/Meta open-weight drop; Qwen3.7-Max May 20 already covered; Gemini 3.5 Pro still 'next month'), so 0 Tier-1 is honest. Final pm file: 3 items, tier counts 1:0 / 2:1 / 3:2 — an honest, no-padding digest on a quiet post-I/O Saturday, consistent with the May 22 pm (3-item) digest size."
+    },
+    {
       "run_id": "2026-05-23T11:18:00Z-refresh",
       "phase": "refresh",
       "status": "success",
