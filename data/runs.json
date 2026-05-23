@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-23T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-23T06:05:00Z",
+      "ended_at": "2026-05-23T06:18:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 27000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 7100,
+        "output_write": 1400
+      },
+      "fetches_made": 7,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-23-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; all work done via WebSearch (6 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-22-pm.json had 3 items, all KEPT + ENRICHED, 0 dropped — they shipped only ~13h earlier so the new context is naturally thin, but each surfaced enough to justify a light/medium enrich rather than a drop. (1) datasette-agent-simon-willison-may-2026 (Tier 2, Global) — light enrich: added the hosted public demo at agent.datasette.io (GitHub sign-in to deter abuse, runs on Gemini 3.1 Flash-Lite), the 'hundreds of tool-calling models incl. open-weight you can run on your own hardware' framing, and a small actionable nudge in why_it_matters to try the demo; added the official Datasette Blog (datasette.io/blog/2026/datasette-agent/) as a take; why_it_matters_brief unchanged (still accurate). (2) vercel-claude-managed-agents-sandbox-may-2026 (Tier 2, US) — light enrich: added the Code with Claude London (May 19) launch context, the millisecond microVM startup / 'same infra behind 1B+ Vercel deployments' scale detail, and Vercel's new step-by-step Knowledge Base guide; added that guide (vercel.com/kb/guide/run-claude-managed-agent-tools-with-vercel-sandbox) as a take; brief unchanged. (3) state-ai-legislation-surge-chatbot-bills-may-2026 (Tier 3, US) — medium enrich, the most substantive: added Connecticut SB 5 (a broad frontier-models/chatbots/employment/provenance bill that cleared the legislature, with Gov. Ned Lamont saying he plans to sign — a genuinely new state data point), pinned the Colorado chatbot bill number (HB 1263), added specific California bills past the May 15 Appropriations deadline (AB 1988 crisis-interruption pauses for companion chatbots; SB 867 companion chatbots in toys; five CA chatbot bills total), and the Future of Privacy Forum six-theme framing; added the FPF 2026 Chatbot Legislation Tracker as the canonical-source take; why_it_matters thesis unchanged so brief left as-is. Sub-task 2 (late-breaking, last-12h Tier-1 sweep): 0 items added. The overnight Asia/Europe/US cycle (since ~2026-05-22T18:00Z) was quiet — no new frontier model release. Two genuine uncovered stories surfaced but were declined for this phase: (a) SubQ, the first commercial subquadratic LLM (Subquadratic, Miami; 12M-token context, SSA sparse attention, $29M seed, ~52x faster than FlashAttention at 1M tokens; vendor-run claims not yet independently reproduced) — a real and interesting Tier-2 architecture story (The New Stack, eWeek, SiliconANGLE) but dated May 5, ~18 days stale and far outside the 12h window, so it belongs to a digest discovery pass, not enrichment's late-breaking pass; flagged here for a future digest as it appears never covered. (b) Google DeepMind's acquihire/licensing deal for 20+ Contextual AI researchers incl. co-founder Douwe Kiela ($80-100M, antitrust-avoiding talent-license structure) — reported May 19, outside the window, and a talent/M&A story with low learning value for Gabe's HTML/CSS/Python broadening goal (consistent with prior Cohere/Reliant and AMI-Labs declines). No new DeepSeek/Qwen/Kimi/Mistral/Meta open-weight drop in the window (DeepSeek V4 Apr 24, Qwen3.7-Max May 20 already covered, Kimi K2.6 Apr 20, Mistral 128B May 3 all stale); Gemini 3.5 Pro still 'next month'. Final am file: 3 items, tier counts 1:0 / 2:2 / 3:1."
+    },
+    {
       "run_id": "2026-05-22T17:28:00Z-digest",
       "phase": "digest",
       "status": "success",
