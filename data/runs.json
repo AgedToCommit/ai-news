@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-23T11:18:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-23T11:00:00Z",
+      "ended_at": "2026-05-23T11:18:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 25000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 4000,
+        "output_write": 1500
+      },
+      "fetches_made": 7,
+      "items_input": 1,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-23-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 on lab/news domains across every run since May 5); all discovery done via WebSearch (7 queries). All hero_image null for same reason. Overnight Asia/Europe window (2026-05-23T06:18Z to 2026-05-23T11:00Z) was quiet: no new frontier model releases from Chinese, European, or Japanese labs (Qwen3.7-Max May 20 the most recent; no new DeepSeek V4 drop, no Kimi, no Mistral); Gemini 3.5 Pro still 'next month' per I/O statements; no new lab announcements from OpenAI or Anthropic in the window. No Tier-1 items in the am file so optional re-pass not applicable. One gap item added: meta-ai-restructuring-8000-layoffs-may-2026 (Tier 3, US). Meta notified ~8,000 employees of layoffs on May 20 (10% of workforce), moved 7,000 to AI-focused teams (Applied AI Engineering, Agent Transformation Accelerator XFN, Central Analytics), cancelled 6,000 open requisitions (14,000 total headcount reduction), and raised its 2026 capex guidance to $125-145B — all on the same week as record $56.31B quarterly revenue and $26.8B net income; Zuckerberg memo: 'success isn't a given'; more cuts expected in H2 2026. Confirmed by NPR, CNBC, The Next Web, Yahoo Finance, Variety. This item was a genuine sweep miss: the May 20 pm digest was focused on the I/O-week cluster (Anthropic London, Antigravity CLI, AI Studio Android, Chrome DevTools MCP, xAI Grok Skills) and did not surface or consider the Meta story; none of the subsequent runs (May 21-23 enrichments, refreshes, pm digest) flagged it either. Added as gap item consistent with prior refresh-run behavior (e.g. May 21 refresh added Cursor Composer May 18 and Pope Leo XIV May 15-18 as gap items). Considered and declined for today's window: Gemini 3.5 Pro (still expected 'next month', not released); Mistral Devstral (December 2025, stale); OpenAI ChatGPT updates surfaced in search (May 5 GPT-5.5 Instant, already outside window and likely already covered); European AI & Cloud Summit May 21 Cologne (summit results summary too thin to verify specific announcements without WebFetch; declined rather than synthesize). Final am file: 4 items, tier counts 1:0 / 2:2 / 3:2."
+    },
+    {
       "run_id": "2026-05-23T06:18:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
