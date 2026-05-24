@@ -1,0 +1,94 @@
+{
+  "snapshot_id": "2026-05-24-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-24",
+  "generated_at": "2026-05-24T06:16:00Z",
+  "generated_at_local": "2026-05-24T02:16:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-24T06:16:00Z", "duration_ms": 660000 }
+  ],
+  "tier_counts": { "1": 0, "2": 1, "3": 2 },
+  "items": [
+    {
+      "id": "microsoft-rampart-clarity-agent-safety-tools-may-2026",
+      "tier": 2,
+      "title": "Microsoft open-sources RAMPART and Clarity — pytest-style safety tests for AI agents",
+      "summary": "Microsoft released two open-source tools for building safer AI agents. RAMPART (Risk Assessment and Measurement Platform for Agentic Red Teaming) is a pytest-native framework for writing and running safety and security tests against an agent: you write standard pytest tests that describe scenarios from your threat model, each test connects to the agent through a thin adapter, runs an interaction, and evaluates the observable outcome with a clear pass/fail you can gate in CI like any other integration test. It's built on top of PyRIT, Microsoft's existing red-teaming framework — the distinction is that PyRIT is for black-box probing after a system is built, while RAMPART is for engineers testing as they build. The second tool, Clarity, runs earlier in the workflow, before any code is written: it's a structured 'sounding board' that helps a team validate the assumptions behind an agent's design — how it should behave, what permissions it needs, which tools and external systems it touches, and where the trust boundaries are. Both are available now on GitHub, announced May 20 on the Microsoft Security Blog. Follow-on coverage (The Register, DevOps.com, Redmondmag, Campus Technology) has consistently framed the pair as a 'shift-left' move: making agent safety a continuous engineering practice gated in CI rather than a one-time pre-launch audit.",
+      "link": "https://www.microsoft.com/en-us/security/blog/2026/05/20/introducing-rampart-and-clarity-open-source-tools-to-bring-safety-into-agent-development-workflow/",
+      "why_it_matters": "This is a clean example of an idea worth borrowing even if you never build an 'AI agent': testing non-deterministic AI behavior with the same tools you'd use for ordinary code. RAMPART is built on pytest — the standard Python test runner you'd reach for in any Python project — so a 'safety test' here is just a normal test that sets up a scenario, runs the agent, and asserts the result is acceptable, then fails the build in CI if it isn't. That reframes a fuzzy problem ('is this AI behaving?') into something concrete and familiar: write a test, get a pass or fail, gate the merge. The Clarity half is a different lesson and an even cheaper one — think through what the thing is allowed to do and where the trust boundaries are before you write code, not after. Both are open source on GitHub, so they're readable if you want to see how Microsoft structures this; and the PyRIT-vs-RAMPART distinction (probe-after-the-fact vs. test-as-you-build) is a useful way to think about security testing in general, not just for AI.",
+      "why_it_matters_brief": "Microsoft's RAMPART turns AI-agent safety checks into ordinary pytest tests you can gate in CI — a concrete way to test fuzzy AI behavior with familiar Python tooling.",
+      "source": { "name": "Microsoft Security Blog", "type": "scrape", "url": "https://www.microsoft.com/en-us/security/blog" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-23T17:22:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-23T17:22:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-24T06:16:00Z", "by": "enrichment", "change": "light enrich — added the 'shift-left / continuous practice not one-time checkpoint' framing from follow-on coverage and a DevOps.com take; why_it_matters and brief unchanged (still accurate)" }
+      ],
+      "takes": [
+        { "source": "The Hacker News", "url": "https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html", "take": "Explains the RAMPART/PyRIT split clearly: PyRIT is optimized for black-box discovery after a system is built; RAMPART is for engineers writing safety tests as the system is built." },
+        { "source": "The Register", "url": "https://www.theregister.com/security/2026/05/21/microsoft-open-sources-agentic-ai-safety-tools/", "take": "Frames both tools as a 'shift-left' move — pushing agent safety earlier into the normal development workflow rather than treating it as a post-launch audit." },
+        { "source": "CyberScoop", "url": "https://cyberscoop.com/microsoft-rampart-clarity-agentic-ai-security-red-teaming-tools/", "take": "Positions RAMPART and Clarity as a red-team combo and details the harm categories the test scenarios are designed to cover." },
+        { "source": "DevOps.com", "url": "https://devops.com/microsoft-open-sources-rampart-and-clarity-to-bring-agent-safety-into-the-dev-workflow/", "take": "Reads RAMPART through a DevOps lens: agent safety as a CI gate engineers own, making safety 'a continuous engineering practice rather than a one-time checkpoint.'" }
+      ]
+    },
+    {
+      "id": "meta-employee-tracking-ai-training-leaked-audio-may-2026",
+      "tier": 3,
+      "title": "Leaked Meta audio: Zuckerberg defends tracking employees' work to train AI",
+      "summary": "Leaked audio from an April 30 internal town hall — published by labor-focused outlet More Perfect Union and circulating widely on May 22-23 — has Mark Zuckerberg defending an internal program called the Model Capability Initiative that logs employees' keystrokes, mouse movements, and screen snapshots across tools like Gmail, VSCode, and Meta's internal assistant Metamate. The stated goal: train AI by 'watching really smart people do things,' with Zuckerberg arguing Meta's own staff are 'significantly higher' in average intelligence than the outside contractors usually hired for data labeling. When employees asked how to opt out, CTO Andrew Bosworth said there is 'no option to opt out of this on your work provided laptop.' The leak landed the same week Meta laid off roughly 8,000 employees and moved 7,000 others into new AI teams, sharpening employee fears that they were unknowingly training the systems that could replace them. The story has since been picked up by mainstream tech and political press (The Register, Common Dreams, IBTimes) — though The Register notes the recording is so far 'purported,' i.e. Meta has not publicly confirmed its authenticity.",
+      "link": "https://www.eweek.com/news/meta-employee-tracking-ai-layoffs-neuron/",
+      "why_it_matters": "Set aside the workplace-drama angle and this is a concrete look at where AI capability actually comes from — which is genuinely useful if you're trying to understand how these systems are built. A lot of an agent's skill doesn't come from scraping finished text off the web; it comes from demonstration data: recordings of skilled people doing a task step by step (the keystrokes, the edits, the dead ends), so the model learns the process, not just the answer. That's exactly what Meta's Model Capability Initiative was collecting from its own engineers. The uncomfortable part — no opt-out, on data that was people's actual work — is also the lesson: training data has a provenance and a consent question attached to it, and 'where did this model learn that?' is becoming a real thing to ask. It's worth knowing this loop exists, because when you use AI coding tools yourself, your interactions can become training data too — same pipeline, smaller scale.",
+      "why_it_matters_brief": "Leaked audio shows Meta logging staff keystrokes and screens to train AI on how skilled people work — a concrete, consent-free look at where agent 'capability' actually comes from.",
+      "source": { "name": "eWeek", "type": "scrape", "url": "https://www.eweek.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-23T17:22:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-23T17:22:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-24T06:16:00Z", "by": "enrichment", "change": "enriched — noted wider mainstream pickup (The Register, Common Dreams, IBTimes) and The Register's caveat that the audio is 'purported' / unconfirmed by Meta; added The Register and Common Dreams takes; thesis and brief unchanged" }
+      ],
+      "takes": [
+        { "source": "The Neuron Daily", "url": "https://www.theneurondaily.com/p/meta-used-staff-as-ai-training-data-then-cut-them", "take": "Connects the dots between the Model Capability Initiative and the layoffs — staff were used as AI training data, then cut." },
+        { "source": "WION", "url": "https://www.wionews.com/world/meta-zuckerberg-leaked-audio-ai-training-employee-tracking-layoffs-1779376862572", "take": "Quotes the audio directly, including Zuckerberg's 'AI models learn from watching really smart people do things' framing and the no-opt-out exchange." },
+        { "source": "The Register", "url": "https://www.theregister.com/ai-ml/2026/05/22/zuck-defends-monitoring-employees-to-win-ai-race-in-purported-leaked-audio/", "take": "Calls the recording 'purported' and stresses Meta has not confirmed its authenticity — the useful sourcing caveat — while laying out the monitoring-to-win-the-AI-race framing." },
+        { "source": "Common Dreams", "url": "https://www.commondreams.org/news/meta-ai-layoff", "take": "Frames it as workers being used to train AI 'ahead of mass layoffs' — the labor angle that drove the story's spread." }
+      ]
+    },
+    {
+      "id": "jack-clark-oxford-nobel-prediction-essay-may-2026",
+      "tier": 3,
+      "title": "Anthropic's Jack Clark predicts an AI-assisted Nobel within a year — and restates the risk",
+      "summary": "At an Oxford lecture on May 20, Anthropic co-founder Jack Clark — who also writes the widely-read Import AI newsletter — laid out a set of concrete near-term predictions: AI working with humans to make a Nobel-worthy discovery within 12 months, bipedal robots assisting tradespeople within two years, AI-only companies generating millions of dollars in revenue within 18 months, and AI systems able to design their own successors by the end of 2028. He paired the optimism with an unusually blunt restatement of the downside for someone at his level, saying there remains 'a non-zero chance of killing everyone on the planet' and that 'the risk hasn't gone away,' arguing humans should slow the pace of development. His sharpest framing on the self-improvement point: 'We have not ever encountered a technology that has this property, where it can make a better version of itself without people.' Clark published an accompanying essay through Import AI to run alongside the speech. TIME picked the talk up on May 22 under the frame that Anthropic is simultaneously selling Claude's promise and warning about AI's dangers — the deliberate two-sided message Clark has run for years.",
+      "link": "https://www.techcentral.ie/anthropic-co-founder-predicts-that-ai-will-within-a-year/",
+      "why_it_matters": "Predictions about AI are cheap and usually come from people selling something — what makes this one worth a moment is the source, and the tension it holds on purpose. Jack Clark co-founded Anthropic and writes Import AI, one of the more measured, less hype-driven newsletters in the field, so when he attaches specific timelines to things he's giving a calibrated insider read, not a marketing pitch. The useful part isn't the headline ('Nobel within a year'); it's that the same person, from inside a frontier lab whose business is selling Claude, says both 'this will do extraordinary things very soon' and 'the worst-case risk is real, and we should slow down' — a duality TIME's coverage zeroes in on. His point about a technology that can 'make a better version of itself without people' is the crux of why the timelines get steep fast. If you're trying to make sense of the constant noise about where AI is headed, having a credible insider state both halves plainly is a useful anchor for your own calibration. His Import AI essay, published alongside the talk, is the thing actually worth reading rather than the secondhand coverage.",
+      "why_it_matters_brief": "Anthropic co-founder Jack Clark put hard timelines on AI's upside while restating a 'non-zero chance of killing everyone' — a rare calibrated read, and a deliberate two-sided message from a lab that sells Claude.",
+      "source": { "name": "TechCentral", "type": "scrape", "url": "https://www.techcentral.ie" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-23T17:22:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-23T17:22:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-24T06:16:00Z", "by": "enrichment", "change": "enriched — added Clark's 'make a better version of itself without people' self-improvement quote and TIME's 'sells Claude's promise while warning about the dangers' duality framing; updated why_it_matters and brief; added TIME take" }
+      ],
+      "takes": [
+        { "source": "Import AI (Jack Clark)", "url": "https://importai.substack.com/", "take": "Clark's own newsletter, where he published the essay written to run alongside the Oxford speech — the primary-source version of the argument." },
+        { "source": "AI Weekly", "url": "https://aiweekly.co/alerts/jack-clark-predicts-ai-nobel-prize-win-in-12-months", "take": "Summarizes the full set of timelines (Nobel, robots, AI-run companies, self-designing systems) and the existential-risk caveat in one place." },
+        { "source": "TIME", "url": "https://time.com/article/2026/05/22/anthropic-claude-code-jack-clark-ai-safety/", "take": "Frames the talk as Anthropic selling Claude's promise while warning about AI's dangers — the deliberate duality Clark has run for years." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
