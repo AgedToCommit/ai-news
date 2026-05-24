@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-24T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-24T17:08:00Z",
+      "ended_at": "2026-05-24T17:16:00Z",
+      "wall_time_ms": 480000,
+      "tokens_used": 30000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 3500,
+        "output_write": 1000
+      },
+      "fetches_made": 22,
+      "items_input": 12,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-24-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; entire sweep done via WebSearch (21 queries). All hero_image null for the same reason. Today's 2026-05-24-am.json has 4 items (Microsoft RAMPART/Clarity, Raindrop Workshop, Meta employee-tracking leaked audio, Jack Clark Oxford) — all excluded by the digest promotion rule; none are Tier-1, so the promotion exception (Tier-1 materially deepened) does not apply, and none deepened in the afternoon window anyway. Quiet post-I/O Sunday: no fresh frontier model release in the window (no new OpenAI/Anthropic/Google/Meta/Mistral/xAI drop; the strongest open-weight models — DeepSeek V4 Apr 24, Qwen3.7-Max May 20, Kimi K2.6 Apr 20, GLM-5 — are all stale and previously covered; Gemini 3.5 Pro still 'next month'). One genuinely fresh, never-covered item written. Tier 2: laravel-lang-supply-chain-attack-credential-stealer-may-2026 (Global) — over May 22-23 an attacker rewrote ~700 existing Git release tags across the Laravel-Lang PHP localization packages (laravel-lang/lang, http-statuses, attributes, etc.) on Packagist to point at a malicious commit in an attacker fork, so even version-pinned projects pulled poisoned code; injected helpers.php wired into Composer autoload.files runs on every request the moment the package installs, fetches a cross-platform second stage, and runs a credential stealer (cloud keys, CI/CD tokens, SSH, .env, browser/password-manager data, crypto wallets). Packagist pulled and unlisted the affected versions. Verified across The Hacker News, BleepingComputer, StepSecurity, Aikido, Snyk, Mend, gbhackers, plus the upstream GitHub issue (Laravel-Lang/common#257). Chosen despite being PHP/Composer (outside Gabe's stack) because (a) it is the weekend's one genuinely fresh + uncovered dev-security event, (b) it maps directly onto Gabe's own `pip install` workflow (install-time code execution; version tags aren't safe pins; use lockfiles + hash verification), and (c) it has a real, well-documented AI angle — 2026 research shows AI coding agents auto-install dependencies, pick known-vulnerable versions ~50% more often than humans, and reference non-existent packages ~20% of the time (slopsquatting), so an agent running installs unattended removes the human review step this attack is built to slip past; the systemic AI-agent supply-chain research (CSO Online, Security Boulevard Mar 2026, a16z 'Et Tu, Agent?', the arXiv dependency-selection study dated Dec 2025) was folded into why_it_matters + a CSO Online take rather than made a separate item, since those analysis pieces are months old and not a fresh 'today' event. Items considered and declined: Andrej Karpathy joining Anthropic's pre-training team (May 19) — already covered (2026-05-19-pm, 2026-05-20-am). Anthropic acquires Stainless (May 18) — already referenced (2026-05-19-am, 2026-05-20-am), M&A/tooling, stale. OpenAI internal model disproving the Erdős unit-distance conjecture (May 20) — major story but already covered (2026-05-22-am, openai-model-disproves-erdos-...). Trump White House postpones/scraps the AI safety executive order (May 20-22) — already covered (trump-scraps-ai-executive-order-frontier-models-may-2026 in 2026-05-22-am, plus 2026-05-22-pm and 2026-05-23-am). Hugging Face transformers v5.8.0 (DeepSeek V4 / Gemma 4 / EXAONE 4.5 support) — genuinely useful Python-ecosystem update but dated May 5 (~19 days stale, past the run's declining staleness bar, consistent with prior 17-37-day declines). HF 'Copy to Bucket' (May 22) — minor infra feature, below bar. NVIDIA Cosmos Reason 2 / NVIDIA open-models push — robotics/physical-AI and enterprise-flavored, uncertain freshness, consistent with prior NVIDIA-enterprise declines. Air Street 'State of AI: May 2026' (Nathan Benaich) — substantive monthly analysis but published earlier in May and largely recaps already-covered/stale material (China coding sprint = April open-weight models, Anthropic Project Deal), not a fresh event. Klarna ChatGPT shopping app (May 20), Gemini Spark / 3.5 Flash (I/O May 19) — covered/stale and low learning value for Gabe. Anthropic + Gates Foundation $200M partnership — re-flagged by the May 24 enrichment as a possible Tier-3 gap item but declined again here (philanthropy/partnership, low broadening value, consistent with prior partnership/M&A declines). GitHub-trending / Show HN tools (OpenHuman, Statewright, mcp-recorder, etc.) — undated or unverifiable freshness and small projects; not added rather than synthesize. Honest single-item digest on a quiet Sunday with the morning section already carrying 4 items — quality over padding, consistent with this agent's no-padding rule and prior small-digest behavior (May 22 pm and May 23 pm were both 3 items on the strength of more fresh material that simply wasn't present today). Final pm file: 1 item, tier counts 1:0 / 2:1 / 3:0."
+    },
+    {
       "run_id": "2026-05-24T11:22:00Z-refresh",
       "phase": "refresh",
       "status": "success",
