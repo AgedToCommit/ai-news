@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-25-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-25",
-  "generated_at": "2026-05-25T06:16:00Z",
-  "generated_at_local": "2026-05-25T02:16:00-04:00",
+  "generated_at": "2026-05-25T11:30:00Z",
+  "generated_at_local": "2026-05-25T07:30:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-25T06:16:00Z", "duration_ms": 660000 }
+    { "phase": "enrichment", "ran_at": "2026-05-25T06:16:00Z", "duration_ms": 660000 },
+    { "phase": "refresh",    "ran_at": "2026-05-25T11:30:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "tier_counts": { "1": 0, "2": 1, "3": 2 },
   "items": [
     {
       "id": "laravel-lang-supply-chain-attack-credential-stealer-may-2026",
@@ -35,6 +36,56 @@
         { "source": "Socket", "url": "https://socket.dev/blog/laravel-lang-compromise", "take": "Characterizes the payload as an RCE backdoor granting full remote access, and pins the scope — 233 malicious versions across the core repos with roughly 700 historical tags potentially affected — while detailing the fork-tag trick that lets legitimate-looking version tags resolve to attacker code." },
         { "source": "Aikido", "url": "https://www.aikido.dev/blog/supply-chain-attack-targets-laravel-lang-packages-with-credential-stealer", "take": "Walks through how the injected src/helpers.php hooks Composer's autoload.files so the payload runs on every request immediately after install, and analyzes the ~5,900-line second stage — about 15 specialist collector modules, AES-256-encrypted exfiltration, and self-deletion from disk to limit forensics." },
         { "source": "CSO Online", "url": "https://www.csoonline.com/article/4167465/supply-chain-attacks-take-aim-at-your-ai-coding-agents.html", "take": "The AI angle: coding agents recommend and in some setups directly install packages, creating an install channel no human reviewed — the exact gap an attack like this is built to slip through." }
+      ]
+    },
+    {
+      "id": "pope-leo-xiv-magnifica-humanitas-ai-encyclical-may-2026",
+      "tier": 3,
+      "title": "Pope Leo XIV's AI encyclical 'Magnifica Humanitas' is published — and Anthropic co-founder Christopher Olah co-presented it at the Vatican",
+      "summary": "Pope Leo XIV's first encyclical letter, Magnifica Humanitas ('The Great Humanity'), was formally published and presented at the Vatican's Synod Hall today, May 25, at 11:30 a.m. The document — signed May 15, the 135th anniversary of Leo XIII's Rerum novarum — makes the case that AI poses 'not a technological challenge, but an anthropological one.' Key arguments: AI is not a morally neutral tool (it matters not only how it is used, but how it is designed); lethal autonomous weapons that operate without meaningful human oversight are condemned outright; AI displacement of workers is framed as a social justice issue requiring policy response; and the encyclical warns against AI systems that simulate human faces and voices in ways that erode authentic human connection. It calls on society and AI developers to adopt 'shared standards of social justice' so that AI serves human dignity rather than a 'culture of power,' drawing a Tower of Babel parallel to visions of an AI future that excludes moral accountability. In a break with Vatican tradition, Leo XIV himself spoke at the presentation. Among the speakers on stage: Christopher Olah, Anthropic co-founder and head of interpretability research, alongside Cardinal Víctor Manuel Fernández, Cardinal Michael Czerny, and theologian Anna Rowlands of Durham University.",
+      "link": "https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl",
+      "why_it_matters": "This is the first time a major religious institution has published a detailed, authoritative theological argument about AI — not a statement or a guideline, but an encyclical, which is a formal teaching document that carries weight for the world's 1.4 billion Catholics and is read by policymakers well beyond the Church. The Vatican's framing — that AI is an anthropological challenge, not a technical one — is a meaningful reframe: it shifts the question from 'what can it do' to 'what is it doing to people.' The Olah connection is worth noticing: he's the person at Anthropic most focused on understanding how neural networks actually work from the inside (mechanistic interpretability), and him appearing at the encyclical's launch signals that the Church engaged seriously with people trying to build responsible AI rather than only critiquing from outside. The specific warning about systems that simulate human faces and voices is the most concrete near-term concern — it directly implicates real-time AI avatars and voice cloning, tools already appearing in coding and creative workflows. For Gabe, this is useful as a reference point: when clients or employers ask 'what are the non-safety-board voices saying about AI risk,' this document is now a serious, widely-cited answer.",
+      "why_it_matters_brief": "The first papal encyclical on AI is out — the Church's argument is that this is an anthropological challenge, not a technical one, and Anthropic's interpretability chief co-presented it at the Vatican.",
+      "source": { "name": "CNN", "type": "scrape", "url": "https://www.cnn.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-25T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-25T11:30:00Z", "by": "refresh", "change": "created; fresh hook is the actual publication and presentation of the encyclical today (May 25) with the document's arguments now known — earlier coverage in 2026-05-21-am was announcement-only; enrichment explicitly flagged this for refresh reconsideration" }
+      ],
+      "takes": [
+        { "source": "National Catholic Reporter", "url": "https://www.ncronline.org/vatican/vatican-news/pope-leo-present-his-encyclical-ai-alongside-anthropic-co-founder", "take": "Details the unusual pairing: Christopher Olah was among the speakers at the Vatican presentation alongside Cardinals Fernández and Czerny — the Church engaging directly with frontier AI researchers rather than only regulatory bodies." },
+        { "source": "EWTN News", "url": "https://www.ewtnnews.com/vatican/magnifica-humanitas-pope-leo-xiv-invokes-justice-to-combat-anti-human-vision-in-ai", "take": "Covers the encyclical's core framing: AI poses an 'anti-human vision' if designed outside the constraints of social justice, and the Pope invokes justice as the structural corrective — not bans." },
+        { "source": "National Catholic Register", "url": "https://www.ncregister.com/cna/pope-leo-ai-magnifica-humanitas", "take": "Summarizes the doctrinal arguments: condemnation of lethal autonomous weapons without human oversight, the Tower of Babel analogy for AI-exclusive futures, and the call for AI to serve rather than replace human decision-making." },
+        { "source": "Angelus News", "url": "https://angelusnews.com/news/vatican/magnifica-humanitas-overview/", "take": "Notes the document's emphasis that AI must serve 'the common good' — the language of Catholic social teaching — positioning it as a continuation of the Church's tradition of engaging with industrial-era labor and justice questions." }
+      ]
+    },
+    {
+      "id": "anthropic-microsoft-maia-200-chip-talks-may-2026",
+      "tier": 3,
+      "title": "Anthropic is in early talks to run Claude on Microsoft's custom Maia 200 AI chips",
+      "summary": "Anthropic and Microsoft are in early-stage negotiations for Anthropic to rent Azure servers running Microsoft's Maia 200 custom AI accelerator, according to CNBC (May 21). A deal would make Claude the first external frontier model to validate Maia 200 at production scale. The Maia 200, announced at Microsoft Ignite in January 2026 and built on TSMC's 3nm process, is designed exclusively for AI inference — not general-purpose GPU work — and links four accelerators with direct connections to improve throughput. CEO Satya Nadella cited a 30%+ improvement in tokens per dollar versus their current GPU fleet on the April earnings call. The most likely initial workloads would be high-volume Claude Haiku and Sonnet requests rather than frontier reasoning tasks requiring maximum GPU headroom. No deal has been closed. Context: Microsoft holds a $5 billion equity stake in Anthropic, and Anthropic has committed roughly $30 billion in long-term Azure compute spend — adding Maia 200 as a compute lane would redirect a portion of that commitment from Nvidia GPU rentals to Microsoft's own silicon. Anthropic currently sources compute from Nvidia GPUs, AWS Trainium, Google TPUs, and the SpaceX Colossus cluster. Coverage confirmed by CNBC (May 21), WinBuzzer (May 22), and TechTimes (May 24).",
+      "link": "https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html",
+      "why_it_matters": "The reason per-token costs for Claude (and GPT, and Gemini) have been dropping fast is that labs are running inference on a mix of silicon — not renting NVIDIA H100s at market price for every workload. This is the business story underneath every 'price drop' announcement: when a lab diversifies across custom chips (AWS Trainium, Google TPU, and now possibly Maia 200), it gets leverage over NVIDIA pricing and can route workloads to whatever is cheapest for that traffic type. For Gabe, the practical implication is that the cost trajectory for using Claude through the API is likely to keep falling — and faster if Maia 200 delivers on Nadella's 30% tokens-per-dollar claim, since Haiku and Sonnet are the most common API request types. The Maia 200 story is also a useful case study in what's actually powering these systems: it's not a single GPU farm but a deliberate multi-silicon portfolio where different chip types get routed different workload profiles.",
+      "why_it_matters_brief": "Anthropic is in talks to run Claude on Microsoft's custom Maia 200 chip — a deal that would diversify Claude's compute beyond Nvidia and likely continue the API's per-token cost decline.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-25T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-25T11:30:00Z", "by": "refresh", "change": "created; gap item — first reported May 21 (CNBC), confirmed by multiple outlets through May 24; not covered in any prior snapshot" }
+      ],
+      "takes": [
+        { "source": "TechTimes", "url": "https://www.techtimes.com/articles/317072/20260524/anthropic-microsoft-negotiate-maia-200-chip-deal-claude-could-become-custom-silicons-first.htm", "take": "Frames this as the first real external validation test for Maia 200 — Microsoft's custom silicon hasn't been proven yet against a real-world frontier model workload." },
+        { "source": "WinBuzzer", "url": "https://winbuzzer.com/2026/05/22/anthropic-eyes-microsoft-maia-chips-amid-compute-crunch-xcxwbn/", "take": "Notes the compute-crunch angle: Anthropic is looking at every available silicon path to meet demand, and Maia 200 is one of the few non-Nvidia options for Azure-based inference at scale." }
       ]
     }
   ],
