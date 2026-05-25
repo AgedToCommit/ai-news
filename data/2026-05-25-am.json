@@ -1,0 +1,42 @@
+{
+  "snapshot_id": "2026-05-25-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-25",
+  "generated_at": "2026-05-25T06:16:00Z",
+  "generated_at_local": "2026-05-25T02:16:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-25T06:16:00Z", "duration_ms": 660000 }
+  ],
+  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "items": [
+    {
+      "id": "laravel-lang-supply-chain-attack-credential-stealer-may-2026",
+      "tier": 2,
+      "title": "Laravel-Lang packages hijacked — ~700 release tags rewritten to run a credential stealer on install",
+      "summary": "Over the weekend of May 22-23, an attacker compromised the Laravel-Lang family of PHP localization packages (laravel-lang/lang, laravel-lang/http-statuses, laravel-lang/attributes, and possibly laravel-lang/actions) — community-maintained libraries published on Packagist, the PHP package registry, and used widely to add translated strings to Laravel apps. Rather than push one bad new version, the attacker rewrote existing Git release tags to point at a malicious commit in an attacker-controlled fork, exploiting the fact that Packagist resolves versions from GitHub tags and that GitHub lets a tag point at a commit in a fork of the same repo. The result: even projects pinned to a known-good version number would pull poisoned code, since the tag itself had been moved. Researchers at Socket and Aikido, who surfaced the attack, put the count at 233 malicious versions republished across the core repos, with roughly 700 historical tags affected across the dependent repositories; the tags were pushed in rapid bursts on May 22-23, many seconds apart. The payload was an injected src/helpers.php wired into Composer's autoload.files, which means it runs automatically on every request the moment the package is installed — no extra step required. It then reaches out to an attacker domain and downloads a cross-platform second stage: a roughly 5,900-line PHP credential stealer organized into about 15 specialist collector modules that scrape cloud keys, Kubernetes secrets, Vault tokens, CI/CD tokens, SSH keys, .env files, browser data, password-manager vaults, VPN configs, and crypto wallets, then encrypt the haul with AES-256, exfiltrate it to an attacker endpoint, and delete the stealer from disk to limit forensic traces. Packagist pulled the malicious versions and temporarily unlisted the affected packages once the attack was reported; the incident was documented by Socket, Aikido, The Hacker News, BleepingComputer, StepSecurity, and Snyk.",
+      "link": "https://www.bleepingcomputer.com/news/security/laravel-lang-packages-hijacked-to-deploy-credential-stealing-malware/",
+      "why_it_matters": "This is a clean, recent example of a risk that applies directly to how you install Python packages too: when you run an install, package code can execute immediately on your machine. Composer's autoload.files is the PHP equivalent of a package doing work at import time — pip has its own ways for a package to run code on install, so the lesson transfers straight to `pip install`. The sharper detail here is the tag-rewrite trick: pinning to a version number isn't actually safe if the attacker can move the tag underneath you. The defense is to lean on lockfiles that record exact content hashes (composer.lock, or pip's hash-checking / a tool like uv or pip-tools), so your install verifies it's getting the exact bytes you approved, not just 'whatever v1.2.3 points to today.' The AI angle is the part worth sitting with: there's a body of 2026 research showing AI coding agents auto-install dependencies far more readily than people do, pick known-vulnerable versions roughly 50% more often than humans, and reference packages that don't even exist about 20% of the time (which attackers exploit by registering those names). So the human pause that might catch a weird new dependency — 'wait, why is it pulling this?' — is exactly the step an agent skips. If you let Claude Code or Cursor run installs unattended, you're trusting the supply chain with no review in the loop, and this Laravel attack is what that risk looks like when it goes off.",
+      "why_it_matters_brief": "~700 Laravel package versions were quietly rewritten to run a credential stealer on install — a reminder that a version tag isn't a safe pin, and that auto-installing AI agents skip the check that catches this.",
+      "source": { "name": "BleepingComputer", "type": "scrape", "url": "https://www.bleepingcomputer.com" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-05-24T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-24T17:15:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-25T06:16:00Z", "by": "enrichment", "change": "added payload analysis (~5,900-line stealer, ~15 collector modules, AES-256-encrypted exfil + self-delete from disk) and clarified scope (233 malicious versions / ~700 tags across repos, per Socket and Aikido); refined title to 'release tags'; added Socket take and expanded the Aikido take; why_it_matters and brief unchanged (thesis still accurate)" }
+      ],
+      "takes": [
+        { "source": "The Hacker News", "url": "https://thehackernews.com/2026/05/laravel-lang-php-packages-compromised.html", "take": "Details the cross-platform credential stealer the second stage drops, and the breadth of what it harvests — cloud keys, CI/CD tokens, SSH material, env files, browser and password-manager data." },
+        { "source": "StepSecurity", "url": "https://www.stepsecurity.io/blog/laravel-lang-supply-chain-attack", "take": "Focuses on the tag-rewrite mechanism — every existing tag repointed to a malicious commit — and why CI secrets were the prime target, since builds pull dependencies in trusted, token-rich environments." },
+        { "source": "Socket", "url": "https://socket.dev/blog/laravel-lang-compromise", "take": "Characterizes the payload as an RCE backdoor granting full remote access, and pins the scope — 233 malicious versions across the core repos with roughly 700 historical tags potentially affected — while detailing the fork-tag trick that lets legitimate-looking version tags resolve to attacker code." },
+        { "source": "Aikido", "url": "https://www.aikido.dev/blog/supply-chain-attack-targets-laravel-lang-packages-with-credential-stealer", "take": "Walks through how the injected src/helpers.php hooks Composer's autoload.files so the payload runs on every request immediately after install, and analyzes the ~5,900-line second stage — about 15 specialist collector modules, AES-256-encrypted exfiltration, and self-deletion from disk to limit forensics." },
+        { "source": "CSO Online", "url": "https://www.csoonline.com/article/4167465/supply-chain-attacks-take-aim-at-your-ai-coding-agents.html", "take": "The AI angle: coding agents recommend and in some setups directly install packages, creating an install channel no human reviewed — the exact gap an attack like this is built to slip through." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}

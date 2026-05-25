@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-25T06:16:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-25T06:05:00Z",
+      "ended_at": "2026-05-25T06:16:00Z",
+      "wall_time_ms": 660000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 6000,
+        "output_write": 1500
+      },
+      "fetches_made": 6,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-25-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; all work done via WebSearch (5 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-24-pm.json had 1 item, KEPT + ENRICHED, 0 dropped. (1) laravel-lang-supply-chain-attack-credential-stealer-may-2026 (Tier 2, Global) — substantive enrich: the weekend supply-chain story picked up detailed payload analysis from Socket and Aikido that wasn't in the ~13h-old pm item. Added (a) payload internals — the second stage is a ~5,900-line PHP credential stealer organized into ~15 specialist collector modules that AES-256-encrypts the harvested data, exfiltrates it to an attacker endpoint, and self-deletes from disk to limit forensics; expanded the harvest list to include Kubernetes secrets, Vault tokens, and VPN configs; (b) scope nuance — Socket/Aikido pin it at 233 malicious versions republished across the core repos (laravel-lang/lang, http-statuses, attributes, possibly actions) with roughly 700 historical tags affected across dependent repos, clarifying the earlier '~700 versions' framing (700 = tags/repos, 233 = actual malicious versions); (c) Socket's 'RCE backdoor / full remote access' characterization. Refined the title from '~700 versions rewritten' to '~700 release tags rewritten' for accuracy. Added a Socket take (scope + fork-tag trick) and expanded the existing Aikido take with the payload analysis. why_it_matters and why_it_matters_brief left unchanged — the thesis (install-time code execution, version tags aren't safe pins, AI agents skip the human review step) is still accurate and the new details deepen rather than change it. Sub-task 2 (late-breaking, last-12h Tier-1 sweep, window ~2026-05-24T18:00Z to 06:05Z): 0 items added. Memorial Day weekend / quiet post-I/O Sunday-into-Monday — no fresh frontier model release in the window. Everything surfaced is already covered or stale: Google Gemini Omni / Gemini 3.5 (May 19, I/O, covered); the four Chinese open-weight coding models GLM-5.1 / MiniMax M2.7 / Kimi K2.6 / DeepSeek V4 (April-early May, covered/stale); ZAYA1-8B (Zyphra, May 6-7, previously declined); Anthropic Managed Agents self-hosted sandboxes + MCP tunnels (May 19, covered); NVIDIA verified-agent-skills pipeline (May 19, previously declined as enterprise/agent-infra); Camunda ProcessOS (May 20 closed beta, enterprise-vertical, low learning value for Gabe's HTML/CSS/Python broadening goal); Gemini 3.5 Pro still 'next month'. Noted but not added (not a Tier-1 late-breaking model release and already covered): Pope Leo XIV's first encyclical 'Magnifica Humanitas' on AI and human dignity is formally presented TODAY May 25 (Christopher Olah of Anthropic among the speakers) — already covered as pope-leo-xiv-magnifica-humanitas-ai-encyclical-may-2026 in 2026-05-21-am; a refresh or digest may want to reconsider it as a fresh-hook Tier-3 item now that the document is actually published rather than merely announced. Also re-flagged from prior runs for a future digest on a fresher hook: SubQ/Subquadratic (first commercial subquadratic LLM, May 5, ~20 days stale, vendor claims still unreproduced); Anthropic + Gates Foundation $200M partnership (declined again, philanthropy/partnership, low broadening value). Final am file: 1 item, tier counts 1:0 / 2:1 / 3:0."
+    },
+    {
       "run_id": "2026-05-24T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
