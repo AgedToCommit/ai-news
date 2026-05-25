@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-25T17:11:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-25T17:08:00Z",
+      "ended_at": "2026-05-25T17:11:00Z",
+      "wall_time_ms": 160000,
+      "tokens_used": 31000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 25000,
+        "curation": 4000,
+        "output_write": 500
+      },
+      "fetches_made": 16,
+      "items_input": 10,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-25-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; entire sweep done via WebSearch (15 queries). All hero_image null for the same reason. Memorial Day Monday in the US — quiet for model releases. Today's 2026-05-25-am.json has 3 items (laravel-lang supply-chain credential stealer, Pope Leo XIV 'Magnifica Humanitas' AI encyclical, Anthropic-Microsoft Maia 200 chip talks) — all excluded by the digest promotion rule; none are Tier-1, so the promotion exception (Tier-1 materially deepened) does not apply, and none deepened materially in the afternoon window anyway. No fresh frontier model dropped in the window: confirmed no new OpenAI/Anthropic/Google/Meta/Mistral/xAI model or open-weight drop (Gemini 3.5 Flash GA is the May 19 I/O release, already covered; DeepSeek V4 Apr 24, Qwen3.7-Max May 20, Kimi K2.6 Apr 20, GLM-5.1, Mistral Medium 3.5 Apr 29 all stale/covered; Gemini 3.5 Pro still 'next month'), so 0 Tier-1 is honest. Two genuinely fresh, never-covered items written. Tier 2: openai-codex-locked-use-desktop-agent-may-2026 (US) — OpenAI shipped 'Locked Use' for the Codex desktop app on macOS (announced May 21, covered through May 24 by Macworld, MacRumors, MacObserver, TechTimes): the Computer Use plugin (Screen Recording + Accessibility perms) drives GUI apps you allow, and an Apple authorization plug-in now temporarily unlocks the Mac during an active trusted task so you can trigger/monitor long-running agent runs remotely from your phone; lock-screen local protections stay on, detected keyboard/mouse activity instantly re-locks and pauses, and it can't automate Terminal, Codex itself, or admin prompts; unavailable in EEA/UK/Switzerland at launch. Strong Gabe fit (Codex is OpenAI's Claude Code analog; concrete worked example of an agent permission/sandbox boundary, pairs with the am Laravel 'agents acting unattended' theme). Tier 3: anthropic-30b-round-900b-valuation-surpasses-openai-may-2026 (US) — Bloomberg (May 22): Anthropic set to close a >$30B round at a >$900B pre-money valuation as soon as end of this week, passing OpenAI's $852B March valuation to become the most valuable private AI company for the first time (up from $380B in Feb 2026); co-led by Sequoia/Dragoneer/Greenoaks/Altimeter (~$2B each), Founders Fund + General Catalyst also in; lands same week as the projected $10.9B Q2 revenue / first operating profit and same day as the Pope encyclical (Chris Olah co-presented). No term sheet signed yet. The day's top business story (buildfastwithai's May 25 lead framing: 'AI moved from emerging technology to systemically important infrastructure'); included despite funding/valuation being lower learning value, framed on what the capital buys (compute -> next Claude models -> API price cuts; ties to the am Maia-200 item) with the Zitron 'profitability swindle' caveat noted. Items considered and declined: OpenAI Codex 'becomes desktop agent / watches screen / runs on mobile' (TechTimes May 24) — same Codex cluster, folded into item 1 as a take rather than a separate item. Cursor 3.3 async subagents (May 7) + Bugbot effort levels (May 11) — useful Gabe-stack tooling but ~14-18 days stale, past the run's declining staleness bar. Google Antigravity 2.0 / Antigravity CLI (I/O, May 19) — already within covered I/O cluster. Genkit Middleware (May 14), LlamaIndex template for Google Agents API (May 20, already declined by the May 22 digest) — getting stale / derivative. Meta Tuna-2 pixel-space multimodal result — research, surfaced only in an undated roundup with no verifiable 'today' hook, declined rather than synthesize. Context7 / Playwright MCP / MCP-to-Linux-Foundation — ecosystem overview pieces, not fresh events. Grok 4.3 (May 4), Mistral Medium 3.5 (Apr 29) — stale/covered. Anthropic + Gates Foundation $200M partnership — declined again (philanthropy/partnership, low broadening value, consistent with prior partnership/M&A declines). SubQ/Subquadratic (first commercial subquadratic LLM, May 5, ~20 days stale, vendor claims unreproduced) — re-flagged across recent runs, still too stale for a fresh hook. Honest 2-item digest (0 Tier-1, 1 Tier-2, 1 Tier-3) on a quiet US holiday with the morning section already carrying 3 items — quality over padding, consistent with prior quiet-day digests (May 24 pm was 1 item, May 22/23 pm were 3). Final pm file: 2 items, tier counts 1:0 / 2:1 / 3:1."
+    },
+    {
       "run_id": "2026-05-25T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
