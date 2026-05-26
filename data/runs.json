@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-26T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-26T10:45:00Z",
+      "ended_at": "2026-05-26T11:15:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 3000,
+        "output_write": 500
+      },
+      "fetches_made": 15,
+      "items_input": 2,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-26-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned HTTP 403 on one URL probed (simonwillison.net/entries), consistent with every run since May 5; all work done via WebSearch (15 queries). All hero_image null for same reason. Overnight Asia/Europe window (2026-05-26T06:18Z to 2026-05-26T11:00Z) on a Tuesday following US Memorial Day. Two items added. (1) anthropic-mythos-1-preview-claude-code-signal-may-2026 (Tier 1, Asia) — On May 25-26, users spotted 'claude-mythos-1-preview' briefly in the Claude Code public interface before it was removed; WinBuzzer (May 26), Testing Catalog, Cyber Security News confirm the sighting. Anthropic is preparing a commercial 'Mythos 1' for integration into Claude Code and a revamped Claude Security enterprise dashboard. Japan context: MUFG, SMBC, Mizuho (first Asian financial institutions) are set to get Mythos restricted preview access within ~2 weeks per US Treasury Secretary Bessent's Tokyo meetings; Japan FSA convened a 36-entity public-private working group. Claude Code UI sighting signals active productization: enterprise dashboard integration first, then broader expansion. Not previously covered as a standalone item (Mythos was only background context in the May 22 Trump-EO item). (2) europe-ai-dependency-trap-allianz-report-may-2026 (Tier 3, EU) — Allianz report published today (Euronews May 26): global AI trade grew from $1T (2014) to $3.8T (2025), Asia dominates (65% of exports, 7 of top 10 exporters), Europe's AI imports grew only 40% since 2023 vs US tripling, 'limited strategic leverage and meaningful exposure to supply-chain disruptions' — risk of dependency trap. Gives economic context behind EU sovereign AI push (Mistral, Cohere-Aleph Alpha, AI Act simplification, EIF sovereign-tech fund). Items evaluated and declined: Anthropic 28 security/compliance integrations (May 25) — enterprise compliance/IT story, low learning value for Gabe's stack; SynthID cross-industry adoption (May 19, 7 days stale) — genuine gap but outside strict 5-hour window; OSCAR Together AI INT2 KV cache quantization (May 19-25) — ML infrastructure research, below Gabe's broadening bar; LFM2.5 Liquid AI (January 2026, very stale); Claude Opus 4.7 GA / Claude Code Routines / Claude Design (all April 2026, stale); Japan megabanks story standalone (May 13-14, 12 days stale) — folded as takes into the Mythos UI signal item. No optional Tier-1 re-pass (no Tier-1 items in existing am file before this run). Final am file: 4 items, tier counts 1:1 / 2:1 / 3:2."
+    },
+    {
       "run_id": "2026-05-26T06:18:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
