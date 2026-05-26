@@ -1,0 +1,68 @@
+{
+  "snapshot_id": "2026-05-26-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-05-26",
+  "generated_at": "2026-05-26T06:18:00Z",
+  "generated_at_local": "2026-05-26T02:18:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-05-26T06:18:00Z", "duration_ms": 240000 }
+  ],
+  "tier_counts": { "1": 0, "2": 1, "3": 1 },
+  "items": [
+    {
+      "id": "openai-codex-locked-use-desktop-agent-may-2026",
+      "tier": 2,
+      "title": "OpenAI Codex can now drive macOS apps while your Mac is locked",
+      "summary": "OpenAI shipped a feature called 'Locked Use' for the Codex desktop app on macOS as part of a May 21 release that the company internally called 'Codex Thursday' — the same drop also added Appshots (a double-Command-press that injects the frontmost window, including text outside the visible scroll area, into the current Codex thread) and graduated Goal Mode to general availability across the app, the VS Code and JetBrains extensions, and CLI 0.128.0. Locked Use builds on Codex's Computer Use plugin — the piece that lets the coding agent actually operate a graphical app rather than just call an API: once you grant Screen Recording and Accessibility permissions, Codex can click through windows, type, navigate menus, and use the clipboard in apps you explicitly allow. The new piece is an Apple authorization plug-in that participates in the standard macOS unlock flow and temporarily unlocks the Mac during an active, trusted task, so you can kick off and monitor a long-running agent run remotely from your phone while the machine sits locked on your desk. The lock screen's local-access protections stay on the whole time, and if Codex detects real keyboard or mouse activity it immediately re-locks the Mac and pauses remote access until you manually unlock it again. It explicitly can't automate Terminal apps, Codex itself, or system-level admin prompts, doesn't work when you close the MacBook lid (clamshell mode takes a different sleep path the plug-in can't intercept), and is unavailable in the EEA, UK, and Switzerland at launch. Federico Viticci at MacStories called Codex's Computer Use 'the best computer use feature I have ever tested in any LLM or desktop agent,' specifically because it drives the macOS accessibility hierarchy (the AX Tree) rather than the screenshot-and-coordinate-click approach used by Claude's and Perplexity's desktop agents — Codex sees the structured UI tree directly, so it has a more reliable handle on which button is which. Reported by Macworld, MacRumors, MacObserver, TechTimes, and MacStories.",
+      "link": "https://www.macrumors.com/2026/05/22/codex-use-mac-apps-when-locked/",
+      "why_it_matters": "You already run an agent that edits files and runs commands (Claude Code); Codex is OpenAI's equivalent, and this is that same idea pushed one step further — the agent driving a real GUI, unattended, on a machine that's locked and out of your hands. The detail worth studying isn't the convenience, it's the permission model. The agent doesn't get a blanket unlock; it gets a temporary, task-scoped unlock that snaps shut the moment a human touches the keyboard, and it's walled off from Terminal and admin prompts entirely. That's a concrete example of the kind of boundary you'd want around any agent you let near your computer — and it pairs directly with this week's Laravel supply-chain item, where the whole risk was an agent doing installs unattended with no human in the loop. The other detail worth absorbing is the architectural one Viticci flagged: Codex reads the macOS AX Tree (the same structured UI graph that screen readers use) instead of taking screenshots and guessing pixel coordinates the way Claude and Perplexity do. For Python work that's the same difference as parsing structured JSON instead of regex-matching HTML — far more reliable, fewer subtle failures. The theme of the week is agents acting on their own, and the interesting engineering question is what scaffolding makes that safe and what UI representation makes it accurate.",
+      "why_it_matters_brief": "OpenAI's Codex can now operate apps on a locked Mac and reads the macOS accessibility tree directly — a worked example of both the scoped-unlock permission model and the structured-UI approach that beats screenshot-and-click.",
+      "source": { "name": "MacRumors", "type": "scrape", "url": "https://www.macrumors.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-25T17:11:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-25T17:11:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-26T06:18:00Z", "by": "enrichment", "change": "added MacStories/Viticci review angle (AX Tree vs screenshot-and-click vs Claude/Perplexity), placed Locked Use inside the broader May 21 'Codex Thursday' bundle (Appshots, Goal Mode GA across app/IDE/CLI 0.128.0), noted clamshell-lid limitation; updated why_it_matters and brief to incorporate the structured-UI architectural point" }
+      ],
+      "takes": [
+        { "source": "MacStories (Federico Viticci)", "url": "https://www.macstories.net/notes/openais-new-codex-app-has-the-best-computer-use-feature-ive-ever-tested/", "take": "Calls Codex's Computer Use the best he has tested in any LLM or desktop agent, attributing the precision to its use of the macOS accessibility hierarchy (AX Tree) rather than the screenshot-and-coordinate-click approach used by Claude's and Perplexity's desktop agents." },
+        { "source": "OpenAI Codex Changelog", "url": "https://developers.openai.com/codex/changelog", "take": "Lists Locked Use alongside the same-day May 21 ship of Appshots (double-Command sends the frontmost window to Codex with text and screenshot) and Goal Mode graduating out of experimental to GA across the Codex app, IDE extensions, and CLI." },
+        { "source": "Macworld", "url": "https://www.macworld.com/article/3147024/openai-codex-can-now-run-with-locked-macbooks.html", "take": "Frames it as the agent no longer needing an unlocked machine to keep working while you're away, and notes the Apple authorization plug-in that brokers the temporary unlock." },
+        { "source": "MacObserver", "url": "https://www.macobserver.com/news/openais-codex-can-use-macos-apps-even-when-your-mac-is-locked/", "take": "Details the safeguards — the lock screen's local protections stay active, and any detected keyboard or mouse activity instantly re-locks the Mac and pauses remote access." },
+        { "source": "TechTimes", "url": "https://www.techtimes.com/articles/317074/20260524/openai-codex-becomes-desktop-agent-controls-mac-apps-watches-screen-runs-mobile.htm", "take": "Places Locked Use inside the larger shift of Codex into a full desktop agent that controls Mac apps, watches the screen, and runs from mobile." }
+      ]
+    },
+    {
+      "id": "anthropic-30b-round-900b-valuation-surpasses-openai-may-2026",
+      "tier": 3,
+      "title": "Anthropic is closing a $30B round at a $900B+ valuation — passing OpenAI for the first time",
+      "summary": "Per Bloomberg (May 22), Anthropic is set to close a funding round of more than $30 billion at a pre-money valuation above $900 billion, with the close expected this week (the week of May 26). That would put it ahead of OpenAI's $852 billion March 2026 valuation, making Anthropic the most valuable private AI company for the first time — a sharp reversal from February 2026, when it was valued at $380 billion. The round is co-led by Sequoia, Dragoneer, Greenoaks, and Altimeter, each putting in roughly $2 billion, with existing backers including Peter Thiel's Founders Fund and General Catalyst also participating. It lands the same week Anthropic projected $10.9 billion in Q2 revenue and its first-ever quarterly operating profit, and the same week as Pope Leo XIV's AI encyclical, which Anthropic co-founder Chris Olah co-presented at the Vatican (in yesterday morning's section). The capital sits on top of an annualized revenue trajectory — multiple trackers now put Anthropic's run rate at roughly $30 billion as of April, ahead of OpenAI's reported $25 billion — that's the operating story underneath the valuation headline. As of overnight no term sheet had been signed and terms could still change. Coverage: Bloomberg, Yahoo Finance, TechTimes, GuruFocus, MacObserver, and The Next Web.",
+      "link": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+      "why_it_matters": "For someone who builds on Claude rather than invests in it, the number that matters underneath the headline valuation is the $30 billion of fresh capital, because in this business that converts almost directly into compute. A raise this size is a multi-year war chest for GPUs, TPUs, and the custom-silicon buildout behind the API you call — it's what funds the next Claude models and the per-token price cuts that come from running inference at scale (it ties straight to the Anthropic-Microsoft Maia-200 chip talks and the Anthropic-xAI Colossus 1 lease, both flagged in this week's coverage). It also reorders the field: Anthropic passing OpenAI on valuation, days after its first profitable quarter and with an annualized revenue run rate now reported to be ahead of OpenAI's, means the lab you rely on is now the most richly funded in the space and arguably the one with the strongest underlying business. The honest caveat is that a private valuation is a negotiated number, not revenue, the term sheet still hadn't been signed as of overnight, and skeptics (Ed Zitron's 'profitability swindle' read, flagged earlier this week) argue these figures lean on circular cloud-and-chip commitments. Treat it as the business backdrop to every Claude release this year, not as something to act on.",
+      "why_it_matters_brief": "Anthropic is closing a $30B round at a $900B+ valuation this week, passing OpenAI on both valuation and reported revenue run rate — the compute war chest behind the next Claude models.",
+      "source": { "name": "Bloomberg", "type": "scrape", "url": "https://www.bloomberg.com" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-05-25T17:11:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-25T17:11:00Z", "by": "digest", "change": "created" },
+        { "at": "2026-05-26T06:18:00Z", "by": "enrichment", "change": "tightened the close-timing language to 'this week (week of May 26)' with no term sheet signed as of overnight; added the revenue run-rate context (Anthropic ~$30B annualized as of April, ahead of OpenAI's reported $25B) and the Colossus 1 lease as a second compute-deployment data point; updated why_it_matters and brief accordingly" }
+      ],
+      "takes": [
+        { "source": "TechTimes", "url": "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm", "take": "Leads on the milestone itself — a $900B+ valuation would make Anthropic the most valuable AI startup, surpassing OpenAI for the first time." },
+        { "source": "The Next Web", "url": "https://thenextweb.com/news/anthropic-900-billion-valuation-funding-round", "take": "Notes the round could stretch well beyond $30B and frames the $900B figure against how fast Anthropic's valuation has climbed through 2026." },
+        { "source": "Yahoo Finance", "url": "https://finance.yahoo.com/sectors/technology/articles/anthropic-set-close-30-billion-203545596.html", "take": "Pins the expected close to the week of May 26 and lays out the lead-investor structure (Sequoia, Dragoneer, Altimeter, Greenoaks at roughly $2B each, with Founders Fund and General Catalyst also in)." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
