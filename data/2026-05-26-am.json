@@ -2,12 +2,13 @@
   "snapshot_id": "2026-05-26-am",
   "snapshot_type": "am",
   "calendar_date": "2026-05-26",
-  "generated_at": "2026-05-26T06:18:00Z",
-  "generated_at_local": "2026-05-26T02:18:00-04:00",
+  "generated_at": "2026-05-26T11:15:00Z",
+  "generated_at_local": "2026-05-26T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-05-26T06:18:00Z", "duration_ms": 240000 }
+    { "phase": "enrichment", "ran_at": "2026-05-26T06:18:00Z", "duration_ms": 240000 },
+    { "phase": "refresh",    "ran_at": "2026-05-26T11:15:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 1 },
+  "tier_counts": { "1": 1, "2": 1, "3": 2 },
   "items": [
     {
       "id": "openai-codex-locked-use-desktop-agent-may-2026",
@@ -62,6 +63,52 @@
         { "source": "The Next Web", "url": "https://thenextweb.com/news/anthropic-900-billion-valuation-funding-round", "take": "Notes the round could stretch well beyond $30B and frames the $900B figure against how fast Anthropic's valuation has climbed through 2026." },
         { "source": "Yahoo Finance", "url": "https://finance.yahoo.com/sectors/technology/articles/anthropic-set-close-30-billion-203545596.html", "take": "Pins the expected close to the week of May 26 and lays out the lead-investor structure (Sequoia, Dragoneer, Altimeter, Greenoaks at roughly $2B each, with Founders Fund and General Catalyst also in)." }
       ]
+    },
+    {
+      "id": "anthropic-mythos-1-preview-claude-code-signal-may-2026",
+      "tier": 1,
+      "title": "Anthropic's restricted Mythos model briefly surfaces in Claude Code UI as 'claude-mythos-1-preview'",
+      "summary": "On May 25-26, users spotted a toggle in the public Claude Code interface briefly enabling 'claude-mythos-1-preview' before Anthropic removed it — the first time the model string has surfaced in a public-facing product. WinBuzzer (May 26), Testing Catalog, and Cyber Security News all confirm the sighting and report that Anthropic is actively preparing a commercial-facing version called Mythos 1 for integration into Claude Code and a revamped Claude Security enterprise dashboard. Mythos is Anthropic's most capable and previously restricted model: its autonomous ability to identify over 10,000 critical software vulnerabilities under Project Glasswing (launched April 7) was the specific capability that prompted US government concern and the abortive Trump executive order covered here on May 22. Nikkei Asia and The Next Web report that Japan's three megabanks — MUFG, SMBC, and Mizuho — are the first Asian financial institutions set to receive the restricted preview, within approximately two weeks, following US Treasury Secretary Scott Bessent's May meetings in Tokyo. Japan's Financial Services Agency has also convened a 36-entity public-private working group on Mythos-class cyber risks, chaired by Mizuho's CISO and comprising major banks, the Bank of Japan, and Japanese units of Anthropic and OpenAI. Anthropic's official stance has been that a general release requires 'far stronger safeguards' — the Claude Code UI appearance and the Japan enterprise expansion together signal those safeguards are now considered mature enough for a phased commercial rollout beginning with enterprise security customers.",
+      "link": "https://winbuzzer.com/2026/05/26/anthropics-mythos-moves-closer-to-claude-code-xcxwbn/",
+      "why_it_matters": "If you use Claude Code, Mythos 1 preview is the version that briefly appeared in your tool's interface — a direct signal it's being productized for developer access. The standard rollout pattern for gated lab models runs: restricted research preview → select enterprise customers (Japanese megabanks, Project Glasswing partners) → Claude Code enterprise tier → broader API. The Claude Code UI sighting is typically the second-to-last step before general API availability. For someone building with Claude, the practical question is what Mythos will mean for the API: the autonomous vulnerability-finding capability at Project Glasswing scale would be directly useful for anyone using Claude for code review or security scanning. The Japan financial system framing also matters as signal: the reason major banks are among the first recipients is that they want Mythos for defensive cyber operations — which is the same justification Anthropic will use when it explains the phased rollout to a broader developer audience. Watch the Claude Code changelog; if a stable 'claude-mythos-1' model string appears there, general API access is probably a month or two behind.",
+      "why_it_matters_brief": "Anthropic's restricted Mythos model appeared in Claude Code's UI as 'claude-mythos-1-preview' — the first public signal of a commercial rollout, with Japan's megabanks first in line for enterprise access.",
+      "source": { "name": "WinBuzzer", "type": "scrape", "url": "https://winbuzzer.com" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-05-26T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-26T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Testing Catalog", "url": "https://www.testingcatalog.com/anthropic-prepares-mythos-1-for-claude-code-and-claude-security/", "take": "Reports 'claude-mythos-1-preview' appeared in both the public Claude Code and Claude Security interfaces before being pulled, and describes Anthropic's phased approach: gated enterprise dashboard integration first, then measured expansion as safety evaluations mature." },
+        { "source": "Nikkei Asia", "url": "https://asia.nikkei.com/business/finance/japan-megabanks-to-gain-access-to-anthropic-s-powerful-ai-model-mythos", "take": "Reports MUFG, SMBC, and Mizuho are set to receive Mythos access within approximately two weeks — the first Asian financial institutions in the restricted preview — following US Treasury Secretary Bessent's Tokyo meetings." },
+        { "source": "The Next Web", "url": "https://thenextweb.com/news/anthropic-mythos-japan-megabanks-access", "take": "Frames the Japan access as 'Mythos goes to Tokyo,' noting that the vulnerability-hunting capability is precisely why financial institutions are willing to take the restricted preview before it reaches the public API." }
+      ]
+    },
+    {
+      "id": "europe-ai-dependency-trap-allianz-report-may-2026",
+      "tier": 3,
+      "title": "Allianz report: Europe risks an AI 'dependency trap' as global AI trade hits $3.8 trillion",
+      "summary": "An Allianz research report published today (May 26) finds that the global AI economy has grown from $1 trillion in 2014 to $3.8 trillion in 2025, with Asia accounting for 65% of AI-related exports and seven of the world's top 10 AI exporters. The US has tripled its AI-related imports since 2023, driven by massive data center and cloud infrastructure investment. Europe's AI imports grew just 40% over the same period. Allianz characterizes Europe as having a 'modest' role across the AI supply chain, with 'limited strategic leverage and meaningful exposure to supply-chain disruptions' — conditions the report frames as a potential 'dependency trap.' Covered by Euronews and Hellenic Shipping News on the day of publication. The Allianz analysis lands as the EU is actively countering this trajectory: the AI Act simplification package (Omnibus VII, May 7) reducing regulatory burden on smaller AI deployments, the new €15 billion European Investment Fund sovereign-tech AI program, Mistral's $830M GPU debt financing for a Paris datacenter, and the Cohere-Aleph Alpha merger positioned as a 'sovereign AI' alternative to US and Chinese labs.",
+      "link": "https://www.euronews.com/next/2026/05/26/europe-could-fall-into-dependency-trap-in-ai-trade-with-us-and-asia-report-finds",
+      "why_it_matters": "This is the economic backdrop behind why European AI regulation and sovereign-tech investment have been so loud this year. The Allianz numbers put the scale plainly: a $3.8T global AI economy where Europe is a net importer with thin strategic leverage. For a developer who calls cloud APIs to build things, the dependency concern is less abstract than it sounds — it shapes which models are legally deployable in the EU (GDPR + AI Act compliance requirements), which cloud regions you can run inference in, and whether European alternatives like Mistral will ever close the price-and-capability gap with US and Chinese models. The counter-moves EU institutions are making — the AI Act simplification, the EIF sovereign-tech fund, the Cohere-Aleph Alpha merger — are all downstream of exactly this calculation. Worth bookmarking if you ever deploy apps accessible to European users.",
+      "why_it_matters_brief": "Allianz puts Europe's position in the $3.8T AI economy plainly — structurally dependent, growing at 40% while the US tripled imports — the data behind the EU's sovereign AI push.",
+      "source": { "name": "Euronews", "type": "scrape", "url": "https://www.euronews.com" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-05-26T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-05-26T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": []
     }
   ],
   "dropped_in_phase": []
