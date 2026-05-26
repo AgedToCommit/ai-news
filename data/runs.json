@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-26T06:18:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-26T06:14:00Z",
+      "ended_at": "2026-05-26T06:18:00Z",
+      "wall_time_ms": 240000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 4500,
+        "output_write": 1000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-26-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch returned HTTP 403 on the one URL probed (huggingface.co/changelog), consistent with every run since May 5; all work done via WebSearch (8 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-25-pm.json had 2 items, both KEPT + ENRICHED, 0 dropped. (1) openai-codex-locked-use-desktop-agent-may-2026 (Tier 2, US) — substantive enrich: (a) Federico Viticci at MacStories reviewed Codex Computer Use as 'the best computer use feature I have ever tested in any LLM or desktop agent,' with a meaningful technical point that the original pm summary lacked — Codex reads the macOS accessibility hierarchy (AX Tree) directly rather than using the screenshot-and-coordinate-click approach of Claude's and Perplexity's desktop agents (structured-UI vs visual-coordinate, the same difference as parsing JSON vs regex-matching HTML); (b) placed Locked Use inside the broader May 21 'Codex Thursday' bundle from the OpenAI Codex changelog — same-day ship of Appshots (double-Command sends the frontmost window with text + screenshot to the current thread) and Goal Mode graduating out of experimental to GA across the Codex app, the VS Code and JetBrains extensions, and CLI 0.128.0+; (c) added the clamshell-lid limitation (Locked Use doesn't work when the MacBook lid is closed because that takes a different sleep path the plug-in can't intercept). Added a MacStories take and an OpenAI Codex Changelog take. why_it_matters and why_it_matters_brief both updated to incorporate the structured-UI architectural point alongside the existing permission-model framing. (2) anthropic-30b-round-900b-valuation-surpasses-openai-may-2026 (Tier 3, US) — lighter enrich: the round still hasn't closed and no term sheet has been signed as of overnight (consistent with the May 22 Bloomberg framing), but the close-this-week-of-May-26 timing is now tightened in the summary. The substantive add is the revenue run-rate context that wasn't in the pm summary: multiple trackers now put Anthropic's annualized run rate at roughly $30B as of April, ahead of OpenAI's reported $25B — that ties the valuation story to the underlying business and pairs with the Anthropic-xAI Colossus 1 lease (also flagged in this week's coverage) as the second compute-deployment data point alongside Maia-200. Added a Yahoo Finance take pinning the close-timing and lead-investor structure. why_it_matters and why_it_matters_brief both updated to incorporate the revenue-ahead-of-OpenAI angle and the Colossus pairing; the Zitron 'profitability swindle' caveat retained. Sub-task 2 (late-breaking, last-12h Tier-1 sweep, window ~2026-05-25T18:00Z to 06:14Z): 0 items added. US Memorial Day Monday evening into early Tuesday is a structurally quiet window and the search results confirm it — every fresh-looking story surfaced (Project Glasswing/Mythos >10,000 vulnerabilities update from May 22, Anthropic-Stainless acquisition from May 18 covered 2026-05-20-am, Anthropic-xAI Colossus 1 deal from May 20 covered 2026-05-21-pm and 2026-05-22-am, Karpathy-joins-Anthropic from May 19 covered 2026-05-19-pm and 2026-05-20-am, Waymo World Model on Genie 3 from February, Gemma 4 / Mistral 3 / NVIDIA Nemotron 3 all already shipped weeks earlier) is either >4 days stale or already covered. No new Anthropic/OpenAI/Google/Meta/Mistral/xAI frontier model drop in the window; no new open-weight model on Hugging Face that warrants a Tier-1 slot. The Glasswing-Mythos >10,000 vulnerabilities update (May 22) is a substantive Tier-1-adjacent story that's never been the lead — Mythos was only contextually mentioned in 2026-05-22-am's Trump-EO item — and is worth re-flagging for the next digest on a fresher hook, but at 4 days stale it doesn't fit the last-12h enrichment late-breaking pass. Re-flagged from prior runs for a future digest: SubQ/Subquadratic (first commercial subquadratic LLM, May 5, ~21 days stale, vendor claims still unreproduced). Honest 2-item am file (0 Tier-1, 1 Tier-2, 1 Tier-3) on a structurally quiet Tuesday morning following a US holiday Monday. Final am file: 2 items, tier counts 1:0 / 2:1 / 3:1. Refresh at 7am will append any overnight Asia/Europe items."
+    },
+    {
       "run_id": "2026-05-25T17:11:00Z-digest",
       "phase": "digest",
       "status": "success",
