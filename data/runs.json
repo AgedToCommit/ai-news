@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-27T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-27T06:00:00Z",
+      "ended_at": "2026-05-27T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 5500,
+        "output_write": 1000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-27-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch unused this run — kept to WebSearch only, consistent with the 403-pattern on direct fetches against most editorial domains since May 5; all hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-26-pm.json had 2 items, both KEPT + ENRICHED, 0 dropped. (1) anthropic-mythos-1-preview-claude-code-signal-may-2026 (Tier 1, Global) — substantive enrich: (a) wolfSSL has now shipped wolfSSL 5.9.1 patching the Mythos-found CVE-2026-5194 forge-cert exploit and confirmed Anthropic pointed Mythos at the codebase with 8 CVEs generated in total from that run; Anthropic plans a full technical analysis of the flaw — first end-to-end public proof point of the disclosure pipeline (Anthropic found, disclosed, maintainer shipped fixed version); (b) Anthropic publicly stated it plans a future public release of Mythos-class models once safeguards are ready (TechBooky, gHacks May 26-27) — adds the policy-level rollout signal to the Claude Code UI-sighting and Japan-megabanks productization signals already in the pm item; (c) maintainer-pushback story: several OSS maintainers have now asked Anthropic to slow the pace of disclosures (The Next Web, Penligent.ai), with average 2-week patch time on high-severity findings now the pipeline rate-limiter; (d) refined numbers: 530 high/critical disclosures with 75 patched and 65 advisories (from Anthropic's own update), alongside the broader 1,596 reports / 1,451 acknowledged / 97 patched / 88 advisories tracker. Updated title (added wolfSSL 5.9.1 + maintainer-pushback hook), summary, why_it_matters, brief; switched source to Anthropic's own May 22 research post at anthropic.com/research/glasswing-initial-update; added three new takes (TechBooky, gHacks, The Next Web — total now 9 takes). promoted_from_am preserved as true. (2) deepmind-alphaproof-nexus-erdos-lean-may-2026 (Tier 1, Global) — substantive enrich: (a) Hassabis publicly framed the system as 'still not AGI' (WION, MSN, Techlusive coverage) — useful situational-awareness framing for a DeepMind launch where the CEO is deliberately tempering expectations; (b) Hassabis additionally called the October 2025 OpenAI Kevin-Weil-deleted '10 Erdős problems solved' claim 'embarrassing,' since researchers later showed the 'solved' problems already had published solutions — positions AlphaProof Nexus as the credible verifier-gated alternative; (c) most substantive technical add: the AlphaProof paper itself contains a direct head-to-head experiment in which three runs of an 'OpenAI-style' chain-of-thought reasoning agent on the same formalized Erdős set produced zero accepted proofs, vs nine from the Lean-gated loop — same model class, different scaffolding, which is the architectural point of the paper made empirical; (d) ongoing application: the system is already being applied to research in quantum optics and graph theory (Mlq.ai). Updated title (added Hassabis framing hook), summary, why_it_matters, brief; added three new takes (WION, Techlusive, Mlq.ai — total now 8 takes). Distinguished carefully in the summary that the 'embarrassing' callback refers to the October 2025 Weil claim, NOT to the separate May 20 OpenAI unit-distance Erdős disproof that was covered May 22; both pm and am files keep that OpenAI-vs-DeepMind 'one big result vs many small results with verifier' framing intact. Sub-task 2 (late-breaking, last-12h Tier-1 sweep, window ~2026-05-26T17:08Z to 06:00Z): 0 items added. The 12-hour window between yesterday's digest end and 2am EDT enrichment cuts across late Tuesday US Memorial-Day-tail evening and Wednesday Asia overnight; checked WebSearch for fresh Tier-1 model drops, Anthropic/OpenAI/Google/Meta/Mistral/xAI release announcements, and open-weight drops on Hugging Face. Every fresh-looking story surfaced (Gemini 3.5 Flash GA May 19 already at I/O coverage, Qwen 3.7 Max May 20 already covered, Claude Design May 25 already covered, gpt-realtime-2 / GPT-5.5 Instant Week 19 already covered, EXAONE 4.5 LG AI Research open-weight VLM not new enough for a Tier-1 slot) is either >5 days stale or already covered in earlier snapshots. No new frontier-model drop in the window. The substantive overnight movement — wolfSSL 5.9.1 patch, Anthropic public-release framing, maintainer-pushback story, Hassabis 'embarrassing' callback, head-to-head experiment in the AlphaProof paper — all developed on top of the two existing pm items and went into Sub-task 1 enrichments rather than as new items. Re-flagged for a future digest: SubQ/Subquadratic (first commercial subquadratic LLM, May 5, ~22 days stale, vendor claims still unreproduced); Microsoft Copilot Studio Computer-Using Agents GA (May 13, 14 days stale, may be worth a delayed look if there's a fresh hook); NVIDIA Vera Rubin / AMD Venice Computex 2026 buildup (keynote June 1 — flagged for the digest in 5 days). Honest 2-item Tier-1-heavy am file on a structurally quiet Tuesday-evening-to-Wednesday-morning window. Final am file: 2 items, tier counts 1:2 / 2:0 / 3:0. Refresh at 7am will append any overnight Asia/Europe items."
+    },
+    {
       "run_id": "2026-05-26T17:08:00Z-digest",
       "phase": "digest",
       "status": "success",
