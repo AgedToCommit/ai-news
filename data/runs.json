@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-29T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-29T11:00:00Z",
+      "ended_at": "2026-05-29T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 23500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 19500,
+        "curation": 2000,
+        "output_write": 1500
+      },
+      "fetches_made": 11,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-29-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 pattern on lab/news/editorial domains across every run since May 5); all discovery via WebSearch only (11 queries). All hero_image null for same reason. Overnight Asia/Europe window (2026-05-29T06:15Z to 2026-05-29T11:00Z) — Friday morning Asia/Europe cycle. Two items added. (1) microsoft-build-2026-homegrown-coding-model-github-copilot-june-2026 (Tier 2, US) — The Information broke on May 29 that Microsoft will unveil a suite of homegrown AI models at Build 2026 (June 2-3, San Francisco), headlined by a coding model aimed at lowering GitHub Copilot's cost and reducing its OpenAI dependency. The key context: Microsoft's internal AI team under Mustafa Suleyman had been contractually restricted from training top-tier models under the OpenAI partnership until those restrictions were renegotiated in April 2026 — whatever ships at Build is the first product of the unconstrained internal effort. Lineup also includes transcription, reasoning, speech, and image models. Microsoft shares rose ~3% on the report. Pre-event coverage also confirms Azure Agent Mesh, WSL 3, Windows Agent Runtime, and Copilot rebuilt as multi-model (Anthropic models as a first-class option alongside OpenAI). Classified Tier 2 (developer tools ecosystem, directly relevant to GitHub Copilot as the VS Code entry point for hobbyist coders). Sources: The Information (primary scoop), Seeking Alpha (market reaction), Digit.in (developer framing). (2) nvidia-taipei-hq-vera-cpu-200b-tam-gtc-june-2026 (Tier 3, Asia) — On May 29 in Taipei, Jensen Huang attended a ceremony at the Beitou Shilin Technology Park site of NVIDIA's planned Taiwan headquarters; Taipei Mayor Chiang Wan-an presented Huang with a key to the city. Same day Huang claimed NVIDIA's Vera CPU architecture opens a $200B TAM — the global CPU segment NVIDIA has never previously competed in directly. Huang also reiterated the 'surprise new product that we haven't told anyone about yet' for H2 2026. Three days before the GTC Taipei keynote (June 1, 11am Taipei / 8pm PT May 31). Previous NVIDIA GTC Taipei item was in 2026-05-28-am but fell out of today's am file via the enrichment path from 2026-05-28-pm; this is a fresh Asia-cycle event with new substance (the $200B CPU TAM claim was not in prior coverage). Sources: NVIDIA Blog live updates, Taipei Times (local HQ ceremony coverage), AI1G YouTube pre-keynote framing. Optional Tier-1 re-pass: anthropic-claude-opus-4-8-release-may-2026 — overnight chatter produced two substantive additions. Added Simon Willison's 'modest but tangible improvement' review (simonwillison.net/2026/May/28/claude-opus-4-8/), which surfaces the mid-conversation system message caching detail: you can now append updated instructions after any user turn while preserving prompt cache hits on earlier turns, reducing cost on long agentic loops — Willison calls this 'really powerful.' Also added GitHub Copilot GA take (2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/): Opus 4.8 is GA in Copilot Pro+/Business/Enterprise at 15X premium until Usage Based Billing launches June 1. Updated summary and brief to include both details; updated last_revision_by to refresh. Items evaluated and declined: Hassabis AGI 2029 timeline (Axios May 26, GIGAZINE May 28) — rehash of May 20 I/O 'foothills of the singularity' comments, no new hook beyond date tightening; repeatedly declined across prior runs as stale I/O coverage. BNP Paribas + Mistral AI cybersecurity partnership (Bloomberg May 26) — interesting Mythos-adjacent EU story but 3 days old and outside the strict 5-hour overnight window; prior runs explicitly held Mistral partnership/infra stories as low Tier-1 fit. Anthropic Seoul office / KiYoung Choi Korea appointment (May 26-27) — business expansion story, low broadening value for Gabe, outside the 5-hour window. EU AI Act transparency rules update — core provisional agreement was May 7 (22 days stale, repeatedly declined). Final am file: 7 items, tier counts 1:1 / 2:3 / 3:3 — 5 kept, 2 added, 0 dropped, 1 Tier-1 re-passed."
+    },
+    {
       "run_id": "2026-05-29T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
