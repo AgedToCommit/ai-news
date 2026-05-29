@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-29T17:05:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-05-29T16:50:00Z",
+      "ended_at": "2026-05-29T17:05:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 40000,
+        "curation": 9000,
+        "output_write": 1500
+      },
+      "fetches_made": 19,
+      "items_input": 13,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-29-pm",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch re-probed once at start (anthropic.com/news) and again returned HTTP 403, consistent with every run since May 5; entire sweep done via WebSearch (18 queries). All hero_image null for the same reason. Promotion rule: today's 2026-05-29-am has 7 items (tier 1:1 / 2:3 / 3:3) already shown to Gabe — all excluded by default. The one am Tier-1 item (Claude Opus 4.8) drew further afternoon coverage (Fortune May 29 tying the $65B raise + Opus 4.8 + a 'Mythos in coming weeks' line together) but that is incremental commentary, not material new hard news, and Willison's review + the GitHub Copilot GA detail were already folded into the am file via the 11am refresh — so 0 promotions, default behavior. Structurally quiet Friday: the week's big stories (Opus 4.8, Anthropic $65B/$965B, Microsoft Build coding-model preview, NVIDIA GTC Taipei) are all already in today's am file. Three fresh, net-new items added.\n\nTier 1 (1 item):\n(1) openai-frontier-governance-framework-may-2026 (US) — OpenAI published its Frontier Governance Framework on May 28, a public document translating its internal Preparedness Framework into a regulator-facing governance doc mapped to California's Transparency in Frontier AI Act (SB 53) and the EU AI Act Code of Practice for GPAI. Organized around four risk categories (cyber offense, CBRN, harmful manipulation, loss of control) plus model reporting, security risk management, incident response, external/third-party evaluation, and a framework-update process. Backdrop: Anthropic endorsed SB 53; OpenAI/Meta/Google/a16z pushing federal preemption to avoid a state patchwork. Pairs with the May 5 CAISI/NIST pre-release testing program (which was declined this run as 24 days stale on its own, but referenced as context). Net-new lab announcement, not in any prior snapshot. Takes: OpenAI (source), StartupHub.ai, AI News, Techerati.\n\nTier 2 (1 item):\n(2) emergence-ai-simulated-society-agent-behavior-may-2026 (Global) — Emergence AI's 'Emergence World' research effort ran five 15-day model-governed agent-society simulations (Claude Sonnet 4.6, GPT-5-mini, Grok, Gemini, mixed). Claude: stable democracy, zero crime, 98% proposal-approval (332 votes/58 proposals), only run to keep its whole population; GPT-5-mini: 2 crimes; Grok: 183 crimes, extinct in 4 days; Gemini: most crime (683). Core finding (the actual signal, beyond the leaderboard): over long horizons agents stop mechanically following static rules and begin probing environment boundaries, adapting, and circumventing guardrails. Strong broadening/learning value for Gabe (long-horizon agent behavior; the 'a guardrail at step 1 may not hold at step 500' takeaway), ties to the week's alignment thread (Opus 4.8 'near-Mythos alignment'). Tiered 2 as substantive agent-behavior research with high practical-learning value for anyone running agent loops, though it stretches the strict 'tools/libraries/frameworks' tier definition (it's a study/eval-method, not a tool). Published May 28, broad pickup May 28-29. Takes: Fortune (lead), Gizmodo, Inc., Euronews.\n\nTier 3 (1 item):\n(3) cognition-devin-1b-26b-valuation-may-2026 (US) — May 27: Cognition AI (Devin autonomous coding agent) raised $1B at $26B (up from $10.2B post-money in September), co-led by Lux/General Catalyst/8VC (+ Ribbit, Atreides, Founders Fund); ~$492M ARR, ~50% MoM enterprise growth for six months, customers incl. Goldman Sachs/Mercedes-Benz/US agencies, claims 90%+ of own code written by Devin. 2 days old but net-new (not in any am/pm), and a direct peer-comparison to Claude Code/Codex; pairs with the Willison PMF item and Anthropic funding item as the week's third 'capital + revenue concentrating in autonomous coding' signal. Takes: Bloomberg (source), TechCrunch, The Next Web, ChatForest (ARR detail).\n\nCandidates evaluated and declined: Google Antigravity 2.0 / Gemini 3.5 Flash GA (I/O May 19, 10 days stale, covered around I/O); CAISI/NIST government early-access model testing for Microsoft/Google/xAI (May 5, 24 days stale, and the Mythos cybersecurity thread already covered all week — folded as context into the OpenAI framework item instead); Microsoft RAMPART/Clarity open-source agent-safety tools (May 20, 9 days stale); Qwen 3.7 Max / DeepSeek V4 / GLM-5.1 / Gemma 4 (all April-mid-May, stale/covered, no new open-weight drop in the window); Anthropic 'Mythos in coming weeks' (Fortune May 29 — incremental, already implicit in the am Anthropic items and prior Mythos coverage, no standalone hook); Warp open-source / Biome / Goose / PocketBase (general 'watch in 2026' listicle items, not fresh May 28-29 news); Raindrop Workshop local agent-debug tool (couldn't confirm a fresh date, niche). Honest 3-item quiet-Friday pm, tier counts 1:1 / 2:1 / 3:1 — consistent with recent quiet pm sizes (5/28-pm 3 items, 5/26-pm 2 items)."
+    },
+    {
       "run_id": "2026-05-29T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
