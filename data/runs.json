@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-29T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-29T06:00:00Z",
+      "ended_at": "2026-05-29T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 31000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7000,
+        "output_write": 1500
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-29-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 pattern on lab/news/editorial domains across every run since May 5); all discovery via WebSearch only (8 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-28-pm.json had 3 items (tier 1:0 / 2:2 / 3:1), all 3 KEPT + ENRICHED, 0 dropped — the pm was only ~13h old, so every item was fresh and each picked up genuine new substance. (1) willison-anthropic-openai-product-market-fit-coding-agents-may-2026 (Tier 2, US) — added the published bill split Willison disclosed ($1,199.79 Claude Code + $980.37 Codex = ~$2,180/mo against a $200 consumer plan), the enterprise seat-plus-usage pricing mechanism (Anthropic ~$20/seat/mo + API consumption from Nov 2025; OpenAI a comparable change April 2026), the broad agreement/pickup (Dare Obasanjo, squaredtech 'killer business model', The Model Wire, OODAloop) and the companion Heavybit 'High Leverage' Ep.9 podcast, and folded in the now-CONFIRMED financials (the post's loosest claim) — Anthropic's $47B run-rate and the $65B/$965B Series H close, both net-new today, as the balance-sheet version of his PMF thesis. Added a squaredtech/Obasanjo take and a Heavybit take; updated summary, why_it_matters, brief. (2) claude-code-usage-analytics-per-category-breakdown-may-2026 (Tier 2, US) — added v2.1.153 (May 28, ~36 changes), one day past the pm's v2.1.152: /model now saves as default for new sessions ('s' to switch current session only), skipLfs for plugin-marketplace git sources, COLUMNS/LINES env vars to status-line commands, `claude agents` autocomplete including built-in skills + slash commands, MCP/auth security fixes, stabilization around background sessions/agents. Also wired in the same-day Opus 4.8 parallel-subagent feature: 'subagents' is now a /usage cost category you can actually run up. Added a DevelopersIO v2.1.153 take; updated summary, why_it_matters, brief. (3) meta-one-paid-consumer-ai-subscriptions-may-2026 (Tier 3, US) — clarified that the two AI tiers (Plus $7.99 / Premium $19.99) share the same feature set and Premium's extra cost buys more capacity on higher-compute queries (i.e. pricing on consumption, not a feature ladder — corrects the pm's 'same features' ambiguity); added Meta's ~3% stock rise on the announcement and the skeptical social-media reaction (comparisons to X's subscription push). Added a TheStreet take; updated summary, why_it_matters, brief. Sub-task 2 (late-breaking, last-12h Tier-1 sweep, window ~2026-05-28T18:00Z to 06:00Z — Thursday US evening into Friday Asia morning): 2 items ADDED, both genuinely fresh Tier-1/major Anthropic news from May 28. (A) anthropic-claude-opus-4-8-release-may-2026 (Tier 1, Global) — Anthropic released Claude Opus 4.8 on May 28 (anthropic.com/news/claude-opus-4-8), a direct upgrade to Opus 4.7 just 41 days later; 88.6% SWE-bench Verified, 69.2% SWE-bench Pro and agentic coding (vs 64.3% for 4.7), 74.6% Terminal-Bench 2.1, 93.6% GPQA Diamond, 1890 GDPval-AA (121 Elo over GPT-5.5); base pricing held at $5/$25 per M tokens, new optional 2.5x fast mode at $10/$50 (Anthropic says 3x cheaper than the prior fast tier); ships parallel-subagent dynamic workflows in Claude Code, mid-task Messages-API system messages, and 'near-Mythos-level' honesty/alignment gains. Clear net-new frontier model release, never covered; ties directly to the Willison and Claude Code /usage items. Coverage: Anthropic, Bloomberg, VentureBeat, Neowin, llm-stats, 9to5Mac. (B) anthropic-65b-series-h-965b-valuation-may-2026 (Tier 3, US) — Anthropic closed its Series H on May 28 at $65B raised / $965B post-money, eclipsing OpenAI's $852B (March) to become the most valuable private AI company for the first time (up from ~$380B in Feb); led by Altimeter/Dragoneer/Greenoaks/Sequoia, co-leads incl. Capital Group/Coatue/D1; $47B run-rate, framed as likely the final private raise before IPO. This is the CLOSE of the round previously covered as pending ('anthropic-30b-round-900b-valuation' in 5/25-pm and enriched 5/26-am) — final numbers came in well above the ~$30B/$900B early framing, so it's net-new today; tagged Tier 3 consistent with the prior funding-story tagging, and paired with the same-day Opus 4.8 release (capital -> compute -> next Opus loop). Late-breaking candidates evaluated and DECLINED: 'NVIDIA Nemotron Coalition of global AI labs / open frontier models' — same January-2026 open-models announcement re-surfacing that the 5/28 digest already verified as stale, dropped; NVIDIA GTC Taipei keynote (June 1, now 3 days out, Tier 3) already covered in 2026-05-28-am and not a last-12h late-breaking model release, held; no other fresh frontier model drop from OpenAI/Google-DeepMind/Meta/Mistral/xAI in the window (Gemini 3.5 Flash May 19, GPT-5.5 Apr 23, DeepSeek V4 Apr 24, Grok 4.3 May 6 all stale/covered). Final am file: 5 items, tier counts 1:1 / 2:2 / 3:2 — 3 kept+enriched, 2 added, 0 dropped. Refresh at 7am will append any overnight Asia/Europe items."
+    },
+    {
       "run_id": "2026-05-28T17:06:00Z-digest",
       "phase": "digest",
       "status": "success",
