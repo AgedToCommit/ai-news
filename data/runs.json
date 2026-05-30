@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-30T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-05-30T11:00:00Z",
+      "ended_at": "2026-05-30T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 2500,
+        "output_write": 1000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-30-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 pattern on lab/news/editorial domains since May 5); all discovery via WebSearch (9 queries). All hero_image null for the same reason. Overnight window: 2026-05-30T06:15Z to 2026-05-30T11:00Z — Saturday Europe morning (UK/France 7–12 local) and late Asia afternoon. Two items added and one Tier-1 optional re-pass. (1) nvidia-n1x-arm-laptop-chip-computex-june-2026 (Tier 2, US) — On May 29, NVIDIA and Microsoft posted coordinated 'new era of PC' social media teases embedding the exact Taipei Music Center coordinates, confirming the N1X reveal at the June 1 GTC Taipei keynote. N1X specs: 20-core Arm CPU, 6,144 CUDA cores, Blackwell graphics (RTX 5070 class). First chip to bring full CUDA developer stack (PyTorch, llama.cpp, Flash Attention, cuDNN) natively to a Windows on Arm laptop device. Confirmed OEM partners: Dell XPS, Lenovo Legion 7/IdeaPad/Yoga lines, Asus ProArt, Microsoft Surface. Devices expected late 2026. Not in any prior snapshot; N1X coverage from May 29 (the 'new era of PC' teaser) predates or fell outside the enrichment run's Tier-1-only late-breaking pass. Strong Tier-2 fit: directly relevant to Gabe's Python/ML workflow (local CUDA inference on a portable device for the first time). Sources: Tom's Hardware, Windows Central, Tweaktown, VideoCardz, CryptoBriefing. (2) dell-ai-server-q1-fy2027-blowout-may-2026 (Tier 3, US) — Dell reported Q1 FY2027 earnings on May 28: AI server revenue $16.1B (+757% YoY), $24.4B AI orders booked in the quarter, $51.3B backlog, total revenue $43.8B (+88% YoY). Raised FY27 AI server guidance to $60B (from $50B) and total FY27 revenue to $165–169B. Stock +30-40% after-hours. Not covered in any prior snapshot — the May 29 digest focused on OpenAI governance/Emergence/Cognition and the May 28-evening earnings report fell through the gap; picked up heavily in Asian financial press during the overnight window, making it a legitimate refresh-window discovery. Pairs with the Anthropic $65B and Devin $1B stories as the week's infrastructure-spending-side signal. Sources: Bloomberg (primary), BusinessWire (official), CNBC (analyst reaction), Blocks&Files (technical context), Benzinga. Optional Tier-1 re-pass on openai-frontier-governance-framework-may-2026: added Trump administration's cancellation of the federal 90-day voluntary AI pre-review framework (May 21, no replacement announced) as the governance-vacuum backdrop that makes OpenAI's self-published document more salient; added California 30-bill crossover deadline (passed May 29, heading to second house June 1); updated summary, why_it_matters, and brief. Items evaluated and declined: Mistral Emmi AI acquisition and industrial AI Now Summit expansion (covered in 2026-05-28-am; the Emmi deal is May 20-26 vintage, too stale for this refresh window); Google DeepMind Contextual AI acqui-hire/Douwe Kiela (May 19-20, 10 days stale, also too old); California Governor's AI workforce executive order (May 21, 9 days stale — folded as background context into the governance re-pass rather than a standalone item); Dell Q1 earnings analyst reactions and Micron stock milestone (finance-only, low broadening value beyond the top-line Dell item); NVIDIA GTC Taipei keynote (formal reveal is June 1 — not yet happened; pre-event context covered by the N1X tease item). Final am file: 5 items, tier counts 1:1 / 2:2 / 3:2 — 3 kept, 2 added, 1 Tier-1 re-passed, 0 dropped."
+    },
+    {
       "run_id": "2026-05-30T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
