@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-05-31T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-05-31T06:00:00Z",
+      "ended_at": "2026-05-31T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 27000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 6000,
+        "output_write": 1500
+      },
+      "fetches_made": 7,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-05-31-am",
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 pattern on lab/news/editorial domains since May 5); all discovery via WebSearch (7 queries). All hero_image null for the same reason. Sub-task 1 (prune+enrich): yesterday's 2026-05-30-pm.json had 3 items (tier 1:1 / 2:1 / 3:1), all 3 KEPT + ENRICHED, 0 dropped — each picked up genuine new substance overnight. (1) openai-rosalind-biodefense-may-2026 (Tier 1, US) — overnight searches pinned down the pre-release safety-evaluator stack OpenAI used: US CAISI, UK AISI, Los Alamos National Laboratory, and the Frontier Model Forum. This is a meaningful structural detail because the same evaluator institutes are now appearing on both OpenAI's biology release and Anthropic's Glasswing/Mythos cybersecurity release — the regulatory backbone of these private partner programs is consolidating around a small named set rather than being lab-specific. Also surfaced the April research-preview launch partners (Amgen, Moderna, Allen Institute, Thermo Fisher; with Los Alamos already doing AI-guided protein/catalyst design), which reframes the May 29 expansion as a second tier of access bolted on top of an existing partner program rather than a cold start. Added Bind AI take and the dual-use governance framing. Updated summary, why_it_matters, brief. (2) datasette-1-0a31-sql-write-queries-may-2026 (Tier 2, US) — overnight reading turned up the small-but-telling 'canned queries' → 'stored queries' rename (a 1.0 terminology-cleanup signal — the name now matches what the feature is actually used for) and the animated execute-query demo in Willison's release post. Modest but real enrichment. Updated summary, why_it_matters, brief. (3) wikimedia-mediawiki-layoffs-editor-strike-may-2026 (Tier 3, Global) — added specifics that meaningfully sharpen the story: the May 21 date for the Community Tech team disbanding, the precise team size (5 engineers and a manager), Brooke Vibber's role as an active union organizer (explains why most fired employees were union-aligned), the foundation's exact financials ($208.6M revenue last fiscal year, $296.6M reserves = 17.1 months operating runway), and the 'Brooke Vibber Day' June 1 memorial banner editors are coordinating — the first visible test of the 'banner sabotage' threat the Register article led with. Added Knockout! take, restructured heise/Medium takes around the new specifics. Updated summary, why_it_matters, brief.\n\nSub-task 2 (late-breaking, last-12h Tier-1 sweep, window ~2026-05-30T18:00Z to 2026-05-31T06:00Z — Saturday US evening into Sunday Asia morning, structurally the quietest window of the week): 0 items added. Candidates evaluated and DECLINED: (a) NVIDIA GTC Taipei keynote tonight (June 1 11am Taipei = May 31 23:00 EDT — i.e., ~17 hours from this run end). The keynote hasn't happened yet; pre-event coverage is already in today's 2026-05-30-am file via the nvidia-n1x-arm-laptop-chip-computex-june-2026 item (added in yesterday's 11am refresh). Holding for refresh at 7am EDT to potentially capture pre-keynote color, and for tomorrow's digest to capture the actual reveal. (b) Air Street Press / Nathan Benaich's 'State of AI: May 2026' monthly retrospective — substantive but it's an editorialized monthly review covering April 2026 developments, not a Tier-1 lab/model release, and the late-breaking pass is specced for Tier-1 sources. Will hold as a candidate for the next digest if it picks up more cross-source discussion. (c) Profluent's $2.25B Lilly partnership for large-gene insertion therapeutics (surfaced via the State of AI piece) — substantive AI-bio adjacent, but stale-dated (this is back-reading from the State of AI monthly, not a fresh announcement in the last 12h). Declined. (d) Chinese coding-model wave (Z.ai GLM-5.1, MiniMax M2.7, Moonshot Kimi K2.6, DeepSeek V4) — also surfaced via the State of AI piece but covered as individual items in earlier am/pm snapshots (Kimi K2.6 April 20, DeepSeek V4 April 24, etc.). All stale. (e) No fresh frontier model release from OpenAI/Anthropic/Google-DeepMind/Meta/Mistral/xAI in the window (Opus 4.8 May 28, Gemini 3.5 Flash May 19, GPT-5.5 April 23, all covered/stale). (f) Wikipedia 'Brooke Vibber Day' June 1 memorial banner — folded as enrichment into the existing Wikimedia item rather than a standalone late-breaking item (would be duplicative). Honest 0-add Sunday-morning enrichment. Final am file: 3 items, tier counts 1:1 / 2:1 / 3:1 — 3 kept+enriched, 0 added, 0 dropped. Refresh at 7am has room to append up to 3 overnight Asia/Europe items if anything surfaces, and is well-positioned to fold in pre-keynote NVIDIA Taipei color since the keynote happens that evening EDT."
+    },
+    {
       "run_id": "2026-05-30T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
