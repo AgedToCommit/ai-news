@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-01T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-01T11:00:00Z",
+      "ended_at": "2026-06-01T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 33000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 700,
+        "deep_fetch": 0,
+        "discovery_search": 29000,
+        "curation": 2100,
+        "output_write": 1200
+      },
+      "fetches_made": 19,
+      "items_input": 8,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-01-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "WebFetch not attempted (consistent HTTP 403 pattern on lab/news/editorial domains); all discovery via WebSearch (19 queries). Added 2 items: (1) github-copilot-ai-credits-metered-billing-june-2026 (Tier 2) — GitHub Copilot's flat seat billing switched to AI Credits metered billing effective June 1, 2026; inline autocomplete remains free, agent-mode and frontier-model completions now burn a credit allotment; the GitHub Blog post and GitHub Docs confirmed via multiple dev-press sources; (2) softbank-75-billion-france-ai-data-centers-2026 (Tier 3) — SoftBank's €75B / 5 GW French AI data-center commitment announced at Macron's May 31 Choose France summit slipped through the May 31 digest and June 1 enrichment; Taipei Times June 1 coverage confirmed as the Asia/EU overnight cycle entry point. Evaluated and declined: (a) Gemini CLI sunset June 18 / Antigravity CLI migration (May 20 original announcement, 12 days stale for the 5-hour refresh window); (b) Mythos/Claude Code integration signal (May 25-26 Winbuzzer/BleepingComputer articles, outside 5-hour window; Mythos was covered in May 7-11 snapshots and the new Claude-Code-toggle angle is a week old, pre-dating the enrichment cutoff); (c) Gemini 3.5 Flash GA (May 19 ship, covered in May 20 snapshots); (d) Claude Opus 4.8 parallel workflows/fast mode (May 28 ship, covered in May 29 snapshots); (e) Computex 2026 floor coverage (floor opens June 2, no floor news yet as of June 1 7am EDT); (f) Microsoft Build 2026 preview content (keynote is June 2, preview articles are 2-3 days old). All hero_image null (HTTP 403 pattern persists)."
+    },
+    {
       "run_id": "2026-06-01T06:25:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
