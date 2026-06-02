@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-02T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-02T17:00:00Z",
+      "ended_at": "2026-06-02T17:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 900,
+        "deep_fetch": 0,
+        "discovery_search": 24500,
+        "curation": 10800,
+        "output_write": 1800
+      },
+      "fetches_made": 11,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-02-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Today's am file existed (9 items, fully covering NVIDIA GTC Taipei + Microsoft Build 2026 + Mistral Vibe + JetBrains Koog) so the exclusion rule applied — no items from am promoted to pm. Five new items added covering distinct afternoon stories: (1) anthropic-project-glasswing-expansion-mythos-public-release-june-2026 (Tier 1) — 4x partner expansion to ~200 across 15+ countries, 10,000+ critical vulns found, public Mythos-class release in weeks, AWS/Apple/Cisco/CrowdStrike/Google/JPM/Linux Foundation/Microsoft/NVIDIA/Palo Alto as named launch partners; (2) anthropic-ipo-filing-confidential-s1-june-2026 (Tier 1) — confidential S-1 with SEC, $965B valuation overtakes OpenAI's $852B, $47B revenue run-rate, $10.9B Q2 guide, October 2026 NASDAQ target, both Anthropic and OpenAI in public-market disclosure by Q4 for the first time; (3) openai-frontier-models-codex-on-aws-amazon-bedrock-ga-june-2026 (Tier 1) — GPT-5.5/5.4/Codex now GA on Amazon Bedrock with full enterprise-controls inheritance, 4M+ weekly Codex users, Daybreak cyber-models roadmap previewed as next addition, structural symmetry of Microsoft-OpenAI partnership now visible after yesterday's Project Polaris reveal; (4) anthropic-claude-outage-claude-code-subagent-recursion-june-2026 (Tier 2) — Claude went down ~5 hrs on IPO-filing day, root cause was Claude Code sub-agent system recursively spawning without depth-limits, Bedrock/Vertex unaffected, automatic quota resets issued, public postmortem promised within 2 weeks; (5) grant-thornton-uk-anthropic-claude-deployment-500m-program-june-2026 (Tier 3) — 5,500-person UK accounting firm standardizes on Claude firm-wide June-Aug rollout, picked over Copilot for EU AI Act compliance documentation quality. Evaluated and declined: (a) Microsoft DoD $9.7B contract (May 27 — outside window, already past); (b) Microsoft Agent Governance Toolkit (April 2026 — outside window); (c) NVIDIA NemoClaw 2.6x inference update on Jetson (too narrow, already cross-referenced under Cosmos 3 in am); (d) OpenAI Codex routine changelog updates (TUI markdown links, Windows Computer Use, /permissions named profiles — incremental rather than headline); (e) Computex Day 2 announcements (mostly continuations of Day 1 NVIDIA/Intel news already in am); (f) Meta Llama 5 / Avocado rumors (no concrete news today); (g) Kimi K3 / Qwen 4 (no June 2 releases); (h) Vercel AI SDK / LangChain / LlamaIndex (no major release today); (i) Simon Willison / Karpathy / Pocock (nothing on June 2 worth surfacing). All hero_image null (HTTP 403 pattern on og:image extraction persists, same as recent runs). All 11 fetches via WebSearch — WebFetch unattempted because the same 403 pattern blocks article-body retrieval. Caps: 38k/100k tokens, 11/50 fetches, well within wall-time."
+    },
+    {
       "run_id": "2026-06-02T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
