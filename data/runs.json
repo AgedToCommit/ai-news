@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-02T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-02T11:00:00Z",
+      "ended_at": "2026-06-02T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 38200,
+        "curation": 10400,
+        "output_write": 2200
+      },
+      "fetches_made": 11,
+      "items_input": 4,
+      "items_output": 9,
+      "items_added": 3,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-02-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — today's 2am enrichment file existed (6 items). Swept last 5 hours via WebSearch (11 queries total; HTTP 403 pattern persists so no WebFetch attempted). Microsoft Build 2026 keynote at 12:30pm ET was the dominant story: confirmed Project Polaris (MoE coding model on Maia 3 accelerators, August 2026 GA), Copilot Workspace GA with fleet mode + autopilot + Extensions, multi-agent VS Code, Autonomous Agent Mode for Enterprise July 2026. Also confirmed: Windows Agent Platform (Agent Runtime June 9 / Agent Store 85% rev share / WSL 3 GPU-NPU passthrough / Azure Agent Mesh Q4 2026) and MAI-Image 2.5 + MAI-Voice 2 + MAI-Transcribe 1.5. Polaris item revised to remove pre-keynote framing (added_by:enrichment stays; last_revision_by updated to refresh). Three items added: microsoft-build-2026-windows-agent-platform (Tier 2), github-copilot-workspace-ga-multi-agent-vs-code-build-2026 (Tier 2), microsoft-mai-models-build-2026 (Tier 3). No Tier 1 new items — Polaris was already in the file. Qwen 3.7 Max checked: launched May 19, outside window. LG EXAONE 4.5 checked: launched April 9, outside window. No HuggingFace or EU/Asia lab releases identified in the 5-hour window. All hero_image null (HTTP 403 pattern persists). Caps: 52k/60k tokens used, 11/20 fetches used, well within wall-time cap."
+    },
+    {
       "run_id": "2026-06-02T06:25:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
