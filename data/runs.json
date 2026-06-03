@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-03T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-03T06:00:00Z",
+      "ended_at": "2026-06-03T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 14400,
+        "output_write": 2800
+      },
+      "fetches_made": 11,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-03-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enriched all five yesterday-pm items — all gained substantive new info, none dropped. (1) Glasswing/Mythos: added overnight Cloudflare partner-level disclosure (2,000 bugs / 400 high-critical / sub-human false-positive rate) and Mozilla disclosure (Firefox 150 ships fixes for 271 vulns identified in single Mythos pass / 180 sec-high / 80 sec-moderate / 11 sec-low / 12x improvement over Opus 4.6 on Firefox 148), plus Mozilla's 'as capable as elite human security researchers' framing. (2) Anthropic IPO: added Sam Altman's first on-the-record response ('going public is a financing event, and I don't think that's one that we're focused on the timing of') and Fortune's read that Anthropic 'volunteered to absorb disclosure risk first' — recasts as two-sided strategic dynamic rather than single race. (3) OpenAI on Bedrock: confirmed pricing matches OpenAI direct rates with no AWS markup, Codex weekly users stepped up from 4M to 5M+ in OpenAI's own AWS-launch post, Amgen + Autodesk named as flagship launch customers. (4) Claude outage: added 'hours-or-days of quota wiped in minutes' failure-shape detail and account-level Pro/Max automatic quota reset (Storyboard18 root-cause writeup). (5) Grant Thornton: added GT Augment governance-framework name and CityAM 'clients pay for expertise, not process' operating-model framing, plus the planned London Digital Experience Centre. Two late-breaking items added: trump-executive-order-ai-cybersecurity-clearinghouse-frontier-review-june-2026 (Tier 1) — Trump signed 'Promoting Advanced AI Innovation and Security' EO evening of June 2 (after pm window closed), establishing 30-day voluntary pre-release review for covered frontier models + Treasury-led AI cybersecurity clearinghouse with NSA/CISA/ONCD, preamble explicitly cites Claude Mythos as precipitating capability, narrowed from May draft's 90-day mandatory framework; holo-3-1-computer-use-agents-fast-local-quantized-june-2026 (Tier 2) — H Company published Holo3.1 on Hugging Face June 2 with FP8/Q4 GGUF/NVFP4 quantized checkpoints, native function-calling, mobile environment support, and AndroidWorld 67→79.3% improvement for 35B-A3B variant. Final composition: 4 Tier-1 + 2 Tier-2 + 1 Tier-3 = 7 items. WebFetch not attempted (HTTP 403 pattern persists from prior runs); all 11 discovery searches via WebSearch. All hero_image null for same reason. Caps: 48k/100k tokens used, 11/30 fetches used, well within wall-time."
+    },
+    {
       "run_id": "2026-06-02T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
