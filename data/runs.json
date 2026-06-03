@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-03T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-03T11:00:00Z",
+      "ended_at": "2026-06-03T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 13500,
+        "curation": 4500,
+        "output_write": 2500
+      },
+      "fetches_made": 17,
+      "items_input": 15,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Today's am file existed (7 items). RSS/scrape sweep via WebSearch (WebFetch 403 pattern persists). Overnight Asia/Europe cycle was relatively quiet — no major lab releases from Asian/European sources in the 06:30Z–11:00Z window. Two items added from overnight gaps in the June 3 am (which was built from June 2 pm and thus lacked Build 2026 + Computex content): (1) microsoft-mai-model-family-build-2026-copilot-reasoning (Tier 1) — Microsoft's first fully in-house model family announced at Build 2026 June 2-3: MAI-Thinking-1 (35B MoE, 97% AIME 2025, trained without OpenAI data, preferred over Claude Sonnet 4.6 in human evals), MAI-Code-1-Flash (5B, +16pt SWE-Bench Pro over Claude Haiku 4.5, 60% fewer tokens, rolling out to all GitHub Copilot plans today), plus MAI-Image-2.5/Transcribe-1.5/Voice-2; GPT-5.5 went GA in Microsoft Foundry on June 3 completing the cross-cloud OpenAI GA picture. Also added a minor revision to openai-frontier-models-codex-on-aws-amazon-bedrock-ga-june-2026 noting the Foundry GA context. (2) nvidia-cosmos-3-open-physical-ai-omnimodel-computex-june-2026 (Tier 2) — NVIDIA released Cosmos 3 at Computex 2026 on June 1, first open omni-model combining world generation + physical reasoning + action generation in one architecture; Nano (16B) and Super (64B) on Hugging Face with Diffusers integration and SDG datasets. Final composition: 5 Tier-1 + 3 Tier-2 + 1 Tier-3 = 9 items. Caps: 22k/60k tokens, 17/20 fetches, within wall-time."
+    },
+    {
       "run_id": "2026-06-03T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
