@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-04T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-04T11:00:00Z",
+      "ended_at": "2026-06-04T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 21000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18800,
+        "curation": 1500,
+        "output_write": 200
+      },
+      "fetches_made": 22,
+      "items_input": 0,
+      "items_output": 8,
+      "items_added": 0,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-04-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS feeds (Simon Willison, Hugging Face, LangChain, podcasts) returned HTTP 403 — falling back to WebSearch for all source coverage. Scrape targets (Anthropic News, OpenAI Blog, Google DeepMind, Meta AI, Mistral) also 403. Covered the last-5-hour window (06:30–11:35Z) via 22 targeted web searches across lab blogs, model trackers, EU/Asia regulatory feeds, and open-source release channels. Window was quiet: no Tier-1/2/3 candidates published between 06:30Z and 11:35Z on June 4. Items evaluated and declined: (a) Mistral AI NOW Summit / Vibe rebrand — May 28, >1 week old, outside 5-hour window; (b) Trump AI EO 'Promoting Advanced Artificial Intelligence Innovation and Security' — June 2, already appeared in June 3 am snapshot (prior enrichment cycle), 2 days old and outside current window; (c) California SB 867 Senate 39-0 passage — occurred May 19, well outside window; (d) NVIDIA GTC Taipei (Vera Rubin production, Cosmos 3, DGX Station Mini, Vera CPU) — June 1, already in June 3 am snapshot, outside window; (e) Anthropic IPO S-1 confidential filing — June 1–2, already in June 3 am snapshot; (f) South Korea Mythos procurement — June 2–3, outside window and related to Glasswing/Mythos story already evaluated by enrichment; (g) Microsoft Research SkillOpt v0.1.0 PyPI release + June 3 integrations — paper from May 22, not a within-window item; (h) SJTU ARIS multi-agent research paper — uncertain date, not confirmed within window; (i) EU AI Act Transparency Code of Practice — second draft March 2026, final not yet published as of search results; (j) Google Antigravity 2.0 + Gemini 3.5 Flash — GA was May 19, already in May 20 snapshots; (k) Gemini 3.5 Pro expected June GA — not yet shipped as of search results. No overnight chatter on existing Tier-1 items (Gemma 4 12B, Anthropic Services Track, Alphabet $84.75B) sufficient to warrant summary refinement — enrichment already incorporated the substantive overnight press wave from June 3–4. Final: 0 items added, 8 items kept from enrichment output."
+    },
+    {
       "run_id": "2026-06-04T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
