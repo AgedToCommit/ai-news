@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-05T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-05T06:00:00Z",
+      "ended_at": "2026-06-05T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 16200,
+        "output_write": 3000
+      },
+      "fetches_made": 13,
+      "items_input": 14,
+      "items_output": 13,
+      "items_added": 1,
+      "items_kept": 12,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-05-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enriched all 12 yesterday-pm items — all gained substantive new info, none dropped. (1) MAI-Thinking-1: added overnight Latent Space AINews / analyst-thread reception note — broad appreciation for the published preprint methodology and transparency level; independent benchmark reproduction still has not landed. (2) MAI-Code-1-Flash: added GitHub changelog detail confirming availability across Free/Pro/Pro+/Max via picker + new Auto router, the overnight 'up to 60% fewer tokens on harder problems' claim, and the analyst framing that the model was trained inside Copilot's production harness (not against generic completion). (3) GPT-Rosalind: added named on-record partner endorsements (Amgen — Sean Bruich; Moderna — Stéphane Bancel; Allen Institute — Andy Hickl), Novo Nordisk joining the expanded program, and the new OpenAI-managed-workspace path for qualified non-Enterprise organizations. (4) MiniMax M3: added MSA architecture detail (1/20 per-token compute at 1M context, >9× prefill / >15× decoding speedup), additional benchmark scores (66.0% Terminal-Bench 2.1, 34.8% SWE-fficiency, 83.5 BrowseComp), explicit caveat that scores were run on MiniMax's own infrastructure with agent scaffolding; weights drop still pending around June 11. (5) Qwen3.7-Plus: added Plus-vs-Max framing — same AIME reasoning at ~3× inference speed, Plus as multimodal variant and Max as pure-text flagship; confirmed Plus-Preview's #16 Vision Arena placement. (6) Microsoft Scout: added Microsoft 365 blog rollout detail — early Windows + macOS desktop access via Frontier today, limited preview in coming months, GA TBD — and the built-in policy-conformance-system-with-audit-trails safety architecture. (7) Cognition / Devin Desktop: added Devin Local (Rust-rewritten Cascade, +30% token efficiency), Agent Client Protocol (ACP) support adopted by JetBrains/Google/GitHub/25+ agents, and the split developer-forum reception (strong Devin Local reviews alongside acquisition-era trust concerns). (8) DeepSeek funding: expanded the disclosed investor roster (NetEase, JD.com, IDG Capital, Monolith Capital joining Tencent / CATL / state fund); round still in final stages, not yet closed. (9) Coralogix: added the substantive industry analyst critique — open question of whether Coralogix is a genuinely new data layer for autonomous operations or an AI-agent story layered on a price-competitive observability platform competing with Datadog / Dynatrace / New Relic / Splunk / Grafana / Observe / Dash0. (10) GitHub Copilot Flex/Max billing: confirmed per-tier credit allotments (Pro 1,500 / Pro+ 7,000 / Max 20,000); added overnight developer-backlash detail — Pro+ users reporting 8% consumed in 2 hours and projecting full exhaustion in <2 days. (11) Project Solara: added confirmed external pilot partners (AccuWeather, Best Buy, CVS Health, Levi's, Target) and the market-skepticism read — Microsoft stock fell 3.88% on Build 2026 announcement day with analysts flagging the missing OS/hardware GA date. (12) Apoha: added substantive head-to-head benchmark — VIBE platform reportedly outperformed 12 industry-standard developability tests across 236 clinical antibodies in joint Boehringer Ingelheim work; confirmed SXSW London Frontier Technologies Stage as the launch venue. One late-breaking item added: meta-business-agent-global-rollout-whatsapp-instagram-messenger-june-2026 (Tier 3, June 4) — Mark Zuckerberg announced at Meta's Conversations conference in London the global rollout of Meta Business Agent across WhatsApp, Instagram, and Messenger; agentic AI for sales, appointments, and customer service after a 1M+ small-business sign-up pilot in India / Mexico / Brazil; Meta's first paid AI product at scale, with subscription + possible usage-based billing. Evaluated and declined: (a) Foxconn + Intel AI infrastructure partnership at Computex Taipei — June 2, outside 12h late-breaking window; (b) EU Technological Sovereignty Package — June 3, outside 12h late-breaking window; (c) Anthropic Claude Sonnet 4.8 — leaked / spotted in LM Arena but not yet officially announced. WebFetch returned 403 on lab domains (consistent with prior runs in this sandbox); sourcing done entirely via WebSearch (13 queries). Hero images uniformly null. Caps: 52k/100k tokens used, 13/30 fetches used, well within wall-time. Final composition: 4 Tier-1 + 3 Tier-2 + 6 Tier-3 = 13 items."
+    },
+    {
       "run_id": "2026-06-04T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
