@@ -5,9 +5,10 @@
   "generated_at": "2026-06-05T06:30:00Z",
   "generated_at_local": "2026-06-05T02:30:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-05T06:30:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-06-05T06:30:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh",    "ran_at": "2026-06-05T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 4, "2": 3, "3": 6 },
+  "tier_counts": { "1": 4, "2": 5, "3": 6 },
   "items": [
     {
       "id": "microsoft-mai-thinking-1-frontier-reasoning-model-build-2026",
@@ -375,6 +376,57 @@
         { "source": "The Next Web — Apoha emerges from stealth with $36M to teach machines how matter behaves", "url": "https://thenextweb.com/news/apoha-stealth-36m-liquid-state-intelligence", "take": "Tech-press read with the cleanest single framing of the architectural move — Liquid State Intelligence as a third data category alongside sequence and structure for molecular AI." },
         { "source": "Chemical & Engineering News — AI firm Apoha launches with machines that feel, taste, and smell", "url": "https://cen.acs.org/analytical-chemistry/ai-firm-apoha-launches-machines-that-feel-taste-smell/104/web/2026/06", "take": "Chemistry-specialist trade-press read with the cleanest single framing of the wet-lab instrumentation angle — VIBE as the data-generation infrastructure that doesn't exist in any current public molecular dataset." },
         { "source": "TechFundingNews — They met at the intersection of science and finance: the Oxford physicist and his Goldman Sachs co-founder wife raised $36m to build the data layer AI still can't do", "url": "https://techfundingnews.com/the-oxford-physicist-and-his-goldman-sachs-co-founder-wife-raised-36m-to-build-the-data-layer-ai-still-cant-do/", "take": "Founder-focused read with the cleanest single framing of the strategic positioning — Apoha as 'the data layer AI still can't do' is the most direct articulation of why this matters for the broader AI-for-science trajectory." }
+      ]
+    },
+    {
+      "id": "ideogram-4-open-weight-image-model-june-2026",
+      "tier": 2,
+      "title": "Ideogram 4.0 releases as first open-weight frontier image model — 9.3B DiT, JSON layout control, native 2K, tops DesignArena among open weights",
+      "summary": "On June 3, 2026, Ideogram released Ideogram 4.0 — its first open-weight text-to-image model and the highest-scoring open-weight entry on the DesignArena leaderboard at launch. Ideogram 4.0 is a 9.3-billion-parameter single-stream Diffusion Transformer trained from scratch with Qwen3-VL-8B-Instruct as its text encoder, extracting features from 13 intermediate layers rather than just the final output. The model generates at native 2K resolution (up to 2048px) without a separate upscaling step, produces native alpha-channel output for clean cutouts from inference, and supports JSON layout control — specifying exact regions, font weights, text placement, and layer relationships in structured JSON rather than prose prompts. Inference code is Apache 2.0; weights ship in fp8 and nf4 quantized variants on Hugging Face under Ideogram's Non-Commercial Model Agreement (research and fine-tuning are free; commercial deployment requires a paid license). At launch, Ideogram 4.0 placed ninth overall in the blind text-to-image arena and first among all open-weight models, below only closed models from OpenAI and Google. A blind review by 10 professional designers at ContraLabs gave it 47.9% first-place wins versus Gemini 3.1 Flash (30.0%) and FLUX.2 [max] (15.5%); it also outperforms FLUX.2 [dev] at 32B and HunyuanImage 3.0 at 80B MoE specifically on text rendering accuracy.",
+      "link": "https://ideogram.ai/blog/ideogram-4.0/",
+      "why_it_matters": "Two reads worth pinning down. First, the open-weights read: Ideogram 4.0 is the first time a major image-generation company has shipped open weights at a quality level that places it below only closed-weight OpenAI and Google models on a blind leaderboard. The position is structurally similar to where DeepSeek V3 sat on coding benchmarks in late 2024 — the first open-weight model close enough to closed-weight frontier to credibly claim the same category — and the 18 months that followed were a rapid open-weights catch-up wave across the community. The 9.3B parameter count is the practical read: fp8 weights fit on an RTX 4080 or better, with the nf4 variant running on 16GB VRAM cards — genuinely consumer-hardware-tractable in a way that FLUX.2 at 32B is not. Second, the JSON layout control is the feature worth pinning for any Python coder who has tried to generate images programmatically: instead of hoping that 'put the text ACME in white bold font in the upper left' reliably places text correctly, you specify the exact region, font weight, and content in structured JSON and the model treats those specifications as hard constraints rather than suggestions. This is the feature that makes image generation useful in actual Python data pipelines — catalog generation, slide creation, automated reporting, branded-image workflows — because the output is predictable rather than best-effort. The non-commercial license is the practical constraint: free for research, fine-tuning, and non-production use; commercial deployment requires a separate Ideogram agreement, putting it in the same category as Meta's original Llama non-commercial licensing rather than the fully permissive Apache 2.0 you get from Mistral or H Company's Holo models. The ContraLabs professional-designer blind evaluation is the credibility signal worth catching: 47.9% first-place wins against professional design tools and closed models from 10 working design professionals is a meaningfully different quality signal than an automated benchmark score.",
+      "why_it_matters_brief": "First open-weight frontier image model from Ideogram — 9.3B DiT, native 2K, JSON layout control — tops DesignArena for all open-weight models with fp8 weights tractable on consumer GPUs; non-commercial for free, commercial use requires a license.",
+      "source": { "name": "Ideogram Blog", "type": "scrape", "url": "https://ideogram.ai/blog/ideogram-4.0/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-06-05T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-05T11:00:00Z", "by": "refresh", "change": "created — June 3 release caught in refresh sweep; missed by prior runs (published outside enrichment 12h late-breaking window)" }
+      ],
+      "takes": [
+        { "source": "Ideogram — Ideogram 4.0: Open image model at the forefront of design", "url": "https://ideogram.ai/blog/ideogram-4.0/", "take": "Primary source: technical blog covering the 9.3B DiT architecture, Qwen3-VL-8B-Instruct text encoder (13-layer feature extraction), JSON layout control spec, fp8/nf4 Hugging Face weights, and the DesignArena placement." },
+        { "source": "The Decoder — Ideogram 4.0 drops as an open-weight model with native 2K resolution and improved text rendering", "url": "https://the-decoder.com/ideogram-4-0-drops-as-an-open-weight-model-with-native-2k-resolution-and-improved-text-rendering/", "take": "Developer-press read on the open-weights framing and the native 2K / alpha-channel technical distinction relative to prior Ideogram releases and to FLUX.2 at 32B." },
+        { "source": "AI Weekly — Ideogram 4: 9.3B Open-Weight DiT Tops Design Arena", "url": "https://aiweekly.co/alerts/ideogram-4-93b-open-weight-dit-tops-design-arena", "take": "Benchmark coverage: DesignArena position (#1 open-weight, #9 overall), ContraLabs 10-professional-designer blind eval (47.9% vs 30.0% Gemini 3.1 Flash vs 15.5% FLUX.2 [max]), and the FLUX.2 [dev] / HunyuanImage 3.0 text-rendering comparison." },
+        { "source": "GitHub — ideogram-oss/ideogram4", "url": "https://github.com/ideogram-oss/ideogram4", "take": "Primary source for the Apache 2.0 inference code and the Ideogram Non-Commercial Model Agreement licensing terms, with installation and quick-start instructions for local inference." }
+      ]
+    },
+    {
+      "id": "hcompany-holo-3-1-computer-use-vlm-june-2026",
+      "tier": 2,
+      "title": "H Company releases Holo3.1 — open-weight computer use VLM family (0.8B–35B-A3B) with first GGUF quantized weights, 74.2% OS-World at 140ms latency on consumer GPUs",
+      "summary": "On June 2, 2026, Paris-based H Company released Holo3.1 — a family of Vision-Language Models for computer use agents spanning 0.8B, 4B, 9B, and 35B-A3B (sparse MoE) parameter counts, available on Hugging Face under Apache 2.0. The Holo-VLM-v3.1 backbone was trained on a proprietary dataset of over 2.4 million curated interaction traces covering browser automation, desktop GUI control, and (new in 3.1) mobile environments. Benchmark improvements over Holo 3.0: OS-World overall from 68.1% to 74.2%; AndroidWorld for the 35B-A3B variant from 67% to 79.3%, with the 4B and 9B models improving from 58% to 71-72%. The key new capability in 3.1 is quantized checkpoint availability — FP8, Q4 GGUF, and NVFP4 — enabling deployment on as little as 12GB VRAM with a measured perception-to-action latency of 140ms on an NVIDIA RTX 4090; the Q4 GGUF checkpoints run on any llama.cpp-compatible inference stack. Native function-calling support is also new in 3.1: the model emits structured JSON tool calls natively rather than requiring callers to parse free-text output, making it drop-in compatible with LangChain, LlamaIndex, and other agent frameworks that expect structured tool use.",
+      "link": "https://huggingface.co/blog/Hcompany/holo31",
+      "why_it_matters": "Two reads worth catching, especially given the agentic-AI theme running through this week's digest. First, the practical read: Holo3.1 is the first open-weight computer use model that is genuinely practical to run locally on a developer machine without custom infrastructure. The 35B-A3B model quantized to Q4 GGUF fits on a 12GB card, runs at 140ms per action, and hits 74% OS-World accuracy — well above what prior open-weight models in the computer-use category have achieved, and within striking distance of the closed-API alternatives. For Python coders building agentic tools, the native function-calling output is the architectural detail worth catching: instead of parsing the model's text into structured tool calls (where computer-use automation pipelines typically break), Holo3.1 emits JSON tool calls natively, making it drop-in compatible with any agent framework that handles structured tool use. The mobile support (new in 3.1) expands scope from browser and desktop to Android GUI — AndroidWorld 79.3% for the 35B-A3B is the score that makes Android GUI testing automation tractable without paying for proprietary cloud APIs. The comparison to Claude Computer Use and the OpenAI computer-use operator is the structural read: both closed-weight, both priced as API calls, neither runnable offline. Holo3.1 is open weight, Apache 2.0, local-first, and privacy-preserving by default — the same tradeoff that made running local LLMs with llama.cpp compelling in 2023, now applied to the computer-use agent layer. Second, the European-lab read: H Company is a Paris-based AI startup that has been quietly shipping the most consistent open-weight computer-use model family available. The 2.4M curated interaction-trace training set is the meaningful technical asset — computer-use models are uniquely training-data-dependent (you can't substitute web text for demonstration data showing an agent correctly completing OS tasks), and H Company's investment in data curation is what has driven the consistent benchmark improvement across the Holo line. Expect the 3.1 GGUF weights to appear in LM Studio and Ollama model libraries within the next 2-4 weeks, which is where most Python-hobbyist-level local LLM users will first encounter the model.",
+      "why_it_matters_brief": "Open-weight, Apache 2.0 computer use VLM that runs locally on 12GB VRAM at 140ms — 74.2% OS-World and 79.3% AndroidWorld (35B-A3B) with native JSON function-calling and mobile support new in 3.1, first in the Holo line to ship GGUF for llama.cpp stacks.",
+      "source": { "name": "Hugging Face Blog", "type": "rss", "url": "https://huggingface.co/blog/Hcompany/holo31" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-06-05T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-05T11:00:00Z", "by": "refresh", "change": "created — June 2 release caught in refresh sweep; missed by prior runs (published outside enrichment 12h late-breaking window)" }
+      ],
+      "takes": [
+        { "source": "Hugging Face Blog — Holo3.1: Fast & Local Computer Use Agents", "url": "https://huggingface.co/blog/Hcompany/holo31", "take": "Primary source: H Company's official HF blog post covering the full model family spec, the 2.4M interaction-trace training set, OS-World/AndroidWorld benchmark results, quantized weight variants, and the native function-calling architecture detail." },
+        { "source": "H Company — Holo3.1 Product Page", "url": "https://hcompany.ai/holo3.1", "take": "Primary product page with the 140ms RTX 4090 latency measurement, the full benchmark table across OS-World, AndroidWorld, H Corporate, and ScreenSpot-Pro, and the minimum 12GB VRAM threshold detail." },
+        { "source": "GetAIBook — Holo3.1 Brings 140ms Local Computer Use Agents to 12GB GPUs", "url": "https://getaibook.com/news/holo31-brings-140ms-local-computer-use-agents-to-12gb-gpus", "take": "Developer-press read with the cleanest framing of the consumer-GPU accessibility story — the 12GB VRAM threshold and 140ms latency measurement as the practical read for anyone building local agentic tools." }
       ]
     }
   ],

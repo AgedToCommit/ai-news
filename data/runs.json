@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-05T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-05T11:00:00Z",
+      "ended_at": "2026-06-05T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 4000,
+        "output_write": 500
+      },
+      "fetches_made": 12,
+      "items_input": 2,
+      "items_output": 15,
+      "items_added": 2,
+      "items_kept": 13,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-05-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Strict 5-hour overnight window (06:30–11:00 UTC June 5) was quiet — no major lab announcements broke in the pre-dawn US hours. Two Tier-2 items from June 2-3 were caught that had been missed by prior runs (outside the enrichment's 12h late-breaking window): (1) Ideogram 4.0 (June 3) — first open-weight frontier image model from Ideogram, 9.3B DiT, JSON layout control, native 2K, tops DesignArena for open-weight models, fp8/nf4 weights on Hugging Face under non-commercial license; (2) Holo3.1 by H Company (June 2) — open-weight computer use VLM family (0.8B–35B-A3B) with first GGUF quantized weights, 74.2% OS-World at 140ms on RTX 4090, native function-calling, new mobile support, Apache 2.0. Both are new to the snapshot. WebFetch returned 403 on lab domains (consistent with prior runs); sourcing done entirely via WebSearch (12 queries). Hero images uniformly null. Caps: ~32k/60k tokens used, 12/20 fetches, within wall-time. Final composition: 4 Tier-1 + 5 Tier-2 + 6 Tier-3 = 15 items."
+    },
+    {
       "run_id": "2026-06-05T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
