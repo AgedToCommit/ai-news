@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-06T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-06T11:00:00Z",
+      "ended_at": "2026-06-06T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 31000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 4000,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 11,
+      "items_added": 2,
+      "items_kept": 9,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-06-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path (am file existed with 9 items from enrichment). All RSS feeds returned HTTP 403 (consistent with prior sandbox runs); all scrape fetches also 403'd. Sourced entirely via WebSearch (9+ queries). Overnight Asia/Europe cycle (Saturday, June 6) was relatively quiet — no major model drops from Chinese/Japanese/Korean labs, no significant EU policy news published after 06:30 UTC. Two items added: (1) apple-siri-gemini-nvidia-b200-google-cloud-wwdc-2026 (Tier 2) — Pre-WWDC infrastructure reveal: Apple's rebuilt Siri will run on NVIDIA Blackwell B200 chips in Google Cloud with hardware confidential compute; Apple tried Private Cloud Compute, it ran too slow for the 1.2T-param Gemini model. Published June 3–5 by MacRumors, 9to5Mac, AppleInsider, TechTimes — not in any prior snapshot despite being within the week. WWDC keynote Monday June 8 makes this immediately relevant. (2) simon-willison-micropython-wasm-sandbox-june-6-2026 (Tier 2) — Willison's June 6 post on micropython-wasm: MicroPython + WASM + wasmtime as an in-process Python sandbox for LLM code-execution agent tools; no Docker required; pip-installable. The June 2 release (0.1a0/0.1a1) and today's June 6 follow-up post are both not in any prior snapshot. Notable items investigated and rejected: (a) White House AI EO (June 2) — already in June 3 am snapshot; (b) Anthropic IPO (June 1) — already in June 1–3 snapshots; (c) SpaceX compute deal — May 6, old; (d) Canada 'AI for All' national strategy — already in June 4–5 snapshots; (e) UK-Canada AI compute MOU — January 2024, old; (f) Gemini 3.5 Flash GA — May 19, old; (g) SK Hynix $1T market cap — May 27, old; (h) Mistral Large 3 — December 2025, old; (i) OpenAI Realtime Voice / GPT-Realtime-2 — May 11, old. No Tier 1 re-pass warranted: no significant new overnight chatter on Nemotron 3 Ultra or Dreaming V3 found beyond what the enrichment already incorporated. Final composition: 2 Tier-1 + 7 Tier-2 + 2 Tier-3 = 11 items."
+    },
+    {
       "run_id": "2026-06-06T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

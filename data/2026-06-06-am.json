@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-06-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-06",
-  "generated_at": "2026-06-06T06:30:00Z",
-  "generated_at_local": "2026-06-06T02:30:00-04:00",
+  "generated_at": "2026-06-06T11:25:00Z",
+  "generated_at_local": "2026-06-06T07:25:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-06T06:00:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-06-06T06:00:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh",    "ran_at": "2026-06-06T11:00:00Z", "duration_ms": 1500000 }
   ],
-  "tier_counts": { "1": 2, "2": 5, "3": 2 },
+  "tier_counts": { "1": 2, "2": 7, "3": 2 },
   "items": [
     {
       "id": "nvidia-nemotron-3-ultra-550b-open-weights-hybrid-mamba-transformer-june-4-2026",
@@ -265,6 +266,56 @@
         { "source": "DataQuest India — ASUS highlights agentic AI-ready robots at Computex 2026", "url": "https://www.dqindia.com/esdm/asus-highlights-agentic-ai-ready-robots-at-computex-2026-11900093", "take": "Asia-tech-press read with the cleanest framing of the regional rollout shape and the healthcare-first validation choice for Kairo's enterprise deployments." },
         { "source": "OhSem — Computex 2026: ASUS Spotlights Next-Gen Agentic AI Robotics", "url": "https://ohsem.me/2026/06/computex-2026-asus-next-gen-agentic-ai-robotics/", "take": "Press read on the product-portfolio framing — ASUS as one of the first consumer-electronics OEMs to ship a vertical agentic-AI-robotics stack rather than individual SKUs, with explicit hospitality, retail, and eldercare positioning." },
         { "source": "IndiaBlooms — ASUS unveils AI-powered companion, service robots at COMPUTEX 2026", "url": "https://www.indiablooms.com/life/asus-unveils-ai-powered-companion-service-robots-at-computex-2026/details", "take": "Detail-rich read on the Maestro AI platform — the cross-brand-device orchestration framing, the on-premises / cloud / hybrid deployment shape, and how Companion Robot, Kairo, and Sage virtual agent are intended to interoperate in production deployments." }
+      ]
+    },
+    {
+      "id": "apple-siri-gemini-nvidia-b200-google-cloud-wwdc-2026",
+      "tier": 2,
+      "title": "Pre-WWDC: Apple's rebuilt Siri will run on Google Cloud with NVIDIA Blackwell B200 chips and hardware confidential compute — Apple tried Private Cloud Compute, it ran too slow",
+      "summary": "Reporting from MacRumors, 9to5Mac, AppleInsider, and TechTimes (June 3–5) reveals that the Gemini-powered Siri Apple will preview at WWDC on June 8 won't run on Apple's own Private Cloud Compute infrastructure. Apple tried running a modified Gemini model inside Private Cloud Compute but found it ran too slowly at the inference scale Siri requires, leading to a shift to Google's fleet of NVIDIA Blackwell B200 data center chips. The implementation relies on NVIDIA's hardware-level confidential compute feature to encrypt user data while it's being processed in-flight, and the contract explicitly prevents Google from training its models on Siri queries. The rebuilt Siri is powered by a custom 1.2-trillion-parameter Gemini model — eight times larger than Apple's prior 150B cloud models — built under the January 2026 Apple-Google partnership. The Gemini-powered Siri will be previewed at WWDC Monday June 8 (2 days from now) and launch in September 2026 alongside iOS 27.",
+      "link": "https://www.macrumors.com/2026/06/04/apple-siri-rely-on-google-nvidia-chips/",
+      "why_it_matters": "The detail that matters here isn't that Apple is using Gemini — that was announced in January. What's new is what Apple tried first and why it failed: Private Cloud Compute, Apple's confidentiality-first, Apple-hardware-only cloud AI inference architecture, apparently can't run a 1.2-trillion-parameter model at the latency and throughput Siri needs. That failure is the substantive architectural datapoint. Private Cloud Compute was Apple's structural answer to the cloud AI privacy problem — run the model on Apple-controlled servers, with Apple chips, with cryptographically attestable privacy guarantees. The failure mode at large-model scale forces Apple to use Google Cloud's NVIDIA B200 hardware, with NVIDIA's confidential compute (hardware-level encryption of data while in-process) as the privacy substitute. For Python coders and AI builders, the architectural lesson is concrete: hardware confidential computing (Intel TDX, AMD SEV-SNP, NVIDIA CC) is becoming the privacy primitive that closes the gap when you can't run the model locally or on your own infrastructure. NVIDIA B200 confidential compute is the mechanism Apple is using — and the same mechanism is available in the public cloud on AWS, Azure, and Google Cloud for anyone building applications that need to process sensitive user data through large models. The practical implication: if you're building agentic or personalization features that process user data through a frontier model, hardware confidential compute is now the reference architecture for privacy-preserving inference — not 'don't use the cloud' or 'only use on-device models.' Second read: the contract term preventing Google from training on Siri queries is the governance mechanism worth noting. Apple wasn't willing to accept a standard cloud API agreement; they negotiated a data-use restriction at the contract level. If you're evaluating frontier model APIs for sensitive use cases, this is the pattern to ask about and reference. WWDC is Monday June 8 — the keynote is 10am PT, which is when Apple will preview the rebuilt Siri publicly for the first time.",
+      "why_it_matters_brief": "Apple's Private Cloud Compute ran too slow for the 1.2T-param Gemini model — so Siri's new brain runs on NVIDIA B200 chips in Google Cloud with hardware confidential compute, with a contract clause blocking Google from training on Siri queries; WWDC keynote is Monday June 8.",
+      "source": { "name": "MacRumors", "type": "scrape", "url": "https://www.macrumors.com/2026/06/04/apple-siri-rely-on-google-nvidia-chips/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-06T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-06T11:00:00Z", "by": "refresh", "change": "created — missed by prior pipeline; WWDC keynote June 8 makes this immediately relevant" }
+      ],
+      "takes": [
+        { "source": "MacRumors — Apple's Overhauled Siri Will Reportedly Run on Nvidia's Blackwell Chips", "url": "https://www.macrumors.com/2026/06/04/apple-siri-rely-on-google-nvidia-chips/", "take": "Primary report on the infrastructure shift — Apple tried Private Cloud Compute for the Gemini model, it ran too slow, so the production deployment uses NVIDIA Blackwell chips in Google's data centers with confidential compute enabled." },
+        { "source": "9to5Mac — Report details Apple's plan to use Nvidia chips for the Gemini-powered Siri", "url": "https://9to5mac.com/2026/06/03/report-details-apples-plan-to-use-nvidia-chips-for-the-gemini-powered-siri/", "take": "Earlier report with the cleanest framing of the Private Cloud Compute failure: Apple's own hardware couldn't handle the Gemini model at Siri's scale." },
+        { "source": "TechTimes — Gemini-Powered Apple Siri Will Run on Nvidia B200 Chips via Google Cloud", "url": "https://www.techtimes.com/articles/317874/20260605/gemini-powered-apple-siri-will-run-nvidia-b200-chips-via-google-cloud.htm", "take": "Most specific on the B200 model and the contract terms — Google can't train on Siri queries, confidential compute encrypts data in-flight." },
+        { "source": "AppleInsider — Revamped Siri will tap Nvidia chips for fast, private cloud computing", "url": "https://appleinsider.com/articles/26/06/04/revamped-siri-will-tap-nvidia-chips-for-fast-private-cloud-computing", "take": "Most detail on the confidential compute mechanism — NVIDIA hardware-based encryption of user data while it's being processed, the technical substitute for running on Apple-owned hardware." }
+      ]
+    },
+    {
+      "id": "simon-willison-micropython-wasm-sandbox-june-6-2026",
+      "tier": 2,
+      "title": "Simon Willison: micropython-wasm — run Python code in a WebAssembly sandbox via MicroPython and wasmtime, no Docker required; designed for safe LLM code-execution in agent tools",
+      "summary": "On June 2, Simon Willison released two interrelated alpha packages: `micropython-wasm` (0.1a1) — a Python library that bundles a lightly customized WASM build of MicroPython with a wrapper to execute code in it via wasmtime — and `datasette-agent-micropython` (0.1a0), which integrates the sandbox into Datasette Agent as a safe Python code execution tool. On June 6, Willison published a follow-up blog post walking through the sandbox design, its fit for LLM agent tool use, and the tradeoffs against Docker and hosted sandbox services. The implementation compiles MicroPython to WebAssembly and runs it under wasmtime's sandboxing guarantees: MicroPython provides a Python-compatible execution environment (most of the standard library that doesn't require OS access), while WASM enforces resource isolation and a controlled capability surface — no subprocess access, no network by default, no filesystem writes outside the sandbox. A live demo is at tools.simonwillison.net/micropython — code is saved in the URL. Willison frames the project as a practical answer to 'how do you let an LLM agent execute Python code safely without full Docker overhead?'",
+      "link": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/",
+      "why_it_matters": "Running untrusted Python code safely is one of the practical unsolved problems in building AI code-execution agents, and it's directly relevant to anyone using Claude Code, Cursor, Devin, or building their own code-execution pipelines. The standard tradeoff is: subprocess isolation (fast, simple, not safe enough for production), Docker containers (safe, but adds daemon dependency and cold-start overhead), or hosted sandbox services like E2B, Modal, or Cloudflare Workers (safest, but adds network calls and cost). Willison's `micropython-wasm` sits at a different point in the tradeoff space: pure Python (no Docker daemon required, no cloud service), installable with `pip install micropython-wasm`, and usable in-process. The tradeoffs are concrete — MicroPython is a Python subset, so third-party packages (numpy, pandas, requests) don't work unless compiled to WASM, and OS-level calls (subprocess, socket) are blocked — but for the use case of 'let an agent execute simple data-manipulation or calculation scripts in a sandbox,' it covers a wide practical slice. For Gabe as a Python coder, the practical read is direct: if you've wanted to add 'run this Python snippet safely' to a web app or agent without setting up Docker, `micropython-wasm` is now on the pip menu, and the live demo at tools.simonwillison.net/micropython is the fastest way to understand what it supports. The broader architectural point Willison is making connects to the Ladybird Browser story from yesterday's am file: WASM sandboxing is becoming the lightweight, portable capability-isolation primitive for use cases that previously required containers — cheaper to operate, easier to embed in existing Python applications, and increasingly the substrate for running untrusted code in agent pipelines. Claude Code uses E2B for its managed sandboxes, OpenAI Code Interpreter uses isolated server-side processes. `micropython-wasm` is the hobbyist-accessible in-process option that makes this category of sandboxed code execution available without infrastructure.",
+      "why_it_matters_brief": "pip install micropython-wasm — Willison's in-process Python sandbox via MicroPython + WebAssembly + wasmtime, no Docker required; designed for the 'let an LLM execute Python safely' agent tool use case, with WASM as the capability-isolation primitive instead of containers.",
+      "source": { "name": "Simon Willison", "type": "rss", "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-06-06T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-06T11:00:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Simon Willison — micropython-wasm release (0.1a1)", "url": "https://simonwillison.net/2026/Jun/2/micropython-wasm-2/", "take": "June 2 release announcement for the micropython-wasm package — covers the WASM build, the wasmtime wrapper, and the datasette-agent-micropython integration as the first production consumer of the sandbox." },
+        { "source": "MicroPython Code Executor (live demo)", "url": "https://tools.simonwillison.net/micropython", "take": "Live demo: paste Python code, execute in-browser via MicroPython WASM; code saved in the URL for sharing. Fastest way to understand what the sandbox supports and where its limits are." }
       ]
     }
   ],
