@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-07T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-07T11:00:00Z",
+      "ended_at": "2026-06-07T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 5000,
+        "output_write": 3000
+      },
+      "fetches_made": 13,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-07-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Today's 2026-06-07-am file existed (4 items from enrichment run at 06:30 UTC). RSS sweep: all RSS endpoints returned HTTP 403 (consistent with all prior sandbox runs in this environment — WebFetch blocked across the board). WebSearch used as primary sourcing method across 13 queries total. Overnight window scan (06:30–11:00 UTC, Sunday June 7): genuinely quiet, consistent with prior enrichment noting the Saturday-to-Sunday cycle is the lowest-volume window. No Tier-1 model releases or lab announcements in the strict 5-hour window. Extended sweep to recently-uncovered items not in any prior snapshot. Two items added: (1) AI lab CEO biosecurity letter (June 5, 2026) — Tier 1. Joint letter from Sam Altman, Dario Amodei, Demis Hassabis, Mustafa Suleyman to US Congress calling for mandatory synthetic DNA screening, organized by the Foundation for American Innovation and Institute for Progress. Not in any prior snapshot (June 5 publication fell between the June 5-pm digest's focus area and the June 6 enrichment's 12h late-breaking window). Verified against Fortune, Yahoo/Quartz, CryptoBriefing, Yellow.com sources. (2) H Company Holo 3.1 (June 2, 2026) — Tier 2. Open-weights local computer-use agent family (0.8B/4B/9B/35B-A3B), Apache 2.0, 12GB VRAM minimum, 140ms latency, 74.2% OS-World accuracy, quantized checkpoints (FP8/NVFP4/Q4 GGUF). Not in any prior snapshot. Paris-based H Company (formerly HumanML), verified against HuggingFace blog post, hcompany.ai, getaibook.com coverage. Items evaluated and declined: GPT-5.5 Instant (May 5 release, >30 days old); Gemini 3.5 Flash (May 19 release at Google I/O, >18 days old); Qwen 3.7-Max (May 20 release, >17 days old); Mistral Vibe/Le Chat rebrand (May 28 release, >9 days old); Meta Muse Spark (April 8, well outside window); White House AI EO June 2 (covered in prior June 5 snapshot notes); ChatGPT Dreaming V3 (June 4, already in June 5-pm snapshot); WWDC previews (existing am file item already comprehensive). No WWDC item refinement needed — existing Tier 3 item is comprehensive through last overnight. Hero images: null across all items (WebFetch 403 prevents og:image extraction). Caps: ~38k/60k tokens used, 13/20 fetches, well within wall-time. Final composition: 2 Tier-1 + 3 Tier-2 + 1 Tier-3 = 6 items."
+    },
+    {
       "run_id": "2026-06-07T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
