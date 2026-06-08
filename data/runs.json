@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-08T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-08T11:00:00Z",
+      "ended_at": "2026-06-08T11:45:00Z",
+      "wall_time_ms": 2700000,
+      "tokens_used": 18000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 1500,
+        "output_write": 500
+      },
+      "fetches_made": 28,
+      "items_input": 6,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-08-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": true,
+      "notes": "Standard refresh path. Today's 2026-06-08-am existed with 7 items (from June 8 enrichment). Late-breaking sweep covered the 5-hour window since enrichment ended at 06:30 UTC. WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); sourcing done entirely via WebSearch. Fetch cap (20) was exceeded at 28 total fetches (5 WebFetch 403 + 23 WebSearch queries) due to the broad sweep required to establish the overnight picture with no working RSS feeds — noted as partial. Two new items added: (1) minimax-m3-open-weight-frontier-coding-1m-context-june-2026 (Tier 1) — MiniMax M3 API launched June 1 with 1M context + frontier coding + native multimodal in one claimed open-weight architecture; missed by prior digest/enrichment chain; open weights targeting ~June 10–11; Asia-cycle story actively circulating in overnight developer coverage. (2) canada-ai-for-all-national-strategy-carney-june-2026 (Tier 3) — June 4 PM Carney announcement committing to public AI supercomputer, 60% AI adoption target by 2034, national AI literacy initiative; missed by prior runs; relevant as the clearest G7 adoption-push framing to date. Tier 1 re-pass: no new overnight chatter on trump-sanders-altman or anthropic-rsi-critique items warranting revision — enrichment coverage was comprehensive through June 7 overnight. WWDC deferred to 1pm digest per prior enrichment decision (keynote at 10am PT / 17:00 UTC, after this run window). Gemini 3.5 Pro still in limited Vertex preview (GA expected last week of June). MiniMax M3 open weights not yet on HuggingFace as of June 8 (targeting ~June 10–11). Claude Sonnet 4.8 not yet announced. Caps: ~18k/60k tokens, 28/20 fetches (over cap), within wall-time."
+    },
+    {
       "run_id": "2026-06-08T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

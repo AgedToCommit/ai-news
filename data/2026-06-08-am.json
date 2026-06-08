@@ -2,13 +2,14 @@
   "snapshot_id": "2026-06-08-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-08",
-  "generated_at": "2026-06-08T06:30:00Z",
-  "generated_at_local": "2026-06-08T02:30:00-04:00",
+  "generated_at": "2026-06-08T11:45:00Z",
+  "generated_at_local": "2026-06-08T07:45:00-04:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-06-07T17:00:00Z", "duration_ms": 900000 },
-    { "phase": "enrichment", "ran_at": "2026-06-08T06:15:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-06-08T06:15:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-06-08T11:00:00Z", "duration_ms": 2700000, "partial": true }
   ],
-  "tier_counts": { "1": 2, "2": 4, "3": 1 },
+  "tier_counts": { "1": 3, "2": 4, "3": 2 },
   "items": [
     {
       "id": "trump-sanders-altman-ai-public-ownership-convergence-june-5-6-2026",
@@ -214,6 +215,57 @@
         { "source": "Mneme HQ — Cursor Developer Habits Report 2026: Why AI Coding Needs Governance Infrastructure", "url": "https://mnemehq.com/insights/cursor-developer-habits-report-governance-infrastructure/", "take": "Substantive industry-data read with the cleanest current data series on agent-generated commits — covers the 7% → 36.3% growth in agent-generated changes reaching commits without manual diff acceptance over Jan 1 - May 16, 2026, and the substantive operational rationale for why governance infrastructure is now an enterprise-buyer ask." },
         { "source": "Digital Applied — Cursor Organizations: Govern Enterprise AI Coding at Scale", "url": "https://www.digitalapplied.com/blog/cursor-organizations-enterprise-ai-coding-governance-2026", "take": "Detail-rich practitioner read on the admin-control feature surface — covers the function-based model segmentation use case (engineering frontier-models / finance restricted-access), the per-Group spend and agent-permission controls, and the substantive shift from raw-capability differentiation to admin-control differentiation in the coding-agent IDE category." },
         { "source": "StartupHub — Cursor Enterprise Adds Organizations for Scalability", "url": "https://www.startuphub.ai/ai-news/technology/2026/cursor-enterprise-adds-organizations-for-scalability", "take": "Enterprise-tech-press read with the cleanest framing of the competitive picture — Cursor Organizations as the answer to the most-asked-for H1 2026 Enterprise customer feature, with the substantive contrast against the prior Teams-only governance structure." }
+      ]
+    },
+    {
+      "id": "minimax-m3-open-weight-frontier-coding-1m-context-june-2026",
+      "tier": 1,
+      "title": "MiniMax M3 launches — first claimed open-weight model combining frontier coding, 1M-token context, and native multimodal in one architecture; API live at $0.30/$1.20 per M tokens; open weights targeting Hugging Face ~June 10–11",
+      "summary": "On June 1, 2026, Chinese AI lab MiniMax launched M3 via API — claiming to be the first open-weight model to simultaneously combine frontier-level coding, a 1-million-token context window, and native multimodal input (text, image, video, computer use) in a single architecture. The technical mechanism is MiniMax Sparse Attention (MSA), a new sparse-attention design that cuts per-token compute at 1M context to 1/20th of the prior generation while delivering more than 9× faster prefill and 15× faster decoding versus MiniMax M2.7. Company-reported SWE-Bench Pro score: 59.0% — ahead of GPT-5.5 and Gemini 3.1 Pro, just behind Opus 4.7. API launch pricing: $0.30 per 1M input tokens and $1.20 per 1M output tokens on a launch-week discount (roughly 5–10% of GPT-5.5 and Claude Opus 4.7 rates). Open weights and a technical report are targeting publication to Hugging Face and GitHub around June 10–11; as of June 8, the API is live but weights are not yet public and company-reported benchmarks have not been independently replicated.",
+      "link": "https://www.minimax.io/blog/minimax-m3",
+      "why_it_matters": "Two reads worth catching, both about what the MiniMax M3 claim means for open-weight development and where it sits relative to the existing items in this snapshot. First, the open-weight-landscape read: if the MSA architecture's performance claims hold up when weights land on Hugging Face (~June 10–11), MiniMax M3 will have pushed the open-weight frontier into territory that was until now exclusive-API: 1M-token context plus frontier-tier coding plus native video and computer-use input in a single downloadable model. The combination matters structurally because the three capabilities have been available separately in open-weights (Kimi K2.6 on coding, some models on long-context) but not together in one. Pairing the 1M context window with native computer use in a locally runnable model is the specific capability gap that, if verified, changes the economics of building computer-use agents against private data without sending content to a cloud API. For Gabe as a Python coder, the practical experiment worth running when weights land is wiring M3 into a small Flask or Streamlit project with a large context payload (say, an entire Python codebase at 100K+ tokens) and measuring whether coding accuracy and context-coherence hold up on local hardware. Second, the verification-caveat read: the 59.0% SWE-Bench Pro number is company-reported and unverified until weights are public. TechTimes flagged the launch as 'frontier claims, unverified benchmarks' — the right epistemology for now. The MSA architecture description is plausible and consistent with prior sparse-attention research, but the claimed performance ratios (1/20th compute, 9× prefill, 15× decode at 1M tokens) are aggressive enough to warrant independent confirmation. Watch for Hugging Face evaluators running M3 through HELM and LiveCodeBench in the week after weights land.",
+      "why_it_matters_brief": "First open-weight model claiming frontier coding + 1M-token context + native multimodal in one architecture — weights landing ~June 10; API live at $0.30/$1.20 per M tokens, 5–10× below Opus / GPT-5.5; claims unverified until weights drop.",
+      "source": { "name": "MiniMax Blog", "type": "scrape", "url": "https://www.minimax.io/blog/minimax-m3" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-06-08T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-08T11:30:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "MiniMax Blog — MiniMax M3: Frontier Coding, 1M Context, Native Multimodality — All in One Model", "url": "https://www.minimax.io/blog/minimax-m3", "take": "Primary-source blog post — the canonical reference for the MSA architecture, the three-capabilities-in-one claim, and the open-weight + technical-report publication timeline targeting Hugging Face and GitHub within 10 days of the June 1 launch." },
+        { "source": "VentureBeat — MiniMax-M3 debuts, eclipsing GPT-5.5 and Gemini 3.1 Pro on key benchmark performance for just 5-10% of the cost", "url": "https://venturebeat.com/technology/minimax-m3-debuts-eclipsing-gpt-5-5-and-gemini-3-1-pro-on-key-benchmark-performance-for-just-5-10-of-the-cost", "take": "Substantive press read with the cleanest framing of the pricing vs frontier-tier comparison — covers the $0.30/$1.20 launch pricing in the context of GPT-5.5 and Opus 4.7 rates, and what the 5-10% cost positioning means for the open-weight coding-agent category." },
+        { "source": "The Decoder — MiniMax M3: Open-weight model with a million-token context challenges proprietary leaders", "url": "https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/", "take": "Tech-press read with the cleanest framing of the architectural challenge to proprietary frontier models — covers what 1M context + native multimodal in a single open-weight model means for the build-vs-buy decision for long-context agentic applications." },
+        { "source": "TechTimes — MiniMax M3 Open-Weight Coding Model: Frontier Claims, Unverified Benchmarks", "url": "https://www.techtimes.com/articles/317532/20260601/minimax-m3-open-weight-coding-model-frontier-claims-unverified-benchmarks.htm", "take": "The appropriate-epistemology read — covers why the SWE-Bench Pro 59.0% and other company-reported benchmark numbers require independent replication before they can be treated as verified, and what the track record of prior Chinese open-weight model launches looks like when evaluators reproduce company numbers." }
+      ]
+    },
+    {
+      "id": "canada-ai-for-all-national-strategy-carney-june-2026",
+      "tier": 3,
+      "title": "Canada launches 'AI for All' national strategy — PM Carney commits to public AI supercomputer, 60% business AI adoption target by 2034 from today's 12%, $200B economic growth goal, and AI-agent access for every post-secondary student",
+      "summary": "On June 4, 2026, Prime Minister Mark Carney launched AI for All, Canada's new national AI strategy. The headline infrastructure commitment is construction of a public AI supercomputer providing Canadian researchers and businesses access to sovereign compute hosted outside US-controlled cloud infrastructure. Economic targets: $200 billion in additional GDP growth and 250,000 new AI-related jobs over five years, with Canada's current 12% business AI adoption rate — among the lowest in the G7 — targeted to reach 60% by 2034. A National AI Literacy Initiative will provide free entry-level AI training, and the strategy commits to 'access to trusted AI agents for every post-secondary student.' Legislative updates will strengthen protections against deepfakes and surveillance pricing with a new online safety regime for chatbots and social media. Up to 90,000 AI-related work placement opportunities are included. The strategy is Canada's direct policy response to the 2025–2026 US executive orders and infrastructure investments that have accelerated concern about AI brain-drain and infrastructure dependence on American cloud providers.",
+      "link": "https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial",
+      "why_it_matters": "Worth catching as the first national AI strategy from a major G7 economy framed primarily around adoption-push rather than safety-first or regulation-first — and the cleanest current example of what government AI policy looks like when the starting diagnosis is under-adoption (12% business AI use, one of the lowest in the G7) rather than over-deployment risk. The Carney government's explicit framing of 'access to trusted AI agents for every post-secondary student' is the specific policy-language shift worth noting: using 'agent' rather than 'chatbot' or 'model' in a national government strategy signals that the policy team is designing around the 2026 state of the technology. For Gabe as a Python coder, the practical read is that Canadian government buyers are being explicitly pushed toward AI adoption over the next five years with budget for sovereign compute and AI agent tooling — which shapes procurement dynamics, data-residency requirements, and the regulatory environment for anyone building for Canadian customers.",
+      "why_it_matters_brief": "Canada's first full national AI strategy under Carney targets 60% business AI adoption by 2034 from 12% today — adoption-push framing, sovereign supercomputer, and AI-agent access for every post-secondary student make it the clearest G7 government endorsement of agentic AI to date.",
+      "source": { "name": "Prime Minister of Canada", "type": "scrape", "url": "https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-06-08T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-08T11:30:00Z", "by": "refresh", "change": "created" }
+      ],
+      "takes": [
+        { "source": "Prime Minister of Canada — PM Carney launches AI for All", "url": "https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial", "take": "Primary-source announcement — the canonical reference for the $200B economic target, the 250,000 jobs target, the public AI supercomputer commitment, the National AI Literacy Initiative, and the 60%-by-2034 AI adoption target." },
+        { "source": "CBC News — Carney unveils AI strategy with over $2B in funding, aim of creating 250,000 jobs by 2031", "url": "https://www.cbc.ca/news/politics/carney-ai-strategy-9.7223236", "take": "Substantive national-press read with the cleanest framing of the $2B in near-term funding commitments, the 250,000 jobs target in the context of Canada's ongoing AI brain-drain concern, and the structural sovereignty read on the public-supercomputer commitment." },
+        { "source": "Engadget — Canada Prime Minister Mark Carney announces questionable national AI strategy", "url": "https://www.engadget.com/2187720/canada-prime-minister-mark-carney-announces-questionable-national-ai-strategy/", "take": "Skeptical tech-press read — covers the substantive critiques that the 60%-by-2034 adoption target is unrealistic given the 12% current baseline, and that 'sovereign compute' may not address the actual barriers to AI adoption (organizational readiness, workforce skills, regulatory clarity) rather than infrastructure availability." }
       ]
     }
   ],
