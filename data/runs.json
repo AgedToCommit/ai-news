@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-08T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-08T06:00:00Z",
+      "ended_at": "2026-06-08T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 11000,
+        "output_write": 1500
+      },
+      "fetches_made": 11,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-08-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path on yesterday's 2026-06-07-pm (6 items). All 6 pm items kept with substantive new context surfaced overnight: (1) Trump-Sanders-Altman convergence — added Bannon June 7 right-populist endorsement of Sanders's 50% federal-equity threshold and Cato Institute (Huddleston) free-market critique, reframed political picture as four-pole rather than left-vs-right. (2) Alphabet $84.75B raise — added oversubscription-driven $80B→$84.75B upsize detail, Google Cloud Q1 $20B revenue and $460B+ contracted backlog datapoints, $175-190B total 2026 capex framing, BlackRock systemic-risk flag at aggregate cross-hyperscaler scale, Berkshire-largest-since-Apple framing. (3) OpenAI Rosalind Biodefense — added ProEquip as fourth launch partner per AI CERTs / DigitalHealth News reporting, SecureDNA-as-physical-synthesis-oversight framing. (4) xAI Grok Build — added grok-build-0.1 314B-parameter MoE detail, $1/M-in / $2/M-out pricing framed as 5-10x cheaper than Claude Opus / Gemini 3.5 Pro, MCP-as-first-class-primitive 'type':'mcp' API surface detail, Composer 2.5 integration timing (3 days after API beta). (5) Gemma 4 12B — added substantive benchmark numbers (DocVQA 94.9 / InfoVQA 88.4 / MMMU Pro 69.1 / MMLU Pro 77.2 / GPQA Diamond 78.8 / AIME 2026 77.5 / MATH-Vision 79.7), 'approaches 26B MoE sibling at <half the memory' framing, flagged that independent third-party laptop-hardware benchmarks were not yet published as of June 4. (6) Cursor Organizations — added Mneme HQ Cursor Developer Habits Report 2026 7%→36.3% agent-generated-commits-without-manual-diff series (Jan 1 → May 16, 2026) as substantive enterprise-buyer rationale. One Tier-1 late-breaking item added: anthropic-when-ai-builds-itself-critical-academic-pushback-ipo-framing-june-7-2026 — Scientific American piece (June 7) consolidates skeptical academic response with Giansiracusa 'literally impossible' framing, Riedl Bluesky 'recursive self-improvement hype train' post, and IPO-timing observation (pause-call came days after June 1 confidential S-1 filing). Evaluated and declined: (a) WWDC keynote pre-event Bloomberg/AppleInsider Tim Cook → John Ternus succession context — keynote happens today June 8 at 10am PT, will be owned by 1pm digest; (b) Microsoft $5.5B Singapore AI infrastructure — April 2026 announcement, outside 12-hour window; (c) SAP / Prior Labs acquisition — early May 2026 announcement, outside window; (d) Emergence World five-AI-society-simulation experiment — interesting but lower-tier and unverified independence of the research source; (e) Anthropic confidential S-1 filing on its own — June 1, captured as framing context in the new RSI-critique item rather than a standalone story. WebFetch returned 403 on lab/blog domains (consistent with prior sandbox runs in this environment); enrichment + late-breaking pass done entirely via WebSearch (11 queries). Hero images uniformly null. Caps: ~42k/100k tokens, 11/30 fetches, well within wall-time."
+    },
+    {
       "run_id": "2026-06-07T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
