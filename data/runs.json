@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-09T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-09T06:00:00Z",
+      "ended_at": "2026-06-09T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 13000,
+        "output_write": 1800
+      },
+      "fetches_made": 11,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-09-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path on yesterday's 2026-06-08-pm (5 items). All 5 pm items kept with substantive new context surfaced overnight: (1) WWDC 2026 Siri-Gemini-Extensions — added Liquid Glass concession framing (opacity slider placed as very first announcement of keynote per CNBC live-blog), App Intents-mandatory + SiriKit-deprecated developer-platform detail per Lushbinary developer guide, and Ming-Chi Kuo's pre-keynote 'must outclass Gemini not just catch up' framing; restructured why_it_matters to add fourth dual-concession read. (2) Claude in Excel — added cross-app context (Claude remembers Outlook → Excel → PowerPoint) as the standout substantive feature per The New Stack hands-on coverage, added practical Pro-plan usage-limit-burn concern per AItoolsReview review (users hitting plan limits within minutes due to multi-tool-call workflow expansion); restructured why_it_matters into three reads. (3) Pentagon 'Too Safe for War' — added Amodei primary-source quotes 'we have these two red lines from day one — we're not going to move on them' from the Anthropic newsroom statements and CBS interview, added the Pentagon's reciprocal 'liar with a God complex' Fortune characterization, added March 4 'deescalate' investor-call context. (4) Apple homeOS — added substantive developer-tooling specifics (Xcode 26, WidgetKit + App Intents APIs same as iOS StandBy widgets), 'first new Apple OS since visionOS in 2023' framing, and watchOS-2015-first-mover-advantage historical parallel per byteiota developer-preview guide; restructured why_it_matters into three reads. (5) iOS 27 accessibility + Shortcuts — added concrete Apple-demo ETA-on-leaving-home Shortcuts example with end-to-end location/timing/messaging assembly per AllThings.How coverage, added App Intents-mandatory + SiriKit-deprecated plumbing detail that makes the natural-language Shortcuts feature scale. One Tier-3 late-breaking item added: apple-liquid-glass-opacity-slider-ios-27-design-system-reversal-june-8-2026 — the Liquid Glass intensity slider as a standalone story focused on the design-system / CSS-adjacent angle (Metal GPU + lensing, .glassEffect() / UIGlassEffect API surface, Nielsen Norman Group accessibility-research context), positioned as the cleanest current example of how Apple shipped a visible design-language concession at the literal top of the keynote and what it substantively means for design-system shipping at OS scale; explicitly framed for Gabe as an HTML/CSS coder via the backdrop-filter:blur() vs. lensing-with-GPU-shaders comparison. Evaluated and declined: (a) Claude Sonnet 4.8 release — still projected June 16-18 per Wavespeed/ChatForest leak tracking, no official announcement as of June 9; deferred to next cycle. (b) Gemini 3.5 Pro GA — still in limited Vertex enterprise preview per Polymarket prediction-market data, expected late June; deferred. (c) MiniMax M3 open weights — still pending Hugging Face landing per MiniMaxAI repo watch (within-10-days from June 1 launch); not yet shipped as of June 9, will surface naturally if drops in next cycle. (d) Boston Dynamics + Google DeepMind Gemini Robotics-ER 1.6 / Contextual AI $80-90M licensing deal — May-2026 timing, outside the 12-hour late-breaking window. (e) Microsoft MAI-Code-1-Flash + MAI-Thinking-1 — already covered indirectly via prior cycles, June-1-area Microsoft Build timing. (f) Anthropic $65B Series H at $965B post-money — already covered as framing context in prior cycles, May-28 timing. WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); enrichment + late-breaking pass done entirely via WebSearch (11 queries). Hero images uniformly null. Caps: ~38k/100k tokens, 11/30 fetches, well within wall-time."
+    },
+    {
       "run_id": "2026-06-08T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
