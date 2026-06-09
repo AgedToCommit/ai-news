@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-09T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-09T11:00:00Z",
+      "ended_at": "2026-06-09T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 25000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 2500,
+        "output_write": 1500
+      },
+      "fetches_made": 13,
+      "items_input": 15,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-09-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path on today's 2026-06-09-am (6 items from enrichment). Swept for content since 2026-06-09T06:30:00Z (enrichment ended_at). WebFetch returned 403 on all direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (13 queries). No Tier-1 model releases found in the overnight window: GPT-5.5 released April 23, Claude Opus 4.8 released May 28, Gemini 3.5 Pro still in limited Vertex preview. Two items added: (1) apple-foundation-models-wwdc-2026-python-sdk-provider-swap (Tier 2) — Apple Foundation Models WWDC 2026 developer-platform story: Python SDK (apple/python-apple-fm-sdk), fm CLI, multimodal image support, Linux support, and the new LanguageModel protocol letting Claude and Gemini plug in as drop-in providers via SPM dependency swap; Anthropic's Swift package implementing the protocol specifically available June 9 (announced at WWDC June 8 as 'available tomorrow'). This is the developer-layer complement to the iOS 27 Extensions user-layer story already in the snapshot. (2) lg-cns-anthropic-claude-enterprise-lg-group-june-9-2026 (Tier 3) — LG CNS (IT-services arm of LG Group) signed a group-wide Claude Enterprise agreement with Anthropic on June 9; multiple Korean press sources (Korea Herald, Seoul Economic Daily, Korea Times, The Elec). Asia-cycle overnight item. First publicly confirmed chaebol-scale Claude Enterprise deployment. Evaluated and declined: (a) White House AI EO 'Promoting Advanced Artificial Intelligence Innovation and Security' — signed June 2, outside the overnight sweep window. (b) Claude Managed Agents self-hosted sandboxes / MCP tunnels — announced May 19 at Code with Claude London, outside window. (c) Anthropic June 15 billing change (Agent SDK credit pool) — announced May 14, formalized in Help Center; ongoing news cycle not specific to overnight. (d) Gemini 3.5 Pro GA — still in limited Vertex preview as of June 9. Hero images uniformly null. Caps: ~25k/60k tokens, 13/20 fetches, well within wall-time."
+    },
+    {
       "run_id": "2026-06-09T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
