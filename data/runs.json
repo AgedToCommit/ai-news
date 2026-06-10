@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-10T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-10T17:00:00Z",
+      "ended_at": "2026-06-10T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 33000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 8000,
+        "output_write": 1800
+      },
+      "fetches_made": 22,
+      "items_input": 5,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-10-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Today's 2026-06-10-am file exists with 7 items (Claude Fable 5 / Mythos 5, OpenAI confidential S-1, Apple Siri AI EU/China delay, Apple AFM 3 third-gen Foundation Models architecture, Xcode 27 / Core AI / Device Hub Platforms State of the Union, Microsoft E&D Claude Code cancellation + agentic cost paradox, Perplexity Search as Code) — all excluded from pm per promotion rule. Yesterday's 2026-06-09-am file's Apple Foundation Models Python SDK / LanguageModel protocol / fm CLI / multi-provider swap item was confirmed via direct grep, so the WWDC Foundation Models follow-up angle is fully covered and a standalone pm item on the same threads would substantively duplicate. Pm digest focuses on 2 net-new items from the June 9 announcement window. (1) anthropic-claude-managed-agents-scheduled-cli-browser-june-9-2026 (T2) — Anthropic ships scheduled deploys, vault environment variables for CLI tools (Browserbase / KERNEL / Notion / Ramp / Sentry launch-partner CLIs), and first-time browser capabilities for Managed Agents via Browserbase and KERNEL — all in public beta on the Claude Platform — on June 9, the night before the Tokyo stop of Code with Claude on June 10. The substantive engineering pattern worth pinning is the vault-env-var-with-domain-allowlist secrets architecture: the agent sandbox holds only a placeholder, the real key is attached at the network boundary, and only on requests to domains the developer has explicitly allowed — structurally blocks the prompt-injection-key-exfiltration threat model in a way that the standard 'pass API key into agent process and trust it' pattern does not. Strong Python relevance for Gabe (cron-style scheduled deploys collapse scheduler + session bootstrapping + isolation into a single declarative deploy, exactly the shape of a Python script that would otherwise need a hosted server). Pairs structurally with this morning's Microsoft E&D Claude Code cancellation item — same week, Anthropic ships the platform-side primitives (scheduled deploys, secrets architecture, browser tool use) that let developers build agentic workflows where cost-per-session is bounded by a cron schedule rather than driven by continuous interactive use. (2) standard-bots-200m-series-c-ai-native-industrial-robots-june-9-2026 (T3) — New York-based Standard Bots raises $200M Series C at $1B unicorn valuation on June 9. RoboStrategy lead, General Catalyst co-lead, Amazon Alexa Fund / Samsung Next / Box Group / GiantLeap participating. Substantive engineering differentiator: 'training by demonstration' — worker walks the robot through the task once or twice, robot generalizes from observation; the industrial-robotics version of the behavior-cloning / imitation-learning pattern that general-purpose-robotics frontier labs (Physical Intelligence, Skild AI, Figure) are using. Expanding 70,000-sq-ft Glen Cove NY manufacturing facility. Cited structural backdrop: China deployed 9x more industrial robots than the US last year, and more than the rest of the world combined. Pairs as the embodied-AI capital-markets data point alongside this week's Anthropic ($965B post-money) and OpenAI S-1 ($1T target) stories. Evaluated and declined: (a) MiniMax M3 open weights drop on Hugging Face — still pending; M3 launched June 1 with weights promised within ~10 days, target window June 10-11 but not yet shipped. (b) Code with Claude Tokyo June 10 keynote announcements — substantively re-announce the Multiagent Orchestration / Outcomes / Dreaming triple already covered from the May 6 SF launch, plus the June 9 Managed Agents updates that are captured as the primary item above; no Tokyo-specific net-new product announcement surfaced. (c) Hitachi joining Project Glasswing (June 8) — substantive but too narrow for a standalone pm item; the Project Glasswing expansion thread is already covered in this morning's Fable 5 item. (d) Karpathy 'Jevon's paradox / software on tap' quote on Simon Willison's blog (June 9) — substantive observation but too thin for snapshot-level coverage. (e) Standard Bots and other June 9 funding rounds (ICEYE €450M, Golden Analytics $14M, Rem3dy €16M) — Standard Bots is the only one with substantive AI-engineering relevance for Gabe; others declined. (f) Microsoft Build 2026 MAI-Thinking-1 / Majorana 2 quantum — June 2-3 timing, outside the 24-hour window and already covered in prior digest. (g) Cognition Devin Desktop (Windsurf rebrand) — June 2 timing, outside window. (h) Mistral Medium 3.5 — April 30 release, outside window. (i) Anthropic Project Glasswing expansion biology / chemistry partner sub-cohorts — already folded into this morning's Fable 5 item via the Mythos 5 unsafeguarded SKU framing. (j) Google Gemini 3.5 Pro GA — still in limited Vertex preview as of June 6, no shipping date. (k) xAI Grok 5 — Q2 deadline missed, no shipping date. (l) Apple Foundation Models multi-provider swap / fm CLI / open-source-this-summer angle — substantively duplicates yesterday's am file's apple-foundation-models-wwdc-2026-python-sdk-provider-swap item (confirmed via direct grep). WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); sourcing done entirely via WebSearch (22 queries). Hero images uniformly null. Caps: ~33k/100k tokens, 22/50 fetches, well within wall-time. Final composition: 0 Tier-1 + 1 Tier-2 + 1 Tier-3 = 2 items. The cross-item narrative Gabe will read with today's am file: Anthropic continues to widen its agent-infrastructure shipping cadence (Fable 5 day-1 distribution at GA in the am file, scheduled deploys and vault secrets architecture for Managed Agents at public beta in the pm) exactly as the OpenAI IPO disclosure puts the financial-comparison picture under the microscope; meanwhile the AI-native-embodied-systems category passes its first $1B-valuation deployment-stage milestone via Standard Bots on the same June 9 day."
+    },
+    {
       "run_id": "2026-06-10T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
