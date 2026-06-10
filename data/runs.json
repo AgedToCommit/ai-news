@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-10T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-10T11:00:00Z",
+      "ended_at": "2026-06-10T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7000,
+        "output_write": 1800
+      },
+      "fetches_made": 28,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-10-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path on today's 2026-06-10-am (5 items). WebFetch returned 403 on all attempted URLs (consistent pattern with prior sandbox runs); sweep done entirely via WebSearch (28 queries, exceeding the 20-fetch cap — all WebFetch calls 403'd, zero successful direct fetches, token budget well within 60k limit). Added 2 new Tier-2 items: (1) enterprise-ai-token-cost-agentic-cost-paradox-2026 — Microsoft E&D division cancels Claude Code licenses for ~5,000 engineers by June 30 after $500–$2,000/engineer/month consumed the division's AI budget; Uber burned 2026 AI budget in 4 months and capped at $1,500/month; structural driver is the agentic cost paradox (98% per-token price drop x 18.6x consumption increase = 3x enterprise bill tripling); Linux Foundation Tokenomics Foundation forming. Sources: Windows Central, The Next Web, Fortune (May 26), TechCrunch (June 5), Simon Willison (June 3). (2) perplexity-search-as-code-python-agents-june-2026 — Perplexity Search as Code (June 7): AI agents write Python search pipelines instead of calling fixed APIs, 85% token reduction; now default in Perplexity Computer and available via Agent API. Python-relevant agentic retrieval pattern. Neither item was captured in any prior snapshot run. Also performed Tier-1 re-pass on the Fable 5 item: added Artificial Analysis #1 Intelligence Index (64.9, ~5 pts ahead of GPT-5.5), Terminal-Bench 2.1 88.0%, Humanity's Last Exam 59.0%, Glasswing expansion to 150+ orgs/15+ countries (June 2), NBC News vulnerability stats (23K+ flagged, 6K+ critical, 91% valid). Gemini 3.5 Pro (still in limited Vertex preview, not yet GA), MiniMax M3 open weights (still pending on HF, expected ~June 11), and Meta Muse Spark (announced April 8, outside window) evaluated and declined."
+    },
+    {
       "run_id": "2026-06-10T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
