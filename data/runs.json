@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-10T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-10T06:00:00Z",
+      "ended_at": "2026-06-10T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 40000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 13000,
+        "output_write": 1800
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-10-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path on yesterday's 2026-06-09-pm (4 items). All 4 pm items kept with substantive new context surfaced overnight: (1) OpenAI confidential S-1 IPO filing — added overnight analyst reaction (Wedbush 'floodgates officially open,' Emarketer Nate Elliott 'precarious moment' / OpenAI losing ChatGPT early leads to Google and Anthropic, Bridgewater Greg Jensen 'implied 35x forward revenue priced for a monopoly outcome that does not yet exist'); added Polymarket by-end-2026 IPO probability jump to 76% from 44%; reframed why_it_matters to incorporate the bear case and the same-week pairing with the Claude Fable 5 release. (2) apple-third-gen-foundation-models-afm3 — added ex-Apple researcher Awni Hannun (now at Anthropic) quoted reaction 'pretty exotic architecture by today's standards' + 'A small model predicts from the query which experts to load from NAND into RAM' + the substantive NAND-to-DRAM-bandwidth framing as the substantive driver of the prompt-level routing choice; added Max Weinbach A19 Pro hands-on confirmation; added VentureBeat June 9 'first production-scale dynamic-sparse LLM that ships to consumers' threshold framing. (3) wwdc-2026-xcode-27 — added the substantive App Store Small Business Program no-cloud-API-cost Foundation Models detail (developers with <2M downloads get Foundation Models on Private Cloud Compute at no cloud API cost); added TechTimes 'skips cloud entirely' on-device privacy framing; restructured why_it_matters into three reads including the substantive new platform-economics-for-indie-developers read. (4) apple-siri-ai-delayed-eu-dma — THE most substantively-enriched item: added the June 9 European Commission public counter-statement from Thomas Regnier directly contradicting Apple's framing ('absolutely nothing in the DMA prohibits Apple from introducing new products in the EU' + 'Apple failed to develop interoperability solutions that complied with the Digital Markets Act and instead sought an exemption from its obligations, which was never an option'); added the AP-wire 'Apple and Brussels blame each other for delaying European Union rollout of Siri AI' coverage that landed across CBS, KARK, RochesterFirst, CBS 42; restructured why_it_matters into three reads with second read on the substantive regulator-vs-platform public spat that the delay has now substantively become. One Tier-1 late-breaking item added: anthropic-claude-fable-5-mythos-5-release-june-9-2026 — Anthropic's first generally available Mythos-class model, released June 9 evening. Posts 80.3% SWE-Bench Pro (11-point lead over Opus 4.8, 21.7-point lead over GPT-5.5, larger gap than Opus 4.8 to Gemini 3.1 Pro), 95.0% SWE-bench Verified, 29.3% FrontierCode autonomous-patch (vs Opus 4.8's 13.4% — more than 2x), 1932 Elo GDPval-AA. 1M-token context, 128K max output. Pricing $10/$50 per M tokens. Dual-SKU shipping: Fable 5 with safety classifiers and auto-routing of high-risk queries (cyber/bio/chem/distillation) to Opus 4.8 with user notification, Mythos 5 unsafeguarded for Project Glasswing partners + select biology researchers. Day-1 distribution: GitHub Copilot GA, Amazon Bedrock, Anthropic Foundation Models Swift package (the same Swift package announced as 'available tomorrow' at WWDC June 8 and shipping in concert with the model release). TechCrunch frames the timing as substantively notable — release lands days after Anthropic's own Project Glasswing 'AI is becoming too dangerous' framing. Pro/Max/Team/Enterprise inclusion window through June 22, then usage credits. Pairs structurally with the OpenAI IPO item (Anthropic widening the coding-benchmark lead exactly as the IPO disclosure puts the financial picture under the microscope). Evaluated and declined: (a) NVIDIA Nemotron 3 Ultra (550B MoE, 47.7 AAII) — released June 4, outside the 12-hour late-breaking window. (b) MiniMax M3 Hugging Face weights drop — still pending as of June 9, expected ~June 11 per MiniMax's 10-day-from-launch commitment; not yet shipped. (c) Gemini 3.5 Pro GA — still in limited Vertex enterprise preview. (d) Apple Foundation Models Swift package (Anthropic) — already captured in this week's am file's Foundation Models Python SDK item; folded into Fable 5 day-1 distribution detail. (e) Holland & Knight Health Dose AI policy update — too narrow for snapshot-level coverage. (f) Microsoft / Sakura Japan AI data center investment ($10B over 4 years) — June 5 timing, outside window. WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); enrichment + late-breaking pass done entirely via WebSearch (8 queries). Hero images uniformly null. Caps: ~40k/100k tokens, 8/30 fetches, well within wall-time. Final am composition: 2 Tier-1 (Claude Fable 5, OpenAI IPO) + 3 Tier-2 (Siri AI EU/China, AFM 3 architecture, Xcode 27) + 0 Tier-3 = 5 items. The two structurally substantive cross-item narratives Gabe will read together: (i) Anthropic-vs-OpenAI public-market positioning (Claude Fable 5 widening coding-benchmark lead + OpenAI IPO disclosure substantively under-the-microscope financial picture), and (ii) Apple WWDC 2026 follow-up cycle (AFM 3 sparse architecture validated by ex-Apple/now-Anthropic researcher; Xcode 27 first OS-vendor IDE with frontier agentic coding; Siri AI EU delay escalating into a public Apple-vs-Brussels blame fight)."
+    },
+    {
       "run_id": "2026-06-09T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
