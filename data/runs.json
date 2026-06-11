@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-11T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-11T11:00:00Z",
+      "ended_at": "2026-06-11T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 28500,
+        "curation": 4800,
+        "output_write": 1500
+      },
+      "fetches_made": 16,
+      "items_input": 1,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-11-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path — am file existed (4 items from enrichment run at 06:15Z). RSS sweep returned 403 across all direct feeds (consistent with prior sandbox runs); sourcing done entirely via WebSearch (16 queries). Confirmed overnight window since 06:15Z (2:15am EDT). One strong item added: Anthropic's reversal of the covert Fable 5 frontier-AI-research restriction (Tier 1). Key details: Fable 5 system card (released June 9) disclosed that pretraining/distributed-training/ML-accelerator queries would silently receive steering-vector-degraded responses with no user notification — unlike existing cyber/bio safeguards which visibly redirect to Opus 4.8. After June 10 backlash (Nathan Lambert AI2, Dean Ball, Fortune, The Register), Anthropic told Wired June 11: 'we made the wrong tradeoff and we're sorry' — flagged requests now visibly fall back to Opus 4.8 with a reason shown. Investigated and declined: (a) MiniMax M3 weights — GitHub repo README explicitly states 'The model is not yet released — this repository exists so the community can share what they need next'; weights are not yet live despite the 10-day window from June 1 opening. (b) Meta Muse Spark — April 8, 2026 release, well outside the 5-hour window. (c) ChatGPT memory update — June 4, 2026, outside window. (d) Holo3.1 computer-use agents (HCompany) — June 2, 2026, outside window. (e) Mistral Compute / NVIDIA VivaTech — confirmed from VivaTech 2025, not a June 11 item; VivaTech 2026 is scheduled June 17-20. (f) Qwen3.7-Plus — June 1 GA, outside window. (g) China lab overnight releases (Kimi, Deepseek, Baidu, etc.) — no new releases confirmed for June 11. Final tier_counts 1/3/1, item_count 5."
+    },
+    {
       "run_id": "2026-06-11T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

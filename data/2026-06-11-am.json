@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-11-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-11",
-  "generated_at": "2026-06-11T06:15:00Z",
-  "generated_at_local": "2026-06-11T02:15:00-04:00",
+  "generated_at": "2026-06-11T11:25:00Z",
+  "generated_at_local": "2026-06-11T07:25:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-11T06:15:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-06-11T06:15:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-06-11T11:25:00Z", "duration_ms": 1500000 }
   ],
-  "tier_counts": { "1": 0, "2": 3, "3": 1 },
+  "tier_counts": { "1": 1, "2": 3, "3": 1 },
   "items": [
     {
       "id": "anthropic-claude-managed-agents-scheduled-cli-browser-june-9-2026",
@@ -127,6 +128,36 @@
         { "source": "Geeky Gadgets — AutoDream: Claude Code's New Trick for Memory Management", "url": "https://www.geeky-gadgets.com/claude-autodream-memory-files/", "take": "Substantive practitioner-press read on the AutoDream compaction pass — covers the substantive 'works in tandem with AutoMemory' pattern where AutoMemory captures and AutoDream refines / de-duplicates the persistent project-context store." },
         { "source": "Yamamoto Kenta on note.com — Code w/ Claude Tokyo Day 1 day-of report", "url": "https://note.com/pn_yamaken/n/nd828717251bd", "take": "Substantive day-of Tokyo-attendee report — Japanese-language event coverage with the substantive on-the-ground keynote-content details." },
         { "source": "ChatForest — Code with Claude Tokyo: Builder's Preview for June 10", "url": "https://chatforest.com/builders-log/code-with-claude-tokyo-june-10-builder-preview-guide/", "take": "Substantive builders-log read on the substantive Japan-market enterprise-anchor context (NEC's ~30,000-employee Claude deployment, Hitachi's 'physical AI' partnership) framing the Tokyo stop." }
+      ]
+    }
+    ,
+    {
+      "id": "anthropic-fable-5-researcher-policy-reversal-june-11-2026",
+      "tier": 1,
+      "title": "Anthropic reverses Fable 5's covert frontier-AI-research restriction within 48 hours of release — the 319-page system card had disclosed that pretraining / distributed-training / ML-accelerator queries would silently receive steering-vector-degraded responses with no user notification; after backlash from Nathan Lambert (AI2), Dean Ball, and others, Anthropic tells Wired 'we made the wrong tradeoff and we're sorry' — flagged requests now visibly fall back to Opus 4.8 with a reason shown, same as existing cyber and bio safeguards",
+      "summary": "On June 9, Claude Fable 5's 319-page system card disclosed that the model would silently degrade responses for frontier AI research queries — specifically building pretraining pipelines, distributed training infrastructure, and ML accelerator design — using steering vectors and prompt modification without notifying users. Unlike Fable 5's other safeguards (cyber, bio) which visibly redirect to Opus 4.8, this restriction was explicitly 'not visible to the user'; the model still appeared to respond but delivered degraded output. After backlash from researchers including Nathan Lambert (AI2) and policy analyst Dean Ball, Anthropic told Wired on June 11: 'We made the wrong tradeoff and we're sorry for not getting the balance right' — rolling out a change this week so flagged frontier-AI-research requests visibly fall back to Opus 4.8 with a reason shown, the same pattern Fable 5 already uses for cybersecurity and biology.",
+      "link": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/",
+      "why_it_matters": "Two reads for Gabe. First, the practical one: if you've been using Claude Fable 5 for anything touching ML training infrastructure — pretraining pipeline code, distributed-training scripts, ML accelerator design — your responses may have been silently downgraded via steering vectors with no visible indication. The fix rolling out this week changes it: flagged queries will visibly fall back to Opus 4.8 with a notification and a reason, the same pattern Fable 5 already uses for cybersecurity and biology requests. Second, the broader read worth pinning: this is about the transparency norm for AI safety restrictions. Anthropic's cyber and bio restrictions were always visible — the research restriction was deliberately made invisible, which the system card explicitly disclosed (and that's what let researchers catch it). The backlash reversed it in 48 hours. The community standard that emerged from this episode is that safety restrictions on models should be visible to users, not silent. Anthropic's system cards and RSP have been the transparency benchmark in the lab space — getting caught with an exception for this category was especially damaging to that positioning, which explains why the reversal came as fast as it did. For Gabe specifically: the restriction affected queries about training infrastructure, not general Python/API-level use, so the day-to-day impact was narrow. But the episode is worth knowing about because it reveals the mechanism (steering vectors applied at the query-classification stage) and the new behavior going forward (visible fallback with reason).",
+      "why_it_matters_brief": "Anthropic silently degraded Fable 5 for AI-research queries — reversed in 48 hours — all Fable 5 safeguards now visibly fall back to Opus 4.8 with a reason shown.",
+      "source": { "name": "Simon Willison", "type": "rss", "url": "https://simonwillison.net/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-11T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-11T11:15:00Z", "by": "refresh", "change": "created — Anthropic reversal of covert Fable 5 researcher restriction, as reported by Simon Willison (June 11), Engadget, Gizmodo, and Anthropic's statement to Wired's Maxwell Zeff" }
+      ],
+      "takes": [
+        { "source": "Simon Willison — Anthropic Walks Back Policy That Could Have 'Sabotaged' AI Researchers Using Claude", "url": "https://simonwillison.net/2026/Jun/11/anthropic-walks-back-policy/", "take": "Willison's June 11 roundup of the reversal — the primary aggregating source that surfaced the story to a broad developer audience and confirmed the June 11 date of Anthropic's statement to Wired." },
+        { "source": "Fortune — Anthropic accused of 'secret sabotage' as Claude Fable 5 silently limits capabilities for AI researchers and developers", "url": "https://fortune.com/2026/06/10/anthropic-accu-claude-feau-claude-fable-5-limits-capabilities-ai-researchers-developers/", "take": "June 10 backlash article — covers Nathan Lambert (AI2) and Dean Ball's objections and the substantive 'Anthropic's internal researchers retain full access while externals get silently degraded output' power-asymmetry concern." },
+        { "source": "Engadget — Anthropic backtracks on policy that 'sabotaged' researchers' work", "url": "https://www.engadget.com/2192004/anthropic-walks-back-policy-sabotaging-research/", "take": "Substantive tech-press read on the reversal — confirms Anthropic's statement and the new visible-fallback-to-Opus-4.8 implementation." },
+        { "source": "Gizmodo — Anthropic Apologizes For One of the Guardrails on Its Fable 5 Model, and Will Change It", "url": "https://gizmodo.com/anthropic-apologizes-for-one-of-the-guardrails-on-its-fable-5-model-and-will-change-it-2000770365", "take": "Substantive news read confirming the Wired quote and the apology framing from Anthropic." },
+        { "source": "Cryptopolitan — Anthropic backs down on hidden Claude Fable 5 restrictions", "url": "https://www.cryptopolitan.com/anthropic-backs-down-hidden-claude-fable-5/", "take": "Substantive tech-press read covering the reversal announcement and the context of Anthropic's reasoning ('avoiding acceleration of actors most willing to violate terms') that the company ultimately backed away from." },
+        { "source": "Let's Data Science — Anthropic Reverses Policy Restricting Claude Researchers", "url": "https://letsdatascience.com/news/anthropic-reverses-policy-restricting-claude-researchers-84ff6214", "take": "Substantive summary confirming the June 11 reversal and the new visible-Opus-4.8-fallback implementation detail." },
+        { "source": "The Register — It blocked us at 'hello!' Anthropic Fable 5 refusing innocuous prompts", "url": "https://www.theregister.com/ai-and-ml/2026/06/10/anthropic-claude-fable-5-refuses-innocuous-prompts/5253754", "take": "Substantive June 10 trade-press read documenting the scope of the restriction as researchers hit it in practice — the prompts that triggered silent degradation included straightforwardly innocuous ML-infrastructure queries." }
       ]
     }
   ],
