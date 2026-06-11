@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-11T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-11T06:00:00Z",
+      "ended_at": "2026-06-11T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 19000,
+        "output_write": 3500
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-11-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment path: yesterday's 2026-06-10-pm.json had 2 items (anthropic-claude-managed-agents T2, standard-bots T3) — both KEEP+ENRICH (no drops). (1) Managed Agents: added the Tokyo keynote (June 10, 9-10am JST / 8-9pm EDT June 9) follow-up triad — Auto Mode (two-stage destructive-op + prompt-injection classifier), built-in git Worktrees (Boris Cherny publicly confirmed on X), and Automemory + AutoDream — updated summary, why_it_matters, and brief to reflect the Tokyo expansion. (2) Standard Bots: added the Flux AI Skill product name, the 30%-lower-cost-than-legacy-providers claim, and the disclosed customer list (Amazon, Lockheed Martin, NASA, US Army, Sunoco) from day-after coverage. Late-breaking pass added 2 net-new items both T2: (3) openai-oracle-cloud-commitment-openai-models-codex-june-10-2026 — OpenAI announces OCI Universal-Credits distribution channel for frontier models and Codex (no new procurement cycle), alongside Codex 2M+ weekly users / 5x three-month growth / 70%+ MoM growth disclosure; completes OpenAI's three-hyperscaler enterprise-distribution surface (AWS + Azure + Oracle). (4) anthropic-code-with-claude-tokyo-keynote-claude-code-auto-mode-worktrees-automemory-june-10-2026 — separate item covering the Claude Code agentic-coding-surface reveal at Tokyo, framed against the Japan-market enterprise anchors (NEC ~30,000-employee Claude deployment, Hitachi 'physical AI' partnership). Hero images set to null for both new items (Anthropic and OpenAI both return HTTP 403 to WebFetch; third-party-aggregator OG-image extraction not attempted to keep within the late-breaking-pass time cap). Final tier_counts 0/3/1, item_count 4."
+    },
+    {
       "run_id": "2026-06-10T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
