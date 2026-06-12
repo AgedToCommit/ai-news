@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-12T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-12T11:00:00Z",
+      "ended_at": "2026-06-12T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 500,
+        "scrape_sweep": 500,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 3000,
+        "output_write": 2000
+      },
+      "fetches_made": 18,
+      "items_input": 0,
+      "items_output": 6,
+      "items_added": 0,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-12-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. 18 WebSearch queries covering overnight Asia/Europe cycle (06:25Z-11:00Z window) found no qualifying new Tier 1-3 items. Key items evaluated and declined: (a) Meta Muse Spark — April 8 2026, far outside the refresh window. (b) Grok Imagine 1.5 video generation — launched May 31 2026, outside window; Elon Musk Iliad-trailer demo was June 4. (c) OpenAI GPT-Realtime-2 / real-time audio API models — launched May 7 2026, outside window. (d) Anthropic–Microsoft Maia 200 chip talks — originally surfaced May 21-24 2026, outside window; no June 12 update found. (e) NAVER/NVIDIA DSX gigawatt-scale sovereign AI factory (Korea) — announced June 7 2026, outside window. (f) Qwen 3.7-Plus GA — June 1 2026, outside window. (g) Gemini 3.5 Pro — not yet released as of June 8 2026, no June 12 launch announcement found. (h) Grok 5 — still pending; xAI's active June 2026 shipping item is V9-Medium (already in am file). (i) MiniMax M3 independent community benchmarks — still pending as of June 12 morning; weights landed June 11 and community benchmarking not yet complete. (j) SpaceX SPCX first-day trading performance — Nasdaq opens 13:30Z (9:30am EDT), after this refresh window; pre-market data shows $135 flat. (k) EU AI Act Code of Practice signatories — July 22 cutoff has not yet passed; Meta's prior non-signing (July 2025) was for the GPAI code, not the June 2026 transparency code. Optional T1 re-pass: DiffusionGemma and MiniMax M3 both checked — no substantive overnight chatter since 06:25Z to add beyond what enrichment already captured. No WWDC day-5 (June 12) headline AI announcements from Apple; major Apple keynote was June 8. WebFetch returned 403 on direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (18 queries). Final composition unchanged: 2 T1 + 3 T2 + 1 T3 = 6 items."
+    },
+    {
       "run_id": "2026-06-12T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
