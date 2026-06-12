@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-12T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-12T16:30:00Z",
+      "ended_at": "2026-06-12T17:00:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 11000,
+        "output_write": 3000
+      },
+      "fetches_made": 21,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. WebFetch returned 403 on direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (21 queries). Today's am file had 6 items (2 T1 DiffusionGemma + MiniMax M3, 3 T2 SpaceX/EU/Grok-V9, 1 T3 Claude Corps); all excluded by default per digest promotion rule. No T1 promotions warranted (none materially deepened beyond what enrichment captured this morning). Six net-new items selected from the June 11-12 afternoon news cycle: (1) openai-acquires-ona-cloud-coding-agents-codex-june-11-2026 (T2) — OpenAI agrees to acquire cloud-development startup Ona (formerly Gitpod) to give Codex agents cloud sandboxes; same announcement discloses Codex now has 5M weekly users with non-developers ~20% growing 3x faster. (2) anthropic-direct-data-center-leases-1gw-google-guarantee-june-11-2026 (T2) — The Information reports Anthropic signed 12+ non-binding LOIs for direct US data center leases totaling 1+ GW, in talks for Google to financially guarantee the lease payments; structural shift from pure-cloud-customer to hybrid infrastructure. (3) dxc-anthropic-multi-year-global-alliance-claude-premier-partner-june-11-2026 (T2) — DXC and Anthropic announce multi-year global alliance with DXC as Claude Premier partner, training tens of thousands of Claude-certified engineers through 90-day Anthropic Partner Academy; backed by the substantive DXC OASIS data point (95% Claude-generated code, 10x delivery acceleration). (4) visa-openai-intelligent-commerce-agentic-payments-june-10-2026 (T2) — Visa + OpenAI strategic collaboration at Visa Payments Forum SF embedding tokenized Visa credentials and real-time authorization into ChatGPT and Codex experiences; AI agents can initiate purchases within user-defined permissions. (5) cursor-bugbot-3x-faster-review-command-composer-25-june-11-2026 (T2) — Cursor ships Bugbot upgrade: 3x faster (avg ~90s vs ~5min), 22% cheaper, 10% more bugs found per review; powered by Composer 2.5 in-house model + new /review slash command (with /review-bugbot and /review-security variants). (6) claude-code-2-1-170-nested-subagents-ultracode-fable5-june-11-2026 (T3) — Anthropic ships Claude Code v2.1.170 with first-class Fable 5 support, nested sub-agents up to 5 levels deep (each in isolated context window, returns only summary), ultracode xhigh-effort setting, smarter Bedrock region handling, /plugins search; pairs with same-day Fortune profile of Boris Cherny disclosing 8 months without writing code by hand. Items considered and declined: SpaceX SPCX first-day trading pop (+25% to $168.75, ~$2.21T market cap) — same canonical story as the SpaceX-IPO item in this morning's am file, no T1 promotion rule applies. Gemini 3.5 Flash GA — actually shipped at Google I/O 2026 in May, outside the digest window. Mistral Connectors in Studio — earlier in June, outside window. NVIDIA Nemotron 3 Ultra — June 4, outside window. Zyphra ZAYA1-VL-8B — May 2026, outside window. Microsoft MAI-Code-1-Flash / MAI-Thinking-1 family — June 2, outside window. Anthropic Project Glasswing — April 7, far outside window. SAP / Prior Labs acquisition — May 4-9, outside window. Final composition: 0 T1 + 5 T2 + 1 T3 = 6 items."
+    },
+    {
       "run_id": "2026-06-12T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
