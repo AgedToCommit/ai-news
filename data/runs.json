@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-12T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-12T06:00:00Z",
+      "ended_at": "2026-06-12T06:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 41000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 15000,
+        "output_write": 2800
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path: yesterday's 2026-06-11-pm.json had 4 items (1 T1 DiffusionGemma + 3 T2 SpaceX-IPO / EU-AI-Code / Grok-V9-Medium). All four KEEP+ENRICH — no drops. (1) DiffusionGemma: added day-one benchmark deltas (MMLU Pro 77.6 vs 82.6, AIME 2026 69.1 vs 88.3, GPQA Diamond 73.2 vs 82.3), Simon Willison NIM cloud API hands-on (2,409 tokens in 4.4s = >=500 tok/s sustained on hosted endpoint), and NVIDIA NVFP4 quantized variant (nvidia/diffusiongemma-26B-A4B-it-NVFP4). (2) SpaceX IPO: added June 12 trading-open-day mechanics ($SPCX live on Nasdaq at $135, total order book >$250B with retail >$100B, 3.5-4x oversubscribed, 30% retail allocation, multiple trading halts expected on day one). (3) EU AI Code of Practice: added multi-stakeholder process detail (187+ participants over 3 consultation rounds with 6 independent experts) and the July 22 2026 18:00 CEST signatory-list cutoff before the August 2 entry-into-application date. (4) Grok V9-Medium: added SWE-Bench Verified public scoreboard backdrop (Grok 4 72-75% / Claude Opus 4.6 80.8% / GPT-5.5 88.7%) and the substantive Tesla over-the-air software-update mechanism detail for the in-car rollout. Late-breaking pass added 2 net-new items: (5) minimax-m3-open-weights-live-hugging-face-june-11-2026 (T1) — MiniMax M3 open weights shipped on Hugging Face on or about June 11 within the 10-day post-launch window MiniMax committed to at the original June 1 announcement. First open-weight model to combine frontier-level coding (59.0% SWE-Bench Pro, edging GPT-5.5's 58.6%), 1M-token context via MSA sparse attention, and native (text + image + video) multimodal input in a single set of weights. Substantive pairing with the DiffusionGemma drop — two frontier-claim open-weights releases the same week from labs on opposite sides of the Pacific. Licensing caveat: MiniMax M2.7 shipped commercially-restricted; M3 license terms should be verified on the Hugging Face model card. (6) anthropic-claude-corps-150m-fellowship-nonprofits-june-11-2026 (T3) — Anthropic announces Claude Corps, a $150M 1,000-fellow national fellowship with three cohorts (first 100 fellows October 19, 2026; subsequent in January 2027 and August 2027). Fellows earn $85K + benefits for 12-month placements at 400+ US nonprofits (RAINN, Goodwill, Code for America, Year Up United, International Rescue Committee, REEF first-cohort hosts). Applications close July 17, 2026 11:59pm PT. Structured like Teach for America for AI implementation at nonprofits. Pairs with the SpaceX S-1 disclosure (Anthropic paying xAI $1.25B/month for Colossus compute) as the substantive 'labor-displacement-mitigation' counterweight to the substantive '$15B/year compute spend' picture. Evaluated and declined: (a) Claude Opus 4.9 / 5.0 — no announcement; Anthropic's most recent model on the frontier tier remains Fable 5 (June 9) and Opus 4.8 (May 28). (b) Apple WWDC followups — no June 11/12 net-new announcements beyond the June 8-9 WWDC content already captured. (c) Other Asia/Europe overnight cycles — no qualifying frontier-lab announcements in the 12-hour window. WebFetch returned 403 on direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (9 queries). Hero images uniformly null. Caps: ~41k/100k tokens, 9/30 fetches, well within wall-time. Final composition: 2 T1 + 3 T2 + 1 T3 = 6 items (4 kept-and-enriched, 2 added)."
+    },
+    {
       "run_id": "2026-06-11T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
