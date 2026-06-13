@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-13T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-13T06:00:00Z",
+      "ended_at": "2026-06-13T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 25000,
+        "curation": 15000,
+        "output_write": 2800
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-13-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path: yesterday's 2026-06-12-pm.json had 6 items (5 T2 Ona/Anthropic-DC-leases/DXC-alliance/Visa-OpenAI/Cursor-Bugbot + 1 T3 Claude-Code-2.1.170). All six KEEP+ENRICH — no drops. (1) Ona acquisition: added Techzine/InfoWorld/TheNextWeb competitive-context read (deal as OpenAI's response to Anthropic's May 2026 Claude Managed Agents self-hosted-sandbox launch), Ona-CEO Johannes Landgraf LinkedIn quote ('I always thought selling the company would feel like an ending. Instead, it feels like our life's work just got bigger and more important.'), Astral March 2026 acquisition context (Ona is OpenAI's 6th acquisition in 2026, near matching all 8 acquisitions for full year 2025), and the ~2M Ona-developers-served data point. (2) Anthropic data-center leases: added overnight Blockonomi + Seeking Alpha follow-up reporting that the broader credit structure also reportedly involves participation from Apollo Global Management and Blackstone (the private-credit shops backing other hyperscaler data-center build-outs through 2025-2026); Google no-comment / Anthropic no-response statements via Reuters. (3) DXC alliance: added Simply Wall St 'investment-thesis shift' equity-markets framing — re-rating DXC as an enterprise AI implementation partner rather than legacy IT-services consolidator. (4) Visa-OpenAI agentic commerce: added the substantive March 2026 OpenAI Instant Checkout retirement context (Cryptonomist — never scaled past small set of merchants), the substantive Visa Intelligent Commerce Connect April 2026 launch context (PYMNTS), and the substantive Mastercard / Google / Stripe competing-protocols standards-race framing. (5) Cursor Bugbot: added Composer 2.5 May 18 2026 launch context (BuildFastWithAI / DataCamp / PrimeAIcenter) — 79.8% SWE-Bench Multilingual within one point of Claude Opus 4.7 (80.5%) at roughly 10x lower per-token cost, post-training included ~25x more synthetic tasks and targeted RL — and the substantive `/review` slash-command GitHub-and-GitLab Bugbot sync detail. (6) Claude Code v2.1.170: added Boris Cherny's 'depth 5 to start, asking for feedback' framing (via his X post and the Digg / OpenTools follow-ups), the substantive same-release-bug-fixes 'nesting exercised hard within days' detail, and clarified the June 9 Fable 5 release / v2.1.170 release-window timing. Late-breaking pass added 1 net-new item: (7) kimi-k2-7-code-moonshot-open-weights-hugging-face-june-12-2026 (T1) — Moonshot AI Kimi K2.7-Code open weights landed on Hugging Face on June 12, 2026: 1T-parameter Mixture-of-Experts (32B active across 384 experts), 256K-token context, Modified MIT license, +21.8% on Kimi Code Bench v2 over K2.6 (50.9 -> 62.0), ~30% fewer 'thinking' tokens vs K2.6 at higher accuracy on Moonshot's internal coding benchmarks. Fifth K2-series release in under a year (K2 Jul 2025, K2 Thinking Nov 2025, K2.5 Jan 2026, K2.6 Apr 2026). Caveat worth noting: no independent third-party SWE-Bench Verified, SWE-Bench Pro, Terminal-Bench, LiveCodeBench, GPQA Diamond, AIME, or MMLU-Pro numbers at launch — VentureBeat already published the 'practitioners say the benchmarks don't check out' read on day one. Pairs structurally with the DiffusionGemma drop (in yesterday morning's am file) — two frontier-claim open-weights releases from labs on opposite sides of the Pacific within roughly one week. Evaluated and declined: (a) SpaceX SPCX first-day trading close ($161.11, +19% from $135 offer, briefly $2.25T market cap intraday) — same canonical story as the SpaceX-IPO item in yesterday morning's am file; not a Tier-1 frontier-lab announcement and the AI-relevant Anthropic-paying-xAI-$1.25B/month-for-Colossus-compute angle was already captured. (b) G7 Évian-les-Bains summit (June 15-17) with Altman/Hassabis/Amodei attendance confirmed June 12 — first G7 with representation from all three major AI companies — meta-news, summit doesn't start until June 15, weak T3 at best. (c) No other qualifying Asia/Europe overnight frontier-lab announcements in the 12-hour window. WebFetch returned 403 on direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (10 queries). Hero images uniformly null. Caps: ~44k/100k tokens, 10/30 fetches, well within wall-time. Final composition: 1 T1 + 5 T2 + 1 T3 = 7 items (6 kept-and-enriched, 1 added)."
+    },
+    {
       "run_id": "2026-06-12T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
