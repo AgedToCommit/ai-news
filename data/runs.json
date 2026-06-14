@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-14T17:25:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-14T17:08:00Z",
+      "ended_at": "2026-06-14T17:25:00Z",
+      "wall_time_ms": 1020000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 6500,
+        "output_write": 2000
+      },
+      "fetches_made": 18,
+      "items_input": 6,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-14-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: noticed that the prior refresh run (2026-06-14T11:20:00Z-refresh) wrote a structurally malformed data/2026-06-14-am.json — the 4th item (eu-fable-5-ban-sovereignty-reaction-june-14-2026) was written OUTSIDE the items array with an extra closing ']' between items 3 and 4. This broke the public site's morning-section rendering and would have broken the next enrichment run's input read. Fixed in this run as a small structural repair within data/ scope (removed the spurious ']' between item 3 and item 4 in the am file). Discovery: Sunday afternoon brought THREE substantive new axes to the Fable 5 / Mythos 5 export-control story that materially deepen the picture from the am snapshot — (1) David Sacks (Trump WH AI-and-crypto czar) public counter-narrative on X: accuses Anthropic of refusing to fix the jailbreak, says 'the ball is in Anthropic's court', frames the export control as 'reluctantly issued' after Amodei's refusal; (2) Amazon CEO Andy Jassy named as the trigger who personally called Treasury Secretary Scott Bessent — Amazon researchers (not an external party) produced the original Fable 5 research, plus at least 5 other firms also raised concerns to the White House (The Information, Axios, Bloomberg, MLQ News, TheDecoder, Tom's Hardware, BigGo Finance); (3) Katie Moussouris (Luta Security CEO, ex-Microsoft and DoD bug-bounty pioneer) publicly defending the research as 'Defense Oriented Prompting (DOP), not a jailbreak' (Fortune, WSJ). Adjacent substantive deepening: Semafor / Yahoo / Washington Examiner surface suspected Chinese-group access to Mythos as a parallel concern that Anthropic spokesperson rebuts as 'never raised in the conversations'; Kalshi prediction market 68% / Polymarket 71% restoration before July 1, 22% by Monday, 54% by June 22; Anthropic-promised 'within 24 hours' follow-up post now ~42 hours overdue. This qualifies for the rare digest promotion exception (substantively new public-WH counter-narrative + named corporate-trigger + named external researcher publicly disputing the framing). Net-new T2 added: chinese-open-weights-hugging-face-trending-surge-june-2026 — substantive structural read on the Hugging Face trending dataset showing 5/10 top slots held by Chinese open-weight releases (DeepSeek V4.1 Flash, Qwen 3.7 Plus, Hunyuan Large 3, ERNIE 5.1, Doubao Pro, GLM-6) — thematically bridges to the Fable 5 directive as the substantive 'open-weights stack as regulatory resilience' read. Candidates considered and declined: (a) Anthropic Policy on the AI Exponential essay + $350M Claude Corps fellowship (Amodei essay published June 11, too old to add as net-new); (b) Apple WWDC 2026 Foundation Models free-developer-access + open-source-this-summer plan (June 9 announcement, too old); (c) OpenCode v1.16.0 model-agnostic CLI (June 5 release, too old); (d) Mistral Vibe agent rebrand (June 1 announcement, too old); (e) Google DeepMind multi-agent-safety $10M funding (June 11 announcement, too old); (f) Grok Imagine video expansion (June 11, too old); (g) MiniMax M3 1M-context open-weight (June 1, too old). WebFetch returned 403 in sandbox (consistent with prior runs); sourcing done entirely via WebSearch (18 queries). Hero images uniformly null (consistent with prior runs in this sandbox). Caps: ~32k/100k tokens, 18/50 fetches, well within wall-time. Final composition: 1 T1 (promoted) + 1 T2 (new) + 0 T3 = 2 items."
+    },
+    {
       "run_id": "2026-06-14T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
