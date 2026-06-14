@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-14T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-14T11:00:00Z",
+      "ended_at": "2026-06-14T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 2500,
+        "output_write": 2000
+      },
+      "fetches_made": 12,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Last enrichment run ended 2026-06-14T06:30:00Z. Swept for items since 06:30 UTC June 14 (Sunday morning European/Asian news cycle). Confirmed: Anthropic's promised 'within 24 hours' follow-up (from 10pm ET June 12 shutdown, deadline ~10pm ET June 13) did not publish — no new Anthropic statement as of 7am ET June 14. No major new lab announcements on Sunday morning. Added 1 net-new item: eu-fable-5-ban-sovereignty-reaction-june-14-2026 (T2) — European political reaction crystallizing overnight: EU Commission spokesperson Thomas Regnier 'taking note and assessing' + citing June 3 Tech Sovereignty Package (Cloud and AI Development Act, Chips Act update, digital sovereignty definition); French MEP Jordan Bardella (National Rally) calling Fable 5 ban a 'major issue of national sovereignty' and demanding Mistral AI acceleration; UK MP Tom Tugendhat saying 'technology has become central to sovereignty.' Sources: Euronews, France 24, Al Jazeera, EU Commission, PixelUnion. Thematic bridge to G7 Évian summit opening Monday (already in snapshot). T1 Fable 5 item revised: added note that Anthropic's promised 'within 24 hours' follow-up has not appeared — 48 hours after shutdown with no public follow-up post. Candidates considered and declined: (a) NAVER/NVIDIA sovereign AI infrastructure partnership (June 7, too old); (b) Moonshot AI $2B/$30B valuation round (Bloomberg June 8, too old); (c) Meta Muse Spark (April 8, too old); (d) NVIDIA Ising quantum AI models (April 14, too old); (e) MiniMax M3 SWE-Bench Pro (June 1, too old); (f) EU Tech Sovereignty Package as standalone item (June 3, too old — used as context in new EU item instead). WebFetch returned 403 in sandbox (consistent with prior runs); sourcing done entirely via WebSearch (12 queries). Hero images uniformly null. Caps: ~32k/60k tokens, 12/20 fetches, well within wall-time. Final composition: 1 T1 + 3 T2 + 0 T3 = 4 items (3 kept, 1 added)."
+    },
+    {
       "run_id": "2026-06-14T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
