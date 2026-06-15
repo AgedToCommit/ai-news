@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-15T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-15T05:42:00Z",
+      "ended_at": "2026-06-15T06:00:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 5800,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-15-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: yesterday's pm (2026-06-14-pm.json) has 2 substantive items (Fable 5 / Mythos 5 export-control story T1; Chinese open-weights HF trending T2) — both highly fresh from Sunday afternoon, both deserved enrichment rather than drop. Sub-task 1 (prune + enrich): both items KEPT + ENRICHED with overnight axes. Fable 5 item enriched with Monday-morning axes — Sacks's overnight softening to 'Admin wants this lifted as soon as possible' (Benzinga), Anthropic's promised 24-hour technical follow-up now ~60 hours overdue, the 'if applied industry-wide would halt all new model deployments' precedent-warning crystallizing, Forge Global pre-IPO secondary marks ~$1T with S-1 filed June 1 at $965B and October NYSE listing target, G7 Évian summit opening today as the substantive negotiating stage. Chinese open-weights item enriched with Ramp June 2026 trending-software-vendors index showing DeepSeek topping US enterprise AI-vendor purchasing, Qwen ~1B cumulative downloads by March 2026 (single most-used open model family overall), Hugging Face's own 'One Year Since the DeepSeek Moment' retrospective surfacing the structural shift, Chinese-developer share of popular-new-model downloads at ~45%. Sub-task 2 (late-breaking pass): 1 new item added — G7 Évian summit opens Monday morning June 15 (today) with all three Western frontier-AI-lab CEOs (Altman, Amodei, Hassabis) personally present plus ~10 other frontier and applied-AI CEOs; Wednesday working lunch is the substantive AI-cooperation session; opens 72 hours after the Fable 5 / Mythos 5 directive. Tier 1 because the summit is the substantive negotiating stage where the unilateral-US-export-control-authority vs multilateral-G7-coordinated-voluntary-commitments policy axis crystallized by the Fable 5 directive plays out with the affected lab CEO in the room. Candidates considered and declined as not net-new for Monday morning: (a) European AI sovereignty reaction (deepened over weekend but no substantively new development overnight — folded thematically into the Fable 5 enrichment rather than re-added as a separate item, since the item appeared in 2026-06-14-am but was not promoted to 2026-06-14-pm); (b) Ramp AI Index Anthropic-overtakes-OpenAI June release (in 2026-06-14-am file but not promoted — same not-net-new logic; substantive Ramp June 2026 data was instead folded into the Chinese open-weights enrichment via the trending-software-vendors angle); (c) NAVER + NVIDIA sovereign AI infrastructure expansion in South Korea (announced June 7 — too old to add as net-new). No genuinely new frontier-lab model releases in the last 12 hours. WebFetch returned 403 in sandbox (consistent with prior runs); sourcing done entirely via WebSearch (10 queries). Hero images uniformly null (consistent with prior runs in this sandbox). Caps: ~28k/100k tokens, 10/30 fetches, well within wall-time. Final composition: 2 T1 + 1 T2 + 0 T3 = 3 items."
+    },
+    {
       "run_id": "2026-06-14T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
