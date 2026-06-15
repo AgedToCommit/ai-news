@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-15T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-15T11:30:00Z",
+      "ended_at": "2026-06-15T12:00:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 3200,
+        "output_write": 2000
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-15-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: today's am file exists (enrichment ran at 2am EDT / 06:00 UTC; 3 items: 2 T1 + 1 T2). Sweep window: 06:00 UTC–12:00 UTC (2am–7am EDT). Key findings from 8 WebSearch queries: (1) Anthropic technical staff flew to Washington for in-person White House discussions on Monday — escalating from virtual talks that began Friday, per Axios scoop (June 14) and BusinessToday.in June 15 confirmation. Both sides eager to resolve. Anthropic's ~72-hours-overdue technical follow-up post still unpublished. Applied as a refinement to the existing Fable 5 T1 item (added to summary, updated revisions array, updated why_it_matters_brief). (2) G7 summit formally opened today per France 24; confirmed France 24 real-time coverage sourced; added as a new take to the G7 T1 item (no standalone refinement needed beyond enrichment's coverage). (3) New T2 item added: Mistral AI targets €3B raise at €20B valuation (Bloomberg/TechCrunch June 12-13; not in any prior snapshot). G7 opening today in France — with Mistral CEO Arthur Mensch as a confirmed G7 tech-leader attendee — makes the story freshly relevant as the clearest current EU AI sovereignty market signal. Considered and declined for standalone addition: Meta Muse Spark (released April 8, too old); Moonshot AI $30B valuation round (Bloomberg June 8, too old); Microsoft Phi-4-reasoning-vision-15B (no confirmed June 15 date). WebFetch returned 403 in sandbox (consistent with prior runs); sourcing done entirely via WebSearch (8 queries). Hero images uniformly null. Caps: ~22k/60k tokens, 8/20 fetches, well within 25-minute wall-time. Final composition: 2 T1 + 2 T2 + 0 T3 = 4 items."
+    },
+    {
       "run_id": "2026-06-15T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
