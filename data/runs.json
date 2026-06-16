@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-16T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-16T05:43:00Z",
+      "ended_at": "2026-06-16T06:00:00Z",
+      "wall_time_ms": 1020000,
+      "tokens_used": 27000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1100,
+        "deep_fetch": 0,
+        "discovery_search": 18500,
+        "curation": 5400,
+        "output_write": 2000
+      },
+      "fetches_made": 11,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: yesterday's pm (2026-06-15-pm.json) has 3 substantive items (OpenAI 42-state AGs probe T1; Zhipu GLM-5.2 open-source release T1; AMP PBC $1.3B compute grid T2) — all fresh from Monday afternoon, all deserved enrichment rather than drop. Sub-task 1 (prune + enrich): all 3 items KEPT + ENRICHED with overnight axes. OpenAI 42-state probe enriched with substantive Monday-evening consolidation framing ('broadest legal investigation any state government has launched against an AI company' now widely echoed across Tom's Hardware, Yahoo Finance, Analytics Insight, TheNeuron), OpenAI Bloomberg-confirmed 'takes the concerns seriously, intends to engage constructively' response posture, Florida June 1 product-liability case being absorbed into the 42-state coordinated track, September NYSE listing timing clarification. Zhipu GLM-5.2 enriched with substantive technical-architecture detail (744B MoE / 40B active params, 131K-token output cap, dual thinking-effort modes), substantive open-weights-distribution-timeline clarification (MIT-licensed weights not yet on HF, scheduled this week, zai-org/glm-5 repo to watch), BridgeBench Reasoning (42.8) third-party benchmark signal beating Fable 5, Hang Seng Monday close +0.5% broader Asia risk-on context with US-Iran Strait of Hormuz agreement as reinforcing tailwind. AMP PBC enriched with substantive Bloomberg Law overnight reframe (Midha's $100B-over-five-years grid-security ambition, $6B in inbound investor interest in past two weeks, Bloomberg Deals TV interview) — substantive 75x scale-up framing on the launch-round narrative. Sub-task 2 (late-breaking pass): 1 new item added — G7 Évian summit Day 2 opens Tuesday morning with Middle East/Iran as the central focus, Macron invites Egypt/Qatar/UAE leaders for Tuesday session, Zelensky attends Tuesday, Wednesday's working lunch remains the substantive AI-cooperation moment; Anthropic's dual-track posture continues into fourth day (DC technical-remediation talks ongoing, Amodei at Évian, follow-up blog post now ~96 hours overdue), Fable 5 / Mythos 5 remain offline globally; Tier 1 because the summit Day 2 functions as the substantive negotiating-stage continuation of the Fable 5 directive policy axis and the Anthropic dual-track posture progression. Candidates considered and declined as not net-new for Tuesday morning: (a) Anthropic Fable 5 follow-up technical post — promised but still not published, no genuinely new substantive content overnight beyond the 'still no patch' state which is folded into the G7 Day 2 item; (b) Microsoft MAI 7 models (announced June 8, too old); (c) DeepSeek V4.2 / Qwen 3.8 (no confirmed release surfaced overnight); (d) OpenAI youth safety blueprint (substantively folded into the G7 Day 2 item as Altman's expected Wednesday working-lunch substance rather than a separate item, since the blueprint is older content); (e) Apollo $35B chip deal for Anthropic, Anthropic $30B raise at $900B valuation (both May 2026, too old). WebFetch returned 403 in sandbox (consistent with prior runs); sourcing done entirely via WebSearch (11 queries). Hero images uniformly null (consistent with prior runs in this sandbox). Caps: ~27k/100k tokens, 11/30 fetches, well within wall-time. Final composition: 3 T1 + 1 T2 + 0 T3 = 4 items."
+    },
+    {
       "run_id": "2026-06-15T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
