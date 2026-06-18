@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-18T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-18T05:45:00Z",
+      "ended_at": "2026-06-18T06:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 24500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 15800,
+        "curation": 5400,
+        "output_write": 2500
+      },
+      "fetches_made": 7,
+      "items_input": 2,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-18-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: yesterday's pm (2026-06-17-pm.json) has 2 Tier 2 items (Odyssey $310M Series B at $1.45B valuation, OpenAI Deployment Simulation methodology) — both substantively fresh from Wednesday afternoon, both deserved enrichment rather than drop. Sub-task 1 (prune + enrich): both kept + enriched. Odyssey enriched with substantive overnight Wednesday day-of pickup — TechCrunch, SiliconANGLE, HPCwire, Yahoo Finance, theaiinsider.tech (June 18), Irish Times, Las Vegas Sun; angel-investor list now confirmed via SiliconANGLE (Jeff Dean, Elad Gil, Qasar Younis, Garry Tan, Guillermo Rauch, Kyle Vogt); 'anyone-but-NVIDIA' funding-trend framing now the converging media frame across multiple outlets. OpenAI Deployment Simulation lightly enriched with overnight practitioner-press pickup — n1n.ai 'Predicting AI Model Behavior via Deployment Simulation' read (closest published analog to private enterprise unified-LLM-gateway operator practice), StartupHub.ai 'OpenAI Simulates AI Deployments' read; no direct Anthropic public technical response yet (Fable 5 / Mythos 5 export-control track remains the dominant Anthropic story this week). Sub-task 2 (late-breaking pass): 1 new item added — Databricks Data + AI Summit day 2 (June 17) consolidates Agent Bricks as a multi-framework agent platform supporting Claude Code SDK, LangGraph, Agno, CrewAI, OpenAI Agents with horizontal autoscaling on Databricks Apps and 100,000+ agents in production / 1+ quadrillion tokens/year from agent workloads; Unity AI Gateway adds unified spend caps, smart routing, and MCP/agent/skill governance; LTAP, Reyden, Genie Ontology, Genie One, Kimi-model support, SpaceX/Grok partnership round out day-2 announcements; substantive primary-source product-blog coverage (Databricks Blog Agent Bricks DAIS 2026, Databricks Blog Unity AI Gateway) plus SiliconANGLE / TechTimes / ChatForest / Efficiently Connected trade-press reads; Tier 2 as substantive agent-platform-and-governance consolidation directly relevant to any Python developer building agentic systems. Candidates considered and declined as not net-new or not yet substantive enough for Thursday morning: (a) Anthropic Fable 5 / Mythos 5 Day 7 — no substantive overnight restoration news surfaced; the bilateral export-control track remains in continuing-Commerce-meetings status; substantively covered across multiple prior snapshots — DEFER to next refresh / digest; (b) Jensen Huang GTC Paris keynote at VivaTech 2026 — opening day of VivaTech is June 17 but specific Huang keynote date and substantive announcements not yet confirmed in press at 2am EDT runtime; the keynote-day-and-time within the June 17-20 window is uncertain — DEFER; (c) Meta AI Mode on Facebook — substantive June 15-17 launch but Tier 3 product-launch material, not net-new for Thursday morning Tier 1/2 frame; (d) Google CEO Sundar Pichai booed at Stanford / Android 17 AI features — Tier 3 product launch, declined for the Tier 1/2 morning slate; (e) Flux $5M funding for engineering ground-truth visibility — substantive but too small-scale a funding round for the morning slate; (f) GPT-5.4-Cyber / GPT-5.5-Cyber Trusted Access expansion — covered in April-May reporting, not net-new; (g) Gemini 3.5 Pro — still in limited preview, not GA, no net-new June 17-18 release; (h) Microsoft / Australia $18B / 2026 capex — substantive but covered in prior snapshots context. WebFetch returned 403 in sandbox (consistent with all prior runs); sourcing done entirely via WebSearch (7 queries). Hero images uniformly null (consistent with prior runs in this sandbox). Caps: ~24.5k/100k tokens, 7/30 fetches, within 15-minute wall time. Final composition: 0 T1 + 3 T2 + 0 T3 = 3 items."
+    },
+    {
       "run_id": "2026-06-17T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
