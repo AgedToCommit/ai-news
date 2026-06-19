@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-19T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-19T17:08:00Z",
+      "ended_at": "2026-06-19T17:30:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 32500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 23800,
+        "curation": 4500,
+        "output_write": 3000
+      },
+      "fetches_made": 25,
+      "items_input": 12,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-19-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: today's am file (2026-06-19-am.json) has 7 items (1 T1 SpaceX-Cursor $60B, 5 T2 Anthropic Claude Design + Grok 4.3 Bedrock + OpenAI Health GPT-5.5 + Claude Code Artifacts + Anthropic Okta MCP, 1 T3 Anthropic Seoul) — all excluded by default per the promotion rule; no Tier-1 candidates with 'materially deepened during the day' criteria after the morning sweep. Sweep window: 2026-06-19T11:00:00Z to 2026-06-19T17:30:00Z (7:00am-1:30pm EDT) — narrow afternoon window. WebFetch returns 403 consistently in this sandbox (matches every prior run on this remote env); all sourcing via WebSearch (~22 queries). Hero images uniformly null. 4 items added — none in any prior snapshot: (1) Tier 2 — Microsoft MAI-Code-1-Flash now available across Copilot CLI / GitHub Copilot app / Copilot Chat / VS / GitHub Mobile / JetBrains / Eclipse / Xcode (June 18 GitHub Changelog); first in-house Copilot coding model with no OpenAI lineage; 137B sparse MoE / 5B active / 256K context; free for Copilot Free/Student/Pro/Pro+/Max; direct HTML/CSS/Python relevance for Gabe. (2) Tier 2 — GitHub Copilot desktop app GA for macOS/Windows/Linux June 17 with Canvases, parallel agent sessions on worktrees, Cloud Automations, Agent Finder; substantively the GitHub-native answer to Claude Code / Cursor / Codex as desktop home for agentic dev. (3) Tier 2 — SK Telecom identified as the foreign customer that triggered the June 12 Anthropic Fable 5 / Mythos 5 export-control directive per Korea JoongAng Daily June 17 / Kyunghyang Shinmun June 17 / The Decoder June 18 / Tom's Hardware June 18; substantive backstory (Project Glasswing initial 111-org approval + second wave ~150 orgs incl. SK Telecom, White House ordered targeted revocation citing pre-2009 China Unicom stake of SK Group, broader directive escalated from that); SK Telecom denies China ties, Anthropic still negotiating restoration; standalone item complementing the AM Anthropic Seoul item which mentioned export controls but did not name SK Telecom. (4) Tier 2 — Cognizant Neuro AI + ServiceNow AI Agents MCP-based interoperability announced June 18; substantive 'MCP is becoming enterprise IT plumbing' read complementing the AM Anthropic+Okta enterprise-managed MCP item; first major systems-integrator + enterprise-platform MCP integration; Python-developer-relevant for anyone building MCP-aware tools. Items considered and declined: (a) Claude Corps national fellowship (June 11) — out of sweep window, would be promotion not creation; (b) DXC + Anthropic enterprise partnership (June 11) — out of sweep window; (c) MaiAgent VivaTech 2026 startup pitch (June 19) — marketing-press release, not a substantive AI product; (d) VivaTech 2026 Day 3 startup-prize ceremony (June 19) — Tier 3 conference programming, consistent past pattern of decline; (e) Snowflake AI Pulse June 18 Europe session — webinar, not a substantive product launch; (f) Mistral Vibe Code rollout to Pro users + desktop app coming — testingcatalog tweet only, no primary-source Mistral announcement with date confirmed; (g) GitHub Actions workflow execution protections (June 18) — security feature, low AI relevance; (h) GitHub Code Quality GA July 20 announcement (June 16) — out of sweep window and product still preview-only at time of announcement; (i) Anthropic Fable 5 restoration rumors — no actual restoration announcement, still suspended as of June 19; (j) DevQuill medium 'Anthropic restored Claude Fable 5 after six days' claim — incorrect per multiple authoritative sources; (k) Gemini 3.5 Pro June launch — still in limited preview, no GA confirmation as of June 19; Polymarket prices 50-55% odds of GA by June 30; (l) IBM Granite 3.0 at TechXchange — Granite 3.0 was 2024 release, not a current June 19 announcement; the claim appears to be a search-result hallucination from a non-authoritative source. Caps: ~32.5k/100k tokens, 25/50 fetches, ~22 minutes wall time. Final composition: 0 T1 + 4 T2 + 0 T3 = 4 items."
+    },
+    {
       "run_id": "2026-06-19T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
