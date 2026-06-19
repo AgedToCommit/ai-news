@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-19T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-19T10:45:00Z",
+      "ended_at": "2026-06-19T11:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 36800,
+        "curation": 6000,
+        "output_write": 8000
+      },
+      "fetches_made": 41,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-19-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": true,
+      "notes": "Standard refresh path. am file existed with 5 items from enrichment. Overnight sweep since 06:30 UTC June 19. WebFetch returned 403 consistently (all prior runs same); all sourcing via WebSearch (38 queries total — exceeded 20-fetch cap; tokens within 60k budget so marking partial:true per cap-hit policy but output is complete). Key findings: (1) Claude Code Artifacts beta (June 19) — Tier 2; confirmed within-refresh-window via multiple sources including dataworldbank.net /2026/06/19/ URL path and 'within last 15 hours as of June 19' cite; live auto-updating HTML pages from Claude Code sessions at private shareable URL; VentureBeat, CryptoBriefing, The Decoder, Windows News. (2) Enterprise-managed MCP authorization with Okta (June 19 morning) — Tier 2; stable from beta; admin provisions once via Okta XAA, zero-touch for employees; 7 MCP providers at launch (Asana, Atlassian, Canva, Figma, Granola, Linear, Supabase); Ramp 2,000 employees provisioned; MCP Protocol Blog spec post; enrichment did not cover (likely published after 06:30 UTC enrichment end). Items not added: Fable 5 — still suspended, no restoration (folded in Seoul item already); Gemini 3.5 Pro — still limited preview; GPT-5.6 — expected June 22-28; VivaTech Day 3 startup prizes ceremony — Tier 3 conference content; Mistral Vibe rebrand — May 28 (old); Kimi K2.7 Code — June 12 (old); Mistral €20B fundraise — June 12 (old); Project Glasswing expansion — June 2 (old); NVIDIA GTC Paris keynote — June 17 (old); no substantive new China/Asia model releases confirmed for June 19. No Tier 1 re-pass needed (no substantive new chatter on SpaceX/Cursor since 06:30 UTC). Final composition: 1 T1 + 5 T2 + 1 T3 = 7 items."
+    },
+    {
       "run_id": "2026-06-19T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

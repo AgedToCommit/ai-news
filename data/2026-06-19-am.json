@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-19-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-19",
-  "generated_at": "2026-06-19T06:30:00Z",
-  "generated_at_local": "2026-06-19T02:30:00-04:00",
+  "generated_at": "2026-06-19T11:00:00Z",
+  "generated_at_local": "2026-06-19T07:00:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-19T06:30:00Z", "duration_ms": 2700000 }
+    { "phase": "enrichment", "ran_at": "2026-06-19T06:30:00Z", "duration_ms": 2700000 },
+    { "phase": "refresh",    "ran_at": "2026-06-19T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 1, "2": 3, "3": 1 },
+  "tier_counts": { "1": 1, "2": 5, "3": 1 },
   "items": [
     {
       "id": "spacex-cursor-60b-all-stock-acquisition-june-16-2026",
@@ -162,6 +163,59 @@
         { "source": "StartupHub.ai — OpenAI Boosts ChatGPT Health AI", "url": "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/openai-boosts-chatgpt-health-ai", "take": "Trade-press read with the substantive behavioral-upgrade framing on urgency recognition, context-asking, and uncertainty communication." },
         { "source": "Digit — OpenAI improves health intelligence in ChatGPT, here is how", "url": "https://www.digit.in/news/general/openai-improves-health-intelligence-in-chatgpt-here-is-how.html", "take": "Substantive read on the 230M-weekly-user reach as the substantive 'why this matters at population scale' data point." },
         { "source": "Digg — OpenAI releases GPT-5.5 Instant to all free ChatGPT users", "url": "https://digg.com/tech/6u9jiptn", "take": "Cross-aggregator read on the substantive 'all free users' rollout detail." }
+      ]
+    }
+    ,
+    {
+      "id": "anthropic-claude-code-artifacts-live-shareable-html-pages-june-19-2026",
+      "tier": 2,
+      "title": "Anthropic ships Claude Code Artifacts beta — Claude Code sessions become live, auto-updating HTML pages at a shareable URL while the agent is still running",
+      "summary": "Anthropic released Claude Code Artifacts in beta for Team and Enterprise subscribers on June 19. The feature converts an active Claude Code session into a live, interactive HTML page at a private shareable URL. Multiple data sources can be wired in; the page refreshes in-place as Claude continues working — so a colleague can open the URL while the session is running and see charts, tables, and code blocks update without you deploying anything. The goal is to replace the screenshot-to-Slack workflow: instead of stopping to export, you send the URL. Practical use cases at launch include live dashboards pulling from multiple APIs, internal app prototypes, data-visualization reports, and code walkthroughs that stay current through the whole session. The Artifacts name intentionally echoes the Claude.ai chat Artifacts side-panel, but this one is Claude Code-specific and designed around multi-source live data rather than static exports. VentureBeat, CryptoBriefing, The Decoder, and Windows News all carried the day-of read.",
+      "link": "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises",
+      "why_it_matters": "For a hobbyist who writes HTML and CSS and uses Claude Code, this is the most directly relevant Claude Code update in several weeks. Two concrete things to pin. First, the surface area: Claude Code Artifacts generates actual HTML pages — meaning if you're using Claude Code to build a small dashboard, data table, or any visual output for a Python project, the Artifacts beta lets you turn that into something you can open in a browser right now, before you've written a single line of deploy code. That's the 'quick prototype → shareable link' pattern that's previously required Codepen, GitHub Pages, or a local dev server. Second, the live-refresh angle: the page stays open and updates as Claude keeps working. For someone experimenting with agentic Claude Code sessions — 'build me a Python script that pulls data from X and render a chart' — you can watch the output take shape in real time in a browser rather than reading terminal text. The Artifacts name intentionally echoes the Claude.ai chat side-panel, but this version is Claude Code-specific and designed around multi-source live data rather than static one-off renders. Available on Team and Enterprise plans in beta; not yet on Pro or Max.",
+      "why_it_matters_brief": "Claude Code sessions can now be a live auto-updating HTML page at a shareable URL — if you're using Claude Code to build dashboards or visual Python outputs, this is the 'show someone a working demo without deploying' feature.",
+      "source": { "name": "VentureBeat", "type": "scrape", "url": "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-19T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-19T11:00:00Z", "by": "refresh", "change": "created via refresh sweep — Anthropic Claude Code Artifacts beta launched June 19 for Team/Enterprise; turns active Claude Code sessions into live auto-updating HTML pages at private shareable URLs; multiple data sources; replaces screenshot-to-Slack workflow; confirmed within-refresh-window (within last 15 hours as of June 19 per multiple sources including dataworldbank.net URL path /2026/06/19/); not in enrichment or prior snapshots; Tier 2 as substantive Claude Code tool update directly relevant to Gabe's HTML/CSS and Python work" }
+      ],
+      "takes": [
+        { "source": "VentureBeat — Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises", "url": "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises", "take": "Primary read with the enterprise-dashboard framing and live-refresh angle." },
+        { "source": "CryptoBriefing — Anthropic launches Claude Code Artifacts, turning AI sessions into live enterprise dashboards", "url": "https://cryptobriefing.com/anthropic-claude-code-artifacts-enterprise-dashboards/", "take": "Secondary read emphasizing the enterprise-dashboard and URL-sharing use case." },
+        { "source": "The Decoder — Anthropic brings Artifacts to Claude Code, letting teams share live pages from coding sessions", "url": "https://the-decoder.com/anthropic-brings-artifacts-to-claude-code-letting-teams-share-live-pages-from-coding-sessions/", "take": "Developer-press read on the 'teams share live pages' framing." },
+        { "source": "Windows News — Anthropic's Claude Code Gains Artifacts to Turn AI Coding Sessions Into Persistent, Shareable Walkthroughs", "url": "https://windowsnews.ai/article/anthropics-claude-code-gains-artifacts-to-turn-ai-coding-sessions-into-persistent-shareable-walkthro.427970", "take": "Reads the 'persistent, shareable walkthroughs' angle as the headline capability." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-mcp-enterprise-auth-okta-june-19-2026",
+      "tier": 2,
+      "title": "Anthropic and Okta launch enterprise-managed MCP authorization — admins provision once, zero-touch access to 7 MCP providers (Asana, Atlassian, Canva, Figma, Granola, Linear, Supabase) across Claude chat, Claude Code, and Cowork; Ramp has 2,000 employees provisioned",
+      "summary": "Anthropic and Okta released enterprise-managed authorization for Model Context Protocol (MCP) connectors, moving from per-user OAuth flows to admin-provisioned zero-touch access. The standard is now stable after a beta period. IT admins provision MCP connector access through Okta once; employees automatically inherit it on their first Claude login with no additional steps — the change spans Claude chat, Claude Code, and Claude Cowork in a single provisioning event. Seven MCP providers support the standard at launch: Asana, Atlassian, Canva, Figma, Granola, Linear, and Supabase, with Slack coming next. Okta's Cross App Access (XAA) extension handles the OAuth delegation. Ramp is among the first customers at scale: 2,000 employees provisioned with zero extra steps per the company's report. The MCP Protocol Blog published a companion specification post so other identity providers and MCP servers can implement the same standard.",
+      "link": "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+      "why_it_matters": "MCP (Model Context Protocol) is the standard that lets Claude tools connect to external services — Figma, Linear, Supabase, and so on. The friction point until now has been that each connection required each user to run their own OAuth flow: open settings, authorize the app, approve permissions, repeat for every tool. At a 10-person team that's 10 separate OAuth flows per integration, and it's the main reason MCP adoption stalls at the team level. The enterprise-managed auth standard flips the model: IT provisions once via Okta, and every employee inherits the tools automatically. For Gabe directly: this is an Enterprise/Team-tier feature you'd need an Okta org to use today, but it matters as a directional signal — the Anthropic developer ecosystem is moving from 'power-user MCP tinkering' toward 'IT-deployed enterprise toolchain.' The Supabase and Figma integrations in the launch cohort are the substantively relevant ones for a web developer: Supabase gives Claude direct database access for agentic data tasks, Figma gives design-to-code context without manual copy-paste. The MCP Protocol Blog spec post means other identity providers (not just Okta) can implement the same standard — Ramp's 2,000-employee rollout is the early proof that zero-touch provisioning works at scale.",
+      "why_it_matters_brief": "Okta + Anthropic ship zero-touch MCP provisioning for teams — IT sets up Figma/Supabase/Linear etc. once via Okta, employees inherit access automatically; Ramp's 2,000-person rollout is the first at-scale proof point.",
+      "source": { "name": "MCP Protocol Blog", "type": "scrape", "url": "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-19T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-19T11:00:00Z", "by": "refresh", "change": "created via refresh sweep — Anthropic + Okta launched enterprise-managed MCP authorization (stable from beta); admins provision once via Okta Cross App Access (XAA), zero-touch for employees; 7 MCP providers at launch (Asana, Atlassian, Canva, Figma, Granola, Linear, Supabase), Slack next; Ramp 2,000 employees provisioned; companion MCP Protocol Blog spec for other providers; enrichment did not cover (likely published June 19 morning after enrichment ended at 06:30 UTC); Tier 2 as substantive MCP ecosystem maturation step relevant to Claude Code users and Python developers building MCP-connected tools" }
+      ],
+      "takes": [
+        { "source": "MCP Protocol Blog — Enterprise-Managed Authorization: Zero-touch OAuth for MCP", "url": "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/", "take": "Primary-source spec post on the enterprise-managed authorization standard for MCP servers and identity providers." },
+        { "source": "Okta Newsroom — Okta becomes a featured identity provider powering secure AI agent connections for Anthropic's Claude", "url": "https://www.okta.com/en-ca/newsroom/press-releases/okta-becomes-a-featured-identity-provider-powering-secure-ai-agent-connections-for-claude-enterprise/", "take": "Primary-source Okta press release with the Ramp 2,000-employees-provisioned data point and the Cross App Access (XAA) technical detail." },
+        { "source": "AI Weekly — Anthropic Introduces Admin-Managed MCP Auth for Claude Enterprise", "url": "https://aiweekly.co/alerts/anthropic-introduces-admin-managed-mcp-auth-for-claude-enterprise", "take": "Trade-press read on the admin-managed framing and enterprise-deployment implications." },
+        { "source": "ByteIota — MCP Enterprise Auth Goes Stable: No More OAuth Queues", "url": "https://byteiota.com/mcp-enterprise-auth-goes-stable-no-more-oauth-queues/", "take": "Developer-press framing on the 'no more OAuth queues' user-experience improvement." }
       ]
     }
   ],
