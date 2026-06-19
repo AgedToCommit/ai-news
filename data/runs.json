@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-19T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-19T05:45:00Z",
+      "ended_at": "2026-06-19T06:30:00Z",
+      "wall_time_ms": 2700000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 900,
+        "deep_fetch": 0,
+        "discovery_search": 21500,
+        "curation": 6200,
+        "output_write": 3400
+      },
+      "fetches_made": 12,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-19-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: yesterday's pm (2026-06-18-pm.json) has 4 items (1 T1 SpaceX-Cursor $60B, 2 T2 Anthropic Claude Design overhaul + xAI Grok 4.3 on Bedrock, 1 T3 Anthropic Seoul office) — all substantively fresh from Thursday afternoon, all kept and enriched rather than dropped. Sub-task 1 (prune + enrich): all 4 kept + enriched. (1) SpaceX-Cursor enriched with substantive overnight market reaction and analyst takes — SPCX peaked at $225.64 day-of, dropped 5.6% on June 17 on Fed hawkish shift, traded $174.90 by June 18 close (~22% pullback from peak); $10B SpaceX-side close penalty + $4B regulatory breakup fee confirmed; SPCX 180-day lockup schedule (~20% release late July/August tied to Q2 earnings, full expiry Dec 8 2026); Gartner's Arun Chandrasekaran 'Cursor gives xAI an established developer platform' + Nitish Tyagi flag on in-house model constraint (via AI Business); Bill Ackman framing on all-stock funding mechanics; SF Standard June 18 'millionaire-minting' read; InfoWorld 'option to acquire' framing; updated why_it_matters and why_it_matters_brief. (2) Claude Design enriched with April 17 first-launch context (1M users first week, Figma stock dropped 7% on launch, powered by Claude Opus 4.7 under the hood) — frames June 17 overhaul as second major release in two months; added App Developer Magazine, Outright Systems, Releasebot. (3) Grok 4.3 Bedrock enriched with overnight Artificial Analysis benchmark read — #1 Omniscience (lowest hallucination), #1 Tau2 Telecom at 98% (5-point gain), Intelligence Index 53 vs reasoning median 36, 2-10x intelligence-per-dollar on Pareto frontier; added Artificial Analysis + OfficeChai. (4) Anthropic Seoul enriched with Hanwha-on-Bedrock-with-in-region-data-residency confirmation; Korea JoongAng Daily executive comment that Mythos 5 / Fable 5 access could return 'in coming days' following June 15 Commerce Department negotiations; Benzinga read framing partnerships as positioning ahead of potential $1T Anthropic IPO valuation; added Benzinga, Korea JoongAng Daily, Pulse2; updated why_it_matters and why_it_matters_brief. Sub-task 2 (late-breaking pass): 1 new item added — Tier 2 — OpenAI ChatGPT health intelligence upgrade with GPT-5.5 Instant (June 18); substantive 3,500-physician-panel evaluation methodology (panel rated GPT-5.5 Instant higher than physician-written answers on accuracy / communication / completeness / decision helpfulness); 71% production-traffic factuality-flag-rate reduction over two months; 230M weekly users on health questions; rolling to all free ChatGPT users; substantive lab-source product / methodology release with broad consumer reach. Late-breaking candidates considered and declined: (a) Anthropic Mythos 5 / Fable 5 restoration negotiations Day 8 — Globe and Mail / Foreign Policy June 18 reads frame Anthropic + Trump admin negotiations as ongoing but no concrete restoration announcement yet; substantively folded into the Anthropic Seoul item's overnight enrichment via Korea JoongAng Daily executive comment, not standalone; (b) VivaTech 2026 Day 2 Macron AI speech / Arthur Mensch Mistral panel / startup competition final — Tier 3 conference programming, substantively covered in 2026-06-18-am.json VivaTech Day 1 item, declined as duplicate; (c) NVIDIA AWS Startup Village announcement (7 European AI startups) — Tier 3 conference programming, declined; (d) Gemini 3.5 Pro — still in limited preview, no GA / no net-new June 18-19 announcement; (e) GPT-5.6 — not yet released, expected late June; (f) Meta AI Mode on Facebook — Tier 3 product-launch material, June 15-17 ship window, declined; (g) Microsoft Foundry 11K-model catalog — substantively covered in prior context, not net-new for June 18-19. WebFetch returned 403 in this sandbox (consistent with all prior runs); sourcing done entirely via WebSearch (12 queries). Hero images uniformly null. Caps: ~32k/100k tokens, 12/30 fetches, within 45-minute wall time. Final composition: 1 T1 + 3 T2 + 1 T3 = 5 items."
+    },
+    {
       "run_id": "2026-06-18T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
