@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-20T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-06-20T17:00:00Z",
+      "ended_at": "2026-06-20T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 11000,
+        "output_write": 3500
+      },
+      "fetches_made": 20,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-20-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled, last refresh ended 2026-06-20T11:30:00Z. AM file (2026-06-20-am.json) has 6 Tier 2 items (Microsoft MAI-Code-1-Flash, GitHub Copilot desktop app, SK Telecom Anthropic export-controls, Cognizant ServiceNow MCP, Z.ai GLM-5.2, OpenAI hires Noam Shazeer) — all excluded by default per promotion rule, none materially deepened during the day so no promotions to PM. WebFetch returned 403 consistently in sandbox (matches all prior runs); sourcing entirely via WebSearch (~20 queries). Promotion-rule re-check on each AM item: (1) MAI-Code-1-Flash — no afternoon developments beyond the morning enrichment baseline; (2) GitHub Copilot app — no afternoon material; (3) SK Telecom / Anthropic Fable 5-Mythos 5 — confirmed via WebSearch that no restoration announcement landed during the day on June 20 (Fable 5 still offline; today's refund-cutoff angle already in AM brief); (4) Cognizant + ServiceNow MCP — no afternoon material; (5) Z.ai GLM-5.2 — no afternoon material beyond morning context; (6) Noam Shazeer to OpenAI — no afternoon material. PM digest assembled with 4 substantively novel items from the afternoon source sweep: (a) Google + Microsoft + GitHub + Hugging Face + Cisco + Databricks + GoDaddy + Nvidia + Salesforce + ServiceNow + Snowflake joint Agentic Resource Discovery (ARD) specification (June 17) — the substantive discovery-layer-for-the-agentic-web standard, Apache 2.0, MCP-complementary; not in any prior snapshot; (b) Anthropic Frontier Red Team Project Fetch Phase Two (June 18) — Claude Opus 4.7 autonomous robodog control 20x faster than Phase One human+Opus-4.1 team, 10x less code, first-pass correctness; substantive frontier-model code-generation read on unfamiliar-API/sensor domains; not in any prior snapshot; (c) Alibaba Qwen-Robot Suite (June 16) — three robotics foundation models (Nav at 2B/4B/8B on Qwen3-VL, Manip on 38K+ hours of demonstration data, World for physics-consistent forecasting); substantive 'embodied-AI architecture has congealed into suite-level pattern' read from Asia; not in any prior snapshot; (d) xAI Grok for Microsoft 365 (PowerPoint June 16, Word June 18, Excel rolling out) — free Microsoft Marketplace add-ins with live web research + X-aware summarization + diagram generation + Outlook/SharePoint/Google Drive connectors; substantive 'AI assistant moves from browser tab into document supply chain' read; not in any prior snapshot. Candidates considered and declined: (i) OpenAI Partner Network (June 14) — 6 days stale, almost certainly in earlier snapshots; (ii) Snowflake AI Pulse June 18 — product-update aggregator vehicle, not a single substantive announcement worth its own item; (iii) Apple Foundation Models Claude / Gemini Swift bridge — already extensively covered in prior 2026-06-09 through 2026-06-12 snapshots; (iv) MiniMax M3 — likely already covered earlier in June; (v) JetBrains Mellum2 (June 1) — too old, almost certainly in earlier snapshots; (vi) Antigravity CLI / Gemini CLI sunset (June 18) — likely covered in earlier 2026-05-19 (initial transition) and June snapshots; (vii) NVIDIA GTC Paris / VivaTech 2026 day 3 — conference programming, consistent past pattern of decline; (viii) OpenAI ChatGPT pronunciation help / Android long-press / iOS photo improvements — too incremental for Tier 2; (ix) Google ARDS announcement framing variant — same as item (a) above. Hero images uniformly null (WebFetch 403). Caps: ~48k/100k tokens, 20/50 fetches, ~30 min wall time. Final composition: 0 T1 + 4 T2 + 0 T3 = 4 items."
+    },
+    {
       "run_id": "2026-06-20T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
