@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-21T11:45:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-21T11:00:00Z",
+      "ended_at": "2026-06-21T11:45:00Z",
+      "wall_time_ms": 2700000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 2000,
+        "output_write": 1000
+      },
+      "fetches_made": 16,
+      "items_input": 22,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last enrichment ended 2026-06-21T06:30:00Z. Today's am file (2026-06-21-am.json) exists with 5 Tier 2 items — standard path. WebFetch returns 403 consistently in sandbox (matches all prior runs); sourcing done entirely via WebSearch (16 queries). Tightly-scoped sweep since 06:30Z on a Sunday morning yielded a light US news cycle — no major model releases or lab announcements from OpenAI, Anthropic, Google, Meta, Mistral, or xAI in the last 5 hours. Confirmed: GPT-5.6 still not released (Polymarket 83% probability for June 22-28 window); Anthropic Fable 5/Mythos 5 still offline, no restoration announcement (Chris Ciauri 'within days' statement from June 18 Seoul press conference already in existing item's takes). Two substantive items found that were missed by both the June 20 PM digest and June 21 AM enrichment runs: (1) EU Commission June 19 selection of EUROPA consortium (led by Italian startup Domyn) as winner of Frontier AI Grand Challenge — 400B+ parameter open-source frontier model in all 24 EU official languages, EuroHPC compute + EU public funding; genuine overnight EU news not in any prior snapshot; primary source European Commission Digital Strategy, IEU Monitoring, atalayar.com June 20 analysis; Tier 2. (2) FERC June 18 unanimous show-cause orders to six US regional grid operators (PJM, MISO, SPP, CAISO, ISO New England, NYISO) to justify or revise large-load interconnection tariffs within 60 days; 200M Americans covered; 5 reform areas; 30-day reliability report required; implements 2025 DOE request from Secretary Chris Wright; primary source FERC.gov, coverage from TechTimes June 20, Engineering News-Record, American Action Forum, hdata.com, Data Center Knowledge; Tier 2. Candidates considered and declined: (a) Karpathy 'Software 3.0' / Sequoia Ascent bearblog post — published April 30, 2026, nearly 2 months stale; (b) Black Duck Security developer survey (97% AI coding tool adoption, Claude Code 63%) — published June 9, 12 days stale; (c) Kimi K2.7-Code 1T MoE from Moonshot AI — released June 12, 9 days stale, likely in prior snapshots; (d) Grok 4.3 on Amazon Bedrock — GA June 15, 6 days stale; (e) DeepSeek-V4-Pro / Huawei Ascend 950 — announced April 24, too stale; (f) South Korea + Anthropic AI safety MOU — June 18 event already referenced in existing AM item's takes; (g) Anthropic Colossus/SpaceX compute deal — May 2026, stale; (h) Anthropic IPO confidential S-1 filing — June 1, 20 days stale. Optional Tier-1 re-pass: existing items are all Tier 2, so no Tier-1 overnight-chatter re-pass applicable. Caps: ~26k/60k tokens, 16/20 fetches, ~45 min wall time. Final composition: 0 T1 + 7 T2 + 0 T3 = 7 items."
+    },
+    {
       "run_id": "2026-06-21T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
