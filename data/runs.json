@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-22T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-22T06:14:00Z",
+      "ended_at": "2026-06-22T06:30:00Z",
+      "wall_time_ms": 960000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7000,
+        "output_write": 1500
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-22-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last digest ended 2026-06-21T17:30:00Z. Yesterday's PM file (2026-06-21-pm.json) read with 5 items — all 5 surfaced substantive overnight context and were kept+enriched, zero pruned. Sub-task 1 (prune+enrich): (1) NSA Mythos breach testimony — BitGo CEO Mike Belshe public dispute (test-environment vs live-system reading) + Warner policy-ask clarification (mandatory red-team disclosure not vendor-ban) + Korea Claude Code adoption signal extending arc; (2) Agentjacking — Tenet-to-Sentry June 3 disclosure timeline + Sentry response ('global content filter for specific payload string' + broader class 'not defensible at the ingestion layer') substantively pivoting defensive-design implication to in-agent trust-boundary fix + Cloud Security Alliance / The New Stack / Mallory / Vibe Graveyard / devops.com as additional coverage; (3) Cohere huge inbound — BetaKit overnight follow-up 'Did the Anthropic model ban prove Cohere is right about sovereign AI' + April Aleph Alpha acquisition ($600M Schwarz Group) + GLM-5.2 full weights on Hugging Face / ModelScope as of June 17 + Code Arena #2 ranking; (4) Amazon drops Artificial — Hollywood Reporter / Variety full ensemble cast confirmation (Monica Barbaro as Murati, Yura Borisov as Sutskever, plus Cooper Hoffman, Jason Schwartzman, Cooper Koch, Billie Lourd, Zosia Mamet, Angus Imrie, Chris O'Dowd, Mark Rylance), test screenings 'went down very positively', other-studios screening Thursday June 18; (5) Sensor Tower ChatGPT — absolute monthly user numbers surfaced (ChatGPT 1.1B fastest app to a billion outpacing TikTok/YouTube/Instagram, Gemini 662M, Claude 245M), Claude 13% subscription conversion (highest among majors), Gemini OS-level Android embedding, February 2026 OpenAI/DoD deal measurable ChatGPT uninstalls + Claude download surge ('ethical positioning as market feature' behavioral signal). Sub-task 2 (late-breaking pass): 2 items added — (A) Anthropic Seoul office June 17 + Korean enterprise Claude Code wave (NAVER's largest-in-Asia deployment + Samsung + LG + Nexon + Hanwha, tens of thousands of engineers, Sonnet 4.6 / Opus 4.8 stack unaffected by Fable 5 ban, sixfold Korean weekly-active growth in four months); (B) Today June 22 Fable 5 subscription-to-usage-credit deadline with model still offline ten days into ban and no Anthropic public guidance on extension/reset/lapse — substantive operational-policy threshold day. WebFetch returns 403 in sandbox (matches all prior runs); sourcing done entirely via WebSearch (10 queries). Hero images null — WebFetch unavailable for image extraction in this sandbox."
+    },
+    {
       "run_id": "2026-06-21T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
