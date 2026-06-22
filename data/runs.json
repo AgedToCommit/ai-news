@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-22T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-22T11:00:00Z",
+      "ended_at": "2026-06-22T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 4000,
+        "output_write": 1000
+      },
+      "fetches_made": 12,
+      "items_input": 3,
+      "items_output": 10,
+      "items_added": 3,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last enrichment ended 2026-06-22T06:30:00Z. Today's am file (2026-06-22-am.json) exists with 7 items. WebFetch returns 403 in sandbox (matches all prior runs); sourcing done entirely via WebSearch (12 queries). Overnight sweep (last 5 hours since 06:30Z): no major frontier model releases this morning — GPT-5.6 launch window opened today (June 22) per Polymarket but no official OpenAI announcement as of 11:00Z; Gemini 3.5 Pro still in limited preview. Three items added: (1) Noam Shazeer — co-author of 'Attention Is All You Need', Google VP and Gemini co-lead, for whom Google reportedly paid $2.7B to bring back from Character.AI 22 months ago — announced June 18 he is joining OpenAI as Lead for Architecture Research; not in any prior snapshot despite being announced June 17/18; Tier 1; sources CNBC, TechTimes, 9to5Google, Benzinga, IBTimes UK, MLQ, CryptoBriefing; (2) GPT-5.6 launch window + Goblin Incident alignment fix — today (June 22) is the Polymarket prediction-window start (>$1.1M contracts, 83% odds before June 28); substantive angle is OpenAI's April 30 'Where the Goblins Came From' post-mortem documenting the RLHF feedback-loop contamination that caused GPT-5.5 to fixate measurably on goblins/raccoons/gremlins across hundreds of millions of outputs; GPT-5.6 is the alignment-pipeline fix + 1.5M context window; TechTimes June 21 primary; not in any prior snapshot; Tier 2; (3) Google Home Speaker with Gemini — first standalone Google smart speaker in 6 years, ships June 25 at $99.99, replaces Nest Audio and Nest Mini, Gemini for Home replaces Google Assistant with multi-step reasoning; Google Blog June 3 primary; not in any prior snapshot; Tier 3. Hero images null — WebFetch unavailable in sandbox."
+    },
+    {
       "run_id": "2026-06-22T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
