@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-23-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-23",
-  "generated_at": "2026-06-23T06:35:00Z",
-  "generated_at_local": "2026-06-23T02:35:00-04:00",
+  "generated_at": "2026-06-23T11:15:00Z",
+  "generated_at_local": "2026-06-23T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-23T06:35:00Z", "duration_ms": 2100000 }
+    { "phase": "enrichment", "ran_at": "2026-06-23T06:35:00Z", "duration_ms": 2100000 },
+    { "phase": "refresh",    "ran_at": "2026-06-23T11:15:00Z", "duration_ms": 2700000 }
   ],
-  "tier_counts": { "1": 1, "2": 5, "3": 2 },
+  "tier_counts": { "1": 1, "2": 5, "3": 3 },
   "items": [
     {
       "id": "john-jumper-nobel-laureate-leaves-deepmind-for-anthropic-june-19-2026",
@@ -240,7 +241,36 @@
         { "source": "CNBC — Anthropic releases Mythos-like AI model to the public, Claude Fable 5", "url": "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html", "take": "Mainstream-finance launch coverage with the original pricing context." },
         { "source": "buildfastwithai.com — AI News Today June 23 2026: 15 Biggest Stories", "url": "https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026", "take": "Daily roundup capturing the June 23 paywall transition as one of the day's substantive items." }
       ]
+    },
+    {
+      "id": "broadcom-q3-guidance-ai-chip-selloff-sk-hynix-hbm4-pullback-june-23-2026",
+      "tier": 3,
+      "title": "Broadcom's below-consensus Q3 AI chip guidance ($16B vs $17.2B estimated) triggers overnight AI-chip selloff — KOSPI circuit-breaker at -10%, SK Hynix -8%+, Samsung -5%+, European tech -3.2%; SK Hynix separately confirms it is slowing its HBM4 expansion ramp and redirecting wafer capacity to conventional DRAM, where margins are now competitive with HBM",
+      "summary": "Broadcom (AVGO) reported Q2 fiscal 2026 results after the close on Monday June 22, beating on both revenue and profit but guiding Q3 AI chip revenue to $16 billion — below the elevated institutional expectation of roughly $17.2 billion. The miss was modest in absolute terms (roughly 7% below the whisper number) but hit a market that had priced AI chip demand as essentially uncapped. The market reaction moved across time zones overnight. In Asia, South Korea's KOSPI fell sharply enough to trigger a circuit breaker; SK Hynix fell more than 8% and Samsung Electronics more than 5%, and since those two stocks make up roughly half the KOSPI's market cap, the index closed roughly 10% lower. European markets opened sharply lower this morning: the pan-European Stoxx 600 technology subindex fell 3.2%, with ASMI and STMicroelectronics down more than 6%. AVGO itself fell 3.88% in extended trading. A second element compounded the selloff: overnight reports indicated SK Hynix is deliberately slowing its HBM4 production ramp — shifting the capacity expansion timeline from Q2 back to Q3 and redirecting wafer resources toward conventional DRAM. DRAM is currently experiencing acute shortages and profit margins that have caught up with or in some segments exceeded HBM margins. SK Hynix holds roughly 70% of Nvidia's HBM3E orders; its deliberate choice to slow HBM4 ramp is a supply-chain structural decision, not a capacity constraint. Coverage from CNBC (June 23 — 'Tech rout intensifies as selloff grips global stocks'), Bloomberg (June 23 — 'Kospi Index Slides 4.6% With Samsung, SK Hynix Falling on Chip Concerns'), Yahoo Finance ('Micron Drops 7% as Broadcom's Disappointing AI Outlook Triggers a Semiconductor Selloff'), TechPowerUp ('SK Hynix Slows Down HBM4 Ramp'), CryptoBriefing ('SK Hynix slows HBM4 production to boost DRAM profits'), and TradingKey.",
+      "link": "https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html",
+      "why_it_matters": "Two angles that pair directly with the Micron-Anthropic and Intel foundry items already in today's file. First, the Broadcom guidance miss as the AI chip demand sentiment check. Broadcom is the dominant custom AI chip designer for hyperscaler ASIC programs — Google TPUs, Meta MTIAs, ByteDance chips — and its $16B Q3 guidance landed 7% below institutional expectations. The substantive read is not that AI chip demand is contracting; it's that the market had priced a trajectory that underlying orders don't yet support at that speed. That's a meaningful calibration to the 'AI infrastructure is only accelerating' narrative. For context: Micron locked in a multi-year HBM supply agreement with Anthropic on June 22 (see today's file), which is the 'named strategic partner' model of supply-chain locking. Intel is trading near all-time highs on foundry customer news (also in today's file). Both moves make more sense as supply-chain plays if you expect the spot market for AI memory and compute to remain tight and volatile — and the KOSPI circuit breaker confirms that expectation is still the working assumption. Second, the SK Hynix HBM4 pullback as a supply-chain structural signal. If the company that holds ~70% of Nvidia's HBM3E orders is deliberately slowing its HBM4 ramp to redirect capacity to conventional DRAM, that tells you something concrete about the demand-versus-capacity balance at the frontier: conventional DRAM shortages are now profitable enough to compete with HBM allocations. The Micron-Anthropic strategic agreement is the direct response to exactly this dynamic — lock in named supply now, before the spot market gets tighter or more unpredictable. For Gabe's context: this is AI infrastructure substrate, but it connects directly to why the models you call from Python are priced and rate-limited the way they are, and why multi-year supply agreements from labs are now structurally necessary rather than optional.",
+      "why_it_matters_brief": "Broadcom's 7%-below-consensus Q3 AI guidance hit overnight — KOSPI -10% circuit breaker, SK Hynix -8%+; separately, SK Hynix is slowing HBM4 ramp to redirect capacity to conventional DRAM where margins now compete with HBM.",
+      "source": { "name": "CNBC", "type": "scrape", "url": "https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-06-23T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-23T11:15:00Z", "by": "refresh", "change": "created — Broadcom Q2 FY2026 results (June 22 post-market) beat on revenue and profit but Q3 AI chip guidance ($16B) missed institutional expectations ($17.2B); triggered overnight selloff: KOSPI circuit-breaker, SK Hynix -8%+, Samsung -5%+, European tech -3.2% at open; SK Hynix separately reported slowing HBM4 expansion ramp to redirect wafer capacity to conventional DRAM where margins now compete with HBM; Tier 3 AI-infrastructure-supply-chain counterpoint to Micron-Anthropic and Intel foundry stories already in today's file; genuine overnight Asia/Europe cycle item; primary sources CNBC June 23, Bloomberg June 23, Yahoo Finance, TechPowerUp, CryptoBriefing, TradingKey; not in any prior snapshot" }
+      ],
+      "takes": [
+        { "source": "CNBC — Tech rout intensifies as selloff grips global stocks (June 23, 2026)", "url": "https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html", "take": "Primary June 23 read naming the Broadcom guidance miss as the trigger and quantifying the KOSPI, SK Hynix, Samsung, and European tech moves." },
+        { "source": "Bloomberg — Kospi Index Slides 4.6% With Samsung, SK Hynix Falling on Chip Concerns (June 23, 2026)", "url": "https://www.bloomberg.com/news/articles/2026-06-23/korean-stocks-fall-more-than-4-from-record-high-on-tech-selloff", "take": "Markets-press read on the Korean index and the Samsung/SK Hynix component." },
+        { "source": "Yahoo Finance — Micron Drops 7% as Broadcom's Disappointing AI Outlook Triggers a Semiconductor Selloff", "url": "https://finance.yahoo.com/markets/stocks/articles/micron-drops-7-broadcom-disappointing-151544845.html", "take": "Substantive read connecting Broadcom's guidance directly to the Micron selloff — relevant context given the Micron-Anthropic deal in today's file." },
+        { "source": "TechPowerUp — SK Hynix Slows Down HBM4 Ramp, Prepares 300+ Layer NAND Flash", "url": "https://www.techpowerup.com/343802/sk-hynix-slows-down-hbm4-ramp-prepares-300-layer-nand-flash", "take": "Substantive supply-chain read on the SK Hynix HBM4 pullback and the conventional DRAM margin rationale." },
+        { "source": "CryptoBriefing — SK Hynix slows HBM4 production to boost DRAM profits", "url": "https://cryptobriefing.com/sk-hynix-slows-hbm4-dram-profits/", "take": "Clean read on the SK Hynix HBM4-to-DRAM capacity shift and the profitability rationale." },
+        { "source": "TradingKey — Kospi Index Slumps Over 6% at One Point, Samsung Electronics Falls Over 7%, SK Hynix Drops More Than 9%", "url": "https://www.tradingkey.com/analysis/stocks/more/261947500-kospi-korea-crash-samsung-sk-hynix-broadcom-ai-chip-guidance-miss-foreign-outflow-circuit-breaker-tradingkey", "take": "Comprehensive market read naming all three factors: Broadcom miss, foreign outflow, and circuit breaker detail." }
+      ]
     }
   ],
   "dropped_in_phase": []
 }
+
