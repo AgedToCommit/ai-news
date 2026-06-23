@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-23T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-23T11:00:00Z",
+      "ended_at": "2026-06-23T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 31000,
+        "curation": 4500,
+        "output_write": 1000
+      },
+      "fetches_made": 19,
+      "items_input": 1,
+      "items_output": 9,
+      "items_added": 1,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-23-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last enrichment ended 2026-06-23T06:35:00Z. Today's am file (2026-06-23-am.json) exists with 8 items. Swept the last 5 hours (since 06:35Z) for overnight Asia/Europe cycle content. WebFetch continues to return 403 in sandbox; sourcing done entirely via WebSearch (19 queries). Checked: Gemini 3.5 Pro (not yet GA as of June 23), SpaceX-Cursor-Origin (covered in June 17 am), White House AI EO (June 2, too old), GLM-5.2 (June 13-17, too old), Hugging Face ML Intern (April 22, too old), Mistral/Cohere (no fresh June 23 item). One fresh overnight item added: Broadcom Q2 FY2026 post-market results (June 22 close) missed Q3 AI chip guidance by ~7% ($16B vs $17.2B institutional expectation) and triggered a global selloff through the Asia/Europe cycle overnight — KOSPI triggered circuit breaker at -10%, SK Hynix -8%+, Samsung -5%+, European tech subindex -3.2% at open; SK Hynix separately reported slowing its HBM4 expansion ramp and redirecting wafer capacity to conventional DRAM where margins now compete with HBM; genuine Asia/Europe overnight cycle item; Tier 3 as AI-infrastructure supply chain counterpoint pairing with the Micron-Anthropic and Intel foundry stories already in today's file; primary sources CNBC June 23, Bloomberg June 23, Yahoo Finance, TechPowerUp, CryptoBriefing, TradingKey."
+    },
+    {
       "run_id": "2026-06-23T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
