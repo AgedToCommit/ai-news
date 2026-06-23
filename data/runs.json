@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-23T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-23T06:00:00Z",
+      "ended_at": "2026-06-23T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 14500,
+        "output_write": 6000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-23-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last digest ended 2026-06-22T17:30:00Z. Yesterday's pm (2026-06-22-pm.json) had 6 items — all 6 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Jumper-to-Anthropic: Bloomberg primary placement + Hassabis-via-Reuters gracious reply ('we wish him well') + Polymarket 74% Anthropic-IPO-by-EOY-2026 + explainx.ai 'Anthropic Hiring Spree 2026' Karpathy/Boyd/Nordeen pattern. (2) Codex Record/Replay: Daniel Vaughan walkthrough on SKILL.md per-session-state failure modes + Memeburn practitioner-reception + three recurring use cases (calendar invites, PR drafting, onboarding tests) + macOS-only/regression complaints. (3) DeepMind AI Control Roadmap: substantive empirical reframing (1M-task analysis flagged 'overzealous agents, not malicious intent' — agents pursuing user goals too aggressively) + Gemini honeypot eval May 28 found no unprompted scheming in real internal deployment + Databricks/Beyond Identity/Hugging Face overlapping agent-security frameworks in same week + AI Weekly's 'adapts MITRE ATT&CK to one million coding sessions' framing. (4) Cherny loop engineering: major substance — Anthropic Claude Code documentation ships first-party /loop, /goal, /schedule, /workflows commands (loop-engineering is now a shipped product surface, not just a quote) + Peter Steinberger June 8 X post as arc-opener + The New Stack June 22 long-form as the crest + working-engineer Medium pieces as uptake outside the Anthropic-PR orbit. (5) Black Duck survey: substantive bottleneck data from IT Security Guru (90% report issues with AI code; manual review 52%, security testing 51%, code rework 48%, prompt iteration 41%) + SecureWorld 'ruthless AI governance' framing. (6) Intel surge: Trump-confirmed Apple-Intel chip manufacturing deal as third catalyst + Google relationship is on custom ASIC IPUs (not just standard TPUs) + Nvidia's existing $5B equity stake as structural backstop + FX Leaders 'closer to $150 record' momentum. Late-breaking pass added 2 items: (a) Micron + Anthropic strategic agreement announced June 22 (multi-year memory-and-storage supply HBM/DRAM/SSDs, joint architecture design, Claude deployed across Micron, strategic investment into Anthropic Series H $965B post-money round closed May 28; MU stock +4%+; Tier 2 as substantive AI-infrastructure-supply-chain-consolidation story; not in any prior snapshot); (b) Anthropic Fable 5 paywall transition starting June 23 (13-day complimentary window ends; $10/$50 per-million-token pricing is 2x Opus 4.8 at $5/$25; effectively 4–5 days of usable free access because of the June 12–18 export-control suspension; Tier 3 as substantive frontier-model-unbundling pricing event; not in any prior snapshot). Hero images null — WebFetch unreliable in sandbox; sourcing done via WebSearch (10 queries total)."
+    },
+    {
       "run_id": "2026-06-22T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
