@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-24T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-24T11:00:00Z",
+      "ended_at": "2026-06-24T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 23000,
+        "curation": 2500,
+        "output_write": 1000
+      },
+      "fetches_made": 11,
+      "items_input": 3,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-24-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last run ended 2026-06-24T06:35:00Z (enrichment). Today's am file exists (2026-06-24-am.json, 5 items). Swept last 5 hours since enrichment. WebFetch still returning 403 in sandbox; sourcing via WebSearch (11 queries). No major lab model releases found in the 06:35–11:00 UTC window. Main discovery: Qualcomm Investor Day June 24 NYC — ByteDance confirmed as the previously unnamed hyperscaler ASIC customer; custom ASICs designed within US export-control performance thresholds (legally distinct from banned frontier GPU exports); $4B Modular acquisition in advanced talks (Bloomberg June 22); $8–10B Tenstorrent pursuit in parallel; AI200/AI250 rack-scale inference accelerator roadmap presented. Added as Tier 2 item. Checked: Micron Q3 earnings after market close tonight (not yet available); Grok 5 still unshipped; Gemini 3.5 Pro still in limited preview; Qualcomm-ByteDance original deal from late May likely in earlier snapshots but today's Investor Day hard-numbers event is fresh. 1 item added."
+    },
+    {
       "run_id": "2026-06-24T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
