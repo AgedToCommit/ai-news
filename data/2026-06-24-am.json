@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-24-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-24",
-  "generated_at": "2026-06-24T06:35:00Z",
-  "generated_at_local": "2026-06-24T02:35:00-04:00",
+  "generated_at": "2026-06-24T11:20:00Z",
+  "generated_at_local": "2026-06-24T07:20:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-24T06:35:00Z", "duration_ms": 2100000 }
+    { "phase": "enrichment", "ran_at": "2026-06-24T06:35:00Z", "duration_ms": 2100000 },
+    { "phase": "refresh",    "ran_at": "2026-06-24T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 1, "2": 3, "3": 1 },
+  "tier_counts": { "1": 1, "2": 4, "3": 1 },
   "items": [
     {
       "id": "openai-patch-the-planet-gpt-55-cyber-daybreak-june-22-2026",
@@ -164,6 +165,34 @@
         { "source": "NBC News — Global tech sell-off intensifies, led by AI and chip stocks", "url": "https://www.nbcnews.com/business/business-news/tech-sell-off-markets-spacex-alphabet-nasdaq100-stocks-rcna351331", "take": "Mainstream-press read on the global tech-and-AI selloff with the SpaceX / Alphabet / Nasdaq 100 breakdown." },
         { "source": "Stocks Down Under — Is the AI Bubble Bursting? Why Nvidia, Micron and Chip Stocks Are Crashing", "url": "https://stocksdownunder.com/ai-bubble-chip-stocks-crash/", "take": "Substantive analyst-press read on the 'AI bubble bursting?' framing — explicit in the headline." },
         { "source": "informedclearly.com — AI Bubble Fears Trigger Global Stock Market Sell-Off in 2026", "url": "https://informedclearly.com/en/economy/56673/ai-bubble-fears-global-stock-selloff-2026", "take": "Substantive read on the broader 2026 AI-bubble-narrative formation across global markets." }
+      ]
+    },
+    {
+      "id": "qualcomm-bytedance-asic-investor-day-june-24-2026",
+      "tier": 2,
+      "title": "Qualcomm Investor Day (June 24) names ByteDance as its unnamed hyperscaler AI chip customer — millions of custom ASICs for Doubao and data centers; chips designed within US export-control thresholds; $4B Modular and $8–10B Tenstorrent acquisitions in advanced talks; stock volatile on ByteDance-angle scrutiny",
+      "summary": "At its June 24 Investor Day in New York City, Qualcomm formally put hard numbers behind its data center AI strategy and confirmed ByteDance — the parent company of TikTok and Doubao — as the previously unnamed hyperscaler customer for custom AI application-specific integrated circuits (ASICs). ByteDance will purchase millions of Qualcomm ASICs to power its Doubao AI chatbot and broader data center infrastructure, with the chips specifically designed to stay within the computing-performance thresholds set by US Commerce Department export controls — making the deal commercially large but legally distinct from the banned frontier-GPU exports to China. Qualcomm's ASIC sits within the legal computing-performance thresholds; ByteDance's own internally designed chip is being engineered to stay inside the same thresholds. The Investor Day also presented Qualcomm's roadmap for the AI200 and AI250 rack-scale inference accelerators, confirmed initial ASIC shipments targeting late calendar 2026, and outlined data center revenue targets (analysts tracking $3B+ FY2027, $35B FY2031 path). Separately, Bloomberg reported June 22 that Qualcomm is in advanced talks to acquire Modular — builder of the open-source MAX inference engine and compiler platform — at approximately $4 billion, up from a $1.6B valuation nine months ago. Qualcomm is also in parallel talks to acquire AI chip startup Tenstorrent for $8–10 billion. Qualcomm shares were volatile: the stock initially moved on the data center strategy reveal, then dropped sharply as analysts focused on the ByteDance / China-exposure regulatory angle. Coverage from Bloomberg (Modular deal), The Next Web (export-control design), Prism News (ByteDance ASIC supply), Data Center Dynamics (hyperscaler custom silicon), 24/7 Wall St. (stock reaction), Yahoo Finance, and the Qualcomm Investor Day primary source.",
+      "link": "https://www.qualcomm.com/company/events/investor-day",
+      "why_it_matters": "Three threads worth following, with today's Investor Day as the formal 'hard numbers behind the story' moment that makes all three concrete. First, the ByteDance / export-control design point. US Commerce Department chip export controls are built around performance thresholds, not company blocklists — so a chip engineered to stay below those thresholds is a legal US export to China, even to ByteDance. Qualcomm's ASICs for ByteDance are built to that spec. The geopolitical read: export controls are creating a design-space for 'compliant' AI chips — an ASIC built to the legal performance ceiling rather than maximizing raw performance — and Qualcomm is the first US chip company to publicly commit at scale to that design point for a Chinese AI operator. The Huawei Ascend 910 is the other compute path for Chinese AI; the Qualcomm / compliant-ASIC path is the export-control-navigating US alternative. Second, the Nvidia-alternative stack forming. Qualcomm is simultaneously announcing its own inference accelerators (AI200/AI250), nearing a $4B acquisition of Modular (which makes the MAX inference engine — an open-source compiler that runs models across hardware backends including Qualcomm silicon), and pursuing Tenstorrent ($8–10B). Those three moves together describe a vertically-integrated AI inference stack: custom silicon + software runtime + additional chip IP. For anyone building Python inference pipelines, the Modular acquisition is the concrete item to watch: MAX is an open-source project that sits between your Python model code and the hardware and handles compilation of PyTorch/ONNX models to run efficiently on whatever silicon you have. If Qualcomm completes the acquisition and integrates MAX with its own chips, the path from 'I have a fine-tuned model in Python' to 'it runs fast on Qualcomm hardware' gets substantially more direct. Worth bookmarking now: github.com/modular/max. Third, the stock-volatility angle pairs directly with yesterday's AI bubble / Micron crash item: the same day Micron is reporting earnings that could reset the AI-capex-bubble narrative, Qualcomm's Investor Day reveals its ByteDance exposure and the stock drops on the China-angle, showing that AI infrastructure equities are now reading through every announced deal for regulatory risk, not just valuation multiples.",
+      "why_it_matters_brief": "ByteDance named as Qualcomm's hyperscaler AI chip customer — ASICs built within US export-control ceilings by design; Modular (~$4B) and Tenstorrent (~$9B) acquisitions pending; together this is Qualcomm's first complete Nvidia-alternative inference stack.",
+      "source": { "name": "Qualcomm Investor Day 2026", "type": "scrape", "url": "https://www.qualcomm.com/company/events/investor-day" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-24T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-24T11:20:00Z", "by": "refresh", "change": "created — Qualcomm Investor Day June 24 confirmed ByteDance as the previously unnamed hyperscaler customer for custom AI ASICs designed within US export-control performance thresholds; also near-$4B Modular acquisition in advanced talks (Bloomberg June 22) and $8–10B Tenstorrent discussions; volatile stock on ByteDance-angle; Tier 2 as substantive AI chip supply-chain and US-China export-control story with practitioner-relevant Modular/MAX inference engine angle" }
+      ],
+      "takes": [
+        { "source": "The Next Web — The Qualcomm-ByteDance ASIC deal works around US export controls by design", "url": "https://thenextweb.com/news/qualcomm-bytedance-ai-chip-deal-asics", "take": "Substantive read on the export-control compliance design — the cleanest articulation of why this deal is legally distinct from banned frontier-GPU exports to China." },
+        { "source": "Bloomberg — Qualcomm Is Said to Near Deal for AI Software Firm Modular", "url": "https://www.bloomberg.com/news/articles/2026-06-22/qualcomm-is-said-to-near-deal-for-ai-chip-startup-modular", "take": "Primary reporting on the Modular acquisition at ~$4B — the MAX inference engine / compiler acquisition angle." },
+        { "source": "Prism News — Qualcomm lands ByteDance chip deal for AI data centers", "url": "https://www.prismnews.com/news/qualcomm-lands-bytedance-chip-deal-for-ai-data-centers", "take": "Trade-press read on the ASIC supply arrangement for ByteDance's Doubao chatbot and data center infrastructure." },
+        { "source": "Data Center Dynamics — Qualcomm developing custom silicon with unnamed hyperscaler", "url": "https://www.datacenterdynamics.com/en/news/qualcomm-developing-custom-silicon-with-unnamed-hyperscaler-as-company-continues-to-plot-data-center-comeback/", "take": "Infrastructure-trade read on the custom silicon development timeline and 200-megawatt capacity agreement detail." },
+        { "source": "24/7 Wall St. — Qualcomm Drops 8% on ByteDance ASIC Deal, Marvell Falls 10%", "url": "https://247wallst.com/investing/2026/06/09/qualcomm-drops-8-bytedance-asic-deal-marvell-falls-10-as-custom-silicon-stocks-slide/", "take": "Market-reaction read on the ByteDance-angle stock drop when the deal became broadly public earlier in June." },
+        { "source": "Qualcomm Investor Day 2026", "url": "https://www.qualcomm.com/company/events/investor-day", "take": "Primary source — today's event presenting Qualcomm's AI data center strategy with hard numbers including AI200/AI250 roadmap and hyperscaler ASIC shipment timeline." }
       ]
     }
   ],
