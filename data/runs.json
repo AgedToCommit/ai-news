@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-24T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-24T06:00:00Z",
+      "ended_at": "2026-06-24T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 12000,
+        "output_write": 5000
+      },
+      "fetches_made": 10,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-24-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last digest ended 2026-06-23T17:00:00Z. Yesterday's pm (2026-06-23-pm.json) had 4 items — all 4 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Patch the Planet: sharpened week-one numbers from Trail of Bits' own blog (64 PRs + 51 issues filed across 19 projects alongside the 37-patches-merged headline) + merged work explicitly includes new tests, fuzzing harnesses, CI security scanning, supply-chain tooling (maintainer-pipeline hardening, not just CVE fixes) + Trail of Bits committed entire security research org to initial surge + Infosecurity Magazine added to source set. (2) Five Eyes warning: added Chris Krebs (former CISA director) CBS News reaction ('pretty alarming'; 'discrete and achievable actions') as substantive expert-validation layer + secure-by-design-and-secure-by-default-as-standard-practice now operational-mandate framing across overnight coverage + CNN, Cybersecurity Dive, Infosecurity Magazine, Cyber.gov.au primary source, Australian Cyber Security Magazine, iTnews added to source set. (3) Claude outage: added final resolution timestamp (12:44pm ET / 17:44 UTC, ~2h 42min total downtime) + substantive 7,119 Downdetector peak detail (10:13am ET, 11 minutes after onset) + substantive context that Anthropic has NOT published an official root-cause analysis for any June 2026 incident + unverified third-party sub-agent-infinite-loop speculation flagged as unconfirmed hypothesis + TechRadar 'definitely bigger than June 2' comparative framing + deployflow.co failover-guidance source. (4) SpaceX-Reflection: added founder names (Misha Laskin and Ioannis Antonoglou, both ex-Google DeepMind) + substantive $80B-through-2029 total-committed-Colossus-tenancy headline number (Dataconomy framing) + Nvidia-on-both-sides equity-and-chip-supply detail (TFN framing) + substantive caveat that Reflection has NOT yet shipped a public frontier open-source model (compute-deal-precedes-model-release pattern) + payments flow to SpaceXAI subsidiary + Memphis vs Southaven location ambiguity clarified + Data Center Dynamics, Dataconomy, Mobile World Live, AI Business, Tech Startups, The Next Web added to source set. Late-breaking pass added 1 item: (a) AI bubble selloff intensifies June 23 — Micron crashed 13%+ (worst day since June 5), Marvell -8%, SanDisk -11%; Nasdaq Composite opened down more than 2%; NPR ran 'Is AI one big bubble?' headline (substantive mainstream-press framing shift from yesterday's company-specific Broadcom guidance miss to general AI-capex-overvaluation question); Micron's 12-month run-up of ~760% explains why selloff cuts deep; Micron earnings Wednesday June 24 is the next test; Tier 3 as substantive narrative-and-market-dynamic story pairing with yesterday's Broadcom item (the trigger), the Micron-Anthropic strategic agreement, and the Claude outage as the pre-IPO Anthropic capacity-and-reliability read. WebFetch still returning 403 in sandbox; sourcing done entirely via WebSearch (10 queries). Hero images null."
+    },
+    {
       "run_id": "2026-06-23T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
