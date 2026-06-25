@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-25T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-25T06:00:00Z",
+      "ended_at": "2026-06-25T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 11000,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 7,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-25-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-24T17:00:00Z (digest). Yesterday's pm (2026-06-24-pm.json) had 5 items — all 5 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Claude Tag for Slack: added Anthropic-Salesforce coordinated-launch framing (Salesforce Ben primary) + Ramp May 2026 AI Index data point (Anthropic 34.4% > OpenAI 32.3% of US business AI spend, first time ahead); TechRepublic, The New Stack, Anthropic primary 'Introducing Claude Tag', BuildFastWithAI, ExplainX, BusinessModelAnalyst, The Star added to source set. (2) Nvidia DSX: added 2.6M gallons/MW/year conventional-cooling baseline (the number that makes 'near zero' interpretable); added Ali Heydari (director of data center cooling and infrastructure) as primary technical voice on the 45°C threshold; added Elon Musk endorsement (cross-firm validation); added substantive Interesting Engineering caveat that the 100% claim covers direct on-site water only — indirect via electricity (US 2023: ~211B gallons indirect vs ~17.4B direct) climbs as AI scales. (3) EU Digital Omnibus: added 423-vote Parliament majority detail; sharpened formal-adoption timing to July 2026 ahead of August 2 deadline; added industry-side framing (trade associations cite legal certainty) vs civil-society-side framing (Liberties.eu and Jacques Delors Centre frame as weakening fundamental rights and empowering Big Tech); added Verifywise practitioner-trade analysis on why deferral happened (conformance bodies / standards / AI Office capacity not ready). (4) Simon Willison Moebius: added fp32 model weights and ~1.27 GB first-run download size (substantive 'practically deployable' honest qualifier); added cross-browser runnability (Chrome, Firefox, Safari) as substantive 'WebGPU is cross-browser now' signal; added Moebius paper provenance (HUST-VL Vision Lab at Huazhong University of Science and Technology, ECCV 2026 accepted); added Hacker News item 48630171 with fp32-weights discussion; added GitHub hustvl/Moebius and Hugging Face paper page links. (5) Claude Code sandbox.credentials release: substantively reframed as the second layer of a multi-step hardening response to the May 2026-disclosed SOCKS5 hostname null-byte injection sandbox bypass that affected v2.0.24–v2.1.89 across ~130 versions over ~5.5 months (silently patched in v2.1.90 on April 1 2026); first layer was the April 1 patch closing the bypass mechanism, second layer (sandbox.credentials) blocks the read path; added practitioner-action guidance (anyone who ran wildcard allowlist Oct 2025–April 2026 should audit outbound SOCKS-mediated traffic logs and rotate credentials); SecurityWeek, Cyber Security News, Cyberpress, Penligent, DevOps.com, GBHackers, Cryptika, claudefa.st added to source set. Late-breaking pass added 1 item (within the 2-item cap): (a) Tier 2 — Micron Q3 FY26 earnings reported after market close June 24: revenue $41.46B vs $35.84B est (+~346% YoY from ~$9B), adjusted EPS above $25 vs $21 est, gross margin 84.6% (memory-business outlier), Q4 FY26 guide ~$50B vs $44B consensus, 16 strategic multi-year supply agreements; stock +~16% AH, +$120B market cap, crossed $1T market cap for first time; Nasdaq 100 futures +nearly 2% extended-hours, S&P 500 futures +0.54%; sympathy rally in SanDisk, Marvell, Arm; the print directly inverts yesterday's bubble-selloff narrative — Yahoo Finance leads with 'Micron's blowout earnings just reset the AI memory trade', Investing.com runs '$400 billion AI chip stock rally'; pairs with the Nvidia DSX item as the substantive 'memory tightness is the binding constraint for AI through 2026' read; CNBC, Stocktitan, Quartz, The Next Web, Yahoo Finance, Investing.com, TheStreet, EBC Financial Group, Indmoney, S&P Global Market Intelligence sources. WebFetch still expected to return 403 in sandbox; sourcing done entirely via WebSearch (9 queries). Hero images null. No Tier 1 model release surfaced in the overnight window (MiniMax M2.5 release date confirmed as Feb 12 2026, not June 24; OpenAI GPT-5/immunology piece was a research-application story, not a model release; Grok 5 still unshipped; Gemini 3.5 Pro still in limited preview)."
+    },
+    {
       "run_id": "2026-06-24T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
