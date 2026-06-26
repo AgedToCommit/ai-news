@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-26T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-26T06:00:00Z",
+      "ended_at": "2026-06-26T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 11000,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-26-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-25T17:30:00Z (digest). Yesterday's pm (2026-06-25-pm.json) had 5 items — all 5 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Jalapeño: added substantive overnight Tom's Hardware follow-up detail that Broadcom required Microsoft to guarantee purchase of 40% of the first production run as a precondition for fab-capacity commitment (real take-or-pay demand, not marketing-only commitment); added Constellation Research and TheStreet Pro pre-IPO-narrative-shaper reads pairing Jalapeño with OpenAI's June 8 confidential S-1 filing ($1T target, Sept–Q4 2026 window, Goldman / Morgan Stanley / JPMorgan leading); added SiliconSnark commentary. (2) Anthropic-Alibaba distillation: added substantive Anthropic spokesperson statement ('We believe combating the threat of illicit distillation requires coordinated action between government and industry, and we will continue working with Congress and the Administration to maintain American AI leadership'); added three explicit Senate Banking asks from overnight reporting (penalties on extractors, strengthened export controls, legal safeguards around model IP); added Quartz June 25, Nikkei Asia, Mobile World Live, Tweaktown, Gadget Review to source set; confirmed Alibaba has not responded to any outlet. (3) NSA Mythos: added substantive overnight Reuters / AP confirmation that the June 11 exercise took place under 'Project Glasswing' — a restricted US government program for defensive vulnerability research sanctioned by Washington's intelligence agencies; added critical AP clarification from unidentified US official that Mythos 'identified vulnerabilities in hours but did not necessarily exploit them' — materially narrows the 'breached classified systems' framing and is closer to Anthropic's narrow-jailpath read; added overnight status update via explainx.ai that as of June 25 (day 13) Fable 5 is at zero traffic and June 25 reports of Fable 5 reappearing in the model picker were a UI bug not a soft rollout; added two upcoming structural dates (July 8 Anthropic gov-ID verification effective; August 1 60-day EO deadline for NSA/Treasury/CISA covered-frontier-model framework); KuCoin clarifying-read and pbxscience added to source set. (4) Meta Arena: added substantive overnight Tech Times clarification that Llama-as-resolver has NO human review and NO challenge window (fully-automated content-and-judgment loop — the practitioner-relevant detail about how aggressive the LLM-as-judge architecture is); added overnight Forrester survey June 25 finding 56% of respondents do not trust Meta with a prediction-market product (roughly 1/3 less likely to try the app); added Senator Richard Blumenthal (D-Conn) condemnation ('Meta copied slot machines to addict kids to Instagram. Now Zuckerberg is turning his company into a prediction market. Meta's business model is profiting from addiction'); added overnight competitive context that Kalshi is reportedly raising at $40B valuation and CBOE is separately entering the prediction-market space the same week; Forrester blog, eWeek, Tech Times, CBS News video, GuruFocus, Yahoo Finance / Schwab Network added to source set. (5) Anthropic self-service analytics: added substantive overnight commercial-distribution context via the Snowflake-Anthropic $200M partnership announced June 1 at Snowflake Summit 26 (Daniela Amodei featured) — Claude in Snowflake Cortex AI for governed enterprise analytics is the productized version of the pattern Anthropic published; added CorralData practitioner-toolkit read ('Anthropic Published the Playbook... Here's the Fastest Way to Run It'); added Ann Jackson Medium read; added Efficiently Connected practitioner walkthrough; BigDATAwire (HPCwire), Blockchain.news, Snowflake primary press release, Anthropic newsroom partnership announcement added to source set. Late-breaking pass: no items added — searched Tier-1 sources for last 12 hours; Gemini 3.5 Pro still in limited preview with prediction-market odds for June 30 GA roughly 50%; GPT-5.6 release window slipped to July (prediction markets collapsed from ~83% to ~18% for late-June release); OpenAI IPO S-1 (June 8) and Snowflake-Anthropic partnership (June 1) and Claude Design overhaul (June 17) are all older than the 12-hour window and folded as cross-source context into existing items rather than added as new items; Anthropic Claude Tag for Slack already in earlier am file. WebFetch expected to return 403 in sandbox; sourcing done entirely via WebSearch (9 queries). Hero images null. No Tier 1 model release surfaced in the overnight window."
+    },
+    {
       "run_id": "2026-06-25T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
