@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-26T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-26T11:00:00Z",
+      "ended_at": "2026-06-26T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 5000,
+        "output_write": 2000
+      },
+      "fetches_made": 19,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-26-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last successful run ended 2026-06-26T06:30:00Z (enrichment). Today's am file (2026-06-26-am.json) exists with 5 items. Sweep window: since 06:30 UTC June 26 (~last 5 hours). Overnight Asia/Europe cycle was relatively quiet — no Tier 1 model releases. WebFetch returned 403 in sandbox; sourcing done entirely via WebSearch (19 queries). Added 2 Tier 2 items: (1) Claude Code 2.1.191 /rewind feature (June 25, missed by digest and enrichment because they focused on Tier-1 sources for late-breaking pass — tool update was not swept) — /rewind undoes /clear to restore prior session context plus CPU/memory improvements; (2) Google Cloud Gemini Enterprise Agent Platform June 23-26 batch — Computer Use Preview (isolated browser automation API/CDP), Deep Research Agent Preview, Custom Container sandboxes, Sandbox Templates, Sandbox Snapshots — browser automation transitioning from Anthropic-only to multi-vendor infrastructure primitive. Items evaluated and filtered: Grok 4.3 (Bedrock launch June 15, too old); SoftBank France €75B (May 30, too old); NAVER/NVIDIA (June 7, too old); Qualcomm/Tenstorrent talks (June 15, too old); EU AI Act Digital Omnibus (June 16, too old); Fable 5/Mythos status unchanged at zero traffic (nothing new to add). No Tier 1 re-pass (am file has no Tier 1 items). Hero images null."
+    },
+    {
       "run_id": "2026-06-26T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

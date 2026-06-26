@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-26-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-26",
-  "generated_at": "2026-06-26T06:30:00Z",
-  "generated_at_local": "2026-06-26T02:30:00-04:00",
+  "generated_at": "2026-06-26T11:30:00Z",
+  "generated_at_local": "2026-06-26T07:30:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-26T06:30:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-06-26T06:30:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh", "ran_at": "2026-06-26T11:30:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 0, "2": 4, "3": 1 },
+  "tier_counts": { "1": 0, "2": 6, "3": 1 },
   "items": [
     {
       "id": "openai-broadcom-jalapeno-inference-chip-june-24-2026",
@@ -177,6 +178,52 @@
         { "source": "Kaelio — We Built the Open-Source Version of Anthropic's Internal Data Analytics Engine", "url": "https://www.kaelio.com/blog/open-source-anthropic-internal-data-analytics-engine", "take": "Substantive open-source rebuild — the practitioner-relevant reference implementation for anyone wanting to apply the pattern to their own data warehouse." },
         { "source": "Efficiently Connected — Snowflake and Anthropic: Governed Enterprise AI at Scale", "url": "https://www.efficientlyconnected.com/snowflake-anthropic-governed-enterprise-ai/", "take": "Substantive practitioner walkthrough of the Snowflake-Cortex-with-Claude deployment shape for enterprise teams." },
         { "source": "ZenML — Anthropic: Self-Service Data Analytics with Claude-Powered Agents (LLMOps Database)", "url": "https://www.zenml.io/llmops-database/self-service-data-analytics-with-claude-powered-agents", "take": "Practitioner-trade LLMOps reference catalog entry — useful for placing Anthropic's pattern in the broader LLMOps reference-architecture landscape." }
+      ]
+    },
+    {
+      "id": "claude-code-2-1-191-rewind-context-restore",
+      "tier": 2,
+      "title": "Claude Code 2.1.191 ships `/rewind` to undo `/clear` and restore prior conversation context, plus CPU/memory improvements and background agent fixes",
+      "summary": "Anthropic shipped Claude Code 2.1.191 on June 25 with `/rewind` — when you run `/clear` to reset context mid-session and then wish you hadn't, `/rewind` walks the state back to before the clear. The update also fixes scroll-position jumping in long sessions, addresses background agent instability, tightens MCP OAuth handling, and reduces CPU and memory overhead during extended streaming runs.",
+      "link": "https://github.com/anthropics/claude-code/releases",
+      "why_it_matters": "`/rewind` solves a real friction point in active Claude Code sessions. The pattern is common: you hit `/clear` to unclutter a long context, then realize the prior thread had something you needed. Before 2.1.191 you either avoided clearing aggressively or lost the context entirely. Now `/clear` is reversible. The CPU and memory improvements matter separately — Claude Code's streaming overhead has been noticeable on MacBooks in long sessions with many tool calls, and tightening that extends how long you can run intensive coding sessions without the laptop getting warm. Neither change is conceptual, but both make the tool more usable.",
+      "why_it_matters_brief": "`/rewind` makes `/clear` reversible in Claude Code 2.1.191 — clear context freely and roll back if you change your mind, plus CPU/memory reductions for long sessions.",
+      "source": { "name": "Anthropic / Claude Code", "type": "scrape", "url": "https://github.com/anthropics/claude-code/releases" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-06-26T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-26T11:30:00Z", "by": "refresh", "change": "created — Claude Code 2.1.191 shipped June 25 with /rewind to undo /clear, scroll-position fix, background-agent stability, MCP OAuth handling, CPU/memory reductions during streaming" }
+      ],
+      "takes": []
+    },
+    {
+      "id": "gemini-enterprise-agent-platform-computer-use-sandbox-june-2026",
+      "tier": 2,
+      "title": "Google Cloud's Gemini Enterprise Agent Platform adds Computer Use (browser automation in isolated sandbox), Deep Research Agent, custom container sandboxes, reusable templates, and sandbox snapshots in June 23–26 batch",
+      "summary": "Google Cloud's Gemini Enterprise Agent Platform shipped a batch of agentic infrastructure capabilities across June 23–26. Computer Use (Preview) lets agents control an isolated browser environment — clicking, navigating, taking screenshots — via the API or Chrome DevTools Protocol, without risk to host infrastructure. The Deep Research Agent (Preview) plans and executes multi-step research workflows across the public web and enterprise data. New sandbox infrastructure includes Custom Container sandboxes (bring your own container from Artifact Registry), Sandbox Templates (reusable environment specs), and Sandbox Snapshots (capture full environment state including filesystem and installed dependencies for fast resume). All features are in preview.",
+      "link": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform",
+      "why_it_matters": "Two things worth tracking here. First, computer use as an infrastructure primitive. When Anthropic launched computer-use capability in late 2024 it was treated as experimental; Google Cloud shipping an isolated-browser-automation API in its enterprise agent platform is the signal that 'agent controls a browser' is transitioning into a standard infrastructure feature rather than a research demo. The practical shape: Playwright or Selenium for structured automation where you control the site, computer-use API for unstructured automation where you don't — legacy UIs, competitor scraping, multi-step web workflows that don't have a clean API surface. Second, sandbox snapshots. Checkpointing a running sandbox mid-pipeline and resuming from that state matters for any long-running agentic task where a failure late in the workflow would otherwise force a full restart. The pattern (checkpoint, fork, test, restore) is standard in containerized CI but hasn't been a first-class feature in agentic AI infrastructure until now. For Gabe specifically, the computer-use shape is worth knowing even if Google Cloud isn't your stack — the Python `playwright` library supports headless browser automation with a similar API surface, and several Python agent frameworks implement the same pattern locally without managed infrastructure.",
+      "why_it_matters_brief": "Google Cloud's agent platform now ships Computer Use (isolated browser automation API) and sandbox snapshots — computer use is going from Anthropic-pioneered novelty to multi-vendor enterprise primitive, and snapshot/resume changes how agentic pipelines handle mid-run failures.",
+      "source": { "name": "Google Cloud", "type": "scrape", "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-06-26T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-26T11:30:00Z", "by": "refresh", "change": "created — Google Cloud Gemini Enterprise Agent Platform June 23-26 batch: Computer Use Preview (isolated browser automation via API/CDP), Deep Research Agent Preview, Custom Container sandboxes (BYOC), Sandbox Templates, Sandbox Snapshots" }
+      ],
+      "takes": [
+        { "source": "Google Cloud — Introducing Gemini Enterprise Agent Platform", "url": "https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform", "take": "Platform introduction post covering computer use, deep research agent, and sandbox infrastructure capabilities." },
+        { "source": "Google Cloud Documentation — Computer Use in Gemini Enterprise Agent Platform", "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use", "take": "Technical docs for the Computer Use API including Chrome DevTools Protocol support and the isolated sandbox environment." },
+        { "source": "Gemini Enterprise Agent Platform release notes", "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes", "take": "Release notes with the June 23-26 batch covering all new sandbox and agent features." }
       ]
     }
   ],
