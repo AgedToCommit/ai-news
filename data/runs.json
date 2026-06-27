@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-27T11:10:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-27T11:00:00Z",
+      "ended_at": "2026-06-27T11:10:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 12400,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 9200,
+        "curation": 1800,
+        "output_write": 600
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 8,
+      "items_added": 1,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-27-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last successful run ended 2026-06-27T06:30:00Z (enrichment). Today's am file exists (7 items). Late-breaking sweep covered last ~5 hours since 06:30Z. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~9 queries). RSS sweep skipped (WebFetch blocked). 1 new item added: Tier 1 — Anthropic Mythos 5 partial clearance (June 26-27, 2026). Semafor exclusive (first break) dropped after enrichment run's 06:30Z cutoff, explaining why enrichment missed it; Reuters/NBC/Bloomberg/CNN/CNBC/9to5Mac/Engadget cross-source coverage propagated June 26-27. Commerce Secretary Lutnick wrote to Anthropic chief compute officer Tom Brown clearing Mythos 5 for redeployment to 100+ designated US critical infrastructure organizations and government agencies; Fable 5 remains suspended; access extended to non-American employees at qualifying organizations and Anthropic's own non-American staff; clearance inverts the June 12 suspension logic (capability authorized specifically for infrastructure defenders). One day before the June 2 EO's 30-day cyber-defense deadline (July 2). No re-pass needed on GPT-5.6 Tier 1 item (no new overnight chatter beyond Semafor-triggered roundups, which add no substantive new angles). Items searched and filtered: NVIDIA Nemotron 3 Ultra (June 4, already in older snapshots); White House AI EO (June 2, already in older snapshots); SpaceX/Cursor acquisition (June 16, already in older snapshots); Gemini 3.5 Pro delay to July (no new concrete announcement); Simon Willison blog (no new post since June 22). Tier counts updated 1→2 for Tier 1; item_count 7→8."
+    },
+    {
       "run_id": "2026-06-27T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
