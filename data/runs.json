@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-27T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-27T06:00:00Z",
+      "ended_at": "2026-06-27T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 5000
+      },
+      "fetches_made": 12,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-27-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-26T17:00:00Z (digest). Yesterday's pm (2026-06-26-pm.json) had 5 items — all 5 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) GPT-5.6 White House staggered release — MAJOR ENRICHMENT: OpenAI officially previewed GPT-5.6 on June 26 as Sol / Terra / Luna with detailed pricing ($5/$30, $2.50/$15 at 'similar performance to GPT-5.5 but 2x cheaper', $1/$6); new 'max' reasoning effort and 'ultra' sub-agent mode; 'most robust safety stack to date' framing; prompt-caching changes (30-min minimum cache life, explicit breakpoints, writes 1.25x uncached input, reads keep 90% discount); availability limited to ~20 vetted partners via API and Codex only (ChatGPT to follow later); OpenAI's TechCrunch June 26 'restrictions shouldn't be the norm' framing concretizes Altman's June 25 internal posture; Codex integration from day one is the substantive connection to the Codex Remote item; added takes for OpenAI primary post, TechCrunch June 26 follow-up, CNBC, 9to5Mac, SiliconANGLE, MacRumors, MarkTechPost, kingy.ai. (2) Tokenmaxxing — ENRICHED: added Lindy CEO honest qualifier ('still expects ~25-person company to spend more on AI than payroll'); added Axios June 16 'Microsoft eyes DeepSeek for enterprise AI' as substantive signal of how far the substitution dynamic reaches (Microsoft has $13B+ in OpenAI and $5B in Anthropic); added Open Data Science, Trading View, Technology.org, Odin AI to source set; connected directly to GPT-5.6 Terra tier as OpenAI's structural response. (3) GitHub Copilot CLI / BYOK — ENRICHED: added June 26 GitHub Desktop 3.6 update with worktrees and deeper Copilot integration as the GUI companion to the new tab pattern; worktrees-in-GUI is the substantive new primitive that makes parallel-agent workflow accessible to typical Copilot users for the first time. (4) Codex Remote / June batch — ENRICHED: GPT-5.6 Sol / Terra / Luna integrated into Codex from day one of the June 26 limited preview; Codex (not ChatGPT) is the first OpenAI surface where vetted partners can use the new model family; updated Anthropic Cowork mobile reference to reflect June 26 rollout state. (5) Anthropic Cowork mobile 'Dispatch' — MAJOR ENRICHMENT: moved from leaked beta to active rollout June 26 per Claude Help Center release notes; Max plans immediately, Pro plans over next two days; Dispatch is paired with Computer Use improvements as the underlying execution primitive (shift from 'agentic mode for files' toward 'Cowork can drive your desktop UI while you're away'); updated source link to point at Anthropic Help Center release notes as canonical surface; added Testing Catalog and MyHostNews takes. Late-breaking pass: 2 items added. (6) Tier 2 — Liquid AI LFM2.5-230M shipped June 25 with continued coverage through June 26 from VentureBeat / AlphaSignal / Crypto Briefing / The AI Chronicle / RobotToday / Radical Data Science; 230M-parameter non-transformer (state-space + liquid-neural-network), 19T training tokens, 32k context, 213 tok/s on Samsung Galaxy S25 Ultra and 42 tok/s on Raspberry Pi 5; CaseReportBench 22.51 beats Qwen3.5-0.8B 13.83 and Gemma 3 1B 2.28 at 3.5-4.3x smaller parameter count; free for individuals and companies under $10M annual revenue. (7) Tier 2 — Alibaba Qwen team open-sourced Qwen-AgentWorld (arXiv 2606.24597, Qwen blog, Hugging Face Qwen/Qwen-AgentWorld-35B-A3B) on June 23–24 with continued coverage through June 25 from NxCode / GIGAZINE / Medium DSiYP / ai.rs; language world model that simulates seven agentic environments (MCP, Search, Terminal, SWE, Android, Web, OS) via long-CoT reasoning for offline agent training and evaluation; 35B-A3B MoE, 262k context, Apache-2, vLLM / SGLang; 397B-A17B variant scores 58.71 on AgentWorldBench (their own benchmark, also open-sourced), edging GPT-5.4 (58.25); 10M+ real-world interaction trajectories. Late-breaking items considered and filtered: GPT-5.6 Sol / Terra / Luna preview (folded into item #1 as enrichment, not a separate item); Agentic Resource Discovery (ARD) specification (Google + Microsoft + GitHub + Hugging Face + NVIDIA + Salesforce + Snowflake announced June 17 — older than 12h window, will surface in a future digest); Gemini 3.5 Pro GA quietly pushed from June to July per Polymarket / Analytics Insight (no concrete announcement, not a fresh news item); Token Factory Custom Speculator Training (no substantive practitioner read for Gabe); OpenAI Deployment Simulation safety-eval research (interesting but Tier 3 marketing-research piece); Raise Us workforce-AI $500M initiative with Gina Raimondo / Eric Holcomb (policy / philanthropy, not Gabe-relevant); Apple iOS 27 AI features (consumer product update, not Gabe-relevant Tier 1 / 2). WebFetch expected to return 403 in sandbox; sourcing done entirely via WebSearch (~12 queries). Hero images null. No Tier 1 model release surfaced in the strict overnight 12-hour window beyond the GPT-5.6 preview, which was folded into existing item."
+    },
+    {
       "run_id": "2026-06-26T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
