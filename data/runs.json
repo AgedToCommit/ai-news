@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-28T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-28T06:00:00Z",
+      "ended_at": "2026-06-28T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 14000,
+        "output_write": 5200
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-28-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-27T17:00:00Z (digest). Yesterday's pm (2026-06-27-pm.json) had 5 items — all 5 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) OpenAI IPO delay to 2027 — ENRICHED: NYT three-person sourcing has Altman calling any cut below $1T 'a nonstarter' (internal-posture language), Quartz overnight detail that SoftBank's 12% close was the sharpest single-day drop in more than three months; added TechFunding News, Quartz, BusinessToday, HNGN, crypto.news to source set; updated brief. (2) Google AI exodus — ENRICHED: Eastern Herald 'Four AI Researchers to Anthropic in a Week' cumulative reframing, with the substantive detail that three of the four moves are to Anthropic (Adler, Pritzel, Jumper) and only Shazeer is to OpenAI, signaling Anthropic is winning the specific Google-talent battle; added Shazeer's co-authorship of the 2017 'Attention Is All You Need' Transformer paper; added Eastern Herald, Yahoo Finance / IBD, Gurufocus, Digital Today to source set. (3) Mistral OCR 4 — ENRICHED: overnight adoption-signal coverage (4x faster per page than incumbent providers for high-volume IP workflows, 8x lower cost and 17x lower latency vs agentic document parsers); CodeSOTA's three-way 2026 OCR competition reframing (Baidu Unlimited OCR China, Surya 2 open source US, Mistral OCR 4 France); Mistral company €1B 2026 revenue target context; added Creati.ai, MLQ News, sakutto.ai, aimadetools.com to source set. (4) A24 / Google DeepMind — MAJOR ENRICHMENT: overnight creative-community backlash + A24 defense arc; Hollywood Reporter 'Then Fans Revolted', Gizmodo 'Wants You to Be Nice', Deadline 'Defends', Variety 'We'd rather have a seat at the table than on the sidelines'; Google DeepMind has now posted its own announcement at blog.google formalizing the deal from the lab side; The Playlist, How-To Geek added. (5) Meta Arena — ENRICHED: Forrester analyst column ('Meta Gambles With Its Trust In Prediction Markets') as canonical institutional skeptical signal; Kalshi reportedly raising at $40B valuation as sector-sizing context; TechRepublic, HTX Insights, bitcoin.com, TheStreet, Kotaku, TechCrunch, eWeek added. Late-breaking pass: 1 item added. (6) Tier 1 — Axios scoop June 27 ('Powerful Anthropic model, Fable 5, on track to return soon'); Mythos 5 cleared Friday + Fable 5 clearance expected over weekend; substantive new operational detail that Tom Brown is leading Anthropic side while Dario Amodei has taken a hands-off role to reduce friction; Lutnick (Commerce) and Bessent (Treasury) jointly helped defuse; clearance landing this weekend would resolve June 12 dual suspension just before July 2 EO 30-day cyber-defense deadline; cross-source Fortune, CNN Business, The Next Web, Benzinga, BusinessToday, Semafor June 27 follow-up. Late-breaking items considered and filtered: NVIDIA Cosmos 3 (June 1 launch — too old for late-breaking 12h window, already covered in older snapshots); Boston Dynamics + Google Cloud DeepMind Gemini Robotics-ER 1.6 in Spot (interesting but no substantive new June 27-28 development beyond general June 2026 reporting); Gemini 3.5 Pro July delay (no concrete announcement, not a fresh news item); SAP / Prior Labs acquisition (already covered in older snapshots); MiniMax M3 (June 1, too old); Simon Willison blog (no new post after June 22 'Porting Moebius 0.2B'); Karpathy (no new content). WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~7 queries). Hero images null. tier_counts 1/3/2."
+    },
+    {
       "run_id": "2026-06-27T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
