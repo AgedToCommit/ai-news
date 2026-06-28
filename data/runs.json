@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-28T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-06-28T11:00:00Z",
+      "ended_at": "2026-06-28T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 6200,
+        "output_write": 1200
+      },
+      "fetches_made": 12,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-28-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last successful run ended 2026-06-28T06:30:00Z (enrichment). Today's am file exists (6 items: 1 Tier 1, 3 Tier 2, 2 Tier 3). Sweep window: 2026-06-28T06:30:00Z to 2026-06-28T11:00:00Z. 2 new Tier 2 items added: (1) Business Insider scoop (Reuters wire) that Google has delayed Gemini 3.5 Pro to July — Pichai's 'next month' I/O commitment missed; Google citing tester-feedback refinement of coding / token efficiency / long-task performance; pairs naturally with Google talent-exodus item already in the am file; Startup Fortune explicitly connects delay to researcher departures; cross-source CryptoBriefing, Investing.com, Startup Fortune, AnalyticsInsight, NewsBytesApp, Digital Today. (2) Semgrep independent evaluation 'We have Mythos at Home: GLM 5.2 beats Claude in our Cyber Benchmarks' finds Zhipu AI's open-weight GLM-5.2 matches Mythos 5 on IDOR vulnerability-detection benchmarks (39% F1 vs Claude Code 32% F1), directly challenging the national-security containment premise of the June 12 export ban; Latent Space AI newsletter June 28 issue covers as 'GLM-5.2 is the real deal; Z.ai forecasts Open Fable by EOY'; Il Sole 24 ORE overnight European coverage 'the most powerful open-source model is Chinese and is causing concern in the West'; model available on Hugging Face as open weights. Optional re-pass: Tier 1 Fable 5 item updated with Day 16 status note (still suspended as of 7am EDT, isfableback.org / Manifold / Polymarket tracking, Cryptopolitan 'close to restoring' framing, no formal announcement). WebFetch returns 403 in sandbox; sourcing entirely via WebSearch (12 queries). Hero images null. No trimming needed (all entries within 90-day window). Updated tier_counts: 1/5/2; item_count: 8."
+    },
+    {
       "run_id": "2026-06-28T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
