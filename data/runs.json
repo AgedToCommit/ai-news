@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-29T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-29T06:00:00Z",
+      "ended_at": "2026-06-29T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 12000,
+        "output_write": 4400
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-29-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-28T17:00:00Z (digest). Yesterday's pm (2026-06-28-pm.json) had 5 items — all 5 surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Sebastian Raschka 'Using Local Coding Agents' — ENRICHED: surfaced Cohere's North Mini Code 1.0 (June 9 release, 30B-A3B MoE, Apache 2.0 license, single-H100 FP8 deployable, 256K context, Artificial Analysis Coding Index 33.4 vs Qwen3.6's 35.2) as the closest substantive open-weight alternative with permissive licensing; Raschka's companion June 24 'North Mini Code Agentic Coding Note' surfaces the license/quality/hardware trade-off; added Cohere HF blog, slashdot comparison, aimadetools MoE coding showdown, Raschka's North Mini Code companion note to source set. (2) OpenAI/Cerebras 750 tps — ENRICHED: VentureBeat / Constellation Research overnight detail that initial Cerebras-hosted GPT-5.6 Sol preview is gated to ~20 trusted partner organizations whose participation has been formally shared with the US government, pending continued sign-off; substantively narrows the 'frontier intelligence at unprecedented speed' framing from general-customer-relevant to narrow-cohort-only; added VentureBeat, Constellation Research, DataCamp to source set. (3) AI and Liability German court ruling — ENRICHED: court case identifier Regional Court of Munich case 26 O 869/26 first-instance ruling decided May 28 2026; substantive case background two Munich publishers falsely tied to scams/subscription traps/dubious business practices; substantive publisher-vs-carrier legal mechanism (AI Overviews exercise editorial discretion 'like a newspaper article'); Google confirmed appeal June 12 so first-instance is being tested; added Schneier's 'human writers' normative argument (allowing AI-did-it defense creates disastrous incentives); added The Decoder, ERP Today, TechTimes, TheNextWeb, Transparency Coalition (full decision text) to source set. (4) AI Engineer World's Fair — ENRICHED: Day 1 (June 29) Workshop Day schedule detail — 10 rooms workshops 9am-1pm, Lunch & Learn 1:15-2:15pm; headline practitioner-relevant session Together AI 'Open-source inference engineering for the agentic era' Track 8 9-11am (substantively pairs with Raschka local-coding-agents item); Welcome Reception Grand Hall 7-9pm; Hornet.dev evening retrieval-systems event 5-9pm; kids-and-coding Arduino+Claude+Godot workshop; added Together AI workshop landing, AI Engineer official Day-1 schedule to source set. (5) The Hill Fable 5 lessons — MAJOR ENRICHMENT: substantive procedural counter-update from same news cycle — Lutnick June 26 letter to Tom Brown formally clears Mythos 5 for ~100 Project Glasswing partners (Apple, Google, Cisco, Nvidia, Microsoft), bypassing standard export-license requirements; SK Telecom specifically excluded over SK Group's Chinese semiconductor/energy interests; Tom Brown led negotiation, Dario Amodei deliberately reduced his role to reduce friction; Fable 5 general restoration still pending Pentagon/NSA sign-off as of June 28; reframes policy debate from one-sided 'no framework' critique to dueling reads (Hill's normative critique vs Mythos 5 procedural counter-evidence); added Fortune, MLQ News, NBC News, BusinessToday, Yahoo News, TheNextWeb, explainx.ai Day-16 tracker to source set. Late-breaking pass: 0 items added. No fresh Tier-1 lab announcements landed in 12h pre-2am EDT window — Mythos 5 clearance already woven into Fable 5 enrichment, GPT-5.6 Sol details already in Cerebras enrichment, OpenAI Jalapeño chip (June 24) too old, Microsoft 365 Copilot Wave 3 already covered in prior snapshots, Boston Dynamics+Gemini Robotics-ER 1.6 no fresh development beyond general June 2026 reporting; conservative no-add decision rather than promote-stale-news. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~9 queries). Hero images null (no new visuals surfaced overnight). tier_counts 0/3/2."
+    },
+    {
       "run_id": "2026-06-28T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
