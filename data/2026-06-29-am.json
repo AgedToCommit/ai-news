@@ -2,12 +2,13 @@
   "snapshot_id": "2026-06-29-am",
   "snapshot_type": "am",
   "calendar_date": "2026-06-29",
-  "generated_at": "2026-06-29T06:30:00Z",
-  "generated_at_local": "2026-06-29T02:30:00-04:00",
+  "generated_at": "2026-06-29T12:00:00Z",
+  "generated_at_local": "2026-06-29T08:00:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-06-29T06:30:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-06-29T06:30:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh",    "ran_at": "2026-06-29T12:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 0, "2": 3, "3": 2 },
+  "tier_counts": { "1": 0, "2": 3, "3": 3 },
   "items": [
     {
       "id": "sebastian-raschka-using-local-coding-agents-open-weight-harness-june-27-2026",
@@ -148,6 +149,30 @@
         { "source": "Fortune — Anthropic's Mythos 5 AI model cleared by U.S. for wider use", "url": "https://fortune.com/2026/06/27/anthropic-mythos-5-ai-model-us-commerce-department-clearance-fable/", "take": "Substantive procedural-detail reference — canonical for the Lutnick-to-Brown letter, the ~100-partner Project Glasswing clearance scope, and the 'Fable 5 still pending' framing." },
         { "source": "MLQ News — Trump Administration Lifts Mythos 5 Blackout, Clears Anthropic Model for 100+ US Partners", "url": "https://mlq.ai/news/trump-administration-lifts-mythos-5-blackout-clears-anthropic-model-for-100-us-partners/", "take": "Substantive overnight news reference — useful for the Lutnick stated-reasoning quote ('appropriate safeguards are in place') and the Project Glasswing-bypass-standard-licensing detail." },
         { "source": "explainx.ai — When Will Fable 5 Return? Day 16 — Zhipu Matches Mythos, Still No Date", "url": "https://explainx.ai/blog/when-will-fable-5-be-available-again-2026", "take": "Substantive day-by-day tracker reference — canonical for the 'Pentagon and NSA sign-off remains outstanding as of June 28' Fable 5 status detail." }
+      ]
+    },
+    {
+      "id": "samsung-sk-hynix-south-korea-ai-investment-880b-june-29-2026",
+      "tier": 3,
+      "title": "Samsung and SK Hynix unveil $880B–$1.3T AI semiconductor and data center investment plan — South Korea is orchestrating the largest single-country AI hardware commitment on record; Samsung Group alone announced 1,000 trillion won ($646B) over ten years; SK Hynix is adding new HBM fabs as part of an 800-trillion-won national semiconductor project; SK Hynix makes ~50% of global HBM supply for NVIDIA AI GPUs",
+      "summary": "Bloomberg reported on June 28–29, 2026 (confirmed by CNBC June 29) that South Korea is orchestrating AI infrastructure investments totaling at least 1,350 trillion won ($880 billion), potentially reaching $1.3 trillion, from Samsung and SK Hynix. Samsung Group announced a 1,000 trillion won ($646 billion) decade-long blueprint spanning AI semiconductor fabrication plants, AI data centers, advanced packaging, batteries and displays — including roughly 300 trillion won for new fabs in southwestern South Korea, 360 trillion won for the Yongin semiconductor cluster, and more than 350 trillion won for AI data centers. SK Hynix's contribution is two new HBM semiconductor fabs in South Korea's southwest as part of an 800-trillion-won national semiconductor ecosystem project. The combined planned investment exceeds South Korea's entire annual government budget of 728 trillion won and approaches half the country's GDP. SK Hynix makes approximately 50% of the world's High Bandwidth Memory (HBM) — the specific memory architecture that enables NVIDIA's H100, H200, and Blackwell GB200 AI GPUs to function at training scale. New HBM fabs are the physical supply-side answer to AI compute demand through 2030. Samsung's AI data-center commitment of more than 350 trillion won complements the NAVER-NVIDIA DSX partnership announced June 9 (55MW initial deployment at the GAK Sejong hyperscale data center, scaling to 100MW in the second half of 2027, 200MW in 2028, stated long-term target of 1GW by 2030). The planned investment totals exceed South Korea's entire annual government budget and approach half of the country's GDP. South Korea's government is coordinating the investment as a deliberate national strategy to position Korea as the trusted AI infrastructure alternative for allied nations in the post-Huawei-sanctions environment.",
+      "link": "https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html",
+      "why_it_matters": "Worth noting as the Asia overnight story that explains where the physical AI infrastructure underpinning every model and tool in this snapshot is going to come from over the next decade. Three threads. First, the substantive 'SK Hynix is the AI chip supply chain' read. SK Hynix produces approximately 50% of global HBM — the specific memory type that makes NVIDIA's AI training GPUs work at scale. Without HBM capacity expansion, AI training cluster growth stalls. The new HBM fabs in this announcement take 3–5 years to come online, but the capital commitment made this morning is what backs AI compute capacity projections through 2030. For the broader AI-infrastructure conversation, this is the supply-side answer to the recurring GPU-shortage question. Second, the substantive 'Korea is positioning as the non-China AI hardware backbone' read. The announcements are explicitly strategic — Korean AI hardware supply in the post-Huawei-sanctions, post-NAND-export-restriction environment. The NAVER-NVIDIA DSX partnership (announced June 9) is the enterprise-services layer on top of this hardware foundation. Combined, these commitments represent South Korea betting half its GDP on being the hardware backbone of allied-nation AI infrastructure. Third, the substantive 'what this means for AI model availability over the next 5 years' read. The cyclical AI chip shortage that constrained the 2024–2025 training market is a solvable problem on a 3–5 year timeline. Samsung's and SK Hynix's commitments, combined with TSMC's Arizona fabs and CHIPS Act-funded US fab construction, collectively mean the compute bottleneck is a transitional constraint, not a permanent ceiling. For Gabe specifically, the practical read is macro-context only: none of this affects your day-to-day Python work, but it's useful background when reading claims about AI development timelines — the physical infrastructure is getting built, just on a multi-year schedule.",
+      "why_it_matters_brief": "Samsung ($646B) and SK Hynix commit $880B–$1.3T to AI semiconductor fabs and data centers over the next decade — SK Hynix makes ~50% of global HBM for NVIDIA AI GPUs, so this is the supply-side answer to AI compute capacity through 2030.",
+      "source": { "name": "Bloomberg", "type": "scrape", "url": "https://www.bloomberg.com/news/newsletters/2026-06-29/samsung-sk-hynix-to-spend-880-billion-to-maintain-korea-s-ai-edge" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-06-29T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-06-29T12:00:00Z", "by": "refresh", "change": "created — Bloomberg June 28–29 and CNBC June 29 (Daybreak Europe 6/29/2026) reporting on Samsung Group's 1,000 trillion won ($646B) decade-long AI investment blueprint and SK Hynix's new HBM fabs as part of Korea's 800-trillion-won national semiconductor ecosystem project; combined $880B–$1.3T figure is the largest single-country AI infrastructure commitment on record; SK Hynix ~50% of global HBM supply for NVIDIA AI GPUs; NAVER-NVIDIA DSX partnership provides the enterprise-services layer on top; overnight Asia story surfacing this morning; Tier 3 macro AI-infrastructure item; not in any prior snapshot" }
+      ],
+      "takes": [
+        { "source": "CNBC — South Korea says Samsung and SK Hynix investing in AI, semiconductor mega-projects", "url": "https://www.cnbc.com/2026/06/29/samsung-sk-hynix-reported-1point3-reported-trillion-spending-plans.html", "take": "Primary US-market read confirming the combined Samsung/SK Hynix scope — canonical for the $880B–$1.3T figure and the national semiconductor ecosystem framing." },
+        { "source": "Bloomberg — Samsung, SK Hynix to Spend $880 Billion to Maintain Korea's AI Edge", "url": "https://www.bloomberg.com/news/newsletters/2026-06-29/samsung-sk-hynix-to-spend-880-billion-to-maintain-korea-s-ai-edge", "take": "Primary financial-press read with the $880B headline and Samsung Group's 1,000 trillion won ($646B) decade-long blueprint breakdown." }
       ]
     }
   ],
