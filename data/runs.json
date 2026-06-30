@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-06-30T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-06-30T06:00:00Z",
+      "ended_at": "2026-06-30T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 17000,
+        "curation": 10000,
+        "output_write": 4500
+      },
+      "fetches_made": 11,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-06-30-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-29T17:30:00Z (digest). Yesterday's pm (2026-06-29-pm.json) had 2 items — both surfaced meaningful new context via overnight web search and were kept and enriched (0 dropped). (1) Anthropic Privacy Policy July 8 ID Verification — ENRICHED with three substantive overnight additions: Anthropic Help Center 'Identity verification on Claude' support article (substantively clarifies the data flow — Persona holds the ID and selfie, Anthropic accesses verification records only via Persona's platform for appeal review, makes Persona's retention and data-sharing terms the binding constraint not Anthropic's); Biometric Update June 26 'Update on identity, age verification for Claude prompts user pushback' piece (Reddit community 'overwhelmingly against this new privacy policy, viewing it as a major betrayal of trust and the beginning of Anthropic's enshittification,' Founders Fund / Persona / Peter Thiel concentration most-cited concern); substantive April-2026 precedent (multiple Claude Pro subscribers reported their accounts flagged as belonging to minors and suspended via Anthropic's automated classifiers — the substantive practitioner-relevant 'what actually triggers a verification request' detail the policy text declines to give); added Biometric Update, Anthropic Help Center, TheStreet, Cyberpress, Clearnym to source set. (2) Austria EU-host-Anthropic Pröll Letter — ENRICHED with two substantive overnight additions: European Commission's first procedural response (spokesperson Thomas Regnier confirmed receipt at midday June 29 press briefing but redirected the locating question to Anthropic itself; Virkkunen's office had not separately responded as of close-of-day Monday; substantively the Commission's 'polite acknowledgment, no substantive engagement' read); cleanest published articulation of the structural-difficulty qualifier (Dataconomy / BankInfoSecurity / TechBriefly all flag that any move of this kind 'would involve legal, competition, and security questions that no single member state can settle'); added Dataconomy, BankInfoSecurity, TechBriefly to source set. Late-breaking pass: 0 items added. Honest no-add decision rather than promote-stale-news. Reviewed and rejected: AI Engineer World's Fair Day 2 Coding Agents keynote (keynote happens later today June 30 PT, premature to add at 2am EDT before the keynote actually occurs; conference already captured in 2026-06-29-am snapshot); Mythos 5 restoration for ~100 Project Glasswing partners (Lutnick June 26 letter — already covered in 2026-06-29-am Fable 5 item enrichment); Qualcomm-Tenstorrent $8-10B advanced acquisition talks (Reuters / The Information June 15 — outside 12-hour late-breaking window, already old news as of close-of-day June 29); GPT-5.5 release (already older context, surfaced via discovery search but pre-window); Microsoft MAI announcements (June 2-3 Build 2026, weeks old); Google Gemini 3.5 Pro (delayed to July, no June 30 release event); Qualcomm Modular $3.9B all-stock acquisition (already confirmed, pre-window); OECD AI literacy framework for primary/secondary education (announced via UC San Diego summary, not a Tier-1 model release); NYC DOE AI-bias-and-equity-review requirement (governance not Tier-1 frontier); UCSD climate-model 25x-faster paper (research methodology, not model release); Tenstorrent Blackhole April-28 chip GA (too old); Shenzhen University all-fiber photonic AI platform (research paper not model release); xAI Grok 5 still training on Colossus 2 (no release event). No fresh Tier-1 lab announcements landed in the 12h pre-2am EDT window — frontier-model wire is quiet between the Sunday-evening Austria letter news cycle and Tuesday's AI Engineer World's Fair Coding Agents keynote (which lands later June 30 PT). WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~11 queries). Hero images null (no new visuals surfaced overnight). tier_counts 0/1/1."
+    },
+    {
       "run_id": "2026-06-29T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
