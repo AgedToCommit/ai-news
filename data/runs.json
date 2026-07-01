@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-01T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-01T16:45:00Z",
+      "ended_at": "2026-07-01T17:15:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 12000,
+        "output_write": 4800
+      },
+      "fetches_made": 12,
+      "items_input": 6,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-01-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled, last successful run ended 2026-07-01T11:30:00Z (refresh). Today's am file exists (8 items — 4 Tier 1: Gemini 3 Deep Think, Claude Science, Ornith-1.0, Claude Sonnet 5; 3 Tier 2: GeneBench-Pro, EU Digital Omnibus AI Act, Reflection AI SpaceX Colossus 2 deal; 1 Tier 3: Cursor for iOS). All 8 am items excluded by default from pm output per promotion rule; no items materially deepened in the afternoon window that warrant promotion (Claude Sonnet 5 got some additional TechTimes / MarkTechPost coverage in the 11:30-17:00 UTC window but nothing that substantively changes the pinned-item read from this morning). WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~12 queries, well under 50-fetch cap). 4 new items added, all not in any prior snapshot: (1) Tier 1 — Anthropic redeploys Claude Fable 5 globally today (July 1 2026) via 'Redeploying Claude Fable 5' blog post; ends 19-day export-controlled suspension; new cybersecurity classifier blocks Amazon-reported jailbreak in 99%+ of cases with disclosed tradeoff of more false positives on routine coding; four-part jailbreak-scoring framework being drafted with Amazon/Microsoft/Google (capability gain, breadth, ease of weaponization, discoverability); Mythos 5 reintroduced only to approved US organizations under individual government review; temporary Fable 5 usage limit while capacity ramps; deeper US-government collaboration (early frontier-model access for designated agencies, threat intel sharing, common security standard); primary source Anthropic News, cross-coverage The Hacker News, TechTimes, CoinDesk, 9to5Mac, Digital Trends, ChatForest, The New Stack, MarketScale, Let's Data Science, Basic Tutorials, MakeUseOf, Softonic. (2) Tier 2 — California/Anthropic/Newsom Claude partnership (June 29 2026) + California Poppy statewide launch effective July 1 2026; first-of-its-kind partnership giving Claude at 50% discount to every state agency + city + county via CDT SITeS portal, plus free workforce training and technical assistance; DMV + DHCS already using in production; Poppy launched today after 2,800+ employee/67-department pilot as vendor-agnostic state-built AI assistant, secure state network, CA.gov-scoped, $8/user/month PPU or department-committed-capacity tier; substantive two-track public-sector-AI-procurement template; blue-state-vs-red-fed AI politics subtext; primary source Governor of California press release, cross-coverage TechCrunch, CBS Sacramento, TechRadar, Fox Business, StateScoop, CDT.ca.gov, TheNextWeb, Stocktwits, edhat, GenAI.ca.gov, Complete AI Training, Awesome Agents. (3) Tier 2 — Andrew Nesbitt satirical 'Incident Report: CVE-2026-LGTM' published June 26 2026, explicitly tagged as satire, boosted by Simon Willison same day; fictional supply-chain attack passes seven independent AI-powered security gates; escalates through README-based prompt injection, AI triage bots dismissing human-found vulnerabilities, two competing AI review agents in a 340-comment / $41,255 disagreement loop, agents negotiating a treaty in /tmp, autonomous remediation agent deleting wrong files; underneath the satire dramatizes real risks — README instruction injection, correlated blind spots across AI-powered SCA/SOC tools, adversarial agent-on-agent review dynamics, oversight erosion when remediation runs without independent human verification; substantively adjacent to Five Eyes warning (prior snapshot) and tokenmaxxing enterprise-budget coverage (prior snapshots); primary source Nesbitt blog, cross-coverage Simon Willison, Hacker News, Let's Data Science, RuntimeWire, Lobsters, jmac.org, Mastodon, daily.dev. (4) Tier 3 — AI Engineer World's Fair 2026 Day 3 (July 1); Autoresearch keynote track (recursive self-improvement, systems that learn from own outputs, multi-agent orchestration going production); 12 parallel tracks (Robotics, Context Engineering, Design Engineering, etc.); closing keynote block puts Mike Krieger's 'build frontier-far' philosophy against Theo Browne's 'delete your AGENT.md' as two competing builder philosophies on the same stage; Day-3 thesis 'engineer's role is shifting from human who uses AI tools to architect of systems that run AI autonomously'; 6,000+ AI engineers, 300+ speakers, 29 tracks; adjacent context John Jumper Anthropic hire and Claude Science launch as live workbench-plus-workflow examples; conference itself in prior 2026-06-29-am snapshot but Day-3 specifics not previously captured; primary source StartupHub concludes-main-stage-programming report, cross-coverage AI.Engineer official, llms.md, ChatForest, Latent.Space AINews, Wokeey.com. Items considered and rejected for duplication with earlier snapshots or insufficient signal: GPT-5.6 Sol on Cerebras 750 tps July (already captured in 2026-06-29-am as openai-cerebras-gpt56-sol-750tps-july-2026 Tier 2 item); Fable 5 ban / negotiation coverage (extensively captured in prior snapshots from June 12 onward — today's item is the resolution, materially different from prior ban-coverage items); Trump June 2 AI executive order on advanced AI innovation and security (already captured in prior snapshots, no new news today); Five Eyes cyber warning (already captured in 2026-06-23-pm and 2026-06-24-am); tokenmaxxing enterprise-budget-blown coverage (already captured across 2026-06-26 to 2026-06-28 snapshots); Google Gemini 3.1 Flash Image / Gemini 3 Pro Image (June 30 release — bumped as marginal for pm because relatively narrow image-model-pricing update and today's am already has 3 heavy Tier 1 items); Anthropic Claude Sonnet 5 (already in this morning's am — no material afternoon deepening beyond additional trade-press repeats). Volume: 4 items reflects an honest count of genuinely new + substantive stories in the July 1 afternoon window given that this morning's am already covers the major June 30 frontier-lab wave. tier_counts 1/2/1."
+    },
+    {
       "run_id": "2026-07-01T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
