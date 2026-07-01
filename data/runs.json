@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-01T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-01T11:00:00Z",
+      "ended_at": "2026-07-01T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 31000,
+        "curation": 6800,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 8,
+      "items_added": 3,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-01-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last successful run ended 2026-07-01T06:30:00Z (enrichment). Today's am file exists (5 items: 3 Tier 1, 1 Tier 2, 1 Tier 3). WebFetch returns 403 in sandbox; sourcing via WebSearch (9 queries, within 20-fetch cap). RSS/scrape sweep found no strictly-new content published after 06:30 UTC today. Three items missed by digest and enrichment phases surfaced and added: (1) Tier 1 — Claude Sonnet 5 (Anthropic, June 30 2026) — released same day as Claude Science at AI for Science Briefing; new default for Free/Pro plans; beats Opus 4.8 on Terminal-Bench 2.1 (80.4% vs 74.6%), nearly matches on knowledge work GDPval-AA v2 (1,618 vs 1,615); intro pricing $2/$10 through August 31, then $3/$15; TechCrunch framing 'cheaper way to run agents'; primary source Anthropic News, cross-coverage TechCrunch, VentureBeat, MacRumors, TechTimes, MarkTechPost. (2) Tier 2 — EU Digital Omnibus AI Act simplification (Council final approval June 29 2026, Parliament endorsed June 16) — not in any prior snapshot; postpones high-risk AI compliance from August 2026 to December 2027 (Annex III) / August 2028 (Annex I); adds Article 5 NCII/nudification ban from December 2026; August 2 2026 GPAI penalty powers unchanged; primary source EC press corner, cross-coverage Gibson Dunn, TechPolicy.Press, White & Case, DLA Piper. (3) Tier 2 — Reflection AI / SpaceX Colossus 2 compute deal (signed June 22 2026, effective July 1 2026) — not in any prior snapshot; $150M/month for Nvidia GB300 chips at Colossus 2 Memphis through end of 2029 ($6.3B total); Reflection AI (two ex-Google DeepMind founders, Nvidia-backed, $25B valuation) positioning as American open-source DeepSeek alternative with DoE/Pentagon ties; 90-day exit clause; Nvidia on both sides as investor and chip supplier; SpaceX's 4th major Colossus compute deal; primary source CNBC, cross-coverage TechCrunch, Axios, TechFundingNews, MLQ News. No re-pass on existing Tier 1 items (Gemini 3 Deep Think, Claude Science, Ornith-1.0) — all were thoroughly enriched in the 2am run with no significant new chatter found. tier_counts updated: 3→4 Tier 1, 1→3 Tier 2, 1 Tier 3 unchanged."
+    },
+    {
       "run_id": "2026-07-01T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
