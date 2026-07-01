@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-01T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-01T06:00:00Z",
+      "ended_at": "2026-07-01T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 13000,
+        "output_write": 5200
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-01-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled, last successful run ended 2026-06-30T17:30:00Z (digest). Yesterday's pm (2026-06-30-pm.json) had 4 items — all 4 surfaced substantive new context via overnight web search and were kept and enriched (0 dropped). (1) Google Gemini 3 Deep Think — ENRICHED with two concrete early-tester case studies Google highlighted at launch: Lisa Carbone (Rutgers mathematician) using Deep Think to catch a subtle logical flaw in an already peer-reviewed mathematics paper, and Wang Lab at Duke using Deep Think for crystal-growth fabrication optimization for semiconductor-materials discovery; added the June 30 three-lab-convergence-on-scientific-research framing (Gemini 3 Deep Think + Claude Science + GeneBench-Pro all same day). (2) Anthropic Claude Science — SUBSTANTIVELY ENRICHED with post-launch product details (60+ pre-configured scientific databases, 3D protein / genome-browser / chemistry renderers, auditable rerun history, local macOS/Linux or SSH/HPC deployment), two named beta customers (Manifold Bio target-nomination workflow with Mike Nichols quote; Allen Institute neuroscientist Jérôme Lecoq's multi-agent review template with ~20 skills — throughput from one review per two years to ~10 in flight past 100 pages), the AI for Science program terms (up to 50 projects, up to $30K Anthropic credits each + up to $2K Modal compute, apps through July 15, awards July 31, projects Sept 1 - Dec 1, biomedical postdoc/grad focus), TechCrunch 'workflow, not a new model' strategic framing, and explicit clarification that Claude Science runs same Opus 4.8 / Sonnet 4.6 / Haiku 4.5 with no gating; updated source link from event page to canonical anthropic.com/news post; added TechCrunch, Claude.com product page, HPCwire, The Decoder, LetsDataScience, GetAIPerks, BeInCrypto, Yahoo Tech to source set. (3) DeepReinforce Ornith-1.0 — ENRICHED with (a) Simon Willison hands-on report — 35B GGUF Q4_K_M (20GB) running locally on RTX 4090 via LM Studio at 103 tokens/sec, hooked to Pi coding harness, initial impressions 'very good' with 'able to run the agent harness over many tool calls in a proficient way'; (b) Hacker News thread 144 points trending June 30 with well-founded skepticism and DeepReinforce author Fernando engaging in good faith; (c) two important qualifiers on benchmark numbers — all Ornith scores self-reported with independent verification pending, AND March 2026 research found ~19.78% of SWE-bench top-30 patches semantically incorrect with 32%+ solution leakage; (d) sharpened positioning — 397B tops Opus 4.7 but NOT Opus 4.8 or GLM-5.2-744B; added HackerNews thread, ByteIota, TestingCatalog, DeepReinforce official blog to source set. (4) Cursor for iOS — ENRICHED with 2.3M-views-in-hours launch-tweet mainstream-attention signal; updated source link from changelog to canonical Cursor blog post ('Build from anywhere with Cursor for iOS'); added merge-PRs-on-the-go / review-diffs-from-phone as explicit features; added TechRepublic, Korben, TestingCatalog, StartupHub, TechGenyz to source set. Late-breaking pass: 1 item added. Tier 2 — OpenAI released GeneBench-Pro June 30 2026 — a research-level benchmark for AI agents in computational biology; 129 synthetic problems across genomics, quantitative biology, translational medicine; deterministic grading from known causal structure (substantive methodological contribution sidestepping rubric variability); GPT-5.6 Sol 28.7% highest reasoning / 31.5% Pro mode (up sharply from <5% for GPT-5 on original GeneBench); AlphaSignal framing 'Top AI Fails Real Biology 70% of the Time' — substantive corrective to the same-day Gemini 3 Deep Think and Claude Science headline numbers; same-day parallel move with Anthropic Claude Science and Google Gemini 3 Deep Think — the June 30 three-lab-convergence on scientific research; primary source OpenAI blog, cross-source AlphaSignal, BeInCrypto, LetsDataScience, Cryptobriefing, Investing.com, Silicon Report, TechFocus24; not in any prior snapshot. Reviewed and rejected: AI Engineer World's Fair Day 2 Software Factories keynote (Warp/DeepMind Zach Lloyd + Paige Bailey fireside chat July 1 — no substantive model release announcement surfaced overnight, still trade-show event coverage); OpenAI GPT-5.6 Sol/Terra/Luna (previewed June 26, still gov-vetted-partners-only, no public release event); Gemini 3.5 Pro (delayed to July, no new news); Grok 5 still training on Colossus 2 (no release). WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (~8 queries — well under 30-fetch cap). Hero images null (no new visuals surfaced overnight). tier_counts 3/1/1."
+    },
+    {
       "run_id": "2026-06-30T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
