@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-02T11:22:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-02T11:00:00Z",
+      "ended_at": "2026-07-02T11:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 6000,
+        "output_write": 2400
+      },
+      "fetches_made": 17,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-02-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled, last successful run ended 2026-07-02T06:15:00Z (enrichment). Today's am file (2026-07-02-am.json) existed — standard path. RSS/scrape sweep filtered to last 5 hours (since 2026-07-02T06:15:00Z). WebFetch returns 403 in sandbox per prior run notes; sourcing done entirely via WebSearch (17 queries, under 20-fetch cap). Candidate sweep found: (A) Claude Code steganographic fingerprinting rollback (v2.1.197, shipped early July 2) — discovery June 30 via thereallo.dev binary reverse-engineering, broke to 605-pt HN thread July 1, rollback to npm early July 2 with no changelog entry; not in any prior snapshot (missed by both June 30 and July 1 digests); added as new Tier 2 item; (B) AIEWF Day 4 now complete — confirmed Steve Yegge + Dru Knox as Harness Engineering keynote speakers with specific framing ('context engineering, evaluation, testing, observability, guardrails'); added minor revision to existing AIEWF item noting completion. Candidates evaluated but not added: Claude Sonnet 5 (June 30, already in 2026-07-01-am), EU-Japan AI cooperation (May 5, too old), Anthropic/Google/Broadcom compute deal (April, too old), Anthropic $30B run-rate (April, too old), Grok 4.3 on Bedrock (June 15-16, in prior snapshot), OpenAI GPT-5.6 Sol/Terra/Luna (June 26, in prior snapshot), EU Digital Omnibus (June 29, in 2026-07-01-am). Hero images uniformly null (WebFetch returns 403). URLs from search indexes; not individually verified for 200 OK. Final: 1 item added, 4 kept, 0 dropped, 5 total in am snapshot."
+    },
+    {
       "run_id": "2026-07-02T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
