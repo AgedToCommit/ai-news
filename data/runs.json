@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-03T11:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-03T11:00:00Z",
+      "ended_at": "2026-07-03T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 6000,
+        "output_write": 3200
+      },
+      "fetches_made": 10,
+      "items_input": 1,
+      "items_output": 10,
+      "items_added": 1,
+      "items_kept": 9,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Last successful run ended 2026-07-03T06:30:00Z (enrichment). Today's am file (2026-07-03-am.json) confirmed present with 9 items (0 Tier 1, 7 Tier 2, 2 Tier 3). WebFetch returns 403 in sandbox per prior run notes; all sourcing via WebSearch (10 queries). RSS/scrape sweep since 06:30 UTC. Overnight Asia/Europe cycle produced no notable fresh model releases or lab announcements in the 5-hour window. No Tier 1 items in the snapshot so the optional re-pass (step 4) was skipped. One item added: BLS Employment Situation for June 2026 (released July 3 2026 at 8:30am EDT = 12:30 UTC), well within the refresh window. Substantive item: 57,000 nonfarm payrolls added in June vs. ~115K consensus; unemployment 4.2%; April/May revised down combined 74K; AI-attributed job cuts per Challenger data at 87,714 YTD (22% of all 2026 cuts, already above full-year 2025 total of 54,836); AI led all stated cut reasons in May at 38,579 (40% of May total); tech sector layoffs 142K YTD; BLS demographic supplemental shows AI-exposed-occupation 22-25 cohort shrinking 3.8%/yr; Tier 2 macro data point directly anchoring the CAIS RLI story already in the snapshot. Items considered and not added: (1) John Jumper (AlphaFold Nobel laureate) joining Anthropic — announced June 19, 14 days before refresh window; ongoing coverage but no new development today; not in any prior snapshot but outside 5-hour filter; recommend covering in a future digest or enrichment pass if new developments land. (2) GPT-5.6 Sol/Terra/Luna preview — announced June 26, 7 days old; limited to ~20 gov-vetted partners; broad access expected mid-to-late July; outside the 5-hour window. (3) Grok 4.3 on Amazon Bedrock — announced June 15/16; too old. (4) Holo3.1 by H Company — released June 2; too old. (5) EU AI Act simplification package council approval — June 29; Digital Omnibus story already covered in 07-01 am snapshot. (6) No new model releases from Chinese labs (ByteDance, Baidu, Alibaba) in the overnight window for July 3. tier_counts updated to 0/8/2, item_count to 10."
+    },
+    {
       "run_id": "2026-07-03T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
