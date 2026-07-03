@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-03T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-03T06:00:00Z",
+      "ended_at": "2026-07-03T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 13000,
+        "output_write": 4600
+      },
+      "fetches_made": 11,
+      "items_input": 9,
+      "items_output": 9,
+      "items_added": 0,
+      "items_kept": 9,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-03-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-02T17:20:00Z (digest). Yesterday's pm (2026-07-02-pm.json) had 9 items (7 Tier 2, 2 Tier 3) — all 9 surfaced meaningful overnight context via web search and were kept and enriched (0 dropped). Runtime note: the initial clone was ~4 days stale (last snapshot 2026-06-29-am) and I initially prepared a mini-digest fallback under the assumption yesterday's pm didn't exist; on push the remote rejected non-fast-forward, `git fetch origin main` surfaced the 06-30 / 07-01 / 07-02 phase runs that had landed in the meantime, I discarded the fallback commit locally via `git reset --hard origin/main`, re-read 2026-07-02-pm.json properly, and ran the standard prune+enrich pass — no bad state was committed or pushed. Enrichment findings by item: (1) Claude apps gateway — ENRICHED: Futurum Group Mitch Ashley analyst quote crystallized ('Enterprise identity, policy, cost attribution, and spend caps now ship as first-party infrastructure for Claude Code'), reframing the gateway as Anthropic collapsing a third-party-enterprise-tooling category into its own product surface. (2) Together AI $800M — ENRICHED: total capital raised $1.3B figure, Tech Funding News Aramco-as-sovereign-wealth-betting-on-compute-not-models framing, 'late-stage investors are now pricing open-weight inference platforms as core production infrastructure' market read. (3) Grok Voice Agent Builder — ENRICHED: xAI blind-eval-vs-OpenAI-Realtime claim (Grok 'consistently rated preferred' on pronunciation/accent/prosody across 7 languages), honest early-developer pain points (ephemeral-key onboarding wall, no local/self-hosted option, one-misheard-word-adds-wrong-item warning), tweaked why_it_matters to carry those caveats. (4) Meta Compute — MAJOR ENRICHMENT: July 1 close numbers (Meta +9%, CoreWeave and Nebius each -12%, chip stocks Micron/Nvidia/Broadcom/AMD/Marvell/Intel/ASML/TSMC all lower), 'winners are datacenter owners, not model providers' analyst framing, market-priced-signal read added. (5) Hugging Face + Cerebras voice pipeline — ENRICHED: 1,851 tokens/sec Gemma 4 31B throughput on Cerebras (roughly 35× GPU speed, first multimodal on wafer-scale hardware) as mechanical anchor for the P95-tail-latency claim, added to why_it_matters. (6) Google Genkit / ADK 2.0 — ENRICHED: honest developer reception ('genuinely exciting but bleeding-edge, expect some patching, memory-management/compression/plugin adjustments needed') flagged in summary and why_it_matters. (7) CAIS Remote Labor Index — LIGHT ENRICHMENT: no substantive new commentary landed in the 12h window (leaderboard held, no counter-benchmark, the Ethan Mollick / Simon Willison overnight threads touched Sonnet 5 not RLI); kept intact with a revision entry recording the check. (8) TwelveLabs $100M — ENRICHED: Marengo 3.0 detail (compact embeddings, 4-hour video support at 2× Marengo 2.7's length, GA on Amazon Bedrock plus direct-from-TwelveLabs), AWS-as-preferred-cloud multi-year commitment and Trainium-optimization deal landed alongside the funding, sharpened why_it_matters with the 'Amazon's answer to Google's own video AI' market-structure framing, added AWS press-center take. (9) UBTECH UWORLD U1 — ENRICHED: 20+ emotion recognition at 90%+ accuracy with ~500ms response time, three-layer privacy architecture (local-first processing, minimal cloud dependency, user-controlled hardware safeguards) with encrypted local storage by default, and the honest overnight framing that highly anthropomorphic consumer robots reopen safety-envelope / household-hazard / conversational-state / disclosure regulatory questions industrial deployments avoided, added Interesting Engineering take. Late-breaking pass: 0 items added. Considered and rejected: Claude Sonnet 5 launch (June 30) — already covered in 07-01 am and referenced in 07-02 pm items; Fable 5/Mythos 5 export controls lifted (June 30) — already covered in 07-01 am and referenced 6× in 07-02 pm items; Anthropic Sonnet 5 BrowseComp benchmark correction (July 2 addendum) — small self-correction on an already-covered story, no substantive new claim, not enough to warrant a standalone item; White House frontier-model voluntary standards framework (August 1 EO deadline) — the EO is the June 2 order, no substantive net-new news in the 12h window despite Fable 5/Mythos 5 news cycle; Meta Muse Spark tie-in via Meta Compute — already woven into the Meta Compute item enrichment. Conservative no-add decision rather than promote-stale-news. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (11 queries). Hero images null across all items (no reliable og:image fetch in sandbox — WebFetch blocked). tier_counts held at 0/7/2."
+    },
+    {
       "run_id": "2026-07-02T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
