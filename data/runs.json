@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-04T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-04T17:08:00Z",
+      "ended_at": "2026-07-04T17:15:00Z",
+      "wall_time_ms": 420000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 14000,
+        "output_write": 5200
+      },
+      "fetches_made": 15,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-04-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled. Today's am file exists (11 items) — all excluded by default per promotion rule (no am items materially deepened enough to warrant promotion). Since-filter: 2026-07-04T11:00:00Z (last successful refresh run). WebSearch-only sourcing (WebFetch returns 403 in sandbox). 15 web searches across discovery sweeps for Anthropic/OpenAI/Google/coding-tools/research/July-3-4-specific keywords. July 4 US Independence Day — lighter US news cycle as expected; picked up international and open-source content plus a Pentagon-litigation story unsealed July 2. Items added: (1) Anthropic-Pentagon unsealed court emails (Tier 1) — July 2 unsealing in ND Cal reveals Amodei-Michael exchange, Pentagon undersecretary Emil Michael's xAI stock disclosed at $500K-$1M sold for $5M-$25M during negotiation, 'all lawful uses' framing would have voided Anthropic's no-mass-domestic-surveillance and no-fully-autonomous-weapons red lines, Feb 27 Hegseth designation of Anthropic as supply-chain risk (first time applied to a domestic US company). (2) Anthropic Chinese-access loopholes crackdown (Tier 2) — FT July 3 scoop on Ant Financial Singapore subsidiary, ByteDance VPN reimbursements, Azure foreign-shell entities, timezone/usage-pattern fingerprinting, transfer-station targeting, live-selfie + government-ID verification; MEDIANAMA transfer-station-economy explainer; complementary to the Claude Code steganography item already in today's am snapshot. (3) Vercel Agent Runs in MCP + CLI (Tier 2) — July 3 changelog ship, list_agent_run_projects/list_agent_runs/get_agent_run/get_agent_run_trace tool surface, --json + markdown-when-piped design; practitioner-relevant for Gabe's agent-architecture curiosity. (4) Meta Brain2Qwerty v2 non-invasive brain-to-text (Tier 2) — June 30 Nature Neuroscience paper, 61% word accuracy / 78% best participant, 7.6× jump over prior 8% non-invasive best, log-linear scaling with data volume, code + BCBL dataset release. (5) Z.ai ZCode agentic coding IDE (Tier 2) — July 2 launch, free desktop client, Lite $16.20/mo + Max $144/mo hosted tiers, API $1.40/$4.40 per M tokens vs Claude Opus $5/$25, MIT-licensed GLM-5.2 weights, July 4 TechTimes angle on Chinese-cybersecurity-law-applies-to-every-API-call jurisdiction tradeoff; substantive coding-agent-category economics story directly relevant to Claude Code users. Items considered but not added: Grok 4.5 SpaceX/Tesla private beta (June 28 — outside since-filter, refresh had already skipped); Claude Sonnet 5 launch (June 30 — already covered extensively in prior snapshots); Claude Science drug discovery (June 30 — already covered); Anthropic $965B IPO filing (June 1 — well outside window); Meta Zuckerberg agents-slow + Watermelon comments (already in am file). Promotion rule: no am items promoted — none materially deepened during the day. tier_counts: 1 tier-1 / 4 tier-2 / 0 tier-3."
+    },
+    {
       "run_id": "2026-07-04T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
