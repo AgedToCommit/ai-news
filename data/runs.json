@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-05T11:48:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-05T11:00:00Z",
+      "ended_at": "2026-07-05T11:48:00Z",
+      "wall_time_ms": 2880000,
+      "tokens_used": 35200,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7200,
+        "output_write": 4500
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 9,
+      "items_added": 3,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-05-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Last enrichment ended 2026-07-05T06:00:00Z. Since-filter window (06:00–11:00 UTC July 5, 2026): Sunday morning, genuinely quiet — no major lab blog posts with explicit post-06:00 UTC July 5 timestamps found. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (8 queries). Items added: (1) UN Independent International Scientific Panel on AI — Preliminary Report (Tier 2, Global) — 'Control is not guaranteed' (Maria Ressa), no known technical guarantees for consistent AI agent instruction-following, sycophantic AI linked to documented deaths, 1 billion weekly AI users, US 75% of top-500 AI supercomputer compute; Yoshua Bengio + Maria Ressa co-chairs; 40-member panel from 140 countries; released July 1 by UN Secretary-General Guterres; companion and scientific anchor to the UN Global Dialogue item already in the am file; not in any prior snapshot (grep confirmed). (2) Simon Willison 'Better Models: Worse Tools' (Tier 2, Global) — published July 4 2026; Opus 4.8 and Sonnet 5 hallucinate extra fields in tool call JSON schema arguments (inventing keys in edits[] array) causing Pi's edit tool to reject calls even when the edit itself is correct; older models did not show this; paradox of better reasoning, worse schema compliance; directly actionable for Python devs using Claude tool calling; not in any prior snapshot (grep confirmed). (3) AI for Good Global Commission (Tier 2, Global) — UN + ITU launched July 1 2026; co-chairs Marc Benioff (Salesforce CEO) + Paul Kagame (Rwanda President); founding members Jensen Huang, Andy Jassy, Brad Smith, Jack Clark (Anthropic), Aidan Gomez; first UN governance body to seat frontier-lab CEOs alongside heads of state; inaugural meeting July 7 in Geneva; distinct from Global Dialogue (intergovernmental) and Scientific Panel (scientific); three-track UN governance architecture; not in any prior snapshot (grep confirmed). No Tier-1 re-pass: existing Tier-1 item (Anthropic-Pentagon) was thoroughly enriched by the 2am run with Judge Rita Lin's July 4 order; no substantive new July 5 morning development found. Hero images null across all items (WebFetch blocked)."
+    },
+    {
       "run_id": "2026-07-05T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
