@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-05T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-05T05:35:00Z",
+      "ended_at": "2026-07-05T06:00:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 5600
+      },
+      "fetches_made": 8,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-05-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-04T17:15:00Z (digest). Yesterday's pm (2026-07-04-pm.json) had 5 items (1 Tier 1, 4 Tier 2, 0 Tier 3) — all 5 surfaced meaningful overnight context via web search and were kept and enriched (0 dropped). Enrichment findings by item: (1) Anthropic-Pentagon unsealed emails (Tier 1) — MAJOR ENRICHMENT: added Judge Rita Lin's July 4 order in Anthropic v. Department of War calling the unsealed emails 'exceedingly difficult to square' with the government's simultaneous 'hostile' and 'intolerable risk' supply-chain-risk-designation framing (first judicial framing on the credibility of the Pentagon's designation); expanded Emil Michael conflict-of-interest disclosure per WSJ/AI Weekly pickup — beyond the previously reported xAI stock, Michael held $2M–$10M of Perplexity AI stock (direct Anthropic competitor) AND had previously sat on Perplexity's board; added Axios May 7 'no resolution in sight' Pentagon-tech-chief backgrounder and Time March 11 backgrounder as additional context takes; title/summary/why_it_matters/why_it_matters_brief all updated. (2) Anthropic Chinese-access loopholes (Tier 2) — ENRICHED: Microsoft now specifically named per Spotlight on China / TheNews.pk / Borsa Italiana / FreePressJournal / Seeking Alpha July 4-5 follow-ups: Microsoft reportedly sold Azure API access to Chinese companies whose Singapore-registered entities were the buyer of record, letting mainland engineers use Claude internally through the Azure surface; added Anthropic walkback framing per July 5 reporting — by early July Anthropic had walked back some covert detection measures (July 2 Claude Code steganographic fingerprinting removal already in yesterday's am is the concrete example) after users pushed back, leaving identity-verification + transfer-station-takedown as the public two-track enforcement architecture; Ant Financial intranet-access-connected-to-Singapore-entity detail sharpened per Spotlight on China. (3) Vercel Agent Runs (Tier 2) — ENRICHED: July 4-5 ecosystem-comparison context added — eve enters a growing agent-framework ecosystem (LangGraph, CrewAI, AutoGen, Strands Agents SDK); Vercel's substantive distinguisher is bundling durable execution + sandboxed code execution + built-in evaluations + approvals + scheduling + deployment with agent-as-directory-of-files as the organizing pattern; developer skepticism captured via Vikranth Kanumuru's comment 'I don't get what is this changing from existing frameworks — are you even removing deterministic orchestration to be more unpredictable'; portability outside the Vercel runtime flagged as the open tradeoff practitioners are watching. (4) Meta Brain2Qwerty v2 (Tier 2) — ENRICHED: added The Register June 30 skeptic-anchor framing 'improves on prior projects, but still isn't great' as the substantive counter to the 8%→61% step-function framing (MEG requires room-sized magnetically-shielded environment, 9-volunteer sample small, 61% average still trails implants); added Squared Technology July 4-5 read that amplifies the same skepticism while flagging the log-linear scaling curve as the substantive counter; sharpened the GitHub code-release detail (facebookresearch/brain2qwerty, convolutional-encoder + transformer + character-level-language-model architecture). (5) Z.ai ZCode (Tier 2) — ENRICHED: July 4-5 shipping-cadence detail per AI Weekly: eight public releases between June 26 and July 3, version 3.2.5 shipped July 3 (credibility signal that ZCode is not launch-and-abandon); pricing-tier clarification per Nerova and Digital Applied: three tiers not two — $16.20 Lite / $64.80 Pro (5× Lite usage) / $144 Max (20× Lite usage); 5-day free trial surface: 3M tokens/day GLM-5.2 + 2M tokens/day GLM-5-Turbo, ~1.5× effective quota for GLM Coding Plan subscribers, 0.67× off-peak, running through July 31 2026; added Tony Reviews Things and TechPlanet July 4-5 practitioner-review takes. Late-breaking pass: 1 item added. (6) UN Global Dialogue on AI Governance (Tier 2) — NEW ITEM: inaugural session opens July 6-7 in Geneva at Palexpo Convention Centre; established by UN General Assembly as first multilateral platform whose sole remit is AI governance; 193 UN Member States plus private sector, civil society, academia and technical community; co-chaired by El Salvador's H.E. Egriselda López and Estonia's H.E. Rein Tammsaar; runs back-to-back with WSIS Forum 2026 (July 6-10) and ITU AI for Good Global Summit (July 7-10) as the Geneva stack — 11,000+ participants from 169+ countries per Axios July 1 preview; primary sources UN official page + UNESCO + ITU media centre + Indico.UN + Axios exclusive. Considered and rejected for late-breaking: no dated July 4-5 Tier-1 model releases from Anthropic/OpenAI/Google DeepMind/Meta (July 4 US Independence Day, July 5 Sunday — lightest news cycle of the week as expected). Conservative one-add-only decision rather than promote-stale-news; matches yesterday's precedent. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (8 queries — 5 per-item enrichment + 2 late-breaking sweep + 1 UN-detail confirmation). Hero images null across all items (no reliable og:image fetch in sandbox — WebFetch blocked). tier_counts: 1 tier-1 / 5 tier-2 / 0 tier-3."
+    },
+    {
       "run_id": "2026-07-04T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
