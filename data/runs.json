@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-06T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-06T06:00:00Z",
+      "ended_at": "2026-07-06T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 41000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 13500,
+        "output_write": 5100
+      },
+      "fetches_made": 14,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-06-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-05T17:15:00Z (digest). Yesterday's pm (2026-07-05-pm.json) had 3 items (0 Tier 1, 2 Tier 2, 1 Tier 3) — all 3 surfaced meaningful overnight context via web search and were kept and enriched (0 dropped). Enrichment findings by item: (1) Tesla AI spending cap (Tier 2) — MATERIAL ENRICHMENT: reframed the Grok/Composer exemption via three new details: (a) Composer is Cursor's coding model, and SpaceX is reportedly on track to close its $60B all-stock Anysphere acquisition this quarter (announced June 16 per CNBC/Forbes/QZ) — so the exemption substantively funnels engineers into the emerging Musk-owned AI stack more broadly than just xAI; (b) Andrew Milich, the xAI product lead running Tesla-internal feedback discussions in Teams channels, is a Cursor co-founder poached by xAI/SpaceX in March 2026 (per The Information/Basenor/MLQ/FinTech Weekly), he and Jason Ginsberg together took Cursor to $2B ARR; (c) Musk sent a company-wide email personally encouraging Tesla employees to try Composer as part of the March-July internal push. (2) Hugging Face transformers v5.13.0 (Tier 2) — ENRICHED with substantive Moonshot-cadence caveat: Kimi K2.5 native support in v5.13.0 lands with Moonshot itself already two versions ahead — Kimi K2.6 released April 20 2026 scaling agent-swarm to 300 sub-agents and 4,000 coordinated steps per MarkTechPost, and Kimi K2.7-Code released June 2026 (coding-focused per Nerova); v5.13.0's Kimi path is the on-ramp, not the frontier; also added honest calibration on how the HfExporter changes the runtime choice (cheaper-to-change-your-mind rather than answer-the-question). (3) Musk 'Done with Grok Imagine' X post (Tier 3) — MATERIAL ENRICHMENT: substantively recalibrated the pm framing — Grok Imagine v1.5 is NOT pre-GA; it's been publicly on the xAI API since May 31 2026 at $4.20/min for 720p (86% below Sora 2 Pro at $30/min before Sora shut down, per TechTimes/Daily Beirut/Gagadget/Latent Space/xAI's own API launch post), and currently leads the Artificial Analysis Image-to-Video Arena on Elo — outranks Sora 2, Veo 3.1, Seedance 2.0, Kling 2.5 Turbo (per Kretschmann X post cited by TechTimes and atlascloud.ai guide); recontextualized 'done' as a version-drop / next-Aurora-update signal rather than a pre-GA milestone. Late-breaking pass: 1 item added. (4) Mistral 'fat but sparse' open-weight sparse MoE family (Tier 2, EU) — NEW ITEM: Mensch LinkedIn / TechCrunch July 4 confirmation that Mistral opens early access this month to a new open-weight sparse MoE family teased as 'fat indeed, but sparse' with broader release this summer; substantive backdrop: Fable 5/Mythos 5 US-market pull leaves customers hungrier for frontier open-weight alternative, June 12 Bloomberg/TechCrunch/SiliconANGLE ~€3B ($3.5B) funding round at ~€20B ($23B) valuation (~2× Sept 2025 Series C €11.7B mark), viral June 11-16 'Le Chaton Fat' meme (100T fake benchmark) that Mensch and Andreessen engaged with on X — the real teaser explicitly leaves the joke's shadow; architectural convergence with Kimi K2 / DeepSeek V4-Pro / GPT-5-family sparse MoE; grep confirmed not in any recent snapshot (Mistral last appeared in 07-01-am and earlier — no coverage in 07-04-pm / 07-05-am / 07-05-pm). Considered and rejected for late-breaking: June 2026 BLS jobs report (57,000 nonfarm vs. 115K consensus, AI-attribution 40% of May layoffs) — already thoroughly covered in 07-02-pm and 07-03-am snapshots per grep; White House frontier-AI voluntary-framework executive order (June 2 origin, already covered in prior snapshots); Newsom-CA-Claude 50% discount deal (search timed out — will revisit at refresh); UN Global Dialogue Geneva opens today July 6 (already in yesterday's am — will accumulate speaker/announcement material at refresh); Kimi K2.7-Code as standalone item (folded into transformers v5.13.0 item's enrichment as the substantive on-ramp-not-frontier calibration). Conservative one-add-only decision, matches recent enrichment cadence — Sunday-Monday overnight is genuinely quiet as expected. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (14 queries — 3 Tesla enrichment + 4 HF enrichment + 3 Grok Imagine enrichment + 4 late-breaking sweep). Hero images null across all items (no reliable og:image fetch in sandbox — WebFetch blocked). tier_counts: 0 tier-1 / 3 tier-2 / 1 tier-3."
+    },
+    {
       "run_id": "2026-07-05T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
