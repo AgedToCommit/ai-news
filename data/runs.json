@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-07T17:10:28Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-07T16:55:00Z",
+      "ended_at": "2026-07-07T17:10:28Z",
+      "wall_time_ms": 928000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 19000,
+        "output_write": 8000
+      },
+      "fetches_made": 14,
+      "items_input": 12,
+      "items_output": 7,
+      "items_added": 7,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-07-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest phase enabled. Last successful run ended 2026-07-07T11:45:00Z (refresh). Today's am file existed with 8 items — all excluded from pm output per digest.md promotion rule (no am item met the materially-deepened Tier-1 exception; the UN Global Dialogue item is included as a new pm item covering Day 2 closing outcomes rather than a promotion, since the outcomes are distinct new content not present in the am framing). All 6 direct WebFetch attempts returned 403 (RSS feeds + lab blogs), so ran WebSearch-heavy discovery instead (14 queries total). Strong candidates found: (1) Claude Code July 2-4 release cycle — Chrome GA v2.1.198, auto-PR from background agents, Manual permission mode default v2.1.200 — directly relevant to Gabe's Claude-Code-on-Python workflow; (2) Fortune-confirmed Anthropic $47B ARR overtakes OpenAI $25-33B — industry-structure story of the year; (3) Sysdig JADEPUFFER — first documented end-to-end LLM-driven ransomware via Langflow CVE-2025-3248; (4) Google Gemini 3.5 Pro delayed to July 17 with full base-model rebuild; (5) Mistral 'fat but sparse' MoE open-weight early access in July; (6) UN Global Dialogue Day 2 closing outcomes (AI Child Safety Pledge, 2030 renewable data-center target, Russia+US formal opposition to killer-robots negotiations); (7) SK Hynix $28B US ADR IPO — Nvidia HBM supplier, second-largest listing ever. Final snapshot: 7 items (0 T1, 5 T2, 2 T3). No dropped items."
+    },
+    {
       "run_id": "2026-07-07T11:45:00Z-refresh",
       "phase": "refresh",
       "status": "success",
