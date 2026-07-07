@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-07T06:22:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-07T06:00:00Z",
+      "ended_at": "2026-07-07T06:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 47000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 15200,
+        "output_write": 5300
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 1,
+      "snapshot_written": "2026-07-07-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-06T17:00:00Z (digest). Yesterday's pm file (2026-07-06-pm.json) had 6 items — enrichment ran a targeted WebSearch sweep (10 queries total). Sub-task 1 prune+enrich: five items kept+enriched, one dropped (Embodied.cpp — no new substance surfaced in 12h since paper publication, per enrichment.md drop rule). Kept+enriched: (1) Guterres UN speech — added Day 2 program specifics for today (opening plenary 9-10:30 GMT, scientific-panel annual report 11:30-12:30, closing Dialogue of Dialogues plenary 16:30-18:00 GMT streamed UN Web TV); updated why_it_matters and brief around Day-2-today watchpoints. (2) White House frontier framework — clarified as-of-July-7 announcement still pending; added the specific Anthropic post-export-control commitment to work with Amazon/Microsoft/Google on shared voluntary security/evaluation standard (SecurityWeek); noted Fable 5 credits-only transition July 8 as one of the pattern points the framework would systematize. (3) AI.cc + Hugging Face — added concrete pricing (majority under $0.50/M input, high tier GLM-5.1/Llama 4 Scout 10M/Mistral Large 3 $0.80-$2.00/M), free-tier eval quota since June 15, and the 38% Q1 2026 enterprise open-weight token share (up from 11% Q1 2025) as the substantive demand-curve context; updated why_it_matters with ~20× cost-vs-Fable-5 framing. (4) Simon Willison sqlite-utils — added rc3's biggest new feature (compound-foreign-key introspection), the Fable 5 + GPT-5.5 tooling combo, and the honest note that the changelog kept growing after rc2 (AI-assisted review surfaces more work not less in the short run); paired with the Fable 5 credits-only switch as an actionable hobbyist-budget consideration. (5) China Doubao/Qwen shutdown — added Qwen's two-stage schedule (July 10 humanlike interactive + user-created agents, July 15 broader agent functions) and the substantive technical detail (anti-addiction systems / mandatory usage notifications / instant-exit mechanisms architecturally incompatible with persistent-memory companion pattern — explains why platforms chose shutdown over retrofit). Dropped: Embodied.cpp (no new discussion in 12h). Sub-task 2 late-breaking pass added 2 items: (A) Anthropic Fable 5 usage-credits switch effective July 8 2026 (T2 Global) — Fable 5 access via Pro/Max/Team/Enterprise subscription-included ends July 7, becomes credits-only at $10/$50 per Mtok (double Opus 4.8 = single most expensive line on Anthropic price sheet); explicitly framed as capacity-driven ('restore as capacity allows'); Anthropic redeploying-fable-5 official notice + Bleeping Computer + TechTimes + Tweaktown + Codersera + digitalapplied.com coverage; substantive practical impact on Python hobbyists actively using Claude and one of the most directly-actionable items of the week for Gabe. (B) OpenAI gpt-realtime-2.1 + 2.1-mini launched July 6 2026 (T2 US) — Realtime API voice models, p95 latency ≥25% lower via improved caching, better alphanumeric recognition / silence-noise handling / interruption behavior, mini variant adds configurable reasoning effort + tool use; MarkTechPost + OpenAI Community + Releasebot coverage; substantive practical voice-agent build read for a Python hobbyist. Considered and rejected: GPT-5.6 broader-release specifics (still 'coming weeks,' no concrete July 7 news beyond what's in the White House framework item); Anthropic Colossus deal (June 30, already covered); Boston Dynamics Spot + Gemini Robotics-ER 1.6 (June 30, already covered); Microsoft 365 Copilot Wave 3 (June 30, already covered). Final snapshot: 7 items (0 T1, 6 T2, 1 T3)."
+    },
+    {
       "run_id": "2026-07-06T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
