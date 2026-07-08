@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-08T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-08T06:00:00Z",
+      "ended_at": "2026-07-08T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 5500
+      },
+      "fetches_made": 11,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 1,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-08-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-07T17:10:28Z (digest). Yesterday's pm file (2026-07-07-pm.json) had 7 items — all 7 kept + enriched, no drops. Enrichment sweeps: (1) Claude Code Chrome Haiku-4.5-default + DOM/console/network read access + two bug fixes from July 8 release notes; (2) Anthropic-vs-OpenAI ecorpit reporting on OpenAI weighing 30-50% GPT-5.6 token price cuts as response; (3) JADEPUFFER The Hacker News July 8 follow-up with MinIO default-credential probing, API-key hunting, Postgres data dumping; (4) Gemini 3.5 Pro paired with DeepSeek July 24 v3-Base API deprecation as July 17-24 frontier calendar plus TheAgentReport $225B Alphabet market-cap framing; (5) Mistral IntuitionLabs Large 3 explainer context (~39B activated of 675B total, 8xH100 reference); (6) UN Global Dialogue EU delegation formal statement (EEAS) committing EU to May 2027 New York second Dialogue — first major-bloc institutional-continuity signal; (7) SK Hynix revised regulatory filing with indicative ₩242,500 (~$158.26) ADR pricing, alternate $165.26 estimate, Nasdaq ticker SKHY confirmed. Sub-task 2 late-breaking: added Fable 5 subscription-extension-to-July-12 story (Anthropic 'Redeploying Fable 5' blog + Android Authority + The New Stack + BleepingComputer + TechTimes + iwoszapar + Digg) as a Tier-2 item — the fresh update relative to yesterday's PM (which referenced the July 8 cutover only as backstory in the Fortune/Anthropic and Mistral items). Final snapshot: 8 items (0 T1, 6 T2, 2 T3)."
+    },
+    {
       "run_id": "2026-07-07T17:10:28Z-digest",
       "phase": "digest",
       "status": "success",
