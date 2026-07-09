@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-09T17:35:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-09T16:55:00Z",
+      "ended_at": "2026-07-09T17:35:00Z",
+      "wall_time_ms": 2400000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 22000,
+        "output_write": 9200
+      },
+      "fetches_made": 13,
+      "items_input": 12,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-09-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled. Last-successful-run scan started from what was local at run-start (2026-07-07T11:45:00Z refresh — the two intervening cycles had not yet appeared in the working tree when this run began). During the run the remote landed a full cycle (2026-07-08 digest, 2026-07-08 enrichment, 2026-07-08 refresh, 2026-07-09 enrichment, 2026-07-09 refresh) which pushed today's 2026-07-09-am with 9 items (2 T1, 6 T2, 1 T3). Aborted the initial write of 8 items (which included overlaps with today's am — Grok 4.5, GPT-5.6 broader release, Claude Persona ID verification, Gemini 3.5 Pro delay) and rebuilt the pm from scratch against the new remote base. Discovery-search-heavy sweep via 13 WebSearch queries (WebFetch not attempted — was 403-blocked from sandbox on July 6-7 per prior notes). Applied digest.md promotion rule: items in today's am file excluded by default. Four items added, all created fresh (no promotions from am): (1) OpenAI GPT-Live-1 + GPT-Live-1 mini full-duplex voice launch July 8 (T1 US) — paid default on Go/Plus/Pro (GPT-Live-1), Free-tier default (mini); listens+speaks simultaneously; backchannels 'mhmm' / 'got it'; interruption handling; delegates to GPT-5.5 for web search / deeper reasoning / complex work; Simon Willison walking-the-dog hour-long preview and honest laughing-at-non-jokes bug report; distinct from GPT-5.6 broader release in am (this is the ChatGPT-voice surface, GPT-5.6 is the reasoning-API surface); Simon Willison on seed list. (2) Anthropic Claude Cowork consumer web + mobile launch July 8 (T2 US) — distinct from the Claude for Government Desktop FedRAMP High public beta in 2026-07-08 pm; Max plan first, other consumer plans over coming weeks; cross-device sync / cloud execution surviving laptop-closed / mobile-first approval loop; usage doubled through Aug 5; substantive companion usage data (8.7% software dev / 33.4% business process / 16.4% content creation across 1.2M sessions in 600K+ orgs) as counter to 'AI agents are for coders' framing. (3) NVIDIA + Hugging Face bring Isaac GR00T 1.7 (open VLA foundation model for humanoid robots) + Isaac Teleop (standardized human-demonstration data-collection framework) into LeRobot July 6-7 (T2 Global) — Cosmos 3 world-foundation model integration slated to follow; 3M NVIDIA robotics devs + 16M HF builders; profile.md-directed tier-2 broadening angle outside HTML/CSS/Python default stack. (4) China MIIT-operated cybersecurity platform July 8 alert on Claude Code 'backdoor' (T3 Asia) — Anthropic response frames as experimental anti-abuse mechanism and notes access not permitted in China; substantive as first same-day state-adjacent security-advisory back-and-forth in the US-China frontier-AI relationship. Considered and rejected (already covered by am or 2026-07-08 snapshots): GPT-5.6 Sol/Terra/Luna broader public release (am T1); SpaceXAI + Cursor Grok 4.5 launch (am T1); Anthropic Persona identity verification (2026-07-08 am T3); Claude for Government Desktop FedRAMP High (2026-07-08 pm T2); Gemini 3.5 Pro delay to July 17 (2026-07-08 am T2 — pruned from today's am); Mistral 'fat but sparse' early access (2026-07-08 am T2); Z.ai ZCode (2026-07-08 am T2); Anthropic $47B ARR overtakes OpenAI (2026-07-08 am T2); OpenAI gpt-realtime-2.1 API launch (2026-07-07 am T2); MiniMax M3 Pro 2.7T Q3 2026 (am T2); DeepSeek API-alias deprecation July 24 (am T2); Base44 Base 1 (am T2); CNBC Chinese-open-weight-models 30% US OpenRouter share (am T2); Nano Banana 2 Lite (am T3); Anthropic Fable 5 credits-only extension July 12 (am T2). Final snapshot: 4 items (1 T1, 2 T2, 1 T3) — pm intentionally smaller than usual given today's am was comprehensive on the concentrated 48-hour US-frontier-model news window."
+    },
+    {
       "run_id": "2026-07-09T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
