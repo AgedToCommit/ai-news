@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-10T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-10T11:00:00Z",
+      "ended_at": "2026-07-10T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 12000,
+        "output_write": 3500
+      },
+      "fetches_made": 8,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-10-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh phase enabled. Today's 2026-07-10-am existed (6 items from enrichment at 06:30Z). Last successful run ended_at: 2026-07-10T06:30:00Z. WebFetch confirmed 403-blocked per prior run notes — used WebSearch-only (8 queries). Tier-ranking pass found two clear additions: (1) OpenAI ChatGPT Work — T2 US, announced July 9 2026 alongside GPT-5.6 broader release but not covered in 2026-07-09-am (grep confirmed no match), 2026-07-09-pm, or 2026-07-10-am enrichment; Codex merging into unified ChatGPT desktop app (Chat + Work + Codex on every plan including Free); Sites beta for interactive web reports + live dashboards; Atlas embedded browser on web/mobile; direct counterpart to Claude Cowork (already in current am); Simon Willison noted July 10 with cloud/local distinction quote; confirmed genuinely missed by all prior runs. (2) SK Hynix Nasdaq debut (SKHY) — T3 Asia, genuinely happening today July 10 2026; $26.5B ADR ($149/receipt, 7x oversubscribed); 60% global HBM market share; Q1 2026 revenue ₩52.6T at 70%+ operating margin, 198% YoY; Yongin Cluster coming online 2027; Indiana $4B packaging plant underway; framed as AI supply-chain bottleneck calibration signal and model-pricing context. Considered and dropped: Grok 4.5 day-one benchmarks (Artificial Analysis 51.4% AutomationBench-AA, #4 Intelligence Index, 4.2x token efficiency vs Opus 4.8) — home is 2026-07-09-am where Grok 4.5 is already covered as T1, not a standalone new item in 2026-07-10-am. Optional T1 re-pass: both T1 items (Meta Muse Spark 1.1, GPT-Live) were substantially enriched with overnight benchmarks and user-complaint patterns at the 06:30Z enrichment run — no new overnight chatter since then warranted further revision. Simon Willison's llm-meta-ai 0.1 plugin post (July 9) was considered as a Meta T1 takes[] addition but falls outside the last-5-hours window and was in scope for the enrichment run. Final snapshot: 8 items (2 T1, 4 T2, 2 T3)."
+    },
+    {
       "run_id": "2026-07-10T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
