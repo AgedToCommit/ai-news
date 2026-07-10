@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-10T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-10T06:00:00Z",
+      "ended_at": "2026-07-10T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 16000,
+        "output_write": 5600
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-10-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's pm (2026-07-09-pm) had 4 items — 1 T1, 2 T2, 1 T3. All 4 survived enrichment because all had material new context (2 with massive enrichment: GPT-Live overnight benchmarks + user complaints, China MIIT / Alibaba July-10-effective ban / affected version range). Web-search-heavy pass (WebFetch not attempted — continues to be 403-blocked from sandbox). Seven focused searches: (1) OpenAI GPT-Live — MASSIVE enrichment: official benchmarks now published (GPQA 84.2% vs 45.3%, BrowseComp 75.2% vs 0.7%, 75.7% human preference over Advanced Voice Mode), early-user 'over-enthusiasm' + excessive-filler-word complaint pattern surfaced across Reddit/X/BigGo Finance, access constraints confirmed (no video/screen sharing in GPT-Live, no public API — developers on waitlist). (2) Claude Cowork — enrichment: scheduled-task-with-no-device-online capability surfaced from Anthropic's own claude.com/blog/cowork-web-mobile post (now live), 90%+ non-coding usage framing sharpened, primary link switched to Anthropic's official post. (3) NVIDIA + Hugging Face LeRobot — enrichment: Thomas Wolf (HF cofounder + chief science officer) quote on shared-models-data-workflows framing, community framing sharpened to 'NVIDIA treating robotics like the LLM stack' (sell compute, seed with open model, let HF own community layer). (4) China MIIT Claude Code — MASSIVE enrichment: specific technical claim named (unconsented transmission of locations + identity identifiers), affected version range specified (2.1.91–2.1.196, releases April 2–June 29), Anthropic response sharpened as targeted anti-distillation experiment (not general anti-abuse), and critically — Alibaba internally bans Claude Code effective TODAY July 10, first specific enterprise action following the alert, and Anthropic publicly blamed Alibaba last month for distillation attacks (exact pattern the anti-distillation experiment was designed to detect). Late-breaking pass added TWO items (at max cap): (5) Meta Muse Spark 1.1 + Meta Model API launch July 9 (T1 US) — Meta's first paid commercial AI model, $1.25/$4.25 per M tokens (undercuts Sonnet 5 $2/$10, slots between GPT-5.6 Terra $2.50/$15 and Luna $1/$6), 1M-token context, multimodal, agentic focus with multi-agent orchestration / tool use / computer use / subagent escalation-back-to-main patterns, US-developer preview with $20 free credits, Replit / Cline / Box as early partners, third same-day frontier-lab release with GPT-5.6 GA and Grok 4.5 broader release. (6) Jarred Sumner's 'Rewriting Bun in Rust' write-up surfaced by Simon Willison July 9 (T2 Global) — 11-day Zig-to-Rust rewrite of Bun using Claude Code + pre-release Claude Fable 5, ~50 dynamic workflows running continuously over 11 days, adversarial-review pattern (one Claude writes, two Claude reviewers given only the diff and told to assume it's broken), Sumner's hand-written estimate 3 engineers for a year during which Bun would be frozen; Bun acquired by Anthropic late 2025 so Sumner is Anthropic engineer using Fable 5 pre-release internally; Simon Willison is on seed list so this is a discovery-search Pass 5 anchor; Rust-ecosystem broadening item per profile.md. Considered and rejected as late-breaking additions: GPT-5.6 broader GA July 9 (already covered in yesterday's 2026-07-09-am T1), Grok 4.5 broader public release July 9 (already covered in 2026-07-09-am T1), Google Gemini 3.5 Pro delay to July 17 (already covered in 2026-07-08-am T2). No items dropped — every yesterday-pm item had material new context worth surfacing. Final snapshot: 6 items (2 T1, 3 T2, 1 T3). All revisions include specific enrichment change and updated why_it_matters + why_it_matters_brief per brief.md guidance."
+    },
+    {
       "run_id": "2026-07-09T17:35:00Z-digest",
       "phase": "digest",
       "status": "success",
