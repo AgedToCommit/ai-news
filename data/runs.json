@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-11T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-11T11:00:00Z",
+      "ended_at": "2026-07-11T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 27000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 5000,
+        "output_write": 3500
+      },
+      "fetches_made": 18,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-11-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. 5-hour window (06:20–11:00 UTC) was quiet on breaking news from major labs. 18 WebSearch queries run (WebFetch remains 403-blocked). Confirmed Gemini 3.5 Pro delay (in Jul 8 am), MIIT/Alibaba Claude Code ban (in Jul 10 am), MiniMax M3 Pro (in Jul 9 am) already covered. Two new items added: (1) China MinCom overseas AI model access restriction discussions (Reuters Jul 7 exclusive, confirmed not in any prior snapshot) — Tier 2 Asia; (2) EU AI Act GPAI August 2 compliance deadline (AI Omnibus deal context, confirmed not in any prior snapshot) — Tier 3 EU."
+    },
+    {
       "run_id": "2026-07-11T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
