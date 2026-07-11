@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-11T17:22:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-11T17:00:00Z",
+      "ended_at": "2026-07-11T17:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 8000,
+        "output_write": 3600
+      },
+      "fetches_made": 12,
+      "items_input": 12,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-11-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled. Today's am file exists with 6 items (Grok 4.5 day-two, JetBrains Kotlin Benchmark, Google Android Bench Harbor, Claude Code 2.1.206, China AI export restrictions, EU AI Act GPAI Aug 2). Last successful run ended_at: 2026-07-11T11:25:00Z (refresh). WebFetch remains 403-blocked (confirmed on cryptointegrat fetch) — used WebSearch-only across 12 targeted queries covering: general July 11 AI news, Anthropic/OpenAI/Google announcements, Hugging Face open weights, AI tool/framework launches, July 10-11 specific announcements, GPT-Live-1 voice, Claude Reflect dashboard, Meta/Mistral/Cohere models, Meta Muse Spark 1.1, ByteDance Seedream 5.0 Pro, NVIDIA/SK Hynix memory partnership, Simon Willison/Karpathy, DeepSeek/Qwen/Alibaba, Cursor Teams pricing, MCP 2026-07-28 spec, HHS ChatGPT AERO, Karpathy/Jumper Anthropic hires, Claude for Government, NVIDIA nvDock. Cross-checked candidates against prior snapshots via grep for id-slug patterns. Dropped 8 candidates (documented in dropped_in_phase[]): Muse Spark 1.1 (in 2026-07-10-am), GPT-Live (in 2026-07-09-pm and 2026-07-10-am), Simon Willison Better-Models-Worse-Tools (in 2026-07-05-am), Nano Banana 2 Lite (in 2026-07-09-am), HHS AERO (May story), Cursor Teams pricing (June/early-July story), Claude for Government (in 2026-07-08-pm through 2026-07-10-am), Karpathy Anthropic hire (May story). Four new items added, all tier 2: (1) Alibaba Cloud Model Studio delists DeepSeek family July 9 with Qwen migration recommendation — Asia, pairs directly with today's am China-restrictions item; (2) ByteDance Seedream 5.0 Pro July 8 launch — Asia, design-asset generator framing with layer separation + 10-language RTL; (3) Anthropic Claude Reflect beta July 9 usage dashboard — US, 4D AI Fluency Framework with TechCrunch retention-tension framing; (4) MCP 2026-07-28 stateless release candidate — Global, 17-day countdown to final spec lock with six documented breaking changes. Tier-1 emphasis not achieved this run — the major frontier-model news of the July 8-10 window (Muse Spark 1.1, GPT-Live-1, Grok 4.5 day-two) is already covered in yesterday's am/pm and today's am, so tier-2 curation was the substantive path forward. Hero images: all null (WebFetch blocked; no way to verify og:image URLs return 200; following pattern of prior 8 days of snapshots). No cap-hits."
+    },
+    {
       "run_id": "2026-07-11T11:25:00Z-refresh",
       "phase": "refresh",
       "status": "success",
