@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-11T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-11T06:00:00Z",
+      "ended_at": "2026-07-11T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 41000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 300,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 13000,
+        "output_write": 3700
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-11-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-10-pm.json existed with 4 items (1 T1, 3 T2). Last successful run ended_at: 2026-07-10T17:20:00Z (digest). WebFetch remains 403-blocked per prior notes — used WebSearch-only across 9 queries (4 targeted at yesterday-pm items + 5 late-breaking probes). Sub-task 1 (prune+enrich): all 4 yesterday-pm items had meaningful overnight substance; kept all 4, enriched all 4. Specific enrichments: (1) Grok 4.5 T1 — added AA-Omniscience composite score 26 (up 8 points from Grok 4.3's 18), SWE marathon long-horizon-coding top-spot result, analyst-consensus 'verification/retrieval/second-model in the loop' operational takeaway, letsdatascience.com Musk-called-it-Opus-class-vs-independent-testers-ranked-fourth framing; brief rewritten. (2) JetBrains Kotlin Benchmark T2 — added cross-benchmark divergence context (Junie #1 on independent SWE-Rebench vs #2 tied on Kotlin Benchmark), practitioner 'careful and debuggable vs raw autonomous throughput' framing (altaitools), JetBrains's own June 2026 designation of Codex as recommended agent in AI Chat as evidence they prioritize real-world value over defending Junie's position; brief rewritten around the harness-dependent 'best coding agent' takeaway. (3) Google Android Bench T2 — added concrete leaderboard scores (Fable 5 84.5 top, GPT-5.5 80.2 second, Sonnet 5 76.2 third; open-weights GLM 5.2 72.2 top, Kimi K2.7 Code 70.4), the ~12-point open-vs-closed gap analytic angle, and the community-task-submissions opening (Google inviting developers to submit real-world Android tasks); brief rewritten around specific scores and the community opening. (4) Claude Code T2 — added specific version identifier 2.1.206, de-duplication of personal ~/.claude/CLAUDE.md against project CLAUDE.md, split-into-nested-files-or-Skills proposal, the 'press f to apply Claude-proposed fix after confirmation' workflow detail, and community-appetite context (Karpathy 'if you write 200 lines and it could be 50, rewrite it' heuristic reappearing plus 'lazy senior dev' patterns); brief rewritten around 2.1.206 + full /doctor CLAUDE.md pass scope + 'f'-to-fix. Sub-task 2 (late-breaking pass): five probes ran across generic July-11 news, evening lab announcements, Qwen/DeepSeek/Alibaba activity, and Mistral/Meta. Nothing substantive landed since the 17:20Z digest closed. Considered and rejected as new items: (a) White House frontier-AI voluntary framework — reporting still says 'expected as early as the week of July 7' with no confirmed announcement yet; would be speculation until an actual sign. (b) SAP Prior Labs acquisition — real story but from May 4 2026, not fresh. (c) GPT-5.6 Sol/Terra/Luna public launch — already covered in prior July 9-10 snapshots. (d) NVIDIA/Hugging Face LeRobot + Cosmos 3 — July 6 story, already known. (e) Mistral 'fat but sparse' MoE early access — already covered in 2026-07-08-am. Late-breaking additions: 0. Final snapshot: 4 items (1 T1, 3 T2), all enriched, none dropped."
+    },
+    {
       "run_id": "2026-07-10T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
