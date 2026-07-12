@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-12T06:25:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-12T06:00:00Z",
+      "ended_at": "2026-07-12T06:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 39000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 13000,
+        "output_write": 3600
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-11-pm.json existed with 4 items (0 T1, 4 T2). Last successful run ended_at: 2026-07-11T17:22:00Z (digest). WebFetch remains 403-blocked per prior runs — used WebSearch-only across 9 queries (4 targeted at yesterday-pm items + 5 late-breaking probes). Sub-task 1 (prune+enrich): all 4 yesterday-pm items had meaningful overnight substance; kept all 4, enriched all 4. Specific enrichments: (1) Alibaba/DeepSeek delisting — confirmed formally in effect on Alibaba Cloud docs page (deepseek-api endpoint updated); added substantive multimodal-capability angle from the docs update: delisted DeepSeek models supported text-only input while recommended Qwen substitutes split into Qwen-VL for image input and Qwen-Long for document input, so migration is real capability upgrade on vision or long-doc workloads; brief rewritten around the input-modality distinction. (2) ByteDance Seedream 5.0 Pro — added 36kr 17-test practitioner deep-dive with confirmed strong-scenario boundary (commercial posters, realistic photography, partial precise editing, multilingual posters) and confirmed weaker-scenario boundary (complex infographics, grid guides, e-commerce UI, sketch rendering with text errors + insufficient visual completion); noted independent apples-to-apples benchmarks vs Nano Banana Pro and GPT-Image 2 still in progress; brief rewritten around specific scenario split. (3) Anthropic Claude Reflect — coverage broadened into Apple/mainstream tech-media orbit via MacRumors; multiple outlets (WERSM, TechTimes, TechBriefly, ExplainX) converged on describing Reflect as Anthropic's first product feature that addresses retention directly; added psychological-switching-cost angle as sharpened frame; brief rewritten around 48-hour convergence. (4) MCP 2026-07-28 — countdown updated to 16 days; added specific breaking-change details from Stacktree/DEV.to/byteiota/Medium: initialize/initialized handshake as specific removed handshake, Mcp-Session-Id as specific removed header, BOTH Mcp-Method AND Mcp-Name required headers on Streamable HTTP (omitting causes failure), Tasks promoted to separate extension with new polling lifecycle + tasks/list removed, missing-resource JSON-RPC error code changes from -32002 to standard -32602 (invalid params) as specific migration line for MCP client code, Roots/Sampling/Logging deprecation confirmed; added Microsoft Azure App Service coverage as hyperscaler-preparation signal; brief rewritten around specific header + error-code changes. Sub-task 2 (late-breaking pass): five WebSearch probes covering July 11-12 window, evening lab announcements, Qwen/DeepSeek/Alibaba activity, Mistral/Meta activity, and mainstream tech news. One substantive late-breaking item added: Apple v. OpenAI trade-secret lawsuit — Apple sued OpenAI, io Products, OpenAI Chief Hardware Officer Tang Yew Tan (former Apple VP), and former Apple senior systems electrical engineer Chang Liu on July 10 2026 in Northern District of California; specific allegations (confidential Apple project code names used during recruiting, Apple parts brought to interviews, coached exit-security evasion, unreturned Apple laptop with downloaded confidential documents); io Products named as defendant but Jony Ive personally not named; OpenAI's initial statement 'we have no interest in other companies' trade secrets'; Apple's complaint calls OpenAI hardware 'rotten to its core'; lands in same window as OpenAI IPO filing; grepped prior snapshots to confirm not previously covered; Tier 2 US. Considered and rejected as new items: (a) Mistral Leanstral 1.5 — July 2/3 launch, outside 12-hour window and substantively older news. (b) Anthropic Claude Corps — June 12 announcement, old news. (c) OpenAI IPO confidential filing — May 2026 story with heavy prior coverage across many prior snapshots (50 files grep-matched). (d) Federal Reserve AI Task Force — surfaced in buildfastwithai roundup but no primary source confirmation in the 12-hour window; skipped as unverified. (e) GPT-5.6 pricing/benchmarks — GPT-5.6 launch already covered in prior snapshots; developer-consensus writeup is derivative. Final snapshot: 5 items (0 T1, 5 T2), 4 enriched + 1 added, none dropped."
+    },
+    {
       "run_id": "2026-07-11T17:22:00Z-digest",
       "phase": "digest",
       "status": "success",
