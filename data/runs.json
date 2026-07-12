@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-12T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-12T11:00:00Z",
+      "ended_at": "2026-07-12T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 12000,
+        "output_write": 3400
+      },
+      "fetches_made": 13,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-12-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Today's 2026-07-12-am.json existed (5 items, 0 T1, 5 T2) from enrichment run that ended 2026-07-12T06:25:00Z. WebFetch remains 403-blocked (confirmed pattern across all prior runs) — used WebSearch-only across 8 targeted queries covering: ICML 2026 Seoul wrap-up, WAIC 2026 Shanghai, general July 12 overnight AI news, EU/Asia morning lab announcements, open-weight model drops, tools/frameworks, Qwen/DeepSeek activity, Anthropic/OpenAI overnight. Since-filter: 2026-07-12T06:25:00Z. Candidates considered and rejected as already covered in prior snapshots (confirmed via grep): Sonnet 5 (in June 14+ snapshots), Gemini 3.5 Pro (July 6-7 files), Mistral Vibe/AI Now Summit (May 28 event, July 6-7 files), ChatGPT Work (July 6-7 files), GPT-5.6 (July 7 files), Doubao/Qwen July 15 agent shutdown (July 6-10 files), Maia 200 (July 6-7 files), Google Africa Applied AI Lab (June 29/July 3-4 files). Two new items passed freshness + novelty + quality bar: (1) ICML 2026 Seoul wrap-up — conference closed July 11, proceedings now public; 23,918 submissions, 6,352 accepted, 168 orals, 60/247 workshops on agentic AI; prior grep hits (June 28-29) matched 'AI Engineer World's Fair,' not ICML; Tier 2, Global. (2) WAIC 2026 Shanghai July 17-20 preview — Asia morning cycle consolidating China state-media build-up (CGTN July 7, Global Times July 8, Xinhua); 1,400+ guests, 1,100+ exhibitors, 100K+ sq m, 300+ product debuts; named: Huawei Atlas 950 super node, MiniMax M3 multimodal model, world's first AI Agent smartphone; no prior snapshot coverage confirmed via grep; Tier 3, Asia. Decided on 2 items instead of 3 — only 2 candidates met the bar; no weak third item added to hit the cap. Hero images: null (WebFetch blocked). No cap-hits."
+    },
+    {
       "run_id": "2026-07-12T06:25:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
