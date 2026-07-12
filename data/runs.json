@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-12T17:22:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-12T17:00:00Z",
+      "ended_at": "2026-07-12T17:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 10000,
+        "output_write": 3600
+      },
+      "fetches_made": 14,
+      "items_input": 12,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled. Today's 2026-07-12-am.json exists with 7 items (0 T1, 6 T2, 1 T3) from enrichment+refresh runs ending 2026-07-12T11:30:00Z — all excluded per promotion rule (default behavior, no material deepening warranted promotion). Last successful run ended_at: 2026-07-12T11:30:00Z (refresh). WebFetch remains 403-blocked per pattern in all prior runs — used WebSearch-only across 14 queries. Since-filter: 2026-07-12T11:30:00Z. No Tier-1 news day: no major-lab model releases or lab announcements broke Saturday-Sunday July 11-12; the big frontier launches (GPT-5.6 Sol/Terra/Luna, Grok 4.5, Meta Muse Spark 1.1, ByteDance Seedream 5.0 Pro) all shipped July 8-9 and are covered in prior snapshots or today's am file. Candidates considered and rejected as already covered: Apple v. OpenAI (in today's am), MCP 2026-07-28 spec (today's am), ByteDance Seedream 5.0 Pro (today's am), Anthropic Claude Reflect (today's am), Alibaba DeepSeek delisting (today's am), ICML 2026 Seoul (today's am), WAIC 2026 Shanghai preview (today's am), Meta Muse Spark 1.1 (2026-07-04-am + 2026-07-03-am + 2026-07-10-am), Grok 4.5 (July 8 launch, prior coverage), SK Hynix Nasdaq debut SKHY (July 10 am + July 8 am), Anthropic $47B revenue overtaking OpenAI (Fortune July 2, heavy prior coverage across 68 files), Gemini 3.5 Pro July 17 GA prep (July 6-7 files), Google Africa Applied AI Lab (June 29 + July 3-4), Hugging Face ML Intern (April 2026 launch, outside window), Perplexity Bumblebee (May 22 launch, outside window), Google Antigravity 2.0 (May I/O 2026, outside window), Simon Willison Lenny's podcast (April 2026), Kahuna Labs Escalation Prevention (July 7, low signal). Four fresh items passed novelty + quality + freshness bar: (1) Meta $10B Alberta data center (July 8) — 33rd data center worldwide, 1 GW capacity, 932 MW on-site gas plant, self-supplied-generation pattern; no prior snapshot coverage confirmed via grep of 'Alberta'; Tier 3 US/Global infrastructure item. (2) SambaNova $1B Series F at $11B post-money + JPMorgan Chase inference-infrastructure partner (July 8) — General Atlantic lead, SN40L/SN50 reconfigurable-dataflow-architecture systems for secure on-premises inference at the bank; SambaNova's second mega-round in 5 months; grepped prior snapshots — 2 files matched 'inference-infrastructure' text but no actual SambaNova coverage; Tier 3 US business/infrastructure. (3) Federal Reserve Productivity and Jobs task force with Andreessen/Sharma/Jones (July 9) — first-ever Fed structure explicitly for AI's productivity effects; Warsh announcement; Charles I. Jones Anthropic-embed detail is the AI-industry-policy-interface angle; prior enrichment run flagged as unverified — Washington Post + a16z + Axios primary sources now confirm; grepped prior snapshots for 'Marc Andreessen'/'Kevin Warsh'/'productivity task force'/'AI task force' — no matches; Tier 3 US policy. (4) CursorBench leaderboard verified July 11 — Claude Fable 5 70.5% first, GPT-5.6 Sol 67.2% second, Grok 4.5 66.7% third; 3.8-point spread; first public head-to-head verified score of all three same-24hr-window launches; Tier 2 tools/benchmarks item directly relevant to Gabe's coding-assistant workflow; grepped prior snapshots — CursorBench appears only in 2026-05-21-am but a different scoring snapshot. Decided on 4 items — no weak fifth item added to hit a cap; Tier 1 was empty by news reality this weekend. Hero images: null (WebFetch blocked). No cap-hits."
+    },
+    {
       "run_id": "2026-07-12T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
