@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-13T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-13T06:00:00Z",
+      "ended_at": "2026-07-13T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 13500,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-13-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-12-pm.json existed with 4 items (0 T1, 1 T2, 3 T3). Last successful run ended_at: 2026-07-12T17:22:00Z (digest). WebFetch remains 403-blocked per pattern in all prior runs — used WebSearch-only across 9 queries (4 targeted at yesterday-pm items + 5 late-breaking probes). Sub-task 1 (prune+enrich): all 4 yesterday-pm items had meaningful overnight substance; kept all 4, enriched all 4. Specific enrichments: (1) Meta Alberta data center — added concrete power-project mechanics: the 932 MW on-site natural gas plant will be built by a consortium including Calgary-based Pembina Pipeline Ltd. at a separately-financed $4.6B cost with second-half-2030 startup target; Meta committing an additional $60M to local infrastructure; sharpened hyperscaler-plus-power-plant deal-structure framing (hyperscaler commits load, incumbent energy operator takes generation-build risk); brief rewritten around Pembina consortium + 2030 startup timeline. (2) SambaNova Series F + JPMorgan — added three overnight analyst framings: (a) mega-round cadence — Series E was $350M in Feb 2026, so $1B first-close-only Series F at $11B post-money = ~3x check-size escalation in 5 months; (b) 'reference win other regulated banks tend to copy' pattern (Yahoo Finance) as the frame that names why this is more than a single-customer announcement; (c) SN40/SN50 'purpose-built for agentic inference' positioning where 5-10x-faster-decode claim separates SambaNova's pitch from Cerebras/Groq; corrected SN40L → SN40 reference; brief rewritten around 3x check-size escalation + reference-win framing. (3) Fed Productivity/Jobs Task Force — added Forbes / Analytics Insight overnight coverage: Warsh has explicitly drawn parallels to Alan Greenspan's 1990s strategy where unmeasured internet-driven productivity allowed sustained economic expansion to coexist with low inflation; this is the intellectual template Warsh is building the task force around; sharpened Washington Post's panel-composition critique that every co-lead has recently spoken positively about AI's economic effects; confirmed recommendations reported directly to FOMC; brief rewritten around Greenspan template. (4) CursorBench — added two overnight-analysis frames: (a) Fable 5's higher-reasoning-effort ceiling on CursorBench = 72.9% so the 70.5% leaderboard number is default-reasoning snapshot not model ceiling; (b) Petralian's cost-vs-score analysis adds Composer 2.5 as budget-tier winner even where it doesn't top raw leaderboard, so leaderboard order ≠ practical model-selection order for cost-sensitive workloads; framed benchmark as CursorBench 3.1 explicitly; brief rewritten around 72.9% ceiling + Composer 2.5 cost-per-point framing. Sub-task 2 (late-breaking pass): five WebSearch probes covering July 12-13 window, evening lab announcements, Qwen/Mistral/Meta open-weight activity, and July 12 aggregation coverage. One substantive late-breaking item added: humanoid-robots-public-markets-agility-unitree-tesla-optimus-july-2026 — three humanoid-robotics announcements cluster into a single early-July 2026 week and the July 12 aggregation crystallizes the story: Agility Robotics $2.5B SPAC deal (July 5) targeting Nasdaq under AGLT with $620M+ gross proceeds and $300M+ Digit v5 pre-orders; CSRC approves Unitree Shanghai STAR Market IPO registration (July 2) at ~$14.7B expected valuation on ~$618M raise; Tesla tears down Fremont Model S/X line in 46 days and converts it to Optimus Gen3 assembly with 1M-unit designed annual capacity, ramp targeting 100-150/wk July → ~300/wk Aug → 1,000/wk Sept, with Musk warning initial production 'extremely slow' due to ~10K new-component supply-chain absence and 2026 units for internal testing only; earnings-reality-check angle carried: Unitree Q1 revenue growth decelerated to 68% and net profit halved YoY with price-competition warnings from Tesla in prospectus; prior AI News coverage: Agility/Unitree/Optimus each appeared individually in June 2026 snapshots (June 1-2, June 5-6, June 20-21), the three-in-one-week aggregation frame is the July 12 development worth carrying; tier-3 Global item — AI-industry calibration on where humanoid robotics sits between LLM-scaling investment cycle and public-market valuation reality. Considered and rejected as new items: (a) GPT-5.6 developer consensus writeup (Terra=value, Sol=benchmark king, Luna=budget) — GPT-5.6 launch heavily covered in prior snapshots July 8-10, developer-consensus rollup is derivative. (b) Xi Jinping to speak at WAIC — WAIC preview already covered in 2026-07-12-am refresh, this is a single-detail update not warranting a separate item. (c) Mistral MoE 'fat but sparse' early access — July 2/3 launch, outside 12-hour window and covered in prior snapshots. (d) Anthropic Claude Corps fellowship — June 12 announcement, old news. (e) OpenAI IPO confidential filing — May 2026 story with heavy prior coverage. Final snapshot: 5 items (0 T1, 1 T2, 4 T3), 4 enriched + 1 added, none dropped. Hero images: null (WebFetch blocked). No cap-hits."
+    },
+    {
       "run_id": "2026-07-12T17:22:00Z-digest",
       "phase": "digest",
       "status": "success",
