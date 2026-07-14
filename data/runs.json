@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-14T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-14T06:00:00Z",
+      "ended_at": "2026-07-14T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 14400,
+        "output_write": 5000
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-14-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-13-pm.json existed with 3 items (1 T1 Anthropic J-lens, 1 T2 DeepSeek deprecation, 1 T3 Meta Iris). Last successful run ended_at: 2026-07-13T17:00:00Z (digest). WebFetch remains 403-blocked per pattern in prior runs — used WebSearch-only across 10 targeted queries (3 for yesterday-pm-item enrichment + 7 for late-breaking probes and disambiguation). Sub-task 1 (prune+enrich): all 3 yesterday-pm items had meaningful overnight substance; kept all 3, enriched all 3. Specific enrichments: (1) Anthropic Global Workspace / J-lens — added three overnight developments that solidify the paper as the interpretability paper of the summer: first independent replication on open-weight Qwen 3.6 27B with a bonus preliminary finding of abstract 'interpretative meta-tokens' playing a causal role in ambiguous-genre/context handling (first evidence J-space is not a Claude-only artifact); Communications of the ACM July 7 parallel-technique survey of causal abstraction running the same swap-and-test intervention logic on Goodfire's open-weight Llama 'Arithmetic in the Wild' work as independent methodological validation; Anthropic released a hosted browser-based Neuronpedia interactive demo alongside the code repo lowering the barrier to trying the technique without a local GPU; brief rewritten around Qwen replication + Neuronpedia demo. (2) DeepSeek V4 API deprecation — added second migration gotcha now surfaced in overnight coverage: both new V4-Flash and V4-Pro models default to thinking mode enabled, so teams on 'deepseek-chat' expecting fast non-thinking latency need to explicitly disable thinking when migrating to 'deepseek-v4-flash' (same script that returned 200-300ms short answers now returns 2-3s reasoning-mode answers with proportional token cost); also named separately: DeepSeek launched a dedicated Anthropic-format endpoint at https://api.deepseek.com/anthropic aimed at Claude Code and other Anthropic-native clients speaking the messages schema (routing convenience for teams switching Claude backends to DeepSeek without rewriting transport code); updated countdown to T-10; brief rewritten around the two-distinct-gotchas framing. (3) Meta Iris MTIA-gen-4 — added three consolidated overnight analyst framings: Emarketer's Jacob Bourne on the near-term-capex-vs-long-term-cost-optimization tradeoff; Forrester's Mike Gualtieri on custom silicon as hyperscaler competitive necessity ('you can't become an AI titan if you're dependent on another company for chips') — positioning Iris in the same category as Google TPU rather than as a cost side project; TradingKey July 13 stock-market read of META +15% for the week following the July 9 Reuters exclusive and July 10 Zuckerberg internal-memo circulation (META +7% intraday) at a $743 price target with Iris and Meta Compute credited as competitive-moat additions; brief rewritten around the market-priced-as-competitive-moat framing. Sub-task 2 (late-breaking pass): seven WebSearch probes covering July 13-14 window including AI news roundups, Anthropic Fable 5 extension, Muse Spark 1.1 / GPT-Live / Grok 4.5 activity (all confirmed already covered in prior snapshots as July 8-9 launches), Project Glasswing expansion (confirmed as June 2-3 old news), ARD Agentic Resource Discovery (confirmed as June 17 old news), Gemini 3.5 Pro July 17 rumors (preview/rumor only, not a launch), and the July 8 Honeycomb EAP Cursor model-picker leak. One substantive late-breaking item added: anthropic-fable-5-free-access-extended-july-19-honeycomb-eap-opus-5-leak — Anthropic announced early hours of July 13 that Claude Fable 5 free access for Pro/Max/Team/premium-seat-based-Enterprise subscribers is extended through July 19 at 11:59:59 PM PT (third extension in 5 weeks); 50%-of-weekly-limit cap and parallel 50% Claude Code weekly-limit bump also extended; paired with the July 8 'Claude Honeycomb EAP' leak in Cursor's model picker with a briefly-visible spec sheet matching Fable 5 (1M context, extra-high-effort mode, Opus 4.8 safety fallback); developer-community read that Anthropic is buying calendar time for whatever ships as Opus 5 / Mythos-tier next; the specific extension-cadence pattern named directly (ex #1 = GPT-5.6 Sol imminent, ex #2 = GPT-5.6 Sol shipped July 9, ex #3 = July 13 same day as Forbes AI-model-wars framing); tier-3 US Anthropic subscriber/access item — practical for Gabe as a hobbyist coder who may use Claude Pro and useful for calibration on frontier-model launch timing. Considered and rejected as new items: (a) Muse Spark 1.1 / GPT-Live / Grok 4.5 — all confirmed as July 8-9 launches already covered in prior snapshots (verified in 2026-07-08-pm, 2026-07-09-am, 2026-07-09-pm, 2026-07-10-am, 2026-07-10-pm, 2026-07-11-am, 2026-07-11-pm, 2026-07-12-pm, 2026-07-13-am/pm). (b) Project Glasswing expansion to 150 orgs / 15 countries — confirmed as June 2-3 news, not a July 13-14 development. (c) Google/Microsoft/Salesforce/Snowflake/ServiceNow ARD (Agentic Resource Discovery) specification — confirmed as June 17 launch, old news. (d) Gemini 3.5 Pro July 17 target — preview/rumor only, no confirmed launch; will surface if it lands on July 17. (e) MIT SceneSmith collaborative-AI-agent 3D environment system — an interesting July 13 research announcement but a narrower academic story than the Fable 5 extension for this reader profile. Final snapshot: 4 items (1 T1, 1 T2, 2 T3), 3 enriched + 1 added, none dropped. Hero images: null (WebFetch blocked). No cap-hits."
+    },
+    {
       "run_id": "2026-07-13T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
