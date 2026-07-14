@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-14T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-14T11:00:00Z",
+      "ended_at": "2026-07-14T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 32500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 200,
+        "deep_fetch": 0,
+        "discovery_search": 19000,
+        "curation": 8000,
+        "output_write": 5300
+      },
+      "fetches_made": 15,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Today's 2026-07-14-am.json existed with 4 items (1 T1, 1 T2, 2 T3) from enrichment. Last successful run ended_at: 2026-07-14T06:35:00Z (enrichment). WebFetch remains 403-blocked per pattern in all prior runs — used WebSearch-only. 5-hour late-breaking sweep covering Asia/Europe morning cycles (UTC 01:35–06:35 window). Filtered out stale candidates: OpenAI 5% US government stake (July 2), Google cap on Meta using Gemini (June 29), Anthropic Samsung chip talks (July 2-4), ByteDance Seedream 5.0 Pro (July 8), Anthropic confidential S-1 filing (June 1), Gemini 3.5 Pro July 17 delay rumors (unconfirmed). Two genuinely overnight Asia/Europe items added: (1) TSMC June 2026 revenue record NT$442.68B (~$13.8B), +67.9% YoY, +6.2% MoM — AI chip demand overrides four-year seasonal June decline pattern with N3 node fully booked through H2 2026; covered by CNBC, TechTimes, TradingKey, Digitimes (July 13 Asia morning); tier-3 Asia. (2) UK Bank of England/PRA/FCA begin direct oversight of AWS EMEA, Google Cloud EMEA, Microsoft Ireland, Oracle UK as Critical Third Parties starting July 13 — first jurisdiction to classify cloud providers as systemically important financial infrastructure under bank-style regulation; covered by PYMNTS, FinTech Global, Insurance Journal, IBTimes UK (July 13 EU morning); tier-3 EU. Tier-1 re-pass: Anthropic J-lens (tier-1) reviewed for overnight chatter — found HuggingFace community blog 'J-Space: Yet Another LLM Mind Reader?' added as new skeptical take without rewriting core summary (enrichment already comprehensive). No cap hits."
+    },
+    {
       "run_id": "2026-07-14T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
