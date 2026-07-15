@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-15T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-15T11:00:00Z",
+      "ended_at": "2026-07-15T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 3000,
+        "output_write": 2000
+      },
+      "fetches_made": 18,
+      "items_input": 12,
+      "items_output": 9,
+      "items_added": 3,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-15-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Today's 2026-07-15-am.json existed with 6 items (0 T1, 3 T2 = Google Nano Banana 2 Lite + Mollick Twilight + HF/NVIDIA LeRobot, 3 T3 = Claude for Teachers + Agiloft Astra + HCLTech $1.14B). Last successful run ended_at: 2026-07-15T06:35:00Z (enrichment). WebFetch 403-blocked per established pattern; WebSearch-only across 16 queries. Items rejected: TSMC June revenue (covered 2026-07-14-am), Anthropic-Samsung chip talks (previously covered per digest notes), Gemini 3.5 Pro July 17 (covered in 8 prior snapshots), China anthropomorphic AI rules (covered 2026-07-06-pm and -07-am/pm), Zhipu $4B share sale (July 8-10, outside window). Three items added: (1) WAIC 2026 preview — Xi Jinping's first-ever WAIC keynote July 17, ZTE AI Agent smartphone (hardware-level persistent agent orchestration), Huawei Atlas 950 SuperPoD (8,192 Ascend cards), MiniMax M3 debut; tier-2 Asia; sources: SCMP, People's Daily July 15, Bloomberg July 15 (China warns against AI Iron Curtain), George Chen Substack, Startup Fortune. (2) ASML Q2 2026 earnings — €9.33B vs €8.80B consensus, full-year guidance raised to €43-45B (second raise), Intel began using High-NA EUV in production, order visibility into 2027-2028; tier-2 EU; sources: Bloomberg July 15, FX Leaders, BigGo Finance. (3) OpenAI first hardware device — screenless $200-300 AI companion speaker designed by Jony Ive's LoveFrom, mechanical movement, camera + motion sensors, launches 2027; tier-3 US; not in digest or enrichment notes; sources: Bloomberg July 14, TechCrunch July 14, Japan Times July 15."
+    },
+    {
       "run_id": "2026-07-15T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
