@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-15T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-15T06:00:00Z",
+      "ended_at": "2026-07-15T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 15500,
+        "output_write": 6000
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-15-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-14-pm.json existed with 5 items (0 T1, 2 T2 = Mollick Twilight + HF Hardware filter/NVIDIA LeRobot, 3 T3 = Anthropic Claude for Teachers + Agiloft Astra GA + HCLTech $1.14B deal). Last successful run ended_at: 2026-07-14T17:00:00Z (digest). WebFetch not attempted this run per pattern in all prior runs — used WebSearch-only across 7 targeted queries (5 for yesterday-pm-item enrichment + 2 for late-breaking probes). Sub-task 1 (prune+enrich): all 5 yesterday-pm items had meaningful overnight substance; kept all 5, enriched all 5. Specific enrichments: (1) Anthropic Claude for Teachers — added AFT (Randi Weingarten) endorsement with 'Gold Standard for safety and privacy in K-12 education' partnership language; added FERPA-aligned K-12 data processing agreement detail; added Stride Inc. -5.6% share-price reaction with Duolingo and McGraw Hill also trading down (BigGo Finance); added Microsoft Elevate for Educators to the competitive-set list; added skeptical takes from EdSurge and BigGo Finance on classroom-community and student-privacy risks; brief rewritten around AFT endorsement + FERPA + Stride drop. (2) Mollick Twilight of Chatbots — added substantive commenter critique (no independent replication + no published failure rates on multi-hour runs + no answer for mid-career workers without deep domain expertise); added Mollick's July 14 X post citing Valence data on skills-as-standardization with OpenAI usage-data as 'canary in the coal mine'; added the 'exponential outruns the people trying to keep up with it' commenter observation; brief rewritten around Mollick's central move + the missing-failure-rates caveat. (3) Hugging Face Hardware filter / NVIDIA LeRobot — added Thomas Wolf (HF cofounder/CSO) framing of the NVIDIA contribution as 'the moment robotics gets its shared research infrastructure' with the explicit Llama-style shared-weights analogy; added LeRobot v0.6.0 'Imagine, Evaluate, Improve' release-line as the concrete companion release; added Seeed Studio reBot Arm ($299 hardware) sim-to-real integration on July 8 as the concrete proof-point; brief rewritten around the Wolf 'shared research infrastructure' framing + Seeed reBot Arm hardware proof-point. (4) Agiloft Astra — added IDC Research Director Patrick Reymann's overnight analyst quote naming the specific two-barrier framing (accessible entry point + data-governance commitment); added two companion 'Ask AI for CLM' agentic capabilities (AI-Assisted Contract Intake for structured-data extraction and Guided Contract Updates for plain-language editing of existing records); added the April 2026 EAP → July 14 GA transition framing; brief rewritten around the Reymann two-barrier framing. (5) HCLTech $1.14B deal — MAJOR enrichment: added five-year contract structure running through December 2031 with a five-year extension option and ~$230M annual revenue directly from the client (Business Standard, Domain-b); added specific scope framing 'transforming and managing the client's global digital workplace and enterprise networks under an AI-driven operating model'; added Indian-media reporting citing unnamed sources familiar with the matter that the unidentified client is likely Mercedes-Benz; changed the primary link to Business Standard which has the most contract-structure detail; brief rewritten around the contract-structure detail + Mercedes-Benz identification. Sub-task 2 (late-breaking pass): 2 targeted WebSearch queries + 2 verification queries. One substantive late-breaking item added: google-nano-banana-2-lite-gemini-omni-flash-july-14-2026 — Google shipped two new Gemini generative-media models on July 14 2026: (1) Nano Banana 2 Lite (Gemini 3.1 Flash-Lite Image) at $0.034/1K images with ~4s latency, GA in Google AI Studio + Gemini API + Enterprise Agent Platform + AI Mode in Search + Gemini app; (2) Gemini Omni Flash (natively multimodal video) at $0.10/second output, public preview in the API; companion release Gemini 3.5 Live Translate (70+ languages, intonation-preserving) on same surface; timing pairs directly with Gemini 3.5 Pro July 17 frontier launch and Shanghai World AI Conference opening July 17 with Xi Jinping attending in person; sources: Google Cloud Blog, blog.google, YourStory, Technetbook, TheAIAura, Ain.ua, FingerLakes1, Explosion; NOT previously covered in any AI News snapshot; tier-2 US model-tier item — practical for Gabe on generative-media unit economics ($0.034 per 1K images ≈ image generation is economically free for most applications). Considered and rejected as new items: (a) Tencent + Alibaba $20B+ DeepSeek investment talks — confirmed as April 2026 news, not fresh. (b) ByteDance Doubao + Alibaba Qwen agent-feature shutdown taking effect July 15 under China Anthropomorphic AI Interaction Services rules — confirmed as heavily covered in 2026-07-06-pm and 2026-07-07-am/pm. (c) Gemini 3.5 Pro July 17 launch — will surface as its own item if it lands on July 17. Final snapshot: 6 items (0 T1, 3 T2, 3 T3), 5 enriched + 1 added, none dropped. Hero images: null (WebFetch not attempted). No cap-hits."
+    },
+    {
       "run_id": "2026-07-14T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
