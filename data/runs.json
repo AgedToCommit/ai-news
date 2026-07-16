@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-16T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-16T06:00:00Z",
+      "ended_at": "2026-07-16T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 18500,
+        "output_write": 7000
+      },
+      "fetches_made": 14,
+      "items_input": 8,
+      "items_output": 9,
+      "items_added": 1,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Yesterday's 2026-07-15-pm.json existed with 8 items (2 T1 = Nathan Lambert 6-months-to-live essay + Tom Blomfield Anthropic hire; 3 T2 = Simon Willison Datasette code-frequency chart + NY Hochul hyperscale moratorium + OpenAI ChatGPT unified cross-search; 3 T3 = Meta Hyperion 5GW expansion + IBM Q2 miss + xAI Colossus 2 Reuters investigation). Last successful run ended_at: 2026-07-15T17:15:00Z (digest). WebFetch remains 403-blocked per pattern in all prior runs — used WebSearch-only via general-purpose subagent across 14 targeted queries (8 per-item enrichment + 4-5 late-breaking + 1-2 verification). Enrichment results, all 8 items KEEP+ENRICH: (1) Nathan Lambert — CNBC piece (June 30) recirculating documents concrete enterprise defections attributed to potential EO (Lindy CEO Flo Crivello moved 100% of Claude traffic to DeepSeek, Coinbase's Armstrong cut ~half of AI spend using GLM 5.2 and Kimi 2.7, Shopify and Airbnb running Qwen 3); Lambert's X tagline 'if there's a major step in chinese open-weight performance, there's a good chance the whole chinese llm sphere is banned' being widely quoted; no confirmed EO text or new federal action July 15-16. (2) Tom Blomfield — July 15 coverage anchors hire against Anthropic's ~1M Google TPUs, gigawatts of capacity, tens of billions in compute deals — recasts compute team as commercial/operational function (not chip engineering), which explains why a public-scale-fintech CEO fits an MTS role; treated as marker moment in 'AI compute is the new talent war' framing. (3) Simon Willison — thin enrichment; his own July 15-16 output (grok-mermaid tool July 15, xai-org/grok-build open-source post July 16) is the closest thing to real-time confirmation of the code-frequency chart's central claim; no independent commentary picked up the Mollick 'prompting-as-skill to management-as-skill' framing in the last 24h. (4) NY Hochul moratorium — STRONGEST enrichment signal: Trump posted to Truth Social July 15 attacking the EO (calling for immediate reversal, named Alabama/Florida/Texas/Arizona as beneficiaries); Hochul responded on X ('we hit pause because the communities powering AI should share in its success'); Senator Kirsten Gillibrand publicly backed Hochul; industry pushback organized through AGC New York (Elmendorf 'missed opportunity') and Pipefitters Union (McManus 'kills good-paying union jobs'); NBC News, CBS News NY, The Hill treat 'first statewide moratorium in the nation' as the definitional label; national coverage now treats it as a national policy inflection point. (5) OpenAI cross-search — reception (TechTimes, thewincentral, Progressive Robot) frames it as one of year's more practical productivity upgrades ('ChatGPT turns into a searchable knowledge base'); confirms Free/Plus/Pro/Team/Enterprise on web+iOS+Android with no gating exceptions; counter-take from Popular AI blog + Medium user post: redesigned sidebar has hidden pinned chats and custom GPTs behind extra clicks for some users. (6) Meta Hyperion — Fortune 'split the town in two' long-read July 15 now definitive local-color piece (Holy Ridge residents complaining about construction traffic / non-local hiring vs. bus drivers making $80K+ in $42K-median region); Sierra Club + Alliance for Affordable Energy warn Entergy's three new gas plants will raise all Louisiana customers' bills, peak-day load ~2x New Orleans' peak; DCD confirms Blue Owl 80% / Meta 20% ownership on $27B JV core with $50B headline extending beyond the JV. (7) IBM Q2 — July 15 sell-side action: Oppenheimer formally downgraded IBM July 15, HSBC cut to Reduce with $191 PT; broader consensus stays split (3 Strong Buy / 12 Buy / 7 Hold with $295 aggregate PT implying 37% upside) — market and sell-side disagree on dip vs. category thesis change; stock partial recovery to ~$219.50; Krishna's language quoted 'less on software/infrastructure and more on their own AI hardware and memory chips'; confirmed worst single-day drop in IBM history (surpassing 1987 -23.7%); ~$68.8B market cap wiped. (8) xAI Colossus 2 — July 15 Technology.org crystallization of emissions math (~2,500 tons NOx, ~4,000 tons CO, 22 tons formaldehyde annually for just 30 of 59 turbines at 80% capacity vs. Clean Air Act 100-ton threshold — 25x threshold at partial-fleet operation); xAI + MS regulators argue turbines are 'mobile' and on-site less than 1 year and therefore exempt (EPA countered Jan 2026 that temporary turbines exceeding thresholds still need permits but is now weighing 'regulatory flexibilities' for portable units); DOJ June 15 filing specifically tied to xAI's DoD/national-security work 'including operations involving Iran' — rhetorical hook picked up in secondary coverage. Late-breaking pass — 1 candidate added: Thinking Machines Lab (Mira Murati's post-OpenAI startup) released Inkling on July 15 morning — 975B-param MoE (~41B active per query), 45T multimodal tokens, Apache 2.0 license, positioned as customization substrate for Tinker fine-tuning platform rather than frontier competitor; performance placed between Kimi 2.5 and Kimi 2.6, above NVIDIA Nemotron 3 Ultra on several evals; sources: Thinking Machines blog, TechCrunch, Bloomberg, Fortune; tier-1 US open-weight release; explicitly relevant as counter-example to the Lambert 'six months to live' thesis in this file. Late-breaking candidate REJECTED: a single-source aggregator claim (buildfastwithai.com AI News Today July 15 2026) that Andrej Karpathy has joined Anthropic could not be verified through primary sources within the search budget (WebSearch returned 529 overloads on two verification retries) — flagged as unverified rather than including as a confirmed item; will re-verify in the 7am refresh phase. Final snapshot: 9 items (3 T1, 3 T2, 3 T3), 8 enriched from yesterday-pm + 1 new late-breaking; no drops. Hero images: null (WebFetch blocked per established pattern). No cap hits. No partial run."
+    },
+    {
       "run_id": "2026-07-15T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
