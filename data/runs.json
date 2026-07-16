@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-16T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-16T11:00:00Z",
+      "ended_at": "2026-07-16T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 25000,
+        "curation": 5000,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 12,
+      "items_added": 3,
+      "items_kept": 9,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-16-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh phase enabled. Today's 2026-07-16-am.json existed from the 2am enrichment run (9 items: 3 T1 + 3 T2 + 3 T3). Last successful run ended_at: 2026-07-16T06:35:00Z (enrichment). WebFetch remains 403-blocked per established pattern — used WebSearch-only via 9 targeted queries. (1) Andrej Karpathy/Anthropic verification — DEBUNKED: Karpathy joined Anthropic May 19 2026 per TechCrunch/Axios/CNBC, not July 15-16; single-aggregator claim was old news resurfaced; NOT added. (2) Late-breaking AI model releases July 16 — no new frontier model dropped; GPT-5.6, Grok 4.5, Sonnet 5 all prior weeks. (3) TSMC Q2 2026 earnings — CONFIRMED new July 16 item: $40.2B revenue, $22.4B net income (+77.4% YoY), gross margin 67.7%; record quarter driven by AI chip demand; mirrors IBM Q2 miss already in file; TSMC also pushing back on ASML High-NA EUV pricing per earnings call (The Information). Added as T3 Asia. (4) xAI Grok Build open-sourced — CONFIRMED new July 16 item: ~844K lines of Rust, Apache 2.0 license, released after July 14 security disclosure that tool silently uploaded full Git repos including credentials to Google Cloud; upload code remains in source but disabled by default. Added as T2 US. (5) China AI Companion Law — CONFIRMED July 15 item enrichment missed: 'Interim Measures for the Administration of Anthropomorphic AI Interaction Services' took effect July 15; Doubao (345M MAU) + Alibaba Qwen disabled companion/agent creation features; data deleted October 15; ByteDance redirecting users to Maoxiang; regulation targets consumer persona products, NOT Qwen/DeepSeek open-weight models. Added as T2 Asia. No T1 re-passes needed — no significant overnight chatter on Thinking Machines Inkling, Lambert essay, or Blomfield hire since 06:35Z. Final snapshot: 12 items (3 T1, 5 T2, 4 T3). No cap hits. No partial run."
+    },
+    {
       "run_id": "2026-07-16T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
