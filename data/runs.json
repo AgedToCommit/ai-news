@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-17T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-17T06:08:00Z",
+      "ended_at": "2026-07-17T06:20:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 82000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 57500,
+        "curation": 18000,
+        "output_write": 6000
+      },
+      "fetches_made": 19,
+      "items_input": 7,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 1,
+      "snapshot_written": "2026-07-17-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended_at: 2026-07-16T17:15:00Z (digest). WebFetch remains 403-blocked per established pattern in all prior runs — used WebSearch-only via general-purpose subagent across ~19 targeted queries covering the 4 pm items and late-breaking discovery. Sub-task 1 outcomes: (A) Gemini 3.5 Pro KEPT + heavily ENRICHED — narrative flipped from 'July 17 launch drumbeat' to 'third missed deadline'; TechTimes 320736 (July 16) reports the rebuild cleared SVG and recursive-tool-calling failures but is now blocked by hallucination-rate and reliability gaps vs GPT-5.6; DeepMind has registered 'Gemini 3.6 Flash' and 'Gemini 3.5 Flash Light' model names suggesting an intentional Flash-first stopgap; no gemini-3.5-pro API listing / model card / pricing page as of July 17; rewrote title/summary/why/brief. (B) Anthropic IPO KEPT + LIGHTLY ENRICHED — Bloomberg July 15 'Anthropic Is Said to Plan IPO Investor Meetings as Listing Nears' independently corroborated the CNBC scoop; two-independent-source confidence step-up; absence-of-pushback marker after 24 hours. (C) Ode with Anthropic KEPT + ENRICHED — TechCrunch + Technology.org July 15-16 follow-on sharpened three specific pieces: 'Claude-first but multi-model' operating principle; built on Fractional AI acquisition with Chris Taylor CEO / Eddie Siegel CTO / ~100 engineers at launch; expanded investor consortium (added General Atlantic, Leonard Green, Apollo, GIC, Sequoia to the original Blackstone + H&F + Goldman lineup); named-customer marker still absent as the specific 4-8 week data point to watch. (D) Bloomberg coding profession DROPPED — no substantive follow-up in the 12-hour window (no tracked-commentator reactions from Simon Willison, Ethan Mollick, or Nathan Lambert; no contradicting productivity data; no formal reactions from Shopify/Airbnb/Stripe engineering leadership). Sub-task 2 late-breaking pass added 2 items, both tier-1 Asia: (1) Moonshot AI released Kimi K3 on July 16 — 2.8T sparse MoE (16/896 experts active), new Kimi Delta Attention + Attention Residuals architecture, 1M context, self-reported 93.5% GPQA Diamond / 88.3% Terminal-Bench 2.1 / 91.2% BrowseComp, beats Opus 4.8 max and GPT-5.5 high, trails Fable 5 and GPT-5.6 Sol; web/API today with open-weights promised by July 27; largest open-weight model released to date and first frontier-class open-weight to land inside a WAIC window; sources Simon Willison, MarkTechPost, SiliconANGLE. (2) WAIC 2026 opens July 17 in Shanghai with Xi Jinping delivering his first-ever WAIC keynote (state-level AI-governance signal); 1,100+ enterprises, 100,000+ sqm, 300+ product debuts including Huawei Atlas 950 SuperPoD (claimed 8,192 Ascend NPU training cluster), Jieyue Agent OS, near-memory 3D compute chips; convergence with Kimi K3 (July 16) and DeepSeek V5 preview rumored July 18 makes this the 72-hour window where the frontier-tier balance gets restated; sources Global Times, People's Daily, Yicai Global. Third late-breaking candidate (Google DeepMind stopgap Gemini 3.6 Flash) was folded into Item A's enrichment rather than added as a separate item. Final tier_counts: {1: 3, 2: 2, 3: 0}; item_count 5; dropped 1 (Bloomberg coding profession). No caps hit. Standard commit + push."
+    },
+    {
       "run_id": "2026-07-16T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
