@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-17T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-17T17:00:00Z",
+      "ended_at": "2026-07-17T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 78000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 55000,
+        "curation": 12000,
+        "output_write": 9000
+      },
+      "fetches_made": 12,
+      "items_input": 20,
+      "items_output": 6,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-17-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run. Pre-flight: kill switch inactive, digest phase enabled. Today's 2026-07-17-am.json existed with 7 items (4 T1 + 3 T2) covering: Gemini 3.5 Pro third miss, Kimi K3, WAIC + Xi keynote + Huawei Atlas 950, Anthropic IPO, Ode/Blackstone, WAICO founding, NotebookLM->Gemini Notebook. Last successful run ended_at: 2026-07-17T11:36:49Z (refresh). WebFetch remains 403-blocked across every URL tested (Simon Willison Atom, Interconnects feed, HuggingFace blog XML) \u2014 used WebSearch-only via general-purpose subagent across 10+ targeted queries covering WAIC Day-1 afternoon outcomes, DeepSeek V5 preview, Gemini 3.5 Pro launch verification, Thinking Machines Inkling, Anthropic Gov FedRAMP, Apple Intelligence China, Microsoft Agent Framework, TSMC Q2 + Arizona, Perplexity Comet Mac, Unitree GD01 mecha, Emergent India Series C, and negative-finding sweeps. Curation notes: (1) Gemini 3.5 Pro PROMOTED from am with afternoon context \u2014 a second cluster of secondary press (Zoombangla, Central Jersey, EnterpriseDNA) began reporting the model DID launch today with 2M context + Deep Think on the $250 Ultra tier, contradicting the am file's third-miss framing; TechTimes and Geeky Gadgets stand by the miss narrative; no ai.google.dev model card, gemini-3.5-pro API listing, or Google blog post to resolve the split; item rewritten around the media-cycle split rather than committing to either narrative. (2) Thinking Machines Inkling excluded \u2014 already covered in 2026-07-16-am. (3) MCP 2026-07-28 spec RC excluded \u2014 already covered in 2026-07-11-pm. (4) HuggingFace + NVIDIA LeRobot + Isaac GR00T 1.7 excluded \u2014 already covered in 2026-07-10-am. (5) TSMC Q2 record earnings excluded \u2014 already covered in 2026-07-16-am. (6) StepFun / ZTE / Nubia STEPX Neo agent phone excluded \u2014 the ZTE AI Agent phone preview is already in 2026-07-15-am's WAIC preview item; today's actual debut is the substance of that preview, not a new story. (7) Anthropic Claude Code + Cowork Gov FedRAMP High excluded \u2014 July 7 story already covered in 11 files across July 8-11. (8) Xi Jinping WAIC keynote NPR follow-on excluded \u2014 same-story-different-outlet pickup, no material update to today's am WAIC/WAICO items. (9) DeepSeek V5 preview: no event, no leak; NOT added. (10) Kimi K3 market-reaction (Zhipu -27.7%, MiniMax -16.5% Hong Kong) + Simon Willison pelican SVG eval NOT promoted \u2014 refresh already added third-party eval context at 11:30 UTC; adding a third revision within 6 hours would over-cover a single story. Final output: 2 T1 (Apple Intelligence China with Qwen+Baidu \u2014 new; Gemini 3.5 Pro \u2014 promoted with afternoon context), 2 T2 (Microsoft Agent Framework 1.11.0; Perplexity Comet Mac + Personal Computer), 2 T3 (Unitree GD01 mecha at WAIC; Emergent India $130M Series C AI coding for SMBs). Volume light vs digest's typical 10-15 target because the am file is already thick with the WAIC / Kimi K3 / Gemini / WAICO frontier-tier stories and additional coverage would duplicate; T3 mix intentionally spans embodied AI and fundraising to broaden the reader profile beyond the Chinese-hardware and enterprise-JV threads dominating am."
+    },
+    {
       "run_id": "2026-07-17T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
