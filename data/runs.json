@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-18T06:22:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-18T06:14:00Z",
+      "ended_at": "2026-07-18T06:22:00Z",
+      "wall_time_ms": 480000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 53000,
+        "curation": 10000,
+        "output_write": 4500
+      },
+      "fetches_made": 14,
+      "items_input": 6,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 3,
+      "snapshot_written": "2026-07-18-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended_at: 2026-07-17T17:20:00Z (digest). WebFetch remains 403-blocked per established pattern in all prior runs — used WebSearch-only via general-purpose subagent across ~14 targeted queries covering the 6 pm items and late-breaking discovery. Sub-task 1 outcomes: (A) Apple Intelligence China KEPT + LIGHTLY ENRICHED — 72-hour marker after CAC approval landed; no Apple / Alibaba / Baidu ship-date confirmation, commercial terms, or PCC/data-localization statement; overnight coverage all re-pickup of the July 15 story; reframed around calibration read that regulatorily-finalized + commercially-quiet is itself the signal. (B) Gemini 3.5 Pro KEPT + HEAVILY ENRICHED — launch/miss split from pm is resolving toward miss; none of the 4 resolution signals (ai.google.dev model card, gemini-3.5-pro API listing, DeepMind blog post, hands-on posts from Willison/Mollick/Lambert) appeared in the 13-hour overnight window; TechTimes third-miss framing holds; expected next event is a Flash-first stopgap (Gemini 3.6 Flash or Gemini 3.5 Flash Light per DeepMind's registered names); rewrote title/summary/why/brief around the calibration read that 13-hour silence from tracked frontier-model observers is stronger evidence than any additional secondary trade press could provide. (C) Microsoft Agent Framework 1.11.0 DROPPED — no MCP-community reaction, developer commentary, or LangChain/CrewAI response in the 13-hour window; broader MCP progressive-disclosure discourse (Klavis, Speakeasy, Kruczek's 85x-token benchmark) predates 1.11.0 and does not reference it. (D) Perplexity Comet Mac + Personal Computer DROPPED — no fresh hands-on reviews or competitor response; top-tier coverage predates the pm window; pm digest may have overstated the newness. (E) Unitree GD01 DROPPED — GD01 was originally unveiled May 12 per CnEVPost / Global Times / SCMP / NewAtlas, so the July 17 WAIC showing was a re-appearance rather than a debut; no WAIC Day 2 GD01 follow-up in the 13-hour window; safer to drop than to double-cover. (F) Emergent India KEPT + HEAVILY ENRICHED — DealStreetAsia / BigGo / TechCrunch follow-on corrected metrics substantially upward: $120M ARR (not $40M) and 200,000+ paying customers (not 40K), ~3x the pm digest's initial numbers; added Greenoaks Capital as US cross-border co-lead; CEO Madhav Jha explicitly named Replit as closest rival and distinguished Emergent from Claude Code / Codex / Cursor as devs-only tools; reframed as third Indian AI unicorn of 2026 at Replit-comparable scale. Sub-task 2 late-breaking pass added 1 tier-2 Asia item: WAICA (WAIC Academic) — inaugural standalone peer-reviewed track at WAIC 2026 opens July 18 in Shanghai; 57 papers accepted from 282 submissions (~20% rate); Springer LNCS proceedings; Andrew Yao general chair; structural shift from prior WAIC programming that was product-launch heavy with only invited academic talks; positions Shanghai as a frontier-research venue alongside the WAICO intergovernmental block and the WAIC industry exhibition; source: WAICA 2026 official program. Two other late-breaking candidates evaluated and skipped: DeepSeek V4 non-preview release (still no primary-source confirmation of a mid-July landing; worth watching for refresh at 7am), and re-adding Kimi K3 (already covered in the 2026-07-17-am file and enriched with third-party evals; no re-pass needed). Final tier_counts: {1: 2, 2: 1, 3: 1}; item_count 4; items_added 1; items_kept 3; items_dropped 3. No cap hits. Standard commit + push."
+    },
+    {
       "run_id": "2026-07-17T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
