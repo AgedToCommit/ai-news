@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-19T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-19T06:00:00Z",
+      "ended_at": "2026-07-19T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 15000,
+        "output_write": 10000
+      },
+      "fetches_made": 9,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-19-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's pm file (2026-07-18-pm.json) present with 6 items. All 6 items surfaced meaningful new context in the overnight enrichment sweep — all KEEP+ENRICH, no drops. (1) EU DMA Google — added General Court July 8 sequencing rule that Google's expected appeal will not suspend compliance obligations; the November 2026 / January 2027 milestones become firm calendar deadlines. (2) Sacks/Kimi K3 — Kimi K3's specific Arena Frontend Code Elo of 1679 (beating Fable 5 head-to-head), Trump's June executive order asking labs to voluntarily hand pre-release models to government for testing, and the 'Gold Eagle' cyber-vulnerabilities partnership program; TheNextWeb expanded coverage to add Khosla/Marcus reactions. (3) Fireworks — corrected named-customer list to Doximity, Revolut, Shopify (from digest's initial Uber/Shopify) — regulated-industry mix. (4) OpenAI Codex Micro — five explicit Codex agent states (idle/thinking/complete/needs-feedback/error) on the illuminated Agent Keys, device is variant of Work Louder Creator Micro 2, limited-run confirmed. (5) DeepSeek V4 GA — even at doubled peak rates V4-Pro output is ~17x cheaper than GPT-5.5, TheRouter.ai crystallized 'every AI gateway needs time-zone-aware cost accounting', legacy-endpoint countdown updated to 5 days. (6) Nvidia H200 China — expanded to ~10 approved firms (added Tencent, JD.com) at 75K chips each through Nvidia direct or Lenovo/Foxconn distributors, Beijing restricts H200 to training only (Ascend required for inference), DeepSeek V4 was Ascend-optimized from launch. Late-breaking pass: added 1 Tier-1 item — Anthropic July 18 'Redeploying Claude Fable 5' timeline update resolves the four-day Fable 5 subscription cliffhanger (Max/Team Premium keep at 50% weekly limits, Pro/Team Standard get $100 one-time credit then flip to $10/$50 per-token billing starting July 20 11:59:59 PM PT, subscription weekly limits themselves drop by ~1/3 across tiers; no Opus 5 announcement accompanied). Second late-breaking candidate considered (Oracle 30k layoffs) but the underlying announcement is March 31 not July 18 — passed. Final tier_counts {1:3, 2:3, 3:1}; item_count 7. WebSearch across 9 targeted queries; WebFetch not attempted per established 403-block pattern; standard commit + push."
+    },
+    {
       "run_id": "2026-07-18T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
