@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-19T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-19T11:00:00Z",
+      "ended_at": "2026-07-19T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 43000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 4000,
+        "output_write": 2500
+      },
+      "fetches_made": 16,
+      "items_input": 4,
+      "items_output": 8,
+      "items_added": 1,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-19-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh phase enabled. Last successful run ended_at: 2026-07-19T06:20:00Z (enrichment). WebFetch 403-blocked per established pattern — used WebSearch-only across 16 targeted queries in 5-hour sweep window (06:20 UTC to 11:00 UTC). No Anthropic Opus 5; no major new model release in overnight window. Main addition: Gemini 3.5 Pro confirmed third consecutive missed launch deadline — July 17 target passed without launch; Bloomberg July 16 reported base-model rebuild after recursive tool-calling and SVG generation failures; Alphabet -4%+; Google registered 'Gemini 3.6 Flash' and 'Gemini 3.5 Flash Light' stopgap model names; no new target date; NOT in any recent snapshot; added as Tier 1 Global. Optional re-pass: Sacks/Kimi K3 Tier 1 item updated to note Kimi K3 open weights on Hugging Face by July 27 (2.8T params, Modified MIT, 64+ accelerators). Final tier_counts {1:4, 2:3, 3:1}; item_count 8; items_added 1; items_kept 7."
+    },
+    {
       "run_id": "2026-07-19T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
