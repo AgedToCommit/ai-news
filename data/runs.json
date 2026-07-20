@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-20T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-20T11:00:00Z",
+      "ended_at": "2026-07-20T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 43000,
+        "curation": 7000,
+        "output_write": 2000
+      },
+      "fetches_made": 21,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-20-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh phase enabled. Last enrichment ended_at: 2026-07-20T06:20:00Z. WebFetch 403-blocked per established pattern — WebSearch-only across 21 queries (12 direct + 9 via sub-agent). Standard sweep since 06:20 UTC (2:20am EDT). No new Qwen 3.8 benchmarks or HuggingFace repo; no Claude Opus 5/Honeycomb official announcement; SAIL Award announced July 17 at WAIC main forum (not July 20 closing); Kimi K3 open weights not yet released (July 27 confirmed date). Two items added: (1) Blackstone/Futronic — Bloomberg July 20 report of Blackstone acquiring majority stake in South Korean precision actuator maker Futronic at ~$676M, explicitly tied to humanoid robotics demand; fresh Asia-cycle story; tier 2 Asia. (2) Hugging Face AI-agent-driven security breach — disclosed July 16 with Techmeme/The Stack highlighting July 19 the safety guardrails asymmetry angle (frontier model APIs blocked forensic analysis of exploit payloads; pivot to open-weight GLM 5.2 on internal compute); not captured in any prior snapshot; offensive/defensive AI tooling asymmetry at production scale is the structural finding; tier 2 Global. Tier 1 re-pass: Qwen 3.8 item reviewed — Dataconomy July 20 adds nothing new; minor revision added only for SAIL Award timing clarification. Candidates skipped: Claude for Teachers (July 14, 6 days old); Fable 5 July 20 transition (pre-announced July 18); Current AI $400M (published before enrichment ended, July 19); Morgan Stanley H1 fees (adjacent to existing Bloomberg item); NAVER+NVIDIA (WAIC adjacency already covered). Final tier_counts {1:1, 2:4, 3:0}; item_count 5; items_added 2; items_kept 3."
+    },
+    {
       "run_id": "2026-07-20T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
