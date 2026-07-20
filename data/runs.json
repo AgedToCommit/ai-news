@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-20T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-20T06:00:00Z",
+      "ended_at": "2026-07-20T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 12000,
+        "output_write": 8500
+      },
+      "fetches_made": 12,
+      "items_input": 2,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-20-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment phase enabled. Last successful run ended_at: 2026-07-19T17:15:00Z (digest). WebFetch 403-blocked per established pattern — WebSearch-only across 12 targeted queries. Yesterday's pm file had 2 items (Qwen 3.8-Max-Preview, Bloomberg AI capex reframe); both KEPT + ENRICHED. Qwen 3.8 enrichment — 24 hours in still no benchmark table, still no HF repo, developer-hands-on takes absent (Willison/Mollick/Zvi haven't posted because Alibaba-Token-Plan-only distribution rules out the independent-eval loop that spun up on K3 within 12 hours); MarkTechPost / BenchLM.ai 'Data Coming Soon' framing anchors the read; specific distribution-strategy contrast between Moonshot open-weight-first (K3) and Alibaba hosted-first (Q3.8) added as structural read for why K3 not Q3.8 is anchoring market-reaction narrative; two 5-7 day markers to watch flagged (benchmarks before K3's July 27 open-weight drop, LMSYS Arena / Artificial Analysis appearance by end of week); rewrote why_it_matters_brief. Bloomberg AI capex enrichment — Monday-open confirms reframe with Kospi -4.9% overnight (SK Hynix -3.3%, Samsung -4.4%) split against Hang Seng +2.1% / Shanghai +1.2% (specific split maps onto Chinese-lab-open-weight thesis); Middle East oil-price rise adds second confounding variable (inflation + rate-path concern on top of capex-return concern); TSMC +2% on $100B US expansion counter-move noted; Alphabet earnings calendar clarified to July 22 (not July 23); consensus $2.86-$2.95 GAAP EPS on $116.8-120.2B revenue; FY26 capex guidance $180-190B; Q1 Google Cloud $20B +63% YoY as specific analyst-question threshold (AI-attributable growth vs 63% total Cloud growth); Xi WAICO structural context (29 founding countries) added; rewrote why_it_matters_brief. Late-breaking pass added 1 item — Anthropic-Meta $10B two-year compute lease deal (NYT+CNBC July 17 reporting, not previously covered in any July snapshot); frontier-lab-scale customer validation for July 1 Meta Compute cloud launch (which itself moved Meta +8.81% and dropped chip-and-cloud sector ~$200B); Anthropic four-way compute-diversification posture (Google TPUs + AWS Trainium + Nvidia GPUs + Meta) as specific hedge against Gemini 3.5 Pro TPU-roadmap slippage; connects to Tom Blomfield compute-team reorg reporting; downstream pressure on CoreWeave / Nebius / Fireworks AI (Fireworks $1.5B Series D was in 2026-07-19-am); tier-2 US infrastructure item; used 1 of 2 late-breaking slots. Candidates considered but skipped: (a) Claude Opus 5 / Honeycomb launch (rumored July 20-21 launch window based on Cursor leak but zero official Anthropic announcement — cannot add without confirmation); (b) Xi WAIC keynote + WAICO launch (already covered in 2026-07-17-am + 2026-07-18-am); (c) Huawei Atlas 950 SuperPoD physical debut at WAIC (already covered in 2026-07-17-am waic-shanghai-2026-opens-xi-keynote-huawei-atlas-950 item); (d) MiniMax M3 WAIC showcase (model launched June 1, WAIC appearance not novel); (e) SAIL Award WAIC closing announcement (event runs today, no result yet); (f) Anthropic Cowork July 7 recap (already historical). Final tier_counts {1:1, 2:2, 3:0}; item_count 3; items_added 1; items_kept 2; standard commit + push."
+    },
+    {
       "run_id": "2026-07-19T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
