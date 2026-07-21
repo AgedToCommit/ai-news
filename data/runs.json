@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-21T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-21T06:00:00Z",
+      "ended_at": "2026-07-21T06:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 8500,
+        "output_write": 4000
+      },
+      "fetches_made": 10,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-21-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Read yesterday's 2026-07-20-pm.json (3 items, all tier-2). Sub-task 1 — prune+enrich: (a) Google Frozen v2 chip — KEEP+ENRICH; added Tuesday-morning follow-on framing (production volumes expected to fall well short of TPU levels, project internally treated as exploratory/targeted-workload effort not full TPU replacement, financial benefits arrive 2028+ and can't be scored against Wednesday Q2 print), added specific Alphabet Q2 preview numbers (consensus EPS $2.86-2.95, revenue $116.8-120.2B, Google Cloud ~67% YoY to ~$22.8B, FY26 capex $180-190B anchor, options pricing 5.3% earnings move); updated why_it_matters_brief; new sources TechCrunch, Fxleaders July 21 technical preview, Yahoo Finance Q2 preview, TradingKey, MarketBeat. (b) SK Group Chey memory warning — KEEP+ENRICH; added Tuesday-morning parallel framing (SK hynix CEO Kwak Noh-jung Bloomberg July 10 warning demand outruns capacity 'even beyond 2030' extending shortage from a 2027 spike to multi-year gap, KIS Semicon analyst Minsook Chae lowered Q2 profit forecast to 60.4T KRW 8% below consensus of 65T citing LTA-anchored ASP stabilization); composite read updated to shortage-is-real-but-LTA-smoothing-earnings; updated why_it_matters_brief; new sources Bloomberg (Kwak) July 10, Tom's Hardware, Silicon Analysts, KuCoin/Binance/Odaily analyst-cut. (c) Apple Intelligence China/Qwen — KEEP+ENRICH; added overnight tightening (Alibaba spokesperson confirmed to CNBC/Reuters that Qwen will handle BOTH text AND image generation across Apple Intelligence — wider surface than initial 'language only' framing; Baidu's role narrowed to camera-based Visual Intelligence not generative images; rollout window firmed to Q3-Q4 2026 with iPhone 18 Pro fall launch cycle as one plausible trigger point); updated architectural framing on provider-per-geography-per-function; updated why_it_matters_brief; new sources MacRumors, AppleInsider, TechRepublic APAC, Windows Forum, The Private Banker. No items dropped — all 3 yesterday-pm items had material Tuesday-morning follow-on framing and survived enrichment. Sub-task 2 — late-breaking pass: added 1 tier-2 EU item — European Commission published Guidelines on Transparency Obligations for Providers and Deployers of AI Systems on July 20 2026, 13 days before Article 50 enforcement activates August 2 2026; procedural-implementation update to previously-covered August 2 deadline (in 2026-07-11-am and 2026-07-01-am); the specific Python-developer read is the deployer-vs-provider role split (a Python hobbyist shipping an AI tool into the EU is a deployer with a thin disclosure obligation while machine-readable content-marking stays on providers); connects to the coming Aug 2 activation of GPAI enforcement (same €15M / 3% global turnover ceiling under Articles 99/101); sources European Commission press release + guidelines document, IEU Monitoring, TechPolicy.Press explainer, artificialintelligenceact.eu Article 50, Beam.ai enforcement primer, Legalnodes/EW Solutions/DigitalApplied readiness guides. Also surveyed: (i) OpenAI/Anthropic/Google announcements — nothing genuinely new on July 20-21 above the fold beyond the Frozen v2 scoop already carried; (ii) open-weight releases — Kimi K3 weights expected July 27 (6 days out), not late-breaking; (iii) Anthropic-Google-Broadcom compute partnership — April 2026 announcement resurfacing, not new. Final tier_counts {1:0, 2:4, 3:0}; item_count 4; items_added 1; items_kept 3; items_dropped 0. Standard commit + push. WebFetch 403-blocked per established pattern — WebSearch-only across 10 targeted queries."
+    },
+    {
       "run_id": "2026-07-20T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
