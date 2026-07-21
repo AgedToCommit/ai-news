@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-21T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-21T11:00:00Z",
+      "ended_at": "2026-07-21T11:08:00Z",
+      "wall_time_ms": 480000,
+      "tokens_used": 14000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 8500,
+        "curation": 3000,
+        "output_write": 1500
+      },
+      "fetches_made": 6,
+      "items_input": 1,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Standard path — today's am file existed (written by enrichment at 06:22 UTC). Last enrichment ended_at: 2026-07-21T06:22:00Z. Sweep since 06:22 UTC. WebFetch 403-blocked per established pattern — WebSearch-only across 6 targeted queries covering: (1) AI news July 21 2026 model releases, (2) OpenAI/Anthropic/Google/Meta announcements July 21, (3) Alphabet Q2 earnings preview July 21, (4) Hugging Face AI agent breach response July 21, (5) Alphabet Anthropic stake mark-to-market earnings, (6) Anthropic news July 21. Candidates assessed: (a) Hugging Face autonomous AI agent breach (July 20 disclosure, July 21 morning follow-on from VentureBeat/Gizmodo on the safety-guardrails-blocked-defenders angle) — ADDED as new tier-2 Global item; first confirmed end-to-end autonomous AI agent cyberattack on major AI platform; key finding: US frontier API safety guardrails blocked defenders' own forensic analysis, team ran GLM-5.2 locally instead; 17,000+ agent actions, self-migrating C2, node-level access; CrowdStrike 2026 context: AI-enabled adversary ops +89% YoY, avg breakout time 29 minutes. (b) Anthropic stake mark-to-market ahead of Alphabet Q2 print (July 22): BofA modeled ~$80B mark-to-market gain on Alphabet's ~14% Anthropic stake (valued ~$135B at $965B Anthropic valuation), pushing BofA GAAP EPS estimate to $8.38 vs $2.86-2.95 consensus — added as revision to existing Frozen v2 / Alphabet earnings item (tier-2, last_revision_by updated to refresh). (c) GPT-5.6 Sol: GA was July 9 — too old, not new since enrichment. (d) Apple-OpenAI lawsuit: filed July 10 — too old. (e) Anthropic-Samsung chip talks: July 2 — too old. (f) UN AI Panel preliminary report: July 1 — too old. (g) Kimi K3 chip selloff: July 17 announcement covered in prior snapshots, weights still expected July 27. No new major Anthropic/OpenAI/Google announcements from July 21 morning hours. Final tier_counts {1:0, 2:5, 3:0}; item_count 5; items_added 1; items_kept 4; items_dropped 0."
+    },
+    {
       "run_id": "2026-07-21T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
