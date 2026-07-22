@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-22T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-22T06:15:00Z",
+      "ended_at": "2026-07-22T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 8000,
+        "output_write": 5000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-22-am",
+      "error": "no yesterday pm file — performed mini-digest only",
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's 2026-07-21-pm.json does NOT exist (July 21 1pm digest did not run — last runs in log are 2026-07-21T06:00Z enrichment and 2026-07-21T11:00Z refresh both against 2026-07-21-am, no digest entry for July 21). Triggered fallback path per enrichment.md: skip prune+enrich, perform mini late-breaking pass only. WebFetch 403-blocked per established pattern — WebSearch-only across 8 targeted queries covering: (1) AI news July 21 model releases, (2) Anthropic Opus 5 status, (3) Gemini 3.6 Flash release, (4) Muse Spark 1.1 context, (5) Alphabet Q2 earnings preview, (6) Gemini 3.5 Flash Cyber security angle, (7) OpenAI/Anthropic late July 21 announcements, (8) Anthropic-Physical Intelligence acquisition rumor. Two items surfaced as genuinely late-breaking (last 12-14 hours since 2026-07-21T14:00 EDT). ITEM 1 (tier-1 US): Google DeepMind released three Gemini models Tuesday July 21 — Gemini 3.6 Flash (workhorse, 17% fewer output tokens on AA Index / up to 65% on DeepSWE, output price cut $9.00 → $7.50 per 1M, input stays $1.50, knowledge cutoff advanced from Jan 2025 to March 2026, 304 tok/s, GDPVal-AA v2 1421 vs 1349, OSWorld-Verified 83.0%, AA Intelligence Index 50 matching GPT-5.6 Luna at 2x speed, available day-one on AI Studio + Vertex AI + Gemini Enterprise Agent Platform + GitHub Copilot with admin-policy toggle for Copilot Enterprise/Business), Gemini 3.5 Flash-Lite (cheapest Flash SKU, 1/3 input cost of GPT-5.4 mini and <1/3 of Claude Haiku 4.5), and Gemini 3.5 Flash Cyber (Gemini 3.5 Flash foundation specialized for vulnerability detection/confirmation/remediation, reportedly outperforms Claude Opus 4.6 on unique-vulnerability detection in Chrome-scale codebases, gated to governments/trusted partners via CodeMender pilot only); no Gemini 3.5 Pro (past promised June launch), Gemini 4 publicly teased; agentic-workload caveat named: per-token savings can be swallowed by higher token consumption for tool-calling-heavy workloads; specific tie-in to Hugging Face security breach in yesterday's am file — Flash Cyber is Google's specialized security-cleared variant approach to the safety-guardrails-block-defenders problem, distributed via gated channel rather than unrestricted general API. ITEM 2 (tier-2 US): Anthropic-Physical Intelligence acquisition rumor blew up on AI Twitter over the Monday-into-Tuesday cycle — Robert Scoble weekend X post claimed acquisition in progress, PI CEO Karol Hausman denied via Slack gif of Office character shaking head no, but The Information reports Anthropic and PI did hold acquisition talks this spring so Scoble may have gotten specifics wrong without being wrong that something material happened; PI most recently in talks to raise at $11B valuation; structural read: Anthropic's public physical-AI story is partnership-and-integration (UST for Claude in physical AI, rumored PI interest) while OpenAI and Google DeepMind have shipped robotics-specific model foundations (RT-2 lineage at DeepMind, embodied-agents work at OpenAI); The Information AI Agenda has been reading Vera Rubin compute buildout partly through the physical-AI-training lens. Also considered but not surfaced: (a) Kimi K3 open weights still expected July 27 (6 days out) — not late-breaking, only a July 21 Kimi Work interim-instructions update surfaced; (b) White House frontier-model voluntary framework — being finalized ahead of Aug 1, but based on the June 2 executive order and covered earlier in the month, not new-in-last-12-hours; (c) Alphabet Q2 earnings after-bell today (July 22) — earnings not yet released, already carried extensively in the Google Frozen v2 item in yesterday's am file; (d) SK hynix / TSMC / Nvidia semi selloff — already carried in yesterday's am file. Final tier_counts {1:1, 2:1, 3:0}; item_count 2; items_added 2; items_kept 0 (fallback path — no yesterday-pm to keep from); items_dropped 0. Note in error field per enrichment.md fallback path spec. Standard commit + push."
+    },
+    {
       "run_id": "2026-07-21T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
