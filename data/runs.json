@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-22T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-22T11:00:00Z",
+      "ended_at": "2026-07-22T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 5000,
+        "output_write": 1000
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 3,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Today's am file (2026-07-22-am.json) exists with 2 items from enrichment (ended_at 2026-07-22T06:30:00Z — fallback mini-digest path). Standard refresh path triggered. WebFetch 403-blocked per established pattern — WebSearch-only across 7 targeted queries covering: (1) AI news July 22 overnight model releases, (2) Alphabet Q2 2026 earnings preview, (3) OpenAI/Anthropic/xAI announcements July 22, (4) Microsoft-Mistral Vera Rubin Europe partnership, (5) OpenAI government equity stake (found: July 2 story, too old, excluded), (6) South Korea free national AI, (7) Kimi K3 / Qwen3.8-Max Chinese open-weight models. Three items surfaced as genuine additions not in the current am file. ITEM 1 (tier-1 Asia): Kimi K3 (Moonshot AI, July 17 2026) — 2.8T parameter sparse MoE open-weight model, largest open-weight release ever; 16/896 experts active per pass; Kimi Delta Attention + Attention Residuals innovations; 1M-token context; API $3/$15 per 1M input/output (~half per-task cost of Opus 4.8); #1 in Chatbot Arena Frontend Code evaluation (1,679 points, beating Fable 5 in blind testing); sits behind Fable 5 and GPT-5.6 Sol overall but outperforms Opus 4.8 and GPT-5.5 on coding/agentic benchmarks; trained on H100s pre-export-control + Huawei Ascend; full open weights July 27 under Modified-MIT; Alibaba previewed Qwen3.8-Max-Preview at WAIC Shanghai July 19 (2.4T MoE multimodal, 1M context, 'second only to Fable 5' claim with no benchmark table or independent scores published as of July 21 — folded into same item). ITEM 2 (tier-2 Global): Microsoft-Mistral expanded partnership (July 21) — multibillion-dollar deal, thousands of Nvidia Vera Rubin GPUs in European data centers, Mistral Medium 3.5 and OCR 4 added to Microsoft Foundry/Copilot Studio/Azure, Azure Local support for fully disconnected deployment targeting EU regulated industries (finance/manufacturing/healthcare). ITEM 3 (tier-3 Asia): South Korea 'AI for Everyone' (July 14 bidding opened, July 21 latest coverage) — free unlimited national AI chatbot, domestic Korean models ≥50%, beta September, public launch December 2026, funded through 2028, 23 million users reportedly quit ChatGPT since announcement. Also considered but excluded: Alphabet Q2 earnings (earnings call not yet occurred, after-bell today — not a news item yet); OpenAI 5% government equity stake (July 2, too old for refresh window); Nadella 'editorially controlled' Fable comment (July 16, one week old, outside refresh window). Final tier_counts {1:2, 2:2, 3:1}; item_count 5; items_added 3; items_kept 2."
+    },
+    {
       "run_id": "2026-07-22T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
