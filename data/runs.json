@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-23T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-23T11:00:00Z",
+      "ended_at": "2026-07-23T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 27000,
+        "curation": 5500,
+        "output_write": 3000
+      },
+      "fetches_made": 13,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-23-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Today's am file (2026-07-23-am.json) exists with 2 items from enrichment (ended_at 2026-07-23T06:20:00Z — fallback mini-digest path). Standard refresh path triggered. WebFetch 403-blocked per established pattern — WebSearch-only across 13 targeted queries covering: (1) AI news July 23 overnight model releases, (2) Anthropic Economic Futures Research Fund July 2026, (3) SAP Prior Labs acquisition Europe, (4) Microsoft Singapore AI infra $5.5B, (5) Anthropic Project Glasswing vulnerabilities, (6) Google DeepMind Gemini July 23 announcement, (7) Anthropic Economic Futures Fund research agenda July 22, (8) AI model release Europe/Asia overnight, (9) DeepSeek Qwen China AI models July 22-23, (10) Mistral Meta xAI news July 23, (11) DeepSeek V4 general availability launch date pricing, (12) Mistral robotics model 8B embodied AI, (13) Future of Life Institute AI Safety Index Summer 2026. Two items surfaced as genuine additions. ITEM 1 (tier-1 Asia): DeepSeek V4 GA — launched mid-July 2026 (approximately July 19) in Pro and Flash variants; 1M context; peak-valley pricing (costs double 9am–12pm and 2pm–6pm Beijing time, 24-hour email advance notice); off-peak V4 Pro output ~6 RMB (~$0.84/1M tokens) vs $50+/1M for Fable 5, ratio cited as ~1/57th at off-peak rates; near-Opus benchmark performance on coding/reasoning per early third-party reports; DeepSeek trains on Huawei Ascend + older Nvidia hardware post-export controls; open weights July 27 under Modified-MIT; NOTE: prior runs (July 22 11:00Z refresh, July 23 06:14Z enrichment) excluded this item citing incorrect expected-launch dates (July 27 and July 24 respectively) based on pre-launch coverage; multiple post-launch sources including wan27.org, KuCoin flash, deepseek.ai canonical page, deepinfra pricing guide now confirm GA occurred around July 19; adding to current refresh as a missed-but-real item. ITEM 2 (tier-2 US): Anthropic Economic Futures Research Fund research agenda — published July 22 2026; $200M fund part of $350M total commitment ($150M Claude Corps separately); five priority areas: firm/workplace AI impact, navigating transitions, income support modernization, building worker stakes proactively, public investment evidence; preference for partners sharing findings publicly at key milestones; explicitly deferred from the July 23 02am enrichment run due to enrichment 2-item cap. Also considered but excluded: SAP/Prior Labs acquisition (May 2026 announcement, too old even accounting for July 17 tech.eu closing-progress article — 2+ months old); Microsoft Singapore $5.5B (April 2026, 3+ months old); Project Glasswing 10K+ vulnerability update (May/June 2026, 1-2 months old); Mistral Robostral Navigate 8B robotics model (July 9, 2 weeks old — too stale for refresh window); Future of Life Institute AI Safety Index Summer 2026 (published July 7, 2+ weeks old); no fresh Asia/Europe overnight announcements July 23 specifically surfaced beyond DeepSeek V4 already identified. Final tier_counts {1:3, 2:1, 3:0}; item_count 4; items_added 2; items_kept 2."
+    },
+    {
       "run_id": "2026-07-23T06:14:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
