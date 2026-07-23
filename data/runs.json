@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-23T06:14:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-23T06:14:00Z",
+      "ended_at": "2026-07-23T06:20:00Z",
+      "wall_time_ms": 360000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 6500,
+        "output_write": 3000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-23-am",
+      "error": "no yesterday pm file — performed mini-digest only",
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's 2026-07-22-pm.json does NOT exist (July 22 1pm digest did not run — a consistent pattern for the past several days, digest phase appears to be down at the scheduler level). Triggered fallback path per enrichment.md: skip prune+enrich, perform mini late-breaking pass only. WebFetch not attempted — established 403-block pattern per prior runs — WebSearch-only across 8 targeted queries covering: (1) Alphabet Q2 2026 earnings results + Anthropic mark-to-market, (2) AI news July 22 2026 model releases, (3) 'July 22' 2026 AI model release announcements (Google/Meta/xAI), (4) Alphabet Google Q2 2026 capex hike + after-hours stock reaction, (5) Anthropic Claude news July 22 2026, (6) Meta AI moderation 13% errors story, (7) OpenAI news July 22 2026 announcements, (8) Anthropic Economic Futures Research Fund July 22. Sweep window ~19 hours since last refresh ended (2026-07-22T11:15Z). Two items surfaced as genuinely late-breaking and material. ITEM 1 (tier-1 US): Alphabet Q2 2026 earnings after-bell Wednesday July 22 — revenue $119.8B (+24% YoY), Google Cloud $24.8B (+82%), Cloud backlog $514B (+~$50B QoQ), Cloud operating margin 35.6% (roughly 3x YoY), operating income $40.8B (+30%), net profit +298% YoY, Q2 capex record $44.9B, FCF -$5.9B; BofA's $80B Anthropic mark-to-market thesis played out as modeled (Anthropic valuation Q1-end $380B → Q2-end $965B post-$65B-round, Alphabet ~14% stake produced ~$80B paper gain, headline EPS ~$8.38 vs Street ~$2.90); GOOGL -5% after-hours on 2026 capex guide raised to $195–205B (from prior $180–190B) and CFO Ashkenazi statement that 2027 capex will be significantly higher; Pichai 'early innings' AI framing; directly ties to Google Frozen v2 / anticipated-earnings item in yesterday's am file (that item's thesis played out — Anthropic markup did land, but market moved on the capex ratchet, not the paper EPS) and to Gemini 3.6 Flash / Flash-Lite / Flash Cyber item (82% Cloud growth + tripled margin explains why Google can cut Flash-tier prices while raising Cloud profitability). ITEM 2 (tier-1 US): OpenAI publicly launched 'Advertise in ChatGPT' self-serve Ads Manager on July 22 — moving out of May 2026 beta; any US advertiser can now create campaigns, set budgets, target on OpenAI Ads Manager console; sponsored blocks appear below ChatGPT answers (not inline, not above answer, OpenAI explicitly states ads do not shape response text); served only to adult users on Free and Go plans (Plus/Pro/Business remain ad-free — new retention lever for paid tiers); targeting on conversational-context signals distinct from search keywords; Best Buy, Lowe's, VistaPrint as day-one launch advertisers; previous $50K beta minimum-spend eliminated; launched ~14 hours before Alphabet Q2 earnings — first structural competitive move OpenAI has made against Google's ad monopoly; strategic pattern to watch: 'answer-surface sponsorship' as native ad format for conversational AI. Also considered but excluded: (a) Anthropic Economic Futures Research Fund research agenda published July 22 ($200M fund; part of $350M total commitment with $150M Claude Corps) — real but tier-2/3 policy-and-research item, and enrichment cap is 2 items; deferring to refresh at 7am to pick up if room. (b) Meta AI moderation claims — 13% fewer errors, 10% more violations vs humans, but NYT reports business-account false-positives — real but tier-3 governance item, deferred to refresh. (c) Sam Altman briefing US officials next week on next AI models — real but not a shipped event yet, no news value until briefing occurs. (d) OpenAI security incident report — actually old (July 20 Hugging Face incident already covered in yesterday's am file, not new). (e) SAP-Prior Labs acquisition and $1.18B/4y frontier-lab plan — real EU story, tier-2, deferred to refresh if not stale. (f) Microsoft $5.5B Singapore AI infra pledge — deferred to refresh. (g) Anthropic Project Glasswing 10K+ vulnerabilities update — deferred to refresh; ties to Flash Cyber theme. (h) DeepSeek V4 July 24 launch — not yet released. (i) Kimi K3 weights July 27 — not yet released, already carried in yesterday's am. Final tier_counts {1:2, 2:0, 3:0}; item_count 2; items_added 2; items_kept 0 (fallback path — no yesterday-pm to keep from); items_dropped 0. Note in error field per enrichment.md fallback path spec. Standard commit + push."
+    },
+    {
       "run_id": "2026-07-22T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
