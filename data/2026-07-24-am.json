@@ -2,12 +2,13 @@
   "snapshot_id": "2026-07-24-am",
   "snapshot_type": "am",
   "calendar_date": "2026-07-24",
-  "generated_at": "2026-07-24T06:25:00Z",
-  "generated_at_local": "2026-07-24T02:25:00-04:00",
+  "generated_at": "2026-07-24T11:15:00Z",
+  "generated_at_local": "2026-07-24T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-07-24T06:00:00Z", "duration_ms": 1500000 }
+    { "phase": "enrichment", "ran_at": "2026-07-24T06:00:00Z", "duration_ms": 1500000 },
+    { "phase": "refresh",    "ran_at": "2026-07-24T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 4, "2": 0, "3": 0 },
+  "tier_counts": { "1": 4, "2": 1, "3": 0 },
   "items": [
     {
       "id": "white-house-kratsios-moonshot-k3-distillation-anthropic-fable-treasury-sanctions-july-22-23-2026",
@@ -124,6 +125,34 @@
         { "source": "Georgia Public Broadcasting — OpenAI plans to build a $20B data center campus in Effingham County. It could be Georgia's largest yet", "url": "https://www.gpb.org/news/2026/07/22/openai-plans-build-20b-data-center-campus-in-effingham-county-it-could-be-georgias", "take": "Substantive Georgia-public-audience source — the specific 'largest yet' framing that captures the physical-plant scale relative to other Georgia data-center projects, and the local-permitting-and-zoning context." },
         { "source": "Effingham Herald — Hundreds Pack OpenAI Data Center Meeting in Effingham", "url": "https://www.effinghamherald.net/data-centers/hundreds-pack-openai-data-center-meeting-in-effingham-rincon-project-camellia/", "take": "Primary local-newspaper source — the specific 'hundreds packed' framing and the specific Rincon/Project Camellia terminology used locally, which anchors the community-response narrative for anyone tracking local Effingham news." },
         { "source": "Bloomberg — OpenAI Plans to Spend Over $30 Billion on Georgia Data Center", "url": "https://www.bloomberg.com/news/articles/2026-07-22/openai-plans-to-spend-over-30-billion-on-georgia-data-center", "take": "Primary markets-audience source — the $30B+ full-scale spending framing and the specific 3.2 GW power-contract number that provides the physical-plant scale of the commitment." }
+      ]
+    }
+    ,
+    {
+      "id": "openai-chatgpt-voice-desktop-gpt-live-codex-computer-use-july-24-2026",
+      "tier": 2,
+      "title": "OpenAI ships ChatGPT Voice to the desktop on July 24 — GPT-Live's full-duplex voice model now in macOS and Windows apps, directing multiple simultaneous Codex and ChatGPT Work agent sessions by voice and reading screen context via Appshots on macOS; rolling out globally to Plus, Pro, Business, Edu, and Enterprise",
+      "summary": "OpenAI on July 24, 2026 shipped ChatGPT Voice to the desktop application on macOS and Windows, powered by GPT-Live — a full-duplex voice model first launched on mobile in early July that listens and speaks simultaneously without rigid turn-taking. The update integrates directly with ChatGPT Work and Codex: a single spoken prompt can initiate and direct multiple concurrent agent threads, letting you narrate intent, check progress, and redirect running agents by voice without switching windows. On macOS, Appshots gives GPT-Live live screen context — it reads the frontmost window alongside local files, codebase structures, and active plugins without needing anything pasted in. GPT-Live offloads heavy reasoning to background models (GPT-5.5 or GPT-5.6 Sol) to keep voice response latency low. iOS users can pair to a Mac for remote Codex voice control; Android support is announced but not yet available. Rolling out globally to Plus, Pro, Business, Edu, and Enterprise subscribers on July 24.",
+      "link": "https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop",
+      "why_it_matters": "For Gabe: the practical change is that Codex and ChatGPT Work are no longer purely text-input tools. GPT-Live's full-duplex architecture means you can narrate intent while agents are running and redirect mid-task by talking — without stopping them, switching windows, or typing. The specific workflow this unlocks: if you run parallel Codex sessions (one fixing a bug while another writes tests), you can check in on each by voice and add context to a running session mid-execution. The Appshots screen-context feature on macOS is the more interesting technical detail: GPT-Live reads your frontmost window as visual context, giving it 'look at this code right now' without you pasting anything. The architectural pattern worth noting: GPT-Live is not a reasoning upgrade — it's a low-latency voice front-end that routes heavy compute to GPT-5.5 or 5.6 Sol in the background, the same split-role architecture OpenAI first deployed on mobile in early July. The specific thing to test if you use Codex for Python: whether voice-directed multi-agent sessions reduce the friction of keeping multiple tasks in working memory while coding, or whether the handoff latency is still too slow to feel like natural pair programming. Also worth noting: this is the same Codex that OpenAI is now selling to enterprises via Presence — the desktop voice layer is the consumer/Pro/developer interface to the same underlying agent infrastructure.",
+      "why_it_matters_brief": "GPT-Live's full-duplex voice is now in the ChatGPT desktop app on macOS and Windows — direct multiple Codex sessions by voice and get live screen context hands-free, a new interface to multi-agent coding that the mobile-only version didn't unlock.",
+      "source": { "name": "VentureBeat — Agentic coding goes hands-free as OpenAI brings GPT-Live's full duplex voice control to Codex and ChatGPT on the desktop", "type": "scrape", "url": "https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-07-24T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-07-24T11:00:00Z", "by": "refresh", "change": "created — July 24 2026 rollout of ChatGPT Voice to macOS and Windows desktop apps via GPT-Live full-duplex voice model; integrates directly with Codex and ChatGPT Work for voice-directed multi-agent control; Appshots screen context on macOS; global rollout to Plus/Pro/Business/Edu/Enterprise" }
+      ],
+      "takes": [
+        { "source": "VentureBeat — Agentic coding goes hands-free as OpenAI brings GPT-Live's full duplex voice control to Codex and ChatGPT on the desktop", "url": "https://venturebeat.com/orchestration/agentic-coding-goes-hands-free-as-openai-brings-gpt-lives-full-duplex-voice-control-to-codex-and-chatgpt-on-the-desktop", "take": "Primary technical source — the specific VentureBeat 'agentic coding goes hands-free' framing and the architectural split between GPT-Live as low-latency voice front-end and GPT-5.5/5.6 Sol as the background reasoning engine." },
+        { "source": "OpenAI Developer Community — ChatGPT Voice is now in the desktop app", "url": "https://community.openai.com/t/chatgpt-voice-is-now-in-the-desktop-app/1388031", "take": "Primary announcement source — the specific OpenAI-authored description of directing simultaneous Codex and ChatGPT Work sessions by voice, and the global rollout scope and plan tiers." },
+        { "source": "9to5Mac — OpenAI updating ChatGPT desktop app with GPT Voice for talking through work", "url": "https://9to5Mac.com/2026/07/23/openai-updating-chatgpt-desktop-app-with-gpt-voice-for-talking-through-work/", "take": "Substantive macOS-audience source — the specific Appshots and screen-context details that are macOS-only, and the iOS-to-Mac remote pairing feature for Codex voice control." },
+        { "source": "Neowin — ChatGPT Voice experience gets a massive upgrade on desktop", "url": "https://www.neowin.net/news/chatgpt-voice-experience-gets-a-massive-upgrade-on-desktop/", "take": "Substantive Windows-audience source — Windows-specific rollout details and parity framing between macOS and Windows for the core voice-to-agents functionality." },
+        { "source": "CryptoBriefing — OpenAI adds full duplex voice control to Codex and ChatGPT desktop apps", "url": "https://cryptobriefing.com/openai-adds-full-duplex-voice-control-to-codex-and-chatgpt-desktop-apps/", "take": "Substantive technical-audience source — the full-duplex framing and the Codex-specific integration detail that voice commands can initiate and direct parallel agent threads simultaneously." }
       ]
     }
   ],

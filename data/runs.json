@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-24T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-24T11:00:00Z",
+      "ended_at": "2026-07-24T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 1500,
+        "output_write": 1000
+      },
+      "fetches_made": 10,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-24-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Today's 2026-07-24-am.json exists with 4 items (all tier-1) from the 2am enrichment run (ended_at 2026-07-24T06:25:00Z) — standard path triggered. WebFetch remains 403-blocked per established pattern; WebSearch-only across 10 queries: (1) AI model release announcement July 24 2026, (2) Anthropic Claude announcement July 24 2026, (3) Google DeepMind Gemini release July 24 2026, (4) OpenAI GPT announcement July 24 2026, (5) OpenAI voice control computer use multi-agent Codex ChatGPT Work July 24 2026, (6) Kimi K3 Moonshot AI open weights release July 24 2026, (7) AI news Asia Europe July 24 2026 model announcement, (8) OpenAI ChatGPT small business GPT-5.6 July 24 2026, (9) DeepSeek Qwen Alibaba Baidu new AI model July 24 2026, (10) EU AI Act enforcement August 2026 OpenAI Anthropic new development July 24. Candidate pool after tier ranking: (a) ChatGPT Voice for desktop rollout July 24 via GPT-Live full-duplex model — Tier 2 Global, INCLUDE (sources: VentureBeat, OpenAI Dev Community, 9to5Mac, Neowin, CryptoBriefing); (b) ChatGPT for small businesses program — announced July 21, 3 days old, outside the 5-hour overnight window; (c) Kimi K3 open weights — slated for July 27, not yet released; (d) EU AI Act August 2 enforcement countdown — ongoing context, no discrete new July 24 overnight development with a specific news hook; (e) DeepSeek/Qwen/Alibaba/Baidu — no discrete July 24 model releases. Small re-pass on existing tier-1 items: Moonshot/K3/Bessent statement is from July 22 and already covered by enrichment; ExploitGym/The National/FBI-declining-to-comment angle from July 23 is a nuance but not a material new fact beyond what enrichment already recorded. No existing-item revisions warranted. 1 item added. Final tier_counts {1:4, 2:1, 3:0}; item_count 5; items_added 1; items_kept 4; items_dropped 0."
+    },
+    {
       "run_id": "2026-07-24T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
