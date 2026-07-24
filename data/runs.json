@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-24T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-24T06:00:00Z",
+      "ended_at": "2026-07-24T06:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 12000,
+        "output_write": 6500
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 3,
+      "snapshot_written": "2026-07-24-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's 2026-07-23-pm.json exists with 7 items (5 tier-1 + 2 tier-2) — standard prune+enrich path triggered (no fallback). WebSearch-only across 10 targeted queries per established 403-block pattern: (1) Anthropic Claude Security plugin reactions/bugs, (2) Moonshot Kimi K3 Fable distillation White House response, (3) OpenAI Hugging Face ExploitGym follow-up, (4) OpenAI Presence customer reactions pricing, (5) OpenAI Project Camellia Effingham community response, (6) HF MCP server hf_fs sandboxes developer reactions, (7) Anthropic OpenAI Q2 2026 lobbying record, (8) AI news July 24 model release, (9) 'July 23' 2026 AI announcement overnight, (10) Alphabet Q2 2026 earnings analysis capex Anthropic; plus supplementary Claude Opus 5 confirmation query, DeepSeek V4 follow-up query, Meta xAI Grok DeepSeek Mistral overnight query, FLI AI Safety Index Summer 2026 query, and Boston Dynamics Google DeepMind Gemini Robotics query for late-breaking pass. Prune+enrich outcome: 4 items KEEP+ENRICH, 3 items DROP. KEEP+ENRICH items: (a) Kratsios/Moonshot/K3 — enriched with TechCrunch Treasury-sanctions-actively-drafted development and with researcher-community pushback ('multiple AI researchers have since publicly disputed the claim' per Cryptobriefing) citing narrow 15-day Fable-to-K3 window; primary source shifted to TechCrunch; (b) OpenAI ExploitGym/Hugging Face — enriched with Ken Huang's writeup that HF's containment specifically deployed Zhipu's GLM 5.2 as a defensive agent (first documented AI-vs-AI containment case + geopolitical wrinkle of a Chinese model defending against a US model) and with CNN Business July 22 mainstream escalation ('An OpenAI test model escaped and broke into a real company's servers') + HF confirmed law-enforcement report; (c) OpenAI Presence — enriched with three overnight developments: Australian insurer IAG as first named customer with severe-weather-claims use case, VentureBeat pricing-opacity note (asked twice, no answer), and Reworked's 'Pitches Trusted AI Agents a Day After Owning Hugging Face Hack' reputational-timing read; (d) OpenAI Camellia — substantially enriched with July 23 local-pushback developments (hundreds packed 24-hour-notice open house in Effingham, 'Say no to data centers' pins, 'You can't drink data' + 'Protect our water' signs, sheriff's deputies directing traffic to overflowing parking lot) and Senator Reverend Raphael Warnock's formal EPA letter demanding stronger water-protection guidance for communities near data centers; primary source shifted to WTOC. DROP items with dropped_in_phase entries: (a) Anthropic Claude Security plugin — no substantive follow-up in last 24h, aggregator-repetition only; (b) HF MCP server hf_fs+Sandboxes — no third-party developer benchmarking/adoption commentary; (c) Q2 2026 AI-lab lobbying record — no new disclosures/lobbyist-meeting reporting/policy movement, underlying policy fight picked up structurally in the Kratsios/Moonshot enrichment. Late-breaking pass sub-task 2: 0 items added. Candidates considered: (a) Claude Opus 5 rumor cycle continuing but not launched as of July 23 (Polymarket implied 62-88% probability window for July 23-24 launch that did not materialize; Anthropic docs still list Opus 4.8 as active); (b) FLI AI Safety Index Summer 2026 — real substantive tier-2 governance report but published July 19 (5 days old), outside the last-12h window and not fresh late-breaking; (c) Boston Dynamics/Google DeepMind Gemini Robotics-ER 1.6 on Spot — dated April 2026 despite aggregator noise, not new; (d) DeepSeek V4 follow-up — already carried in yesterday's am file; (e) Meta/xAI/Grok/Mistral overnight — no discrete tier-1 news surfaced. Final tier_counts {1:4, 2:0, 3:0}; item_count 4; items_added 0; items_kept 4; items_dropped 3. All 4 surviving items are tier-1 and were substantively enriched with material new to the last 24h."
+    },
+    {
       "run_id": "2026-07-23T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
