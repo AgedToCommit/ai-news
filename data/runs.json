@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-24T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-24T17:00:00Z",
+      "ended_at": "2026-07-24T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 8000,
+        "output_write": 2000
+      },
+      "fetches_made": 17,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-24-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT. Pre-flight: kill switch inactive (paused=false), digest phase enabled. Today's 2026-07-24-am.json exists with 5 items from the 2am enrichment + 7am refresh chain (4 Tier 1, 1 Tier 2) — promotion rule applied: all 5 am items excluded from pm output by default, none met the 'materially deepened during the day' exception bar (Kratsios/Moonshot got AA hallucination critique, but the AA angle is structurally NEW information so pm covers it as a new item rather than promotion; ExploitGym/Hugging Face story got the AI Kill Switch Act which is a distinct policy story worth a new item rather than a promotion). WebFetch remains 403-blocked per established pattern; WebSearch-only across 17 queries covering: model releases (OpenAI/Anthropic/Google/Meta/DeepSeek/Alibaba/xAI/BFL), policy (AI Kill Switch Act, EU AI Act August 2 deadline), tooling (Cursor/Windsurf/Codex/Cline, DeepSeek migration, Hetzner inference), research (Google ATLAS, Kimi K3 hallucination critique, Simon Willison), agent platforms (Anthropic voice, ChatGPT Ads, Presence), and infrastructure (Nvidia GB300/GB200). Candidate pool after tier ranking: (1) AI Kill Switch Act — Tier 1 US, INCLUDE (CNBC, Lieu press release, TechTimes, Gizmodo, Nextgov, Yahoo News); (2) Anthropic Claude voice mode expansion — Tier 2 Global, INCLUDE (TechCrunch, The Decoder, 9to5Mac, Dataconomy, SQ Magazine); (3) Kimi K3 hallucination + open-weights economics — Tier 2 Global, INCLUDE (TechTimes, Artificial Analysis, Towards AI, TECHi, Interconnects, Hugging Face); (4) DeepSeek API migration deadline TODAY — Tier 2 Global, INCLUDE (Digital Applied, Enterprise DNA, DEV Community, byteiota, Developers Digest); (5) Google ATLAS v1.0 — Tier 2 Global, INCLUDE (Google Blog, Axios, PPC Land, Fox Business, Storyboard18, Google PDF); (6) Black Forest Labs FLUX 3 — Tier 2 EU, INCLUDE (VentureBeat, CryptoBriefing, Digital Today, IBTimes SG, AlternativeTo). Not included: (a) TIME article on OpenAI/Hugging Face — mainstream escalation of am item, no new facts; (b) Anthropic Economic Index (July 21-22) — 2-3 days old, outside window; (c) Meta Seller iOS app July 24 — Tier 3 product launch, held for potential enrichment; (d) MetaX Hong Kong IPO filing — Tier 3 China business context, held; (e) Grok 4.6 training completion — no discrete July 23-24 launch, held. Final tier_counts {1:1, 2:5, 3:0}; item_count 6; items_added 6; items_kept 0 (digest phase doesn't kept-from-am); items_dropped 0."
+    },
+    {
       "run_id": "2026-07-24T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
