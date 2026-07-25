@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-25T06:16:28Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-25T06:00:00Z",
+      "ended_at": "2026-07-25T06:16:28Z",
+      "wall_time_ms": 988000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 10000,
+        "output_write": 2500
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-25-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-24-pm.json) had 6 items — all six enriched and kept, none dropped. Enrichment substance per item: (1) AI Kill Switch Act — noted 48-hour OpenAI/Anthropic public silence as substantive new data point + added Quartz/TheNextWeb/Cybersecurity Magazine overnight coverage to takes; (2) Anthropic Claude voice mode — clarified Google Docs is in the connector set, added transcript-save-to-chat-history detail and mid-conversation model-switching + text/voice-continuity detail, added MacRumors/Engadget overnight coverage; (3) Kimi K3 — SUBSTANTIVE CORRECTION: yesterday's item claimed vLLM/TensorRT-LLM/Ollama did not yet support KDA/AttnRes, but the July 22 vLLM preview blog announced production-scale K3 support with Moonshot's KDA-prefix-caching contributed upstream directly, so open-source inference will be day-0 rather than deferred; added vLLM blog to takes; (4) DeepSeek API migration — deadline has passed, updated framing from 'action-item-today' to 'lesson-in-migration-hygiene,' added concrete peak-hour Beijing pricing structure (¥0.025/¥3.00/¥6.00 for V4-Pro cache-hit-input/cache-miss-input/output, ¥0.02/¥1.00/¥2.00 for V4-Flash, both doubling during Beijing peak 9:00-12:00 and 14:00-18:00) and the 17x-cheaper-than-GPT-5.6-Terra output-price framing that persists through the surge; added ChinaBizInsider/TheNextWeb/TheRouter.ai to takes; (5) Google ATLAS — added the overnight Implicator.ai independent-analysis finding that Google's underlying tables show automation intent above 25% for routine cognitive work (a number the announcement omitted), which is the specific asterisk on the 'less than 10% fully automate' top-line; added Implicator/BestMediaInfo to takes; (6) BFL FLUX 3 — added the overnight-clarified technical differentiator that FLUX 3 generates video and audio together in one inference pass from the same flow-matching framework and that no other major AI video model does this at parity; added Decrypt/Wan27 to takes. Late-breaking pass: added 1 new item — AMD-Cerebras disaggregated inference partnership announced July 23 (AMD Helios rackscale for compute-bound prompt-processing + Cerebras WSE for memory-bandwidth-bound token-generation, vendor-modeled up-to-5x tokens-per-second-per-kilowatt vs WSE-only on Kimi K2.6 1T, arriving via Cerebras Cloud in H2 2026); this ties structurally into the K3 memory-bound serving-economics story. Alphabet Q2 2026 earnings (July 22 report, capex raised to $195-205B) was NOT re-added because it was already covered in the 2026-07-24-am and 2026-07-23-pm files. WebFetch remained 403-blocked per established pattern; WebSearch-only across 10 queries. Final tier_counts {1:1, 2:6, 3:0}; item_count 7; items_kept 6; items_added 1; items_dropped 0."
+    },
+    {
       "run_id": "2026-07-24T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
