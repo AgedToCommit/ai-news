@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-25T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-25T11:00:00Z",
+      "ended_at": "2026-07-25T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 5000,
+        "output_write": 1500
+      },
+      "fetches_made": 12,
+      "items_input": 9,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-25-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Kill switch inactive, refresh enabled. Standard path: today's am file exists from enrichment at 06:16Z. WebFetch 403-blocked per established pattern; WebSearch-only across 12 queries. Sweep window since 2026-07-25T06:16:28Z. Two items added: (1) Alibaba Qwen3.8-Max preview (2.4T MoE, previewed July 19-20 at WAIC, missed by July 24 digest) as Tier 2 Asia; (2) EU AI Act Article 50 August 2 deadline (8 days away, chatbot disclosure + watermarking go live) as Tier 2 EU. Final tier_counts {1:1, 2:8, 3:0}; item_count 9."
+    },
+    {
       "run_id": "2026-07-25T06:16:28Z-enrichment",
       "phase": "enrichment",
       "status": "success",
