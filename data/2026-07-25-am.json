@@ -2,12 +2,13 @@
   "snapshot_id": "2026-07-25-am",
   "snapshot_type": "am",
   "calendar_date": "2026-07-25",
-  "generated_at": "2026-07-25T06:16:28Z",
-  "generated_at_local": "2026-07-25T02:16:28-04:00",
+  "generated_at": "2026-07-25T11:20:00Z",
+  "generated_at_local": "2026-07-25T07:20:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-07-25T06:16:28Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-07-25T06:16:28Z", "duration_ms": 900000 },
+    { "phase": "refresh",    "ran_at": "2026-07-25T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 1, "2": 6, "3": 0 },
+  "tier_counts": { "1": 1, "2": 8, "3": 0 },
   "items": [
     {
       "id": "ai-kill-switch-act-lieu-moran-openai-hugging-face-response-july-23-2026",
@@ -215,6 +216,53 @@
         { "source": "XenoSpectrum — AMD and Cerebras Split AI Inference Duties, Aiming for Lower Latency with Helios and WSE", "url": "https://xenospectrum.com/en/amd-cerebras-disaggregated-ai-inference/", "take": "Substantive technical-audience source — the specific architectural explanation of why prompt-processing and token-generation are fundamentally different workloads, and the specific implication that disaggregation is the structural answer to the monolithic-Nvidia-rack model." },
         { "source": "AIThority — AMD and Cerebras Announce Industry-Leading Ultra-Low-Latency and High Throughput AI Inference Solution", "url": "https://aithority.com/machine-learning/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference-solution/", "take": "Substantive AI-industry-audience source — the specific technical-partnership framing and the specific placement of this announcement in the July 23 AI-infrastructure news cycle alongside the Alphabet capex guidance and the BFL FLUX 3 release." },
         { "source": "StockTitan — AMD-Cerebras AI Partnership Targets Up to 5x Tokens/Sec/Watt", "url": "https://www.stocktitan.net/news/AMD/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-h72uhc09bhrw.html", "take": "Substantive investor-audience source — the specific framing of the AMD-Cerebras partnership as a competitive move against Nvidia's integrated rack model, and the specific implication for AMD's rack-scale strategy against GB200 NVL72." }
+      ]
+    }
+    ,
+    {
+      "id": "alibaba-qwen-3-8-max-preview-waic-july-19-2026",
+      "tier": 2,
+      "title": "Alibaba previews Qwen3.8-Max at WAIC on July 19 — a 2.4T-parameter MoE multimodal model spanning text, image, video, and documents with ~983K context — at 10% preview pricing on Qwen Cloud; community arena data places it roughly 6 Elo above Kimi K3 on coding, though no independent benchmarks have been published and open weights remain API-only despite past promises",
+      "summary": "Alibaba at the World AI Conference (WAIC) in Shanghai on July 19, 2026 previewed Qwen3.8-Max, a 2.4 trillion parameter Mixture-of-Experts model that processes text, images, video, and documents within a unified multimodal architecture. Context window is approximately 983K tokens. The model is currently accessible at 10% of standard pricing on Qwen Cloud as a preview, positioned by Alibaba as 'second only to Claude Fable 5' — a claim without published independent benchmarks. Community-driven coding arena data places it roughly 6 Elo above Kimi K3, consistent with a meaningful quality step. Open weights were described as 'coming soon,' though Alibaba's prior Max-tier releases (Qwen3-235B-Max, Qwen2.5-Max) have remained API-only.",
+      "link": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/",
+      "why_it_matters": "For Gabe: this is the Asia overnight item that the July 24 digest missed — the WAIC preview landed on July 19, but the digest was saturated with July 23 stories. Two reads matter here. First, the benchmark-claim read: Alibaba's 'second only to Claude Fable 5' marketing has zero independent verification, and community arena data is preliminary — treat it as 'competitive with K3' until third-party evals land, not as a Fable-level claim. Second, the open-weights read: Alibaba has consistently described Max-tier models as 'open weights coming soon' and consistently kept them API-only. If you're building anything Python-based that calls multimodal model APIs, Qwen3.8-Max at 10% preview pricing is worth a practical test now; if you're waiting for self-hostable weights, historical pattern says don't hold your breath.",
+      "why_it_matters_brief": "Alibaba's Qwen3.8-Max previewed at WAIC — 2.4T MoE, multimodal, ~983K context, 10% launch pricing — but zero independent benchmarks support the 'second only to Fable 5' claim, and open weights have been 'coming soon' on every prior Max-tier Qwen release.",
+      "source": { "name": "MarkTechPost — Alibaba Previews Qwen3.8-Max", "type": "scrape", "url": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-07-25T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-07-25T11:20:00Z", "by": "refresh", "change": "created — Alibaba previewed Qwen3.8-Max at WAIC July 19 2026: 2.4T MoE, multimodal (text/image/video/docs), ~983K context, 10% preview pricing on Qwen Cloud; community arena data ~6 Elo above K3 on coding; no independent benchmarks for the vendor 'second only to Fable 5' claim; open weights described as 'coming soon' but prior Max-tier releases stayed API-only" }
+      ],
+      "takes": [
+        { "source": "MarkTechPost — Alibaba Previews Qwen3.8-Max, A 2.4 Trillion Parameter Multimodal Model", "url": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/", "take": "Primary source — the specific WAIC-July-19 date, the 2.4T parameter count, the 10% preview pricing on Qwen Cloud, and the community-arena-data framing that places it ~6 Elo above K3 without independent benchmarks." }
+      ]
+    },
+    {
+      "id": "eu-ai-act-article-50-august-2-chatbot-disclosure-watermarking-2026",
+      "tier": 2,
+      "title": "EU AI Act Article 50 goes live August 2 — 8 days away — requiring chatbots to disclose AI identity in plain terms at the start of every interaction and new AI systems to embed machine-readable watermarks in synthetic content; existing systems get until December 2 2026 to comply; fines up to €15M or 3% of global turnover; only 38% of AI image generators currently meet the watermarking threshold",
+      "summary": "The EU AI Act's Article 50 transparency requirements take effect on August 2, 2026, eight days from today. Two obligations go live simultaneously. First, any AI system that interacts directly with people must disclose at the start of every interaction that the user is talking to an AI, in plain language accessible to a general audience — chatbots, voice assistants, and similar conversational systems are all in scope. Second, systems that generate synthetic content (text, images, audio, video) must embed machine-readable watermarks and provide human-readable disclosure labeling. New systems must comply from August 2; existing systems have until December 2, 2026. Penalties run up to €15M or 3% of global annual turnover, whichever is higher. The EU AI Office's Code of Practice mandates a layered approach — cryptographic metadata plus invisible watermarks — because each method alone has documented failure modes. A pre-deadline audit found only 38% of AI image generators currently implement adequate watermarking, and the Omnibus simplification package that delayed other AI Act requirements did not defer Article 50.",
+      "link": "https://www.techtimes.com/articles/321174/20260721/eu-finalizes-ai-disclosure-rules-watermarking-mandate-outpaces-technology.htm",
+      "why_it_matters": "For Gabe: if you're building any Python project that exposes a conversational AI interface to users — a chatbot, a voice assistant, a web form backed by a model — Article 50 requires you to surface a plain-language 'you are talking to an AI' disclosure at the start of every interaction, starting August 2. That's an 8-day runway if you're serving EU users. The chatbot disclosure requirement is straightforward to implement; the synthetic-content watermarking is harder because the Code of Practice requires two methods simultaneously (cryptographic metadata + invisible watermarks), and current tooling for invisible watermarking has a meaningful false-negative rate. The 38%-compliance figure for image generators is the specific tell that the watermarking side of Article 50 is not a solved problem — which means if you're building image-generation features, compliance is a real engineering task, not a checkbox. The December 2 grace period for existing systems is meaningful relief if you're already live, but new launches after August 2 have no grace period.",
+      "why_it_matters_brief": "EU AI Act Article 50 goes live August 2 — chatbot AI-disclosure at session start is mandatory, synthetic-content watermarking required in two simultaneous methods — and only 38% of AI image generators currently comply, with €15M-or-3%-of-revenue penalties for new launches.",
+      "source": { "name": "TechTimes — EU Finalizes AI Disclosure Rules: Watermarking Mandate Outpaces Technology", "type": "scrape", "url": "https://www.techtimes.com/articles/321174/20260721/eu-finalizes-ai-disclosure-rules-watermarking-mandate-outpaces-technology.htm" },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-07-25T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-07-25T11:20:00Z", "by": "refresh", "change": "created — EU AI Act Article 50 takes effect August 2 2026: chatbot plain-language AI disclosure at session start required for all new systems, machine-readable synthetic-content watermarks required (two methods per Code of Practice); existing systems get until December 2 2026; fines up to €15M or 3% turnover; only 38% of AI image generators currently compliant; Omnibus simplification did not defer Article 50" }
+      ],
+      "takes": [
+        { "source": "TechTimes — EU Finalizes AI Disclosure Rules: Watermarking Mandate Outpaces Technology", "url": "https://www.techtimes.com/articles/321174/20260721/eu-finalizes-ai-disclosure-rules-watermarking-mandate-outpaces-technology.htm", "take": "Primary source — the specific August 2 go-live date, the two simultaneous compliance obligations (chatbot disclosure + synthetic-content watermarking), the December 2 grace period for existing systems, and the 38% pre-deadline compliance rate for AI image generators." }
       ]
     }
   ],
