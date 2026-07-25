@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-25T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-25T17:05:00Z",
+      "ended_at": "2026-07-25T17:20:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 11000,
+        "output_write": 2500
+      },
+      "fetches_made": 12,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-25-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT. Pre-flight: kill switch inactive (paused=false), digest enabled. Today's am file (2026-07-25-am.json) exists with 9 items — all excluded from pm output per promotion rule (no items materially deepened enough to warrant promotion). WebFetch remained 403-blocked per established pattern; WebSearch-only across 12 queries covering: general AI news July 24-25, OpenAI/Anthropic/Google/Meta/xAI announcements, Claude Opus 5 detail, Meta Muse Spark consumer rollout detail, Grok roadmap detail, Gemini 4 confirmation, OpenAI Codex July 24 updates, Simon Willison sandbox-escape commentary. Sweep window: since last run ended_at 2026-07-25T11:20:00Z. Five items added: (1) Anthropic Claude Opus 5 release Friday July 24 as Tier 1 Global — the top miss from yesterday's pm digest; near Fable-5 capability at half input cost, Frontier-Bench 43.3% vs Fable 5 33.7%, new default on Claude Max, low/medium/high effort toggle; (2) Meta Muse Spark 1.1 consumer rollout via Meta AI app + Facebook Verified video-selfie + Marketplace Seller app in the same July 24 bundle as Tier 2 Global; (3) xAI Grok 4.6/4.7 back-to-back roadmap from Musk's July 24 X post as Tier 2 US — Grok 4.6 in two weeks (2T params targeting Kimi K3), Grok 4.7 in four weeks; (4) Google Gemini 4 pre-training confirmation buried in July 21 Gemini 3.6 Flash launch post + Sundar Pichai 'almost monthly' Gemini cadence framing from July 23 Alphabet Q2 earnings call as Tier 2 Global; (5) OpenAI Codex July 24 updates: ChatGPT Voice via GPT-Live for voice-steered coding across threads + Local Projects multi-folder support with designated primary folder for chats/Git ops as Tier 2 Global. Cross-item pattern: three of the five items (Opus 5, Grok 4.6/4.7 roadmap, Gemini 4 'almost monthly' framing) map to the specific structural read that all major frontier labs are now on a roughly monthly release cadence — the pre-2026 quarterly-to-semi-annually pattern has cleanly broken. Final tier_counts {1:1, 2:4, 3:0}; item_count 5."
+    },
+    {
       "run_id": "2026-07-25T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
