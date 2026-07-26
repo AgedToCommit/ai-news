@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-26T06:22:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-26T06:00:00Z",
+      "ended_at": "2026-07-26T06:22:00Z",
+      "wall_time_ms": 1320000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 12000,
+        "output_write": 2500
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-26-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-25-pm.json) had 5 items — all five enriched with meaningful new context and kept. WebFetch remained 403-blocked per established pattern; WebSearch-only across 7 queries (5 per-item enrichment + 2 late-breaking sweeps). Enrichment updates by item: (1) Claude Opus 5 — added OSWorld 2.0 result (beats Fable 5 at ~1/3 cost, computer-use axis specifically), added automated behavioral audit misaligned-behavior score 2.30 (lowest of any recent Claude — ahead of Opus 4.8, Sonnet 5, and Fable 5), added 'near-frontier not the frontier' framing consolidated from Vellum/buildfastwithai/aitoolsreview independent reviews; (2) Meta Muse Spark 1.1 consumer — added specific developer-API pricing ($1.25/$4.25 per MTok with $20 free credits) and Alexandr Wang's 'very aggressive and attractive' framing, added price-discrimination read (bounded free developer credits vs unlimited free consumer access same model), added day-two observation that no substantive consumer-side reviews have surfaced in first 30 hours; (3) Grok 4.6/4.7 — added day-two competitive-framing consolidation (multiple outlets frame Grok 4.6 explicitly as 'Musk's answer to China's AI monster' targeting Kimi K3), added timeline-realism read (independent trackers peg realistic public Grok 4.6 launch at late August to mid-September once post-training + eval + deployment finish); (4) Gemini 4 — added Andrew Curran interpretation ('largest model Google has ever trained') and Manifold prediction market pricing 83% probability of 2026 launch with caveat that Google has not committed a quarter; (5) OpenAI Codex July 24 — added the July 25 5am ET global outage (ChatGPT + API + Codex simultaneously, no published root cause, services restored later Saturday) and the day-two developer-facing caveat that GPT-Live developer API is still 'coming soon' so third-party voice-agent builders still use older Realtime API — updated title to include the outage. Late-breaking pass added one Tier-2 item: Jensen Huang first-ever X post on Thursday July 24 sharing a 25-organization open letter (NVIDIA, Microsoft, Meta, IBM, Dell, Mistral, Mozilla, Hugging Face, The Linux Foundation, Perplexity, Y Combinator + 14 others; notable absentees Anthropic, OpenAI, Google DeepMind) urging Washington not to restrict Chinese open-weight models — the coalition is designed to shape the response to Kimi K3's July 27 open-weights release. Cross-item pattern: the July 25 OpenAI outage is the specific reliability signal that lands 20 hours after the July 24 launch bundle, and the Jensen Huang letter is the specific policy signal that lands ahead of Kimi K3's July 27 open-weights arrival — carry both into next week's coverage. Final tier_counts {1:1, 2:5, 3:0}; item_count 6."
+    },
+    {
       "run_id": "2026-07-25T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
