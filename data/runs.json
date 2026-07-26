@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-26T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-26T10:45:00Z",
+      "ended_at": "2026-07-26T11:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 4500,
+        "output_write": 1500
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-26-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive (paused=false), refresh enabled. Today's am file exists (2026-07-26-am.json, 6 items from 2am enrichment). Last run ended_at: 2026-07-26T06:22:00Z. WebFetch 403-blocked per established pattern; WebSearch-only across 8 queries covering overnight July 26 2026 window. Two items added: (1) Moonshot Kimi K3 open weights dropping tonight at 00:00 UTC July 27 (8pm ET July 26) — 2.8T params, ~594GB MXFP4 safetensors, Modified MIT license, largest open-weight release in AI history, 4-8× H100 80GB minimum to run, Microsoft evaluating for Copilot/Azure, data-sovereignty self-hosting angle; added as Tier 1 because the Jensen Huang letter and Grok 4.6/4.7 items already in the snapshot are both explicitly framed as responses to Kimi K3 without a dedicated K3 item existing; (2) Andrej Karpathy bio-removal incident July 26 — removed 'Anthropic' from X bio, fake departure leaks spread, he denied quickly ('I'd write a 10-paragraph essay'); framed against Anthropic's absence from the Jensen Huang 25-org open-model letter and Karpathy's 68-day tenure on the pre-training team; added as Tier 2. No tier-1 tier-1 refinements needed — existing Opus 5 item has no new overnight chatter that changes the substance. Final tier_counts {1:2, 2:6, 3:0}; item_count 8."
+    },
+    {
       "run_id": "2026-07-26T06:22:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
