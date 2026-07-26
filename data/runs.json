@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-26T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-26T17:05:00Z",
+      "ended_at": "2026-07-26T17:20:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 10000,
+        "output_write": 2000
+      },
+      "fetches_made": 12,
+      "items_input": 4,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-26-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Sunday July 26. Pre-flight: kill switch inactive (paused=false), digest enabled. Today's am file (2026-07-26-am.json) exists with 8 items — all excluded from pm output by default per promotion rule, with one exception (Jensen Huang open-model letter — see below). WebFetch remained 403-blocked per established pattern; WebSearch-only across 12 queries covering: Sunday July 26 AI news sweep, Kimi K3 pre-release, Simon Willison / Ethan Mollick / ThursdAI weekend content, Karpathy bio follow-up, Trump administration Chinese AI ban considerations, Nvidia open-weights letter update, OpenRouter Chinese-AI market share, arxiv weekend papers. Sweep window: since last run ended_at 2026-07-26T11:00:00Z (7am ET) — 6-hour Sunday morning window, historically the quietest digest window of the week. Two items in the output: (1) PROMOTION from am — Jensen Huang open-model letter (nvidia-jensen-huang-first-x-post-25-org-open-model-letter-july-24-2026) materially deepened over the weekend: signatory list doubled from 25 to 50 in roughly 36 hours with OpenAI and Google both flipping from initial absentees to signatories, along with AMD, Cisco, Cloudflare, GitHub, Block, Ollama, Palantir, ServiceNow, Replit, Cohere, Andreessen Horowitz, Palo Alto Networks and 12 others; Anthropic, Amazon, and xAI remain absent as of Sunday July 26, and multiple outlets (Forbes, Startup Fortune, Benzinga, Tom's Hardware) frame Anthropic's continued silence as the more revealing signal than the letter itself with Dario Amodei's 'open source is a red herring' as the philosophical marker; the story shape has cleanly shifted from 'US industry vs three frontier labs' to 'US industry vs Anthropic alone.' (2) NEW Tier 2 — OpenRouter market-share sweep (openrouter-chinese-ai-models-sweep-top-10-only-claude-us-july-26-2026): weekend-of-July-25-26 data shows Chinese AI models at 46.4% of routed tokens vs US models at 35.7% on OpenRouter; Chinese models now hold 8 of top 10 slots with only Anthropic's Claude family at 13.3% aggregate remaining from US labs; OpenAI and Google both dropped out of top 10 entirely; DeepSeek V4 Flash at $0.14/M input vs OpenAI GPT-5.5 at $5.00/M is the specific price mechanism (35x differential); the 46.4% is now the specific number Washington is citing in its Kimi K3 executive-order deliberations, hours before Kimi K3 open weights land tonight at 8pm ET. Cross-item pattern: both items point to the same specific structural read that hardened over the weekend — the US open-vs-closed weights fight has now become a specific commercial-alignment story where every major US technology company except Anthropic (and Amazon, xAI) has aligned on the open-weights side, and the specific market-share data on OpenRouter is the specific concrete number driving both the industry coalition-formation and the Washington executive-order deliberations. Final tier_counts {1:0, 2:2, 3:0}; item_count 2 — small but tight Sunday pm digest appropriate for a quiet news window with two substantive weekend-of-July-25-26 developments."
+    },
+    {
       "run_id": "2026-07-26T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
