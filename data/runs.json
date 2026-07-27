@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-27T11:18:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-27T11:00:00Z",
+      "ended_at": "2026-07-27T11:18:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 3000,
+        "output_write": 1500
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-27-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Monday July 27. Standard path: today's am file existed (3 items from enrichment at 2:22am EDT). Sweep window: since last run ended_at 2026-07-27T06:22:00Z (~5 hours). WebFetch 403-blocked per established pattern; WebSearch-only across 9 queries. No Anthropic statement found on open-weights letter or K3 as of 7am EDT. No Trump administration executive action found (still in deliberation). Key finds: (1) Together AI and Modal confirmed day-0 hosted K3 access (morning update added to K3 revision); K3 announcement hit 7.2M+ views and Moonshot paused new subscriptions citing GPU capacity near limit. (2) Nvidia $250B OpenAI SoftBank Ohio data center guarantee (WSJ July 26 / Bloomberg confirmed) — missed in both July 26 pm digest and July 27 enrichment sweeps; added as new Tier-2 item. EU DMA/Google-Android order from July 16 and xAI/SpaceX Bloomberg feature from July 16 both confirmed stale. Claude Opus 5 (July 24 release) very likely in July 24-am snapshot, not added. Final tier_counts {1:1, 2:3, 3:0}; item_count 4 (was 3)."
+    },
+    {
       "run_id": "2026-07-27T06:22:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
