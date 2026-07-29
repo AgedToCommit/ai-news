@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-29T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-29T06:00:00Z",
+      "ended_at": "2026-07-29T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 13000,
+        "output_write": 2000
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-29-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Wednesday July 29 2026. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-28-pm.json) had 3 items (2 Tier-1, 1 Tier-3): Altman White House GPT-6 briefing, Microsoft MAI-Cyber-1-Flash launch, Meta Ray-Ban Display v127 update. WebFetch remained 403-blocked per established pattern; WebSearch-only across 8 queries covering: Altman White House GPT-6 briefing outcome; Microsoft MAI-Cyber-1-Flash reactions/benchmarks; Meta Ray-Ban Display v127 Neural Handwriting review; AI news overnight July 29 model releases; Meta BlackRock El Paso 1GW data center; Recursive Superintelligence AWS $400M; Anthropic Fable 5.1 August release; July 28-29 open source AI model releases. Sub-task 1 enrichment: all 3 items KEPT + ENRICHED, no drops. (1) openai-altman-white-house-gpt6-briefing — added Wednesday-morning readout from Briefs.co (Altman confirmed GPT-6 adjustments following federal discussions) and Rundown AI (White House reined in GPT-6 to staggered release for ~20 trusted evaluation partners before general availability), plus BigGo Finance / 36Kr Fable 5.1 competitive-timing (production-ready internally, mid-to-late August at unchanged Fable 5 pricing $10 input / $50 output per million tokens). (2) microsoft-mai-cyber-1-flash-launch — added critical skepticism from WinBuzzer (95.95% CyberGym result did NOT appear on public leaderboard as of Tuesday July 28; Wiz's Atlas agent led at 90.9% from July 27 entry, Microsoft's own May 12 MDASH submission still at 88.4%; benchmark and savings not independently reproduced) and MLQ News (top score still uses GPT-5.4, so 95.95% headline is Microsoft+OpenAI-stack result not standalone MAI-Cyber-1-Flash result); reframed title/summary/why_it_matters/brief around the specific 'benchmark story is not settled' angle. (3) meta-ray-ban-display-v127 — added first-day user reviews from Engadget (Handwriting is now their favorite way to text on the glasses — EMG-input crossed usability threshold) and Gizmodo (Dumb Smart Glasses AI Is Dumb No More — Muse Spark upgrade delivers the pre-v127 criticism fix). Sub-task 2 late-breaking: ADDED 2 Tier-2 items, both from Tuesday July 28 hyperscaler-infrastructure announcements — (1) meta-blackrock-14b-el-paso-data-center-jv-july-28-2026: Meta and BlackRock announced $14B, 1 GW AI data center campus in El Paso Texas one day ahead of Meta Q2 earnings; BlackRock funds hold 80% and finance $12.3B in debt, Meta holds 20% via land + $2.3B construction assets and leases the full campus on initial four-year term with extensions; first infrastructure online 2028; explicitly for training Meta's next-generation AI models and Zuckerberg's superintelligence pursuit; positions institutional debt through purpose-built JVs as new financing pattern for frontier-scale training compute; coverage across Meta investor release, CNBC, Forbes, Seeking Alpha, Stocktwits, Construction Review Online. (2) recursive-superintelligence-410m-aws-deal-july-28-2026: Recursive Superintelligence (Richard Socher, former Salesforce chief scientist, You.com CEO) signed $410M multi-year AWS compute deal Tuesday — the deal represents bulk of company's $650M May-2026 stealth-emergence seed capital; central thesis is self-improving AI systems that analyze own performance and design improved versions of themselves; explicitly automates product-development to concentrate budget into compute rather than headcount; initial products expected October 2026; Socher told TechCrunch this is expected to be first of many such deals; positions as structural counterpart to Meta-BlackRock announcement same day; coverage across TechCrunch, AWS Press Center, CryptoBriefing, American Bazaar, TechBooky. Considered but rejected as late-breaking: broader July 28-29 model releases (nothing significant landed overnight beyond the two infra deals — no Tier-1 model drops from Anthropic/OpenAI/Google/Meta/xAI). Final tier_counts {1:2, 2:2, 3:1}; item_count 5."
+    },
+    {
       "run_id": "2026-07-28T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
