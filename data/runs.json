@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-29T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-29T11:00:00Z",
+      "ended_at": "2026-07-29T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 8,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-29-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Wednesday July 29 2026. Pre-flight: kill switch inactive (paused=false), refresh enabled. Today's am file (2026-07-29-am.json) exists with 5 items from enrichment (ended_at 2026-07-29T06:30:00Z). Standard path — sweep window: 5 hours since enrichment ended_at. WebFetch 403-blocked (established pattern). WebSearch-only across 8 queries covering: AI news July 29 morning; Anthropic OpenAI Google xAI model release July 29; Meta Q2 earnings July 29; open source AI Hugging Face July 29; Kimi K3 open weights Moonshot July 27; AI news Europe Asia overnight July 29; Anthropic Mythos cryptographic attack discovery; FCC China humanoid robot ban July 29. ADDED 2 items: (1) NEW Tier 1 — Anthropic Mythos cryptographic weaknesses (anthropic-mythos-cryptographic-weaknesses-july-28-2026): Anthropic Frontier Red Team published July 28 showing Claude Mythos Preview autonomously found two cryptographic attacks in ~60 hours at ~$100K API cost — (a) HAWK post-quantum signature candidate: key recovery at ~2^38 vs theoretical 2^64, beating 2 years of global expert review; (b) 7-round AES-128: invented 'Möbius Bridge' fingerprinting technique 200-800x faster than prior best; neither breaks production systems. (2) NEW Tier 2 — FCC China humanoid robot + inverter ban (fcc-china-humanoid-robot-ban-july-29-2026): FCC published rules Tuesday July 29 barring new imports of Chinese humanoid robots, quadrupeds, and connected power inverters; follows Monday White House interagency national security determination; Volt Typhoon precedent cited; inverter scope touches AI data-center supply chains. Considered but not added: Meta Q2 earnings (reports after market close tonight); Kimi K3 open weights (already covered in July 28 am context); AI security $855M seed funding (too diffuse). Final tier_counts {1:3, 2:3, 3:1}; item_count 7."
+    },
+    {
       "run_id": "2026-07-29T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
