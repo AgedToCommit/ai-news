@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-30T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-07-30T11:00:00Z",
+      "ended_at": "2026-07-30T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 40000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 10,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-30-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Thursday July 30 2026. Pre-flight: kill switch inactive (paused=false), refresh enabled. am file 2026-07-30-am.json existed (6 items from enrichment). Since-filter: 2026-07-30T06:30:00Z (enrichment ended_at). WebFetch 403-blocked per established pattern; WebSearch-only across 10 queries: AI news overnight July 30 2026; Asia Europe AI announcements July 30 morning; Amazon Q2 2026 earnings preview July 30; AWS Bedrock Q2 2026 analyst consensus; Amazon AWS capex 2026 Trainium hyperscaler; EU AI Act August 2 GPAI enforcement Meta declined; BMW i Ventures AI fund (pre-dated April 2026 — excluded); Pacing the Frontier overnight reaction Senate Cruz; MCP 2026-07-28 overnight adoption; HuggingFace agent intrusion overnight patch status. ADDED 1 item: amazon-q2-2026-earnings-preview-aws-bedrock-trainium-july-30-2026 (Tier 2, US) — Amazon reports Q2 2026 at 5pm ET today, completing the four-hyperscaler July earnings week; BofA raised AWS growth estimate to 33% citing Anthropic/OpenAI Bedrock demand; Q1 Bedrock token volume exceeded all prior years combined with 170% QoQ spend growth; analysts expect Jassy to raise FY26 capex guide from ~$200B to ~$210B. Minor enrichment: eu-ai-act-gpai-enforcement-august-2-2026-countdown — added GPAI Code of Practice context (26 signatories including Anthropic/OpenAI/Google; Meta declined via Joel Kaplan statement citing legal uncertainties). BMW i Ventures $1.7B fund excluded (announced April 29 2026, outside refresh window). Final tier_counts {1:2, 2:4, 3:1}; item_count 7."
+    },
+    {
       "run_id": "2026-07-30T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
