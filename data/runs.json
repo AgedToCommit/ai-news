@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-30T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-30T06:00:00Z",
+      "ended_at": "2026-07-30T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 13000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-30-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Thursday July 30 2026. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-29-pm.json) had 4 items (1 Tier-1, 2 Tier-2, 1 Tier-3): Pacing the Frontier employee letter, MCP 2026-07-28 spec release, Hugging Face agent-intrusion forensic timeline, Meta Q2 2026 earnings preview. WebFetch remained 403-blocked per established pattern; WebSearch-only across 9 queries covering: Meta Q2 2026 earnings actuals capex EPS revenue; Meta AI capital expenditure 2026 superintelligence; Meta Q2 earnings call reaction BlackRock El Paso; Pacing the Frontier letter White House response July 29-30; MCP 2026-07-28 adoption Claude Desktop Cursor patches; Hugging Face agent intrusion HDF5 Jinja2 SSTI overnight; AI news overnight July 30 2026 model release open source; EU AI Act August 2 2026 GPAI enforcement; Microsoft Q4 FY26 earnings actuals Azure capex; Google Amazon hyperscaler capex reaction. Sub-task 1 enrichment: all 4 pm items KEPT + ENRICHED, no drops. (1) pacing-the-frontier-employee-letter-july-28-2026 — added Anthropic co-founders Jared Kaplan and Jack Clark to named-signatory list per TechTimes / TheNextWeb overnight coverage; added Senate Commerce Committee (Cruz) July 29 markup session as legislative anchor; added Peter Wildeford framing ('the frontier of humans coordinating on AI is also accelerating') and BraveNewCoin / TheNextWeb overnight commentary. (2) mcp-2026-07-28-spec-release-agentic-ai-foundation — added Anthropic overnight 'Bringing MCP 2026-07-28 to Claude' blog post and ClaudeDevs X confirmation that Claude Desktop, Claude on the web, and Claude API will roll out spec support soon; added specific 'auth aligns to production OAuth 2.0 and OIDC (Microsoft Entra, Okta) without workarounds' framing; added specific 'serverless / edge deployment' architectural framing. (3) hugging-face-agent-intrusion-forensic-timeline-july-28-2026 — added specific SSTI mechanism from overnight ExplainX and Ventura Systems analysis: the Jinja2 template was smuggled into what the fsspec reference:// spec treated as a numeric offset field; renderer evaluated it; agent walked Python object graph to reach exec; added explicit remediation status confirmation (dataset renderer no longer evaluates Jinja2 in data fields, HDF5 external raw-storage reference path patched). (4) meta-q2-2026-earnings-preview → RENAMED to meta-q2-2026-earnings-actuals-capex-blackrock-el-paso-confirmed-july-29-2026 with retier from T3 → T2 — actuals landed Wednesday after close: revenue $60.8B (up 28%, beat), EPS $6.18 miss vs $7.17-$7.18 consensus (-13% YoY), operating margin 31% vs 43% year-ago; Q2 capex $31.08B (nearly doubled from $17.0B Q2 2025); 2026 capex band narrowed to $130-$145B (lower end raised from $125B); Zuckerberg confirmed $14B BlackRock El Paso 1 GW JV on the call as strategic partnership; Family ARPP $16.86 up 42% from Q2 2024; Family of Apps other revenue crossed $1B up 73% YoY; free cash flow collapsed to $784M; stock -9.64% after hours to $529.15 from $585.61. NOTE: id changed to reflect the retier + reframe from preview to actuals. Sub-task 2 late-breaking: ADDED 2 items — (1) NEW Tier 1 — Microsoft Q4 FY26 earnings actuals (microsoft-q4-fy26-earnings-fy27-capex-guidance-july-29-2026): reported after close Wednesday July 29 alongside Meta; revenue $90.0B (up 18%), operating income $40.6B (up 18%), diluted GAAP EPS $4.81 (up 32%) vs $4.24 consensus; Azure constant-currency in 39-40% band, full-year Azure crossed $100B annualized; AI services annualized run-rate $37B up 123% YoY; FY27 capex guide $255-260B, ~35% above FY26's $190B; combined with Alphabet ($195-205B guided July 23, stock -7%), Meta ($130-145B narrowed July 29, stock -9.6%), and Amazon (reports July 30), four US hyperscalers on track for ~$1T combined 2027 AI-infrastructure capex. (2) NEW Tier 3 — EU AI Act GPAI enforcement August 2 (eu-ai-act-gpai-enforcement-august-2-2026-countdown): Sunday August 2 is when Commission's AI Office enforcement powers activate for General-Purpose AI providers; Article 101 fines up to 3% of global annual turnover or €15M; Commission can request documentation, run technical evaluations, demand risk-mitigation measures, restrict or withdraw non-compliant models from EU market; Article 50 chatbot 'you are talking to an AI' disclosure and deepfake / synthetic content labeling becomes enforceable same day; legacy GPAI models placed on market before Aug 2 2025 have until Aug 2 2027. Considered but not added: Microsoft Q2 FY26 previews (superseded by actuals); Amazon Q2 earnings (report July 30 evening — after this run); Fable 5.1 rumors (no dated announcement); Kimi K3 open-weights (already covered July 27-28 cycle); Alphabet capex July 23 (already historical, folded into Microsoft item context). Final tier_counts {1:2, 2:3, 3:1}; item_count 6."
+    },
+    {
       "run_id": "2026-07-29T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
