@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-31T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-07-31T06:00:00Z",
+      "ended_at": "2026-07-31T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 15000,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-31-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Friday July 31 2026. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-30-pm.json) had 6 items (1 Tier-1, 3 Tier-2, 2 Tier-3): Claude Mythos HAWK cryptanalysis, VS Code 1.131 AHP, GitHub Copilot CLI 1.0.76 + Grok 4.5, Simon Willison MCP TIL, FCC humanoid robot ban, OpenAI ChatGPT for Academic Researchers. WebSearch-only across 10 queries: Anthropic Mythos overnight reaction; VS Code 1.131 AHP reactions; Copilot CLI 1.0.76 Grok 4.5; Willison MCP follow-up; FCC humanoid ban reactions; OpenAI Academic Researchers reactions; AI news overnight July 30; Amazon Q2 2026 actuals; Anthropic OpenAI DeepMind July 30-31; open source model release July 30. Sub-task 1 enrichment: all 6 pm items KEPT + ENRICHED, no drops. (1) claude-mythos-hawk-aes-cryptographic-weaknesses-july-29-2026 -- added $100,000 API cost from TechTimes/Yellow (first published dollar figure for LLM-driven cryptanalysis), confirmed HAWK team pulled from NIST additional-signature process the day after publication, added Bank Info Security infosec-audience source. (2) vs-code-1-131-agent-host-protocol -- added architectural details: AHP uses message port locally + JSON-RPC over WebSocket remotely, same live session can be rendered from multiple VS Code windows and survives window closure; added Antigravity Lab / Rohit AI 'sessions as infrastructure' developer framing. (3) github-copilot-cli-1-0-76-grok-4-5 -- added v1.0.76-2 same-day patch release, Grok 4.5 specifics (500K context window, text+image inputs, low/medium/high reasoning-effort settings, strong on terminal-based coding in GitHub's internal testing) from GitHub Changelog + xAI announcement, confirmed /plugins subcommand is the surface for the new enable/disable controls. (4) simon-willison-mcp-custom-connector -- added Microsoft Learn's official Sentinel MCP walkthrough for Claude + ChatGPT (first vendor-authored version of Willison's pattern) and Sunpeak's July 2026 Claude Connectors tutorial, confirmed worked example is datasette-mcp at https://datasette.simonwillison.net/-/mcp. (5) fcc-chinese-humanoid-robot-ban -- added China Foreign Ministry response ('overstretching the concept of national security', 'all measures necessary'), IEEE Spectrum characterization of UniPwn as 'first major public exploit of a commercial humanoid platform', analyst view of near-term 'minimal' overall impact with benefit to Tesla/Figure/Agility/Apptronik/Boston Dynamics, Al Jazeera + Washington Times coverage. (6) openai-chatgpt-academic-researchers -- added Sol Pro (largest GPT-5.6 tier) explicitly included, Axios coverage of AI-evaluation research community critique that API-only access does not answer 'need weights + training data for independent evaluation' ask, Harvard physicist Xi Yin quote, comparison to Anthropic Claude Science (July 1 available to all paid subscribers without credential gate), HPCwire/AIwire coverage. Sub-task 2 late-breaking: ADDED 2 items -- (1) NEW Tier 1 -- amazon-q2-2026-earnings-actuals-220b-capex-aws-ai-25b-run-rate-july-30-2026: Amazon Q2 2026 after close Thursday July 30; revenue $200.6B (+20%), operating income $27.5B (+43%), AWS AI revenue run rate >$25B triple-digit growth, Trainium+Graviton custom-chip business separately >$25B run rate (first time disclosed at that scale), Q2 capex $54.2B vs $32.1B YoY, FY26 capex guide raised to ~$220B citing higher memory costs, RPO backlog $496B; completes four-hyperscaler July earnings sweep -- Alphabet ($195-205B July 23), Microsoft ($255-260B FY27 July 29), Meta ($130-145B narrowed July 29), Amazon (~$220B July 30) -- crossing ~$1T combined FY26-FY27 AI-infrastructure commitment threshold. (2) NEW Tier 2 -- meituan-longcat-2-open-weights-1-6t-agentic-coding-vitabench-waic-july-30-2026: Meituan released LongCat-2.0 open-weights at WAIC 2026 Shanghai Thursday July 30; 1.6T total / ~48B active MoE architecture built for agentic coding with sparse-attention and N-gram-embedding innovations; VitaBench 2.0 open agent-evaluation benchmark released alongside; Meituan Agentic System X team published accompanying analysis of 3,607 user-reported AI agent incidents from early 2025 to mid-2026 (first large-scale empirical agent-failure-mode taxonomy from a Chinese lab); third Chinese agentic-coding open-weights drop in July after Moonshot Kimi K3 (2.8T, July 17) and DeepSeek V4-Pro (1.6T); WAIC 2026 also featured Alibaba Qwen Office / QoderWork / Wukong / MuleRun / DAMO Lingshu agent lineup. Considered but not added: EU AI infrastructure gigafactory bidding (already covered in prior digests); RufRoot CVE-2026-59726 in Ruflo AI agent platform (niche); Boston Dynamics + Google Cloud Gemini Robotics-ER 1.6 (dated older). Final tier_counts {1:2, 2:4, 3:2}; item_count 8."
+    },
+    {
       "run_id": "2026-07-30T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
