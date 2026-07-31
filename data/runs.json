@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-07-31T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-07-31T17:00:00Z",
+      "ended_at": "2026-07-31T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 12000,
+        "output_write": 11000
+      },
+      "fetches_made": 13,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-07-31-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Friday July 31 2026. Pre-flight: kill switch inactive (paused=false), digest enabled. Today's am file exists with 11 items (3 Tier-1, 6 Tier-2, 2 Tier-3). RSS/scrape fetches historically 403-blocked in this environment; used WebSearch-only discovery pattern per prior runs' fallback. WebSearches across 11 queries: AI news Friday July 31 2026 afternoon; Anthropic Claude announcement July 31; OpenAI GPT announcement July 31; Google DeepMind Gemini announcement July 31; Gemini Robotics 2 Apollo 2 humanoid; OpenAI GPT-Live SynthID audio; NY AI legislation chatbot FAIR News Act; open source AI model release July 30-31; Gemini Robotics 2 DeepMind blog; Cohere North Mini Code (June 9, too old, skipped); NVIDIA NOOA / Open Secure AI Alliance (July 27, predates today's digest window, skipped); Nscale Anyscale $1.65B; Microsoft MAI-Cyber-1-Flash (already covered in 2026-07-28-pm and 2026-07-29-am snapshots, skipped); Anthropic v Trump admin injunction; Pacing the Frontier AI-workers letter (already covered in 2026-07-29-pm, skipped). WebFetch attempts against deepmind.google, marktechpost.com, roboticsandautomationnews.com all returned 403; assembled content from WebSearch summaries. Dedup checks against 2026-07-24 through 2026-07-31 snapshot files confirmed no prior coverage of the five items added. Items added: (1) NEW Tier 1 -- google-deepmind-gemini-robotics-2-whole-body-apptronik-apollo-2-july-30-2026: DeepMind released Gemini Robotics 2 Thursday July 30 as a three-model suite (Gemini Robotics 2 VLA for whole-body motor control, Gemini Robotics ER 2 embodied-reasoning agent for multi-step planning, Gemini Robotics On-Device 2 for local inference with few-hours embodiment adaptation); demonstrated on Apptronik Apollo 2 humanoid at Apptronik's 90,000-sqft Robot Park facility; robot performs walking, crouching, bending, object manipulation, multi-robot room-cleaning; broad coverage Bloomberg / SiliconANGLE / Slashdot / MarkTechPost / The AI Insider / Interesting Engineering / BigGo Finance / Robotics and Automation News / Robotics 24/7. (2) NEW Tier 2 -- openai-gpt-live-synthid-audio-watermark-verification-api-july-31-2026: OpenAI updated GPT-Live product page Friday July 31 with three provenance changes -- all supported audio generated via ChatGPT Voice and OpenAI API now carries a SynthID audio watermark (survives cropping/filtering/lossy compression); the public verification tool at openai.com/research/verify extended to detect audio watermark plus C2PA metadata; new verification API lets developers wire the same check into their own workflows; brings audio parity to the May 2026 SynthID+C2PA image-watermarking rollout; cross-vendor de-facto standard with Google DeepMind (SynthID origin), NVIDIA, ElevenLabs. (3) NEW Tier 2 -- nscale-acquires-anyscale-ray-1-65b-full-stack-ai-cloud-july-30-2026: Nscale (UK AI neocloud) announced Thursday July 30 acquisition of Anyscale (Ray commercial steward) for ~$1.65B; Anyscale's ~200 employees join Nscale, brand continues independently; deal closes 2H 2026 pending regulatory approvals; Nscale commits to joining PyTorch Foundation to sustain Ray open-source stewardship; combines Nscale's GPU-cluster infrastructure with Anyscale's Ray-based workload-orchestration platform; TechCrunch / Bloomberg / The Next Web / SiliconANGLE / Yahoo Finance / HPCwire coverage. (4) NEW Tier 3 -- judge-lin-anthropic-trump-supply-chain-risk-case-worse-july-30-2026: US District Judge Rita F. Lin held Thursday July 30 hearing on Trump administration motion to reimpose February 2026 'supply chain risk' designation of Anthropic; Judge Lin said record 'has gotten worse for the government' and called argument that Anthropic's public criticism of DOD justifies the ban 'really troubling' as First Amendment matter; follows March 2026 preliminary injunction; TechCrunch / NOTUS / Alternet / Gizmodo / Courthouse News Service / NBC News coverage. (5) NEW Tier 3 -- new-york-2026-ai-legislation-package-chatbot-fair-news-transparency-data-center-july-2026: NY legislature closed 2026 session with five-bill AI package sent to Governor Hochul with December 31 signing deadline: S 9051 kids companion-chatbot ban (unanimous 137-0 Assembly / 60-0 Senate); FAIR News Act (AI-content disclaimers + human editorial review + newsroom-staff disclosure); AI training-data transparency act; data-center moratorium; ban on AI-assisted surveillance pricing; Transparency Coalition July 31 legislative-update rollup surfaced the full package; coverage across Enterprise DNA / MultiState / The Wrap / Editor and Publisher / City & State NY / Nelson Mullins / NY Senate press releases. Final tier_counts {1:1, 2:2, 3:2}; item_count 5. No am items promoted (all am items either not materially deepened during the day, or the deepening was covered in enrichment/refresh rather than pm)."
+    },
+    {
       "run_id": "2026-07-31T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
