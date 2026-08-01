@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-01T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-01T06:00:00Z",
+      "ended_at": "2026-08-01T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 18000,
+        "output_write": 2500
+      },
+      "fetches_made": 11,
+      "items_input": 5,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-01-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Saturday August 1 2026. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-31-pm.json) had 5 items (1 Tier-1, 2 Tier-2, 2 Tier-3): Gemini Robotics 2 / Apollo 2, OpenAI GPT-Live SynthID audio, Nscale-Anyscale acquisition, Judge Lin Anthropic supply-chain-risk case, NY 2026 AI legislation package. RSS/scrape fetches historically 403-blocked in this environment; used WebSearch-only discovery pattern per prior runs' fallback. WebSearches across 11 queries: Gemini Robotics 2 Apollo 2 reactions benchmarks Jul 31-Aug 1; OpenAI GPT-Live SynthID audio watermark verification API developer reactions; Nscale Anyscale Ray acquisition $1.65B reactions PyTorch Foundation; Judge Rita Lin Anthropic Trump supply chain risk ruling; NY FAIR News Act Hochul signing AI chatbot minors; AI news overnight Aug 1 model release; Judge Lin Anthropic Aug 1 injunction denied motion; DeepSeek V4 Flash 0731 release; Governor Hochul signs S9051 signature date; Anyscale 70% revenue growth Coinbase; ASIMOV-Agentic safety benchmark. Sub-task 1 enrichment: all 5 pm items KEPT + ENRICHED, no drops. (1) google-deepmind-gemini-robotics-2 -- added published Apollo 2 dexterity success rates (92% unscrew bulb, 36% screw bulb back, 32% dustpan sweep) confirming multi-finger dexterous manipulation remains the bottleneck; added ASIMOV-Agentic safety benchmark release on HuggingFace (community test set for whether ER layer refuses dangerous VLA commands and requests human intervention); added confirmation that Gemini Robotics ER 2 is now GA via Gemini API + Google AI Studio (Enterprise Agent Platform private preview); added cross-embodiment demo detail (same checkpoint controls Apollo 2 with alt hands + Franka Duo with parallel gripper); added specific watering-can-to-green-bin demo; added blog.google ER 2 companion post, TechTimes, AI Magazine, Dim Sum Daily, Northeast Times sources. (2) openai-gpt-live-synthid -- expanded cross-vendor coalition detail; added Kakao (Korean-language AI platforms) adoption alongside OpenAI / NVIDIA / ElevenLabs; added Framia and Lumethic ecosystem-coverage sources. (3) nscale-acquires-anyscale-ray -- added Ray-governance context (already transferred to PyTorch Foundation under Linux Foundation in Oct 2025 per Anyscale's own post) confirming framework is already community-governed independent of the acquisition; added Anyscale disclosed 70% QoQ revenue growth in most recent quarter (Nscale-cited deal thesis); added specific enterprise customers moving over (Coinbase, Runway, Bedrock Robotics); added Nscale $900M credit line financing context (Shashi.co); added Futurum 'neocloud land grab' framing; added Verdict, Anyscale first-party, Anyscale PyTorch-Foundation blog, Futurum sources. (4) judge-lin-anthropic-trump -- added specific quoted judicial language from March 2026 preliminary-injunction ruling ('classic illegal First Amendment retaliation,' 'Orwellian notion,' 'serious procedural problems,' explicit rejection of kill-switch / hidden-control-mechanism claims); added DC Circuit stay-denial parallel-proceeding context (Jones Walker 'Two Courts, Two Postures' analysis) confirming government defeat in two forums; added ABC7, CBS News, The Hill, FedScoop, Jones Walker sources. (5) new-york-2026-ai-legislation -- corrected bill number to S 9051B (the enacted-language version, per ChatForest and Bloomberg Law); added $25,000-per-violation attorney-general enforcement detail (TechTimes / Young People's Alliance); added January 1, 2027 effective date if signed (MultiState); added active advocacy pressure from Tech Oversight Project, Young People's Alliance, SafeBAE urging Hochul to sign without weakening amendments; confirmed Hochul has not yet signed. Sub-task 2 late-breaking: ADDED 1 item -- NEW Tier 1 -- deepseek-v4-flash-0731-open-weights-mit-284b-agentic-coding-july-31-2026: DeepSeek released DeepSeek-V4-Flash-0731 Thursday July 31 as open weights under MIT license; 284B-total / ~13B-active MoE at $0.14/M input tokens; per DeepSeek's own changelog beats V4-Pro-Preview on all nine agent benchmarks (Terminal Bench 2.1: 82.7 up from Flash-preview 61.8, above V4-Pro-Preview 72.1; DeepSWE: 7.3 -> 54.4, ~7x jump); public beta API live; weights downloadable on Hugging Face; benchmarks self-reported on DeepSeek's own evaluation harness and unreproduced by independent labs as of release; coverage across MarkTechPost, Artificial Analysis, TechTimes, Digital Applied, Wan27, Modem Guides, byteiota; fourth Chinese open-weights agentic-coding drop in July after Moonshot Kimi K3 (July 17), DeepSeek V4-Pro-Preview (July 22), Meituan LongCat-2.0 (July 30). Considered but not added: separate blog.google ER 2 post (folded into item #1 as a take); Hochul signing news (search suggested she may have signed but multiple independent sources confirm no signature yet and Dec 31 deadline remains, so kept as awaiting-signature). Final tier_counts {1:2, 2:2, 3:2}; item_count 6."
+    },
+    {
       "run_id": "2026-07-31T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
