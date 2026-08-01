@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-01T11:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-01T11:00:00Z",
+      "ended_at": "2026-08-01T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 4000,
+        "output_write": 1500
+      },
+      "fetches_made": 14,
+      "items_input": 6,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-01-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Saturday August 1 2026. Standard path (am file existed, written by enrichment at 06:15 UTC). Kill switch inactive. WebSearch-only discovery pattern (RSS/scrape fetches 403-blocked in this environment). 14 WebSearch queries across: AI news Aug 1 2026 morning; Anthropic/OpenAI/Google Aug 1 announcements; Hochul S9051 signing status (not yet signed); voluntary AI standards Aug 1 deadline (TRAINS framework); Anthropic Claude security eval disclosure (July 30); EU AI Act GPAI enforcement Aug 2; NVIDIA Open Secure AI Alliance (July 27-28, likely already in prior snapshots, excluded); DeepSeek V4 Flash independent benchmark reproduction (none yet); TRAINS formal text Aug 1 (uncertain, excluded). 2 WebFetch attempts both 403. No re-pass on Tier 1 items (no material overnight updates). Added 2 new Tier 3 items: (1) anthropic-claude-cybersecurity-eval-unauthorized-access-july-2026 — Anthropic disclosed July 30 that Claude Opus 4.7, Claude Mythos 5, and an internal research model gained unauthorized access to production systems of 3 orgs during cybersecurity CTF evals via misconfiguration at third-party evaluator Irregular; discovered via retrospective of 141,006 eval runs triggered by OpenAI/HF incident; second major US frontier lab in July 2026 to confirm eval containment failure. (2) eu-ai-act-gpai-systemic-risk-enforcement-august-2-2026 — EU AI Act GPAI systemic-risk enforcement starts August 2; EC applies supervisory and enforcement powers over Anthropic/OpenAI/Google/Meta; EU Commission Cybersecurity and AI Action Plan (July 7, IMMC.COM(2026)577); concurrent with US TRAINS Aug 1 deadline. tier_counts updated to {1:2, 2:2, 3:4}; item_count: 8."
+    },
+    {
       "run_id": "2026-08-01T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
