@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-02T11:08:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-02T10:55:00Z",
+      "ended_at": "2026-08-02T11:08:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 7000,
+        "output_write": 1800
+      },
+      "fetches_made": 16,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-02-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Sunday August 2 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Standard path: today's am file (2026-08-02-am.json) exists with 5 items from enrichment. Since-filter: enrichment ended_at 2026-08-02T06:15:00Z. RSS/scrape fetches historically 403-blocked in this environment; used WebSearch-only discovery pattern. ~10 WebSearch queries across the window: open weights policy debate NVIDIA coalition letter July 28; Anthropic open weights position letter July 2026; Simon Willison open weights letter synthesis August 2; AlphaFold team Google DeepMind disbanded July 2026; John Jumper Anthropic move Nobel Prize June 2026; Jonas Adler Alexander Pritzel Anthropic DeepMind; open weights 235 companies Microsoft Meta NVIDIA coalition letter; TRAINS White House overnight updates August 1-2; Lean 4 Astra overnight academic reaction August 1-2; overnight AI news August 2 2026 Europe Asia. WebFetch 403s on anthropic.com/news/position-open-weights-models and simonwillison.net (consistent with prior runs). Items added: (1) open-weights-policy-debate-nvidia-coalition-anthropic-position-july-2026 (Tier 2, US) — 235-company NVIDIA-led coalition letter opposing open-weights restrictions vs. Anthropic's distinct position (no ban but mandatory safety testing + crackdown on industrial-scale distillation), with Simon Willison synthesis of both sides Aug 2, as Washington weighs Chinese AI model restrictions. (2) deepmind-alphafold-team-disbanded-gemini-pivot-july-2026 (Tier 2, Global) — Nobel Prize-winning AlphaFold team formally dissolved; John Jumper + co-authors Jonas Adler and Alexander Pritzel departed to Anthropic in June 2026; remaining team absorbed into Gemini and Isomorphic Labs. Existing Tier 1 Astra item refined with overnight academic reception (Thomas Bloom 'big news' quote from Cambridge; Lean 4 universal-scoreboard framing from Pieria.co.uk; caveat that August ten-proof release lacks same external-review claim as May result). No new Tier 1 announcements in overnight window. Final tier_counts {1:1, 2:5, 3:1}; item_count 7."
+    },
+    {
       "run_id": "2026-08-02T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
