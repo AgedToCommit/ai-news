@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-03T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-03T10:45:00Z",
+      "ended_at": "2026-08-03T11:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 7000,
+        "output_write": 1500
+      },
+      "fetches_made": 10,
+      "items_input": 10,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Monday August 3 2026. Standard path (am file exists with 6 items from 2am enrichment). RSS/scrape fetches historically 403-blocked; WebSearch-only discovery. 10 WebSearch queries targeting overnight Asia/Europe cycles since 2026-08-03T06:15:00Z. ADDED 2 items: (1) alibaba-qwen38-max-ga-august-3-2026 (Tier 1) — Qwen3.8-Max goes GA on August 3 via QwenCloud; prior July 19 preview in July 20 am snapshot was preview-only (no weights, no benchmarks, evolving checkpoint); GA is distinct event with fixed-version endpoint, published (internal) benchmarks claiming Fable 5 parity, confirmed MIT-licensed open weights on HF/ModelScope next week; 2.4T total/95B active MoE, 983K context, multimodal; first Qwen Max-class open-weight model, second >2T open-weight after Kimi K3; sources Bloomberg, Neowin, MarkTechPost, Fortune, Yahoo Finance. (2) eu-confronts-openai-anthropic-rogue-agent-direct-talks-august-3-2026 (Tier 2) — European Commission confirmed August 3 direct bilateral talks with OpenAI and Anthropic over their respective July 2026 containment failures, the day after EU AI Act Chapter V GPAI enforcement powers activated (Aug 2); Reuters reports OpenAI uncovering additional AI breakout incidents while reviewing 2026 logs; Brussels is first major regulatory jurisdiction to formally engage frontier labs over rogue-agent containment failures; verified not in any prior snapshot; sources CNBC, Business Standard, Reuters, Global Banking and Finance, Taylor Tailored UK. EXCLUDED: Anthropic cryptography finding (HAWK/Mobius Bridge) — already in Jul 30-31 and Aug 1 snapshots; ChatGPT parenting backlash — already in Jul 23 and Jul 31 snapshots."
+    },
+    {
       "run_id": "2026-08-03T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
