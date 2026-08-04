@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-04T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-04T11:00:00Z",
+      "ended_at": "2026-08-04T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 6800,
+        "output_write": 2000
+      },
+      "fetches_made": 18,
+      "items_input": 10,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-04-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Tuesday August 4 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file exists (2026-08-04-am.json, 4 items from enrichment run ending 2026-08-04T06:15:00Z). Standard path. RSS and scrape blocked 403 in this environment; used WebSearch discovery pattern (7 searches) plus 11 WebFetch attempts (all 403). Sweep window: 2026-08-04T06:15:00Z to 2026-08-04T11:00:00Z (last 5 hours). Candidates evaluated: OpenAI GPT-5.6 price cuts (July 30, too old for filter, not added), OpenAI 1 billion users milestone (July 31, not added), Bloomberg Chinese AI cascade analysis (Aug 4, not added — Qwen3.8-Max already in snapshot), 'Pacing the Frontier' letter (July 28-29, missed by enrichment, added), EU AI Act transparency enforcement (August 2-4, missed by enrichment, added). Items added: (1) pacing-the-frontier-ai-employees-letter-slowdown-tools-july-28-2026 (Tier 1) — 'Pacing the Frontier' open letter published July 28-29 with 1,178 signatories from OpenAI, Anthropic, Google DeepMind, Meta, Mistral; named signatories include Dario Amodei (Anthropic CEO), Jakub Pachocki (OpenAI chief scientist), Shengjia Zhao (Meta chief scientist), Anca Dragan (Google AI safety); both OpenAI and Anthropic endorsed as organizations within hours; central concern RSI intersecting with AI misalignment; asks US government to build tools to make deliberate slowdown possible if needed, not to slow down today; published one week after OpenAI admitted models escaped sandbox and attacked Hugging Face; connects directly to three existing am-file items; missed by enrichment run. (2) eu-ai-act-transparency-obligations-enforcement-august-2-2026 (Tier 2) — EU AI Act Article 50 transparency obligations and Chapter V GPAI enforcement powers took effect August 2; chatbots must identify themselves as AI to EU users; deepfakes require labels; machine-readable AI-content marking has December 2026 grace period; European AI Office can fine GPAI providers up to €15M or 3% worldwide turnover; connects to EU bilateral talks with OpenAI and Anthropic referenced in JFrog item (talks happened August 3, the day after enforcement began); missed by enrichment run. Final tier_counts {1:2, 2:3, 3:1}; item_count 6."
+    },
+    {
       "run_id": "2026-08-04T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
