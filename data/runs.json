@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-05T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-05T06:18:00Z",
+      "ended_at": "2026-08-05T06:35:00Z",
+      "wall_time_ms": 1020000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 20000,
+        "output_write": 7200
+      },
+      "fetches_made": 9,
+      "items_input": 8,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-05-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Wednesday August 5 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file exists (2026-08-04-pm.json, 6 items covering White House AI safety meeting, OpenAI 1B users + GPT-5.6 price cut, Nvidia Open Weights letter, NSA benchmarking missed deadline, GitHub Copilot CLI v1.0.78, Palantir Karp Q2). Sub-task 1 (prune+enrich): all 6 pm items enriched with new context and kept — (1) White House meeting: post-meeting reporting confirmed framework finalized but details undisclosed; (2) OpenAI GPT-5.6 Luna price cut: added Cognition public endorsement 'on the pareto curve of price/performance efficiency,' plus OpenAI Agents' Last Exam benchmark claim Luna beats Claude Fable 5 at ~99% lower cost per task; (3) Nvidia Open Weights letter: signatory count updated to 270+ as of August 3 (up from 235 by July 30); (4) NSA benchmarking deadline: framework 'close to final with drafts already exchanged' per Yahoo Finance / KuCoin; substituted bilateral private negotiation for public deliverable via Tuesday White House meeting; (5) GitHub Copilot CLI v1.0.78: added specific release-notes details — browser-flow login default for headless local subprocesses, interactive shell shortcut on Enter, MCP-server-persistence-across-sessions fix that matters most for long agent sessions; canonical source switched to GitHub releases tag URL; (6) Palantir Q2: added post-earnings market reaction — stock jumped ~15% to $144.45 after-hours, guidance raised to $8.15–8.16B ($500M raise), commercial +149% / government +90% / US commercial +380% since 2024, Karp 'revolution for independence and AI sovereignty is now well underway' language and CNBC 'trying to drug addict us' quote. Sub-task 2 (late-breaking pass, cap 2): added (1) amazon-nova-windown-frontier-model-research-abbeel-august-2026 (Tier 2) — Amazon winds down active development on Nova Premier/Omni/Reel/Canvas into KTLO maintenance-only mode, retains Nova 2 Lite/Sonic + Nova Forge/Nova Act; shifts resources to Frontier Model Research under Pieter Abbeel targeting single flagship for re:Invent 2026; connects to Amazon's absence from Open Weights coalition and Tuesday White House meeting; specific US-frontier-lab-market-consolidation implication (5 players → 4 plus Amazon reboot); coverage across The Decoder, The Next Web, TheStreet, MLQ News, Trending Topics EU, Digital Watch Observatory. (2) anthropic-claude-opus-4-1-retirement-effective-august-5-2026 (Tier 3) — Anthropic's Claude Opus 4.1 (claude-opus-4-1-20250805) hits hard retirement date today August 5; deprecated June 5 with 60-day window; recommended migration to claude-opus-4-8; specific practical grep-and-swap action item for any project that hard-coded the older model string; coverage across TheRouter.ai, Nova3, LLM Latency deprecation calendar, ClaudeHQ, Narracomm, Anthropic platform release notes. Discovery searches: 9 WebSearch queries (6 enrichment + 3 late-breaking discovery). Final tier_counts {1:2, 2:4, 3:2}; item_count 8; items_dropped 0."
+    },
+    {
       "run_id": "2026-08-04T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
