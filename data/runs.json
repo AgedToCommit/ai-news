@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-06T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-06T06:18:00Z",
+      "ended_at": "2026-08-06T06:35:00Z",
+      "wall_time_ms": 1020000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 5200
+      },
+      "fetches_made": 7,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-06-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Thursday August 6 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file exists (2026-08-05-pm.json, 3 items: SK hynix+SanDisk HBF OCP spec, Anaconda+Enkrypt acquisition, Google Vids+Omni). Sub-task 1 (prune+enrich): all 3 pm items enriched with new context and kept — (1) SK hynix+SanDisk HBF: added specific press-release date (August 3 2026 via SanDisk IR / BusinessWire), specific consortium-formation-to-spec timeline (Feb 25 2026 → Aug 3 2026 = six months, contrasted with JEDEC multi-year HBM cycles), the 'proactively published to establish HBF as de facto standard before proprietary alternatives' framing, plus StorageNewsletter / VideoCardz / Slashdot / SanDisk IR sources; connected specifically to today's new Anthropic-Volta Tier 1 item; (2) Anaconda+Enkrypt: added the specific three-acquisition-in-six-months consolidation pattern (Outerbounds earlier in 2026 → Kilo Code July 15 2026 → Enkrypt August 4 2026), which turns a routine security-tooling roll-up into a 'Anaconda is now the AI-native development-lifecycle vendor for Python ecosystem' pattern; added specifics on Kilo Code (open-source, model-agnostic, 3M+ developers across VS Code / JetBrains / web / CLI, ~10T tokens/month) as the IDE-side layer; added SecurityInfoWatch and BusinessWire sources; (3) Google Vids+Omni: corrected specific model name to Omni Flash (efficient tier not flagship), clarified specific rollout pattern (Rapid Release July 16 → Scheduled Release August 5), added specific regional carve-outs (EEA / Switzerland / UK / Texas / Illinois — editing of non-AI-generated video not initially available), added July personal-avatar-in-clips feature as related-rollout that stacks with this, added Android Central and V2EX developer-reaction context, updated canonical source to Google Workspace Updates blog. Sub-task 2 (late-breaking pass, cap 2): added 1 item — anthropic-volta-bitdeer-10b-norway-vera-rubin-compute-deal-august-4-2026 (Tier 1) — Anthropic $10B / 6-year compute deal with Volta reported by Bloomberg August 4 2026; 121-133MW of Nvidia Vera Rubin at Bitdeer Tydal Norway; delivery Dec 31 2026 and Mar 31 2027; Volta founded January 2026 by ex-Brookfield execs with a16z / Altimeter / Azora / Nvidia backing; sits directly under Anthropic's Opus 4.1 retirement (August 5) and Sonnet 5 promo-pricing end (August 31) storyline; coverage across TechCrunch, Yahoo Finance/Bloomberg, The Register, The Decoder, Cryptopolitan, Techgenyz, KuCoin, QZ, BigGo Finance. Did not add second late-breaking item — no other Tier 1 candidate cleared the bar overnight; kept the cap slot rather than pad. Since-filter: last successful run 2026-08-05T17:20:00Z (digest). WebFetch consistently 403-blocked in this proxy environment; relied on WebSearch discovery pattern (7 queries: 3 enrichment context per pm item + 3 late-breaking discovery + 1 Anaconda-Kilo-Code context lookup). Final tier_counts {1:1, 2:2, 3:1}; item_count 4; items_dropped 0.",
+      "commit_sha": null
+    },
+    {
       "run_id": "2026-08-05T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
