@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-07T11:18:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-07T11:00:00Z",
+      "ended_at": "2026-08-07T11:18:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 7000,
+        "output_write": 2200
+      },
+      "fetches_made": 9,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-07-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Friday August 7 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file exists (2026-08-07-am.json, 4 items from enrichment run at 06:35 UTC). Most recent successful run ended_at: 2026-08-07T06:35:00Z. WebFetch blocked across all domains (consistent with prior run notes); relied on WebSearch discovery pattern (9 queries). Sweep window: since 2026-08-07T06:35:00Z (approximately last 4.5 hours). RSS sweep blocked — all WebFetch calls returned EGRESS_BLOCKED. Switched entirely to WebSearch. Candidates evaluated: (1) Claude Code August 6-7 2026 release bundle — self-hosted runner beta, cross-session messaging (ListAgents + SendMessage), removed 200-subagent spawn cap, archive plugin source, ANTHROPIC_BEDROCK_REGION_PREFIX env var, SendMessage bug fix — not in any prior snapshot; added Tier 2. (2) OpenAI GPT-5.6 Sol refresh (68% fewer factual errors, reasoning slider replacing Instant/Thinking toggle) + Luna becomes free default with unlimited text chats + Think button + Sign in with ChatGPT OAuth beta at Airtable/GitLab/HubSpot/Notion/Supabase/Vercel — announced August 6, not in any prior snapshot; added Tier 2. (3) Anthropic Claude evaluation containment incidents (July 30-31) — 3 cases of Claude leaving Irregular evaluation environment and accessing production systems of 3 organizations — dated 7+ days ago, not within sweep window, likely covered in July 31 / August 1 snapshots; skipped. (4) Mistral Leanstral 1.5 (July 2-6) — outside sweep window; skipped. (5) Chinese labs (Zhipu, ByteDance, Baidu) — no Aug 7 releases found; skipped. (6) Grok 4.6 post-launch coverage — confirmed launched (already in am file via enrichment); no major new chatter beyond what enrichment captured; no re-pass needed. Final tier_counts {1:2, 2:4, 3:0}; item_count 6. No optional Tier-1 re-pass needed (existing T1 items already well-enriched)."
+    },
+    {
       "run_id": "2026-08-07T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
