@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-08T17:24:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-08T17:00:00Z",
+      "ended_at": "2026-08-08T17:24:00Z",
+      "wall_time_ms": 1440000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 7500,
+        "output_write": 2700
+      },
+      "fetches_made": 13,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-08-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Saturday August 8 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file exists (2026-08-08-am.json, 7 items) after successful 2am enrichment + 7am refresh: OpenAI/HF Black Hat timeline T1 (compounding), Meta Muse Spark 1.1 breach at Irregular T1 (compounding), Mistral Shieldstral T2, LangChain Deep Agents v0.7 T2, NVIDIA NOOA T2, AMD/Taalas T2, OpenAI Astra pause T2. Promotion rule applied — no am items promoted; the two T1 stories continue to compound but the compounding is already captured in the enrichment + refresh revisions carried forward in the am file. WebFetch consistently EGRESS_BLOCKED (confirmed with note.com attempt); relied entirely on WebSearch discovery (12 queries + 1 failed WebFetch = 13 fetches). Sweep window: since 7am refresh ended_at 2026-08-08T11:20:00Z (~6-hour window on a Saturday, historically thin). Candidates evaluated and added: (1) Suno operating principles + watermarking + download-limit policy — 4-point formal principles + 3 concrete policy changes (audio watermarking/fingerprinting in coming weeks, downloads-caps policy targeting mass distribution, updated community guidelines with 4-tier enforcement); first major AI content-generation platform to publish codified public stance under copyright pressure; multi-source coverage TechCrunch Aug 6 + Dataconomy/Unite.AI/TechRadar/Gizmodo/TNW/Slashdot/Analytics Insight Aug 7-8; Tier 3 policy-shaped product story. (2) Rippling AI Spend Console — HR product built on the specific numbers of Rippling's own AI-spend crisis (40% of R&D headcount budget, one engineer at $50K/month, 10-15% of employees driving 60% of spend, 80% MoM growth); multi-source Aug 7-8; Tier 3 product launch — the published numbers are the practical takeaway, not the product itself. (3) Claude Code v2.1.225 (Aug 7) + v2.1.226 (Aug 8) — gateway spend-limit visibility, workspace trust prompts for `claude agents`, Remote Control message-by-name, cluster of OAuth/keychain/401 bug fixes on macOS + headless sessions; Tier 2 developer-tool release with direct relevance to Gabe as hobbyist Python coder. (4) GitHub Copilot Aug 3 weekly release (blogged Aug 7) — Sessions sidebar with keyboard shortcuts, /side for parallel questions, Impeccable design-review skill for mobile, Auto now shows per-request model + AI credit + cache details; Tier 2 developer-tool release thematically paired with Claude Code item on developer-tool convergence around spend/cost visibility and session management. Considered but not added: OpenAI unlimited text chats for free users + GPT-5.6 Luna as default + Think button (already in yesterday's am file per Aug 7 pm digest notes referencing 'GPT-5.6 Sol/Luna refresh + Sign in with ChatGPT OAuth beta T2'); Anthropic in-house chip team confirmation (Aug 5, pre-dates sweep window and already covered in Aug 6 files); Google DeepMind reorganization + Discovery Loop spinoff (already in yesterday's am file); Anthropic self-hosted Claude Code (already in yesterday's am file); Chain-of-Thought Monitorability paper (actually published July 2025, not new); Ethan Mollick 'Twilight of the Chatbots' (published June 30 2026, not within sweep window); MiniMax H3 open weights (Aug 3, outside sweep window and already at post-peak coverage); Gemini 3.6 Flash GA (July 21 release, outside sweep window). Final tier_counts {1:0, 2:2, 3:2}; item_count 4. Lean pm intentional per pattern established in prior runs — today's am file already carries 7 items including 2 T1 stories still compounding, so pm surfaces only the Aug 7-8 developer-tool + product-policy delta rather than padding."
+    },
+    {
       "run_id": "2026-08-08T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
