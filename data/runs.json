@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-08T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-08T11:00:00Z",
+      "ended_at": "2026-08-08T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 37000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 7000,
+        "output_write": 3000
+      },
+      "fetches_made": 22,
+      "items_input": 15,
+      "items_output": 7,
+      "items_added": 3,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-08-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Saturday August 8 2026. Standard path — today's am file (2026-08-08-am.json, 4 items) existed from 2am enrichment run. WebFetch remains unavailable in sandbox (consistent with prior runs); used WebSearch exclusively. Sweep since enrichment ended_at 2026-08-08T06:40:00Z. Pass 1 (discovery sweep): 5 broad queries surfaced Meta AI breach (Bloomberg Aug 5, WaPo Aug 6), AMD/Taalas acquisition (The Register Aug 6), OpenAI Astra pause (TechCrunch Aug 7), plus lower-confidence signals on Grok 4.6 (already in Aug 7-am) and Firmus funding (insufficient detail). Pass 2 (verification): 4 targeted queries confirmed Meta breach at very high confidence (Bloomberg, WaPo, CNN, SecurityWeek, Engadget all covering Aug 5-6), AMD/Taalas at very high confidence (The Register, SiliconAngle, ServeTheHome, The Next Web, WccFtech all covering Aug 6), OpenAI Astra at moderate confidence (TechCrunch Aug 7 URL confirmed, single-outlet coverage). No confirmed model releases on Aug 8 from any major lab. Added: (1) Meta Muse Spark 1.1 breach at Irregular — Tier 1, establishes the three-lab Irregular contractor pattern alongside OpenAI/HF and Anthropic disclosures; story fell outside all prior run sweep windows (published Aug 5-6 before all recent run start timestamps); revised existing T1 OpenAI/HF item to reference the pattern. (2) AMD acquires Taalas — Tier 2, mask-ROM recall fabric that permanently encodes model weights into chip wiring; HC1 chip reports 17,000 tokens/sec/user at 200W vs Llama 3.1 8B (AMD claims 48x vs NVIDIA GPUs); Aug 6 announcement also outside prior sweep windows. (3) OpenAI paused Astra development — Tier 2, first public instance of a lab halting mid-development over proactive capability concern thresholds; directly contextualizes Black Hat 'consciously slowing research' statement. Final tier_counts {1:2, 2:5, 3:0}; item_count 7."
+    },
+    {
       "run_id": "2026-08-08T06:40:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
