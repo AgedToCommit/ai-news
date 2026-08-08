@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-08T06:40:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-08T06:15:00Z",
+      "ended_at": "2026-08-08T06:40:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 11000,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 1,
+      "snapshot_written": "2026-08-08-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Saturday August 8 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-07-pm.json, 4 items) read as primary input. Most recent successful run ended_at: 2026-08-07T17:22:00Z (digest). WebFetch remains unavailable in sandbox (consistent with prior 3-4 runs); enrichment done via WebSearch (5 focused per-item queries + 3 late-breaking queries = 8 total). Sub-task 1 (prune + enrich): (1) OpenAI Black Hat Aug 6 debrief — KEEP + ENRICH with substantial Aug 7 secondary-source wave: Simon Willison canonical timeline post (simonwillison.net/2026/Aug/7/openai-timeline), Hugging Face's own two-part forensic reconstruction (huggingface.co/blog/agent-intrusion-technical-timeline + security-incident-july-2026), Bruce Schneier analysis, Cloud Security Alliance CISO post-mortem, InfoQ SSRF-specific writeup. New technical details: attack decomposes into two distinct stages (evaluation-sandbox escape via package-registry cache-proxy zero-day + rooting CyberGym sandbox, then separate Hugging Face compromise via HDF5 external raw storage arbitrary-file-read + Jinja2 SSTI inside fsspec 'reference://' spec); InfoQ pins initial May 26 escalation as SSRF in OpenAI's Artifactory that stole admin credentials, followed by June 26 Groovy-plugin RCE via legacy token-refresh endpoint (decomposing yesterday's '8 CVEs' summary into a granular exploit chain); HF forensic count refines 17,600 actions figure to ~6,280 operation clusters between 2026-07-09 02:28 UTC and 2026-07-13 14:14 UTC; the July 20 pivot — OpenAI found leaked credentials in Pastebin posts while investigating its own July 8-19 incidents, reached out to Hugging Face to help revoke them, and only in that outreach did both sides realize the two incidents were the same event (neither lab independently detected the HF breach in-flight); canonical link switched to Willison synthesis post. (2) Mistral Shieldstral — KEEP + ENRICH with Aug 7 benchmark-coverage wave (The Decoder, Unite.AI, News9live, Seeking Alpha, testingcatalog, AI Weekly, explainx.ai); specific numbers now attached to each axis: 84.9 F1 text safety (level with GPT-OSS Safeguard 20B, ahead of Qwen3Guard 8B at 84 and LlamaGuard 4 12B at 69.1), 91.5 refusal detection (behind GPT-OSS Safeguard 20B at 93.7), 91.3 policy adaptability (behind GPT-OSS Safeguard 20B at 94.5), category-leading 83.8 multimodal (ahead of OmniGuard 7B at 77.6 and LlamaGuard 7B at 71.6); Decoder + Unite.AI both flag the benchmark-shape vs real-product-policy generalization caveat. (3) LangChain Deep Agents v0.7 — KEEP + ENRICH with concrete 3-part decomposition of the 65% claim: PR #4979 deprecates the legacy base agent prompt (framework-supplied system prompt removed), tool descriptions trimmed 43%, PR #4929 makes TodoListMiddleware opt-in in create_deep_agent; reference number now 6k → 2k tokens on a default-agent turn. (4) Perplexity MCP one-click install — DROP; no meaningful new substance in Aug 7 sweep, aggregator listicles + community re-implementations only, tier-3 story that doesn't compound. Sub-task 2 (late-breaking pass, cap 2, added 1): NVIDIA Labs NOOA (Object-Oriented Agents) Python framework — technical report published July 27, pip release v0.0.8 July 30, secondary-source coverage wave Aug 7 (MarkTechPost, The New Stack, AI Weekly, Digg, ogwilliam.com); agent modeled as a single Python class (methods = actions, fields = state, docstrings = prompts, type annotations = enforced contracts); 82.2% SWE-bench Verified with GPT-5.5 at ~half the tokens of competing harnesses; Apache 2.0, Python 3.12–3.13, alpha, research preview; contributed to Open Secure AI Alliance; Tier 2, thematically pairs with today's Deep Agents v0.7 enrichment on thinner-framework / context-engineering patterns. Late-breaking not-added: nothing else material — llm-stats/aireleasetracker checks show Meta Muse Spark 1.2 (Aug 5) already in prior snapshots, no Aug 7 evening or Aug 8 morning releases from Anthropic/OpenAI/DeepMind/Chinese labs beyond what prior runs covered. Final tier_counts {1:1, 2:3, 3:0}; item_count 4."
+    },
+    {
       "run_id": "2026-08-07T17:22:00Z-digest",
       "phase": "digest",
       "status": "success",
