@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-09T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-09T17:08:00Z",
+      "ended_at": "2026-08-09T17:20:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 12000,
+        "output_write": 6500
+      },
+      "fetches_made": 22,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-09-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Sunday August 9 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Read today's am file (2026-08-09-am.json, 4 items: Suno T3, Rippling T3, Claude Code v2.1.225-226 T2, DeepSeek price hike T2) — excluded all from pm per default promotion rule (no am item had materially deepened during the day to justify promotion). WebFetch remains unreliable in this environment per prior refresh-run notes; relied entirely on WebSearch discovery (22 queries covering: model releases, lab announcements, GitHub trending, developer tools, regulatory, Chinese labs, weekend cycle sweeps). Sunday afternoon is typically thin on Tier 1 breaking news — no fresh model releases from major labs since the refresh window closed at 11:33 UTC. Cross-checked candidate stories against the last 5 days of digests (Aug 5-8) to filter out already-covered material: excluded Discovery Loop / Jeff Dean (covered Aug 6-7), Meta Muse Spark 1.2 / Muse Code beta (covered Aug 6-7), Grok 4.6 launch (covered Aug 6-7), OpenAI GPT-5.6 Luna free unlimited (covered Aug 7-8), Anthropic Volta compute deal (covered Aug 6), Qwen 3.8-Max open weights (covered Aug 6), MiniMax H3 (covered Aug 3-4), OpenAI Astra math proofs (covered Aug 1-2), OpenAI Astra pause (covered Aug 8), Anthropic IPO $965B (June 2026, old), Karpathy joining Anthropic (May 2026, old), California SB 942 activation (covered Aug 2-3), EU AI Act GPAI enforcement start (covered multiple times through Aug 3), Inkling Thinking Machines (July 15, old), Mistral Leanstral/Robostral (July 15, old). Final selections: (1) Anthropic in-house silicon team confirmed Aug 5-6 with Clive Chan hire and 50% per-token cost target — the highest-signal Tier 1 story of the window, not covered in prior digests; (2) SGLang v0.5.16 with DSpark confidence-driven speculative decoding + Inkling support — fresh Tier 2 developer-infrastructure news; (3) Ollama August update with MLX MTP speculative decoding on Apple GPUs, Laguna Metal fix, OpenAI-compatible streaming — practical Tier 2 local-LLM update paired with the SGLang release; (4) California ~30 AI bills Aug 13 kill-or-survive suspense-file vote — fresh Tier 2 regulatory story building on the earlier SB 942 coverage but with new Aug 13 forward-looking anchor; (5) Google DeepMind + Schmidt Sciences + Cooperative AI Foundation + ARIA $10M multi-agent AI safety funding call with Aug 8 deadline — first coordinated cross-org funding push for multi-agent safety, Tier 2 signal for the emerging research subfield; (6) Tesla Optimus Gen 3 low-volume production ramp at converted Fremont Model S/X line — Tier 3 physical-AI milestone in the Musk-Q1-earnings summer 2026 window. Volume: 6 items (T1:1, T2:4, T3:1), consistent with average Sunday-afternoon digest volume (Aug 3-pm: 4, Jul 27-pm: 2, Jul 20-pm: 3). Fetch cap budget used: 22/50. Token budget used: ~55K/100K."
+    },
+    {
       "run_id": "2026-08-09T11:33:00Z-refresh",
       "phase": "refresh",
       "status": "success",
