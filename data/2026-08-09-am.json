@@ -2,12 +2,13 @@
   "snapshot_id": "2026-08-09-am",
   "snapshot_type": "am",
   "calendar_date": "2026-08-09",
-  "generated_at": "2026-08-09T06:15:00Z",
-  "generated_at_local": "2026-08-09T02:15:00-04:00",
+  "generated_at": "2026-08-09T11:33:00Z",
+  "generated_at_local": "2026-08-09T07:33:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-08-09T06:15:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-08-09T06:15:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-08-09T11:33:00Z", "duration_ms": 600000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 2 },
+  "tier_counts": { "1": 0, "2": 2, "3": 2 },
   "items": [
     {
       "id": "suno-ai-music-principles-watermarking-download-limits-august-6-2026",
@@ -105,6 +106,33 @@
         { "source": "Havoptic — Claude Code v2.1.226 (Aug 8, 2026) — Every Release, Summarized", "url": "https://www.havoptic.com/tools/claude-code", "take": "Substantive third-party changelog aggregation — useful cross-check on which changes landed in which sub-version and independent summary of the auth-stability cluster." },
         { "source": "Gradually.ai — Claude Code Changelog (August 2026)", "url": "https://www.gradually.ai/en/changelogs/claude-code/", "take": "Substantive third-party changelog with the specific per-release summary breakdown — useful for readers who want to see how the auth-stability work accumulated across the last several weekly releases rather than just this one." },
         { "source": "Releasebot — Claude Code Updates by Anthropic (August 2026)", "url": "https://releasebot.io/updates/anthropic/claude-code", "take": "Substantive third-party release-tracking source — surfaces the separate Aug 7 auto-mode-as-default change and the companion 'Running auto mode in production' post alongside the v2.1.225/v2.1.226 point releases." }
+      ]
+    },
+    {
+      "id": "deepseek-api-price-hike-warning-significant-increase-august-6-2026",
+      "tier": 2,
+      "title": "DeepSeek warns developers of 'significant' API price increase — V4-Flash hit 8 trillion tokens on Aug 1, second pricing change in under a month after mid-July peak/off-peak restructure, no rate or effective date disclosed",
+      "summary": "DeepSeek published a developer notice on August 6 warning that API prices across its model lineup will increase 'significantly,' giving no specific new rate schedule or effective date (Bloomberg Aug 6, The Next Web Aug 6, SCMP Aug 7, TechNode Aug 6, Dataconomy Aug 6, AI Weekly, explainx.ai, AI Pricing Guru). The announcement is the second pricing change in under a month: in mid-July DeepSeek introduced peak/off-peak differential pricing — a significant structural shift from flat per-token rates — and the August 6 notice makes clear a further upward adjustment is coming. The specific context driving the increase: DeepSeek's V4-Flash model processed 8 trillion tokens on August 1 alone (5 trillion free tokens + 3 trillion paid tokens), a figure the company cited to explain the cost pressure on its infrastructure. Current published rates for V4-Flash stand at $0.14/M input tokens and $0.28/M output tokens; V4-Pro is priced at $0.435/M input and $0.870/M output. DeepSeek has not disclosed what the post-hike rates will be or when they take effect, stating only that they will be 'significant.' Multiple analysts and the company itself have noted that even a substantial increase would likely keep DeepSeek below US-provider comparable-capability pricing — OpenAI's GPT-4o-mini is roughly $0.15/M input and $0.60/M output at comparable capability tier — though the gap will narrow. The company is based in Hangzhou, China; the warning follows a period of explosive adoption since the V4-Flash open-weights release on August 1.",
+      "link": "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-warns-of-significant-api-price-increase",
+      "why_it_matters": "For Gabe: if you've integrated DeepSeek's API into any Python project — or are considering it because of the low prices — this is the item to act on before the hike lands. The specifics that matter: V4-Flash processed 8 trillion tokens in a single day on August 1 (5T free + 3T paid), which is the cost signal that triggered this notice. The company hasn't said what 'significant' means in dollar terms or when it kicks in, but the mid-July peak/off-peak change was the first step, and this is the second step. Current V4-Flash rates ($0.14/M input, $0.28/M output) are roughly 10× cheaper than OpenAI's comparable-tier offering, so even a 3-5× increase keeps it meaningfully cheaper than alternatives — but the window where you can build something on DeepSeek's pricing floor and not worry about renegotiating that assumption is closing. The practical thing to do if you're already using DeepSeek's API is to check whether your code has any hardcoded cost assumptions or rate estimates, and make sure you're watching the DeepSeek developer docs for the actual new rate schedule when it drops. For the broader AI developer economy, the story is about what happens when a Chinese lab's low-price API gets adopted at massive scale (8T tokens/day from a model released one week earlier): the free tier becomes unsustainable first, then the paid tier has to follow. DeepSeek's cost discipline has been the story of the last year — the question this warning opens is how much the cost advantage persists as the infrastructure scales.",
+      "why_it_matters_brief": "DeepSeek warns developers of a 'significant' API price increase — no rate or date yet, but V4-Flash hit 8 trillion tokens on Aug 1 alone and this is the second pricing-structure change in under a month.",
+      "source": { "name": "Bloomberg — DeepSeek warns of significant API price increase", "type": "scrape", "url": "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-warns-of-significant-api-price-increase" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-08-09T11:33:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-09T11:33:00Z", "by": "refresh", "change": "created — DeepSeek Aug 6 developer notice warning of 'significant' API price increase; no rate or effective date disclosed; context: V4-Flash processed 8 trillion tokens Aug 1 (5T free + 3T paid), second pricing change in <1 month after mid-July peak/off-peak rate restructure; story not present in Aug 6-pm, Aug 7-pm, Aug 8-pm, or Aug 9-am files" }
+      ],
+      "takes": [
+        { "source": "Bloomberg — DeepSeek warns of significant API price increase", "url": "https://www.bloomberg.com/news/articles/2026-08-06/deepseek-warns-of-significant-api-price-increase", "take": "Canonical primary source — first to report the Aug 6 developer notice with the specific 'significant' wording and the 8-trillion-token context." },
+        { "source": "The Next Web — DeepSeek warns developers: API prices are going up, significantly", "url": "https://thenextweb.com/news/deepseek-api-price-hike-warning-developers-significant", "take": "Substantive general-tech source Aug 6 — the specific developer-audience framing and comparison against US-provider alternatives post-hike." },
+        { "source": "SCMP — DeepSeek API price hike coming, startup warns developers of significant increase", "url": "https://www.scmp.com/tech/article/3285401/deepseek-api-price-hike-coming-startup-warns-developers-significant-increase", "take": "Substantive primary regional source — company context, Hangzhou filing, infrastructure cost explanation from SCMP's China-tech coverage." },
+        { "source": "TechNode — DeepSeek warns API price hike coming after explosive V4-Flash adoption", "url": "https://technode.com/2026/08/06/deepseek-warns-api-price-hike/", "take": "Substantive China-tech-specialist source — the specific V4-Flash 8-trillion-token-per-day figure and the second-pricing-change-in-a-month context." },
+        { "source": "Dataconomy — DeepSeek API prices will rise 'significantly' — here's what we know", "url": "https://dataconomy.com/2026/08/06/deepseek-api-price-hike-significant-increase/", "take": "Substantive analysis source — current rate schedule ($0.14/0.28 V4-Flash, $0.435/0.87 V4-Pro) and comparison against OpenAI GPT-4o-mini pricing to gauge post-hike competitive position." }
       ]
     }
   ],
