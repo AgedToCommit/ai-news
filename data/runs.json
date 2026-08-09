@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-09T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-09T06:00:00Z",
+      "ended_at": "2026-08-09T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 17000,
+        "curation": 4500,
+        "output_write": 2500
+      },
+      "fetches_made": 10,
+      "items_input": 4,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 1,
+      "snapshot_written": "2026-08-09-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Sunday August 9 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Read yesterday's pm file (2026-08-08-pm.json, 4 items) as primary input. WebFetch remains unreliable in this environment; used WebSearch discovery (10 queries) for enrichment context and late-breaking sweep. Per-item enrichment decisions: (1) Suno operating principles + watermarking (T3) — KEPT + ENRICHED with substantive new context: the July 31 Munich Regional Court GEMA ruling as the specific legal trigger (six works reproducibly in v3.5/v4, Suno held liable not users, EU jurisdiction over U.S. training asserted), the separate Musixmatch Sentinel lyrics-copyright licensing deal, the still-open SynthID-vs-proprietary watermarking question; added Engadget Aug 8, DJ Mag/Decoder/Forbes on GEMA ruling, Eyesift on Musixmatch, Analytics Insight Aug 8 analysis to sources. (2) Rippling AI Spend Console (T3) — KEPT + ENRICHED with substantive new context: the specific five-metric AI Scorecard structure (Adoption, Usage, Productivity, Cycle time, Efficiency), the rework-rate-next-to-AI-spend design choice (Pebblous analysis), the Gartner-cited 40%-of-enterprise-AI-subscriptions-underutilized industry framing (AI CERTs); added TechCrunch Aug 7, Pebblous, AI CERTs to sources. (3) Claude Code v2.1.225-226 (T2) — KEPT + ENRICHED with substantive new context: the separate Aug 7 change of auto mode becoming DEFAULT for Pro/Max/Team plans (previously opt-in) and the companion Anthropic 'Running auto mode in production' post, which is arguably the more consequential change for existing Claude Code users this week and pairs with the v2.1.225 auto-mode consecutive-block bug fix as related shipping-window items; added Releasebot to sources; retitled to lead with the auto-mode-default change. (4) GitHub Copilot Aug 3 weekly (T2) — DROPPED: no substantive new context found in overnight sweep, item is already a week+ old at core, thematic pairing with the enriched Claude Code auto-mode item does not add enough on its own. Late-breaking pass: Sunday overnight was thin. Considered Qwen 3.8-Max open weights promised for week of Aug 10 (announced earlier, no actual release yet), OpenAI/HF sandbox-escape (already in Aug 8 am file per digest notes), Anthropic Millennium risk-analyst partnership Aug 6 (already covered in prior digests), Meta Muse Spark 1.2 Aug 5 (already in Aug 8 am file). No new item met the Tier-1-in-last-12-hours bar for the late-breaking cap; added 0 late-breaking items. Final morning file has 3 items (2 T3, 1 T2). Sweep window: since digest ended_at 2026-08-08T17:24:00Z (~12-13 hours)."
+    },
+    {
       "run_id": "2026-08-08T17:24:00Z-digest",
       "phase": "digest",
       "status": "success",
