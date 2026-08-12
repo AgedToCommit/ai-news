@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-12T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-12T17:00:00Z",
+      "ended_at": "2026-08-12T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 8000,
+        "output_write": 6500
+      },
+      "fetches_made": 12,
+      "items_input": 3,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Wednesday August 12 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-12-am.json) exists with 8 items (T1:3 Anthropic watermark + Theseus JV + Muse Glimmer; T2:4 OpenAI Daybreak + Arc phages + data-center backlash + Qwen3.8-Max; T3:1 TSMC); promotion rule applied — no T1 items materially deepened since the 11:15 UTC refresh, so nothing promoted. WebFetch blocked per prior-run pattern; relied entirely on WebSearch (12 queries covering: Qwen3.8-Max Hugging Face open weights afternoon reactions, AI news Aug 12 afternoon, Muse Glimmer LMArena, AI model release Aug 12 open source, Simon Willison Anthropic watermark, arxiv Aug 11-12, Anthropic-OpenAI announcements, Made by Google Pixel 11 event, Cursor/Windsurf/Claude Code, MCP server release, Gemini Automation OpenTable/Ticketmaster/Zocdoc, Qwen3.8-Max GGUF/quantization). Digest is small (1 T3 item) because am file already covered the major Aug 10-12 stories and the fresh window (11:15 UTC → 17:00 UTC, ~6 hours) yielded only one genuinely new digest-worthy story: Made by Google '26 event with Pixel 11 launch. New item: (T3) Google Made by Google '26 event / Pixel 11 lineup with substantive Gemini AI features — Gemini Automation multi-step natural-language app navigation, Rambler upgraded speech-to-text, Magic Capture photo AI, Gemini calling businesses on user's behalf, sign-language-to-text accessibility, Gemini-generated custom watchfaces on Pixel Watch 5, connected-app integrations wave (OpenTable, Ticketmaster, Zocdoc — Zocdoc announced same day as 'first-of-its-kind' agentic healthcare booking across 200,000+ providers), Pixel 11 Pro $1,099 (+$100 hike), Rick Osterloh CNBC quote 'Pixel and iPhone are going in very different directions.' Excluded by promotion rule: all 8 am items — Qwen3.8-Max hands-on/LMArena details would materially deepen but strict rule limits promotion to T1 only. Wall time ~20min per historical pattern."
+    },
+    {
       "run_id": "2026-08-12T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
