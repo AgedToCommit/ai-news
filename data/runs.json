@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-15T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-15T17:00:00Z",
+      "ended_at": "2026-08-15T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 6500,
+        "discovery_search": 22000,
+        "curation": 9000,
+        "output_write": 5000
+      },
+      "fetches_made": 15,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-15-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Saturday August 15 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-15-am.json) exists with 6 items (3 T1 GLM-5.3, Apple-Alibaba China, OpenAI Ultrafast; 2 T2 Qwen3.8-27B open weights, Google HEIR FHE compiler; 1 T3 Uber-Pony.ai Europe) — all fully enriched overnight and refreshed at 11am, no promotion candidates (no materially new afternoon context on any). Last successful run ended_at: 2026-08-15T11:25:00Z (refresh). 12 WebSearch queries + 5 WebFetch attempts (most egress-blocked). Discovery pass surfaced 4 new T1/T2 items outside the promotion window: (1) T1 OpenAI ads-in-ChatGPT Free/Go for EEA + Switzerland — Aug 15 Saturday email notification, ads start 'later this month', contextual only (current conversation + general location + device type), no personalized targeting without explicit opt-in per June 2 EU privacy-policy update, Plus/Pro/Business/Enterprise/Education stay ad-free, extends existing rollout in US/UK/Mexico/Brazil/Japan/South Korea; (2) T1 DeepSeek raises V4-Pro/V4-Flash API prices up to 1,100% starting 16:00 UTC Aug 16 (tomorrow) — first-ever peak/off-peak billing (peak 01:00-04:00 and 06:00-10:00 UTC, off-peak half), V4-Pro output $0.87 flat → $3.96 peak / $1.98 off-peak per 1M, still 12.6× cheaper than Fable 5 at peak; (3) T1 Anthropic makes Sonnet 5 intro pricing ($2/$10 per 1M) permanent — Aug 11 edit to original anthropic.com/news/claude-sonnet-5 page cancelling scheduled Sept 1 step-up to $3/$15; (4) T2 Claude Code 2.1.233 (Aug 14) adds GitLab merge-request URL support to --worktree and `claude agents` view (MRs display as !N), deprecates TaskCreate/Get/Update/List and TodoWrite on Opus 4.8/Sonnet 5/Fable 5/Mythos 5 by default (opt-in via CLAUDE_CODE_ENABLE_TODO_TOOLS=1), plus Windows NTLM credential-leak fix for \\??\\ device-prefix paths, Linux memory cgroup opt-in, forward_user_identity gateway header. All items are net-new (not in am file, not in yesterday's pm). Egress-blocked domains this run: ppc.land, openai.com, simonwillison.net, engadget.com, finance.yahoo.com, cryptobriefing.com, tuta.com, explainx.ai, qz.com, androidheadlines.com, help.openai.com, techjournal.org, openrouter.ai — facts gathered from WebSearch summaries; code.claude.com fetch succeeded and grounded the Claude Code 2.1.233 item. No third-party benchmark surfaces or major Aug-15 model releases from Anthropic/OpenAI/Meta/Google beyond what's already covered in the am file or the four new items."
+    },
+    {
       "run_id": "2026-08-15T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
