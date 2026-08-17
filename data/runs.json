@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-17T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-17T06:00:00Z",
+      "ended_at": "2026-08-17T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 12000,
+        "output_write": 8000
+      },
+      "fetches_made": 7,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-17-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Monday August 17 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-16-pm.json) had 4 items (3 T1 + 1 T2) — all 4 survived enrichment with substantive new context. Last successful run ended_at: 2026-08-16T17:20:00Z (digest). 6 WebSearch queries + 0 WebFetch attempts (searches provided enough substantive context; no primary-source fetches needed this run). Substantive enrichment findings: (1) Anthropic $2T IPO — added specific parallel-IPO-process timeline: Anthropic filed confidential draft S-1 June 1, OpenAI filed its own confidential S-1 exactly one week later on June 8 (per CNBC/Fortune/TechCrunch/CBS News), SpaceX already on investor roadshow; three largest tech IPOs ever queued in same window; added OpenAI last valued $852B post-money after March 2026 $122B raise, CFO publicly flagged sustainability concerns at $85B/year 2028 burn projection. (2) Nvidia $500B financing MOU — added Huang CNBC framing that Nvidia GPUs are now an 'investable asset' (per CNBC Aug 10 primary source), signaling GPU-secured project-finance instruments being marketed to institutional LPs as own asset class; added BlackRock chairman/CEO Larry Fink confirmation on Aug 10 that 'some funds have already been raised' and BlackRock will be 'raising quite a bit more' — capital mobilization is actively underway not aspirational. (3) Anthropic-Riot Rockdale $9.1B lease — added the specific Starboard Value activist-investor context: Starboard's Feb 2026 letter to Riot's board estimated $9B-$21B in equity value if Riot monetized its ~1.7 GW power capacity as AI/HPC leases; Anthropic lease closes activist loop in ~180 days (per TechTimes Aug 12) landing at low end of estimated range; added Riot has already disclosed a nonbinding LOI for a second potentially larger AI-compute deal at its 1-GW Corsicana campus; added SEC 8-K primary-source (exhibit 99.1 dated Aug 10 by Riot); added AMD + Anthropic combined Rockdale total: 241 MW and ~$9.8B in six months. (4) IJCAI-ECAI 2026 — added the specific Toby Walsh 'The AI Race' public AI Lecture happening TODAY (Aug 17) at 16:30–18:00 CEST at the Bremen Parliament, fully booked and free-open-to-public; previews his forthcoming book 'God AI: Boom or Doom? What to Expect When Machines Outsmart Us' (La Trobe University Press, Australia Sept 1 release); added ~2,500 on-site attendance figure from local buten un binnen coverage. Item promoted from slot 4 to slot 1 because Walsh lecture happens today and is the most time-sensitive item. Late-breaking pass (3 WebSearch queries covering overnight Asia/Europe cycle and Aug 16-17 major-lab announcements): 0 fresh Tier-1 items surfaced — weekend + Sunday-into-Monday timing meant no major Anthropic/OpenAI/Meta/Google/DeepMind/Mistral/xAI/Cohere/Alibaba/Moonshot/Zhipu model releases; DeepSeek V4-Pro pricing (effective Aug 16 16:00 UTC) already covered in Aug 15 pm and Aug 16 am; Meta Muse Spark 1.2, ByteDance Seed 2.1 Turbo, xAI Grok Imagine Image 2.0 all predate sweep window. Final snapshot: 3 T1 + 1 T2, all enriched_overnight=true, last_revision_by='enrichment', all why_it_matters_brief updated. Ordering: IJCAI-ECAI first (Walsh lecture today), then Anthropic IPO, Nvidia financing, Anthropic-Riot Rockdale — the three infrastructure/finance items grouped together after the day-of item. Wall time and token counts approximate. No egress-blocked domains this run."
+    },
+    {
       "run_id": "2026-08-16T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
