@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-17T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-17T11:00:00Z",
+      "ended_at": "2026-08-17T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 8000,
+        "output_write": 3000
+      },
+      "fetches_made": 15,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-17-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Monday August 17 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file (2026-08-17-am.json) exists with 4 items (3 T1 + 1 T2, all enriched_overnight=true) — standard refresh path. Last successful run ended_at: 2026-08-17T06:30:00Z (enrichment). Sweep window: 06:30 UTC to 11:00 UTC Aug 17 (last ~4.5 hours). Egress blocking: nearly all WebFetch domains blocked (simonwillison.net, huggingface.co, interconnects.ai, langchain.dev, fortune.com, etc.) — switched entirely to WebSearch for all source discovery. 15 WebSearch queries, 0 WebFetch successes. Two new items surfaced from overnight Asia/Europe cycle: (1) T1 Zhipu/Z.ai GLM-5.3 (Aug 14 release, fresh TechNode + ChinaTechNews coverage Aug 17) — 743B params, 50% coding gain via post-training alone, 66.9% DeepSWE, 84.5% CyberGym, open weights ~Aug 28 pending security review; (2) T2 Stripe acquires OpenRouter $7B+ (Bloomberg Aug 16, multiple Aug 17 follow-ups) — 5.4x step-up from $1.3B May 2026 Series B, 8M users, 400+ models, turns neutral AI model router into Stripe payments-infrastructure product. Google Imagen 4 shutdown (today), Grok 4.6 (Aug 12), and Cerebras/Ultrafast (Aug 13-14) excluded as predating digest window or not genuinely overnight. hero_image null for both new items (no WebFetch available to verify og:image URLs). Final snapshot: 4 T1 + 2 T2, 6 items total."
+    },
+    {
       "run_id": "2026-08-17T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
