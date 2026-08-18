@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-18T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-18T17:00:00Z",
+      "ended_at": "2026-08-18T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 40000,
+        "curation": 18000,
+        "output_write": 8000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-18-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Tuesday August 18 2026. Standard path — today's am file (2026-08-18-am.json) exists with 4 items (Nvidia $105B/OpenAI Ohio T1, Unitree Superman T2, Higgsfield T2, Microsoft unified Copilot app T3), all excluded from pm per promotion rule. Since-filter: 2026-08-18T11:30:00Z (last successful run — refresh ended_at). RSS/scrape sweep: all direct WebFetch attempts continue egress-blocked (consistent with prior runs), fell back to WebSearch exclusively for candidate discovery. Discovery pass (~10 WebSearch queries): surfaced (1) Anthropic's Aug 14 second company-wide Risk Report — raised catastrophic-misalignment rating 'very low' to 'low' on uncertainty (not failed test), disclosed unreleased Model 2 more capable than Mythos 5 shelved from external release, admitted internal most-dangerous-capability threshold benchmark has saturated at moment of capability acceleration — NOT covered in any prior snapshot despite being 4 days old, curated as T1; (2) Wiz Red Agent autonomous AI security bot Aug 17 disclosure of find+exploit+validate+blast-radius-map against Snowflake snowflake-connector-net GitHub Actions command-injection bug, with GitHub-vs-Wiz Copilot Autofix attribution dispute — T2; (3) Google + NATS + UK DfT Aug 18 launch of Operation Blue Skies 30-month £5M+ AI-forecast contrail-avoidance trial across Shanwick Oceanic North Atlantic airspace — T2; (4) OpenAI ChatGPT for Teens global rollout Aug 18 with behavioral age-prediction auto-routing and parent notification on self-harm risk signals — T3; (5) Reddit 'Play' mode limited test Aug 17 web / Aug 18 iOS+Android converting text posts to AI-narrated in-app videos with synced on-screen text, motivated by third-party Reddit-story TikTok/YouTube ecosystem recapture — T3. Candidates ruled out as duplicates of prior-snapshot coverage: Stripe/OpenRouter $7B (already in 2026-08-17-pm), Gemini 3.7 Flash (already in 2026-08-13-pm), Claude Code 2.1.233 (already in 2026-08-15-am/pm). Etched $20B talks (WSJ speculation, not closed) ruled out as insufficiently specific for T2 inclusion. Egress-blocked domains: all direct fetches blocked; WebSearch compensated. items_added=5 (all newly created), items_kept=items_dropped=0 (digest phase per spec)."
+    },
+    {
       "run_id": "2026-08-18T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
