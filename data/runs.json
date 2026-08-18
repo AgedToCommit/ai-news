@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-18T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-18T11:00:00Z",
+      "ended_at": "2026-08-18T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 10000,
+        "output_write": 4500
+      },
+      "fetches_made": 20,
+      "items_input": 1,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-18-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Tuesday August 18 2026. Standard path (2026-08-18-am.json exists from enrichment run ended_at 2026-08-18T06:10:00Z). Since-filter: 2026-08-18T06:10:00Z. RSS/scrape sweep: all direct WebFetch attempts egress-blocked; fell back to WebSearch exclusively (consistent with prior runs). Discovery pass (5 queries): surfaced Microsoft unified Copilot app rollout going live today Aug 18 — merging consumer Microsoft Copilot and enterprise Microsoft 365 Copilot into single app with new icon and URL copilot.cloud.microsoft; web+mobile worldwide now, Windows/Mac desktop early preview today, broad rollout mid-September; work (Entra ID) and personal (Microsoft Account) accounts separated by design; announced Aug 14, go-live Aug 18. Curated as Tier 3 item (major product launch). Also surfaced fresh Aug 18 grey-market pricing data for Unitree Superman debut (CNN Business + Caixin Global reporting 3-4x grey-market premium vs IPO price ahead of Wednesday STAR-Market open) — applied as revision to existing Unitree T2 item. Candidates ruled out as outside 5-hour window: Grok 4.6 (Aug 12), GPT-5.6 Sol (Aug 6), Ode/Anthropic (July 15), Rhoda AI (March 2026), Anthropic Q2 revenue $11.5B CNBC (Aug 15, already covered in prior snapshots). items_added=1 (Microsoft Copilot unified app, Tier 3). Unitree item revised with grey-market context + 2 new takes. Egress-blocked domains: all direct fetches blocked; WebSearch compensated."
+    },
+    {
       "run_id": "2026-08-18T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
