@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-18T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-18T06:00:00Z",
+      "ended_at": "2026-08-18T06:10:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 500,
+        "discovery_search": 14000,
+        "curation": 6000,
+        "output_write": 5000
+      },
+      "fetches_made": 6,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-18-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Tuesday August 18 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's PM file 2026-08-17-pm.json read successfully with 3 items (1 T1 + 2 T2): Nvidia $105B/OpenAI Ohio PORTS-Pike, Unitree Superman + Shanghai IPO, Higgsfield $400M Series B. Sub-task 1 prune+enrich: 5 WebSearch queries surfaced meaningful new context on all 3 items — all KEPT with enrichment, zero dropped. (1) Nvidia deal: SEC 8-K filing disclosed the site could ultimately house ~1.5M Nvidia GPUs corresponding to ~$150B–$200B in Nvidia revenue per chip generation deployed through 2030 (per Yahoo Finance / Washington Examiner Aug 17–18 8-K coverage) — added to summary/why_it_matters, reframed the $105B guarantee as bounded against captive downstream sell-through, added Yahoo Finance + Washington Examiner + SEC 8-K takes. (2) Unitree: overnight secondary reporting (Cryptopolitan, Gizmodo, Yahoo Finance follow-ups, Humanoids Daily) explicit that Superman 12.66 m/s and 2m-jump numbers are self-reported by Unitree and NOT independently verified by any outside party; reporters explicit reveal appears IPO-timed for buzz. Added the caveat to summary/why_it_matters, updated title to reflect trading opens TOMORROW Wed Aug 19, added Gizmodo/Cryptopolitan/Humanoids Daily/Quartz takes. (3) Higgsfield: overnight coverage surfaced specific enterprise-penetration figure — Higgsfield powers visual production for 390 of the Fortune 500 (per PRNewswire release + TechCrunch Aug 17), plus specified the 4× valuation-step-up happened in just 8 months from Series A (per TechCrunch), plus named additional existing-investor participants (Accel, Menlo Ventures, AI Capital Partners, GFT Ventures, Capra Ventures, BAM Corner Point, BroadLight Capital). Reframed why_it_matters around entrenched-supplier-moat vs high-growth-story read, added TechCrunch/BNN Bloomberg/Quartz takes. Sub-task 2 late-breaking pass: 2 additional discovery WebSearches (AI model releases Aug 17–18, Meta/xAI/Mistral/DeepSeek/Alibaba mid-Aug) — nothing materially fresh in last 12 hours. Most recent Tier-1 model releases are Qwen3.8-27B (Aug 14) and Gemini 3.7 Flash (Aug 13), both already in earlier snapshots; Google Imagen 4 shutdown Aug 17 is a product-deprecation notice not a fresh release; no lab announcements landed overnight. items_added=0 accordingly (within the 'at most 2' cap and nothing genuinely T1-late-breaking to add). Egress-blocked domains this run: www.sec.gov (SEC 8-K primary source — WebSearch coverage compensated), techcrunch.com (TechCrunch Higgsfield story — WebSearch coverage compensated)."
+    },
+    {
       "run_id": "2026-08-17T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
