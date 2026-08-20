@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-20T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-20T06:00:00Z",
+      "ended_at": "2026-08-20T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 12000,
+        "output_write": 7500
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-20-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Thursday August 20 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's PM file 2026-08-19-pm.json read successfully with 4 items (1 T1 + 3 T2): OpenAI Astra Critical / Preparedness Framework halt; Unitree Shanghai STAR Market IPO debut; Nvidia H200 to China (ByteDance + Tencent); Samsung foundry 4nm/5nm 15% price hike. Sub-task 1 prune+enrich: 6 WebSearch queries surfaced meaningful new context on ALL 4 items — all KEPT with enrichment, zero dropped. (1) OpenAI Astra: three substantive additions — OpenAI is rewriting the Preparedness Framework document itself (not just applying it to Astra); monitoring overhead quantified at ~20% of inference compute for the monitored surface (all RL training + evals involving tools for GPT-5.6 Sol-class + higher, plus all Astra inference); chief scientist Jakob Pachocki quoted in Axios naming sector-wide-urgency framing for the first time. Added Free Press Journal, ExplainX, TUN, ai.wain.blog takes. (2) Unitree IPO: reconciled Day-1 close figures — 460% close at ~845 yuan (Quartz + Bloomberg) is the correct closing print, previous 500%/542% figures aligned; added Forbes John Koetsier Agility-Robotics-'look super cheap' comparative-valuation take that names Unitree's Shanghai close as the specific price-anchor for Western humanoid-robotics fundraising conversations. Added Bloomberg take separately. Day-2 close not yet available in English press. (3) H200 to China: three substantive corrections/additions — cap corrected to 75,000 per approved customer (not 100,000) under the January 2026 US licensing framework; only ~13% of legal ceiling has actually shipped; Nvidia had halted China-bound H200 output in March 2026 and redirected TSMC capacity to next-gen Vera Rubin; shipments only resumed in August 2026 — so story is 'five-month pause then resumption,' not 'steady flow.' Also surfaced practical friction: ByteDance + Tencent do not currently operate data centers in Hong Kong, so Beijing's ship-to-Hong-Kong guidance has unclear enforcement path. Added Engadget, TECHi, Digital Trends, Seeking Alpha, The Deep Dive, TrendForce, DigiTimes, SemiWiki takes. (4) Samsung foundry: three substantive additions — 8nm SF8 is also affected in addition to 4nm SF4 and 5nm SF5 (broader affected customer set); Samsung Electronics stock jumped ~9% in Seoul trading on Aug 20 as price-hike news reached investors (first big single-day equity-market reappraisal of the foundry-unit turnaround thesis); named-analyst voice added — BNK Investment & Securities' Lee Min-hee ties Samsung's price hike to TSMC-capacity dynamic and forecasts continued price hikes could push Samsung foundry to profitability as early as 2027. Added Invezz, TECHi, TheNextWeb, BigGo Finance takes. Sub-task 2 late-breaking pass: 3 discovery WebSearches (AI model releases Aug 19-20, OpenAI IPO Sarah Friar, Nvidia Mercor investment) — surfaced 2 substantive Aug 19 late-breaking items within the 'at most 2' cap: (A) OpenAI CFO Sarah Friar all-hands Aug 19 announcement — company 'will be a public company in 2027,' or sooner if 'our business continues to inflect'; first public year-stamp on the IPO timeline after June 2026 confidential S-1; growth metrics: revenue run rate +35% QTD, enterprise +50% QTD, AI coding + work product 20M WAU; CNBC, StockTwits, TechBuzz, Yahoo Finance, Briefs.co coverage. Curated as T2 US business-news story with added_by=enrichment. (B) Nvidia in talks to invest in Mercor at $20B valuation (Aug 19 The Information reporting) — General Catalyst leading round, doubles $10B Oct 2025 Series C mark in 9 months; Nvidia already paying Mercor millions for specialized human-expert data for Nemotron models; Mercor ~$2B ARR with 100%+ YoY growth; MarketScreener, PYMNTS, StockTwits, Gurufocus, Crypto Briefing, TradingView, Shopifreaks coverage. Curated as T2 US tools/data-infra story with added_by=enrichment. No model releases from Anthropic/OpenAI/Google/Meta/Mistral surfaced overnight for late-breaking pass — Grok 4.6 on Bedrock, Gemini 3.7 Flash (Aug 13), GLM-5.3 (Aug 14), Qwen3.8-27B (Aug 14), Meta Muse Spark 1.2 (Aug 6) all outside 12h window or already surfaced in prior snapshots. Egress-blocked domains this run: none direct WebFetch attempts made — all research via WebSearch given prior-run pattern of consistent egress blocks."
+    },
+    {
       "run_id": "2026-08-19T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
