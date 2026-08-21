@@ -2,12 +2,13 @@
   "snapshot_id": "2026-08-21-am",
   "snapshot_type": "am",
   "calendar_date": "2026-08-21",
-  "generated_at": "2026-08-21T06:15:00Z",
-  "generated_at_local": "2026-08-21T02:15:00-04:00",
+  "generated_at": "2026-08-21T11:05:00Z",
+  "generated_at_local": "2026-08-21T07:05:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-08-21T06:00:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-08-21T06:00:00Z", "duration_ms": 900000 },
+    { "phase": "refresh",    "ran_at": "2026-08-21T11:00:00Z", "duration_ms": 480000 }
   ],
-  "tier_counts": { "1": 1, "2": 1, "3": 3 },
+  "tier_counts": { "1": 1, "2": 2, "3": 5 },
   "items": [
     {
       "id": "gpt6-fable51-unconfirmed-official-channels-august-20-2026",
@@ -62,6 +63,33 @@
         { "source": "The Register — OpenAI chases Anthropic's biz customers with zero data retention pledge", "url": "https://www.theregister.com/ai-and-ml/2026/08/20/openai-chases-anthropics-biz-customers-with-zero-data-retention-pledge/5290609", "take": "Same-day competitive framing — OpenAI publicly positioning ZDR against Anthropic's still-mandatory 30-day window." },
         { "source": "PYMNTS — Anthropic Plans to Tweak Data Retention Rules After Enterprise Concerns", "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-plans-to-tweak-data-retention-rules-after-enterprise-concerns/", "take": "Enterprise-pushback framing — the June centralized-retention policy was the specific objection driving the tweak." },
         { "source": "MarketScreener — Anthropic plans to change enterprise data retention policy, source says", "url": "https://www.marketscreener.com/news/anthropic-plans-to-change-enterprise-data-retention-policy-source-says-ce7859d3df8af625", "take": "Confirms the 'months-in-the-works' coordination timeline and the enterprise-cloud-hosting shift." }
+      ]
+    },
+    {
+      "id": "copilot-autofix-snowflake-wiz-red-agent-shell-injection-august-2026",
+      "tier": 2,
+      "title": "Wiz's AI red team agent found a GitHub Actions shell injection vulnerability in Snowflake's repository — in code that GitHub Copilot Autofix co-authored and passed during code review; responsible disclosure June 23, fixed same day; GitHub disputes whether Copilot introduced the bug or merely missed it; the story is as much about what Wiz's autonomous agent can do as it is about Copilot's limits (Wiz Blog, The Hacker News, Forbes, SC Media, CyberNews)",
+      "summary": "Wiz published an August 2026 writeup describing how its AI red team agent autonomously identified a GitHub Actions script injection vulnerability in the snowflakedb/snowflake-connector-net repository — one that allowed an unauthenticated attacker to execute arbitrary commands on a GitHub Actions runner simply by crafting a malicious GitHub issue title, because the workflow interpolated issues.event_name directly into a run: block without sanitization. The vulnerability appeared in a June 18, 2026 pull request (PR #1218), which was co-authored by GitHub Copilot Autofix as part of an existing code scanning remediation effort; Wiz's red agent found the injection point and disclosed responsibly on June 23, with Snowflake remediating the same day and rotating the affected credential. Sensitive data from Snowflake's internal Jira was accessible during the five-day window, though Snowflake says audit logs confirm Wiz was the sole actor. GitHub pushed back: an internal review concluded that the specific unsafe interpolation was authored by a human Snowflake engineer in a separate commit dated August 2025, not by Copilot, and that Copilot's co-authored changes touched a different file. Wiz's response maintained that its claim was specifically that Copilot Autofix reviewed and approved the PR that contained the vulnerability without flagging it — a distinction between 'Copilot wrote the bug' and 'Copilot missed the bug during automated review.' The broader takeaway from the security community is that these are not mutually exclusive failure modes: AI-assisted code generation and AI-assisted code review are both in the toolchain now, and adversarial AI probing (Wiz Red Agent) found what both missed.",
+      "link": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "why_it_matters": "For Gabe: the real lesson here isn't 'Copilot is broken' — it's that AI tools in a code-review role are not the same as AI tools in an attack/audit role. The Wiz Red Agent was purpose-built to find exploitable paths; Copilot Autofix is optimized to suggest fixes and mark PRs as clean. These are different postures with different failure modes, and this incident shows what happens when the review posture meets an adversarial one. The concrete practical rule for a Python developer who uses GitHub Actions and AI coding assistants: grep your workflow files for run: and shell: steps that interpolate ${{ }} variables, and ask explicitly 'is any part of this value controlled by external user input?' — things like issue titles, PR branch names, and comment bodies are attacker-controlled and should never flow unquoted into a run: block. Copilot won't always catch this, and as this incident shows, it may pass a PR that has it. The second signal worth noting is Wiz's agent performance: it autonomously identified the vulnerability, prepared the disclosure, and handed it to the human for review — which is a practical preview of what automated red-teaming looks like. Both offensive (someone running this against your repo) and defensive (you running this against your own) implications are live now, not speculative.",
+      "why_it_matters_brief": "Wiz's AI red team agent found a GitHub Actions shell injection in Snowflake's repo that Copilot Autofix co-authored and missed — a clear demo of why 'AI approved this PR' is not a security clearance.",
+      "source": { "name": "Wiz Blog — Red Agent Exploits Snowflake Vuln Missed by Github Copilot", "type": "scrape", "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-21T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-21T11:00:00Z", "by": "refresh", "change": "created — Wiz AI red team agent found GitHub Actions shell injection in Snowflake repo in code co-authored by GitHub Copilot Autofix; responsible disclosure June 23, fixed same day; GitHub disputes whether Copilot introduced the vuln or missed it; story surfaces in Aug 21 overnight coverage" }
+      ],
+      "takes": [
+        { "source": "Wiz Blog — Red Agent Exploits Snowflake Vuln Missed by Github Copilot", "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug", "take": "Primary Wiz writeup — the step-by-step of how the red agent found the injection point, the disclosure timeline, and Wiz's specific claim that Copilot Autofix reviewed-and-passed the vulnerable PR." },
+        { "source": "Forbes — GitHub Copilot Missed A Vulnerability That Wiz's AI Agent Found", "url": "https://www.forbes.com/sites/timkeary/2026/08/17/github-copilot-missed-a-vulnerability-that-wizs-ai-agent-found/", "take": "Aug 17 public writeup — frames the story as 'Copilot missed what Wiz's agent found,' the most widely-cited framing of the incident." },
+        { "source": "The Next Web — GitHub disputes Wiz's claim that Copilot Autofix wrote a Snowflake flaw", "url": "https://thenextweb.com/news/snowflake-copilot-autofix-wiz-red-agent-github-dispute", "take": "GitHub's internal-review response: the specific unsafe interpolation was authored by a human engineer in a separate 2025 commit, not by Copilot." },
+        { "source": "The Hacker News — Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection", "url": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html", "take": "Technical breakdown of the ${{ issues.event_name }} interpolation pattern and why issues titles are attacker-controlled in GitHub Actions contexts." },
+        { "source": "SC Media — Wiz agent finds Snowflake repo flaw in code co-authored by GitHub Copilot Autofix", "url": "https://www.scworld.com/news/wiz-agent-finds-snowflake-repo-flaw-in-code-co-authored-by-github-copilot-autofix", "take": "Security community framing: co-authorship vs blame, and what the incident says about AI-in-toolchain review posture vs adversarial-AI probing." }
       ]
     },
     {
@@ -144,6 +172,58 @@
       "takes": [
         { "source": "Anthropic (Claude blog) — Anthropic's approach to teaching and learning AI", "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai", "take": "Primary source — the Claude Academy launch, the courses/tutorials/badges/personalized-recommendations format, and the 'teach how to use AI well, not how to use our product' framing." },
         { "source": "Anthropic Newsroom — Anthropic and Teach For All launch global AI training initiative for educators", "url": "https://www.anthropic.com/news/anthropic-teach-for-all", "take": "Companion partnership — Anthropic + Teach For All global network, positioned as the first step of 'scaling AI instruction to millions of learners worldwide.'" }
+      ]
+    },
+    {
+      "id": "google-marvell-12-billion-chip-deal-custom-ai-inference-august-2026",
+      "tier": 3,
+      "title": "Marvell gives Google an option to buy a $12.2B stake as part of a custom AI chip deal — the warrant ties 58.97M Marvell shares to Google's chip purchase milestones ($500M per tranche), covering AI inference accelerators, networking, storage, memory interface, and near-memory computing; implied contract value ~$120B in revenue through Marvell's fiscal 2033; Marvell stock jumped 11%, rival Broadcom fell 3% on the news (Bloomberg, CNBC, The Information)",
+      "summary": "Marvell Technology announced on August 19, 2026 that it has issued Alphabet's Google a warrant to purchase up to 58.97 million Marvell shares at $206.58 apiece — a stake worth approximately $12.18 billion if fully exercised (Bloomberg, CNBC, The Information). The warrant is structured as a milestone instrument: roughly 1.4 million shares vest in the first year, with the remainder coming in tranches tied to every $500 million worth of chips that Google buys from Marvell, implying a potential contract value of around $120 billion in revenue through Marvell's fiscal year 2033 if Google hits all purchase targets. The deal covers custom AI inference accelerators, storage controllers, networking components, memory interface chips, and near-memory computing technology for Google's data center and TPU roadmap. Marvell's stock jumped more than 11% on the news; larger rival Broadcom dropped over 3%, a read the market interpreted as a competitive shift in who gets Google's custom-silicon spending. The deal makes Google a prospective fifth-largest Marvell investor and deepens the strategy — shared across Google, Meta, Microsoft, Amazon, and Apple — of designing custom silicon for specific AI workloads rather than buying off-the-shelf Nvidia GPUs. For Marvell, the Google warrant adds to existing custom chip relationships with Amazon Web Services and Microsoft Azure; the company frames the deal as evidence that 'custom silicon is now the only way to win inference at hyperscale.'",
+      "link": "https://www.bloomberg.com/news/articles/2026-08-19/marvell-gives-google-right-to-buy-up-to-12-2-billion-in-shares",
+      "why_it_matters": "For Gabe: this is one of the clearest data points yet on how the frontier has moved past 'buy Nvidia' as the default AI infrastructure play. Google, Meta, Microsoft, Amazon, and Apple have all been building custom chips for specific workloads, and the Google/Marvell deal tells you what that looks like at contract scale — equity warrants tied to purchase milestones is how a hyperscaler buys long-term chip capacity without Nvidia's spot-market pricing and shortage uncertainty. The inference-accelerator piece is the part most relevant to developers: custom inference silicon that runs large models cheaper and faster than A100/H100 for production workloads is what makes 'run your own model at scale' economics viable, and the Google/Marvell roadmap is explicitly aimed at that tier. The Broadcom drop is worth noting too — it tells you the market read this as Google shifting spending away from its existing Broadcom relationship, which is what 'supplier diversification at hyperscale' actually looks like in practice. From a hobbyist coder's vantage point, the main takeaway is that inference costs for cloud-hosted models will keep falling as this custom-silicon wave matures — the unit economics of the API call you make in a Python script are downstream of decisions like this one.",
+      "why_it_matters_brief": "Marvell issues Google a $12.2B equity warrant tied to chip purchases, with $120B potential through 2033 — the clearest look yet at how hyperscalers are moving off Nvidia for custom AI inference silicon.",
+      "source": { "name": "Bloomberg — Marvell gives Google option to buy $12.2 billion stake in custom chip deal", "type": "scrape", "url": "https://www.bloomberg.com/news/articles/2026-08-19/marvell-gives-google-right-to-buy-up-to-12-2-billion-in-shares" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-21T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-21T11:00:00Z", "by": "refresh", "change": "created — Marvell gives Google $12.2B equity warrant tied to chip purchase milestones; $120B potential revenue through fiscal 2033; custom AI inference accelerators, networking, near-memory compute; Marvell +11%, Broadcom -3% on news; surfaces in Aug 21 overnight coverage" }
+      ],
+      "takes": [
+        { "source": "Bloomberg — Marvell gives Google option to buy $12.2 billion stake in custom chip deal", "url": "https://www.bloomberg.com/news/articles/2026-08-19/marvell-gives-google-right-to-buy-up-to-12-2-billion-in-shares", "take": "Primary Aug 19 report — the warrant structure, $206.58/share strike, $500M-per-tranche vesting, and the fifth-largest-investor framing." },
+        { "source": "CNBC — Marvell's stock pops 10% on AI chip deal that lets Google buy up to $12.2 billion in shares", "url": "https://www.cnbc.com/2026/08/19/marvell-google-ai-chips.html", "take": "Market reaction — Marvell +11%, Broadcom -3%, read as a competitive shift in Google's custom-silicon spending." },
+        { "source": "The Information — Marvell Gives Google the Right to Buy Up to $12.2 Billion in Stock as Part of Chip Deal", "url": "https://www.theinformation.com/briefings/marvell-gives-google-right-buy-12-2-billion-stock-part-chip-deal", "take": "Confirms the $120B implied contract value through Marvell's fiscal 2033 if Google hits all purchase targets." },
+        { "source": "The Next Web — Marvell hands Google a $12.2bn share option in a custom-chip deal", "url": "https://thenextweb.com/news/marvell-google-12-2bn-warrant-custom-chip-deal", "take": "The 'custom silicon is now the only way to win inference at hyperscale' Marvell framing and the AWS/Azure comparable relationships context." }
+      ]
+    },
+    {
+      "id": "openai-chatgpt-for-teens-safety-mode-parental-controls-august-2026",
+      "tier": 3,
+      "title": "OpenAI launches ChatGPT for Teens (13-17) with safety guardrails, parental controls, and Study Mode — activates automatically based on self-reported age or behavioral signals; blocks self-harm, violence, explicit content, and romantic roleplay; parents can link accounts, set Quiet Hours, and receive high-risk notifications; TechCrunch notes the launch comes 'years after teens started using' the unrestricted product (TechCrunch, The Hill, Business Standard, Euronews)",
+      "summary": "OpenAI announced ChatGPT for Teens on August 18-19, 2026 — a dedicated safety configuration for users aged 13 to 17 that activates automatically when a user self-identifies as a minor or when OpenAI's behavioral and account signals estimate the user is likely under 18. The mode limits or blocks conversations about self-harm, suicide, violence, eating disorders, and explicit content, and discourages emotional dependence and romantic roleplay. TechCrunch's framing is pointed: 'years after teens started using it' — ChatGPT has had significant teenage users since its November 2022 launch with relatively few age-specific guardrails in place until now. The launch includes a new Study Mode that provides guiding questions and step-by-step support rather than direct answers (designed to help teens engage with material rather than copy outputs), and parental controls that let parents link accounts, set Quiet Hours to turn ChatGPT off at specific times, adjust settings, and receive safety notifications in limited high-risk situations. Age verification blends self-reported age with behavioral signals and third-party verification mechanisms; when the system cannot make a determination it defaults to the safer configuration. The teen mode is rolling out globally, and the Study Mode design is notable as a deliberate product choice to limit capability for a specific user segment rather than optimize for the best possible response.",
+      "link": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+      "why_it_matters": "For Gabe: the interesting angle here isn't the safety feature itself — it's what it signals about AI products maturing into mainstream consumer platforms. OpenAI has ~500M weekly users; a meaningful fraction have been under 18 since the very beginning, using the same unrestricted product as everyone else. The four-year gap between launch and age-appropriate tiers is a reminder that consumer AI scaled to internet-grade adoption before product safety teams could build for the full user distribution. The Study Mode is the most interesting product decision in this launch: deliberately choosing to give guiding questions rather than direct answers for a specific segment is a product philosophy choice, not just a safety choice — 'what should this tool do for this user' rather than 'what's the best possible output.' That framing is directly applicable if you ever build a tool that needs to behave differently for different audiences. The broader read: AI consumer products are starting to look like other mature consumer software (parental controls, family accounts, age-appropriate tiers), which means the compliance and product complexity that comes with being a mainstream platform is fully here now. The regulatory tailwind is also worth noting: the EU AI Act's requirements around minors and high-risk use cases go live on the backend of 2026, and this rollout is clearly timed partly around that.",
+      "why_it_matters_brief": "ChatGPT gets a teen-safe mode nearly four years after teenagers were already a major user segment — Study Mode (guide, don't answer) is the more interesting product choice than the content blocks.",
+      "source": { "name": "TechCrunch — OpenAI launches a safer ChatGPT for teens", "type": "scrape", "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/" },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-08-21T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-21T11:00:00Z", "by": "refresh", "change": "created — OpenAI ChatGPT for Teens launch (Aug 18-19): auto-routing for 13-17 based on self-reported age or behavioral signals, blocks self-harm/violence/explicit/romantic, Study Mode gives guiding questions not direct answers, parental controls with Quiet Hours; surfaces in Aug 21 overnight coverage" }
+      ],
+      "takes": [
+        { "source": "TechCrunch — OpenAI launches a safer ChatGPT for teens, years after teens started using it", "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/", "take": "Primary Aug 18 report — the 'years after teens started using it' framing and the full feature breakdown including Study Mode and parental controls." },
+        { "source": "The Hill — OpenAI Launches ChatGPT for Teens with safety tools", "url": "https://thehill.com/policy/technology/6036449-openai-chatgpt-for-teens-user-safety/", "take": "The Quiet Hours feature and the behavioral-signal-plus-self-reporting age verification approach." },
+        { "source": "Business Standard — OpenAI launches ChatGPT for teens with added safety, parental controls", "url": "https://www.business-standard.com/technology/tech-news/openai-launches-chatgpt-for-teens-with-added-safety-parental-controls-126081801412_1.html", "take": "Default-to-safe framing: when age cannot be determined, the system routes to the safer teen configuration." },
+        { "source": "Euronews — OpenAI Launches ChatGPT for Teens with new safety guardrails", "url": "https://www.euronews.com/next/2026/08/18/openai-launches-chatgpt-for-teens-with-new-safety-guardrails", "take": "EU/regulatory context — framing the launch against incoming EU AI Act requirements around minors and high-risk use cases." }
       ]
     }
   ],
