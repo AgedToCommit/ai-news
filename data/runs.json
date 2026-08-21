@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-21T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-21T17:00:00Z",
+      "ended_at": "2026-08-21T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 10500,
+        "output_write": 6000
+      },
+      "fetches_made": 15,
+      "items_input": 6,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-21-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Friday August 21 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-21-am.json, 8 items) read in full — its items excluded from pm by default per promotion rule; no promotions (no am Tier-1 materially deepened during the day; GPT-6/Fable5.1 verification T1 unchanged since 11:05Z refresh — still unconfirmed, no new primary channel signal). Since-filter: 2026-08-21T11:05:00Z (last successful run — refresh ended_at). RSS/scrape sweep: all direct WebFetch attempts continue egress-blocked (techstartups.com blocked this run; consistent with prior runs). Fell back to WebSearch exclusively for discovery. Discovery pass (~15 WebSearch queries) surfaced 3 substantive items published Aug 20-21 that are NOT in any prior snapshot: (1) T2 Broadcom in talks to raise $70-80B senior (potentially ~$100B with $30B junior tranche) via Blackstone/Apollo XPV partnership for AI chip financing whose beneficiaries include Anthropic — extension of June 2026 ~$35B XPV agreement; lands day after Marvell/Google $12.2B warrant deal in am and answers the 'Google shifting custom-silicon spend from Broadcom to Marvell' market read; Bloomberg Aug 20, CNBC Aug 21, SiliconANGLE, Seeking Alpha, Yahoo Finance, KFGO. (2) T3 Anthropic Aug 20 Bloomberg disclosure that its planned IPO expects to match or top SpaceX's $86.2B record and could file publicly as soon as end of August; October Nasdaq listing target; Goldman Sachs / Morgan Stanley / JPMorgan underwriting; follows June 1 confidential draft S-1; on-chain prediction markets pricing ~$1.6T implied valuation on the news; contrasts with OpenAI CFO Sarah Friar's Aug 19 2027-target framing already carried in am's OpenAI IPO item; Bloomberg, Fortune, The Next Web, Quartz, BeInCrypto, CryptoTimes. (3) T3 Bloomberg Aug 21 report that Nvidia in preliminary talks with Korean AI-inference-NPU startup Rebellions (technical partnership / investment / possible acquisition); Huang-Park meeting at Santa Clara HQ this week; Rebellions at $2.34B March 2026 pre-IPO valuation ($400M round, $850M cumulative), REBEL-Quad chip with 144GB HBM3E on chiplet architecture, IPO planned late 2026, backed by SK Hynix / Samsung Ventures / Arm / Korean government; US/EU/Korea antitrust and Korean-strategic-industry review dimensions flagged; Bloomberg, The Next Web, Data Center Dynamics, Yahoo Finance, Seeking Alpha, TradingKey, MarketScreener, Ventureburn. Skipped as stale/duplicative/out-of-window: Broadcom debt-deal earlier Aug 20 framing (folded into the T2 item), Meta open-model announcement (rolled out earlier August, outside 24-48h window), Gemini Omni Flash (announced May 19 2026 at I/O, way outside window), DeepMind AGI-to-ASI paper (June 10 2026, outside window), Claude Code v2.1.238 daily update (too incremental for a distinct item — am already carried the Aug 20 Claude Code Concise mode + prompt cache fix), IJCAI-ECAI 2026 Bremen closing day (no substantive best-paper announcements surfaced in coverage), various robotaxi / Tesla solar / NY-vs-Bay tech talent items (off-topic for AI curation), LangChain / Hugging Face activity (no substantive Aug 20-21 releases surfaced). Three items is intentionally light for a quiet Friday afternoon after a heavy am — no items forced or synthesized. All three items tie together the 'AI capital markets and inference-silicon carve-up' thread that Marvell/Google opened yesterday. No hype language. Under all caps (tokens ~46k of 100k, wall time ~20 min of 60, fetches 15 of 50)."
+    },
+    {
       "run_id": "2026-08-21T11:05:00Z-refresh",
       "phase": "refresh",
       "status": "success",
