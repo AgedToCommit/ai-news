@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-22T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-22T06:00:00Z",
+      "ended_at": "2026-08-22T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 10800,
+        "output_write": 6000
+      },
+      "fetches_made": 8,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-22-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Saturday August 22 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-21-pm.json, 3 items) read in full. Sub-task 1 prune+enrich: all 3 items KEPT with meaningful new context. (1) T2 Broadcom XPV — overnight firms tranche structure (two working scenarios: $45B senior + $35B junior OR $60-70B senior + ~$30B junior, both yielding ~$100B combined) and adds explicit 20-gigawatt-by-2028 XPV compute-buildout target with the June ~$35B commitment now confirmed as funding a 1GW increment for Anthropic; sources Bloomberg, CNBC Aug 21, Quartz Aug 22, SiliconANGLE, Benzinga, Axios, TNW, Proactive Investors. (2) T3 Anthropic IPO — overnight expands underwriter list from 3 to 4 with Citi joining Morgan Stanley/Goldman Sachs/JPMorgan; adds preliminary Q2 2026 revenue >$11.5B (14× YoY vs $787M Q2 2025) and ~$65B annualized run-rate by late July as the S-1-preview numbers; sizing framing read out to 'strongest year on record for US IPO proceeds' conditional on clearing SpaceX $86.2B; sources Kaohoon International, Share Talk, Benzinga, IND Money, Fortune, Quartz. (3) T3 Nvidia/Rebellions — overnight adds structural template read (Dataconomy, Seeking Alpha): likely follows Nvidia's late-2025 Groq template — nonexclusive technology license + engineering-team absorption while Rebellions retains customer-facing business as standalone Korean IPO-track company — which threads the Korean-strategic-industry review needle a full acquisition would trigger (Samsung Ventures / SK Hynix / Korean government cap-table). Sub-task 2 late-breaking pass: 1 new T1 item added — Anthropic first-party research publication Aug 20 'How Claude is accelerating protein design and analytical chemistry': Claude Mythos Preview + Opus 4.8 autonomously designed protein binders against 14 of 15 targets in an Adaptyv Bio + Twist Bioscience wet-lab-validated campaign; 22-35% hit rates vs 10-15% industry baseline, 40% on RBX1 vs 3.7% competition average; 354 confirmed binders from 1,320 designs; end-to-end design→order→test loop without human scientific guidance; companion analytical-chemistry section describes Opus 5 (unreleased) processing raw NMR in 23min and LC-MS in 19min at 0.1% purity match; sources Anthropic Research + Claude Science 1 PDF, Adaptyv Bio case study, pharmaphorum, The Decoder, eWeek, The Next Web, The Rundown AI, TechBriefly, TechTimes, BigGo, Artiverse. Story was published Aug 20 but not caught by yesterday's am (11:05Z), refresh (11:00Z), or pm (17:20Z) — canonical enrichment catch. All direct WebFetch attempts continue egress-blocked per prior runs; WebSearch used exclusively (8 queries). No hype language. Under all caps (tokens ~42k of 100k, wall time ~15 min of 45, fetches 8 of 30). Pinecone Nexus GA (Aug 6) and other candidates considered and skipped as outside the 12h/48h late-breaking window."
+    },
+    {
       "run_id": "2026-08-21T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
