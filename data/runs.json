@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-22T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-22T17:00:00Z",
+      "ended_at": "2026-08-22T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 12800,
+        "output_write": 6000
+      },
+      "fetches_made": 14,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-22-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Saturday August 22 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-22-am.json, 6 items) read in full — its items excluded from pm by default per promotion rule; no promotions (no am Tier-1 materially deepened during the day; DeepSeek V4-Flash-Vision-Exp and Anthropic protein-binder Tier-1 items surfaced no meaningful new sourcing in the 6-hour afternoon window on a Saturday). Since-filter: 2026-08-22T11:20:00Z (last refresh ended_at). RSS/scrape sweep: all direct WebFetch attempts continue egress-blocked per prior runs' consistent pattern. Fell back to WebSearch exclusively for discovery (~14 queries). Discovery pass surfaced 5 substantive items NOT in any prior snapshot: (1) T1 Anthropic Claude Platform Agent Stack GA (Aug 20) — computer use, browser use tool (accessibility-tree targeting, browser_toolset_20260801), Skills API (/v1/skills, drops skills-2025-10-02 header, per-request loading via container parameter), Files API (/v1/files, drops files-api-2025-04-14 header, 5× rate limit, 1TB per-org storage, expires_in_seconds, paginated listing with ids[] filter) all shipped as coordinated production release; sources Anthropic Blog + Claude Platform Docs + The New Stack + Channel Insider + NxCode + Apito + Crescitaly. (2) T2 Ray CVE-2025-62593 CISA KEV addition (Aug 17-18) — CVSS 9.4 browser-driven RCE via DNS rebinding + flawed User-Agent Mozilla-prefix check to reach local Ray Dashboard port 8265 and hit Jobs API without credentials; fixed in Ray 2.52.0; federal 3-day patch deadline Aug 20 under BOD 22-01; RondoDox DDoS botnet weaponized within days of Nov 2025 disclosure; Ray is Amazon/Apple/OpenAI ML-workload framework; first time CISA explicitly frames an AI-workload framework as 'shadow infrastructure' for federal remediation timelines. (3) T2 Reconstruction benchmark (arXiv 2608.16645, Aug 19) — blind idea-recovery benchmark; withholds seed paper, uses temporal citation cutoffs and anonymized reference IDs; 643 papers across six scientific domains; seven frontier models score 3-15% match rate; multi-agent Swiss-tournament architecture lifts to 42%; explicitly designed as anti-memorization eval measuring novelty-of-proposal rather than depth-of-retrieval. (4) T3 Anthropic Claude Academy launch (Aug 20) — free public learning hub built from Anthropic's internal employee onboarding curriculum (4D AI Fluency Framework, ever-boarding, problem-first tutorials); courses, tutorials, use-case collections, badges, personalized recommendations; free with Claude account; part of broader AI-in-education competitive push alongside Claude for Teachers (July 14). (5) T3 Second World Humanoid Robot Games Beijing opening (Aug 22, today) — 666 teams / 2,056 robots / 16 countries at National Speed Skating Oval; 138% team-growth vs inaugural 2025; 51 events across 9 sessions (30 competitive sports + 21 scenario challenges); runs through Aug 26; coincides with World Robot Conference 2026 (opened Aug 19, ~300 exhibitors); Forbes framing 'entire assembly is a market map'. Items considered and skipped: MiniMax H3 (July 31 API, Aug 3 weights — outside window and outside US/EU/UK/KR license territory), Meta Muse Spark 1.2 / Muse Code (Aug 6 — outside window, in prior snapshots), Grok 4.6 (Aug 6 — outside window), Alibaba Qwen3.8-Max (Aug 4 — outside window, in prior snapshots), Z.AI GLM-5.3 (Aug 14) and GLM-5.2 Turbo (Aug 17) — GLM releases already surfaced in prior snapshots, Nvidia/Japan robotics announcement (broader ecosystem framing, no single news hook), Linear coding-agent PR metrics (interesting but no single canonical publication date this week), Anthropic watermarking (Aug 2-11 — outside window, prior coverage). Anthropic revenue framing (Q2 2026 ~$10.9B / $559M first operating profit) already folded into today's am IPO item so not surfaced separately. No hype language. Under all caps (tokens ~52k of 100k, wall time ~20 min of 60, fetches 14 of 50)."
+    },
+    {
       "run_id": "2026-08-22T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
