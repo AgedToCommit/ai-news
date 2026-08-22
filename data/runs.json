@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-22T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-22T11:00:00Z",
+      "ended_at": "2026-08-22T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 4200,
+        "output_write": 1000
+      },
+      "fetches_made": 12,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Saturday August 22 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file (2026-08-22-am.json, 4 items) exists — standard path. Since-filter: 2026-08-22T06:15:00Z (enrichment ended_at). All direct WebFetch attempts egress-blocked per prior runs; WebSearch used exclusively (12 queries). Sweep surfaced two items: (1) T1 DeepSeek V4-Flash-Vision-Exp — released Aug 21 with Caixin Global + The Decoder + SiliconANGLE + Dataconomy coverage appearing overnight Aug 21-22; adds image understanding to V4-Flash (284B total / 13B active sparse MoE) while matching text/agent capabilities; 36.5 on ApexBench vs Opus 4.8's 39.4; 83.9 on Terminal Bench 2.1 vs Opus 4.8's 85.0; $0.22/$0.66 per 1M tokens (~15x cheaper than Opus 4.8 input); not caught by enrichment run. (2) T2 OpenAI GPT-5.6 Sol price cut >20% — announced Aug 22; input $5→$4 per 1M, output $30→$20 per 1M; 3-month promotional window through ~Nov 22; first Sol price cut; rolls to ChatGPT Work + Codex credits; subscription prices unchanged; Reuters/Business Standard confirmed Aug 22. Items considered and skipped: Gemini 3.7 Flash (Aug 13 — outside window), Meta Muse Code/Spark 1.2 (Aug 5-10 — outside window), DeepMind Hassabis restructure (Aug 5-6 — outside window), Anthropic Tino Cuéllar hire (Aug 4 — outside window), Qwen-UI-Agent (Aug 20 — outside enrichment and refresh window), Cloudflare Kitesurf/x402 (Aug 6-7 — outside window). No re-pass on existing T1 protein binder item — no significant new chatter surfaced in 5-hour window on a Saturday. Under all caps (tokens ~26k of 60k, wall time ~20 min of 25, fetches 12 of 20)."
+    },
+    {
       "run_id": "2026-08-22T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

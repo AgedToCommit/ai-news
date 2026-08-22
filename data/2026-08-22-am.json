@@ -2,12 +2,13 @@
   "snapshot_id": "2026-08-22-am",
   "snapshot_type": "am",
   "calendar_date": "2026-08-22",
-  "generated_at": "2026-08-22T06:15:00Z",
-  "generated_at_local": "2026-08-22T02:15:00-04:00",
+  "generated_at": "2026-08-22T11:20:00Z",
+  "generated_at_local": "2026-08-22T07:20:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-08-22T06:00:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-08-22T06:00:00Z", "duration_ms": 900000 },
+    { "phase": "refresh",    "ran_at": "2026-08-22T11:00:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 1, "2": 1, "3": 2 },
+  "tier_counts": { "1": 2, "2": 2, "3": 2 },
   "items": [
     {
       "id": "anthropic-claude-autonomous-protein-binder-adaptyv-twist-august-20-2026",
@@ -39,6 +40,34 @@
       ]
     },
     {
+      "id": "deepseek-v4-flash-vision-exp-multimodal-august-21-2026",
+      "tier": 1,
+      "title": "DeepSeek releases V4-Flash-Vision-Exp (Aug 21): experimental multimodal variant of V4-Flash adds image understanding while matching the base model on text, agent, and world-knowledge benchmarks; 36.5 on ApexBench multimodal vs Opus 4.8's 39.4; 83.9 on Terminal Bench 2.1 vs Opus 4.8's 85.0; 284B total / 13B active sparse MoE architecture; available on DeepSeek API now at $0.22/$0.66 per 1M tokens — roughly 15× cheaper than Opus 4.8 input pricing (DeepSeek API Docs, SiliconANGLE, The Decoder, Caixin Global, Dataconomy, Seeking Alpha, OfficeChai)",
+      "summary": "DeepSeek released V4-Flash-Vision-Exp on August 21, 2026, as an experimental addition to its API platform (DeepSeek API Docs, SiliconANGLE, The Decoder, Caixin Global, Dataconomy, Seeking Alpha, OfficeChai). The model adds image understanding to the existing V4-Flash text model — a sparse mixture-of-experts architecture with 284 billion total parameters and 13 billion active parameters — while matching V4-Flash on all text-only capabilities: agent behavior, reasoning, and world knowledge. On multimodal agent benchmarks, it closes the gap with frontier proprietary models substantially: 36.5 on ApexBench vs Opus 4.8's 39.4, and 83.9 on Terminal Bench 2.1 vs Opus 4.8's 85.0. On NL2Repo and DSBench-Hard, the gap to Opus 4.8 widens to roughly 8-12 points, so the 'close to Opus 4.8' claim is specific to multimodal agent tasks rather than general coding. Pricing is $0.22 per million input tokens and $0.66 per million output tokens (with cached reads at $0.007/M), consistent with V4-Flash's cost structure and roughly 15-20× cheaper than Opus 4.8 on input. The model is accessible now via model='deepseek-v4-flash-vision-exp' on the DeepSeek API. Context: V4-Flash already beats V4-Pro on several agent benchmarks, making V4-Flash-Vision-Exp the effective multimodal frontier of DeepSeek's API-accessible lineup, not an experimental edge case.",
+      "link": "https://api-docs.deepseek.com/news/news260821/",
+      "why_it_matters": "For Gabe: V4-Flash is already the interesting DeepSeek model — it outperforms their own Pro on agent benchmarks at a fraction of the cost. V4-Flash-Vision-Exp adds image input to that same baseline without raising the price. If you're writing a Python script that calls a model API, this changes your options for tasks that involve screenshots, diagrams, PDFs-rendered-as-images, or web-scraping workflows where you capture a page visually rather than parsing HTML. The benchmark read needs one caveat before you trust it: 'close to Opus 4.8 on multimodal agents' is true on ApexBench (36.5 vs 39.4) and Terminal Bench 2.1 (83.9 vs 85.0), but not true on general coding tasks like NL2Repo where the gap is about 12 points. The model is experimental — DeepSeek's naming convention ('exp' suffix) means it's an API preview, not a GA model with SLA guarantees. The useful comparison for a Python developer is not 'DeepSeek vision vs Opus 4.8' but 'what can I do with image input at $0.22/$0.66 per 1M tokens that I couldn't justify at Opus 4.8 prices?' — the answer is higher-volume, image-heavy pipelines where cost has been the blocker. Worth trying before it exits the experimental stage and potentially reprices.",
+      "why_it_matters_brief": "DeepSeek adds vision to its fastest frontier model at $0.22/$0.66 per 1M tokens — multimodal agent benchmarks now within 3 points of Opus 4.8, at roughly 15× cheaper input pricing.",
+      "source": { "name": "DeepSeek API Docs — DeepSeek-V4-Flash-Vision-Exp Release", "type": "scrape", "url": "https://api-docs.deepseek.com/news/news260821/" },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-08-22T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-22T11:00:00Z", "by": "refresh", "change": "created — DeepSeek V4-Flash-Vision-Exp released Aug 21; overnight Asia/Europe coverage (Caixin Global, The Decoder, SiliconANGLE, Dataconomy, OfficeChai) surfaced Aug 21-22; not caught by enrichment run; 284B total / 13B active MoE, $0.22/$0.66 per 1M tokens, 36.5 ApexBench vs Opus 4.8's 39.4" }
+      ],
+      "takes": [
+        { "source": "DeepSeek API Docs — DeepSeek-V4-Flash-Vision-Exp Release", "url": "https://api-docs.deepseek.com/news/news260821/", "take": "Primary announcement — full capability description, benchmark tables, and API access instructions." },
+        { "source": "SiliconANGLE — DeepSeek debuts multimodal language model competitive with Opus 4.8", "url": "https://siliconangle.com/2026/08/21/deepseek-debuts-multimodal-language-model-competitive-with-opus-4-8/", "take": "Aug 21 first-wave US coverage — 'competitive with Opus 4.8' framing and the multimodal-agent-benchmark positioning." },
+        { "source": "The Decoder — DeepSeek releases experimental Flash vision model that rivals Opus 4.8 on agent benchmarks", "url": "https://the-decoder.com/deepseek-releases-experimental-flash-vision-model-that-rivals-opus-4-8-on-agent-benchmarks/", "take": "Agent-benchmark focus — where V4-Flash-Vision-Exp actually matches and where it trails Opus 4.8 across specific evals." },
+        { "source": "Caixin Global — DeepSeek Enters the Multimodal AI Race with Experimental Vision Model", "url": "https://www.caixinglobal.com/2026-08-22/deepseek-enters-the-multimodal-ai-race-with-experimental-vision-model-102476706.html", "take": "Aug 22 Asia-edition coverage — framing the release in context of the broader Chinese lab multimodal race." },
+        { "source": "Dataconomy — DeepSeek Unveils Vision Model Challenging Anthropic's Opus 4.8 Performance", "url": "https://dataconomy.com/2026/08/21/deepseek-unveils-vision-model-challenging-anthropics-opus/", "take": "The practical use-case read — where image input at V4-Flash price points opens tasks that weren't viable at frontier pricing." },
+        { "source": "Seeking Alpha — DeepSeek says V4-Flash-Vision-Exp comes close to Anthropic's Opus 4.8", "url": "https://seekingalpha.com/news/4635820-deepseek-says-new-ai-model-v4-flash-vision-exp-comes-close-to-anthropics-opus-48", "take": "Competitive positioning from a market-analysis vantage — how the release reads against Anthropic's API pricing and the ongoing price-performance race." }
+      ]
+    },
+    {
       "id": "broadcom-70-80b-debt-deal-anthropic-ai-chip-financing-august-21-2026",
       "tier": 2,
       "title": "Broadcom debt-deal sizing firms overnight (Aug 21 → Aug 22): $70-80B senior + ~$30-35B junior via the Blackstone/Apollo XPV special-purpose vehicle, on track for a combined raise up to ~$100B; two structure options in play — a $45B senior / $35B junior split, or a $60-70B senior / $30B junior split; explicit target is delivering 'over 20 gigawatts of compute to top AI labs by 2028' with the first XPV commitment (~$35B, June 2026) already funding a 1GW increment; extension of the June partnership that named Anthropic among the beneficiaries; still lands as Broadcom's answer to yesterday's Marvell/Google $12.2B warrant read (Bloomberg, CNBC, Quartz, SiliconANGLE, Yahoo Finance, Benzinga, Axios, TNW, Proactive Investors)",
@@ -66,6 +95,32 @@
         { "source": "Benzinga — Apollo And Blackstone Just Turned Broadcom, Anthropic's AI Chip Bet Into Somebody Else's Debt", "url": "https://www.benzinga.com/markets/private-markets/26/07/60372922/broadcom-anthropic-just-turned-ais-chip-bet-into-somebody-elses-debt-apollo-and-blackstone-hold-the-keys", "take": "The '20 gigawatts of compute to top AI labs by 2028' XPV-partnership target now explicit in overnight coverage." },
         { "source": "Axios — Apollo leads $35 billion debt deal for Anthropic's compute", "url": "https://www.axios.com/2026/06/10/apollo-anthropic-blastone-broadcom", "take": "June 2026 baseline — the initial ~$35B XPV commitment funding a 1GW capacity increment for Anthropic that the new ~$70-80B raise extends." },
         { "source": "The Next Web — Broadcom seeks more than $60bn in debt to fund AI chips for Anthropic", "url": "https://thenextweb.com/news/broadcom-60bn-ai-chip-debt-anthropic", "take": "The senior/junior tranche mechanic — how different debt-investor risk appetites carve up a compute-buildout financing." }
+      ]
+    },
+    {
+      "id": "openai-gpt-56-sol-price-cut-august-22-2026",
+      "tier": 2,
+      "title": "OpenAI cuts GPT-5.6 Sol API pricing by more than 20% for three months (Aug 22): input tokens drop from $5 to $4 per 1M, output tokens from $30 to $20 — first Sol price cut since its release, driven by DeepSeek and Anthropic competitive pressure; cut also rolls to ChatGPT Work and Codex plan credits; Pro/Plus/Business subscription prices unchanged (Reuters, Business Standard, Finimize, Startup Fortune)",
+      "summary": "OpenAI announced on August 22, 2026 that it is cutting the price of its frontier GPT-5.6 Sol model for API developers by more than 20% for the next three months, citing growing competition from Anthropic and Chinese AI models (Reuters via Investing.com, Business Standard, Finimize, Startup Fortune). The new pricing: $4 per million input tokens (down from $5) and $20 per million output tokens (down from $30), effective immediately on the OpenAI API. The output-token cut is proportionally larger — 33% versus the 22% input-token reduction — consistent with the pattern that output pricing is where API-heavy workloads concentrate cost. The discount also rolls to credits on ChatGPT Work and Codex plans; subscription pricing for Pro, Plus, and Business tiers is unchanged. This is OpenAI's first Sol price cut; the company had previously discounted its Terra and Luna models in late July 2026 but had held the Sol line until now. The cut follows earlier reductions from DeepSeek (V4-Flash and V4-Pro pricing well below western frontier models) and Anthropic's competitive positioning. The three-month window is explicitly framed as a promotional discount, not a permanent repricing — leaving open whether Sol reverts to prior pricing on November 22 or whether the promotional rate becomes the new baseline.",
+      "link": "https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186",
+      "why_it_matters": "For Gabe: this one is direct — if you're calling the OpenAI API on any GPT-5.6 Sol workloads right now, the price just dropped. The output-token cut (33%) matters more than the input cut (22%) for anything generative, since that's where most of the bill comes from on a typical API call. The three-month framing is the part worth watching: OpenAI is being explicit that this is promotional, not a reset, and the gap between the promotional rate and what Nov 22 pricing will be is genuinely unclear. If you're building something around Sol's price point right now, you're building on pricing that may not hold. The competitive context here is worth one sentence: this is the first time OpenAI has cut Sol pricing specifically, and the trigger is the same one that's been pushing all western frontier model pricing down this year — DeepSeek V4-Flash delivering near-frontier results at $0.22/$0.66 per 1M (see the item just above this one) and Anthropic pricing pressure from below. Sol is now $4/$20; Claude Opus 4.8 is the rough Anthropic comparison tier, at $3/$15 per 1M — OpenAI is still more expensive on output after the cut. The structural read: the era of '$30 per million output tokens at the frontier' is ending, whether through cuts, competition, or both. What you build now for $20/M output will run cheaper in 12 months.",
+      "why_it_matters_brief": "OpenAI's first GPT-5.6 Sol price cut drops input 20% and output 33% for three months — the clearest signal yet that DeepSeek's price pressure is landing on frontier API economics.",
+      "source": { "name": "Reuters — OpenAI cuts developer pricing for frontier GPT-5.6 Sol model by more than 20%", "type": "scrape", "url": "https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186" },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-22T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-08-22T11:00:00Z", "by": "refresh", "change": "created — OpenAI announces Aug 22 >20% cut to GPT-5.6 Sol API pricing ($5→$4 input, $30→$20 output) for 3 months; first Sol price cut; DeepSeek and Anthropic competitive pressure cited; rolls to ChatGPT Work + Codex credits; promotional window ends ~Nov 22 2026" }
+      ],
+      "takes": [
+        { "source": "Reuters — OpenAI cuts developer pricing for frontier GPT-5.6 Sol model by more than 20%", "url": "https://www.investing.com/news/stock-market-news/openai-cuts-developer-pricing-for-frontier-gpt56-sol-model-by-more-than-20-4872186", "take": "Primary wire report — the full pricing structure change, the 3-month promotional window, and the competitive framing." },
+        { "source": "Business Standard — OpenAI cuts developer pricing for GPT-5.6 Sol model by more than 20%", "url": "https://www.business-standard.com/technology/tech-news/openai-cuts-developer-pricing-for-gpt-5-6-sol-model-by-more-than-20-126082200107_1.html", "take": "First-wave Aug 22 reporting — the $4/$20 new rates confirmed alongside ChatGPT Work and Codex plan credit rollout." },
+        { "source": "Finimize — OpenAI Cut GPT-5.6 Sol API Prices To Keep Developers Close", "url": "https://finimize.com/content/openai-cut-gpt-56-sol-api-prices-to-keep-developers-close", "take": "The 'keep developers close' framing — this is OpenAI defending its developer ecosystem against cheaper alternatives, not passing through compute savings." },
+        { "source": "Startup Fortune — OpenAI Cuts GPT-5.6 Sol API Prices After Holding the Line for Months", "url": "https://startupfortune.com/openai-cuts-gpt-56-sol-api-prices-after-holding-the-line-for-months/", "take": "The timing context — Sol held full pricing while Terra and Luna were discounted in late July; Sol breaks in August after V4-Flash-Vision-Exp and other competitive signals." }
       ]
     },
     {
