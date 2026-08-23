@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-23T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-23T06:00:00Z",
+      "ended_at": "2026-08-23T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 18200,
+        "output_write": 7000
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-23-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Sunday August 23 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Read yesterday's pm (2026-08-22-pm.json, 5 items) as primary input. Direct WebFetch continues egress-blocked (consistent with prior runs); relied on WebSearch exclusively (~9 focused queries). Sub-task 1 (prune+enrich): all 5 items KEPT+ENRICHED with substantive new material — (1) T1 Anthropic agent-stack GA: added three-days-on developer-tooling framing 'beta era is over, runtime is still yours' (NxCode + Apito + Crescitaly + Releasebot convergence), confirmed zoom-by-default in GA computer-use toolset, cross-linked to today's late-breaking Qwen-UI-Agent as parallel architectural bet. (2) T2 Ray CVE: added ShadowRay 2.0 parallel-campaign context — IronErn440 actor weaponizing older CVE-2023-48022 (missing auth) against ~200k internet-exposed Ray Dashboards for XMRig cryptomining + DDoS on NVIDIA GPU clusters; Anyscale position that CVE-2023-48022 is intentionally 'won't fix' because Ray meant for trusted networks; practical read is 'two concurrent live campaigns'; sources Oligo + Dark Reading + Hive Pro + Wiz. (3) T2 Reconstruction benchmark: added authorship (Chen, Fei, Liu, Yu, Li, Thapa, Ciobanu, Mao, Das), versioning (v1 Aug 17, v2 Aug 19), and Adafruit Aug 18 'Benchmark-pocalypse' framing — Reconstruction as first benchmark to eliminate retrieval path by construction. (4) T3 Claude Academy: added launch URL academy.claude.com, full 4D Framework expansion (Delegation, Description, Discernment, Diligence per aretecoach.io + onlinetutorials.org), inventory (22 structured courses), and flagship-course 4.3/5 third-party rating. (5) T3 Humanoid Robot Games: added opening-day results — humanoid ran 100m in 9.39s beating Bolt's 9.58s human world record, separate high-jump above-human mark; picked up NBC News + Fortune + ABC News + ESPN inside 24h; noted coverage did not consistently identify specific sprint-winning manufacturer; updated primary source link and title. Sub-task 2 (late-breaking): added 1 T2 item — Alibaba Qwen-UI-Agent (Aug 20 release, missed by yesterday's digest); GUI-agent foundation model for phones/desktops/web/deep-search, MobileWorld 82.1% (beats GPT-5.6 by 12.0 pts, Claude Opus 4.8 by 14.6 pts per Digital Phablet + Martincid), open weights on GitHub Tongyi-MAI/MAI-UI + tongyi-mai.github.io + arXiv 2607.28227; hard-stop confirmations for payments/data-deletion/privacy operations; same-day timing with Anthropic browser-use GA is the signal — two independent labs converging on structured-element targeting vs. screenshotting on Aug 20. Also considered but skipped: xAI/SpaceXAI Grok Bot (launched Aug 11, outside 12h late-breaking window and reporting is inconsistent about the SpaceX-merger framing), DeepSeek V4-Flash-Vision-Exp (already in yesterday's am), Meta Muse (prior coverage), Anthropic watermarking (prior coverage). No items dropped — all 5 pm items had genuinely new substance to fold in. Under all caps (tokens ~48k of 100k, wall time ~15 min of 45, fetches 9 of 30). No hype language."
+    },
+    {
       "run_id": "2026-08-22T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
