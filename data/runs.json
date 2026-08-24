@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-24T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-24T17:00:00Z",
+      "ended_at": "2026-08-24T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 900,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 15000,
+        "output_write": 8100
+      },
+      "fetches_made": 13,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-24-pm",
+      "notes": "Digest run 1pm EDT Monday August 24 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Read today's am file (6 items — Pinecone Nexus GA, Skills paper arXiv 2608.14036, Simon Willison LLM 0.33, Claude 3 Haiku Vertex shutdown, FreeToken MoE serving, A2A joins AAIF) and excluded all six per default no-promotion rule. Direct WebFetch continues egress-blocked (consistent with recent runs); relied on WebSearch exclusively (~13 focused queries). Since-window was 11:35Z (last successful refresh). Four fresh items added: (1) T2 Ox Alpha stealth 1M-context coding model on OpenRouter/OpenCode — community fingerprinting Aug 22-23 shows 95/95 GLM-5 tokenizer match, chat-template grammar matches Z.ai's GLM-5.2 endpoint, likely stealth GLM-5.3 preview; #2 on OpenCode by usage (16T tokens, 221k users, 5M sessions); (2) T2 GitHub Copilot in Slack public preview — agentic Copilot CLI/app capabilities in a Slack channel via @GitHub with existing permissions, plus Copilot CLI v1.0.80 changelog (Markdown-diff hybrid editor, multilingual on-device dictation); (3) T3 OpenAI ChatGPT Ads Europe launch TODAY Aug 24 — 31 markets, largest ad rollout in ChatGPT history, Free/Go tiers only, non-personalized to comply with GDPR, OpenAI CMO says ad revenue up 25%+ this month; (4) T3 Binance Agent OS Aug 20 — MCP-based platform connecting Claude/Cursor/ChatGPT/Codex to trading/wallets/market data with hard daily caps ($50k swaps, $100k DeFi, $20 x402), first mainstream consumer financial venue formalizing AI-agent trading as first-class MCP surface. No Tier-1 model releases in the afternoon window (Ox Alpha would qualify if Z.ai formally identifies it, but stealth-anonymous status caps it at T2 for now). Considered but declined: Claude outage Aug 24 5-8 UTC (resolved by 8:30 UTC, ~3 hours, noise-level for a hobbyist reader), AWS Bedrock AgentCore Web Search Europe/Asia expansion Aug 21 (smaller enterprise-feature update on a June-GA base), Gemini Spark Chrome (July 30/Aug 3 news, too old), Cursor Start India-only plan (too niche for this reader).",
+      "error": null,
+      "partial": false
+    },
+    {
       "run_id": "2026-08-24T11:35:00Z-refresh",
       "phase": "refresh",
       "status": "success",
