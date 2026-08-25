@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-25T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-25T11:00:00Z",
+      "ended_at": "2026-08-25T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 6000,
+        "output_write": 3200
+      },
+      "fetches_made": 18,
+      "items_input": 1,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-25-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Tuesday August 25 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file exists (enrichment ran at 06:30Z). Standard path. Since filter: 2026-08-25T06:30:00Z. WebFetch blocked by proxy (consistent with recent runs); used WebSearch exclusively (~18 queries). Overnight sweep found 1 new item: Nvidia Q2 FY27 earnings report scheduled Aug 26 after market close, Wall Street expects $93–95B revenue (~96% YoY), data center segment $85–87B, H20 China export guidance the most-watched datapoint; added as Tier 2 US item. Ruled out: Meta Muse Spark 1.2 weights (announced Aug 10 as 'coming soon', not yet released); Nvidia Nemotron 3.5 Lightning (released Aug 11, 14 days old); OpenAI Astra pause (Aug 7, 18 days old); Qwen 3.8-Max (Aug 3-10, old); no new Simon Willison posts since Aug 20. No Tier-1 items found. Well under caps (tokens ~28k of 60k, wall time ~25 min of 25, fetches 18 of 20)."
+    },
+    {
       "run_id": "2026-08-25T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
