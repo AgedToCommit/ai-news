@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-25T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-25T06:00:00Z",
+      "ended_at": "2026-08-25T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 18000,
+        "output_write": 7200
+      },
+      "fetches_made": 7,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-25-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment run 2am EDT Tuesday August 25 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Read yesterday's pm (2026-08-24-pm.json, 4 items) as primary input. Direct WebFetch continues egress-blocked (consistent with prior runs); relied on WebSearch exclusively (~7 focused queries). Sub-task 1 (prune+enrich): all 4 items KEPT+ENRICHED with substantive new material — (1) T2 Ox Alpha: escalated fingerprinting evidence from 1 to 4 independent classes (95/95 tokenizer + exact Z.ai API error strings + GLM-5V-Turbo video-token budgets + shared code-style fingerprints) all pointing at Z.ai's GLM family; sharpened benchmarks (full 113-task DeepSWE run resolves 58.4% with 80% of tasks passing ≥90% tests, vs earlier ~80% on 10-task subset that over-stated capability); added Nous Portal as third free-access surface; noted ~Aug 27 free-window end. (2) T2 Copilot in Slack: pinned release date to Aug 21 via official GitHub Changelog anchor; added that same public preview landed on Microsoft Teams same day (GitHub-a-Microsoft-subsidiary shipping into Slack simultaneously); added Slack Code — new channel type designed for agent work with plan-inspection/diff-viewing/HTML-artifact previews and mid-session redirect. (3) T3 ChatGPT Ads Europe: updated framing to 'went live yesterday as scheduled'; added significant competitive-positioning development that Anthropic explicitly positioned no-ads Claude as a differentiator in response; added Digiday's six-month-mark framing and Sen. Ed Markey's January 2026 letter as standard critical anchor. (4) T3 Binance Agent OS: added MCP Server product-surface breakdown (spot, margin, Convert, two futures categories); consolidated 'you hold the leash' framing with explicit user responsibility of scope selection and audit-log reading. Sub-task 2 (late-breaking): added 2 items — T2 Alibaba Wan3.0 open-source AI video model (Aug 24 launch, 30-second 1080p output 2× Wan2.0, multi-format input from documents/slides/spreadsheets/web pages, released day after $10B HK primary follow-on, framed as open-weights challenger to Google Veo); T3 Nvidia-Perplexity investment talks (Aug 24 report of $30B+ valuation up 50%+ from ~$20B a year ago, Perplexity revenue $250M → $750M+ in 2026, 'compute landlord thesis' pattern, Nemotron Coalition context). Well under all caps (tokens ~52k of 100k, wall time ~30 min of 45, fetches 7 of 30). No hype language."
+    },
+    {
       "run_id": "2026-08-24T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
