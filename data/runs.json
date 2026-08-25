@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-25T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-25T17:00:00Z",
+      "ended_at": "2026-08-25T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 47000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 15000,
+        "output_write": 6800
+      },
+      "fetches_made": 13,
+      "items_input": 11,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-25-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Tuesday August 25 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file exists with 7 items — all excluded from pm by default (no promotions applied; none of the am items materially deepened enough to justify overriding the promotion default). Since filter: 2026-08-25T11:25:00Z (end of refresh run). Direct WebFetch continues egress-blocked (consistent with recent runs); used WebSearch exclusively (~13 focused queries). Selected 5 new items: (T1) Nvidia-Poolside $6B Model Factory license + $1B equity + 109 hires (structured non-acquisition pattern, Nvidia's third in 9 months ~$27B combined, sidesteps merger review); (T2) Nvidia Groq 3 LPX inference accelerator in full production at Hot Chips 2026 (Vera Rubin NVL72 rack, 3400 tok/s Gemma 4 31B @100K context, Nebius first cloud); (T2) Accelerated Understanding Inc. launched today with non-transformer neural-operator physics AI ingesting 5T data points/prompt (Anandkumar+Jenik walked from Bezos-backed Prometheus $2B offer); (T3) Thomson Reuters Thomson 1.0 launched Aug 24, $40M budget on Westlaw/Practical Law/Checkpoint/Reuters data (vertical-data-owner LLM template); (T3) Apple M6 Mac mini + M5 Pro Mac mini launched today with explicit 'developers hosting AI agents on-device' positioning. Ruled out: Meta Muse Glimmer 30B (Aug 10 launch, already covered in Aug 10-13 pms); GPT-Live SynthID watermarking update (August incremental to July launch); OpenAI GPT-5.6 Sol API price cut (already in Aug 22 am); Anthropic Skills API/Files API GA (already in Aug 22 pm and Aug 23 am); DeepSeek V4 Flash vision experimental (already in Aug 22 am); Google A2A joining AAIF (already in Aug 24 am). Well under caps (tokens ~47k of 100k, wall time ~15 min of 60, fetches 13 of 50). No cross-source dedup collisions with am items."
+    },
+    {
       "run_id": "2026-08-25T11:25:00Z-refresh",
       "phase": "refresh",
       "status": "success",
