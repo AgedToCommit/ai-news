@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-26T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-26T17:00:00Z",
+      "ended_at": "2026-08-26T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 17000,
+        "output_write": 7500
+      },
+      "fetches_made": 14,
+      "items_input": 10,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-26-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run 1pm EDT Wednesday August 26 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file exists with 8 items — all excluded from pm by default (no promotions applied; none of the am items materially deepened enough to justify overriding the promotion default — Nvidia earnings item stays queued for tomorrow's am since results are after market close 4:20pm ET). Since filter: 2026-08-26T11:15:00Z (end of 7am refresh run). Direct WebFetch continues egress-blocked (consistent with recent runs); used WebSearch exclusively (~14 focused queries). Selected 6 new items, all created (0 kept from am): (T1) OpenAI Jalapeño ASIC first published benchmarks at Hot Chips 2026 — 1.5-1.9x throughput per kW and 1.7-3.6x lower latency than Nvidia GB200/GB300 at half the power draw (700W vs 1400W), 216 GiB HBM4 @ 15.4 TB/s per package, Broadcom Tomahawk6 Clos network spanning 2048 chips, ~9 months RTL to tapeout, disclosed hours before Nvidia Q2 FY27 earnings call today; (T1) Alibaba Qwen open-sourced Qwen3.8-Flash-Next today at 11pm Beijing / 11am ET — 125B MoE with 6B active per token as Qwen 4 architecture preview, Hybrid Attention with QSA + Multi-Token Prediction + 262K native context extensible to 1M via YaRN, tops 8 of 14 benchmarks, claimed parity with Opus 4.6 at ~1/30th API price ($0.16/M input, $0.47/M output on QwenCloud); (T2) Samsung LPDDR5X-PIM at Hot Chips 2026 — first LPDDR memory with built-in compute logic, 3.01x higher LLM throughput at 8x effective bandwidth, GAIA AI PC chipset first commercial PIM target in 2027; (T2) Perplexity Portable Computer launched Aug 25 on Nvidia DGX Spark and RTX-equipped Linux — fully local Perplexity Computer stack (orchestrator LLM + subagent LLM + agent harness) with zero token cost for local tasks, PPLX 27B + Qwen 3.8 27B + forthcoming Nemotron 3.5 Lightning, no Mac support; (T2) Google Gemini Enterprise for Legal launched Aug 25 — Google's first industry-specific Gemini Enterprise packaging, Cleary Gottlieb + Freshfields + Weil + Williams & Connolly as launch firms, parallel Financial Services edition, Healthcare + Life Sciences editions coming; direct competitive juxtaposition with Thomson Reuters Thomson 1.0 in today's am file; (T3) Amazon shutting Mechanical Turk Sept 30 2026 after 21 years — Bezos-era 'artificial artificial intelligence' service ends because actual AI absorbed the low-skill HIT work; RLHF/expert-vetted work moved to Scale AI/Mercor/Prolific/Surge. Ruled out: Nvidia Vera CPU Hot Chips 2026 detail (already covered under Groq 3 LPX in today's am; would be duplicative); Groq $350M Series A funding round (thin without a product angle); Mistral x HUMAIN Saudi Arabia partnership Aug 24 (too old and geographically-scoped for a US-audience digest); OpenAI Codex updates (product incremental); GitHub Copilot Grok 4.6 rollout (Aug 13, too old); Perplexity Nvidia investment talks (already in Sunday am); Anthropic Claude Mythos 5 in Claude Security (Aug 21, 5 days old, would have been picked up earlier); EU AI Act / California AI Transparency Act enforcement (Aug 2, three weeks old). Well under all caps (tokens ~52k of 100k, wall time ~15 min of 60, fetches 14 of 50). No cross-source dedup collisions with am items. No hype language."
+    },
+    {
       "run_id": "2026-08-26T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
