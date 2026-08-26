@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-26T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-26T11:00:00Z",
+      "ended_at": "2026-08-26T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7000,
+        "output_write": 2200
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-26-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh run 7am EDT Wednesday August 26 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file exists (enrichment ran at 06:30Z). Standard path. Since filter: 2026-08-26T06:30:00Z. WebFetch blocked by proxy (consistent with prior runs); used WebSearch exclusively (~8 queries). Overnight Asia/Europe sweep found 2 new items: (T1) Z.AI confirmed today via Bloomberg that Ox Alpha \u2014 the mystery model that arrived on OpenRouter Aug 20 as the biggest launch in platform history, doubling DeepSeek usage \u2014 is the new GLM iteration from Zhipu; Z.AI announced open weights releasing tonight, making it locally-downloadable; community had already independently identified it via tokenizer matching (95/95 probes) before confirmation; analysis suggests GLM-5.3 Flash; (T2) OpenAI triple-deprecation day \u2014 Assistants API beta shuts down today (immediate hard errors, no automated migration, must manually port to Responses API; also breaks Zapier integrations), o3 retired from standard ChatGPT after 90-day sunset, and last remaining GPT-4 removed from ChatGPT consumer product. Ruled out: Nvidia Q2 FY27 earnings (not yet reported \u2014 expected 4:20pm ET today, will be in tonight's digest); Qwen3.8-27B Aug 14 (12 days old); DeepSeek GA (already covered in prior am); no new Simon Willison or Nathan Lambert posts overnight. No Tier-1 model release from Anthropic/OpenAI/Google overnight. Well under all caps (tokens ~32k of 60k, wall time ~15 min of 25, fetches 8 of 20). No hype language."
+    },
+    {
       "run_id": "2026-08-26T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
