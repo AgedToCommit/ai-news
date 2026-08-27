@@ -1,0 +1,157 @@
+{
+  "snapshot_id": "2026-08-27-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-08-27",
+  "generated_at": "2026-08-27T17:15:00Z",
+  "generated_at_local": "2026-08-27T13:15:00-04:00",
+  "phase_history": [
+    {
+      "phase": "digest",
+      "ran_at": "2026-08-27T17:15:00Z",
+      "duration_ms": 900000
+    }
+  ],
+  "tier_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 0
+  },
+  "items": [
+    {
+      "id": "nvidia-hugging-face-acquisition-report-12-9-billion-august-27-2026",
+      "tier": 1,
+      "title": "Nvidia reportedly agreed to acquire Hugging Face for $12.9 billion — The Information broke the story Wednesday, CNBC and TechCrunch confirmed within hours, and Business Insider tempered it by reporting the talks have not produced a signed agreement and could still fall apart; the reported price is up from a ~$7B basis in late-2025 negotiations Nvidia previously walked away from, and it values Hugging Face at roughly 86x its ~$150M in annual revenue; open-source community reaction is split — welcomed as a resourcing win by some but flagged by others as a threat to the platform's cross-vendor neutrality, since Hugging Face's value to the ecosystem rests on being seen as chip-agnostic; the deal would put the world's largest open-weight model hub under the ownership of the largest AI-silicon vendor at the exact moment custom-silicon competitors (OpenAI+Broadcom's Jalapeño per today's am file item, Google TPU, Amazon Trainium, Meta MTIA) are attacking Nvidia's inference-economics moat (The Information original report, CNBC 'Nvidia agrees to buy Hugging Face for $12.9B', TechCrunch 'closes in on acquisition', Business Insider 'talks not yet signed', Yahoo Finance, 24/7 Wall St, IB Times 'GitHub of AI', StartupHub, Mobile World Live, NAI 500, Congress.net)",
+      "summary": "The Information reported Wednesday August 26–27, 2026 that Nvidia has agreed to acquire Hugging Face for approximately $12.9 billion (CNBC 'Nvidia agrees to buy Hugging Face for $12.9 billion, report says' Aug 27, TechCrunch 'Nvidia closes in on Hugging Face acquisition' Aug 26, Business Insider talks-not-signed follow-up, Yahoo Finance 'Nvidia to buy AI platform Hugging Face for $12.9 bn: report', 24/7 Wall St 'Central Hub of the Open-Source AI World, a Company With Just $150 Million in Revenue', IB Times 'GitHub of AI', StartupHub, Mobile World Live, NAI 500 'valuation nearly triples in three years', Congress.net). Deal shape and context: the reported $12.9B price is a significant increase from a roughly $7B valuation basis that anchored initial talks between the two companies in late 2025 — talks that Nvidia previously walked away from before returning with the higher offer. Hugging Face's most recently reported annualized revenue is approximately $150 million, which puts the acquisition multiple at roughly 86x revenue — a level typical of strategic infrastructure acquisitions rather than financial ones, and comparable to what Nvidia paid multiples-wise for smaller AI-tooling acquisitions earlier in 2026. Business Insider's counter-reporting is important: it says the talks would value the company at more than $13 billion but have not yet produced a signed agreement, and could still fall through — so the CNBC/TechCrunch/Information framing of 'agreed' is best read as 'a term sheet or a very-advanced-stage agreement in principle exists' rather than 'deal signed and announced.' Neither Nvidia nor Hugging Face has publicly confirmed as of publication. Strategic rationale as reported: Hugging Face operates the world's largest open-weight model aggregation platform — the 'GitHub of AI' — hosting hundreds of thousands of open-source models including today's biggest releases (Alibaba's Qwen3.8-Flash-Next, Z.ai's GLM-5.3-Flash from the am file), the industry's most-used inference stack Transformers, and the download-and-model-serving infrastructure that most AI startups build on. Owning it would extend Nvidia's reach past silicon into the software-and-model-distribution layer, which is where AI developer choice increasingly gets locked in. Open-source community reaction on X is split: some builders welcome the additional resources and roadmap acceleration Nvidia ownership could provide; many are alarmed that Hugging Face's cross-vendor neutrality — which is its whole product-market fit — becomes untenable under ownership by a chip vendor with a direct financial interest in developer lock-in to CUDA, TensorRT, and Nvidia-optimized model formats. Rival chip vendors (AMD, Intel, Cerebras, Groq, and the custom-silicon shops covered in today's am file — OpenAI+Broadcom's Jalapeño, Google TPU, Amazon Trainium, Meta MTIA) all rely on Hugging Face as neutral distribution infrastructure and would have direct incentives to fork or migrate away if the acquisition closes as reported. Timing note: the report landed the same 48-hour window as Nvidia's Q2 FY27 earnings (see am file), with the earnings call flagging gross-margin compression specifically attributed to HBM costs and custom-silicon competitive pressure — exactly the market forces the Hugging Face acquisition would help defend against by locking developer distribution into the Nvidia stack.",
+      "link": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+      "why_it_matters": "For Gabe: this is the single biggest AI-industry M&A story of 2026 to date, and if it closes it materially changes the shape of the open-source AI ecosystem you use as a Python hobbyist. Three things to sit with. First, Hugging Face is where you actually go to download models. Every time you've read about Qwen3.8-Flash-Next (today's am file), GLM-5.3-Flash (today's am file), Muse Glimmer, DeepSeek V4, or any of the frontier open-weight releases running through the digest all year, the eventual practical answer to 'how do I try this' has been 'pip install huggingface_hub' or 'go to huggingface.co/model-name.' The Transformers library, which powers a huge fraction of every AI-adjacent Python program running in the world right now, is a Hugging Face project. If you use Ollama, LM Studio, vLLM, SGLang, MLX, or llama.cpp, you're consuming Hugging Face-hosted weights whether you notice or not. So Nvidia potentially owning Hugging Face is not an abstract acquisition — it's a change of ownership for the single most important piece of open-source AI infrastructure most hobbyists actually touch. Second, the neutrality question is the one that determines whether this acquisition is net-good or net-bad for you as a Python hobbyist. Hugging Face's product-market fit rests on being seen as chip-agnostic and cloud-agnostic: models are uploaded there because everyone can download them and run them anywhere. Nvidia owns the largest AI accelerator business in the world and has a direct financial interest in making sure the models you download and the runtimes you use are optimized for CUDA, TensorRT-LLM, and Nvidia-specific model formats (safetensors + fp8 tricks, GB200/Rubin-optimized kernels, etc.) rather than for AMD ROCm, Apple Metal, Cerebras, or Groq. Even if Nvidia keeps Hugging Face nominally 'open,' the roadmap prioritization — which models get first-class hosting, which formats get the fastest serving path, which quantizations are supported — will drift toward Nvidia hardware over time. That drift is what alarms the open-source community, and it's the reason to expect an AMD-backed or community-run fork of the Hugging Face hub to emerge if the deal closes. Watch whether that fork happens; that's the concrete signal that the neutrality bet has broken. Third, the strategic timing tells you why Nvidia paid the 86x-revenue multiple. Today's am file has three separate items describing custom-silicon competitive pressure on Nvidia's inference economics: OpenAI+Broadcom's Jalapeño chip claims 1.5-1.9x more tokens per kilowatt than GB300 at half the power; Samsung's LPDDR5X-PIM ships PIM-augmented memory that eliminates the HBM tax; the Nvidia Q2 FY27 earnings call guided gross margins down to 74% Q3 → 71-72% Q4 → 72-73% FY2028 attributed to HBM costs and the custom-silicon defection narrative. Owning Hugging Face lets Nvidia defend at the software-distribution layer what it's losing at the silicon layer — if you download models from Nvidia's platform, run them on Nvidia's optimized runtime, and deploy them on Nvidia-recommended hardware, custom-silicon competitors have to fight two moats instead of one. That's the strategic logic behind paying 86x revenue for a company with $150M in annual revenue: it's not about Hugging Face's cash flow, it's about defending Nvidia's developer distribution moat against exactly the pressure Nvidia's own earnings call flagged as durable. Practical read for you: if you have Python projects that depend on Hugging Face's hub or on the Transformers library, nothing changes today. But over the next 6-12 months, watch for (a) any change to Hugging Face's cross-vendor optimization roadmap, (b) whether AMD, Cerebras, Groq, or a community project launches an alternate hub, and (c) whether the deal closes at all (Business Insider says it might not). If it closes and community forks emerge, decide early which side of that split your projects live on.",
+      "why_it_matters_brief": "The Information reports Nvidia has agreed to acquire Hugging Face — the 'GitHub of AI' — for $12.9B at ~86x revenue, defending its developer-distribution moat at the exact moment custom-silicon rivals attack its inference economics.",
+      "source": {
+        "name": "CNBC — Nvidia agrees to buy Hugging Face for $12.9 billion, report says",
+        "type": "scrape",
+        "url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-27T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-27T17:15:00Z",
+          "by": "digest",
+          "change": "created — The Information broke the report Wednesday Aug 26–27 that Nvidia has agreed to acquire Hugging Face for approximately $12.9B, up from ~$7B basis in late-2025 talks Nvidia previously walked away from; CNBC (Aug 27) and TechCrunch (Aug 26) confirmed 'agreed' framing; Business Insider counter-reported that talks are not yet signed and could fall through; Hugging Face annualized revenue ~$150M → ~86x revenue multiple; open-source community split on the neutrality risk; strategic timing directly tied to Nvidia earnings margin-compression narrative (am file item) and custom-silicon competitive pressure (Jalapeño, PIM, Google TPU, AWS Trainium, Meta MTIA); sources: CNBC, TechCrunch, Business Insider, Yahoo Finance, 24/7 Wall St, IB Times, StartupHub, Mobile World Live, NAI 500, Congress.net; not in today's am file"
+        }
+      ],
+      "takes": [
+        {
+          "source": "CNBC — Nvidia agrees to buy Hugging Face for $12.9 billion, report says",
+          "url": "https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html",
+          "take": "The cleanest mainstream summary — leads with The Information as the primary source, walks through the $12.9B price and the strategic rationale of Nvidia expanding its reach past silicon into software and model distribution."
+        },
+        {
+          "source": "TechCrunch — Nvidia closes in on Hugging Face acquisition",
+          "url": "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/",
+          "take": "The AI-industry-audience read — frames the deal as Nvidia's answer to the developer-choice question at exactly the moment custom silicon (Jalapeño, TPU, Trainium) is attacking Nvidia's inference-economics moat."
+        },
+        {
+          "source": "Business Insider (via reported summaries) — Nvidia and Hugging Face in talks but not signed",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-buy-ai-platform-hugging-065107500.html",
+          "take": "The essential caveat — the deal is more than $13 billion in the reported talks but has not produced a signed agreement, and could still fall through; treat the 'agreed' framing from other outlets as 'advanced-stage agreement in principle' rather than 'deal announced.'"
+        },
+        {
+          "source": "24/7 Wall St — Nvidia Reportedly Agrees to Pay $12.9 Billion for the Central Hub of the Open-Source AI World, a Company With Just $150 Million in Revenue",
+          "url": "https://247wallst.com/investing/2026/08/27/nvidia-reportedly-agrees-to-pay-12-9-billion-for-the-central-hub-of-the-open-source-ai-world-a-company-with-just-150-million-in-revenue/",
+          "take": "The revenue-multiple framing — spells out that $12.9B against ~$150M of revenue is roughly 86x, a strategic-infrastructure multiple that only makes sense as a defensive move against custom-silicon competitors."
+        },
+        {
+          "source": "IB Times — Nvidia Agrees to Buy 'GitHub of AI' Hugging Face for $12.9 Billion in Major AI Deal After Earlier Rejection",
+          "url": "https://www.ibtimes.com.au/nvidia-acquires-hugging-face-ai-1874623",
+          "take": "The context read — Hugging Face previously rejected a lower-priced Nvidia offer, and Nvidia returned with a higher bid; useful framing for the shift in negotiating leverage across 2026 as custom silicon pressure built."
+        },
+        {
+          "source": "5 Reasons Nvidia's $12.9 Billion Deal to Buy Hugging Face Could Reshape the Future of Open-Source AI",
+          "url": "https://www.ibtimes.com.au/nvidia-acquires-hugging-face-ai-1874636",
+          "take": "The ecosystem-implications angle — walks through why rival chip manufacturers (AMD, Intel, Cerebras, Groq) and the wider open-source developer community view the deal as a neutrality risk, and what a community fork or AMD-backed alternative hub would look like."
+        },
+        {
+          "source": "Mobile World Live — Nvidia to acquire Hugging Face in $13B deal report",
+          "url": "https://www.mobileworldlive.com/nvidia/nvidia-to-acquire-hugging-face-in-13b-deal-report",
+          "take": "The industry-wire framing — succinct read of the $13B ballpark and the strategic move to extend Nvidia's reach past silicon into the model and software layer."
+        },
+        {
+          "source": "StartupHub — Nvidia Acquires Hugging Face for $12.9 Billion",
+          "url": "https://www.startuphub.ai/ai-news/artificial-intelligence/2026/nvidia-acquires-hugging-face-for-12-9-billion",
+          "take": "The startup-ecosystem read — reads the acquisition as an infrastructure lock-in play that changes the calculus for AI startups building on Hugging Face-hosted models and Transformers."
+        }
+      ]
+    },
+    {
+      "id": "aws-nvidia-2-million-gpus-2027-2028-blackwell-ultra-rubin-vera-august-26-27-2026",
+      "tier": 2,
+      "title": "AWS and Nvidia announced Tuesday–Wednesday Aug 26–27 a partnership expansion committing AWS to deploy 2 million additional Nvidia GPUs across its global infrastructure in 2027–2028, including Blackwell Ultra, Rubin, and Rubin Ultra systems, with Nvidia Vera CPU-based infrastructure coming to AWS, extended NVLink Fusion with custom Nvidia HBM, and 100,000-GPU AI factories built for the US government on secure AWS infrastructure; the announcement is framed as scaling to demand that already exceeded the earlier 1M+ commitment made at GTC 2026 in January; the deal directly extends the 'compute-is-revenue' framing from Nvidia's Q2 FY27 earnings call (see am file) into concrete 2027-2028 supply-side numbers and pairs with AWS's parallel Trainium roadmap tie-in through NVLink (AWS official news release, Nvidia Newsroom, Investing.com, DataCenterDynamics, ANI News, TechTimes 'Prior 1 Million Commitment Ran Out Early', ConvergeDigest, Cumbernauld Media)",
+      "summary": "Amazon Web Services and Nvidia announced Tuesday–Wednesday August 26–27, 2026 that AWS will deploy 2 million additional Nvidia GPUs across its global infrastructure in 2027 and 2028 as part of an expansion of the two companies' strategic partnership (AWS official news release 'AWS and NVIDIA to deploy 2 million more GPUs for AI in 2027-2028', Nvidia Newsroom 'AWS and NVIDIA to Deliver 2 Million Additional GPUs and Next-Generation Infrastructure for Agentic and Physical AI', Investing.com, DataCenterDynamics 'AWS to deploy 2 million additional Nvidia GPUs', ANI News, TechTimes 'AWS Adds 2 Million More NVIDIA GPUs: Prior 1 Million Commitment Ran Out Early', ConvergeDigest 'AWS Links Trainium Strategy with NVIDIA NVLink, NVHBM and Vera', Cumbernauld Media 'AWS Adds 2 Million Nvidia GPUs for 2027-2028 AI Push'). The 2M-GPU commitment covers three specific product families: Nvidia Blackwell Ultra (Nvidia's next-generation Blackwell refresh), Rubin (the new-generation platform Nvidia launched at CES 2026, first shipping H2 2026), and Rubin Ultra (the second-generation Rubin refresh scheduled for late 2027–2028). Supporting infrastructure commitments announced alongside the GPU-count expansion: (1) Nvidia Vera CPU-based systems coming to AWS — Vera is the ARM-based CPU paired with Rubin in the NVL72 rack platform; (2) NVLink Fusion extended with custom Nvidia high-bandwidth memory (NVHBM) — a specific hardware detail that ties AWS's AI infrastructure directly into Nvidia's proprietary interconnect; (3) 100,000-GPU AI factories built for US government workloads on secure AWS infrastructure — a defense-adjacent scale-out that lands the same week as Nvidia's Q2 FY27 earnings call flagged $50B in AI-lab commitments and $500B in financing partnerships surfacing across analyst breakdowns. Backstory context that reframes the announcement: AWS had committed to deploying more than 1 million Nvidia GPUs at GTC 2026 in January this year, and that commitment ran out — demand exceeded supply faster than planned, prompting this expansion. So the 2M-GPU headline is not a new number; it's an admission that the earlier 1M commitment was too small for the actual demand trajectory Nvidia flagged on Wednesday's earnings call. The announcement also links AWS's own Trainium AI accelerator strategy back into the Nvidia stack through NVLink integration — AWS is not abandoning Trainium but is deliberately positioning it as complementary rather than substitutive, running Trainium for training and Nvidia GPUs for inference at scale.",
+      "link": "https://www.aboutamazon.com/news/aws/aws-nvidia-2-million-gpus-ai",
+      "why_it_matters": "For Gabe: this is a hard supply-side number that pins down 2027–2028 AI infrastructure scale in a way that turns yesterday's abstract Nvidia earnings guide into concrete deployment. Three things to sit with. First, 2 million GPUs is an enormous number to internalize. Nvidia's data center shipments across all customers in FY2027 will be roughly 6–8 million GPUs at the current run rate. AWS alone is committing to deploy 2M additional GPUs on top of the 1M+ it already committed to at GTC 2026 (which sold out early). That's a single hyperscaler locking in roughly a third of Nvidia's incremental supply for the next two years, and it happens the same week Nvidia flagged custom-silicon competitive pressure on its inference-economics moat (see today's am file's Jalapeño item). The read: even with Jalapeño's per-kilowatt claims, the biggest cloud customer in the world is doubling down on Nvidia for the 2027–2028 buildout rather than migrating to custom silicon. That validates the topline 70% FY2028 growth guide from yesterday's earnings call in a way that individual customer commitments earlier in the year did not. Second, the product mix — Blackwell Ultra, Rubin, and Rubin Ultra — is worth internalizing because it tells you what the AI infrastructure of 2027–2028 actually looks like. Blackwell Ultra is a mid-2027 refresh of the current GB300 generation. Rubin is the platform Jensen announced in production at CES 2026 (the 288GB HBM4 GPU, 88-Olympus-core Vera ARM CPU, 5x-Blackwell performance, all-liquid-cooled NVL72 racks). Rubin Ultra is the follow-on refresh that pushes even further. AWS's 2M-GPU commitment spans all three, meaning it's not just for the current generation — it's for what ships during 2027 and 2028. For you as a Python hobbyist, the practical implication is that whatever Bedrock, SageMaker, or EC2 GPU instance you're using or planning to use in 2027–2028 will run on Rubin-class hardware. Which specifically means: the per-token cost story keeps improving each generation, and the inference latency for Bedrock-hosted frontier models will keep dropping. Third, the AWS Trainium framing is the subtly important detail. AWS has been building its own inference/training silicon (Trainium, Inferentia) for years and it's a real competitive threat to Nvidia on the same 'reduce inference-cost' vector Jalapeño attacked yesterday. This announcement explicitly ties Trainium to Nvidia through NVLink integration — AWS is signaling that it will use Trainium for the workloads Trainium serves well and Nvidia GPUs for everything else, rather than fully substituting. That's a durable position that both companies can live with: AWS keeps building custom silicon economics on the training side, Nvidia keeps selling into the inference side at scale, and both share the same NVLink infrastructure. If you think through the industry-shape implication, it's that even the most aggressive custom-silicon customers are converging on a hybrid model rather than a full substitution — which is exactly the reading you should apply to the Jalapeño story in today's am file: Jalapeño replaces Nvidia for OpenAI's own inference, but the wider hyperscaler market stays hybrid. The Nvidia-HuggingFace acquisition story (see item 1 in this pm digest) becomes even more strategically legible in that light: Nvidia is defending its position in the market where hybrid deployment stays dominant, not the market where full substitution happens.",
+      "why_it_matters_brief": "AWS committed to deploying 2M more Nvidia GPUs across 2027–2028 (Blackwell Ultra, Rubin, Rubin Ultra) after the January 1M+ commitment ran out early — the biggest cloud customer in the world doubles down on Nvidia the same week Jalapeño attacked its inference moat.",
+      "source": {
+        "name": "AWS — AWS and NVIDIA to deploy 2 million more GPUs for AI in 2027-2028",
+        "type": "scrape",
+        "url": "https://www.aboutamazon.com/news/aws/aws-nvidia-2-million-gpus-ai"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-27T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-27T17:15:00Z",
+          "by": "digest",
+          "change": "created — AWS + Nvidia announced Aug 26 (continued coverage Aug 27) that AWS will deploy 2M additional Nvidia GPUs across 2027-2028 spanning Blackwell Ultra + Rubin + Rubin Ultra; Vera CPU coming to AWS; NVLink Fusion extended with Nvidia HBM; 100K-GPU AI factories for US government on AWS secure infrastructure; framed as scaling past the 1M+ GTC 2026 January commitment that ran out early; AWS Trainium tied into Nvidia stack through NVLink integration (complementary not substitutive); directly extends Q2 FY27 earnings 70% FY2028 growth guide into concrete supply-side numbers; sources: AWS release, Nvidia Newsroom, Investing.com, DataCenterDynamics, ANI News, TechTimes, ConvergeDigest, Cumbernauld Media; not in today's am file"
+        }
+      ],
+      "takes": [
+        {
+          "source": "AWS — AWS and NVIDIA to deploy 2 million more GPUs for AI in 2027-2028",
+          "url": "https://www.aboutamazon.com/news/aws/aws-nvidia-2-million-gpus-ai",
+          "take": "The official AWS announcement — the primary source for the 2M-GPU headline number, the Blackwell Ultra + Rubin + Rubin Ultra product-mix breakdown, and the Vera CPU + NVLink Fusion + 100K-GPU US government factory commitments."
+        },
+        {
+          "source": "Nvidia Newsroom — AWS and NVIDIA to Deliver 2 Million Additional GPUs and Next-Generation Infrastructure for Agentic and Physical AI",
+          "url": "https://nvidianews.nvidia.com/news/aws-and-nvidia-to-deliver-2-million-additional-gpus-and-next-generation-infrastructure-for-agentic-and-physical-ai",
+          "take": "The official Nvidia framing — leads with 'agentic and physical AI' as the workload categorization the 2M GPUs are meant to serve, tying the announcement to the wider industry pattern of agentic workflows (see today's am file Salesforce+Anthropic Claudeforce and Perplexity Portable Computer items)."
+        },
+        {
+          "source": "TechTimes — AWS Adds 2 Million More NVIDIA GPUs: Prior 1 Million Commitment Ran Out Early",
+          "url": "https://www.techtimes.com/articles/325711/20260827/aws-adds-2-million-more-nvidia-gpus-prior-1-million-commitment-ran-out-early.htm",
+          "take": "The essential backstory — spells out that the earlier 1M+ commitment made at GTC 2026 in January this year sold out faster than planned, prompting the 2M expansion; reads the announcement as an admission that the original commitment was too small."
+        },
+        {
+          "source": "DataCenterDynamics — AWS to deploy 2 million additional Nvidia GPUs",
+          "url": "https://www.datacenterdynamics.com/en/news/aws-to-deploy-2-million-additional-nvidia-gpus/",
+          "take": "The infrastructure-industry read — walks through what deploying 2M GPUs across 2027–2028 means in datacenter-buildout terms (power, cooling, real-estate) and where in AWS's Global Infrastructure the deployment concentrates."
+        },
+        {
+          "source": "ConvergeDigest — AWS Links Trainium Strategy with NVIDIA NVLink, NVHBM and Vera",
+          "url": "https://convergedigest.com/aws-nvidia-2-million-gpus-ai-infrastructure/",
+          "take": "The strategic-analysis angle — the clearest explanation of how AWS Trainium is being positioned as complementary to Nvidia (through NVLink integration) rather than substitutive, which is the durable hybrid pattern to watch across all hyperscalers."
+        },
+        {
+          "source": "Investing.com — Amazon and Nvidia expand AI partnership with 2 million GPUs",
+          "url": "https://www.investing.com/news/stock-market-news/amazon-and-nvidia-expand-ai-partnership-with-2-million-gpus-4877976",
+          "take": "The market-analysis framing — reads the 2M-GPU commitment as concrete validation of the 70% FY2028 growth guide Nvidia surfaced on the Q2 FY27 earnings call the same day."
+        },
+        {
+          "source": "ANI News — NVIDIA, AWS expand AI partnership; plan to deploy 2 mn additional GPUs in 2027-28",
+          "url": "https://aninews.in/news/business/nvidia-aws-expand-ai-partnership-plan-to-deploy-2-mn-additional-gpus-in-2027-2820260827084905/",
+          "take": "The international-wire framing — situates the announcement in the wider global AI-infrastructure race with China-lab open-weights (see am file Qwen3.8-Flash-Next and GLM-5.3-Flash items) as the parallel Asia-side scale-out story."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
