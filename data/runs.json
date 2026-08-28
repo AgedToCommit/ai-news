@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-28T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-28T06:12:00Z",
+      "ended_at": "2026-08-28T06:30:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 54800,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1600,
+        "deep_fetch": 0,
+        "discovery_search": 28400,
+        "curation": 18200,
+        "output_write": 6600
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-28-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — yesterday's pm file (2026-08-27-pm.json) existed with 2 items (Nvidia-HuggingFace acquisition Tier 1, AWS-Nvidia 2M-GPU Tier 2). Both survived enrichment with substantial new overnight context: (1) HF item added Delangue-rejected-$500M-Nvidia-investment backstory (his TechCrunch Equity podcast quote about preserving investor balance), HF 2023 baseline valuation ($4.5B → $12.9B is 2.87x), Fortune/Forbes/TechSpot/QZ mainstream pickup, Delangue-Huang public alignment on open-source AI policy, and the fact that if it closes it would surpass Mellanox ($7B in 2020) as Nvidia's largest completed acquisition. (2) AWS item added the bimodal Aug 27 investor reaction — Nvidia +8% (24/7 Wall St, BigGo V-shaped rebound), Amazon -1.4% to $256.84 (TradingView/GuruFocus), Nasdaq +1.5%, hyperscaler capex now at 102% of cloud revenue (Yahoo Finance capex-shock framing), Berkshire reportedly exited remaining Amazon position, TechCrunch 'Amazon tripled Nvidia order' framing (1M+2M=3M), StorageReview deep-dive on Vera CPU + NVHBM + Trainium NVLink integration. Late-breaking additions: (a) AM Intelligence 9,000 Nvidia Vera Rubin NVL72 GPUs for Hyderabad AI factory ($8B capex, first tranche of planned 1 GW across India/US/Finland/Malaysia, Greenko renewable-power backing addressing electricity-supply constraint, first frontier AI cluster in Asia on Vera Rubin) — Tier 2, Asia region, complements US-heavy pm items; (b) Grok 4.6 cross-cloud landing on Amazon Bedrock (GA) + Microsoft Foundry Models (preview) + Google Enterprise Agent Platform simultaneously Aug 27 — Tier 2, US region, distribution story more than model story (500k context, held pricing flat at $2/$6); Microsoft Foundry deployment particularly notable as Azure has historically been OpenAI-exclusive. Considered but excluded: Alibaba WAN 3.0 (already in 2026-08-25-am.json), Gemini 3.6 Flash + 3.5 Flash-Lite GA (routine product rollout, Tier 3 at best), OpenAI Brazil expansion (Tier 3), ChatGPT temporary-chat controls (Tier 3), AWS Mechanical Turk shutdown (already in 2026-08-27-am.json). No pruning — both pm items had substantial new context to add. WebFetch remained blocked by proxy; used WebSearch exclusively (9 queries). No cap hit."
+    },
+    {
       "run_id": "2026-08-27T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
