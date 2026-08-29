@@ -2,18 +2,23 @@
   "snapshot_id": "2026-08-29-am",
   "snapshot_type": "am",
   "calendar_date": "2026-08-29",
-  "generated_at": "2026-08-29T06:30:00Z",
-  "generated_at_local": "2026-08-29T02:30:00-04:00",
+  "generated_at": "2026-08-29T11:30:00Z",
+  "generated_at_local": "2026-08-29T07:30:00-04:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-08-29T06:30:00Z",
       "duration_ms": 1080000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-08-29T11:30:00Z",
+      "duration_ms": 1800000
     }
   ],
   "tier_counts": {
     "1": 1,
-    "2": 3,
+    "2": 4,
     "3": 2
   },
   "items": [
@@ -449,6 +454,56 @@
           "source": "FlowingData — Amazon shutting down Mechanical Turk",
           "url": "https://flowingdata.com/2026/08/27/amazon-shutting-down-mechanical-turk/",
           "take": "The data-community framing — the read from the academic and data-viz community that used MTurk heavily for annotator studies and survey research; captures the community-loss angle that mainstream tech press misses."
+        }
+      ]
+    },
+    {
+      "id": "china-first-commercial-bci-implant-neuracle-neo-huashan-august-2026",
+      "tier": 2,
+      "title": "China's Huashan Hospital completed the world's first commercial surgery using an invasive brain-computer interface device — the Neuracle NEO epidural chip linked to a pneumatic robotic exoglove — in a patient with cervical spinal cord injury, marking the first clinical use of a commercially approved invasive BCI anywhere in the world; China's NMPA approved the NEO for commercial use in March 2026, making it the first invasive BCI device commercially cleared globally, ahead of Neuralink's ongoing PRIME research trial and no equivalent FDA commercial clearance in the US",
+      "summary": "China completed the world's first commercial surgery using an invasive brain-computer interface device, the Neuracle NEO system, at Huashan Hospital in Shanghai on a patient with spinal cord injury from a car accident 10 years earlier. The NEO device records epidural brain signals — electrodes placed on the surface of the dura (outer brain membrane) rather than inside the cortex — and links them via a wearable compute module to a pneumatic robotic exoglove that restores basic hand grip. The device's ML model decodes neural patterns representing motor intent and translates them in real time into exoglove actuation. Neuracle, the Shanghai-based developer, received commercial regulatory clearance from China's National Medical Products Administration (NMPA) in March 2026 — the first commercial market approval for an invasive BCI device anywhere in the world. Target population: adults aged 18-60 with partial cervical spinal cord injury who retain some upper-arm mobility but have lost hand grip. The commercial status distinguishes this from Neuralink's ongoing US PRIME research trial (still under IRB-approved trial conditions, not commercially available) and from BrainGate academic programs. Reporting on the surgery appears in South China Morning Post and Gizmodo.",
+      "link": "https://www.scmp.com/tech/big-tech/article/3360684/china-completes-worlds-first-commercial-brain-computer-interface-implant",
+      "why_it_matters": "For Gabe: BCI devices are increasingly powered by ML for neural signal decoding — the core of what makes the NEO work is a trained model that maps epidural EEG patterns to motor intent, running on compute embedded in the wearable exoglove. This is an AI application story that doesn't surface in typical AI news because the word 'AI' rarely appears in BCI medical reporting. Three things to sit with. First, the commercial vs research distinction is the key fact. Research BCI (Neuralink, BrainGate, academic programs) operates under IRB-approved clinical trial rules — patients enroll in a study, the device is not for sale, and the company bears most of the cost. Commercial BCI means a prescribing physician can recommend the device to any eligible patient, the patient or their insurer pays, and the company can scale production and iterate the model without trial-by-trial ethics review. China reaching commercial status first is a regulatory-velocity story as much as a technology story: the NMPA approved the NEO in March 2026, and there is no equivalent FDA commercial clearance for an invasive BCI device in the US yet. Second, the epidural-vs-intra-cortical tradeoff matters. Epidural electrodes sit outside the dura rather than inside the cortex — lower raw signal quality than Neuralink's approach but lower surgical risk and better long-term biocompatibility, which is the design choice that makes sense for a device meant to last decades in a commercial patient's brain. The tradeoff means the NEO's ML model needs to work harder per signal — which is where model compression, edge deployment, and quantization techniques that are familiar from mobile AI become medically critical. Third, for a Python hobbyist interested in the AI landscape: the BCI space is one of the few areas where the gap between AI-in-the-data-center and AI-in-an-implant is closing visibly, and the NEO is a current marker of where that gap stands today — a trained motor-intent decoder running on a wearable compute module, in production, in the world's most populous country.",
+      "why_it_matters_brief": "World's first commercial invasive BCI surgery — China's Neuracle NEO (epidural chip → robotic exoglove) cleared for sale in March 2026, first implanted at Huashan Hospital; no equivalent FDA commercial clearance exists yet.",
+      "source": {
+        "name": "South China Morning Post — China completes world's first commercial brain-computer interface implant",
+        "type": "scrape",
+        "url": "https://www.scmp.com/tech/big-tech/article/3360684/china-completes-worlds-first-commercial-brain-computer-interface-implant"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-08-29T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-29T11:30:00Z",
+          "by": "refresh",
+          "change": "created — China's Huashan Hospital completed the world's first commercial implantation of an invasive BCI device (Neuracle NEO) in a patient with cervical spinal cord injury; NMPA commercially cleared the NEO in March 2026 — first invasive BCI with commercial market approval globally; epidural recording approach; ML-driven motor-intent decoding links chip to robotic exoglove; no equivalent FDA commercial clearance yet; sources: South China Morning Post, Gizmodo, Scientific American"
+        }
+      ],
+      "takes": [
+        {
+          "source": "South China Morning Post — China completes world's first commercial brain-computer interface implant",
+          "url": "https://www.scmp.com/tech/big-tech/article/3360684/china-completes-worlds-first-commercial-brain-computer-interface-implant",
+          "take": "The primary Chinese-market coverage — frames the surgery as a milestone in China's BCI commercialization push and details the Huashan Hospital procedure and patient profile."
+        },
+        {
+          "source": "Gizmodo — China Just Performed the World's First Implant of a Commercial Brain-Computer Interface",
+          "url": "https://gizmodo.com/china-just-performed-the-worlds-first-implant-of-a-commercial-brain-computer-interface-2000785981",
+          "take": "The Western tech-audience framing — contrasts the NEO's commercial status with Neuralink's ongoing research trial and positions China as the first country where an invasive BCI device is commercially available for prescribing physicians."
+        },
+        {
+          "source": "Scientific American — China just approved its first brain implant for commercial use, a world first",
+          "url": "https://www.scientificamerican.com/article/china-just-approved-its-first-brain-implant-for-commercial-use-a-world-first/",
+          "take": "The scientific framing — details the epidural recording approach versus intra-cortical, what the biocompatibility tradeoffs are, and why the NMPA approval process moved faster than equivalent FDA review."
+        },
+        {
+          "source": "MIT Technology Review — China has approved the world's first invasive brain-computer chip—here's what's next",
+          "url": "https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/",
+          "take": "The post-approval what's-next framing — walks through the clinical rollout plan, the device iteration pipeline Neuracle is planning now that commercial clearance is in hand, and the competitive landscape in Chinese BCI development."
         }
       ]
     }
