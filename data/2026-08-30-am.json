@@ -1,0 +1,332 @@
+{
+  "snapshot_id": "2026-08-30-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-08-30",
+  "generated_at": "2026-08-30T06:30:00Z",
+  "generated_at_local": "2026-08-30T02:30:00-04:00",
+  "phase_history": [
+    {
+      "phase": "enrichment",
+      "ran_at": "2026-08-30T06:00:00Z",
+      "duration_ms": 1800000
+    }
+  ],
+  "tier_counts": {
+    "1": 1,
+    "2": 2,
+    "3": 1
+  },
+  "items": [
+    {
+      "id": "anthropic-model-hardware-standard-mhs-research-preview-august-27-2026",
+      "tier": 1,
+      "title": "Anthropic opened the research preview of the Model Hardware Standard (MHS) on Thursday Aug 27 — a model-agnostic open spec developed with HHMI's Janelia Research Campus that lets AI agents safely operate physical devices (microscopes, liquid handlers, lasers, robotic arms) through a standardized 'read/write' driver interface plus a reference file that tells the agent what each machine can measure, change, and which safety limits it has to respect; initial partners include Doosan Robotics, Tecan, Universal Robots, Hugging Face, and Raspberry Pi; Anthropic says MHS cuts hardware integration time from weeks or months to hours or minutes, that Carnegie Mellon researchers ran serial dilution dose-response experiments about 3x faster than before with an AI agent orchestrating a liquid handler + plate reader + robotic arm + monitoring cameras, and that early partner testing pushed a quantum computer's laser stabilization success rate from 58% to 99.3%; Anthropic plans to eventually open-source the standard so any device manufacturer in any industry can adopt it",
+      "summary": "Anthropic on Thursday Aug 27, 2026 opened a research preview of the Model Hardware Standard (MHS), a shared open specification built with the Howard Hughes Medical Institute's Janelia Research Campus that lets AI agents autonomously operate a wide range of programmable physical devices — complex microscopes, liquid handlers, lasers, and robotic arms — through a standardized driver interface. The design comparison Anthropic uses is a USB-C analogy: MHS standardizes how a computer's operating system talks to hardware using simple 'read' and 'write' commands, plus a reference file per device that tells the agent what the machine can measure, what it can change, and which safety limits it has to respect. Crucially, MHS is model-agnostic — labs and manufacturers adopting it are not locked into Claude, and any frontier model with tool-use capabilities can drive the same hardware through the same interface. Anthropic reports that in early partner testing, MHS compressed hardware integration timelines from weeks or months to hours or minutes; researchers at Carnegie Mellon used it to run serial dilution dose-response experiments about 3x faster than before, with an AI agent orchestrating a liquid handler, plate reader, robotic arm, and monitoring cameras in parallel. In a quantum-computing test with QuEra, an agent operating a laser via MHS pushed the calibration success rate from 58% to 99.3%. NEW: overnight reporting surfaced two additional pilot results not in Thursday's initial coverage — a drug-discovery assay at Genentech and a weeks-to-a-day imaging speedup at Janelia itself, both cited by follow-up analyses as concrete pilot outputs alongside the CMU serial-dilution and QuEra laser results. Initial adopters and partners include Doosan Robotics, Tecan, Universal Robots, Hugging Face, and Raspberry Pi. The research preview is currently limited to a first group of scientific research labs and advanced manufacturers; Anthropic has committed to eventually open-sourcing the standard so any device manufacturer in any industry can adopt it. NEW: independent analysis (XenoSpectrum, AI Tools Review) surfaced the important qualification that MHS is not yet a widely agreed-upon public standard — the specification and implementation remain unpublished, no licensing or conformance-testing regime has been disclosed, and the pilots use meaningful safeguards but the public evidence does not support a general safety or production certification; expert oversight, physical interlocks, carefully defined limits, isolated testing, and deterministic controls remain necessary for any real deployment. NEW: the OPC Foundation (the industrial-automation standards body behind OPC UA) simultaneously announced it would prepare more than 430 OPC UA Companion Specifications for RAG and MCP use, converting existing industrial information models into a format that AI agents can more easily search and use — approaching the same AI-to-hardware connection point from the opposite direction as MHS, where MHS chooses light-weight adoption through natural-language tags while OPC UA carries the rigorous semantic models and conformance regime that industry has built up over decades. The framing matters: this is the plumbing layer for physical AI, deliberately positioned to sit under any lab's model choice rather than as a Claude-only capability — the same architectural stance the Model Context Protocol (MCP) took for software tools last year, now extended to physical instruments — but the standards competition with OPC UA is now the second axis to watch alongside the model-agnostic adoption question.",
+      "link": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+      "why_it_matters": "For Gabe: this is the physical-AI equivalent of MCP, and it's now also the first shot in a standards competition with the industrial-automation world. Where MCP standardized how AI agents talk to software tools, MHS standardizes how AI agents talk to physical instruments — and the design choice worth internalizing is that both are model-agnostic. Four things to sit with. First, the immediate practical read: laboratory and industrial hardware has historically shipped with proprietary control software, custom SDKs, and per-vendor Python (or C++) bindings that a scientist or a factory automation engineer has to glue together by hand for every experiment or production line. MHS collapses that into a single interface — an agent talks to a Raspberry Pi driving a microscope the same way it talks to a Universal Robots arm running a plate transfer, using 'read' and 'write' commands plus a per-device reference file. If you were going to write a Python script today to run a serial dilution across a liquid handler, plate reader, and robotic arm, you'd spend most of the effort on integration plumbing; with MHS-compliant hardware, the plumbing is already done and your Python code just tells the agent what to accomplish. The Carnegie Mellon 3x speedup and the QuEra 58%→99.3% quantum-laser-calibration jump are the concrete numbers that back this up, and overnight reporting added two more pilots to that list — a drug-discovery assay at Genentech and a weeks-to-a-day imaging speedup at Janelia itself. Second, the model-agnostic stance is the strategic move. Anthropic is not making Claude the only way to drive MHS-compliant hardware; they're making Claude one of several possible drivers of a standardized ecosystem. That's the same pattern as MCP — which OpenAI, Google, and Microsoft all adopted for their own agents after Anthropic released it — and it's the pattern that turns a single-lab feature into industry infrastructure. If MHS follows the MCP adoption curve, expect OpenAI and Google to add MHS-agent support in their own products within 6-12 months, and expect hardware vendors to start advertising 'MHS-compliant' on data sheets by mid-2027. For a Python hobbyist, this means the frontier-lab agent stack you use in a year will probably be able to control real lab or workshop equipment through the same protocol, regardless of which model you pick. Third — NEW — the OPC Foundation's simultaneous move to prepare 430+ OPC UA Companion Specifications for AI-agent consumption via RAG and MCP is the standards-competition angle Anthropic did not name in its release. OPC UA is the established industrial-automation standard (factories, process plants, energy infrastructure) with 20+ years of rigorous semantic modeling and conformance testing; MHS is the frontier-AI-lab-driven alternative with light-weight natural-language tags. The two are approaching the same AI-to-hardware connection point from opposite directions — MHS optimizing for lab-and-hobbyist speed of adoption, OPC UA optimizing for factory-grade rigor and safety certification. Watch which pattern the second-mover frontier labs choose to support, because that will determine whether MHS becomes the de facto physical-AI standard or gets absorbed into the industrial-standards ecosystem. Fourth — NEW — the independent skeptic read is worth carrying. XenoSpectrum and AI Tools Review both flagged that MHS is not yet a published standard with licensing or conformance testing, and that the pilot safeguards demonstrated so far are meaningful but do not support a general safety or production certification — expert oversight, physical interlocks, and isolated testing remain necessary. For anyone building anything with agents driving physical hardware, that's the honest read: the demos are real, but the production-certification story is not yet in place. The Raspberry Pi partnership is the signal that MHS is being designed to work at hobbyist compute and price scales; combined with Hugging Face's Microduck launch the same day (published in the Aug 29 am file), Anthropic and Hugging Face are moving in tandem on physical-AI standardization — the two announcements read as coordinated infrastructure and consumer-hardware moves. Watch for the open-source release of the MHS spec (Anthropic committed to it but didn't set a date); once that lands, expect an explosion of MHS-compatible community hardware alongside the enterprise adoption.",
+      "why_it_matters_brief": "Anthropic's model-agnostic open spec for AI agents to safely operate physical devices — with new Genentech and Janelia pilot results and an OPC Foundation counter-move (430+ OPC UA Companion Specifications for RAG/MCP), the standards competition for the physical-AI plumbing layer is now on two axes, not one.",
+      "source": {
+        "name": "Anthropic — Previewing the Model Hardware Standard",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-29T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-29T17:15:00Z",
+          "by": "digest",
+          "change": "created — Anthropic opened research preview of the Model Hardware Standard (MHS) on Aug 27, 2026, developed with HHMI Janelia Research Campus; model-agnostic open spec for AI agents to safely operate physical devices (microscopes, liquid handlers, lasers, robotic arms) via standardized read/write driver + per-device reference file with safety limits; initial partners: Doosan Robotics, Tecan, Universal Robots, Hugging Face, Raspberry Pi; concrete early results: 3x speedup on Carnegie Mellon serial dilution dose-response experiments, quantum laser calibration 58%→99.3% at QuEra; integration time weeks/months → hours/minutes; Anthropic plans to open-source the spec; positioned as the MCP-equivalent for physical hardware; sources: Anthropic newsroom (primary), CNBC, PYMNTS, TheRegister, Fortune, SiliconANGLE, TechTimes, Tech Startups, iPhoneInCanada, Business Standard, Quartz, ExplainX, MindStudio, KingyAI; not in prior am/pm files"
+        },
+        {
+          "at": "2026-08-30T06:00:00Z",
+          "by": "enrichment",
+          "change": "enriched — added two additional pilot results (Genentech drug-discovery assay, Janelia weeks-to-a-day imaging speedup) beyond the CMU and QuEra results in the digest; added OPC Foundation counter-move (430+ OPC UA Companion Specifications for RAG/MCP use, converting industrial information models for AI-agent consumption — competing with MHS from the industrial-standards direction); added independent skeptic read (XenoSpectrum, AI Tools Review) that MHS remains unpublished with no licensing or conformance testing disclosed, and that pilot safeguards do not yet support general safety/production certification (expert oversight, physical interlocks, isolated testing still necessary); updated summary, why_it_matters, and why_it_matters_brief accordingly"
+        }
+      ],
+      "takes": [
+        {
+          "source": "Anthropic — Previewing the Model Hardware Standard",
+          "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+          "take": "The canonical primary — spells out the USB-C analogy, the model-agnostic design stance, the initial partner list (Doosan Robotics, Tecan, Universal Robots, Hugging Face, Raspberry Pi), and Anthropic's commitment to eventually open-source the standard."
+        },
+        {
+          "source": "CNBC — Anthropic pushes into physical world with new standard to help AI agents operate machines",
+          "url": "https://www.cnbc.com/2026/08/27/anthropic-pushes-into-physical-world-with-new-standard-to-help-ai-agents-operate-machines.html",
+          "take": "The mainstream US-tech framing — reads MHS as Anthropic's first big move into physical AI infrastructure and captures the industry-standard positioning most clearly for a general audience."
+        },
+        {
+          "source": "The Register — Anthropic proposes plumbing spec to link AI agents to lab kit and robots",
+          "url": "https://www.theregister.com/ai-and-ml/2026/08/28/anthropic-proposes-plumbing-spec-to-link-ai-agents-to-lab-kit-and-robots/5293135",
+          "take": "The developer-audience skeptical read — walks through the technical design of the read/write interface and reference-file model, and asks the useful question of how MHS avoids becoming yet another orphaned standard if OpenAI and Google don't pick it up."
+        },
+        {
+          "source": "Fortune — Anthropic makes first move into physical AI with universal standard that could bring scientific labs to life",
+          "url": "https://fortune.com/2026/08/27/anthropic-makes-first-move-into-physical-ai-with-universal-standard-for-scientists-manufacturing/",
+          "take": "The business-audience framing — positions MHS as the plumbing layer that could accelerate AI-driven scientific research and factory automation, and highlights the Carnegie Mellon 3x-speedup result as the concrete productivity claim."
+        },
+        {
+          "source": "SiliconANGLE — Anthropic previews MHS standard for AI agents that operate machines",
+          "url": "https://siliconangle.com/2026/08/27/anthropic-previews-mhs-standard-for-ai-agents-that-operate-machines/",
+          "take": "The AI-industry-audience read — walks through the parallel between MHS for physical devices and MCP for software tools, and captures the strategic framing that Anthropic is repeating the MCP-standardization playbook one abstraction layer down."
+        },
+        {
+          "source": "TechTimes — Anthropic MHS Cuts Lab Setup From Weeks to Hours: QuEra Lasers Hit 99.3%",
+          "url": "https://www.techtimes.com/articles/325951/20260829/anthropic-mhs-cuts-lab-setup-weeks-hours-quera-lasers-hit-993.htm",
+          "take": "The clearest read on the QuEra quantum-laser result — the 58%→99.3% calibration jump is the single most concrete demonstration of what MHS-driven agent orchestration can do in a hard-real-time optimization setting."
+        },
+        {
+          "source": "XenoSpectrum — Anthropic Previews MHS, a Physical Safety Layer for AI-Controlled Lab Hardware",
+          "url": "https://xenospectrum.com/en/anthropic-mhs-physical-ai-standard/",
+          "take": "The developer-audience skeptic read — usefully qualifies the claim that MHS is a settled standard by noting the specification is unpublished, no licensing or conformance regime is disclosed, and pilots use meaningful safeguards but do not support a general safety or production certification."
+        },
+        {
+          "source": "AI Tools Review — Anthropic's Model Hardware Standard, Explained (August 2026)",
+          "url": "https://aitoolsreview.co.uk/insights/anthropic-model-hardware-standard",
+          "take": "The independent analysis surfacing the OPC Foundation counter-move — 430+ OPC UA Companion Specifications being prepared for RAG/MCP use, converting industrial information models for AI-agent consumption; approaches the same connection point from the opposite direction as MHS (rigorous semantic models vs. light-weight natural-language tags)."
+        },
+        {
+          "source": "PYMNTS — Anthropic Previews Standard for AI Control of Physical Devices",
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-previews-standard-for-ai-control-of-physical-devices/",
+          "take": "The commerce-and-payments-audience framing — reads MHS through the industrial-automation and manufacturing lens rather than the scientific-research lens, useful for internalizing the factory-floor rollout scenarios."
+        },
+        {
+          "source": "Kingy.ai — Anthropic's Model Hardware Standard: What MHS Actually Changes",
+          "url": "https://kingy.ai/blog/anthropic-model-hardware-standard-mhs/",
+          "take": "The engineering-audience explainer — the clearest breakdown of the driver + reference-file architecture and how the safety-limits abstraction is designed to prevent unsafe agent actions."
+        },
+        {
+          "source": "Tech Startups — Anthropic launches Model Hardware Standard to let AI agents control physical machines",
+          "url": "https://techstartups.com/2026/08/27/anthropic-launches-model-hardware-standard-to-let-ai-agents-control-physical-machines/",
+          "take": "The startup-ecosystem read — captures the hardware-vendor adoption pipeline and the community-hardware angle around the Raspberry Pi partnership."
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-omni-1-1-flash-video-scene-extension-4k-upscale-august-27-2026",
+      "tier": 2,
+      "title": "Google DeepMind released Gemini Omni 1.1 Flash on Thursday Aug 27 through the Gemini API, Google AI Studio, and Gemini Enterprise Agent Platform — the video-generation model gains scene extension in 10-second increments up to 40 seconds total (analyzing up to 10 seconds of prior context for continuity), first-and-last-frame camera control for continuous uncut shots ideal for complex orbits, a 360p draft mode that generates previews up to 60% faster at one-third the cost of standard output, and native upscaling to 1080p and 4K resolution; also rolling out globally to Google AI Plus, Pro, and Ultra subscribers inside Google Flow with scene extension accessible via the standard Gemini app; the release transitions the Omni video series from research-preview into a production-ready framework aimed at developers building media-editing software and automated video workflows",
+      "summary": "Google DeepMind on Thursday Aug 27, 2026 released Gemini Omni 1.1 Flash through the Gemini API, Google AI Studio, and the Gemini Enterprise Agent Platform. The release moves the Omni video-generation series from research preview into a production framework aimed at developers building media-editing software and automated video workflows. The four main new capabilities: (1) Scene extension — the model analyzes up to 10 seconds of prior video context and generates continuations in 10-second increments up to 40 seconds total, enabling long-form clip building through iterative extension rather than one-shot generation. (2) First-and-last-frame camera control — developers can specify the starting and ending frames of a shot, and Omni 1.1 Flash renders a continuous uncut sequence between them, well-suited for complex camera orbits and controlled cinematic motion. (3) 360p draft mode — a preview generation mode that produces 360p output up to 60% faster than the standard pipeline at approximately one-third the cost, meant for iteration during creative workflows before committing to full-resolution renders. (4) Native upscaling — final assets support upscaling to 1080p and 4K resolution as part of the same pipeline. The model is also rolling out globally through consumer surfaces: Google AI Plus, Pro, and Ultra subscribers get access inside the Google Flow application, and scene extension is accessible via the standard Gemini app for regular users. NEW: overnight reporting confirmed Gemini Omni 1.1 Flash has taken the #1 slot on Video Arena, the community-benchmark head-to-head comparison for text-to-video generation — the first time Google has held the top slot on that leaderboard, and the concrete third-party validation that the Flash-tier release is competitive on output quality despite being the efficient variant rather than the flagship. NEW: Google published its own developer-facing blog post on the release ('Gemini Omni 1.1 Flash lets you build with more control'), and the Gemini Enterprise Agent Platform documentation surfaced with the full model card. NEW: XenoSpectrum reiterated the important qualification that '4K' is achieved via upscaling from the base output rather than native 4K generation — the distinction that matters for creative-pro workflows evaluating end-to-end quality vs. delivery-format compatibility. Positioning: Omni 1.1 Flash is the Flash-tier variant (efficient, higher-throughput, lower-cost) rather than the full Omni flagship, which is the specific product choice — Google is optimizing for developer-integration and volume-workflow adoption rather than top-of-league output quality. Ground News' summary that pricing and features make AI video generation 'cheaper and more flexible' captures the strategic frame.",
+      "link": "https://dataconomy.com/2026/08/28/google-gemini-omni-11-flash-ai-video-tools/",
+      "why_it_matters": "For Gabe: this is the video-generation release that moves the state-of-the-art from 'one-shot short clip' to 'iterative long-clip workflow', the draft-mode pricing structure means you can actually experiment without burning through a credit budget in an afternoon, and NEW overnight it took the #1 slot on Video Arena — the third-party head-to-head benchmark that says the Flash-tier release is competitive on output quality as well as economics. Four things to sit with. First, the 10-second-increment scene extension is architecturally the interesting move. Prior video generation models forced you to specify the full desired output up front and either got the whole clip right or made you regenerate from scratch. Scene extension lets you build a 40-second clip in four 10-second passes, keeping what works and iterating on what doesn't — which is much closer to how anyone actually edits video. The 10-second prior-context window means the model preserves motion, lighting, and subject continuity across extensions, which was the failure mode of earlier extension approaches. For Python-and-web work, this maps to a workflow where you script iterative-extension calls against the Gemini API and pipe the intermediate frames through your own quality-check logic before deciding whether to accept each extension. Second, the 360p draft mode is the pricing move worth understanding. Video generation has been prohibitively expensive to iterate on because every attempt burns full-resolution compute — a single 4K render might cost dollars per attempt. Draft mode drops that to ~1/3 the cost at 60% faster generation, in exchange for 360p output, which is fine for creative iteration and completely inadequate for final delivery. The workflow shape that unlocks is 'iterate cheap, commit expensive' — generate 20 draft variations, pick the one that works, then upscale to 1080p or 4K for delivery. That's the pricing curve creative pros have been waiting for from every video-gen provider; Google shipping it in the Flash tier signals that they see draft-mode iteration as the path to volume developer adoption. Third — NEW — the Video Arena #1 slot is the concrete community-benchmark validation. Video Arena is the ELO-style head-to-head leaderboard where anonymous pairs of generated videos get voted on by a large community of users, and the winner is aggregated across thousands of comparisons. Taking the #1 slot on the Flash tier — not the flagship — is the read that says Google has genuinely closed the output-quality gap while also winning on economics. That's the pattern OpenAI wasn't able to sustain with Sora (top slot briefly, then dropped as Runway and Kling caught up); the question over the next 60 days is whether the Omni 1.1 Flash lead is durable or gets contested quickly. Fourth, the Flash-tier positioning specifically matters. This is not the flagship Omni model; it's the efficient, high-throughput, lower-cost variant. Google is optimizing Omni 1.1 Flash for developer integration into media-editing software and automated video workflows, not for top-of-league output quality — and the fact that it's still #1 on Video Arena is the signal that the efficient-tier ceiling has caught up to where the flagship-tier ceiling was six months ago. For competitors — Runway, Pika, Meta Muse Glimmer video, Kling — this is Google saying they want to be the video-generation model that shows up inside third-party apps, not just the one you use directly. Watch OpenAI and Meta over the next 60 days for Flash-tier equivalents; the volume-throughput video generation market is now going to be contested at the API-integration layer. For a Python hobbyist, the direct read is that if you're curious about video-gen workflows, this is the release where the price point makes API-driven experimentation feasible rather than prohibitive — and the caveat worth carrying (per XenoSpectrum) is that '4K' is upscaled from base rather than native, which matters if you're evaluating for delivery quality but not if you're prototyping.",
+      "why_it_matters_brief": "Google DeepMind's Flash-tier video model is now #1 on Video Arena — first Google top-slot on the community benchmark — while shipping iterative long-clip scene extension in 10s increments up to 40s, first-and-last-frame camera control, a 360p draft mode at ~1/3 cost, and native upscaling to 4K.",
+      "source": {
+        "name": "Dataconomy — Gemini Omni 1.1 Flash Adds 4K Video Upscaling",
+        "type": "scrape",
+        "url": "https://dataconomy.com/2026/08/28/google-gemini-omni-11-flash-ai-video-tools/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-08-29T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-29T17:15:00Z",
+          "by": "digest",
+          "change": "created — Google DeepMind released Gemini Omni 1.1 Flash on Aug 27, 2026, transitioning the Omni video-generation series from research preview to production API via Gemini API + Google AI Studio + Gemini Enterprise Agent Platform; scene extension in 10-second increments up to 40 seconds (10s prior-context window), first-and-last-frame camera control, 360p draft mode (60% faster, 1/3 cost), native upscaling to 1080p and 4K; also rolling out globally to Google AI Plus/Pro/Ultra subscribers inside Google Flow with scene extension in the standard Gemini app; Flash tier specifically (efficient variant, not flagship) — optimized for developer integration into third-party media-editing software and automated video workflows; sources: Dataconomy, Implicator, Ground News, Windows Report, TechBriefly, XenoSpectrum, HyperAI, NPowerUser; distinct from the Aug 5 Gemini Omni Flash + Google Vids product integration (2026-08-06-am.json); not in prior am/pm files"
+        },
+        {
+          "at": "2026-08-30T06:00:00Z",
+          "by": "enrichment",
+          "change": "enriched — added that Gemini Omni 1.1 Flash has taken the #1 slot on Video Arena (community text-to-video head-to-head leaderboard) — first Google top-slot on the benchmark, concrete third-party validation of output quality on the Flash tier despite being the efficient variant; added Google's own developer-blog post on the release and the Gemini Enterprise Agent Platform documentation as canonical sources; reiterated XenoSpectrum's qualification that '4K' is achieved via upscaling from the base output rather than native 4K generation (distinction matters for creative-pro delivery-quality evaluation); updated summary, why_it_matters, and why_it_matters_brief accordingly"
+        }
+      ],
+      "takes": [
+        {
+          "source": "Google DeepMind Blog — Gemini Omni 1.1 Flash lets you build with more control",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+          "take": "The canonical primary — Google's own developer-facing announcement, spells out the four new capabilities (scene extension, camera control, draft mode, 4K upscaling) and the developer-integration positioning."
+        },
+        {
+          "source": "Dataconomy — Gemini Omni 1.1 Flash Adds 4K Video Upscaling",
+          "url": "https://dataconomy.com/2026/08/28/google-gemini-omni-11-flash-ai-video-tools/",
+          "take": "The clearest full-feature breakdown from independent press — walks through the four main new capabilities plus the availability surfaces; useful for the fast complete read of what shipped."
+        },
+        {
+          "source": "Neowin — Google unveils Gemini Omni 1.1 Flash that can create 4K AI videos of up to 40 seconds",
+          "url": "https://www.neowin.net/news/google-unveils-gemini-omni-11-flash-that-can-create-4k-ai-videos-of-up-to-40-seconds/",
+          "take": "The consumer-tech confirmation of the feature set — useful for the mainstream-tech read on what changed and how it maps to what users see in the Gemini app and Google Flow."
+        },
+        {
+          "source": "Developers Digest — Gemini Omni 1.1 Flash Goes GA: Scene Extension, Keyframe Control, and 4K in the Gemini API",
+          "url": "https://www.developersdigest.tech/blog/gemini-omni-1-1-flash-release-guide-2026",
+          "take": "The developer-integration guide — walks through the Gemini API surface and the workflow shape for building iterative video-generation pipelines against the new endpoints."
+        },
+        {
+          "source": "Google Cloud — Gemini Omni 1.1 Flash Preview | Gemini Enterprise Agent Platform Documentation",
+          "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+          "take": "The canonical enterprise documentation — the full model card for developers integrating via the Enterprise Agent Platform, useful for the definitive read on capabilities, pricing, and API contracts."
+        },
+        {
+          "source": "Implicator — Gemini Omni 1.1 Flash Extends AI Video Clips to 40 Seconds",
+          "url": "https://www.implicator.ai/gemini-omni-1-1-flash-40-second-video-scenes/",
+          "take": "The strongest read on the iterative-extension workflow — captures why the 10-second-increment pattern with 10-second prior context is the architectural innovation worth understanding, not just the 40-second total length."
+        },
+        {
+          "source": "Ground News — Gemini Omni Can Now Extend Videos to 40 Seconds and Upscale Them to 4K",
+          "url": "https://ground.news/article/gemini-omni-11-flash-google-makes-ai-video-generation-cheaper-and-more-flexible",
+          "take": "The clearest pricing-and-workflow framing — the 'cheaper and more flexible' summary captures the strategic bet Google is making with the draft-mode tier."
+        },
+        {
+          "source": "XenoSpectrum — Google's Gemini Omni 1.1 Flash Extends AI Video to 40 Seconds, but 4K Is Upscaled",
+          "url": "https://xenospectrum.com/en/google-gemini-omni-flash/",
+          "take": "The developer-audience skeptical read — usefully qualifies the '4K' claim by noting the resolution is achieved via upscaling from the base output rather than native 4K generation, which matters for creative-pro workflows evaluating end-to-end quality."
+        },
+        {
+          "source": "HyperAI — Google Releases Gemini Omni 1.1 Flash With Enhanced Video Controls",
+          "url": "https://hyper.ai/en/stories/d06021b7ade0362f40f0ac19be811d8d",
+          "take": "The APAC-audience English read — useful for understanding how the release is landing in Asian markets where developer-integration video workflows have been growing fastest."
+        }
+      ]
+    },
+    {
+      "id": "ai-cyber-defense-open-letter-116-companies-openai-anthropic-google-august-27-2026",
+      "tier": 2,
+      "title": "OpenAI, Anthropic, Google, Microsoft, Amazon, and 111 other companies signed an open letter Thursday Aug 27 warning that 'AI-enabled cyber attacks will become far more widespread and sophisticated as models around the world become increasingly capable' and calling for a coordinated public-private cyber defense response — the 116 signatories span frontier AI labs, hyperscalers, security firms (CrowdStrike, Okta, Fortinet, Palo Alto Networks, Cloudflare, Cisco), financial infrastructure (Capital One, Mastercard, Visa), and non-tech (General Motors, Shopify); the letter specifically names hospitals, water utilities and treatment plants, power systems, and internet infrastructure as the sectors facing the highest risk, and asks organizations to raise defensive-tool baselines, upgrade security systems, and use a mix of low-cost and frontier models for defense",
+      "summary": "On Thursday Aug 27, 2026, 116 companies published a joint open letter warning about the near-term rise of AI-enabled cyberattacks and calling for a coordinated public-private response. The signatories include the major frontier AI labs (OpenAI, Anthropic, Google), the major hyperscalers (Microsoft, Amazon, Oracle), the leading security firms (CrowdStrike, Okta, Fortinet, Palo Alto Networks, Cloudflare, Cisco), the major financial-infrastructure firms (Capital One, Mastercard, Visa), and non-tech names including General Motors and Shopify. The core claim from the letter: 'In the coming months, AI-enabled cyber attacks will become far more widespread and sophisticated as models around the world become increasingly capable.' The letter identifies critical-infrastructure sectors as facing the highest risk — hospitals, water utilities and treatment plants, power systems, and the internet infrastructure itself — and calls for a 'collective response' organized around new public-private partnerships to raise defensive-security standards and develop new solutions to emerging cyber threats. Concretely, the letter urges every organization to raise the baseline on defensive tooling, upgrade legacy security systems, and use a mix of low-cost and frontier models specifically for defense (the frontier-model recommendation is a distinct policy stance — the letter is arguing that defenders should not cede model-capability parity to attackers by defaulting to smaller cheaper models on defensive workflows). Independent framing from Axios and CNBC calls this a 'limited window' warning: the signatories are saying the defensive posture the industry can achieve in the next 6-12 months will determine how bad the AI-cyberattack wave gets when it materializes. Notable: Senator Maggie Hassan and Senator Joni Ernst also published a parallel letter to Anthropic on cyber defense the same week, indicating congressional coordination on the same threat picture. NEW: overnight practitioner reaction has been notably sharper than the letter itself — John Gallagher, vice president at Viakoo, publicly disputed the letter's implicit premise that defenders currently hold any advantage, noting that remediation in operational-technology and critical-infrastructure environments 'remains glacial' and comparing a frontier-AI-lab warning of coming disaster while shipping ever more capable models to 'an arsonist selling fire extinguishers'. NEW: also worth carrying — Axios and independent commentary pointed out the specific structural limitation of the letter: it sets no deadlines, pledges no money, and commits to no measurable targets or spending. The letter is a signaling event, not a coordinated defensive-tooling deployment plan, and the practical defensive-tooling investment picture over the next 12 months will be shaped by hyperscaler and security-vendor product releases rather than by the letter's language itself.",
+      "link": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/",
+      "why_it_matters": "For Gabe: this is the frontier-lab-plus-security-industry-plus-critical-infrastructure sector saying out loud that the AI-cyberattack wave is coming within months and that current defensive tooling isn't ready — and NEW overnight, the practitioner response reads a lot more skeptically than the letter itself. Four things to sit with. First, the signatory list is more meaningful than the letter itself. When OpenAI, Anthropic, and Google agree on a public statement about AI risk, that's already unusual — competitive frontier labs rarely coordinate publicly. When Microsoft, Amazon, Cisco, Oracle, CrowdStrike, Okta, Fortinet, Palo Alto Networks, Cloudflare, Capital One, Mastercard, Visa, General Motors, and Shopify sign the same letter, that's a cross-industry alignment on threat picture that the industry has not seen since the 2017 WannaCry ransomware event or the 2020 SolarWinds compromise. The specific composition — every layer of the internet stack from the model labs down through hyperscaler infrastructure, through defensive-security specialists, through the critical-industry consumers of both — is the industry saying 'this is not a technology-vendor problem or an enterprise-buyer problem, this is a stack-wide coordination problem.' Second, the critical-infrastructure sector list — hospitals, water utilities, power systems, internet infrastructure — is the actionable read. These are the sectors that historically have been slowest to modernize security tooling because their operational-continuity constraints make big-bang security upgrades hard. The letter is essentially warning the operators of these systems that AI-enabled adversaries are going to systematically target them and that the defensive baseline they've been living with is no longer adequate. If you're a Python hobbyist paying attention to how AI is going to touch your day-to-day, the honest read is that within 12-18 months, we should expect to see visible AI-enabled attacks on utilities and healthcare systems, and the defensive posture will not be uniformly ready. That's a public-safety concern more than a personal-security one, but it's the shape of the near-term threat landscape. Third, the specific policy recommendation to 'use a mix of low-cost and frontier models for defense' is the interesting one to sit with. The letter is arguing that defenders should not economize on model capability when the attackers won't — that if attackers are going to use frontier models to craft phishing campaigns, discover vulnerabilities, and orchestrate multi-stage intrusions, defenders should not respond with only smaller cheaper models. That has direct implications for how enterprise SIEM (security information and event management) and SOAR (security orchestration, automation, and response) products get rebuilt over the next 12 months — expect Palo Alto, CrowdStrike, and Cloudflare to announce frontier-model-driven defensive tooling as their competitive response. Watch for AWS and Microsoft to launch AI-native security products under their existing security portfolios (Amazon GuardDuty, Microsoft Defender) as the follow-on to this letter over the next 90-120 days. Fourth — NEW — the practitioner skeptic read from John Gallagher (Viakoo VP) and the Axios-flagged structural limitation are the fair pushback worth carrying. The 'arsonist selling fire extinguishers' line is unusually sharp for security-industry public discourse, and it names the exact tension in the letter: the same frontier labs warning that AI will supercharge attacks are also shipping the models that supercharge them, and the defensive-tooling recommendation asks buyers to spend more on those same labs' frontier models. The Axios structural read is the complementary point — no deadlines, no money, no measurable targets. The honest read is that the letter is a signaling event that positions the frontier labs and hyperscalers as defensive-industry partners rather than solely attack-surface risk factors, and the real defensive-tooling story over the next 12 months will be shaped by product releases (Palo Alto, CrowdStrike, Cloudflare, AWS GuardDuty, Microsoft Defender) rather than by the letter's language. Watch for the specific vendor announcements over the next 90-120 days as the actionable follow-through.",
+      "why_it_matters_brief": "116 companies signed the letter, but a Viakoo VP called the frontier-labs stance 'an arsonist selling fire extinguishers' and Axios flagged no deadlines, no money, no measurable targets — the signaling matters but the real defensive-tooling story over 12 months will be vendor product releases, not the letter.",
+      "source": {
+        "name": "TechCrunch — OpenAI, Anthropic, Google, and 100 other companies call for action to defend against rogue AI",
+        "type": "scrape",
+        "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-29T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-29T17:15:00Z",
+          "by": "digest",
+          "change": "created — 116 companies signed a joint open letter Aug 27, 2026 warning that AI-enabled cyberattacks will become widespread within months and calling for coordinated public-private defense; signatories span frontier AI labs (OpenAI, Anthropic, Google), hyperscalers (Microsoft, Amazon, Oracle), security firms (CrowdStrike, Okta, Fortinet, Palo Alto Networks, Cloudflare, Cisco), financial infrastructure (Capital One, Mastercard, Visa), and non-tech (GM, Shopify); critical-infrastructure sector list: hospitals, water utilities and treatment plants, power systems, internet infrastructure; recommends mix of low-cost and frontier models for defense (frontier-model recommendation is a distinct policy stance); Sen. Maggie Hassan and Sen. Joni Ernst published parallel letter to Anthropic same week; sources: TechCrunch, Gizmodo, Quartz, Axios, CNBC, Tech-Insider (multiple), Progressive Robot; Senate letter as separate primary document (Hassan-Ernst); not in prior am/pm files"
+        },
+        {
+          "at": "2026-08-30T06:00:00Z",
+          "by": "enrichment",
+          "change": "enriched — added the sharp practitioner-skeptic reaction from John Gallagher (Viakoo VP) publicly disputing the letter's implicit premise of defender advantage, noting that operational-technology and critical-infrastructure remediation 'remains glacial', and comparing frontier labs warning of disaster while releasing ever more capable models to 'an arsonist selling fire extinguishers'; added the Axios-flagged structural limitation that the letter sets no deadlines, pledges no money, and commits to no measurable targets — it is a signaling event, not a coordinated deployment plan; positioned real defensive-tooling story over 12 months as being shaped by vendor product releases (Palo Alto, CrowdStrike, Cloudflare, AWS GuardDuty, Microsoft Defender) rather than by the letter itself; updated summary, why_it_matters, and why_it_matters_brief accordingly"
+        }
+      ],
+      "takes": [
+        {
+          "source": "TechCrunch — OpenAI, Anthropic, Google, and 100 other companies call for action to defend against rogue AI",
+          "url": "https://techcrunch.com/2026/08/27/openai-anthropic-google-and-100-other-companies-call-for-action-to-defend-against-rogue-ai/",
+          "take": "The primary tech-industry read — captures the full signatory scope and the 'rogue AI' framing, and reads the letter as a cross-industry coordination moment rather than a single-lab statement."
+        },
+        {
+          "source": "CNBC — 'We have a limited window': 116 companies, entities sign on to major AI cyber defense push",
+          "url": "https://www.cnbc.com/2026/08/27/ai-cyber-defense-letter.html",
+          "take": "The mainstream US business framing — captures the 'limited window' urgency messaging and the sector-list detail on critical infrastructure; useful for understanding how the mainstream financial press is reading the threat timeline."
+        },
+        {
+          "source": "Axios — OpenAI, Anthropic, Microsoft warn of growing AI cyberattacks",
+          "url": "https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning",
+          "take": "The compact executive-audience read — the 'dire cyber threat warning' framing is the sharpest single-sentence version of what the letter is saying, and Axios also surfaced the structural limitation that the letter sets no deadlines, no money, no measurable targets."
+        },
+        {
+          "source": "Implicator — OpenAI, Anthropic and 100 Firms Urge a Cyber Defense Surge",
+          "url": "https://www.implicator.ai/openai-anthropic-100-firms-cyber-defense-letter/",
+          "take": "The analytical read — walks through the practitioner-skeptic reaction from John Gallagher (Viakoo VP) publicly disputing the letter's implicit premise, and the 'arsonist selling fire extinguishers' framing that names the tension between shipping frontier models and warning about their misuse."
+        },
+        {
+          "source": "Gizmodo — Google, OpenAI and Over 100 Companies Call for More Action on AI-Driven Cyberattacks",
+          "url": "https://gizmodo.com/google-openai-and-over-100-companies-call-for-more-action-on-ai-driven-cyberattacks-2000804091",
+          "take": "The tech-audience explainer — walks through the industry-coordination angle and captures the signatory-list scope in plain language."
+        },
+        {
+          "source": "Quartz — OpenAI, Anthropic, Google, and more than 100 other companies have a warning about AI cyberattacks",
+          "url": "https://qz.com/openai-anthropic-google-ai-cyberattack-open-letter-082726",
+          "take": "The consumer-business framing — reads the letter as a market signal about which security firms are positioning as the defensive-tooling winners and captures the critical-infrastructure sector list."
+        },
+        {
+          "source": "The Wrap — OpenAI and Over 100 Tech Companies Call for Collective Action on Cyber Defense: 'We Have a Limited Window'",
+          "url": "https://www.thewrap.com/industry-news/tech/openai-open-letter-collective-action-cybersecurity-ai/",
+          "take": "The media-industry framing — captures the 'limited window' language and reads the letter through the lens of coordinated industry messaging."
+        },
+        {
+          "source": "Sen. Hassan / Sen. Ernst — Congressional letter to Anthropic on AI cyberattack risk",
+          "url": "https://www.hassan.senate.gov/imo/media/doc/hassan-ernst_anthropic_ai_cyberattack_letter.pdf",
+          "take": "The parallel congressional letter — the same week's Senate coordination on the same threat picture, useful for understanding that the industry letter and the congressional posture are aligned rather than in tension."
+        },
+        {
+          "source": "Progressive Robot — Collective Cyber Defense: A Surprising, Smart Alliance",
+          "url": "https://www.progressiverobot.com/2026/08/28/collective-cyber-defense-openai-letter-rogue-ai/",
+          "take": "The follow-up analytical framing — reads the alliance as an unusual cross-industry coordination and asks the useful question of whether it will translate into actual joint action or remain a signaling event."
+        }
+      ]
+    },
+    {
+      "id": "temporal-2026-state-of-ai-agents-report-daily-agent-use-jump-august-2026",
+      "tier": 3,
+      "title": "Temporal published its 2026 State of Development Report on AI Agents this week — 80.8% of surveyed engineers now use AI agents daily or more, up from 47.3% a year earlier (a 70.8% year-over-year jump); the survey (April 29 - May 25, 2026, 554 engineers after quality filtering from 650 raw respondents) also finds that 91.1% say agents have 'improved' or 'revolutionized' their productivity and 85.5% trust agent outputs at least somewhat, but 41.1% encounter agent-related issues daily; Temporal's CEO frames the takeaway as 'teams pulling ahead are those who trust their systems more because they've solved for state, cost, and reliability'",
+      "summary": "Temporal (the durable-execution platform startup) published its second annual State of Development Report on AI Agents this week. The headline number: 80.8% of surveyed engineers now report using AI agents daily or more, up from 47.3% one year earlier — a 70.8% year-over-year adoption jump. The survey was conducted April 29 through May 25, 2026, with 650 raw respondents narrowed to 554 after removing low-quality responses. NEW: three additional data points from the report worth carrying alongside the headline adoption number — 91.1% of respondents say AI agents have 'improved' or 'revolutionized' their productivity, 85.5% trust agent outputs at least somewhat, and 41.1% encounter agent-related issues daily. The interpretive tension in those four numbers together — daily adoption at 80.8%, productivity improvement claim at 91.1%, trust at 85.5%, and daily operational issues at 41.1% — is the report's core substantive finding: engineers are using agents heavily and reporting real productivity gains, and roughly two out of five still hit an agent-related failure every day. Beyond the adoption number, the report's core argument is that adoption has raced ahead of the operational infrastructure to run agents reliably: engineering teams are widely using agents in their daily workflows but many teams have not yet solved for durable state (agents that lose progress on failure), cost management (agents that run unbounded LLM calls without budgeting), and reliability (agents that produce inconsistent results across runs). Temporal's CEO frames the takeaway as 'teams pulling ahead are those who trust their systems more because they've solved for state, cost, and reliability' — which is a self-interested framing given that Temporal sells the workflow-orchestration infrastructure that addresses those exact concerns, but the underlying survey data on the gap between adoption speed and operational maturity is consistent with other 2026 industry reports (Databricks, Anthropic's own State of AI Agents Report). The report also notes a widening gap between teams that have figured out how to use agents effectively for coding and those still catching up.",
+      "link": "https://temporal.io/reports/state-of-development-2026",
+      "why_it_matters": "For Gabe: this is one of the clearest signals of how fast AI-agent adoption has moved in the developer community, and the state-cost-reliability framing is worth internalizing even if you're not paying Temporal for orchestration. Four things to sit with. First, the raw adoption number: 80.8% of engineers using AI agents daily, up from 47.3% a year ago, is the industry moving from 'the early majority is experimenting' to 'daily-workflow default' inside 12 months. That's faster than the smartphone-app adoption curve inside enterprise IT, faster than the cloud-migration adoption curve, and comparable to the fastest developer-tool adoption curves in the last 15 years (Docker in 2013-2015, TypeScript in 2016-2019). If you write Python code at all — hobby or otherwise — the industry expectation as of Q2 2026 is that you use agents somewhere in your workflow every day. Even the informal end of that means using Claude, Cursor, Copilot, or similar AI coding tools; the professional-workflow end means agentic workflow systems that pick up tasks and run them without live supervision. Second — NEW — the productivity-trust-vs-daily-issues paradox in the report is worth internalizing more than the headline number. 91.1% saying agents have improved or revolutionized productivity, 85.5% trusting agent outputs at least somewhat, and 41.1% encountering an agent-related issue daily is a picture of tools that are genuinely delivering value while also being genuinely unreliable — which is the shape of every technology in its 'daily-default but not-yet-solid' phase (early web browsers around 1997, early smartphone apps around 2010, early Docker containers around 2014). The honest read is: agents work well enough to be a daily productivity boost for the large majority of engineers, and they fail often enough that you should not build production workflows around them without deliberate operational hardening. Third, the state-cost-reliability triad Temporal names is a genuinely useful mental model, even if you don't buy Temporal's product to solve it. 'State' means: when an agent fails halfway through a multi-step task, does it restart from scratch or pick up where it left off? 'Cost' means: are your agent's LLM calls budgeted and instrumented so you know what a task actually costs before you deploy it at volume? 'Reliability' means: given the same input twice, does the agent produce consistent-enough output for you to trust it in a production workflow? For a Python hobbyist building agent-shaped scripts, those are the three questions that separate 'toy demo that works in a notebook' from 'workflow you actually rely on'. The report is essentially arguing that the industry-wide gap between 'I use agents daily' and 'my agents actually work reliably' is where the operational maturity work happens over the next 12-18 months, and the 41.1%-daily-issues number is the concrete size of that gap right now. Fourth, the widening gap between teams-that-have-figured-out-agent-coding and teams-still-catching-up is worth watching as a career-relevance signal. If you're doing hobbyist Python work with Claude Code (or Cursor, or Aider), the workflow patterns you're building — using an agent to plan multi-file changes, letting it iterate on test failures, giving it long-running tasks — are the same patterns the professional-productivity-leader tier of engineers is using. The industry-average engineer is using agents casually; the top-quartile engineer is using them systematically. The Temporal survey suggests that the productivity delta between those two groups is compounding fast. Worth noting: the CEO's framing is self-interested (Temporal sells the exact infrastructure that solves state-cost-reliability), but the underlying survey data corroborates similar findings from Databricks and Anthropic's independent reports.",
+      "why_it_matters_brief": "80.8% of engineers now use AI agents daily (up from 47.3%), 91.1% report productivity gains and 85.5% trust outputs, but 41.1% hit an agent-related issue every day — the tools are already the daily default, and roughly two out of five sessions still fail.",
+      "source": {
+        "name": "Temporal — The 2026 State of Development Report: AI Agents",
+        "type": "scrape",
+        "url": "https://temporal.io/reports/state-of-development-2026"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-08-29T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-08-29T17:15:00Z",
+          "by": "digest",
+          "change": "created — Temporal published its 2026 State of Development Report: AI Agents this week; 80.8% daily agent use (up from 47.3% year over year, 70.8% jump); 554 respondents post-filter from 650 raw (April 29 - May 25, 2026); core argument: adoption has raced ahead of state/cost/reliability infrastructure; widening gap between teams-that-have-figured-out-agent-coding and teams-still-catching-up; CEO's framing is self-interested (Temporal sells durable-execution / workflow-orchestration infrastructure) but survey data corroborated by Databricks and Anthropic State of AI Agents reports; sources: Temporal blog, Temporal reports page, MarTechSeries, IntuitionLabs, Databricks report, DigitalApplied summary; not in prior am/pm files"
+        },
+        {
+          "at": "2026-08-30T06:00:00Z",
+          "by": "enrichment",
+          "change": "enriched — added three additional data points from the report beyond the headline daily-adoption number: 91.1% say agents have 'improved' or 'revolutionized' productivity, 85.5% trust agent outputs at least somewhat, 41.1% encounter agent-related issues daily; framed the four numbers together as the productivity-trust-vs-daily-issues paradox — tools that genuinely deliver value while also being genuinely unreliable, the shape of every technology in its 'daily-default but not-yet-solid' phase; updated summary, why_it_matters, and why_it_matters_brief accordingly"
+        }
+      ],
+      "takes": [
+        {
+          "source": "Temporal — The 2026 State of Development Report: AI Agents",
+          "url": "https://temporal.io/reports/state-of-development-2026",
+          "take": "The canonical primary — the full report methodology, survey demographics, and all the underlying data cuts including the 91.1% productivity-improvement figure, the 85.5% trust figure, and the 41.1% daily-issues figure; the definitive read on what the survey actually says."
+        },
+        {
+          "source": "MarTechSeries — Temporal Releases 'The 2026 State of Development Report: AI Agents,' Revealing a 70.8% Leap in AI Agent Use Among Engineers",
+          "url": "https://martechseries.com/predictive-ai/ai-platforms-machine-learning/temporal-releases-the-2026-state-of-development-report-ai-agents-revealing-a-70-8-leap-in-ai-agent-use-among-engineers/",
+          "take": "The industry-press summary — captures the year-over-year jump number and the state-cost-reliability framing in plain-English form suitable for a fast read."
+        },
+        {
+          "source": "Temporal — Durable Digest: August 2026",
+          "url": "https://temporal.io/blog/durable-digest-august-2026",
+          "take": "The vendor-blog contextualization — walks through how Temporal thinks about the report's findings in terms of their own durable-execution platform, useful for reading the CEO's framing critically."
+        },
+        {
+          "source": "IntuitionLabs — Agentic AI Workflows: Why Orchestration with Temporal is Key",
+          "url": "https://intuitionlabs.ai/articles/agentic-ai-temporal-orchestration",
+          "take": "The independent developer-audience take — walks through why the state-cost-reliability triad matters for real production agent workflows and evaluates Temporal's positioning against the report's findings."
+        },
+        {
+          "source": "DigitalApplied — State of AI Agents 2026: 200+ Data Points Compiled",
+          "url": "https://www.digitalapplied.com/blog/state-of-ai-agents-2026-200-data-points",
+          "take": "The cross-report aggregation — synthesizes the Temporal findings alongside Databricks and Anthropic reports, useful for verifying that Temporal's adoption numbers are consistent with independent surveys rather than an outlier."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
