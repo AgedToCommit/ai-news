@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-30T11:28:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-30T11:10:00Z",
+      "ended_at": "2026-08-30T11:28:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 4500,
+        "output_write": 7000
+      },
+      "fetches_made": 5,
+      "items_input": 0,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-30-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — today's am file (2026-08-30-am.json) existed from the 2am enrichment run. RSS/scrape sweep filtered to last 5 hours (since enrichment ended_at 2026-08-30T06:30:00Z). WebFetch blocked by proxy; used WebSearch exclusively (5 queries). Overnight Asia/Europe cycle on Sunday Aug 30 appears quiet: no Tier-1 or Tier-2 announcements found published in the last 5 hours. Candidates investigated: (1) Alibaba Qwen3.8-Max open weights — released Aug 12, 2026, already in prior snapshot coverage window; (2) AWS Mechanical Turk shutdown — announced Aug 25/26, already old news from prior snapshots; (3) GLM-5.3 Flash from Z.AI — Aug 26, below Tier cutoff and outside last-5h window. No items added. No Tier-1 items required summary revision (no new overnight chatter found for MHS item). Items added: 0."
+    },
+    {
       "run_id": "2026-08-30T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
