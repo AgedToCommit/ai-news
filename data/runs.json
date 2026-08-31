@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-31T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-08-31T17:00:00Z",
+      "ended_at": "2026-08-31T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 14000,
+        "output_write": 8000
+      },
+      "fetches_made": 14,
+      "items_input": 8,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-31-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — today's am file (2026-08-31-am.json) contained 6 items (Anthropic infostealer T1, DeepSeek $7.4B/74B T1, Anthropic Claude Code weekly-limits 17% cut T2, OpenAI-Cursor-SpaceX termination T2, OpenAI Mac mini RL buying spree T2, DALL·E GPT retirement T3), all excluded by default per promotion rule. Since last refresh ended 11:15Z, sweep window was ~6 hours. WebFetch remained blocked by proxy per prior runs; used WebSearch exclusively (14 queries) to identify late-breaking candidates. Candidates evaluated: (a) OpenAI Hugging Face breach official report + METR/Redwood 91-page independent investigation from Aug 26 — confirmed not in any prior am/pm snapshot (checked 2026-08-2*-*.json and 2026-08-30-*.json); added as Tier 1 US. (b) Sony Music Publishing / Warner Chappell joint federal lawsuit against Anthropic filed Aug 29 — confirmed not in any prior snapshot; added as Tier 2 US. (c) Salesforce/Anthropic Claudeforce partnership — already covered Aug 27 am/pm and 28 am; skip. (d) Judge Rita Lin ruling on Pentagon supply-chain-risk designation of Anthropic — already covered Aug 28 pm and 29 am; skip. (e) Qwen3.8-Flash-Next Alibaba release — already covered Aug 26-28 across am/pm; skip. (f) OpenAI Python SDK v3.5.0 / Node SDK 7.7-7.8 release — modest developer-tool point release, not worth its own item; skip. (g) Sonnet 5 introductory pricing ending Aug 31 — pricing was locked permanent on Aug 10 per prior am file coverage; non-event. No Tier 1 optional re-pass on am items since all 6 are recent and no material new angles surfaced in the sweep window. No cap hit. No promotion from am file."
+    },
+    {
       "run_id": "2026-08-31T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
