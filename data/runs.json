@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-31T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-08-31T06:00:00Z",
+      "ended_at": "2026-08-31T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 17500,
+        "output_write": 11000
+      },
+      "fetches_made": 6,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-31-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — yesterday's pm file (2026-08-30-pm.json) had 3 items; all 3 survived enrichment with new context and none dropped. (1) Claude Code weekly limits: added overnight development that Anthropic deleted its original ClaudeDevs X post that led with '25% permanent raise' and reissued a follow-up plainly admitting the 17% users-facing reduction, and teased new dashboard tools for direct visibility into remaining weekly quota; additional sources Android Headlines, Startup Fortune, GsMgoTech, Enterprise DNA framing the deletion-and-reissue as a corporate-communications case study. (2) OpenAI/Cursor/SpaceX: added that OpenAI formally notified SpaceX of the wind-down on Aug 28 (two-week window between Aug 14 deal close and formal notification is fast for M&A-review purposes), and Cursor CEO Michael Truell publicly confirmed the 5% traffic figure and stated the companies are 'still discussing'; additional sources Engadget, TeslaNorth, Gagadget, CellCog, Winzheng, ANI News. (3) DALL·E retirement: added that OpenAI first announced the retirement on July 31 giving 30 days notice, DALL·E retirement is part of a broader ChatGPT redesign that makes GPT-5.6 the new default for Free and Go plans, and gpt-image-1 replacement is a real quality upgrade over retiring DALL·E (better complex-scene handling, fewer visual artifacts, better compositional understanding); additional source ITdaily. Late-breaking pass added 2 items: (a) TIER 1 — Anthropic disclosed late Aug 30 that infostealer malware (Vidar, LummaC2, StealC, RedLine on Windows; Atomic Stealer on macOS) is hijacking Claude session cookies from infected PCs and replaying them to access accounts and drain usage; company is signing users out, wiping saved payment methods, refunding unauthorized charges; first public infostealer campaign to target AI-service session cookies in the wild; sources BleepingComputer, Search Engine Journal, OffSeq threat radar, MeetCyber, News4Hackers, We Fix PC. (b) TIER 2 — The Information's Aaron Tilley reported over the Aug 30 weekend that OpenAI has quietly bought tens of thousands of Mac mini/Mac Studio units for RL and computer-use agent training; Anthropic uses same approach via rented Mac capacity on AWS; the buying spree triggered Apple to accelerate its Mac mini (M6/M5 Pro) and Mac Studio (M5 Max/M5 Ultra) refresh on Aug 25; Nvidia now names Apple as principal local-AI competitor; sources The Information (via Aaron Tilley), Free Press Journal, WCCFTech, CryptoBriefing, News Bytes, CoinDesk, GameBastion. WebFetch remained blocked by proxy; used WebSearch exclusively (6 queries). No cap hit. No promotion from prior am files."
+    },
+    {
       "run_id": "2026-08-30T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
