@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-08-31T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-08-31T11:00:00Z",
+      "ended_at": "2026-08-31T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 5000,
+        "output_write": 5000
+      },
+      "fetches_made": 7,
+      "items_input": 1,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-08-31-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — today's am file (2026-08-31-am.json) from 2am enrichment existed. Last enrichment ended at 2026-08-31T06:30:00Z. 5-hour sweep (06:30Z to 11:00Z) via WebSearch exclusively (WebFetch remained blocked by proxy per prior runs). Candidates evaluated: (a) DeepSeek $7.4B funding round at $74B pre-money valuation — confirmed not in any recent snapshot; China Money Network / SCMP reporting from Aug 28-29 targeting end-of-August close; CATL, Monolith, Shixiang Capital as investors; IPO prep for 2026 filing / 2027 STAR Market debut; added as Tier 1 Asia. (b) OpenAI GPT-Live voice model — confirmed July 8, 2026 launch, too old for refresh. (c) AWS MiniMax on Bedrock — confirmed March/July launch dates, too old. (d) NPR/NewsGuard chatbot misinformation study — Tier 3 at best, insufficient detail to add confidently. Tier 1 optional re-pass: Anthropic infostealer story (Tier 1) reviewed for new overnight chatter — enrichment run was comprehensive and no materially new angle surfaced in the 2:30am-7am EDT window; no revision made. No cap hit."
+    },
+    {
       "run_id": "2026-08-31T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
