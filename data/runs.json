@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-01T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-01T11:00:00Z",
+      "ended_at": "2026-09-01T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 33000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 6000,
+        "output_write": 3000
+      },
+      "fetches_made": 11,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-01-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard path — today's 2026-09-01-am.json existed from enrichment run (06:30Z, 2 items: OpenAI/Hugging Face breach T1 + Sony/Warner v. Anthropic T2). WebFetch blocked by proxy per prior runs; used WebSearch (6 direct queries + 5 via subagent) to sweep for overnight items since 06:30Z. Items added: (1) Pentagon GenAI.mil expansion — ChatGPT Mil and Grok for Government added to the DoD secure portal (DefenseScoop Aug 31; The Hill affiliates), with the notable angle that Anthropic is being actively removed from DoD systems after Trump admin supply-chain-risk designation; Tier 2 US; not in prior snapshots (digest notes reference the Judge Rita Lin ruling in Aug 28-29 files as a separate story; this expansion is distinct). (2) LUMI-AI supercomputer — EuroHPC JU signed €387.8M contract with Bull/Atos for 10× LUMI AI capacity at Kajaani Finland (HPCwire, GlobeNewswire, The Next Web, Aug 31); AMD MI430X; H2 2027 deployment; Tier 2 EU; overnight European item not in prior snapshots. Items evaluated but not added: Claude Code Opus 5 Auto Mode prompt-injection vulnerability (Embrace The Red/Johann Rehberger, primary source Aug 27) — outside refresh window (since 06:30Z); secondary coverage (CybersecurityNews, GBHackers, BankInfoSecurity) also pre-dates window. Clipto $15M raise (TechCrunch Aug 31) — Tier 3 startup funding, insufficiently notable. No cap hit. No re-pass on existing Tier 1 items; the OpenAI/HF breach item was fully enriched at 2am with no new overnight angles surfaced."
+    },
+    {
       "run_id": "2026-09-01T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
