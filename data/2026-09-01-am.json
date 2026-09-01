@@ -2,20 +2,21 @@
   "snapshot_id": "2026-09-01-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-01",
-  "generated_at": "2026-09-01T06:30:00Z",
-  "generated_at_local": "2026-09-01T02:30:00-04:00",
+  "generated_at": "2026-09-01T11:15:00Z",
+  "generated_at_local": "2026-09-01T07:15:00-04:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-09-01T06:30:00Z",
       "duration_ms": 1800000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-09-01T11:15:00Z",
+      "duration_ms": 900000
     }
   ],
-  "tier_counts": {
-    "1": 1,
-    "2": 1,
-    "3": 0
-  },
+  "tier_counts": { "1": 1, "2": 3, "3": 0 },
   "items": [
     {
       "id": "openai-hugging-face-breach-official-report-metr-redwood-91-page-investigation-persistent-sol-august-26-2026",
@@ -214,6 +215,96 @@
           "source": "XenoSpectrum — 35 Sony and Warner Music Publishers Sue Anthropic Over Song Lyrics From Pirated Books",
           "url": "https://xenospectrum.com/en/sony-warner-anthropic-music-copyright-lawsuit/",
           "take": "The framing that surfaces the specific evidentiary claim — the complaint's allegation that many song lyrics were obtained via the same pirated-books-Libgen channel that was central to the Sept 2025 authors case, tying the two cases together on the same evidentiary foundation."
+        }
+      ]
+    },
+    {
+      "id": "pentagon-genai-mil-chatgpt-mil-grok-for-government-anthropic-excluded-august-31-2026",
+      "tier": 2,
+      "title": "ChatGPT Mil and Grok for Government joined Google Gemini on the Pentagon's GenAI.mil enterprise portal on August 31, 2026, giving all 3 million DoD personnel single-portal access to frontier commercial AI — Anthropic's Claude is absent after the Trump administration designated Anthropic a national security supply-chain risk following the company's refusal to commit Claude to unrestricted military use including fully autonomous weapons; Pentagon CTO Emil Michael confirmed last week that complete removal of Anthropic platforms from DoD systems will finish by end of September",
+      "summary": "On August 31, 2026 the Department of Defense added OpenAI's ChatGPT Mil and xAI/Starshield's Grok for Government to its GenAI.mil secure enterprise portal, which previously offered Google Gemini as its sole frontier AI model. The expansion gives all 3 million DoD personnel access to three frontier commercial models on a single classified-compatible platform; 1.7 million users were already onboarded as of the announcement. Anthropic's Claude is not part of the expansion and is being actively removed from DoD systems: the Trump administration designated Anthropic a national security supply-chain risk after Anthropic sought contractual guarantees that Claude would not be used for fully autonomous weapons or mass surveillance — terms the Pentagon required Anthropic to waive and Anthropic declined. Pentagon CTO Emil Michael confirmed last week that removal of Anthropic's platforms from all DoD systems will be complete by end of September 2026.",
+      "link": "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/",
+      "why_it_matters": "For Gabe: this is the clearest picture yet of how the frontier AI labs are dividing on government military access, and the Anthropic exclusion is the more interesting part of the story. Two layers worth understanding. First, the scale of the GenAI.mil deployment: 3 million DoD personnel is not a pilot — it's a production-scale enterprise rollout where OpenAI, Google, and xAI are all available to any .mil credential on a single secure platform. That's a significant milestone for how fast government AI adoption is actually moving; a multi-model secure portal at this scale would have seemed like a 3-to-5-year initiative as recently as 2023. Second, the Anthropic exclusion reveals what the AI usage-policy line in the sand actually costs. Anthropic is the only major frontier lab that has tried to hold its model-use restrictions against a government customer at scale — specifically the clauses in Claude's usage policy that prohibit use in fully autonomous weapons and mass surveillance. The Pentagon wanted those clauses waived. Anthropic declined. The result is that Anthropic is now formally designated a supply-chain risk by the Trump administration and is in the process of being removed from all DoD systems, while OpenAI, Google, and xAI — which agreed to unrestricted or broader military access — are all on GenAI.mil. This is not a hypothetical tradeoff between safety values and market access; it's the actual outcome playing out in real time, with a September 2026 deadline. For anyone building with or around Claude specifically: the Pentagon removal means Anthropic's government revenue from US defense and intelligence is going to zero, which is non-trivial for a lab at Anthropic's current revenue scale. Watch whether other allied governments (UK MoD, Five Eyes partners) follow the Trump administration's lead or maintain their existing Anthropic relationships — that will be the next data point on whether the exclusion is US-specific or industry-wide.",
+      "why_it_matters_brief": "OpenAI, Google, and xAI are now on the Pentagon's GenAI.mil portal for 3M DoD users — Anthropic is being fully removed by end of September after the Trump admin flagged it as a supply-chain risk for refusing to waive Claude's autonomous-weapons restriction.",
+      "source": {
+        "name": "DefenseScoop — Grok and ChatGPT join Gemini in Pentagon's enterprise genAI portal",
+        "type": "scrape",
+        "url": "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-01T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-01T11:15:00Z",
+          "by": "refresh",
+          "change": "created — DefenseScoop Aug 31 reported ChatGPT Mil and Grok for Government added to Pentagon's GenAI.mil portal alongside existing Gemini, for 3M DoD personnel; Anthropic's Claude absent and being actively removed after Trump administration supply-chain-risk designation following Anthropic's refusal to commit Claude to unrestricted military use; Pentagon CTO Emil Michael confirmed removal complete by end of September; sources: DefenseScoop, The Hill, mypanhandle/wkrn/fox affiliates"
+        }
+      ],
+      "takes": [
+        {
+          "source": "DefenseScoop — Grok and ChatGPT join Gemini in Pentagon's enterprise genAI portal",
+          "url": "https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/",
+          "take": "The defense-technology trade-press primary — the most detailed account of the GenAI.mil expansion, the three-model lineup, and the operational status (1.7M users onboarded); includes the Anthropic absence in context."
+        },
+        {
+          "source": "The Hill — Pentagon adds Grok for Government and ChatGPT for military use",
+          "url": "https://thehill.com/policy/defense/6061714-pentagon-adds-grok-chatgpt-ai/",
+          "take": "The policy-press read — centers the political angle of xAI's rapid entry into DoD systems via the Starshield partnership and captures the Anthropic exclusion in the context of the Trump administration's broader AI procurement posture."
+        },
+        {
+          "source": "DefenseScoop — DOD expands its classified AI work with 8 companies — excluding Anthropic — amid ongoing dispute",
+          "url": "https://defensescoop.com/2026/05/01/dod-expands-classified-ai-work-with-8-companies-excluding-anthropic/",
+          "take": "Background context — the May 2026 DefenseScoop report on the earlier DoD classified-AI expansion that first made the Anthropic exclusion explicit, useful for understanding the multi-step timeline of how the supply-chain-risk designation played out."
+        }
+      ]
+    },
+    {
+      "id": "lumi-ai-supercomputer-eurohpc-bull-atos-amd-mi430x-387-million-euros-august-31-2026",
+      "tier": 2,
+      "title": "EuroHPC JU signed a €387.8 million contract on August 31, 2026 with Bull (an Atos subsidiary) to build LUMI-AI at CSC's Kajaani data center in Finland — powered by AMD Instinct MI430X GPUs and 6th-generation EPYC 256-core CPUs, targeting roughly 10× the AI compute capacity and 2× the HPC throughput of the existing LUMI machine, with deployment targeted for H2 2027",
+      "summary": "EuroHPC JU — the EU/member-state joint body created to procure frontier compute outside US hyperscaler control — signed a €387.8 million contract on August 31, 2026 with Bull (an Atos subsidiary) to build LUMI-AI at CSC's data center in Kajaani, Finland, the same site as the current LUMI supercomputer. The new system is powered by AMD Instinct MI430X GPUs (the latest AMD data-center accelerator) and 6th-generation EPYC 256-core CPUs, with a stated design target of roughly 10× the AI compute capacity and 2× the HPC throughput of the current LUMI machine. LUMI, when it launched in 2022, was ranked Europe's leading supercomputer; LUMI-AI at that multiplier would put it in range of US frontier AI compute clusters. Deployment is targeted for the second half of 2027. The primary contract award goes to Bull, a French subsidiary of Atos, keeping the contracting entity on European soil even though the GPU architecture (AMD) and deployment site (Finland) cross borders within the European AI sovereignty framework EuroHPC JU was designed to enable.",
+      "link": "https://www.hpcwire.com/off-the-wire/bull-selected-to-deliver-europes-e387-8m-lumi-ai-supercomputer-in-finland/",
+      "why_it_matters": "For Gabe: this is the largest single AI infrastructure procurement in European history, and the hardware and procurement structure are both worth understanding. Three things stand out. First, the AMD MI430X GPU choice is notable. Europe is buying AMD's newest data-center accelerator — a chip not yet in broad public availability — rather than NVIDIA H100/H200/Blackwell, which is the default choice for frontier AI compute. This is partly pragmatic (NVIDIA export control timelines into Europe have been unpredictable) and partly strategic (AMD gives Europe a credible non-NVIDIA path for AI infrastructure). If LUMI-AI performs at spec, it becomes the most powerful public benchmark of the AMD MI400-family stack outside of AMD's own test clusters, and it's going to generate a lot of real workload data on how AMD's AI accelerators compare to NVIDIA at HPC scale. Second, the 10× figure is the key number to put in context. The existing LUMI is already one of the top AI supercomputers in Europe — it's a real frontier machine, not a regional novelty. 10× LUMI would put LUMI-AI in credible range of the compute scale that OpenAI, Anthropic, and Google are training frontier models on. Europe has never had that kind of publicly-accessible training compute before; most EU AI research labs have had to queue for time on LUMI or use private cloud. LUMI-AI at this scale materially changes what EU academic and open-science AI research can do. Third, the EuroHPC JU structure is the political story that connects this to everything else happening in AI right now. EuroHPC was created specifically so Europe could procure frontier compute without going through AWS, Azure, or Google Cloud — a sovereignty play that's been gaining momentum as AI infrastructure becomes a genuine geopolitical resource. The primary contract to Bull (French, Atos subsidiary) is the embodiment of that strategy: AMD chips (US), Finnish site, French primary contractor, EU joint-body procurement. That's the template Europe is trying to scale, and at €387.8M this is the largest single instantiation of it so far.",
+      "why_it_matters_brief": "Europe's largest-ever AI compute procurement — €387.8M for LUMI-AI at 10× current LUMI's AI capacity, AMD MI430X-powered, with the primary contract to French firm Bull to keep the EuroHPC sovereignty framework intact.",
+      "source": {
+        "name": "HPCwire — Bull selected to deliver Europe's €387.8M LUMI-AI supercomputer in Finland",
+        "type": "scrape",
+        "url": "https://www.hpcwire.com/off-the-wire/bull-selected-to-deliver-europes-e387-8m-lumi-ai-supercomputer-in-finland/"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-09-01T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-01T11:15:00Z",
+          "by": "refresh",
+          "change": "created — HPCwire, GlobeNewswire, The Next Web, IT-Online reported EuroHPC JU signed €387.8M contract Aug 31 with Bull (Atos) to build LUMI-AI at CSC Kajaani; AMD Instinct MI430X + 6th-gen EPYC; ~10× AI capacity over current LUMI; H2 2027 deployment target; European overnight item not in prior snapshots"
+        }
+      ],
+      "takes": [
+        {
+          "source": "HPCwire — Bull selected to deliver Europe's €387.8M LUMI-AI supercomputer in Finland",
+          "url": "https://www.hpcwire.com/off-the-wire/bull-selected-to-deliver-europes-e387-8m-lumi-ai-supercomputer-in-finland/",
+          "take": "The HPC trade-press primary — the most detailed account of the contract terms, hardware spec (AMD MI430X, EPYC 256-core), and EuroHPC JU procurement context; the canonical citation for the numbers."
+        },
+        {
+          "source": "GlobeNewswire — Bull selected to deliver Europe's €387.8 million LUMI-AI supercomputer in Finland",
+          "url": "https://www.globenewswire.com/news-release/2026/08/31/3353040/0/en/bull-selected-to-deliver-europe-s-387-8-million-lumi-ai-supercomputer-in-finland/",
+          "take": "The official press release via GlobeNewswire — the primary contract announcement from Bull/Atos with the specific hardware figures and EuroHPC JU statement."
+        },
+        {
+          "source": "The Next Web — LUMI-AI: Europe's next flagship supercomputer is coming to Finland",
+          "url": "https://thenextweb.com/news/lumi-ai-supercomputer-bull-finland-eurohpc",
+          "take": "The general tech-press read — useful for the EuroHPC sovereignty framing and the context of LUMI-AI within Europe's broader AI infrastructure strategy."
         }
       ]
     }
