@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-02T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-02T17:00:00Z",
+      "ended_at": "2026-09-02T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 9000,
+        "output_write": 5000
+      },
+      "fetches_made": 11,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-02-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path — today's am file (2026-09-02-am.json) contained 4 items (Anthropic-Lambda $35B circular financing T1, Gemini 3.8 Flash Skimaki WSJ scoop T1, Meta Muse Code GA T2, Claude Fable 5.1/Mythos 5.1 T1), 3 excluded by default per promotion rule and 1 promoted. WebFetch remained blocked by proxy per prior runs; used WebSearch exclusively (11 queries) since ~11:20 UTC refresh ended_at. Sweep window ~11:20 UTC to ~17:00 UTC. Items added: (1) PROMOTED FROM AM: Gemini 3.8 Flash Skimaki — WSJ scoop yesterday materially deepened today: Google DeepMind officially shipped the model on Wed Sept 2 hitting the WSJ-scooped release window; model card is live at deepmind.google/models/model-cards/gemini-3-8-flash/; introductory pricing published as $0.75/M input and $3.75/M output through Dec 31 2026 (regular $1.50/$7.50 from Jan 1 2027); Google reports engineers preferred Skimaki over Opus 5 in Jetski internal testing due to drastically lower latency, more concise output, reduced hallucination rates; primary behavioral improvement over 3.7 Flash is reduced verbose output; QZ, ItechPost, Venture Atlas, Nokia Power User, Penchan, Kie.ai, LLM Gateway, NextBigFuture, Tech-Insider covered the actual release Sept 2. This qualifies for the rare promotion exception because the story shifted from 'unconfirmed scoop about tomorrow' to 'shipped product with published pricing and capability claims' between am and pm cycles. (2) NEW T1: Runway Solaris — Interface World Model launch Aug 31 2026 (AI Weekly, Lycoris Technologies, Explainx.ai, TechTimes, Memesita, Prima News, Runway Aleph); first model in new category, built on Gen-4.5 video model, generates UI frame-by-frame as user interacts at 720p/sub-500ms per-frame; AlphaSignal 250-participant 7,500-judgment study preferred over Opus 5 on instruction-following (61%) and natural behavior (71%); structural limitation: no DOM or accessibility APIs, blocking banking/healthcare/auditable deployments; early access only, no public API. Directly relevant to Gabe's HTML/CSS work as a broadening item that clarifies why DOM matters via its absence. (3) NEW T1: Qwen3.8-Max-0902 released on QwenCloud at 10pm ET Sept 1 2026; upgraded snapshot of 2.4T-parameter base with 1M context; unchanged $2/M input, $6/M output pricing; coding/agent benchmark gains meaningful (TerminalBench 3.0 11.3→29.0, ProgramBench 10.5→28.0, JobBench 53.4→64.0, WorkArena Elo 1348→1468); Opus 5 still leads on harder SWE suites per Qwen's own comparison; DataCamp, MindStudio, CellCog, BenchLM.ai, YottaLabs confirmed Sept 1-2. Tier 1 Asia. (4) NEW T2: Mistral Leanstral 1.5 (labs-leanstral-1-5) released Sept 1-2 2026 (AI Weekly, TestingCatalog, AIToolly, alphaXiv, Mistral model card); 119B total / 6.5B active params, 256K context, Apache-2.0 open weights; available in Labs (free), Vibe, and Hugging Face; benchmarks fully saturate miniF2F, solves 587/672 PutnamBench, 87% FATE-H, 34% FATE-X, FLTEval pass@8 31.9→43.2; identified 5 previously unknown bugs in real-world open-source repos; scheduled retirement Sept 30 2026 marks it as limited-window experimental. Tier 2 EU. Items evaluated but not added: Anthropic-Lambda Sept 2 24/7 Wall St 'hasn't raised the money' angle — already reflected in am item's why_it_matters via the compute-obligation-vs-revenue framing; skip second promotion in one day. Nvidia pullback from OpenAI/Anthropic reporting — the Sept 2 tech-insider piece rehashes March 2026 Jensen Huang comments, not new news; skip. Claude Fable 5.1 detailed benchmarks now published (Terminal-Bench-Science 52.6%, OSWorld 2.0 77.9%, Fable 5.1 is #1 of 229 on aggregate LMSYS-style benchmark) — solid benchmark data but a benchmark firming-up isn't material deepening of a same-day-released item that already has 75% cache cut and root-cause-debugging framing; leave in am. Mistral Leanstral 1.5 already-in-labs framing from July piece — the Sept 1-2 release notes are the current shipping cycle, so used as primary. No cap hit on tokens, wall time, or fetches (11 of 50)."
+    },
+    {
       "run_id": "2026-09-02T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
