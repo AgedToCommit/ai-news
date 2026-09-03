@@ -2,18 +2,23 @@
   "snapshot_id": "2026-09-03-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-03",
-  "generated_at": "2026-09-03T06:30:00Z",
-  "generated_at_local": "2026-09-03T02:30:00-04:00",
+  "generated_at": "2026-09-03T11:00:00Z",
+  "generated_at_local": "2026-09-03T07:00:00-04:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-09-03T06:30:00Z",
       "duration_ms": 1500000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-09-03T11:00:00Z",
+      "duration_ms": 1620000
     }
   ],
   "tier_counts": {
-    "1": 4,
-    "2": 1,
+    "1": 5,
+    "2": 2,
     "3": 0
   },
   "items": [
@@ -393,6 +398,112 @@
           "source": "AIToolly — Leanstral 1.5: Mistral AI's Open Source Proof Engineering Model",
           "url": "https://aitoolly.com/ai-news/article/2026-07-04-mistral-ai-unveils-leanstral-15-a-new-era-of-open-source-formal-verification-and-proof-engineering",
           "take": "The technical-audience read that centers the 'five previously unknown bugs in real-world open-source repositories' claim as the concrete signal that formal-verification AI is producing outputs that hold up outside benchmark environments."
+        }
+      ]
+    }
+  ,
+    {
+      "id": "anthropic-fable-5-1-mythos-5-1-release-september-1-2026",
+      "tier": 1,
+      "title": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 on September 1, 2026 — the same underlying weights across two access tiers, Fable 5.1 in general availability and Mythos 5.1 in restricted access for vetted cybersecurity and life-sciences organizations — with Terminal-Bench-Science 0.1 jumping from 24.7% (Fable 5) to 52.6%, Terminal-Bench 4.0 from 42.0% to 55.8%, AutomationBench from 17.1% to 31.4%, and cache-read pricing cut 75% from $1.00 to $0.25 per million tokens",
+      "summary": "Anthropic released Claude Fable 5.1 and Claude Mythos 5.1 on September 1, 2026. Both names refer to the same underlying weights, split across two access tiers: Fable 5.1 is the generally available version with Anthropic's standard production safeguards, and Mythos 5.1 is a restricted-access tier available to vetted cybersecurity and life-sciences organizations that need capabilities normally constrained by those safeguards. The headline benchmark improvement is Terminal-Bench-Science 0.1, an agentic scientific research benchmark, where Fable 5.1 scores 52.6% against 24.7% for Fable 5, 29.0% for Opus 5, and 22.4% for GPT-5.6 Sol — roughly doubling Fable 5's score and leading every other model by a significant margin. On Terminal-Bench 4.0, Fable 5.1 scores 55.8% against Fable 5's 42.0% and Opus 5's 52.3%, taking the lead on the general agentic coding benchmark. AutomationBench (business workflow automation) is 31.4% versus Fable 5's 17.1% and Opus 5's 26.9%. OSWorld 2.0 partial pass rate is 77.9% versus Opus 5's 75.4% and Fable 5's 72.9%. Input and output pricing is unchanged at $10 and $50 per million tokens respectively; cache-read pricing drops 75% from $1.00 to $0.25 per million tokens, which Anthropic's own measurements show cuts typical enterprise workload costs by 25% overall and highly agentic workload costs by approximately 45%. Knowledge cutoff is June 2026. Available on the Claude API, Amazon Bedrock, Claude Platform on AWS, Google Cloud, and Microsoft Foundry.",
+      "link": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+      "why_it_matters": "For Gabe: the two things worth internalizing here are the science benchmark result and the cache pricing cut. On science: Fable 5.1 at 52.6% on Terminal-Bench-Science 0.1 is not a marginal improvement — it's double Fable 5's 24.7%, and it leads Opus 5 (29.0%) and GPT-5.6 Sol (22.4%) by a wide margin. Terminal-Bench-Science is an agentic benchmark that measures the model's ability to autonomously run scientific computing tasks in a terminal environment — it's the benchmark closest to 'write a Python script that does data analysis, runs it, interprets the output, and iterates.' That's a task you would actually do. If Fable 5.1 is substantially better there than Opus 5, that's a real behavioral difference in a workflow that's directly relevant. On the general agentic benchmark: Terminal-Bench 4.0 at 55.8% leads Opus 5 (52.3%), so the pattern holds on the non-science version too. On cache: the 75% drop in cache-read pricing ($1.00 → $0.25 per million tokens) is significant specifically for agentic workloads where the same system prompt and context gets re-sent on every tool call. Anthropic's own numbers say it cuts agentic workload costs by around 45% — that's real money at any scale beyond hobby use. The Mythos 5.1 angle is worth tracking separately: it's the same weights, restricted to vetted cybersecurity and life-sciences orgs, with the safeguards loosened for tasks the standard model would refuse. That's directly adjacent to the OpenAI Astra cybersecurity story — Anthropic is making the same dual-access architectural bet that you can offer a restricted, higher-capability version to vetted users without deploying it broadly.",
+      "why_it_matters_brief": "Fable 5.1 doubles Terminal-Bench-Science (24.7% → 52.6%) and leads Opus 5 on general agentic coding — while cutting cache reads 75% to $0.25/M; Mythos 5.1 is the same weights in restricted access for vetted cybersecurity orgs.",
+      "source": {
+        "name": "VentureBeat — Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads",
+        "type": "scrape",
+        "url": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-03T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-03T11:00:00Z",
+          "by": "refresh",
+          "change": "created — Anthropic Fable 5.1 and Mythos 5.1 released Sept 1, 2026. Was in 2026-09-02-am.json but not promoted to pm (digest noted 'benchmark firming-up isn't material deepening of a same-day item'); enrichment drew from pm, so item dropped out of the Sept 3 am chain. Refresh sweep confirmed the item is worth capturing in today's snapshot: Terminal-Bench-Science 0.1 52.6% vs Fable 5 24.7% / Opus 5 29.0% / GPT-5.6 Sol 22.4%; Terminal-Bench 4.0 55.8% vs Fable 5 42.0% / Opus 5 52.3%; AutomationBench 31.4% vs Fable 5 17.1% / Opus 5 26.9%; OSWorld 2.0 partial pass 77.9%. Cache reads drop 75%: $1.00 → $0.25/M; input/output unchanged $10/$50. Fable 5.1 = GA with standard safeguards; Mythos 5.1 = restricted access for vetted cybersecurity/life-sciences orgs. Available on API, Bedrock, Google Cloud, Microsoft Foundry. Knowledge cutoff June 2026. Coverage: VentureBeat, MarkTechPost, CellCog, BenchLM, Vellum.ai, Tech-Insider, ExplainX, rdworldonline."
+        }
+      ],
+      "takes": [
+        {
+          "source": "VentureBeat — Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads",
+          "url": "https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads",
+          "take": "The enterprise-press framing that leads with the cache-read pricing cut as the headline change for cost-sensitive production deployments — the piece to reference for understanding why the 75% cache reduction changes the economics of agentic pipelines more than the benchmark numbers do for most organizations."
+        },
+        {
+          "source": "MarkTechPost — Anthropic Releases Claude Fable 5.1 and Claude Mythos 5.1: 52.6% on Terminal-Bench-Science and 75% Cheaper Cache Reads",
+          "url": "https://www.marktechpost.com/2026/09/01/anthropic-releases-claude-fable-5-1-and-claude-mythos-5-1-52-6-on-terminal-bench-science-and-75-cheaper-cache-reads/",
+          "take": "The technical-press release-day walkthrough that centers the Terminal-Bench-Science benchmark as the headline improvement — the piece that makes the sharpest case for why the science-reasoning jump is significant beyond academic benchmarks."
+        },
+        {
+          "source": "CellCog — Fable 5.1 Is Out: Pricing, Benchmarks, and What Actually Changed",
+          "url": "https://cellcog.ai/blog/fable-5-1-release-date/",
+          "take": "The practical-developer read that walks through what concretely changed between Fable 5 and Fable 5.1 — useful for anyone deciding whether to swap their production Claude integration to the new model."
+        },
+        {
+          "source": "Vellum.ai — Claude Fable 5.1 & Claude Mythos 5.1 Benchmarks Explained",
+          "url": "https://www.vellum.ai/blog/claude-fable-5-1-mythos-5-1-benchmarks-explained",
+          "take": "The benchmark-explainer that walks through what each suite actually measures — the reference for translating the Terminal-Bench-Science and AutomationBench numbers into concrete task-type expectations."
+        },
+        {
+          "source": "BenchLM.ai — Claude Fable 5.1 Benchmarks, Pricing & Speed",
+          "url": "https://benchlm.ai/models/claude-fable-5-1",
+          "take": "The benchmark-tracking reference for speed and throughput characteristics alongside the capability numbers — useful for teams evaluating whether Fable 5.1 fits their latency requirements."
+        },
+        {
+          "source": "RD World Online — Anthropic doubles a science benchmark score with Fable 5.1 while OpenAI says its Astra model crosses critical cyber threshold",
+          "url": "https://www.rdworldonline.com/anthropic-doubles-a-science-benchmark-score-with-fable-5-1-while-openai-says-its-astra-models-crosses-critical-cyber-threshold/",
+          "take": "The piece that connects the Fable 5.1 and OpenAI Astra announcements as simultaneous Sept 1-2 disclosures — useful for understanding why both labs chose the same week for major capability announcements."
+        },
+        {
+          "source": "Anthropic System Card — Claude Fable 5.1 & Claude Mythos 5.1",
+          "url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf",
+          "take": "The primary-source system card that explains the Fable 5.1 / Mythos 5.1 access-tier architecture and the specific capability categories that are unrestricted in Mythos — the canonical citation for the dual-access model design."
+        }
+      ]
+    },
+    {
+      "id": "jetstream-clearance-ai-agent-zero-trust-authorization-september-2026",
+      "tier": 2,
+      "title": "JetStream Security announced Clearance on September 2, 2026 — a per-action authorization engine that evaluates every AI agent tool call against an approved design and decides whether the action runs before it executes, introducing pre-execution authorization as a distinct category from post-hoc detection in AI agent runtime security",
+      "summary": "JetStream Security announced JetStream Clearance on September 2, 2026, describing it as an 'AI Zero Trust Reasoning Engine' that sits at the JetStream AI Gateway and evaluates every request before an AI agent executes a tool call. Clearance maps each request to the agent or user making it, the approved design that authorizes the request type, the tool being invoked, and the specific action that tool call would perform — and denies the action if it doesn't match the approved design or if a bad sequence of requests is detected. The product draws a distinction between authorization and detection: detection platforms see what an agent did and respond at machine speed; Clearance decides whether the action runs at all. The target market is organizations running large fleets of automation or customer-facing agents where post-hoc detection is too slow to prevent live-data exfiltration or compliance violations from a rogue or buggy agent mid-sequence. JetStream also announced a verified MCP governance layer for enterprise agents covering the Model Context Protocol, which is becoming the standard for how agents connect to tools.",
+      "link": "https://finance.yahoo.com/technology/ai/articles/jetstream-announces-clearance-ai-zero-170000815.html",
+      "why_it_matters": "For Gabe: this is a clean example of a new category of tooling that's emerging specifically because agents now have tool use. The old mental model of 'build the app, deploy it, monitor for problems' doesn't hold when an AI agent can autonomously invoke tools in sequences that weren't anticipated at design time. Clearance is specifically designed for the case where the agent decides what to do next, and the security question is whether that specific next action should be permitted — before it happens, not after. Static permissions say what a user or service is allowed to do in general; monitoring says what they did; Clearance is reasoning about whether a specific tool call, in the context of this specific agent, in this specific sequence of prior actions, matches the approved design. That's a new problem created by agentic AI, and it's showing up as a commercial product category now. For Python work with agent frameworks: the practical implication is that agent security is becoming a first-class design concern rather than something you bolt on after. If you're building a Python script that gives a Claude or GPT model tool access to files, a database, or an API, the question 'what can this agent actually do, in what sequence, and how do I constrain that without breaking the useful behavior' is the same question JetStream Clearance is answering at enterprise scale. The JetStream MCP governance layer is the more immediately applicable piece for hobbyist context — MCP is the protocol that Claude Code and similar tools use for tool calls, and a governance layer for it is the category of thing you'd want if you were running an agent that has access to real data.",
+      "why_it_matters_brief": "JetStream Clearance authorizes each AI agent tool call before it executes — pre-execution authorization, not post-hoc detection — which is the right framing for securing agent fleets where the model decides the action sequence.",
+      "source": {
+        "name": "Yahoo Finance — JetStream Announces Clearance, an AI Zero Trust Reasoning Engine",
+        "type": "scrape",
+        "url": "https://finance.yahoo.com/technology/ai/articles/jetstream-announces-clearance-ai-zero-170000815.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-03T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-03T11:00:00Z",
+          "by": "refresh",
+          "change": "created — JetStream Security announced JetStream Clearance on Sept 2, 2026. Per-action authorization engine at the AI Gateway that evaluates every agent tool call against an approved design before execution; denies requests that don't match or form bad sequences. Framed as 'authorization' (before execution) vs 'detection' (after execution). Also announced verified MCP governance layer for enterprise agents covering the Model Context Protocol. Coverage: Yahoo Finance, pr-inside.com, weatherforddemocrat.com, joplinglobe.com, jetstream.security. Tier 2 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Yahoo Finance — JetStream Announces Clearance, an AI Zero Trust Reasoning Engine",
+          "url": "https://finance.yahoo.com/technology/ai/articles/jetstream-announces-clearance-ai-zero-170000815.html",
+          "take": "The primary release announcement that frames Clearance as 'zero trust reasoning' for AI agents — the piece that introduces the authorization-vs-detection distinction that defines what kind of product this is."
+        },
+        {
+          "source": "JetStream Security — Verified MCP Governance Layer for Enterprise AI Agents",
+          "url": "https://jetstream.security/insights/jetstream-verified-mcp-governance-layer-for-enterprise-ai-agents/",
+          "take": "JetStream's own explanation of how Clearance ties into MCP governance — the reference for anyone building agent pipelines on the Model Context Protocol who wants to understand what a governance layer looks like in practice."
         }
       ]
     }

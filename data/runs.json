@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-03T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-03T10:33:00Z",
+      "ended_at": "2026-09-03T11:00:00Z",
+      "wall_time_ms": 1620000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 3500,
+        "output_write": 1700
+      },
+      "fetches_made": 10,
+      "items_input": 4,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path — today's 2026-09-03-am.json existed with 5 items from enrichment. WebFetch remained blocked by proxy per prior runs; used WebSearch exclusively (10 queries total). Sweep window since enrichment ended_at 2026-09-03T06:30:00Z to ~11:00 UTC. Items added: (1) Anthropic Fable 5.1 + Mythos 5.1 — released Sept 1, 2026; was in 2026-09-02-am.json but explicitly not promoted to pm by digest ('benchmark firming-up isn't material deepening of a same-day item'); enrichment drew from pm so item fell out of the Sept 3 am chain. Refresh sweep confirmed item is worth capturing: Terminal-Bench-Science 0.1 52.6% (vs Fable 5 24.7%, Opus 5 29.0%, GPT-5.6 Sol 22.4%); Terminal-Bench 4.0 55.8% (vs Fable 5 42.0%, Opus 5 52.3%); AutomationBench 31.4% (vs Fable 5 17.1%, Opus 5 26.9%); OSWorld 2.0 partial pass 77.9%. Cache reads drop 75%: $1.00 → $0.25/M. Fable 5.1 = GA; Mythos 5.1 = restricted access for vetted cybersecurity/life-sciences orgs. Coverage: VentureBeat, MarkTechPost, CellCog, BenchLM, Vellum.ai, rdworldonline, Anthropic system card. Tier 1 US. (2) JetStream Clearance — Sept 2, 2026 announcement; per-action authorization engine that evaluates every AI agent tool call against an approved design before execution; distinction from post-hoc detection is the category framing; also announced verified MCP governance layer for enterprise agents. Coverage: Yahoo Finance, pr-inside.com, jetstream.security. Tier 2 US. Items evaluated but not added: AISLE curl CVE discovery (Aug 24-27, outside refresh window — old news; relevant context to Astra story already in file but not new enough to add as a standalone item); Claude Code Auto Mode as default (Aug 14 announcement, too old for refresh window). No cap hit on tokens (26k/60k), wall time, or fetches (10/20)."
+    },
+    {
       "run_id": "2026-09-03T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
