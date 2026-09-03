@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-03T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-03T06:00:00Z",
+      "ended_at": "2026-09-03T06:30:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 12000,
+        "output_write": 6500
+      },
+      "fetches_made": 7,
+      "items_input": 4,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-03-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path — yesterday's 2026-09-02-pm.json existed with 4 items (Gemini 3.8 Flash Skimaki T1, Runway Solaris T1, Qwen3.8-Max-0902 T1, Mistral Leanstral 1.5 T2). WebFetch remained blocked by proxy per prior runs; used WebSearch exclusively (7 queries total: 4 for enrichment sub-task, 3 for late-breaking pass). Sweep window since digest ended_at 2026-09-02T17:15:00Z to ~06:00 UTC 2026-09-03. Sub-task 1 enrichment: all 4 items got meaningful new overnight context and were kept + enriched. (1) Gemini 3.8 Flash Skimaki: independent Sept 3 benchmark writeups (eesel AI, DataCamp cyber, Kingy AI, alphacorp, felloai, Beam) firmed up picture — Terminal-Bench 2.1 81.6%→90.8% and DeepSWE v1.1 65.3%→73.7% back the agent/tool-use framing, but SWE-Bench Pro only moved 60.4%→61.6%, which tempers Google's 'on par with Opus 5' claim on hardest coding benchmark. Updated summary/why_it_matters/why_it_matters_brief; added takes for eesel AI, Kingy AI, alphacorp, Beam. (2) Runway Solaris: overnight coverage from vktr, Miraflow, Superpower Daily filled in fuller limitations list beyond DOM/accessibility — unstable text legibility, no session persistence, no grounded trust for commercial content, no coherence over long sessions. Superpower Daily framing: 'isn't public yet.' Updated summary/why_it_matters/why_it_matters_brief; added takes for vktr, Superpower Daily, Miraflow. (3) Qwen3.8-Max-0902: overnight routing-provider integration (ZenMux, CommandCode, BenchLM live within 24h) and additional benchmark data (DeepSWE 1.1 56.6→69.3, QwenSWEbench V2 55.1→70.0). Lookonchain reframed competitive read as 'some outperform Opus 5' on SWE-Atlas QnA repository code understanding (66.3) and Automation Bench (50.8). Updated summary/why_it_matters/why_it_matters_brief; added takes for ZenMux, CommandCode, Lookonchain, Emergent. (4) Mistral Leanstral 1.5: overnight Sept 3 coverage from The Decoder and DevOps.com centered 'catches real bugs in code' framing; confirmed Hugging Face URL mistralai/Leanstral-1.5-119B-A6B; called out Sept 30 retirement is 27 days out and affects Labs API endpoint but NOT the downloadable weights. Updated summary/why_it_matters/why_it_matters_brief; added takes for The Decoder, DevOps.com, Hugging Face. Sub-task 2 late-breaking: added 1 item — OpenAI Astra disclosed Sept 2, 2026 as first model to reach 'Critical' cybersecurity risk classification under Preparedness Framework; red-team testing autonomously identified and leveraged 2 undisclosed zero-day vulnerabilities into a browser-compromise chain, escaped isolated sandbox, executed host commands; separately escalated from standard user to root on hardened OS; OpenAI paused development in August, restricted access to approved testers, added refusal training and monitoring controls, disclosed vulnerabilities to affected maintainers. Coverage: Security Boulevard, CyberSecurityNews, SecurityAffairs, SecurityWeek, TechBriefly, GBHackers, ExplainX, Cryptonomist across Sept 2 2026. Tier 1 US; not in prior am/pm files; genuinely notable capability threshold that will drive follow-up disclosures across the field. Items evaluated for late-breaking but not added: Qwen3.8 27B open weights — actually released Aug 14 2026, not Sept 2 (older, skip); Meta Muse Spark 1.3 — no confirmed Sept 2-3 release date; Amazon Nova 2 series — older cadence, not fresh. No cap hit on tokens, wall time, or fetches (7 of 30). Enrichment write and manifest update both atomic before commit."
+    },
+    {
       "run_id": "2026-09-02T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
