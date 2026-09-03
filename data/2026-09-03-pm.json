@@ -1,0 +1,232 @@
+{
+  "snapshot_id": "2026-09-03-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-09-03",
+  "generated_at": "2026-09-03T17:30:00Z",
+  "generated_at_local": "2026-09-03T13:30:00-04:00",
+  "phase_history": [
+    {
+      "phase": "digest",
+      "ran_at": "2026-09-03T17:30:00Z",
+      "duration_ms": 500000
+    }
+  ],
+  "tier_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 1
+  },
+  "items": [
+    {
+      "id": "meta-muse-spark-1-3-frontier-coding-agent-september-2-2026",
+      "tier": 1,
+      "title": "Meta released Muse Spark 1.3 on September 2, 2026 — the biggest coding-and-agentic jump in the Muse Spark lineage, scoring 75.4 on DeepSWE 1.1 (ahead of Claude Opus 5's 74.0 and GPT-5.6 Sol's 73.0), 88.8 on Terminal-Bench 2.1 (tying GPT-5.6 Sol and beating Opus 5's 86.7), 98.5 on MRCR 256K–512K and 98.1 on MRCR 512K–1M, with roughly 20% fewer tool calls and 25% fewer tokens vs Muse Spark 1.2, now the default model behind Meta's Muse Code terminal agent and available on Meta's API with rollout to Instagram, Facebook, and Meta AI beginning the same evening",
+      "summary": "Meta shipped Muse Spark 1.3 on September 2, 2026, framed by CEO Mark Zuckerberg as delivering frontier performance at low cost. The release is Meta's largest coding-and-agentic jump in the Muse Spark lineage and puts Meta ahead of both Anthropic's Claude Opus 5 and OpenAI's GPT-5.6 Sol on the specific coding benchmarks the AI-agent-building community tracks most closely: DeepSWE 1.1 (end-to-end agentic software engineering) at 75.4 versus Opus 5's 74.0 and GPT-5.6 Sol's 73.0; Terminal-Bench 2.1 at 88.8, tying GPT-5.6 Sol and beating Opus 5's 86.7; SWE-Atlas CodeBase QnA at 59.4. On long-context understanding, Muse Spark 1.3 scores 98.5 on MRCR 256K–512K and 98.1 on MRCR 512K–1M, the highest results in its comparison group. The behavioral efficiency claim is the underrated part of the release: Meta's engineers measured Muse Spark 1.3 finishing coding tasks with roughly 20% fewer tool calls and 25% fewer tokens than the outgoing Muse Spark 1.2 — meaningful because it lowers agent-loop cost without any pricing change. The model is now the default behind Meta's Muse Code terminal-based coding agent and is available through Meta's API, with rollout to Instagram, Facebook, and Meta AI beginning the same evening. Coverage across Meta AI Research's own blog, Bloomberg, Axios, Artificial Analysis, StreetInsider, Investing.com, Cryptobriefing, eesel AI, DataCamp, BenchLM, ExplainX, Flowtivity, TechJournal, Emergent, and AI Release Tracker landed across Sept 2 and Sept 3, 2026.",
+      "link": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "why_it_matters": "For Gabe: this is the frontier coding-model story of the week and it was easy to miss because it landed late on Sept 2, in the same news cycle as the Gemini 3.8 Flash Skimaki release and the OpenAI Astra disclosure. The concrete result to internalize is that Meta is now, on paper, ahead of Anthropic Opus 5 and OpenAI GPT-5.6 Sol on the two coding benchmarks that most directly track agentic software engineering: DeepSWE 1.1 and Terminal-Bench 2.1. That's a real change to the competitive landscape — the standing assumption for most of 2026 has been 'Opus 5 for the hard coding work, everything else is a cost-savings alternative,' and Muse Spark 1.3 is the first release in months that credibly disputes that assumption on independent benchmarks. Two things worth internalizing beyond the headline numbers. First, the efficiency improvement (20% fewer tool calls, 25% fewer tokens vs Muse Spark 1.2 for the same coding tasks) is the underrated part — for anyone running agent loops via an API, this reduces the number of round-trips and the token cost per task without any pricing change. If your Python agent scripts previously found Muse Spark 1.2 workable but expensive, 1.3 is a straight upgrade. Second, the long-context numbers (98.5 on MRCR 256K–512K, 98.1 on 512K–1M) are the highest in the comparison group, which matters for tasks like 'read this entire codebase and answer a question about it' where the model has to actually retrieve accurately from a lot of context, not just fit it in the window. The practical read for HTML/CSS/Python work: if you're using any agent framework that lets you swap models (Aider, Continue, Cline, Claude Code via provider routing, etc.), Muse Spark 1.3 is now the default worth trying for mid-difficulty coding, and the tie-with-GPT-5.6-Sol on Terminal-Bench 2.1 means terminal-driven agentic workflows should see meaningful gains. The broader signal: three labs (Anthropic Sept 1 with Fable 5.1, Google Sept 2 with Gemini 3.8 Flash, Meta Sept 2 with Muse Spark 1.3) all shipped their agentic-coding-focused releases within 48 hours of each other — this is a coordinated market moment where the frontier of what's possible on agentic coding just moved forward across all three major closed-weights vendors simultaneously, and the price-and-capability arbitrage between them just got more interesting to reason about.",
+      "why_it_matters_brief": "Meta Muse Spark 1.3 beats Opus 5 on DeepSWE 1.1 (75.4 vs 74.0) and Terminal-Bench 2.1 (88.8 vs 86.7), the highest MRCR 256K–1M long-context scores in class, and 20%/25% fewer tool calls/tokens than Muse Spark 1.2 — Meta reaches the frontier on agentic coding.",
+      "source": {
+        "name": "Meta AI Research — Introducing Muse Spark 1.3",
+        "type": "scrape",
+        "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-03T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-03T17:30:00Z",
+          "by": "digest",
+          "change": "created — Meta released Muse Spark 1.3 on Sept 2, 2026 (Meta AI Research blog, Bloomberg, Axios, ArtificialAnalysis, StreetInsider, Investing.com, Cryptobriefing, eesel AI, DataCamp, BenchLM, ExplainX, Flowtivity, TechJournal, Emergent, AI Release Tracker confirmed Sept 2-3). Biggest Muse Spark coding-and-agentic jump in the lineage. Benchmarks: DeepSWE 1.1 75.4 (ahead of Opus 5 74.0 and GPT-5.6 Sol 73.0); Terminal-Bench 2.1 88.8 (ties GPT-5.6 Sol, beats Opus 5 86.7); SWE-Atlas CodeBase QnA 59.4; MRCR 256K-512K 98.5; MRCR 512K-1M 98.1. Efficiency: 20% fewer tool calls and 25% fewer tokens vs Muse Spark 1.2. Default behind Meta's Muse Code terminal agent; available on Meta's API; rolling out to Instagram/Facebook/Meta AI evening Sept 2. Missed by digest Sept 2 (announced after 17:00 UTC digest run), enrichment Sept 3 (no confirmed release date at that time per run notes), and refresh Sept 3. Tier 1 US. Not in any prior am/pm files."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Meta AI Research — Introducing Muse Spark 1.3",
+          "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+          "take": "The primary source — Meta's own release write-up spells out the benchmark numbers, the efficiency-per-token gains, and the rollout schedule across Muse Code, the API, Instagram, Facebook, and Meta AI."
+        },
+        {
+          "source": "Bloomberg — Meta Releases AI Model Muse Spark 1.3, Edges Closer to OpenAI, Anthropic",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-02/meta-releases-more-powerful-ai-model-edging-closer-to-rivals",
+          "take": "The financial-press framing that centers 'edges closer to OpenAI, Anthropic' as the headline read — useful for how the mainstream market is going to price the release into the competitive landscape."
+        },
+        {
+          "source": "Axios — Meta debuts Muse Spark 1.3 as personal agent work continues",
+          "url": "https://www.axios.com/2026/09/02/meta-debuts-muse-spark-13-as-personal-agent-work-continues",
+          "take": "The tech-industry angle that connects Muse Spark 1.3 to Meta's ongoing personal-agent product work — useful context for understanding what Meta plans to build on top of the model beyond Muse Code."
+        },
+        {
+          "source": "Artificial Analysis — Muse Spark 1.3: Meta reaches the frontier",
+          "url": "https://artificialanalysis.ai/articles/muse-spark-1-3",
+          "take": "The independent-benchmark authority's read — the piece to reference for the substantive 'Meta reaches the frontier' framing, backed by the third-party benchmark harness numbers rather than Meta's own comparison table."
+        },
+        {
+          "source": "eesel AI — Meta Muse Spark 1.3: benchmarks, pricing, and what changed",
+          "url": "https://www.eesel.ai/blog/muse-spark-1-3",
+          "take": "The developer-audience walkthrough that centers what specifically changed between Muse Spark 1.2 and 1.3 — the reference for anyone deciding whether to swap production integrations."
+        },
+        {
+          "source": "DataCamp — Muse Spark 1.3: Features, Benchmarks, and Pricing",
+          "url": "https://www.datacamp.com/blog/muse-spark-1-3",
+          "take": "The learning-audience explainer that walks through what each benchmark actually measures and how Muse Spark 1.3's numbers translate into concrete task-type expectations."
+        },
+        {
+          "source": "ExplainX — Muse Spark 1.3: Beats Opus 5 on Coding (Sept 2026)",
+          "url": "https://www.explainx.ai/blog/meta-muse-spark-1-3-launch-benchmarks-pricing-september-2026",
+          "take": "The applied-AI blog framing that leads with the 'beats Opus 5 on coding' headline — the clearest single-line summary of what the release means for the practitioner comparing frontier coding models."
+        },
+        {
+          "source": "Flowtivity — Meta Muse Spark 1.3 Benchmarks: What the Release Means for AI Agents",
+          "url": "https://flowtivity.ai/blog/meta-muse-spark-1-3-benchmarks-ai-agents/",
+          "take": "The agent-builder audience read that emphasizes the 20% fewer tool calls and 25% fewer tokens as the practical gain for agent-loop economics — the framing that matters most for anyone running Muse Spark inside an agent framework."
+        },
+        {
+          "source": "BenchLM.ai — Muse Spark 1.3 Benchmarks & Pricing",
+          "url": "https://benchlm.ai/models/muse-spark-1-3",
+          "take": "The benchmark-tracking reference that captures the speed and throughput characteristics alongside capability numbers — useful for teams weighing latency and cost tradeoffs against Opus 5 and GPT-5.6 Sol."
+        },
+        {
+          "source": "StreetInsider — Meta unveils Muse Spark 1.3 with coding improvements",
+          "url": "https://www.streetinsider.com/Corporate+News/Meta+unveils+Muse+Spark+1.3+with+coding+improvements/27018558.html",
+          "take": "The wire-service release-day summary — the piece to reference for the CEO framing ('frontier performance at low cost') and the specific rollout footprint across Muse Code, the API, and Meta's social apps."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-enterprise-frontier-safeguards-zero-retention-customer-detection-september-2026",
+      "tier": 2,
+      "title": "Anthropic announced Enterprise Frontier Safeguards on September 1, 2026 — a Claude offering that combines zero-data-retention for prompt and transcript content with automated misuse detection whose activity logs stay in a customer-controlled S3, Azure Blob, or Google Cloud bucket under customer-held keys, developed in collaboration with more than 100 customers across regulated industries and rolling out in phases starting fall 2026 across Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Google Agent Platform, and Microsoft Foundry",
+      "summary": "Anthropic announced Enterprise Frontier Safeguards (EFS) on September 1, 2026, positioned as an answer to a specific tension that regulated enterprises have raised for months: zero data retention means no prompt or agent transcript sits on Anthropic's servers, but historically misuse detection requires the vendor to hold that same data long enough to correlate suspicious patterns. EFS resolves the tension by moving activity data storage to cloud infrastructure the customer controls — an S3 bucket, an Azure Blob container, or a Google Cloud Storage bucket in the customer's own account, under customer-held encryption keys — while Anthropic runs the detection layer over data the customer holds custody of. Detection stays with Anthropic; custody, keys, and human review of any escalations stay with the customer. Anthropic developed EFS in collaboration with more than 100 customers spanning financial services, healthcare, manufacturing, telecom, law, retail, and the public sector, and with cloud partners at Amazon Web Services, Google Cloud, and Microsoft Azure. The offering will roll out to customers in phases beginning later in fall 2026; until EFS is ready, eligible customers will receive zero-data-retention on both Claude Fable 5 and Claude Fable 5.1. Supported deployment paths at launch: Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform, and Microsoft Foundry. Coverage from Anthropic's own blog, MarkTechPost, Help Net Security, Unite.AI, SecurityWeek, Blockchain.News, Investing.com, and PYMNTS landed across Sept 1–2, 2026.",
+      "link": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "why_it_matters": "For Gabe: this looks like enterprise-plumbing news at first glance, and it is — but the architectural pattern is worth internalizing because it's a clean example of how the AI industry is starting to solve the zero-data-retention-versus-misuse-detection tension that has blocked serious enterprise deployment for the entire lifetime of the current LLM wave. The trick is a split-custody architecture: Anthropic runs the detection algorithms, but the actual activity data lives in a bucket the customer controls with their own encryption keys, so no prompt or transcript ever sits on Anthropic's servers. The customer gets zero data retention and misuse monitoring at the same time — a combination that was previously mutually exclusive at any of the major LLM vendors. Two things worth internalizing. First, this is what a specific policy tension gets solved by, technically, when a lot of large customers push on it — Anthropic named more than 100 customers as design partners, which is the kind of scale that produces a real product rather than a press release. If you want to understand how the industry evolves under regulatory and enterprise pressure, EFS is the specific pattern to note. Second, the deployment footprint is important: at launch EFS is supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Google's Agent Platform, and Microsoft Foundry — which means the pattern is portable across the three major cloud providers' AI stacks, not vendor-locked to Anthropic's own hosting. For anyone reasoning about how to structure their own AI deployments (even at hobby scale), the takeaway is that the customer-controlled-bucket-plus-vendor-detection pattern is going to become the standard shape of privacy-preserving AI in regulated environments, and the specific cloud-storage abstractions (S3, Azure Blob, GCS) are going to keep being the primitives that architecture assumes. That's a useful pattern to know exists.",
+      "why_it_matters_brief": "Anthropic split the zero-data-retention vs misuse-detection tradeoff — activity logs live in a customer-controlled S3/Azure/GCS bucket under customer keys, Anthropic runs detection on data it never holds; the pattern that unblocks regulated enterprise deployment.",
+      "source": {
+        "name": "Anthropic — Developing Enterprise Frontier Safeguards with our customers",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-03T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-03T17:30:00Z",
+          "by": "digest",
+          "change": "created — Anthropic announced Enterprise Frontier Safeguards (EFS) on Sept 1, 2026. Split-custody architecture: zero data retention for prompts/transcripts on Anthropic servers, combined with automated misuse detection where activity logs live in a customer-controlled S3/Azure Blob/GCS bucket under customer-held keys. Developed with 100+ customers across financial services, healthcare, manufacturing, telecom, law, retail, public sector. Cloud partners: AWS, Google Cloud, Microsoft Azure. Phased rollout starting fall 2026; interim zero-data-retention on Fable 5 and Fable 5.1 for eligible customers. Launch supported on Claude Code, Claude Enterprise, Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google Agent Platform, Microsoft Foundry. Coverage: Anthropic own blog, MarkTechPost (Sept 2), Help Net Security (Sept 2), Unite.AI, SecurityWeek, Blockchain.News, Investing.com, PYMNTS across Sept 1-2. Tier 2 US. Not in prior am/pm files (Fable 5.1 model release was captured separately in today's am; EFS is the enterprise-safeguards product tier, a distinct announcement)."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Anthropic — Developing Enterprise Frontier Safeguards with our customers",
+          "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+          "take": "The primary source — Anthropic's own explanation of the split-custody architecture, the design-partner collaboration process, and the specific deployment paths supported at launch."
+        },
+        {
+          "source": "MarkTechPost — Anthropic Introduces Enterprise Frontier Safeguards (EFS): Zero-Data-Retention Privacy Plus Cross-Session Misuse Detection",
+          "url": "https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs/",
+          "take": "The technical-press walkthrough that most clearly articulates the previously-unsolvable tension EFS resolves — the piece to reference for understanding why 'zero data retention plus cross-session misuse detection' was mutually exclusive at every LLM vendor until now."
+        },
+        {
+          "source": "Help Net Security — Anthropic's Enterprise Frontier Safeguards lets your Claude logs stay in your cloud",
+          "url": "https://www.helpnetsecurity.com/2026/09/02/anthropic-enterprise-frontier-safeguards/",
+          "take": "The security-industry framing that centers 'your Claude logs stay in your cloud' — the clearest single framing of the customer-custody architecture as a security-team-audience read."
+        },
+        {
+          "source": "SecurityWeek — Anthropic Details Response to Security Incidents, Unveils Enterprise Safeguards",
+          "url": "https://www.securityweek.com/anthropic-details-response-to-security-incidents-unveils-enterprise-safeguards/",
+          "take": "The security-press read that connects EFS to Anthropic's incident-response practice — useful for the enterprise security team weighing how EFS fits into a broader vendor risk-management posture."
+        },
+        {
+          "source": "Unite.AI — Anthropic Announces Enterprise Frontier Safeguards, Customer-Held Data",
+          "url": "https://www.unite.ai/anthropic-announces-enterprise-frontier-safeguards-customer-held-data/",
+          "take": "The applied-AI walkthrough that centers the 'customer-held data' framing as the market differentiator — the piece to reference for understanding how EFS positions Anthropic against OpenAI Enterprise and Google's Agent Platform on regulated-industry buyer psychology."
+        },
+        {
+          "source": "PYMNTS — Anthropic Revises Enterprise Data Retention Policy After Customer Pushback",
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-revises-enterprise-data-retention-policy-after-customer-pushback/",
+          "take": "The financial-press framing that traces the EFS announcement back to the earlier data-retention-policy pushback from customers — useful context for understanding EFS as the substantive response to a specific enterprise trust incident, not a greenfield product."
+        },
+        {
+          "source": "Investing.com — Anthropic launches Enterprise Frontier Safeguards for Claude",
+          "url": "https://www.investing.com/news/stock-market-news/anthropic-launches-enterprise-frontier-safeguards-for-claude-93CH-4884473",
+          "take": "The financial-market audience release note — captures the specific competitive-positioning read for the AI-vendor investment thesis around who wins the regulated-industry buyer segment."
+        }
+      ]
+    },
+    {
+      "id": "openai-chatgpt-health-epic-ehr-integration-clinician-read-only-september-1-2026",
+      "tier": 3,
+      "title": "OpenAI connected ChatGPT Health to Epic's electronic health record system on September 1, 2026 — the EHR platform used for more than 325 million patients — so clinicians can pull appointment notes, lab results, medications, and specialist documentation into a chat without leaving the chart, with read-only access as the safety constraint (no writes back to the record), a launch cohort of seven health systems anchored by UCSF Health, and 4,300 physician responses across 27 clinical use cases producing a 99.1% safety rating on OpenAI's own eval",
+      "summary": "OpenAI announced on September 1, 2026 that ChatGPT Health is now integrated with Epic's electronic health record platform, which holds data for more than 325 million patients across the majority of US health systems. The integration lets clinicians import patient data — appointment notes, lab results, medications, specialist documentation — into a ChatGPT conversation and ask questions like 'summarize this patient's cardiology history' or 'what's changed since the last visit' without leaving the Epic chart. In participating health systems, ChatGPT Health surfaces directly inside the Epic workflow rather than requiring a separate app switch. The safety constraint is that all access is read-only: ChatGPT can read the record but cannot write anything back to it, which sidesteps the class of failures where a hallucinated fact ends up in a permanent clinical record. OpenAI ran an eval collecting more than 4,300 physician-authored responses across 27 clinical use cases (pre-visit review, clinical timelines, medication reviews, handoff summaries, and others) and reports a 99.1% safety rating on the responses. Seven health systems are launch partners, with UCSF Health cited as the pilot site. OpenAI's own numbers: the ChatGPT platform recorded more than 300 million health-related queries per week as of July 2026, which is the demand signal that motivated the Epic integration. Coverage across TechCrunch, PYMNTS, Beckers Hospital Review, Superpower Daily, StockPil, Adgully, AI Weekly, and Yahoo Tech landed Sept 1–2, 2026.",
+      "link": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+      "why_it_matters": "For Gabe: the healthcare-integration angle is the surface story, but the interesting technical pattern is the read-only-access-only-plus-eval-with-physician-response-corpus architecture. When you're integrating an LLM into a domain where a wrong answer can cause real harm (healthcare, legal, financial), the two moves that OpenAI made are the moves worth noting for any similar integration you might reason about at hobby scale: (1) constrain the integration to read-only so the LLM cannot corrupt the underlying record, which sidesteps the whole 'hallucinated fact ends up in a permanent database' failure mode; (2) run an eval on the specific use cases before launch, with domain experts (physicians here) authoring the responses that constitute the answer key, and publish the safety rate. The 99.1% number is only as useful as the eval design, but the point is that there is one — not a demo-based marketing claim, a structured evaluation with domain experts across 27 named use cases. The healthcare-market angle also worth noting: Epic runs the electronic-health-record layer for the majority of US patients, so 'ChatGPT Health integrates with Epic' is the equivalent of 'ChatGPT integrates with the internet' at the scope of the US healthcare system — this integration alone puts LLM-assisted chart review in front of hundreds of thousands of clinicians. The scale point matters even at hobby scale because it changes the base rate assumption: hospital IT departments are now going to have to plan for LLM-assisted workflows on Epic charts as a mainstream fact of life, and the resulting patterns (RBAC around AI queries, audit trails on LLM-generated summaries, physician-in-the-loop review flows) are going to become the templates that non-healthcare regulated industries copy over the next twelve months. Not directly relevant to writing HTML or Python, but useful as an example of what a serious LLM-integration launch looks like when the domain has real consequences.",
+      "why_it_matters_brief": "OpenAI integrated ChatGPT Health with Epic (325M-patient EHR) as read-only-plus-physician-eval-corpus — the pattern to note for any high-consequence LLM integration: constrain writes, run an eval with domain experts, publish the safety rate.",
+      "source": {
+        "name": "TechCrunch — ChatGPT Health adds Epic integration for clinicians to import patient data",
+        "type": "scrape",
+        "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-03T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-03T17:30:00Z",
+          "by": "digest",
+          "change": "created — OpenAI announced ChatGPT Health integration with Epic EHR on Sept 1, 2026. Epic holds data for 325M+ patients across most US health systems. Clinicians pull appointment notes, labs, medications, specialist docs into ChatGPT conversations for summarization, timeline questions, handoff prep. Read-only access (no writes back to record) as safety constraint. Eval: 4,300+ physician responses across 27 clinical use cases; 99.1% safety rating. Seven launch partners; UCSF Health as pilot. Baseline demand signal: 300M+ health-related ChatGPT queries per week as of July 2026. Coverage: TechCrunch, PYMNTS, Beckers Hospital Review, Superpower Daily, StockPil, Adgully, AI Weekly, Yahoo Tech across Sept 1-2. Tier 3 US. Not in prior am/pm files."
+        }
+      ],
+      "takes": [
+        {
+          "source": "TechCrunch — ChatGPT Health adds Epic integration for clinicians to import patient data",
+          "url": "https://techcrunch.com/2026/09/01/chatgpt-health-adds-epic-integration-for-clinicians-to-import-patient-data/",
+          "take": "The tech-press release-day walkthrough — the clearest single article for understanding what the integration does, what the read-only safety constraint blocks, and what the launch-cohort footprint looks like."
+        },
+        {
+          "source": "Beckers Hospital Review — ChatGPT for Healthcare adds Epic integration",
+          "url": "https://www.beckershospitalreview.com/healthcare-information-technology/innovation/chatgpt-for-healthcare-adds-epic-integration/",
+          "take": "The hospital-IT-audience framing — the piece that hospital operations and clinical informatics teams will actually read, spelling out what the integration will require to deploy at a specific health system."
+        },
+        {
+          "source": "PYMNTS — OpenAI Brings Epic Health Records to ChatGPT for Clinicians",
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-brings-epic-health-records-to-chatgpt-for-clinicians/",
+          "take": "The healthcare-business framing that centers the market-scale implication — Epic's dominance of US EHR means this single integration reaches most of the US clinical workforce."
+        },
+        {
+          "source": "Superpower Daily — OpenAI Connects ChatGPT Health to Epic, Keeping Clinical Record Access Read-Only",
+          "url": "https://superpowerdaily.com/posts/openai-connects-chatgpt-health-to-epic-keeping-clinical-record-access-read-only",
+          "take": "The independent tech-newsletter read that centers the read-only-access safety constraint as the substantive design decision — the piece that most directly makes the case for why the write-restriction matters."
+        },
+        {
+          "source": "AI Weekly — OpenAI's ChatGPT Health Plugs Into Epic's Patient Charts",
+          "url": "https://aiweekly.co/alerts/openais-chatgpt-health-plugs-into-epics-patient-charts",
+          "take": "The AI-industry aggregator's release-day summary — captures the specific claim that clinicians can query the record from inside the Epic chart workflow rather than requiring an app switch."
+        },
+        {
+          "source": "Yahoo Tech — ChatGPT Can Now Read Your Doctor's Epic Records",
+          "url": "https://tech.yahoo.com/ai/chatgpt/articles/chatgpt-now-read-doctor-epic-195931766.html",
+          "take": "The consumer-facing framing — useful for understanding how the launch is being explained to patients whose records will now be accessible to physician-driven ChatGPT queries."
+        },
+        {
+          "source": "Adgully — OpenAI integrates ChatGPT for Healthcare with Epic's EHR system",
+          "url": "https://www.adgully.com/post/20014/openai-integrates-chatgpt-for-healthcare-with-epics-ehr-system",
+          "take": "The industry-trade walkthrough that spells out the seven launch partners and the UCSF Health pilot — the reference for the specific deployment footprint of the integration at launch."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
