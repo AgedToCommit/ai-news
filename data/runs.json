@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-04T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-04T11:00:00Z",
+      "ended_at": "2026-09-04T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 16500,
+        "curation": 8500,
+        "output_write": 9000
+      },
+      "fetches_made": 11,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-04-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path — today's 2026-09-04-am.json existed with 4 items from enrichment. WebFetch blocked by proxy per prior runs; used WebSearch exclusively (11 queries total). Sweep window since enrichment ended_at 2026-09-04T06:30:00Z to ~11:24 UTC. Two items added: (1) GPT-6 Astra (T1 US) — OpenAI's new frontier model, released Sept 3 as Daybreak limited preview with general rollout Sept 5. First model at 'Critical' cybersecurity Preparedness Framework rating. Key benchmarks: 100% ExploitBench, 99.9% ARC-AGI-3, 97.6% FrontierMath Tier 4 v2, 74.1% DeepSWE v1.1, 57.7% Terminal-Bench 4.0 (vs Fable 5.1's 55.8%), 64.6% Terminal-Bench Science 0.1 (vs Fable 5.1's 52.6%). Greg Brockman declared 'AGI era.' Referenced tangentially in the AISLE item's context but was not captured as its own item by any prior phase. September 4 coverage confirmed from The Decoder, gHacks, WinBuzzer, VentureBeat. (2) NVIDIA acquires Hugging Face (T3 Global) — $12.9B definitive agreement signed Sept 2, 2026. NVIDIA's second-largest acquisition. 18M developers, 3M+ models, 500K datasets on platform. NVIDIA committed to keeping platform open. Deal closes H1 2027 pending regulatory review. Missed by all prior phases; Fortune has September 4 coverage. Muse Spark 1.3 (T1) got a brief refresh revision noting GPT-6 Astra benchmark context on DeepSWE v1.1. No cap hit on tokens (~35k/60k) or fetches (11/20). Wall time slightly over 25min target but within normal variance."
+    },
+    {
       "run_id": "2026-09-04T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
