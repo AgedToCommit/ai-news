@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-04T17:12:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-04T17:00:00Z",
+      "ended_at": "2026-09-04T17:12:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 12000,
+        "output_write": 16800
+      },
+      "fetches_made": 11,
+      "items_input": 12,
+      "items_output": 7,
+      "items_added": 7,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-04-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest run for 2026-09-04-pm. Today's am file existed with 6 items (Muse Spark 1.3, GPT-6 Astra, Anthropic EFS, ChatGPT Health Epic, AISLE curl CVEs, NVIDIA-Hugging Face). Applied promotion-rule default (excluded am items). Fetched via WebSearch only (WebFetch blocked per prior runs). 11 queries covering major labs, model tracker sites, and specific candidate items. All 7 items in output are missed candidates from Sept 2-3 not captured by prior enrichment or refresh phases. Tier 1 (3): Gemini 3.8 Flash + Cyber (Sept 2 — third Flash in 6 weeks, 90.8% Terminal-Bench 2.1 same pricing as 3.7, Fairwind-restricted Cyber twin at 70%+ real-world vuln discovery); Grok 4.7 announcement (Sept 2 — 2.1T params, SpaceX manufacturing data, no API model ID or benchmarks yet); Qwen3.8-Max-0902 (Sept 2 — Code Arena WebDev #1 at 1,691 above Opus 5 Max, doubled TerminalBench 3.0 and ProgramBench Almost Solved). Tier 2 (3): Claude background computer use (Sept 2 macOS beta for Pro/Max, connected-services-first fallback order); OpenAI Defense Factory architecture publication (Sept 3, Cloudflare/Ramp/Google exploring); Microsoft MAI-Transcribe-2 (Sept 3, tops FLEURS 60 langs, $0.10/hr — 10x cheaper than GPT-Transcribe). Tier 3 (1): OpenAI Daybreak for Frontline Defenders (Sept 3, $1B credits over 6 months for water/grid/local-gov/community-banks/nonprofits/OSS maintainers). No cap hit on tokens (~48k/100k) or fetches (11/50). Wall time ~12 min."
+    },
+    {
       "run_id": "2026-09-04T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
