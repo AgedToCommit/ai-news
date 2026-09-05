@@ -2,17 +2,22 @@
   "snapshot_id": "2026-09-05-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-05",
-  "generated_at": "2026-09-05T06:30:00Z",
-  "generated_at_local": "2026-09-05T02:30:00-04:00",
+  "generated_at": "2026-09-05T11:30:00Z",
+  "generated_at_local": "2026-09-05T07:30:00-04:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-09-05T06:30:00Z",
       "duration_ms": 1800000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-09-05T11:30:00Z",
+      "duration_ms": 1800000
     }
   ],
   "tier_counts": {
-    "1": 2,
+    "1": 3,
     "2": 5,
     "3": 0
   },
@@ -149,6 +154,61 @@
           "source": "DataNorth — Alibaba releases Qwen3.8-Max-0902 for coding, agents",
           "url": "https://datanorth.ai/news/alibaba-releases-qwen3-8-max-0902",
           "take": "The applied-AI coverage that summarizes the coding-and-agent-work case for Qwen3.8-Max-0902 in a single line ('worth testing now') — useful as the concise Sept 4 recommendation for practitioners weighing whether to run a real evaluation this week."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-fermat-last-theorem-lean-proof-september-2026",
+      "tier": 1,
+      "title": "Anthropic announced on September 4, 2026 that Claude produced the first end-to-end, computer-checked proof of Fermat's Last Theorem in Lean 4 — 11 days of wall-clock time, dozens of parallel agents, 13 million lines of Lean, 30,300 theorems proved (29,500 in the final proof path), roughly 6 billion output tokens, verified by Lean's kernel and an independent Rust kernel (nanoda) — formalized using the Darmon-Diamond-Taylor exposition of Wiles's proof, with the complete artifact published to GitHub under Apache 2.0",
+      "summary": "Anthropic announced on September 4, 2026 that Claude had completed the first fully formalized, machine-checked Lean 4 proof of Fermat's Last Theorem. The scale: 11 days of wall-clock time (reflecting massive parallelism — dozens of agents running concurrently, not a single sustained agent effort), 13 million lines of Lean 4 code, 30,300 theorems proved (29,500 used in the final proof path), roughly 6 billion output tokens generated. The 13 million lines of Lean is more than five times the size of Mathlib, the community library the proof builds on. Verification: dual-verified by Lean's own kernel and independently by nanoda, a Rust-based kernel, using only Lean's three standard axioms. Mathematical approach: the Darmon-Diamond-Taylor exposition of Wiles's proof, proceeding via Frey curves and Ribet's theorem. Infrastructure: Claude's first formalization attempt failed; Prove2Me — a third-party open-source tool for optimizing AI agent decisions in long-horizon workflows — was required to achieve success. The complete artifact (Lean code, walkthrough, dependency graphs) is published at github.com/anthropics/fermats-last-theorem under Apache 2.0, with an offline HTML browser for every theorem page. This was the first time Fermat's Last Theorem had been formalized in any proof assistant. Mathematicians had estimated the project would take several years of human effort. Missed by prior runs; announced September 4 with broad coverage landing September 4–5.",
+      "link": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+      "why_it_matters": "For Gabe: three things worth pulling out. First, the result itself. Fermat's Last Theorem is one of the most famous results in mathematics — stated by Fermat in 1637, proved by Andrew Wiles in 1995, but never formally machine-checked in a proof assistant. The Lean community had been working toward this for years and estimated it would take several more. Claude did it in 11 days using dozens of parallel agents. That's not a demo — it's a research artifact independently verified by two separate kernels and published in full for anyone to inspect. Second, the engineering story matters more than the math story for understanding where AI capability actually is. Claude's first attempt failed. The team needed Prove2Me (a third-party open-source tool for agent decision optimization in long-horizon workflows) to get it to work. The winning run generated 13 million lines of Lean and 6 billion tokens. This is the clearest public example of what a multi-agent long-horizon technical task looks like at frontier scale — not a chat session, not a single-agent loop, but dozens of specialized agents coordinating over 11 days. That's the shape of what 'AI doing real scientific work' actually looks like right now. Third, what it means for future tasks. The FLT proof is not just a math result — it's a demonstration that formal verification at scale is achievable in days rather than years, for a canonical hard problem. The tooling trajectory from FLT → provably correct Python modules → verifiable web apps is now real rather than theoretical. Apache 2.0 means you can build on the artifact directly. For Python and HTML/CSS work: none of this is directly actionable today, but formal verification is the correct mental model for understanding what 'AI-assisted correctness checking' is going to look like in developer tooling over the next 1–2 years.",
+      "why_it_matters_brief": "Claude proved Fermat's Last Theorem in Lean 4 in 11 days using dozens of parallel agents — 13M lines, 30,300 theorems, verified by two independent kernels — the first time the theorem was formalized in any proof assistant.",
+      "source": {
+        "name": "Anthropic Research — Formalizing Fermat's Last Theorem",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-05T11:30:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-05T11:30:00Z",
+          "by": "refresh",
+          "change": "created — Anthropic announced Claude completed the first machine-checked Lean 4 proof of Fermat's Last Theorem Sept 4, 2026. 11-day wall-clock run, dozens of parallel agents, 13M lines of Lean 4 (5× larger than Mathlib), 30,300 theorems proved (29,500 in final path), ~6B output tokens. Dual-verified by Lean kernel and nanoda (Rust), three standard axioms only. Darmon-Diamond-Taylor exposition of Wiles's proof via Frey curves and Ribet's theorem. First attempt failed; Prove2Me tool required. Complete artifact at github.com/anthropics/fermats-last-theorem, Apache 2.0. Mathematicians estimated years of human effort. Missed by all prior runs. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Anthropic Research — Formalizing Fermat's Last Theorem",
+          "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+          "take": "The primary source — Anthropic's own research post covering the mathematical approach, the scale of the proof, the infrastructure (Prove2Me, dozens of agents), dual-kernel verification, and the GitHub artifact."
+        },
+        {
+          "source": "SiliconAngle — Anthropic uses Claude to formalize proof of Fermat's Last Theorem",
+          "url": "https://siliconangle.com/2026/09/04/anthropic-uses-claude-to-formalize-proof-of-fermats-last-theorem/",
+          "take": "The Sept 4 tech-press coverage that contextualizes the result for a non-mathematician audience — the reference for how the FLT formalization is being framed by the enterprise-AI press."
+        },
+        {
+          "source": "AI Weekly — Anthropic's Claude Formalizes Fermat's Last Theorem in Lean",
+          "url": "https://aiweekly.co/alerts/anthropics-claude-formalizes-fermats-last-theorem-in-lean",
+          "take": "The Sept 5 morning roundup that places the FLT result alongside the week's model releases — useful for understanding how the mathematical milestone is being weighted against the frontier model news in the same week."
+        },
+        {
+          "source": "AlphaSignal — Anthropic's Claude Formally Proved Fermat's Last Theorem in 11 Days",
+          "url": "https://alphasignal.ai/news/anthropic-s-claude-formally-proved-fermat-s-last-theorem-in-11-days",
+          "take": "The AI-researcher audience coverage that centers '11 days of wall-clock time' as the scale story — the reference for understanding what the multi-agent parallelism that made the result possible actually looks like in practice."
+        },
+        {
+          "source": "GitHub — anthropics/fermats-last-theorem (Apache 2.0)",
+          "url": "https://github.com/anthropics/fermats-last-theorem",
+          "take": "The complete artifact — 13 million lines of Lean 4, every theorem and its dependency graph, the PROOF-PATH.md walkthrough, and the offline HTML browser. The reference for anyone who wants to inspect the proof directly rather than read about it."
         }
       ]
     },
