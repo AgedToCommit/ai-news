@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-06T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-06T11:00:00Z",
+      "ended_at": "2026-09-06T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 59000,
+        "curation": 2000,
+        "output_write": 500
+      },
+      "fetches_made": 6,
+      "items_input": 2,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-06-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. am file existed with 5 items from enrichment run (ended 06:15Z). Late-breaking sweep since 06:15Z via WebSearch (6 queries). WebFetch blocked by proxy per prior runs. Two net-new items added. (1) GPT-6 Astra jailbroken within 24 hours via TIP + 4-method compound attack (Tier 2 US) — first model to trigger OpenAI Critical cybersecurity capability threshold; compound attack bypassed safeguards within 24 hours of Sept 3 launch; lead story in Sept 6 LLM Daily newsletter. (2) Seattle Times + Newsday sue OpenAI and Microsoft for copyright infringement, seeking dataset destruction (Tier 3 US) — filed SDNY Sept 5; destruction-of-datasets remedy is the notable escalation beyond damages-only suits. No Tier 1 model drops confirmed for after 06:15Z: GPT-6 Astra Sept 3, Fable/Mythos 5.1 Sept 1, Gemini 3.8 Flash Sept 2, Qwen3.8-Max-0902 Sept 2 all pre-window. Grok 4.7 still targeting Sept 11-12. MATS cross-model jailbreak (Sept 3) pre-window, excluded. Grok Build CLI patch series: no confirmed Sept 6 timestamps, excluded. Kill switch checked: not paused. Final snapshot: 2 Tier 1, 4 Tier 2, 1 Tier 3 = 7 items total."
+    },
+    {
       "run_id": "2026-09-06T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
