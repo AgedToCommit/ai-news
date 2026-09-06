@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-06T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-06T06:00:00Z",
+      "ended_at": "2026-09-06T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 10500,
+        "output_write": 13000
+      },
+      "fetches_made": 7,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-06-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Read yesterday-pm (2026-09-05-pm) with 5 items (2 Tier 1, 3 Tier 2). Sub-task 1: enriched all 5 items — each survived with meaningful new context. (1) OpenAI wiki incident: OpenAI officially acknowledged the incident on Sept 5 (Engadget, NBC News, TechCrunch, Gizmodo, Unite.AI, TheNextWeb, TechNode, Cryptobriefing, Progressive Robot) — admitted they had known 'weeks earlier' but chose not to disclose because it was 'similar to' the Aug 26 internal-channel disclosure, promised a misalignment disclosure framework 'in the coming weeks' in parallel with 'dozens of government regulatory agencies worldwide'; identified the researcher team by name (Sydney Von Arx of Nightingale Collective, Cormac Slade Byrd, Spencer Kitts, Thomas Larsen). (2) Sanders/Casar Ban ASI Act: added fourth provision that surfaced in Sept 4-5 coverage (cabinet-level AI oversight agency), Gary Marcus Sept 3 substack opposition post from inside the AI-safety camp arguing for a regulated pause under an independent authority instead of a permanent ban, Sanders's naming of OpenAI/Anthropic/Meta and criminal-penalty justification from labs' own 'escaping our control' admissions. (3) AMD Threadripper Halo Station: added per-GPU MI350P memory detail (144 GB HBM3E at ~4 TB/s per card, 14x LPDDR5X bandwidth per AMD IFA slide), 5.4 GHz boost, honest read that no benchmark exists yet, Windows Forum thread on ROCm-first Windows AI-workload questions. (4) BAAI Repo-To-Skill / AREX-Skill: added three other benchmark deltas (+34.4% PaperBench, +9.2% FrontierCS, +14.0% PassNet) so headline is no longer a single-benchmark claim; added reproducibility methodology detail (skills distilled only from target paper's related-work citations, excluding target paper itself; matched per-task budgets). (5) Gemini Spark for Google Photos: added safety defaults triad (copy-on-edit, private-by-default, permission-gated sharing/email), 18+ age gating, 'next few weeks' rollout pacing, concert-flyer-to-calendar-appointment example, PetaPixel and Droid Life as new sources. No items dropped — all five had substantive Sept 4-5 developments. Sub-task 2: late-breaking pass ran 3 additional WebSearch queries (model release trackers, 'September 5/6' safety announcements, Anthropic Claude blog) since 2026-09-05T17:12:00Z. No net-new Tier-1-worthy items surfaced: the largest late-breaking angle (OpenAI's Sept 5 wiki-incident acknowledgment and framework promise) is enrichment context for item #1, not a separable new story. Global Call for AI Red Lines is a Sept 2025 initiative. No new frontier model launches Sept 5-6 (post-GPT-6 Astra Sept 3, Gemini 3.8 Flash Sept 2, Claude Fable/Mythos 5.1 Sept 1, Qwen3.8-Max-0902 Sept 2). Zero items added is within enrichment prompt's 'at most 2' cap. Kill switch checked: not paused. All three phase flags enabled. WebFetch remains blocked by proxy per prior runs — used WebSearch exclusively. No cap hits (~38K/100K tokens, 7/30 fetches, ~15 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-05T17:12:00Z-digest",
       "phase": "digest",
       "status": "success",
