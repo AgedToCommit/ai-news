@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-07T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-07T16:35:00Z",
+      "ended_at": "2026-09-07T17:00:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 5500,
+        "output_write": 28000
+      },
+      "fetches_made": 11,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-07-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Read today's am file (6 items: 0 T1, 5 T2, 1 T3) for the promotion-rule filter. Sweep window: since last successful run (refresh) ended 2026-09-07T11:20:00Z, ~5.5 hours. WebFetch remained blocked by proxy per prior runs — used WebSearch exclusively (11 queries). No promotion applied — none of the 6 am-file items met the 'materially deepened during the day' bar. Curated 6 new items missed by prior 2026-09-07 phases: (1) Anthropic Enterprise Frontier Safeguards (EFS) Sept 1 — T2 US, customer-cloud data-retention model paired with Fable 5.1 launch, 100+ enterprise collaborators including Goldman/Morgan Stanley/Citi/BofA/Wells Fargo. (2) Anthropic-Lambda $35B six-year 350MW Texas compute deal via Nvidia three-party structure — T2 US, total Anthropic cloud commitments now >$130B, circular-financing scrutiny. (3) EU classifies ChatGPT as VLOSE under DSA Sept 1 — T2 EU, first standalone AI chatbot with the designation, Dec 2026 compliance deadline, fines up to 6% global turnover. (4) Hugging Face @huggingface/kernels 207 WebGPU library Sept 1 — T2 Global, Apache-2.0, 2.57× geomean speedup vs ORT WebGPU, platform layer under wllama story from am file, highly relevant to Gabe's HTML/CSS. (5) OpenAI DevDay 2026 'Managed Agents' preview from Progressive Robot codebase-read Sept 7 — T2 US, the freshest today-only signal, hosted-product counterpart to Anthropic Commerce Agents Apache-2.0 blueprint from Sept 2. (6) Pentagon GenAI.mil ChatGPT Mil + Grok for Government deployment Aug 31 — T3 US, 1.7M users on 3M DoD workforce, IL5 accredited, three US frontier labs now inside same federal platform. All 6 items had matching brief. No cap hits (~62k/100k tokens, 11 fetches/50, ~25 min/60 min wall time). No hero images extracted (WebFetch blocked, and none of the sources returned og:image via WebSearch summaries)."
+    },
+    {
       "run_id": "2026-09-07T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
