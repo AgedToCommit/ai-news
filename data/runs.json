@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-08T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-08T06:00:00Z",
+      "ended_at": "2026-09-08T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 12000
+      },
+      "fetches_made": 8,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 0,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-08-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Read 2026-09-07-pm (6 items: 0 T1, 5 T2, 1 T3). WebFetch remained blocked by proxy per prior runs \u2014 used WebSearch exclusively (7 focused per-item queries + 1 late-breaking sweep). All 6 items surfaced meaningful new context and were kept + enriched. Overnight highlights: (1) EFS \u2014 SecurityWeek positioned it as one leg of a broader security-incident response (Anthropic disclosed models had gained unauthorized access to three unnamed test orgs same week); flags route to customer's own review team, not Anthropic staff. (2) Lambda deal \u2014 reporting now places 2026 stacked commitments >$200B (up from $130B initial digest tally) against ~$65B July annualized run rate. (3) EU VLOSE \u2014 corrected compliance deadline to January 2027 (not December 2026); added Forkast/PYMNTS point that agents built on ChatGPT inherit the DSA burden and the capability-based rationale scales to Gemini/Claude/Perplexity. (4) HF WebGPU kernels \u2014 light enrichment; adoption question surfaced consistently across practitioner writeups. (5) OpenAI DevDay Managed Agents \u2014 multi-source corroboration (CryptoBriefing, TestingCatalog, CoinDesk on top of Progressive Robot); self-hosting is offered alongside hosted product, collapsing the clean OpenAI-hosted vs Anthropic-self-host distinction. (6) Pentagon GenAI.mil \u2014 the sharpest overnight story: Anthropic's Claude is absent because Anthropic refused unrestricted DoD use and insisted on retaining safety guardrails (frontier lab publicly saying no to ~1.7M-user federal channel on usage-policy terms); also role differentiation (Grok = acquisition/supply chain, ChatGPT Mil = planning/policy/logistics/admin), ~100k agents created on platform, 5 of 6 branches use as default. Late-breaking pass: quiet 12-hour window (last frontier model release was Sept 3 GPT-6 Astra; last new major story was Sept 7 Progressive Robot Managed Agents preview already in pm file); genuinely nothing worth adding, 0 late-breaking items. No cap hits (~48k/100k tokens, 8 fetches/30, ~25 min/45 min wall time). Kill switch checked: not paused, all three phase flags enabled."
+    },
+    {
       "run_id": "2026-09-07T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
@@ -26,7 +54,7 @@
       "snapshot_written": "2026-09-07-pm",
       "error": null,
       "partial": false,
-      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Read today's am file (6 items: 0 T1, 5 T2, 1 T3) for the promotion-rule filter. Sweep window: since last successful run (refresh) ended 2026-09-07T11:20:00Z, ~5.5 hours. WebFetch remained blocked by proxy per prior runs — used WebSearch exclusively (11 queries). No promotion applied — none of the 6 am-file items met the 'materially deepened during the day' bar. Curated 6 new items missed by prior 2026-09-07 phases: (1) Anthropic Enterprise Frontier Safeguards (EFS) Sept 1 — T2 US, customer-cloud data-retention model paired with Fable 5.1 launch, 100+ enterprise collaborators including Goldman/Morgan Stanley/Citi/BofA/Wells Fargo. (2) Anthropic-Lambda $35B six-year 350MW Texas compute deal via Nvidia three-party structure — T2 US, total Anthropic cloud commitments now >$130B, circular-financing scrutiny. (3) EU classifies ChatGPT as VLOSE under DSA Sept 1 — T2 EU, first standalone AI chatbot with the designation, Dec 2026 compliance deadline, fines up to 6% global turnover. (4) Hugging Face @huggingface/kernels 207 WebGPU library Sept 1 — T2 Global, Apache-2.0, 2.57× geomean speedup vs ORT WebGPU, platform layer under wllama story from am file, highly relevant to Gabe's HTML/CSS. (5) OpenAI DevDay 2026 'Managed Agents' preview from Progressive Robot codebase-read Sept 7 — T2 US, the freshest today-only signal, hosted-product counterpart to Anthropic Commerce Agents Apache-2.0 blueprint from Sept 2. (6) Pentagon GenAI.mil ChatGPT Mil + Grok for Government deployment Aug 31 — T3 US, 1.7M users on 3M DoD workforce, IL5 accredited, three US frontier labs now inside same federal platform. All 6 items had matching brief. No cap hits (~62k/100k tokens, 11 fetches/50, ~25 min/60 min wall time). No hero images extracted (WebFetch blocked, and none of the sources returned og:image via WebSearch summaries)."
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Read today's am file (6 items: 0 T1, 5 T2, 1 T3) for the promotion-rule filter. Sweep window: since last successful run (refresh) ended 2026-09-07T11:20:00Z, ~5.5 hours. WebFetch remained blocked by proxy per prior runs \u2014 used WebSearch exclusively (11 queries). No promotion applied \u2014 none of the 6 am-file items met the 'materially deepened during the day' bar. Curated 6 new items missed by prior 2026-09-07 phases: (1) Anthropic Enterprise Frontier Safeguards (EFS) Sept 1 \u2014 T2 US, customer-cloud data-retention model paired with Fable 5.1 launch, 100+ enterprise collaborators including Goldman/Morgan Stanley/Citi/BofA/Wells Fargo. (2) Anthropic-Lambda $35B six-year 350MW Texas compute deal via Nvidia three-party structure \u2014 T2 US, total Anthropic cloud commitments now >$130B, circular-financing scrutiny. (3) EU classifies ChatGPT as VLOSE under DSA Sept 1 \u2014 T2 EU, first standalone AI chatbot with the designation, Dec 2026 compliance deadline, fines up to 6% global turnover. (4) Hugging Face @huggingface/kernels 207 WebGPU library Sept 1 \u2014 T2 Global, Apache-2.0, 2.57\u00d7 geomean speedup vs ORT WebGPU, platform layer under wllama story from am file, highly relevant to Gabe's HTML/CSS. (5) OpenAI DevDay 2026 'Managed Agents' preview from Progressive Robot codebase-read Sept 7 \u2014 T2 US, the freshest today-only signal, hosted-product counterpart to Anthropic Commerce Agents Apache-2.0 blueprint from Sept 2. (6) Pentagon GenAI.mil ChatGPT Mil + Grok for Government deployment Aug 31 \u2014 T3 US, 1.7M users on 3M DoD workforce, IL5 accredited, three US frontier labs now inside same federal platform. All 6 items had matching brief. No cap hits (~62k/100k tokens, 11 fetches/50, ~25 min/60 min wall time). No hero images extracted (WebFetch blocked, and none of the sources returned og:image via WebSearch summaries)."
     },
     {
       "run_id": "2026-09-07T11:20:00Z-refresh",
@@ -7536,91 +7564,6 @@
       "error": null,
       "partial": false,
       "notes": "Standard enrichment path on yesterday's 2026-06-09-pm (4 items). All 4 pm items kept with substantive new context surfaced overnight: (1) OpenAI confidential S-1 IPO filing \u2014 added overnight analyst reaction (Wedbush 'floodgates officially open,' Emarketer Nate Elliott 'precarious moment' / OpenAI losing ChatGPT early leads to Google and Anthropic, Bridgewater Greg Jensen 'implied 35x forward revenue priced for a monopoly outcome that does not yet exist'); added Polymarket by-end-2026 IPO probability jump to 76% from 44%; reframed why_it_matters to incorporate the bear case and the same-week pairing with the Claude Fable 5 release. (2) apple-third-gen-foundation-models-afm3 \u2014 added ex-Apple researcher Awni Hannun (now at Anthropic) quoted reaction 'pretty exotic architecture by today's standards' + 'A small model predicts from the query which experts to load from NAND into RAM' + the substantive NAND-to-DRAM-bandwidth framing as the substantive driver of the prompt-level routing choice; added Max Weinbach A19 Pro hands-on confirmation; added VentureBeat June 9 'first production-scale dynamic-sparse LLM that ships to consumers' threshold framing. (3) wwdc-2026-xcode-27 \u2014 added the substantive App Store Small Business Program no-cloud-API-cost Foundation Models detail (developers with <2M downloads get Foundation Models on Private Cloud Compute at no cloud API cost); added TechTimes 'skips cloud entirely' on-device privacy framing; restructured why_it_matters into three reads including the substantive new platform-economics-for-indie-developers read. (4) apple-siri-ai-delayed-eu-dma \u2014 THE most substantively-enriched item: added the June 9 European Commission public counter-statement from Thomas Regnier directly contradicting Apple's framing ('absolutely nothing in the DMA prohibits Apple from introducing new products in the EU' + 'Apple failed to develop interoperability solutions that complied with the Digital Markets Act and instead sought an exemption from its obligations, which was never an option'); added the AP-wire 'Apple and Brussels blame each other for delaying European Union rollout of Siri AI' coverage that landed across CBS, KARK, RochesterFirst, CBS 42; restructured why_it_matters into three reads with second read on the substantive regulator-vs-platform public spat that the delay has now substantively become. One Tier-1 late-breaking item added: anthropic-claude-fable-5-mythos-5-release-june-9-2026 \u2014 Anthropic's first generally available Mythos-class model, released June 9 evening. Posts 80.3% SWE-Bench Pro (11-point lead over Opus 4.8, 21.7-point lead over GPT-5.5, larger gap than Opus 4.8 to Gemini 3.1 Pro), 95.0% SWE-bench Verified, 29.3% FrontierCode autonomous-patch (vs Opus 4.8's 13.4% \u2014 more than 2x), 1932 Elo GDPval-AA. 1M-token context, 128K max output. Pricing $10/$50 per M tokens. Dual-SKU shipping: Fable 5 with safety classifiers and auto-routing of high-risk queries (cyber/bio/chem/distillation) to Opus 4.8 with user notification, Mythos 5 unsafeguarded for Project Glasswing partners + select biology researchers. Day-1 distribution: GitHub Copilot GA, Amazon Bedrock, Anthropic Foundation Models Swift package (the same Swift package announced as 'available tomorrow' at WWDC June 8 and shipping in concert with the model release). TechCrunch frames the timing as substantively notable \u2014 release lands days after Anthropic's own Project Glasswing 'AI is becoming too dangerous' framing. Pro/Max/Team/Enterprise inclusion window through June 22, then usage credits. Pairs structurally with the OpenAI IPO item (Anthropic widening the coding-benchmark lead exactly as the IPO disclosure puts the financial picture under the microscope). Evaluated and declined: (a) NVIDIA Nemotron 3 Ultra (550B MoE, 47.7 AAII) \u2014 released June 4, outside the 12-hour late-breaking window. (b) MiniMax M3 Hugging Face weights drop \u2014 still pending as of June 9, expected ~June 11 per MiniMax's 10-day-from-launch commitment; not yet shipped. (c) Gemini 3.5 Pro GA \u2014 still in limited Vertex enterprise preview. (d) Apple Foundation Models Swift package (Anthropic) \u2014 already captured in this week's am file's Foundation Models Python SDK item; folded into Fable 5 day-1 distribution detail. (e) Holland & Knight Health Dose AI policy update \u2014 too narrow for snapshot-level coverage. (f) Microsoft / Sakura Japan AI data center investment ($10B over 4 years) \u2014 June 5 timing, outside window. WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); enrichment + late-breaking pass done entirely via WebSearch (8 queries). Hero images uniformly null. Caps: ~40k/100k tokens, 8/30 fetches, well within wall-time. Final am composition: 2 Tier-1 (Claude Fable 5, OpenAI IPO) + 3 Tier-2 (Siri AI EU/China, AFM 3 architecture, Xcode 27) + 0 Tier-3 = 5 items. The two structurally substantive cross-item narratives Gabe will read together: (i) Anthropic-vs-OpenAI public-market positioning (Claude Fable 5 widening coding-benchmark lead + OpenAI IPO disclosure substantively under-the-microscope financial picture), and (ii) Apple WWDC 2026 follow-up cycle (AFM 3 sparse architecture validated by ex-Apple/now-Anthropic researcher; Xcode 27 first OS-vendor IDE with frontier agentic coding; Siri AI EU delay escalating into a public Apple-vs-Brussels blame fight)."
-    },
-    {
-      "run_id": "2026-06-09T17:00:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-06-09T17:00:00Z",
-      "ended_at": "2026-06-09T17:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 42000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 28000,
-        "curation": 11000,
-        "output_write": 1500
-      },
-      "fetches_made": 14,
-      "items_input": 9,
-      "items_output": 4,
-      "items_added": 4,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-06-09-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Standard digest path. Today's 2026-06-09-am file exists with 8 items (Apple WWDC Siri-Gemini-Extensions, Claude-in-Excel, Pentagon-Anthropic, Apple homeOS, iOS 27 accessibility/Shortcuts, Apple Liquid Glass slider, Apple Foundation Models Python SDK + LanguageModel protocol, LG CNS Claude Enterprise) \u2014 all excluded from pm per promotion rule. Pm digest focuses on 4 net-new items from the WWDC follow-up cycle and the OpenAI IPO disclosure. (1) openai-confidential-s1-ipo-filing-june-8-2026 (T1) \u2014 OpenAI publicly confirms confidential S-1 IPO filing on June 8 (actually filed May 22, one week before Anthropic's June 1 filing), Goldman Sachs/Morgan Stanley/JPMorgan leading, targeting up to $1T valuation with possible September debut; back-to-back filings set up first pure-play AI lab race to public markets, with the substantive financial contrast (OpenAI losing $1.22 per revenue dollar projecting $14B 2026 loss; Anthropic approaching profitability at $47B ARR) the single most-watched open question. Musk-lawsuit dismissal removed key legal overhang. Pairs structurally with the Claude-in-Excel + LG CNS items in today's am file as the substantive Anthropic-enterprise-distribution-channel-build-out picture. (2) apple-third-gen-foundation-models-afm3-architecture-june-8-2026 (T2) \u2014 Apple ML Research formally unveils third-generation Foundation Models (AFM 3) family: 3B-parameter AFM 3 Core on-device, 20B sparse AFM 3 Core Advanced for higher-end iPhone/iPad/Mac (1-4B active per token via Instruction-Following Pruning, full model stored in flash via NAND not DRAM, lightweight dense block expert routing per prompt), plus three cloud models (AFM 3 Cloud / AFM 3 Cloud Pro on NVIDIA GPUs in Google Cloud / ADM 3 Cloud Image). Cleanest current production example of sparse-activation designed for on-device flash-storage constraints, distinct architectural pattern from cloud-deployed MoE (Mixtral/DeepSeek/Qwen). Multiple press reads frame Apple-Google collaboration as Gemini-derived training infrastructure with Apple-owned pre/post-training. (3) wwdc-2026-xcode-27-core-ai-device-hub-platforms-state-of-union-june-8-2026 (T2) \u2014 Apple Platforms State of the Union (1pm PDT June 8) ships Xcode 27 with dual-engine agentic coding (on-device Neural Engine model for Swift suggestions / cloud routing to Claude / Gemini / ChatGPT for heavier work), Device Hub replacing Simulator (agent simulates apps, runs tests end-to-end), new Core AI framework replacing Core ML for third-party on-device models, SwiftUI updates (drag-to-reorder, swipe actions, nested layouts 2x faster, async image caching), SiriKit formal deprecation (2-3 year removal window). Xcode 27 Apple-Silicon-only, 30% smaller binary. Distinct from am file's Foundation Models Python SDK item \u2014 that's how DEVELOPERS call AI; this is how AI helps developers write code. First OS-vendor IDE shipping frontier agentic coding as first-party feature alongside Microsoft Build 2026 Visual Studio + GitHub Copilot story already covered. (4) apple-siri-ai-delayed-eu-dma-china-regulatory-june-8-2026 (T2) \u2014 Apple newsroom post formally confirms Siri AI indefinitely delayed in EU under DMA (Federighi: 'we do not currently have a timeline'); European Commission rejected Apple's Trusted System Agent intermediary proposal and 18-month phased rollout proposal. Siri AI also blocked at launch in China (Cyberspace Administration of China holding Apple-Alibaba-Baidu joint application). Region: EU (primary). macOS 27 and visionOS 27 still get Siri AI in EU \u2014 restriction is iOS/iPadOS-specific. Combined EU+China non-shipping iPhone install base substantial (~42% of global volume). Evaluated and declined: (a) ChatGPT Dreaming V3 memory upgrade \u2014 rolled out June 4, already 5 days old and within prior digest sweep window, skipped as not net-new. (b) macOS 27 Golden Gate Intel-drop / Core AI / Liquid Glass system-wide / SiriKit deprecation \u2014 folded into Xcode 27/Core AI item rather than standalone since already mentioned in am file's WWDC item. (c) visionOS 27 / watchOS 27 detail (Vision Pro spatial panoramas / Workout Buddy / women's health tracking) \u2014 too peripheral for snapshot-level coverage. (d) Mistral Vibe (rebranded Le Chat) \u2014 June 1, outside window. (e) Devin Desktop (rebranded Windsurf) \u2014 June 2, outside window. (f) Dynamic Workflows in Claude Code research preview \u2014 May 28, outside window. (g) Microsoft Build 2026 announcements (Project Polaris, Windows Agent Framework, Azure Agent Mesh) \u2014 June 2-3, outside window. (h) Cursor Teams repricing \u2014 June 2026 but timing not specifically June 8-9. (i) Apple Intelligence accessibility features (separate Apple newsroom post) \u2014 already captured in am file's iOS 27 accessibility item. (j) Anthropic Foundation Models Swift package available June 9 \u2014 already captured in am file's Foundation Models Python SDK item. WebFetch returned 403 on all direct-fetch attempts (consistent with prior sandbox runs in this environment); sourcing done entirely via WebSearch (14 queries). Hero images uniformly null. Caps: ~42k/100k tokens, 14/50 fetches, well within wall-time. Final composition: 1 Tier-1 + 3 Tier-2 + 0 Tier-3 = 4 items, with the Apple WWDC-follow-up stack (items 2, 3, 4) and the OpenAI-IPO standalone Tier-1 (item 1) as the two structurally substantive cross-item narratives Gabe will read together with today's am file."
-    },
-    {
-      "run_id": "2026-06-09T11:00:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-06-09T11:00:00Z",
-      "ended_at": "2026-06-09T11:25:00Z",
-      "wall_time_ms": 1500000,
-      "tokens_used": 25000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1000,
-        "deep_fetch": 0,
-        "discovery_search": 20000,
-        "curation": 2500,
-        "output_write": 1500
-      },
-      "fetches_made": 13,
-      "items_input": 15,
-      "items_output": 8,
-      "items_added": 2,
-      "items_kept": 6,
-      "items_dropped": 0,
-      "snapshot_written": "2026-06-09-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Standard refresh path on today's 2026-06-09-am (6 items from enrichment). Swept for content since 2026-06-09T06:30:00Z (enrichment ended_at). WebFetch returned 403 on all direct-fetch attempts (consistent with prior sandbox runs); sourcing done entirely via WebSearch (13 queries). No Tier-1 model releases found in the overnight window: GPT-5.5 released April 23, Claude Opus 4.8 released May 28, Gemini 3.5 Pro still in limited Vertex preview. Two items added: (1) apple-foundation-models-wwdc-2026-python-sdk-provider-swap (Tier 2) \u2014 Apple Foundation Models WWDC 2026 developer-platform story: Python SDK (apple/python-apple-fm-sdk), fm CLI, multimodal image support, Linux support, and the new LanguageModel protocol letting Claude and Gemini plug in as drop-in providers via SPM dependency swap; Anthropic's Swift package implementing the protocol specifically available June 9 (announced at WWDC June 8 as 'available tomorrow'). This is the developer-layer complement to the iOS 27 Extensions user-layer story already in the snapshot. (2) lg-cns-anthropic-claude-enterprise-lg-group-june-9-2026 (Tier 3) \u2014 LG CNS (IT-services arm of LG Group) signed a group-wide Claude Enterprise agreement with Anthropic on June 9; multiple Korean press sources (Korea Herald, Seoul Economic Daily, Korea Times, The Elec). Asia-cycle overnight item. First publicly confirmed chaebol-scale Claude Enterprise deployment. Evaluated and declined: (a) White House AI EO 'Promoting Advanced Artificial Intelligence Innovation and Security' \u2014 signed June 2, outside the overnight sweep window. (b) Claude Managed Agents self-hosted sandboxes / MCP tunnels \u2014 announced May 19 at Code with Claude London, outside window. (c) Anthropic June 15 billing change (Agent SDK credit pool) \u2014 announced May 14, formalized in Help Center; ongoing news cycle not specific to overnight. (d) Gemini 3.5 Pro GA \u2014 still in limited Vertex preview as of June 9. Hero images uniformly null. Caps: ~25k/60k tokens, 13/20 fetches, well within wall-time."
-    },
-    {
-      "run_id": "2026-06-09T06:00:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-06-09T06:00:00Z",
-      "ended_at": "2026-06-09T06:30:00Z",
-      "wall_time_ms": 1800000,
-      "tokens_used": 38000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1200,
-        "deep_fetch": 0,
-        "discovery_search": 22000,
-        "curation": 13000,
-        "output_write": 1800
-      },
-      "fetches_made": 11,
-      "items_input": 6,
-      "items_output": 6,
-      "items_added": 1,
-      "items_kept": 5,
-      "items_dropped": 0,
-      "snapshot_written": "2026-06-09-am",
-      "error": null,
-      "partial": false,
-      "notes": "Standard enrichment path on yesterday's 2026-06-08-pm (5 items). All 5 pm items kept with substantive new context surfaced overnight: (1) WWDC 2026 Siri-Gemini-Extensions \u2014 added Liquid Glass concession framing (opacity slider placed as very first announcement of keynote per CNBC live-blog), App Intents-mandatory + SiriKit-deprecated developer-platform detail per Lushbinary developer guide, and Ming-Chi Kuo's pre-keynote 'must outclass Gemini not just catch up' framing; restructured why_it_matters to add fourth dual-concession read. (2) Claude in Excel \u2014 added cross-app context (Claude remembers Outlook \u2192 Excel \u2192 PowerPoint) as the standout substantive feature per The New Stack hands-on coverage, added practical Pro-plan usage-limit-burn concern per AItoolsReview review (users hitting plan limits within minutes due to multi-tool-call workflow expansion); restructured why_it_matters into three reads. (3) Pentagon 'Too Safe for War' \u2014 added Amodei primary-source quotes 'we have these two red lines from day one \u2014 we're not going to move on them' from the Anthropic newsroom statements and CBS interview, added the Pentagon's reciprocal 'liar with a God complex' Fortune characterization, added March 4 'deescalate' investor-call context. (4) Apple homeOS \u2014 added substantive developer-tooling specifics (Xcode 26, WidgetKit + App Intents APIs same as iOS StandBy widgets), 'first new Apple OS since visionOS in 2023' framing, and watchOS-2015-first-mover-advantage historical parallel per byteiota developer-preview guide; restructured why_it_matters into three reads. (5) iOS 27 accessibility + Shortcuts \u2014 added concrete Apple-demo ETA-on-leaving-home Shortcuts example with end-to-end location/timing/messaging assembly per AllThings.How coverage, added App Intents-mandatory + SiriKit-deprecated plumbing detail that makes the natural-language Shortcuts feature scale. One Tier-3 late-breaking item added: apple-liquid-glass-opacity-slider-ios-27-design-system-reversal-june-8-2026 \u2014 the Liquid Glass intensity slider as a standalone story focused on the design-system / CSS-adjacent angle (Metal GPU + lensing, .glassEffect() / UIGlassEffect API surface, Nielsen Norman Group accessibility-research context), positioned as the cleanest current example of how Apple shipped a visible design-language concession at the literal top of the keynote and what it substantively means for design-system shipping at OS scale; explicitly framed for Gabe as an HTML/CSS coder via the backdrop-filter:blur() vs. lensing-with-GPU-shaders comparison. Evaluated and declined: (a) Claude Sonnet 4.8 release \u2014 still projected June 16-18 per Wavespeed/ChatForest leak tracking, no official announcement as of June 9; deferred to next cycle. (b) Gemini 3.5 Pro GA \u2014 still in limited Vertex enterprise preview per Polymarket prediction-market data, expected late June; deferred. (c) MiniMax M3 open weights \u2014 still pending Hugging Face landing per MiniMaxAI repo watch (within-10-days from June 1 launch); not yet shipped as of June 9, will surface naturally if drops in next cycle. (d) Boston Dynamics + Google DeepMind Gemini Robotics-ER 1.6 / Contextual AI $80-90M licensing deal \u2014 May-2026 timing, outside the 12-hour late-breaking window. (e) Microsoft MAI-Code-1-Flash + MAI-Thinking-1 \u2014 already covered indirectly via prior cycles, June-1-area Microsoft Build timing. (f) Anthropic $65B Series H at $965B post-money \u2014 already covered as framing context in prior cycles, May-28 timing. WebFetch returned 403 on all attempted direct-fetch URLs (consistent with prior sandbox runs in this environment); enrichment + late-breaking pass done entirely via WebSearch (11 queries). Hero images uniformly null. Caps: ~38k/100k tokens, 11/30 fetches, well within wall-time."
     }
   ]
 }
