@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-09T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-09T06:00:00Z",
+      "ended_at": "2026-09-09T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 72000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 18000,
+        "output_write": 20000
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-09-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Read 2026-09-08-pm (5 items: 3 T1, 2 T2, 0 T3). WebFetch remained blocked by proxy per prior runs — used WebSearch exclusively (8 focused queries: 5 per-item + 3 late-breaking sweep). All 5 items surfaced meaningful new context and were kept + enriched (0 dropped). Overnight highlights: (1) Fermat/FLT — Kevin Buzzard on-record 'extraordinary autoformalization achievement' quote; first attempt failed and Prove2Me was added mid-run; 13M lines is over 5x Mathlib. (2) Buckmaster-Alpöge Euler — MAJOR ENRICH: corrected Alpöge's affiliation from Harvard to Anthropic (Wikipedia + alpo.ge personal site), corrected release timeline (Aug 15 completion, Sept 7 Tao preview, Sept 8 public release), added Tao's specific 'technical improvements over Córdoba-Martínez-Zoroa' framing, and cross-referenced the OpenAI Navier-Stokes credit dispute (own new item). (3) GPT-6 Astra CoT — added 83% Frontier Math Tier 4 with no CoT (MindStudio + AI Weekly overnight), shortens CoT when monitor present, and Critical cyber tier classification. (4) PyTorch Foundation — added 250+ China orgs contributing to stack (DeepSpeed/Helion/Ray/Safetensors/vLLM) from ChannelInsider + Sourcetrail. (5) Tenable/OpenAI CyberAgents — light: GA status update (not landed by Sept 9), iTWire added to syndication list. Late-breaking pass (2 items added at cap): (a) openai-navier-stokes-claim-buckmaster-bubeck-credit-dispute-september-8-2026 — T1 US, Sept 8 public dispute where OpenAI's Sébastien Bubeck told Buckmaster on Sept 6 that an internal OpenAI model produced a proof of forced Navier-Stokes finite-time blowup (extending B-A Euler toward Clay Millennium target); Buckmaster alleges Bubeck pressured him to strip Anthropic employee Alpöge from authorship, that the reply to his objection was 'Why would you ruin your career?'; Bubeck publicly rejected framing as 'false and inflammatory' but apologized for that specific line; Buckmaster raised Codex-provenance concerns. Coverage: TechCrunch, Axios, Engadget, The Decoder, Scientific American, OfficeChai, explainx.ai, Unite.AI, AI Weekly. (b) mistral-3b-series-d-samsung-21b-valuation-september-8-2026 — T1 EU, Mistral announced Sept 8 a €3B Series D at €21B post-money, Samsung-led with EQT/PSG co-leads and BlackRock/Luxembourg new investors; largest European tech equity round ever; CEO Mensch stated capital will build/own data centers alongside rented compute (neocloud pivot). Coverage: TechCrunch, Yahoo Finance/CNBC, EU-Startups, Vestbee, trendingtopics.eu, Qz. Rejected candidates: Nvidia/HuggingFace acquisition (already covered in 2026-09-04-am item), Anthropic $80B compute-week deals (already covered in prior digests as Nscale/Lambda), Google DeepMind 9B DNA variants (T3, not enough fit for morning file at cap of 2), Anthropic $15B credit line / Oct IPO delay (already noted in prior notes). No cap hits (~72k/100k tokens, 8 fetches/30, ~25 min/45 min wall time). Kill switch checked: not paused, all three phase flags enabled."
+    },
+    {
       "run_id": "2026-09-08T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
