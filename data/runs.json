@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-10T17:10:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-10T17:00:00Z",
+      "ended_at": "2026-09-10T17:10:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 12500,
+        "output_write": 19000
+      },
+      "fetches_made": 11,
+      "items_input": 10,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-10-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Read today's am file (6 items: 2 T1, 4 T2, 0 T3) for the promotion-rule filter. WebSearch is back online (11 queries used) after being reported unavailable in the 2026-09-10T11:05:00Z-refresh run; WebFetch remains EGRESS_BLOCKED per prior runs. Since-window: since last successful full run (enrichment) ended 2026-09-10T06:00:00Z, ~11 hours; the 11:05Z refresh was partial with 0 items added. No promotion applied — none of the 6 am-file items met the 'materially deepened during the day' bar. Curated 5 new items missed by prior 2026-09-08 through 2026-09-10 phases: (1) T1 US Anthropic Institute Econ Scenario Explorer v1.0 released Sept 9 — interactive AI economic-scenario modeling tool + Working Paper 2026-02 + 10,980-respondent Morning Consult survey. Three scenarios: Modest (+1.6% GDP 2030 = $34.1T), Substantial (+8.3% GDP, labor 56.1%), Extreme (+32.4% GDP = $44.4T, labor 45.2%, knowledge-worker unemployment past recession levels + wages fall 10%+). Median survey respondent → Substantial. First frontier lab to publish this shape of interactive scenario-modeling tool. (2) T1 US Positron AI $875M @ $5B — $375M Series C at $3.5B pre-money co-led by NEA + Atreides Management + Valor Equity + Andra Capital + SemiAnalysis Capital, + $500M Series C-1 anchored by NEA + Jim Clark. 5x val in 6 mo (from $1B Feb 2026). Reno NV, AI-inference chip built for memory-bandwidth rather than raw compute (Nvidia-inference alternative). Asimov tapes out end 2026 on TSMC N3P; Titan node = 4-8 Asimov chips. Cross-ref: Atreides + Valor also co-led Crusoe $3B Series F this week (in today's am under crusoe-3b-fluidstack-1p5b item) — same VC pair funding both data-center + chip layers. (3) T2 EU/US Meta acquires Stilla.ai (Sept 9) — Stockholm-based Swedish AI-agent startup, founded 2024 by ex-Shopify execs Ghorbani + Drobin, $5M pre-seed Jan 2026, emerged from stealth 8 mo ago; multiplayer AI teammate platform integrated with Slack/Teams/GitHub/Linear. Acquired to accelerate Meta Business Agent (now 1M+ businesses, 1B+ daily business conversations across WhatsApp/Messenger/Instagram). Financial terms undisclosed. Pairs with meta-muse-general-availability-launch-tiers item in am — Meta running two parallel agent lines. (4) T2 US Suno v6/v6-wild/v6-mini AI-music model family (Sept 9) — first Suno family (v6 Pro flagship, v6-wild Pro experimental, v6-mini free). Trained exclusively on licensed data from WMG + BMG + Believe (owns TuneCore); previous training corpus retired. Deal history: settled with WMG under litigation last year; BMG licensing Aug 2026 (never sued); Believe licensing Sept 8, 2026 (had been blocking Suno tracks from streaming platforms). UMG + Sony remain plaintiffs in RIAA case (Boston, June 2024). New features: plain-language editing, multi-source mashups, first-class sampling, multimodal prompts. Retire-and-replace training-data pivot — sharpest current case study for the pattern. (5) T2 Asia Alibaba/Tencent lead $300M in Chinese AI-training-and-benchmarking startup UniPat AI @ $2.5B (Sept 10) — HSG (formerly Sequoia China) also participating. Former Alibaba intern founder. Focus: AI evaluation against gritty real-world scenarios rather than sterile lab conditions. Alibaba + Tencent co-investment structural signal — AI-evaluation infrastructure treated as shared/non-rivalrous. Rejected: Anthropic MHS follow-up coverage (already covered in Aug 27-30 items), Anthropic Claude Science workbench (already released June 30, 2026), OpenAI GPT-6 Astra pricing (already covered), Z.ai GLM-5.3-Flash (Aug event), Wyre AI seed round (too small for T3), various listen labs/other funding items. Final snapshot: 5 items (2 T1, 3 T2, 0 T3). No cap hits (~54k/100k tokens, 11 fetches/50, ~10 min/60 min wall time)."
+    },
+    {
       "run_id": "2026-09-10T11:05:00Z-refresh",
       "phase": "refresh",
       "status": "partial",
