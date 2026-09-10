@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-10T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-10T05:30:00Z",
+      "ended_at": "2026-09-10T06:00:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 18000,
+        "output_write": 18000
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 1,
+      "snapshot_written": "2026-09-10-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. WebFetch remained EGRESS_BLOCKED per prior runs — used WebSearch exclusively (9 queries). Kill switch checked: not paused, enrichment phase enabled. Read yesterday's pm (2026-09-09-pm, 6 items: 2 T1, 3 T2, 1 T3). Sub-task 1 (prune + enrich): (1) T1 Apple event item — enriched with post-event coverage: foldable ships as 'iPhone Duo' (not 'Ultra'/'Fold' as pre-event leaks had it), $1,999-$3,199, 7.6-inch inner display, star white/night sky; iPhone 18 Pro/Pro Max on A20 Pro 2nm w/ variable-aperture 48MP Fusion Main; Watch Series 12/Ultra 4 introduce new 'Audio Intelligence' feature (records ambient conversations for later review); AirPods 5; preorders Oct 16, ships Oct 23; OS release dates set. Siri AI shipped in English beta w/ French/Japanese/Korean/Portuguese/Spanish in Oct; the $1B/year Gemini-for-Siri licensing detail that dominated pre-event reporting was notably backgrounded on stage. (2) T1 MAISI — enriched w/ context: Tsimerman concurrently joining OpenAI safety dept in Sept; Critch's 2025 co-authored 'omnicidal' paper w/ Tsimerman provides theoretical grounding. (3) T2 Meta Muse — enriched w/ day-one reactions: positive from Shopify's Lütke, YC's Tan, Alexandr Wang; negative from PYMNTS (can't order pizza unassisted), Forbes (guardrail-bypass exposing private photos), Engadget (@Muse handle takeover from English rock band). WhatsApp-embedded distribution path confirmed. (4) T2 Cognition — enriched w/ analytical takes: TechCrunch frames as 'far from winner-take-all' VC bet; Progressive Robot analysis notes valuation-to-revenue ratio held flat ~53x — investors scaled the same view rather than repricing. Widened customer disclosure: NVIDIA, GE Aerospace, Modal now surface alongside prior list. (5) T2 Crusoe + Fluidstack — no material new coverage in enrichment window; light-touch enrichment note; core content unchanged. Dropped: T3 Accenture-Google Cloud Gemini Enterprise Business Group — no follow-up coverage or reactions surfaced. Sub-task 2 (late-breaking pass): added 1 new T2 Asia item — DeepSeek V4.1 Flash beta endpoint (deepseek-v4.1-flash-expires-on-0910, opened Sept 9, retires Sept 10 Beijing time), interim model w/ new architecture + native multimodal, priced at V4 Flash rate, DeepSeek claims surpasses V4 Pro; TechNode + CellCog coverage; fifth frontier-adjacent lab shipping model update in 9 days (after Anthropic Fable/Mythos 5.1 Sept 1, Gemini 3.8 Flash Sept 2, Muse Spark 1.3 Sept 2, GPT-6 Astra Sept 3). Final snapshot: 6 items (2 T1, 4 T2, 0 T3). Late-breaking scan of Sept 9-10 found no other Tier 1 model releases or lab announcements. No cap hits (~68k/100k tokens, 9 fetches/30, ~30 min wall time)."
+    },
+    {
       "run_id": "2026-09-09T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
