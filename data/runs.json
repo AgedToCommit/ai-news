@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-11T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-11T11:00:00Z",
+      "ended_at": "2026-09-11T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 25000,
+        "curation": 7000,
+        "output_write": 2500
+      },
+      "fetches_made": 9,
+      "items_input": 7,
+      "items_output": 10,
+      "items_added": 3,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-11-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch: not paused, all phases enabled. Enrichment ended_at 06:15Z used as sweep start. Sweep window: 06:15Z - 11:00Z UTC (5 hours). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (9 queries used). Three new Tier 1 items found: (1) openai-gpt-live-1-api-full-duplex-voice-september-10-2026 — OpenAI launched GPT-Live-1 in API Sept 10 ($0.05/min, full-duplex, 30pt improvement over Realtime-2.1, delegates reasoning to backend model, 12 voices, telephony support); not in enrichment due to enrichment 2-item late-breaking cap. (2) cohere-north-small-translate-open-weight-218b-moe-september-10-2026 — Cohere released open-weight 218B total/25B active MoE translation model (CC BY-NC 4.0, WMT26 83.6, 50+ languages, 1x B200 or 2x H100, $0.000676/task, 5,700%+ cheaper than Gemini 3.1 Pro Preview). (3) epoch-ai-frontiermath-tier4-saturated-gpt6-astra-september-2026 — Epoch AI announced Sept 11 every FrontierMath Tier 4 problem now solved; GPT-6 Astra solved Jay Pantone's final problem via intended path (no shortcut); 5%→98% in under 14 months from July 2025 launch; leaderboard GPT-6 Astra 98%, GPT-5.6 Sol 83%, GPT-5.6 Terra 68.3%; Tier 4 v2 published as successor. No optional re-pass on existing Tier 1 items (no significant new chatter in 5-hour window). Final snapshot: 10 items (7 T1, 3 T2, 0 T3). No cap hits (9 fetches/20, ~35k/60k tokens)."
+    },
+    {
       "run_id": "2026-09-11T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

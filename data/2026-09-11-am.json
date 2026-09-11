@@ -2,12 +2,13 @@
   "snapshot_id": "2026-09-11-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-11",
-  "generated_at": "2026-09-11T06:15:00Z",
-  "generated_at_local": "2026-09-11T02:15:00-04:00",
+  "generated_at": "2026-09-11T11:00:00Z",
+  "generated_at_local": "2026-09-11T07:00:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-09-11T06:15:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-09-11T06:15:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-09-11T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 4, "2": 3, "3": 0 },
+  "tier_counts": { "1": 7, "2": 3, "3": 0 },
   "items": [
     {
       "id": "anthropic-threat-intelligence-report-september-2026",
@@ -431,6 +432,157 @@
           "source": "PANews — Alibaba to Lead UniPat AI's $300 Million Funding Round, Valuing the Company at $2.5 Billion",
           "url": "https://panews.io/articles/01a08964-495d-722d-807c-838ccce9a1fe",
           "take": "The Asia-tech-industry writeup on the deal — useful for reading how the round lands in the Chinese venture-and-technology ecosystem, and for the reference to the Alibaba-Tencent co-investment signal."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-live-1-api-full-duplex-voice-september-10-2026",
+      "tier": 1,
+      "title": "OpenAI launched GPT-Live-1 in the API on September 10, 2026 — a full-duplex voice front-end at $0.05/minute that listens while speaking, runs a real-time turn-management loop several times per second to decide when to pause, yield, interrupt, or invoke a tool, and delegates all reasoning to whichever backend model the developer specifies; GPT-Live-1 improves 30 points over Realtime-2.1 on OpenAI's internal conversational-quality benchmark, ships with 12 voices (including five new ones), supports telephony integrations, and is the first production-ready full-duplex voice layer offered as a standalone API primitive by a US frontier lab",
+      "summary": "OpenAI opened GPT-Live-1 in the API on September 10, 2026, making its full-duplex voice model available to all API developers. Coverage from OpenAI (primary), Unite.AI, tbreak.com, and TestingCatalog. GPT-Live-1 is a full-duplex voice front-end: it processes incoming audio in real time while simultaneously generating outgoing speech, running a turn-management loop at several times per second to decide whether to keep talking, pause for the user, yield, interrupt, or invoke a tool. That turn-management loop is the technically-specific piece: standard half-duplex voice APIs (push-to-talk, VAD-gated) wait for silence before processing input; GPT-Live-1 listens continuously, meaning it can detect an interruption mid-sentence and stop generating, the way a person does. Pricing: $0.05 per minute of audio. The model delegates all reasoning, tool invocation logic, and long-context retrieval to whichever backend model the developer specifies — the developer wires up the voice layer and the reasoning model independently. Quality: 30-point improvement over Realtime-2.1 on OpenAI's internal conversational-quality benchmark. Voice selection: 12 voices total, including five new ones added alongside the launch. Telephony: first-class integrations for telephony use cases (PSTN, SIP), making it deployable in phone-line contexts without a separate WebSocket bridge. GPT-Live-1 is the first full-duplex voice API offered as a standalone production-grade primitive by a US frontier lab — the Realtime API predecessors (Realtime-2.1 and earlier) were available but with higher latency, less reliable turn-management, and different pricing. The launch positions OpenAI against voice-infrastructure companies (Vapi, Daily, Pipecat) and real-time audio API providers (Deepgram, AssemblyAI) — the specific competitive implication is that OpenAI now controls both the voice front-end and the reasoning back-end, and the pricing bundling is structured to make splitting those layers look expensive by comparison.",
+      "link": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "why_it_matters": "For Gabe: this is the first time a frontier lab has offered a production-grade full-duplex voice layer as a standalone API primitive, and the specific design choice to separate voice front-end from reasoning back-end is the detail worth internalizing. Four things worth pulling out. First, the distinction between full-duplex and half-duplex voice is worth understanding at the mechanism level. Half-duplex voice (the standard model): you speak, the API detects silence, it processes your input, it generates a response, it plays the response. No real-time interaction mid-utterance. Full-duplex voice (what GPT-Live-1 is): both sides of the conversation are live simultaneously, like a real phone call. The model is listening while it is speaking, running a turn-management decision several times per second — 'should I keep going, should I pause here, should I yield, should I interrupt myself because the user just said something?' That is a qualitatively different conversational feel. The 30-point improvement over Realtime-2.1 on OpenAI's benchmark is the quantified signal that this generation is where full-duplex starts to feel usable in production rather than as a demo. Second, the separated-layers design is the interesting architectural decision. GPT-Live-1 handles voice-in and voice-out; the developer independently specifies a reasoning model to handle what the voice layer actually says. The voice layer talks to the reasoning model the way a dispatcher talks to a specialist — it routes the user's speech to the reasoning model, handles the turn management, and converts the reasoning model's text output back to speech. That means a developer building a voice assistant can upgrade the voice quality and the reasoning quality independently. Third, the telephony support is the specific deployment-shape signal. PSTN and SIP integrations mean this goes on a phone line — an IVR, a customer-service phone system, a voice-first business workflow. That is a very different deployment context than a web-app voice button. If you have ever interacted with a phone-line IVR, GPT-Live-1 is the specific API that, at $0.05/min, makes it economically feasible for even a small operator to replace the rules-based tree with a conversational voice model. Fourth, the competitive map is worth reading quickly. Vapi, Pipecat, and Daily are the voice-infrastructure middleware companies that have been building on top of Deepgram (STT), ElevenLabs (TTS), and OpenAI's Realtime API. GPT-Live-1 integrates STT, TTS, and turn-management into a single endpoint — which removes the reason to use the middleware layer for the simplest deployments. For your Python and HTML/CSS work: this is in scope to try. A Python script that opens a WebSocket to GPT-Live-1 and pipes microphone audio in and speaker audio out is a relatively small amount of code, and the $0.05/min pricing means a few minutes of experimentation costs under $0.25. The telephony angle is the most interesting broadening direction — building a phone-line voice assistant with Python and Twilio (for the PSTN bridge) and GPT-Live-1 (for the model layer) is the specific project shape that crosses the line from 'web-app hobby' to 'something that runs as infrastructure.'",
+      "why_it_matters_brief": "OpenAI opened GPT-Live-1 in the API at $0.05/min — the full-duplex voice front-end that listens while speaking and decides when to pause, interrupt, or call a tool several times per second, paired with any backend model the developer chooses.",
+      "source": {
+        "name": "OpenAI — Introducing GPT-Live-1 in the API",
+        "type": "scrape",
+        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-11T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-11T11:00:00Z",
+          "by": "refresh",
+          "change": "created — OpenAI launched GPT-Live-1 in the API Sept 10, 2026. Full-duplex voice front-end: listens while speaking, turn-management loop several times per second (pause/yield/interrupt/tool decisions), delegates reasoning to developer-specified backend model. Pricing: $0.05/min. Quality: 30pt improvement over Realtime-2.1 on OpenAI's internal conversational-quality benchmark. 12 voices (5 new). Telephony support (PSTN, SIP). First production-grade full-duplex voice API as a standalone primitive from a US frontier lab. Positions against Vapi, Daily, Pipecat (voice-infrastructure middleware) and Deepgram/AssemblyAI (STT/TTS components). Not captured in enrichment (enrichment 2-item late-breaking cap was hit). Sources: OpenAI primary, Unite.AI, tbreak.com, TestingCatalog. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI — Introducing GPT-Live-1 in the API",
+          "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+          "take": "The primary announcement — the reference for the $0.05/min pricing, the 30pt improvement over Realtime-2.1, the 12 voices, the telephony support, and the separated-voice-front-end-from-reasoning-back-end architecture."
+        },
+        {
+          "source": "Unite.AI — OpenAI Releases GPT-Live-1 API: Real-Time Voice With Full-Duplex Listening",
+          "url": "https://www.unite.ai/openai-releases-gpt-live-1-api-real-time-voice-with-full-duplex-listening/",
+          "take": "The AI-industry writeup that most clearly lands the full-duplex distinction from half-duplex voice APIs — useful for the reference to what 'listens while speaking' means in practice."
+        },
+        {
+          "source": "tbreak.com — OpenAI's GPT-Live-1 Is the First Real Full-Duplex Voice API You Can Actually Ship",
+          "url": "https://tbreak.com/tech/openais-gpt-live-1-is-the-first-real-full-duplex-voice-api-you-can-actually-ship/",
+          "take": "The developer-audience writeup that centers the 'shippable in production' framing — useful for reading how the launch lands with API developers comparing it to the prior Realtime API generations."
+        },
+        {
+          "source": "TestingCatalog — GPT-Live-1 API Review: Full-Duplex Voice at $0.05/min",
+          "url": "https://www.testingcatalog.com/gpt-live-1-api-review-full-duplex-voice-at-0-05-per-minute/",
+          "take": "The hands-on review that anchors the pricing-and-quality read — the reference for what the 30pt benchmark improvement translates to in a real developer's experience."
+        }
+      ]
+    },
+    {
+      "id": "cohere-north-small-translate-open-weight-218b-moe-september-10-2026",
+      "tier": 1,
+      "title": "Cohere released North Small Translate 1.0 as an open-weight model on September 10, 2026 — 218 billion total parameters / 25 billion active via mixture-of-experts, CC BY-NC 4.0 license, covering 50+ languages, scoring 83.60 on WMT26 (base) and 84.36 (agentic pipeline), fitting on a single NVIDIA B200 or two H100s, and priced at $0.000676 per enterprise translation task — the first frontier-grade translation model sized for single-GPU deployment and the sharpest per-task cost advantage in its class: more than 5,700% cheaper than Gemini 3.1 Pro Preview on WMT26-level tasks",
+      "title_short": "Cohere North Small Translate open-weight (218B total / 25B active MoE, CC BY-NC 4.0, 50+ languages, WMT26 83.6, single B200, $0.000676/task)",
+      "summary": "Cohere released North Small Translate 1.0 on September 10, 2026 as an open-weight model under CC BY-NC 4.0. Coverage from MarkTechPost (primary), Unite.AI, BenchLM, and Hugging Face (model card). North Small Translate is a mixture-of-experts architecture with 218 billion total parameters and 25 billion active parameters per forward pass — meaning it has frontier-scale parameter count but runs at roughly the inference cost of a 25B dense model. The model covers 50+ languages, evaluated on the WMT26 translation benchmark: 83.60 base (single-pass) and 84.36 agentic (pipeline with revision step). Hardware requirements: fits on a single NVIDIA B200 or two H100s in production. Pricing on Cohere's API: $0.000676 per enterprise translation task. By comparison, Gemini 3.1 Pro Preview on the same WMT26 task class runs to approximately $0.039 per task — making North Small Translate roughly 5,700% cheaper per task at comparable benchmark quality. The open-weight release under CC BY-NC 4.0 means the model can be deployed on-premises or on any cloud; the commercial-use restriction is the specific license detail to note for production deployments. BenchLM's independent evaluation confirmed the WMT26 scores. The release is specifically notable as the first frontier-grade translation model that fits within single-GPU deployment constraints — prior models at this quality tier required multi-GPU setups (typically 4-8 GPUs minimum). Cohere positions North Small Translate as a complement to its North command models: translation-specialized versus general-purpose instruction-following.",
+      "link": "https://huggingface.co/CohereLabs/North-Small-Translate-1.0",
+      "why_it_matters": "For Gabe: this is the translation-model release worth paying attention to if you have ever needed to process or display content in multiple languages in anything you build, and the single-GPU-fits framing is the specific deployment-accessibility signal to internalize. Four things worth pulling out. First, the MoE architecture is the reason a frontier-quality model fits on one B200. 218 billion total parameters sounds enormous — GPT-3 was 175B total parameters — but with mixture-of-experts only 25 billion parameters are active for any given token. The active-parameter count is what determines memory and compute requirements; the total-parameter count determines how much the model can specialize. That is the specific technical mechanism behind North Small Translate's deployment footprint: MoE lets Cohere build a highly-specialized translation model without the inference cost of a 218B dense model. Second, the WMT26 score is the right benchmark to anchor on for translation quality. 83.6 on WMT26 puts North Small Translate at or above the level of professional human translators on most language pairs covered by WMT26. The agentic pipeline number (84.36) is what you get if you add a revision step where the model checks its own translation. Third — and this is the number most worth remembering — the pricing gap versus Gemini 3.1 Pro Preview is not marginal. $0.000676 versus ~$0.039 per task is a 57x price difference at equivalent benchmark quality. If you are building anything that involves translation at scale (processing a corpus of documents, adding multilingual support to a web tool, running batch translation on user-generated content), the economics are completely different at 57x cheaper. Fourth, the CC BY-NC 4.0 license is the specific detail to check for your use case. Non-commercial means you can deploy this freely for personal projects, research, or any non-commercial application. For commercial applications you need a separate agreement with Cohere. If you are a hobbyist building something non-commercial, it is effectively free to self-host. For your Python and HTML/CSS work: this is one of the more directly actionable releases for someone building in Python. If you have ever wanted to add translation to a Python project (processing a text file, building a multilingual interface, translating an API response), North Small Translate is now the specific option that runs locally or on a single cloud GPU at near-zero cost for non-commercial use. The Hugging Face model card has the inference code.",
+      "why_it_matters_brief": "Cohere released North Small Translate open-weight — 218B total/25B active MoE, CC BY-NC 4.0, 83.6 on WMT26 across 50+ languages, at $0.000676 per enterprise task — the first frontier-grade translation model fitting on one B200 GPU and 5,700%+ cheaper per task than Gemini 3.1 Pro Preview.",
+      "source": {
+        "name": "Hugging Face — CohereLabs/North-Small-Translate-1.0",
+        "type": "scrape",
+        "url": "https://huggingface.co/CohereLabs/North-Small-Translate-1.0"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-11T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-11T11:00:00Z",
+          "by": "refresh",
+          "change": "created — Cohere released North Small Translate 1.0 open-weight on Sept 10, 2026. CC BY-NC 4.0. 218B total / 25B active MoE. 50+ languages. WMT26: 83.60 base / 84.36 agentic. Hardware: 1x NVIDIA B200 or 2x H100. Pricing: $0.000676/task (5,700%+ cheaper than Gemini 3.1 Pro Preview). First frontier-grade translation model on single-GPU. BenchLM independent WMT26 evaluation confirmed. Sources: MarkTechPost (primary), Unite.AI, BenchLM, Hugging Face model card. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "MarkTechPost — Cohere Releases North Small Translate: Open-Weight MoE Translation at Frontier Quality",
+          "url": "https://www.marktechpost.com/2026/09/10/cohere-releases-north-small-translate-open-weight-moe-translation-at-frontier-quality/",
+          "take": "The primary technical writeup — the reference for the 218B/25B MoE architecture, the WMT26 scores, the hardware requirements, and the 5,700%+ cost advantage framing."
+        },
+        {
+          "source": "Unite.AI — Cohere Releases North Small Translate 1.0: Frontier-Grade Open-Weight Translation",
+          "url": "https://www.unite.ai/cohere-releases-north-small-translate-1-0-frontier-grade-open-weight-translation/",
+          "take": "The AI-industry writeup that most clearly lands the 'first frontier-quality model on a single GPU' framing — useful for reading the deployment-accessibility signal."
+        },
+        {
+          "source": "BenchLM — North Small Translate 1.0 WMT26 Independent Evaluation",
+          "url": "https://benchlm.ai/evals/cohere-north-small-translate-wmt26",
+          "take": "The independent benchmark evaluation that confirmed Cohere's own WMT26 scores — the reference for why 83.6 and 84.36 are credible rather than self-reported."
+        },
+        {
+          "source": "Hugging Face — CohereLabs/North-Small-Translate-1.0 (model card)",
+          "url": "https://huggingface.co/CohereLabs/North-Small-Translate-1.0",
+          "take": "The model card with inference code, language coverage list, and CC BY-NC 4.0 license terms — the reference for deployment and the specific commercial-use restriction."
+        }
+      ]
+    },
+    {
+      "id": "epoch-ai-frontiermath-tier4-saturated-gpt6-astra-september-2026",
+      "tier": 1,
+      "title": "Epoch AI announced on September 11, 2026 that every FrontierMath Tier 4 problem has now been solved — GPT-6 Astra solved the final open problem (contributed by mathematician Jay Pantone) via the intended solution path without a shortcut, pushing the leaderboard to GPT-6 Astra 98%, GPT-5.6 Sol 83%, GPT-5.6 Terra 68.3%; the benchmark launched in July 2025 at 5% solve rate and reached saturation in under 14 months; Epoch AI has published FrontierMath Tier 4 v2 as the successor, with problems contributed by Fields Medalists and targeting problems that require weeks of mathematician-hours to verify",
+      "summary": "Epoch AI announced on September 11, 2026 that FrontierMath Tier 4 is fully saturated — every problem in the benchmark has been solved by at least one AI system. Coverage from Epoch AI (primary Substack post), Epoch AI's official X account (@EpochAIResearch), AlphaSignal, and BenchLM. The specific final problem: contributed by Jay Pantone, a combinatorics specialist, and solved by GPT-6 Astra via the intended solution path — Epoch AI specifically noted this to address the concern that the model had found a shortcut or exploited a benchmark artifact rather than producing genuine mathematical reasoning. Leaderboard as of September 11, 2026: GPT-6 Astra 98%, GPT-5.6 Sol 83%, GPT-5.6 Terra 68.3%. The FrontierMath benchmark launched in July 2025 with a 5% solve rate across all systems tested at launch — at the time the benchmark was introduced, Epoch AI described Tier 4 problems as requiring significant effort from research mathematicians to solve and impossible for state-of-the-art AI systems. The 5% to 98% trajectory in under 14 months is the specific data point Epoch AI is highlighting in the announcement. Successor: Epoch AI published FrontierMath Tier 4 v2 alongside the announcement. The v2 problems are specifically designed to require weeks of mathematician-hours to verify (not just to solve) and were contributed by Fields Medalists and other top-tier researchers; the specific design goal is problems that cannot plausibly be solved by pattern-matching to training data because the problem statements themselves were constructed after the training cutoffs of current-generation models. The remaining 2% gap to 100% on GPT-6 Astra is problems that are either refused or where GPT-6 Astra's solution is rejected by the verifier; Epoch AI's post notes these are being reviewed individually.",
+      "link": "https://epochai.substack.com/p/new-record-on-frontiermath-tier-4",
+      "why_it_matters": "For Gabe: this is the most significant AI-benchmark-saturation event of 2026 so far, and the specific rate at which it happened is the data point worth internalizing alongside the fact of it. Four things worth pulling out. First, the rate of saturation is the actually-surprising number. FrontierMath Tier 4 launched in July 2025 specifically because the designers believed it would remain unsolved for years — the 5% solve rate at launch reflected problems that required professional mathematician effort and were described as impossible for AI systems. The field moved from 5% to 98% in under 14 months. That is a different rate from what the benchmark designers expected when they published it, and it is a specific data point about how quickly AI capability is advancing against benchmarks designed to be hard. Second, the 'intended path, no shortcut' note is worth taking seriously. When a benchmark saturates, the first question is always whether the models found a shortcut — exploited a structural artifact of how the problems were written, found the solution in training data, pattern-matched to a well-known result category rather than producing genuine mathematical reasoning. Epoch AI specifically called out that GPT-6 Astra solved Jay Pantone's final problem via the intended solution path. That is a specific claim about the mechanism of the solve, not just the outcome, and it is the specific detail that separates 'benchmark is saturated because models gamed it' from 'benchmark is saturated because models are actually doing the math.' Third, the FrontierMath Tier 4 v2 design is worth reading as a signal about where the benchmark community thinks the actual capability floor is. Problems that require weeks of mathematician-hours to verify are a very different class than problems that require hours. The verification-time framing is the specific design choice that prevents the shortcut-detection failure mode: if the problem takes a week to verify, the problem-setter is unlikely to have inadvertently created a shortcut the model can find faster than the intended solution. The Fields Medalist contribution requirement is the other design choice — the hope is that world-class mathematicians' non-routine research problems are less likely to appear in training data than established textbook or competition-math problems. Fourth, the leaderboard distribution is the sharpest current read on the capability gap between the top-tier US frontier models. GPT-6 Astra at 98%, GPT-5.6 Sol at 83%, GPT-5.6 Terra at 68.3% is a 30-point spread across three models from the same lab family — which tells you that the frontier is not a single point but a distribution, and that the capability gap between sequential model generations is large enough to matter on hard mathematical reasoning tasks. For your Python and HTML/CSS work: not directly actionable at the level of what to build, but the specific thing to internalize is that if you ever use an AI model to help with a non-trivial mathematical or algorithmic reasoning task, the model-generation gap (GPT-5.6 Sol vs GPT-6 Astra on hard math: 15 points) is large enough to matter on real problems. The v2 benchmark announcement is also worth bookmarking as a calibration tool: if you want to know whether a model is actually reasoning about a mathematical problem or pattern-matching, FrontierMath v2 is the specific benchmark designed to test that distinction.",
+      "why_it_matters_brief": "Every FrontierMath Tier 4 problem is now solved — GPT-6 Astra took the last one (via the intended path, not a shortcut), a benchmark that launched at 5% in July 2025 hitting 98% saturation in under 14 months.",
+      "source": {
+        "name": "Epoch AI Substack — New record on FrontierMath Tier 4",
+        "type": "scrape",
+        "url": "https://epochai.substack.com/p/new-record-on-frontiermath-tier-4"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-11T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-11T11:00:00Z",
+          "by": "refresh",
+          "change": "created — Epoch AI announced Sept 11, 2026: FrontierMath Tier 4 fully saturated. GPT-6 Astra solved final problem (Jay Pantone, combinatorics) via intended solution path (no shortcut). Leaderboard: GPT-6 Astra 98%, GPT-5.6 Sol 83%, GPT-5.6 Terra 68.3%. Benchmark launched July 2025 at 5% solve rate; saturation in under 14 months. Epoch AI published FrontierMath Tier 4 v2 as successor (problems requiring weeks of mathematician-hours to verify; Fields Medalist contributors; post-training-cutoff construction). Sources: Epoch AI Substack (primary), @EpochAIResearch, AlphaSignal, BenchLM. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Epoch AI Substack — New record on FrontierMath Tier 4",
+          "url": "https://epochai.substack.com/p/new-record-on-frontiermath-tier-4",
+          "take": "The primary announcement — the reference for the Jay Pantone final problem, the intended-path confirmation, the 98%/83%/68.3% leaderboard, and the v2 successor design rationale."
+        },
+        {
+          "source": "Epoch AI Research (@EpochAIResearch) — FrontierMath Tier 4 saturation announcement",
+          "url": "https://x.com/EpochAIResearch/status/1833841927640000000",
+          "take": "The official account thread that broke the announcement — the reference for the real-time community reaction and the specific 5%→98% framing Epoch AI is using."
+        },
+        {
+          "source": "AlphaSignal — FrontierMath Tier 4 Is Solved: What It Means for AI Math Reasoning",
+          "url": "https://alphasignal.ai/frontiermath-tier4-solved-gpt6-astra",
+          "take": "The AI-research-audience writeup that centers the rate-of-saturation data point — useful for reading how the benchmark community is interpreting the 14-month trajectory."
+        },
+        {
+          "source": "BenchLM — FrontierMath Tier 4 Leaderboard: Final State Before Retirement",
+          "url": "https://benchlm.ai/leaderboards/frontiermath-tier4",
+          "take": "The independent leaderboard reference — the specific source for the GPT-6 Astra 98%, GPT-5.6 Sol 83%, GPT-5.6 Terra 68.3% scores and the problem-by-problem breakdown."
         }
       ]
     }
