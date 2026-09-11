@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-11T17:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-11T17:00:00Z",
+      "ended_at": "2026-09-11T17:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 8500,
+        "output_write": 11000
+      },
+      "fetches_made": 12,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-11-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch: not paused, all phases enabled. WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (12 queries used). Read today's am file (2026-09-11-am.json, 10 items) — no promotion applied per default rule; none of the 10 am items materially deepened during the day beyond what enrichment already captured. Four new Tier 1/2 items found for pm: (1) Sakana AI Fugu Max + Fugu Ultra v2 orchestration family launch (Tier 1 Asia — first split of Fugu into two tiers, Max at $2/$6 undercuts frontier output pricing by 40-60%, Ultra v2 beats Opus 5 and Fable 5 on Chartography and DeepSWE, NVIDIA Nemotron collab, TRINITY + Conductor ICLR 2026 methods). (2) Anthropic Claude Smart Reports beta for Enterprise (Tier 2 US — four report types incl. skill-pattern suggestion engine tying to skills-primitive commercial-moat play). (3) ChatGPT Library + Dropbox/Box/SharePoint native integrations (Tier 2 US — closes parity gap with Microsoft Copilot and Google Gemini on read-in-place file access). (4) Cloudflare Workers SDK — Durable Object-managed Containers (Tier 2 US — scheduling_policy: 'durable_object' makes stateful-plus-heavy-runtime agent deploys atomic and idempotent). Final snapshot: 4 items (1 T1, 3 T2, 0 T3). No cap hits (12 fetches/50, ~48k/100k tokens)."
+    },
+    {
       "run_id": "2026-09-11T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
