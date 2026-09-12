@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-12T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-12T06:00:00Z",
+      "ended_at": "2026-09-12T06:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 14000,
+        "output_write": 21500
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Read yesterday's pm (2026-09-11-pm) — 4 items (1 T1, 3 T2, 0 T3). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (9 queries used). Prune+enrich sub-task: iterated through all 4 items with focused overnight web searches. All 4 items KEPT+ENRICHED (none dropped): (1) sakana-ai-fugu-max-fugu-ultra-v2-orchestration-family — added overnight OrcaRouter 'a smaller pool, a higher score' analysis: Fugu Ultra v2's model pool no longer contains Claude Fable 5, Fable 5.1, or GPT-6 Astra, yet Sakana claims Ultra v2 best/joint-best on 5 of 8 benchmarks and top-two on 7 of 8. Strategic message: 'coordination layer does not need the best models to produce the best answers,' framed as hedge against vendor lock-in / API revocations / export controls. Added Artiverse 'model choice is now the competitive frontier' framing. Updated summary, why_it_matters (5th pull-out), brief. (2) anthropic-claude-smart-reports-enterprise-beta — added Claude Help Center + Larridin + TheNeuralBase docs context. Clarified Smart Reports sits on top of the July-2026 admin Analytics tab plus the Usage and Cost API — the three-layer shape of first-party LLM observability. Updated summary, why_it_matters, brief. (3) chatgpt-library-dropbox-box-sharepoint-native-integrations — added OpenAI release-notes UI vocabulary detail: 'Add from Library' + @mentions; permissions apply at moment of each request; previews rendered beside conversation with citation follow-back. Frames @mention-plus-read-in-place as the new standard replacing file-picker-plus-upload. Updated summary, why_it_matters, brief. (4) cloudflare-workers-sdk-durable-object-managed-containers — added Sliplane explainer + newreleases.io Wrangler 4.124/4.131 detail: full DO-managed config schema (class_name, scheduling_policy, optional name, optional named-images map with dockerfile or digest-pinned managed-registry image); versions deploy validates before changing traffic; DO-managed applications created only after deploy succeeds; partial-completion + retry-same-command semantics. Added 2nd pull-out on the safety mechanic. Updated summary, why_it_matters, brief. Late-breaking sub-task: added 1 T1 US item (within cap of 2). openai-pauses-chatgpt-pro-200-signups-astra-capacity: OpenAI paused new $200 ChatGPT Pro sign-ups Sept 10 due to 'unprecedented' Astra demand — first time a frontier lab has halted a flagship consumer tier for capacity rather than policy/safety. Existing Pro subscribers unaffected; API/Go/Plus remain open. Sottiaux 'smallest step' framing. Capacity roadmap: 10 GW Nvidia + 6 GW AMD + 10 GW Broadcom (2H 2026, 26 GW total). Coverage: Fortune, TechCrunch, CIO, Computerworld, BusinessToday, TechBriefly, Dataconomy, AmericanBazaar, PasqualePillitteri. Considered but rejected for late-breaking cap: Nvidia $12.9B Hugging Face acquisition (Sept 3, older than 12h window); Oracle Q1 FY2027 30B in AI cloud contracts + 300K GPUs delivered (Sept 10, adjacent but likely covered in prior 09-11 refresh cycle context and lacks the specific 'first time' framing); Meta Muse Shared Agents Connect preview (still pre-announcement rumor, waiting for Meta Connect Sept 25); DeepSeek V4.1 Flash (Sept 10 release with announcement only, no substantive detail from overnight). Final snapshot: 5 items (2 T1, 3 T2, 0 T3). No cap hits (~58k/100k tokens, 9 fetches/30, ~25 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-11T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
