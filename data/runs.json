@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-12T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-12T17:00:00Z",
+      "ended_at": "2026-09-12T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 9500,
+        "output_write": 12000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch: not paused, all three phases enabled. WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (10 queries used). Read today's am file (2026-09-12-am.json, 7 items: 4 T1, 3 T2). No promotion applied per default rule — none of the 7 am-file items materially deepened during the day beyond what enrichment and refresh already captured. Curated 4 new items for pm from Sept 10-12 news cycle: (1) T1 US anthropic-yemen-missile-cell-claude-in-place-of-engineers — the standout Yemen weapons-cell finding from Anthropic's Sept 10 Threat Intelligence report, amplified in Sept 11-12 Bloomberg / WaPo / Al Jazeera / IBTimes UK / SOCRadar / Al-Monitor coverage. Three parallel programs (guided rocket on phone-class flight computer with final-phase homing; multi-stage ballistic missile with 2,000+ km range goal; multivariant missile family with HGV variant). Used Claude in role-delegated multi-instance pattern 'akin to how a lead would delegate work on a small engineering team' — first named public case of a threat actor using a frontier LLM in the actual software-engineering role in a real weapons pipeline (distinct from the broader threat-report item already in yesterday's am). Test-fired rocket in Yemen; launch apparently failed; accounts banned. (2) T1 US papercut-ai-agent-mass-exploitation-russian-codex-deepseek — Sept 10-12 disclosure of first well-documented industrial-scale AI-agent-driven mass exploitation. Suspected Russian actor ran hundreds of AI agents on OpenAI's Codex harness + a DeepSeek model + Mimikatz/Certipy/Rubeus/Impacket against PaperCut NG/MF CVE-2026-81578 (auth bypass) + CVE-2026-82078 (unsafe reflection RCE). 440+ instances at 395 orgs in 48 countries (mostly US education). 280 credential harvests, 147 OS/domain secret pulls, 12 domain-admin compromises. Empty workspace to code exec on a real target in under 4 hours; domain admin two hours later. Sits adjacent to Sept 10 Anthropic threat report and OpenAI Sept 10 Agents API public beta. Coverage: Help Net Security, BleepingComputer, Cybersecurity News, The Hacker News, OffSeq radar. (3) T2 Global manifold-security-git-config-ai-coding-agents-fsmonitor-cve — Manifold Security disclosure covered Sept 10-12 by The Hacker News, Cybersecurity News (as 'GitSpawn'), and secondary aggregators. Mechanic: malicious .git/config abusing Git's legitimate core.fsmonitor feature to execute arbitrary code with user privileges, outside the AI agent's sandbox, before workspace-trust prompt. Eight flaws across seven CLI AI coding agents (goose, Claude Code, Codex, Hermes Agent, Qwen Code, Grok Build, Cursor). Timing failures: Claude Code/Hermes fire before trust prompt; Qwen Code before auth; Grok Build on first keystroke. As of Sept 1 retest: goose/Claude Code/Cursor patched; Hermes Agent/Qwen Code/Grok Build/second Claude Code path still exposed. Vendor-response times: Cursor and OpenAI ~1 week per fix; one Anthropic fix took 50 days across ~30 updates. Class-of-vulnerability framing: 'sandbox escape by external-tool proxy'. Directly actionable for Gabe as a coder using AI agents. (4) T3 Asia nvidia-australia-2gw-ai-factory-eight-partners — Nvidia announced Sept 10, 2026 (press coverage running through Sept 12) partnership with eight Australian data-center and cloud companies (Firmus, Sharon AI, IREN, Megaport, ResetData, CDC, NEXTDC, AirTrunk) to build up to 2 GW of NVIDIA DSX-platform AI factory capacity by 2027, more than doubling Australia's current 1.6 GW data-center load. Sharon AI: up to 68,000 GPUs with Quantum InfiniBand + Spectrum-X Ethernet. IREN: 800 MW South Australia campus. Firmus: Project Southgate for hyperscale and AI-native demand across Australia and Asia-Pacific. First English-speaking Southern Hemisphere entry in the sovereign-AI-factory pattern (UK, Nordics, Saudi Arabia, UAE, Japan, South Korea already in). Coverage: Nvidia Newsroom, Manila Times, Securities.io, Tron Weekly, Stocktitan, QZ. Rejected: Cognition AI $2B Series E at $48B (already covered in 2026-09-09-pm and 2026-09-10-am); Ant Group Ling-3.0-flash-VL (Sept 4 release, not fresh); Ant Group Ling-3.0-flash-Fin (Aug 27 API / Sept 3 HF weights, on the edge of fresh — press coverage bunched around Bund conference Sept 11-12 but the actual release is 1+ week old, held back for a leaner pm); Meta LlamaCon (older event); Satlyt Gemma 3 1B on satellites (interesting but T3 fringe and unclear news-cycle placement). Final snapshot: 4 items (2 T1, 1 T2, 1 T3). No cap hits (~46k/100k tokens, 10 fetches/50, ~15 min/60 min wall time)."
+    },
+    {
       "run_id": "2026-09-12T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
