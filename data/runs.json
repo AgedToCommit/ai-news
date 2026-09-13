@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-13T11:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-13T11:00:00Z",
+      "ended_at": "2026-09-13T11:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18500,
+        "curation": 1500,
+        "output_write": 1500
+      },
+      "fetches_made": 11,
+      "items_input": 0,
+      "items_output": 6,
+      "items_added": 0,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-13-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, all three phase flags enabled. Today's am file exists (written by 2026-09-13 enrichment run ending 06:25 UTC). Sweep window: last 5 hours since 06:25 UTC. WebFetch egress blocked (consistent with prior runs); WebSearch available (11 queries used). 11 web searches across: model releases Sept 13, lab news Sept 13, overnight Europe/Asia cycle, Nvidia Hugging Face follow-on, OpenAI GPT-Live, AWS MiniMax Bedrock, Mistral/EU/xAI Sept 13, Qwen/DeepSeek/Kimi Sept 13, EU AI Act Code of Practice task forces, Simon Willison Sept 13, NASA/IBM lunar model date verification. Nothing in the last-5-hour window (06:25 UTC to ~11:35 UTC) qualified as a new Tier 1/2/3 item: NASA-IBM lunar foundation model (announced Sept 10, press Sept 11-12 — predates enrichment window); GPT-Live-1 API (announced Sept 10 — enrichment noted this and was at cap of 2 late-breaking); Sony/Warner Anthropic lawsuit (filed Aug 29, old); John Ternus Apple CEO (Sept 1); GPT-5.6 Copilot (July 2026); EU AI Act task forces (scheduled for September but no specific Sept 13 launch event with verifiable detail). No Tier 1 model releases from major labs today. No new Tier 2 tool/library releases. Quiet Asia/Europe morning cycle. 0 new items added. am file updated with refresh phase_history entry and generated_at timestamp only."
+    },
+    {
       "run_id": "2026-09-13T06:25:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
