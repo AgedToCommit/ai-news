@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-13T06:25:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-13T06:00:00Z",
+      "ended_at": "2026-09-13T06:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 15500,
+        "output_write": 22000
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-13-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Read yesterday's pm (2026-09-12-pm) — 4 items (2 T1, 1 T2, 1 T3). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (9 queries used). Prune+enrich sub-task: iterated through all 4 items with focused overnight searches. All 4 items KEPT+ENRICHED (none dropped): (1) anthropic-yemen-missile-cell — added Sept 12-13 second press wave (Arab News, Times of Israel, TRT World, JFeed, Bombay Samachar, NewsX, RedState, NewsCord). Arab News + Times of Israel dropped Anthropic's Houthi-attribution hedge. The Implicator writeup consistently used 'Claude Code' framing (not chat API). Two new operational details: cell returned to Claude within hours to diagnose the failed test-fire (first named case of real-world offensive-engineering AAR loop against a frontier LLM); group had already compiled an offline toolkit that runs without Claude before ban. Bipartisan US House push to cancel recess over AI drew Anthropic disclosure as citation point. (2) papercut-ai-agent — CISA action landed overnight: both CVEs added to KEV catalog with federal remediation deadline Sept 14, 2026. Peak campaign speed: 11 orgs compromised in 26-second window. CVSS scores 8.8 (auth bypass) + 9.4 (RCE). Original zero-day Aug 27; second emergency patch (Release 3) Sept 1 after watchTowr broke initial patch. The Register: 'some [agents] went off script.' 18-day zero-day-to-federal-deadline vulnerability-window collapse. (3) manifold-security-git-config — formal CVE assignments landed: CVE-2026-19592 (Codex CLI, patched 0.131.0+), CVE-2026-19593 (Codex Desktop), CVE-2026-72718 (Goose, CVSS 7.0, patched 1.44.0+), CVE-2026-71963 (Hermes Agent, unpatched). Claude Code v2.1.196 (core.fsmonitor path) and v2.1.247 (ultrareview path). New Cursor variant: abuses fact that Git metadata does not have to live in a folder called '.git' — bypasses path-based sandbox rules. Watcher defensive tool (93% bad-action block rate) landed overnight (VibeEval, dev.to). AIR raised $50M on security-harness pitch. Beltdown Claude Code-specific variant from Accomplish. (4) nvidia-australia — TechTimes overnight analysis added grid-capacity caveat: Australian grid queues won't supply all 8 partners in time to hit 2 GW by 2027; Firmus + NEXTDC have grid allocations, others queued. Practical implication: bottleneck is electricity, not GPU supply. Revised 'Australian-hosted inference routine within 12-18 months' claim to 18-24 months. Late-breaking sub-task: added 2 T1 items (at cap). (a) T1 US cognition-swe-2-kimi-k3-post-trained: released Sept 10, substantive analysis Sept 11-12 (BenchLM, CellCog, Winzheng, AiCybr, samcodeman.com). Proprietary coding model post-trained from Moonshot's Kimi K3 (2.8T open-weight Chinese base) with RL recipe training medium/high/max effort levels in one run. Benchmarks: 92.8% Terminal-Bench 2.1 (ahead of Fable 5.1's 91.4%, GPT-6 Astra's 89.9%); 50.0% FrontierCode 1.1 Main (0.5pt behind Fable 5.1 at 64% lower cost); 73.0% DeepSWE 1.1; 27.3% Terminal-Bench 4. 1M context. Available in Devin Desktop/CLI, rolling to Devin Web/Fusion. No standalone API, no public pricing, no weights. First named US coding-agent company publicly building flagship on Chinese open-weight base. (b) T1 Asia deepseek-v4-1-flash-552b-causal-encoder-decoder: released Sept 10 (yesterday's enrichment held it for lack of substantive detail; detail has now landed). 552B multimodal MoE with new Causal Encoder-Decoder architecture (8B active in / 16B active out). Benchmarks: 90.6 Terminal-Bench 2.1 (vs Opus 5 89.1); 74.2% DeepSWE v1.1 (vs Opus 5 74%); 88.1 CyberGym; 65.4 NL2Repo-Bench; 90.9 GPQA Diamond; 3,471 Codeforces. Pricing: $0.003/M cache-hit input, $0.15/M uncached input, $0.60/M output off-peak (peak double). Global KV cache 890 bytes/token, one-quarter of V4-Flash; persistent cache one-eighth. ~125x cost gap vs Opus 5 for benchmark-matched output. Coverage: SiliconANGLE, BuildFastWithAI, BenchLM, Cellcog. Considered but rejected: Meta LlamaCon (waiting for Sept 25 Meta Connect); Dwarkesh Patel roundtable with Schulman/Millidge/O'Neill on RSI (Tier 2 candidate but at cap of 2 late-breaking); no fresh Sept 12-13 model releases from Anthropic/OpenAI/Google/Meta beyond substantive analysis of the Sept 10 wave. Final snapshot: 6 items (4 T1, 1 T2, 1 T3). No cap hits (~62k/100k tokens, 9 fetches/30, ~25 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-12T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
