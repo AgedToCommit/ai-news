@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-13T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-13T17:00:00Z",
+      "ended_at": "2026-09-13T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 10500,
+        "output_write": 15000
+      },
+      "fetches_made": 9,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-13-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Today's am file exists (2026-09-13-am, 6 items: 4 T1 + 1 T2 + 1 T3). Promotion rule applied: no am items promoted — none met the 'materially deepened during the day' bar (the four T1 items already captured overnight second-press-wave detail during enrichment, and the T2/T3 items are steady-state). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (9 queries used). Sweep window: since last successful run 2026-09-13T11:35:00Z. Curated 4 new items not overlapping with the am file: (1) T1 US openai-gpt-live-1-api-full-duplex-voice — OpenAI shipped GPT-Live-1 into API Sept 10 at $0.05/minute for the voice layer alone (billed by the second) with full-duplex speak-and-listen (~800ms end-to-end latency), delegates reasoning to a backend model paired at runtime, coverage from Unite.AI, eesel AI, DataNorth, TBreak, Windows Report, AiCybr, AI Pricing Guru through Sept 11-12. Refresh had noted GPT-Live but enrichment was at cap; digest picks it up. (2) T2 US cursor-projects-beta-coordinator-agent-subagents — Cursor released Projects in beta Sept 10 with rollout starting immediately: coordinator agent that plans work, delegates to 'thousands' of cloud-run subagents, keeps shared context over months, follows PRs to fix CI, watches Slack for bug reports, runs recurring work without prompting. Coordinator itself does not write code. Coverage: AI Weekly, Testing Catalog, Technobezz, AI/TLDR, explainx.ai, Supergok, Flavio Copes, Cursor release notes. Sits opposite Cognition Devin (in am file) as 'harness-and-workflow is the moat' versus 'model is the moat.' (3) T2 US dwarkesh-patel-schulman-millidge-oneill-rsi-2036-roundtable — Dwarkesh Podcast three-researcher roundtable with John Schulman (Thinking Machines chief scientist, ex-OpenAI co-founder), Beren Millidge (Zyphra CTO), Charlie O'Neill (Baseten head of model training) on the adversarial 'if RSI hasn't happened by 2036, what technical bottleneck bound?' framing. Panel converged on Moravec's paradox, absence of continual learning, sim-to-real gap, and RL generalizing task length rather than cross-domain reasoning. Coverage: 24/7 Wall St., PANews, StartupHub.ai, HackMD, MindStudio, LessWrong (Zvi Mowshowitz), Ryan Greenblatt follow-on. Enrichment had considered this Tier 2 candidate but was at cap; digest picks it up. (4) T3 US salesforce-agentforce-seven-named-job-ready-agents-long-horizon-runtime — Salesforce announced seven named 'job-ready' Agentforce agents Sept 11: Casey (customer service), Paige (IT/HR), Carter (shopper Q&A + checkout), Hunter (outbound sales, weeks-long pipeline pursuit), Piper (inbound pipeline), Marshall (supply chain), Fin (support). Six GA at launch; Hunter in pilot on a new long-horizon runtime pursuing goals across weeks rather than a single chat session. First named-agent enterprise portfolio built around persistent-runtime. Coverage: SiliconANGLE, Enterprise DNA, Let's Data Science, Futurum Group, Unite.AI, Technobezz, Salesforce Newsroom, complete-ai-training. Considered but not included: Accenture + Google Cloud Gemini Enterprise Business Group (Sept 8, 1,000 forward-deployed engineers) — five days old and adjacent-mentioned in the Salesforce item rather than standalone. AWS+MiniMax Bedrock — no substantive Sept 13 news beyond earlier coverage. xAI Grok Bot workbench framing — no specific Sept 13 launch event with verifiable detail. Meta LlamaCon — still awaiting Sept 25 Meta Connect. Final snapshot: 4 items (1 T1, 2 T2, 1 T3). No cap hits (~48k/100k tokens, 9 fetches/50, ~15 min/60 min wall time)."
+    },
+    {
       "run_id": "2026-09-13T11:35:00Z-refresh",
       "phase": "refresh",
       "status": "success",
