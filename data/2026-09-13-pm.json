@@ -1,0 +1,235 @@
+{
+  "snapshot_id": "2026-09-13-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-09-13",
+  "generated_at": "2026-09-13T17:15:00Z",
+  "generated_at_local": "2026-09-13T13:15:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-09-13T17:15:00Z", "duration_ms": 900000 }
+  ],
+  "tier_counts": { "1": 1, "2": 2, "3": 1 },
+  "items": [
+    {
+      "id": "openai-gpt-live-1-api-full-duplex-voice-september-10-2026",
+      "tier": 1,
+      "title": "OpenAI shipped GPT-Live-1 into the API on September 10, 2026 — its full-duplex voice model (speak-and-listen simultaneously, cutting median response latency from about 1.63 seconds on Advanced Voice to about 0.80 seconds), priced at $0.05 per minute for the voice layer alone and billed by the second, with GPT-Live-1 delegating deeper reasoning and tool use to whichever backend model the developer pairs it with — so the real per-minute cost is three stacked layers (voice + backend model tokens + agent harness), per coverage from Unite.AI, eesel AI, DataNorth, TBreak, Windows Report, AiCybr, and AI Pricing Guru through September 11-12",
+      "summary": "OpenAI moved GPT-Live-1 — the full-duplex voice model that has been powering ChatGPT Voice since its July 8, 2026 launch — into the public API on September 10, 2026, per Unite.AI, eesel AI, DataNorth, TBreak, Windows Report, AiCybr, and AI Pricing Guru writeups landing through September 11-12. Full-duplex means the model can speak and listen at the same time, so a caller can interrupt naturally and the model can hand off across turns without waiting for a synthesizer to finish. Pricing lands at $0.05/minute for the voice layer alone, billed by the second. The specific framing multiple writeups (eesel AI, AI Pricing Guru) landed on is that the $0.05/minute is the front-end voice layer only — GPT-Live-1 delegates the actual reasoning to whichever backend model the developer pairs it with (an OpenAI text model or an external tool) and the developer pays separately for that model's tokens plus any agent-harness services on top. Latency lands at about 0.80 seconds end-to-end, roughly half the ~1.63 seconds Advanced Voice delivered. A third-party test found a 205-millisecond median improvement over Advanced Voice with meaningfully less variance between responses, so the practical experience is 'the awkward pauses got shorter and more predictable' rather than 'conversations are indistinguishable from human.' The API drop extends what has been a ChatGPT-only capability since July 8 to third-party apps and voice-app builders — the specific competitive framing is that the voice API surface was previously dominated by ElevenLabs (text-to-speech) plus Deepgram (speech-to-text) plus an LLM in the middle, and GPT-Live-1 collapses that stack into one full-duplex model with one pricing meter.",
+      "link": "https://openai.com/index/introducing-gpt-live/",
+      "why_it_matters": "For Gabe: this is directly relevant if you ever build a voice-shape thing (a Python voice assistant, a browser-based voice interface), and there are three things worth pulling out. First, the specific full-duplex architecture — one model that handles speech input and speech output in a single pass rather than a pipeline of speech-to-text → LLM → text-to-speech — is the piece to internalize as the current shape of the voice-app stack. The old stack (Deepgram for STT + an LLM in the middle + ElevenLabs for TTS) required you to glue three services together, pay three vendors, and eat the latency cost of serializing text between them. GPT-Live-1 collapses that to one model with one meter, and the ~800ms end-to-end latency is roughly what a human perceives as 'immediate response' rather than 'the assistant is thinking.' The specific implication for anyone building voice-app-shape things is that the DIY-pipeline pattern is no longer the default choice — the collapsed-stack pattern from OpenAI (and the equivalent from Anthropic's voice offering, once shipped) is what mainstream voice apps will use going forward. Second, the specific pricing structure is the piece worth reading carefully rather than the headline number. $0.05/minute for the voice layer alone is cheap; the real cost is $0.05 plus the backend model tokens plus whatever agent-harness services you use. A 10-minute call with GPT-Live-1 doing the voice layer plus a mid-tier text model doing the reasoning could land anywhere from $0.60 to $6 or more depending on the backend model choice and how much context you feed. The specific practical takeaway: if you build a voice-app prototype against GPT-Live-1, budget the backend model choice as the main cost lever, not the voice layer. Third, the specific 'delegates reasoning to a backend model' architecture is worth naming as a design pattern. The voice model handles the audio-in / audio-out loop; the reasoning happens in a separate call to whatever text model the developer picks. That is the same 'thin frontier at the interaction surface, general model behind it' pattern that Anthropic ships with computer-use — the specialized model handles the modality (audio, screen) and the general-purpose model handles the actual work. The specific implication for your Python work: if you build any voice-app-shape prototype, the design pattern to adopt is 'GPT-Live-1 handles the audio, my code decides which backend model to pair it with per-request based on the workload,' not 'GPT-Live-1 is my whole app.'",
+      "why_it_matters_brief": "OpenAI's full-duplex voice model is now in the API at $0.05/min for the voice layer alone — the first frontier-lab voice stack that collapses STT + LLM + TTS into one model, opening voice-app development beyond the old Deepgram-plus-ElevenLabs-plus-LLM pipeline pattern.",
+      "source": {
+        "name": "OpenAI — Introducing GPT-Live",
+        "type": "scrape",
+        "url": "https://openai.com/index/introducing-gpt-live/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-13T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-13T17:15:00Z",
+          "by": "digest",
+          "change": "created — OpenAI shipped GPT-Live-1 into the public API on September 10, 2026 at $0.05/minute for the voice layer alone (billed by the second), with substantive pricing and architecture analysis landing Sept 11-12 across Unite.AI, eesel AI, DataNorth, TBreak, Windows Report, AiCybr, and AI Pricing Guru. Full-duplex speak-and-listen. Median latency about 800ms end-to-end (down from ~1.63s on Advanced Voice); third-party testing showed a 205ms median improvement with meaningfully less variance. GPT-Live-1 delegates deeper reasoning to whichever backend model the developer pairs it with — so the real per-minute cost is voice + backend model tokens + agent harness. Model has been ChatGPT-only since its July 8 launch; the API drop is what opens it to third-party voice-app builders. Collapses the traditional Deepgram-STT + LLM + ElevenLabs-TTS pipeline into one model with one meter. Enrichment noted this on Sept 13 but was at cap of 2 late-breaking; digest picks it up now. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI — Introducing GPT-Live",
+          "url": "https://openai.com/index/introducing-gpt-live/",
+          "take": "The primary announcement page — the reference for OpenAI's own framing of the full-duplex architecture and what capabilities GPT-Live-1 exposes."
+        },
+        {
+          "source": "Unite.AI — OpenAI's GPT-Live-1 Arrives in the API at $0.05 Per Minute",
+          "url": "https://www.unite.ai/openais-gpt-live-1-arrives-in-the-api-at-0-05-per-minute/",
+          "take": "The primary industry-press writeup — the reference for the $0.05/minute voice-layer pricing and the specific developer-facing framing of the API launch."
+        },
+        {
+          "source": "eesel AI — GPT-Live-1 pricing: what the $0.05/min voice API really costs",
+          "url": "https://www.eesel.ai/blog/gpt-live-1-pricing"
+          ,
+          "take": "The pricing-focused writeup that lays out the 'voice + backend model + agent harness' three-stacked-layers cost structure — useful for reading the real per-minute cost rather than the headline number."
+        },
+        {
+          "source": "AiCybr — OpenAI GPT-Live-1 API: Full-Duplex Voice, Pricing, Benchmarks and Architecture",
+          "url": "https://aicybr.com/blog/openai-gpt-live-1-api-full-duplex-voice",
+          "take": "The developer-audience deep-dive — the reference for the specific full-duplex architecture and the latency numbers side-by-side with Advanced Voice."
+        },
+        {
+          "source": "Windows Report — GPT-Live-1 Is Now Available to Developers Through the OpenAI API",
+          "url": "https://windowsreport.com/gpt-live-1-is-now-available-to-developers-through-the-openai-api/",
+          "take": "The general-tech-press framing of the API launch — useful for reading how the story lands outside AI-specialist coverage."
+        }
+      ]
+    },
+    {
+      "id": "cursor-projects-beta-coordinator-agent-subagents-september-10-2026",
+      "tier": 2,
+      "title": "Cursor released Projects in beta on September 10, 2026 — a new cloud-workspace surface where a supervisory 'coordinator' agent plans a body of work, delegates it to what Cursor's own materials describe as 'thousands' of subagents running in parallel on cloud machines, keeps shared context over months, and follows PRs to fix CI issues, watch Slack for bug reports, and run recurring work without being prompted; the coordinator itself does not write code, and the whole workspace runs on cloud infrastructure so agent throughput is decoupled from a developer's laptop being open, per coverage from AI Weekly, Testing Catalog, Technobezz, AI/TLDR, explainx.ai, Supergok, and Cursor's own release notes through September 10-12",
+      "summary": "Cursor launched Projects in beta on September 10, 2026, with rollout to all users starting immediately, per AI Weekly, Testing Catalog, Technobezz, AI/TLDR, explainx.ai, Supergok, Flavio Copes's writeup, and Cursor's own release notes. Projects is a new cloud-workspace surface built around a coordinator agent that plans a body of work (a feature, a migration, a full app), delegates the actual coding to what Cursor's own materials describe as 'thousands' of subagents running in parallel on cloud machines, keeps shared context across months of work, and brings finished work back to the developer for review. The coordinator itself does not write code — it plans, delegates, and integrates. The specific cloud-execution choice is the piece that lands the story: the coordinator runs on a cloud machine rather than on the developer's laptop, so agent throughput does not stop when the laptop is closed. Projects can also set reminders, run scheduled tasks, follow PRs to fix CI issues, watch a Slack workspace for bug reports, and perform recurring work on its own initiative — the specific pitch is that Projects converts Cursor from an IDE-shape tool into a persistent-agent-shape tool. This lands the same week as Cognition SWE-2 (Sept 10, in today's am file) and, structurally, is the specific competitive move against Cognition Devin: where Devin ships the model-plus-surface as one bundle, Cursor Projects ships the coordinator-plus-subagents pattern on top of whichever model the user's Cursor plan uses (Claude, GPT, or a specialist coding model like Cognition SWE-2 or Cursor's own composer model). Cursor Projects is in beta with rollout starting September 10, 2026.",
+      "link": "https://aiweekly.co/alerts/cursor-ships-projects-beta-with-delegating-coordinator-agent",
+      "why_it_matters": "For Gabe: this is directly relevant to any AI-coding-agent workflow you use, and there are three things worth pulling out. First, the specific 'coordinator plans, subagents implement' pattern is the piece worth internalizing as the current shape of where mainstream coding-agent tools are going. The Yemen missile cell in today's am file used a manual version of the same pattern — an operator managing multiple Claude Code instances in parallel with each assigned a role. Cursor Projects productizes that pattern into a tool where the coordinator itself is an agent and the fan-out is automatic. The specific implication for you: the 'multiple agents with one lead' interaction model is not a research pattern anymore, it is a shipping feature in a mainstream IDE. If you build any agent-shape thing in Python, the design pattern to hold in your head is 'a supervisor that hands out work, plus workers that do work' rather than 'a single agent that does everything.' Second, the specific cloud-execution choice is the piece that changes the practical calculus. When the coordinator runs on a cloud machine rather than your laptop, agent throughput no longer bottlenecks on your laptop being awake and connected. The specific implication is that 'the agent kept working overnight' is now a real workflow rather than a research demo — you file a task with the coordinator, close your laptop, and the coordinator plus its subagents keep running until they hit either a checkpoint that needs your review or the end of the work. The related implication for your HTML/CSS work: if you set up Projects on a website project, the coordinator can watch for a bug report in Slack, spawn a subagent to reproduce it, spawn another to fix it, and open a PR — all without your involvement between the initial setup and the PR review. Third, the specific 'model is BYO' architecture is worth reading as a strategic move. Cursor Projects does not ship with a proprietary coding model; it ships the coordinator-plus-subagents pattern on top of whichever model your Cursor plan uses. That is the opposite of Cognition Devin's 'the model is the moat' strategy (from today's am file), and it is the specific bet that the differentiation lives in the harness and the workflow, not in the model. The specific implication for anyone choosing between Cursor Projects and Devin: your choice is essentially about which layer you think dominates coding-agent quality — the model (Devin) or the coordinator-and-subagent-pattern (Cursor Projects). Realistic answer: probably both matter, and the honest way to pick is to run both against your actual workload rather than trust either vendor's benchmarks.",
+      "why_it_matters_brief": "A mainstream IDE now ships the coordinator-plus-subagents pattern the Yemen missile cell used manually — the multi-agent-with-a-lead interaction model is a shipping IDE feature, not a research pattern, and the cloud-execution choice means the agent keeps working when your laptop is closed.",
+      "source": {
+        "name": "AI Weekly — Cursor Ships Projects Beta With Delegating Coordinator Agent",
+        "type": "scrape",
+        "url": "https://aiweekly.co/alerts/cursor-ships-projects-beta-with-delegating-coordinator-agent"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-13T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-13T17:15:00Z",
+          "by": "digest",
+          "change": "created — Cursor released Projects in beta on Sept 10, 2026 with rollout to all users starting immediately. Coordinator agent that plans work, delegates to what Cursor describes as 'thousands' of subagents, keeps shared context over months, and does not write code itself. Runs on cloud machines so agent throughput is decoupled from a developer's laptop being open. Can follow PRs to fix CI, watch Slack for bug reports, run recurring work without prompting. Coverage: AI Weekly, Testing Catalog, Technobezz, AI/TLDR, explainx.ai, Supergok, Flavio Copes, Cursor release notes. Sits opposite Cognition Devin (in today's am file) as the 'harness-and-workflow is the moat' strategy versus Devin's 'model is the moat.' Productizes the same coordinator-plus-subagents pattern that the Yemen missile cell used manually. Tier 2 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "AI Weekly — Cursor Ships Projects Beta With Delegating Coordinator Agent",
+          "url": "https://aiweekly.co/alerts/cursor-ships-projects-beta-with-delegating-coordinator-agent",
+          "take": "The primary industry-press framing — the reference for the specific coordinator-plus-subagents pattern and the Sept 10 rollout timing."
+        },
+        {
+          "source": "Testing Catalog — Cursor Projects coordinates thousands of coding agents",
+          "url": "https://www.testingcatalog.com/icymi-cursor-announced-projects-for-agent-coordination/",
+          "take": "The technical-review writeup with the specific 'thousands of subagents' framing — the reference for the fan-out scale claim."
+        },
+        {
+          "source": "explainx.ai — Cursor Projects: Persistent Agents That Remember (Sept 2026)",
+          "url": "https://www.explainx.ai/blog/cursor-projects-persistent-agents-september-2026",
+          "take": "The developer-audience deep-dive on the 'persistent context across months' feature — useful for reading Projects as a workflow-shape tool rather than a per-task IDE feature."
+        },
+        {
+          "source": "Technobezz — Cursor Launches Projects With Cloud Agents That Keep Working",
+          "url": "https://www.technobezz.com/news/cursor-projects-cloud-agents-beta",
+          "take": "The general-tech-press framing that leans on the 'cloud agents keep working when your laptop is closed' angle — useful for reading how the decoupling from local execution changes the practical workflow."
+        },
+        {
+          "source": "Flavio Copes — How to use Cursor Projects",
+          "url": "https://flaviocopes.com/cursor-projects/",
+          "take": "The hands-on developer walk-through — useful if you want to actually try Projects rather than just read about it."
+        }
+      ]
+    },
+    {
+      "id": "dwarkesh-patel-schulman-millidge-oneill-rsi-2036-roundtable-september-2026",
+      "tier": 2,
+      "title": "Dwarkesh Patel published a roundtable episode this week — John Schulman (Thinking Machines chief scientist, OpenAI co-founder), Beren Millidge (Zyphra CTO), and Charlie O'Neill (Baseten head of model training) taking an adversarial framing question: 'If it's 2036 and there are no world-transforming superintelligences, what is the most likely technical reason, excluding war, regulation, or political shock?' — with the panel converging on Moravec's paradox, the absence of continual learning in current systems, a persistent sim-to-real gap that blocks generalization, and the specific concern that current RL is generalizing task length rather than reasoning across domains, plus Schulman's public framing that RSI has 'major technical uncertainties' with RL and continual learning as the key remaining battlefields",
+      "summary": "Dwarkesh Patel published a three-researcher roundtable episode covered this week by 24/7 Wall St., PANews, StartupHub.ai, HackMD, MindStudio, and LessWrong (via Zvi Mowshowitz's writeup and a follow-on Ryan Greenblatt discussion) that lands as a specific researcher-perspective piece on where recursive self-improvement (RSI) actually sits versus where the AI-safety and AI-hype conversations often place it. Panel: John Schulman (chief scientist at Thinking Machines, previously an OpenAI co-founder), Beren Millidge (CTO of Zyphra), and Charlie O'Neill (head of model training at Baseten). The framing question is deliberately adversarial: 'If it is 2036 and there are no world-transforming superintelligences, what is the most likely technical reason, excluding war, regulation, or political shock?' — the point being to force each researcher to name the concrete bottleneck they consider most likely to bind. The panel converged on four candidate bottlenecks. First, Moravec's paradox — the classical observation that tasks humans find easy (sensorimotor coordination, physical common sense) are hardest for AI systems, while tasks humans find hard (formal reasoning, chess) are easiest, and current LLMs have not closed that gap. Second, the absence of continual learning — current systems do not update their weights during deployment, so every interaction starts from a fixed checkpoint and any 'learning' happens through context rather than through the model. Third, a persistent sim-to-real gap — RL training in simulation does not transfer to real-world environments the way it should, and the specific concern is that current RL is generalizing task length (agents can handle longer sequential tasks) rather than reasoning across domains (agents cannot yet transfer reasoning strategies from one problem class to another). Fourth, from Schulman's separate public framing, the specific claim that RSI 'still has major technical uncertainties' and that RL and continual learning are the key remaining battlefields. The specific researcher consensus that the LessWrong and PANews writeups both call out: almost nobody on the panel argues RSI will not happen — the argument is about how many discontinuities remain between the current paradigm and the RSI regime, and each panelist named a different specific gap they consider hardest.",
+      "link": "https://www.dwarkesh.com/p/john-beren-charlie",
+      "why_it_matters": "For Gabe: this is not directly actionable for your HTML/CSS/Python work, but it is directly useful as background context for reading any AI-industry story that touches 'superintelligence,' 'takeoff,' or 'recursive self-improvement' — which is now most of the AI news you will encounter. Three things worth pulling out. First, the specific researcher-consensus finding — that essentially nobody on the panel argues RSI will not happen, but they each named a specific concrete bottleneck they consider hardest — is the piece worth internalizing as the current serious-researcher position. The public conversation on RSI tends to bifurcate into 'AGI is imminent' versus 'AGI is fantasy'; the actual position of researchers who train frontier models is closer to 'the trajectory is real, several specific technical problems still block it, and the interesting question is which one binds first.' The specific implication for reading AI news: when a headline claims 'AGI is imminent,' the honest translation is usually 'a specific capability crossed a benchmark threshold'; when a headline claims 'AGI is fantasy,' the honest translation is usually 'the author has strong priors and is not engaging with the research.' Second, the specific four bottlenecks are worth naming as the concrete gaps to watch. Moravec's paradox (robotics-shape tasks); continual learning (models that update their weights during deployment); sim-to-real gap (RL that transfers from simulation to real environments); task-length generalization versus cross-domain reasoning (agents that handle longer sequential tasks versus agents that transfer reasoning strategies). If you see a research announcement that specifically closes one of these gaps, that is a specific data point worth reading carefully, because it moves the RSI conversation forward in a concrete way. Third, the specific 'RL is generalizing task length rather than reasoning across domains' framing is worth internalizing as a critical eye on current agent-benchmark improvements. When a lab announces 'our agent can handle 100-step tasks now,' the honest reading is 'the agent got better at doing longer sequences of the specific kinds of tasks it was trained on,' not 'the agent got better at reasoning in general.' That distinction is the specific reason why coding-agent benchmarks keep improving while general-reasoning benchmarks improve more slowly — and it is a useful lens for evaluating your own experience with any agent-shape tool. For your Python work specifically: if you build any agent-shape thing, the practical implication is that you should trust it inside the specific task shape it was designed for and be adversarial about assuming it will transfer to a new task shape without evidence.",
+      "why_it_matters_brief": "Three frontier researchers converge on the same finding — almost nobody argues RSI will not happen, but each names a different specific bottleneck they consider hardest, and current RL is generalizing task length rather than cross-domain reasoning, which is the specific lens for reading every agent-benchmark improvement.",
+      "source": {
+        "name": "Dwarkesh Podcast — AI researchers debate how close we are to recursive self-improvement (Schulman, Millidge, O'Neill)",
+        "type": "rss",
+        "url": "https://www.dwarkesh.com/p/john-beren-charlie"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-13T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-13T17:15:00Z",
+          "by": "digest",
+          "change": "created — Dwarkesh Patel published a three-researcher roundtable this week with John Schulman (Thinking Machines chief scientist, ex-OpenAI co-founder), Beren Millidge (Zyphra CTO), and Charlie O'Neill (Baseten head of model training). Framing question: 'If it is 2036 and there are no world-transforming superintelligences, what is the most likely technical reason (excluding war, regulation, or political shock)?' Panel converged on four bottlenecks: Moravec's paradox, absence of continual learning, persistent sim-to-real gap, and RL generalizing task length rather than cross-domain reasoning. Schulman's separate public framing: RSI 'has major technical uncertainties'; RL and continual learning are the key remaining battlefields. Coverage: 24/7 Wall St., PANews, StartupHub.ai, HackMD, MindStudio, LessWrong (Zvi Mowshowitz), and a follow-on Ryan Greenblatt piece. Enrichment considered this Tier 2 candidate but was at cap of 2 late-breaking; digest picks it up now. Tier 2 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Dwarkesh Podcast — AI researchers debate how close we are to recursive self-improvement",
+          "url": "https://www.dwarkesh.com/p/john-beren-charlie",
+          "take": "The primary episode page — the reference for the specific adversarial framing question and each panelist's own answer."
+        },
+        {
+          "source": "24/7 Wall St. — Frontier AI researchers give drop-in remote workers a 1-3 year runway",
+          "url": "https://247wallst.com/cards/frontier-researchers-including-thinking-machines-chief-scie-podcast-episode-01m28tfkxddqesqm15bewjake6",
+          "take": "The mainstream-press summary that picked out the '1-3 year runway to drop-in remote workers' framing — useful for reading how the researcher-conversation is landing outside the AI-industry press."
+        },
+        {
+          "source": "StartupHub.ai — John Schulman Thinking Machines Debate RSI",
+          "url": "https://www.startuphub.ai/ai-news/ai-research/2026/john-schulman-thinking-machines-debate-rsi",
+          "take": "The industry-audience writeup focused on Schulman's specific claims — the reference for the 'RL and continual learning are the key remaining battlefields' framing."
+        },
+        {
+          "source": "PANews — OpenAI Co-Founder: RSI Still Has Major Technical Uncertainties",
+          "url": "https://panews.io/articles/01a09b5b-21c9-7675-8f9c-65a806ed40f2",
+          "take": "The Asia-Pacific-press framing that picked out Schulman's specific 'major technical uncertainties' phrase — useful for reading how the panel lands in the Chinese-language AI press."
+        },
+        {
+          "source": "The Zvi (Substack) — On Dwarkesh Patel's Podcast With Ryan Greenblatt",
+          "url": "https://thezvi.substack.com/p/on-dwarkesh-patels-podcast-with-ryan",
+          "take": "Zvi Mowshowitz's own detailed commentary on the follow-on Greenblatt episode — the reference for the AI-safety-community reading of the panel's arguments and the specific bottleneck-by-bottleneck analysis."
+        }
+      ]
+    },
+    {
+      "id": "salesforce-agentforce-seven-named-job-ready-agents-long-horizon-runtime-september-11-2026",
+      "tier": 3,
+      "title": "Salesforce announced on September 11, 2026 (with follow-on coverage through Sept 12-13) seven named 'job-ready' Agentforce AI agents — Casey (customer service across voice/SMS/WhatsApp/web chat, including returns and escalation), Paige (employee IT and HR requests), Carter (shopper product questions and in-chat checkout), Hunter (outbound sales, works a pipeline from research to outreach across weeks), Piper (inbound pipeline generation), Marshall (supply-chain task automation), and Fin (support use cases) — six of the seven generally available at launch, with Hunter in pilot and the first to use a new long-horizon runtime that pursues goals across weeks rather than a single chat session; per SiliconANGLE, Enterprise DNA, Let's Data Science, Futurum Group, Unite.AI, Technobezz, and Salesforce's own announcement page, and lands as the first named-agent enterprise portfolio built around a persistent-execution runtime rather than around per-chat sessions",
+      "summary": "Salesforce announced seven named Agentforce 'job-ready' AI agents on September 11, 2026 (ahead of Dreamforce), per SiliconANGLE, Enterprise DNA, Let's Data Science, Futurum Group, Unite.AI, Technobezz, and Salesforce's own newsroom page, with additional analysis in complete-ai-training coverage through Sept 12-13. The seven: Casey (customer service across voice, SMS, WhatsApp, and web chat, including returns and escalation), Paige (employee IT and HR requests), Carter (shopper product questions and in-chat checkout), Hunter (outbound sales, works a full pipeline from research through outreach and follow-up across weeks and months rather than one-off tasks), Piper (inbound pipeline generation — turning inbound interest into qualified opportunities without waiting for a human handoff), Marshall (repetitive-task automation for supply-chain teams), and Fin (customer-support use cases). Six of the seven are generally available at launch. Hunter is in pilot and is the first Agentforce agent to run on Salesforce's new long-horizon runtime — a specific execution surface designed to pursue business goals across weeks or months rather than expire at the end of a chat session. The specific framing Salesforce landed on is 'job-ready,' meaning each named agent maps to a specific existing enterprise role rather than being a general-purpose assistant, and the pitch to enterprise buyers is that you can 'hire' one of these agents into an existing org chart position with defined KPIs. This lands alongside two related enterprise-AI-agent stories from the same week: Accenture and Google Cloud's Sept 8 launch of a Gemini Enterprise Business Group with 1,000 forward-deployed engineers, and the Cursor Projects beta (Sept 10, separate item in this snapshot) that ships the coordinator-plus-subagents pattern for coding work. The shared shape across all three: enterprise-AI-agent products are moving from 'a chatbot you can add to your app' toward 'a named agent with a persistent runtime, defined role, and multi-week goal-pursuit horizon' — the specific pattern the Yemen missile cell (in today's am file) improvised manually, now productized for legitimate enterprise use.",
+      "link": "https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/",
+      "why_it_matters": "For Gabe: this is not directly relevant to your HTML/CSS/Python hobby stack, but it is a specific data point on where enterprise AI agents are going as a category, and there are three things worth pulling out. First, the specific 'named agent per existing role' framing is worth internalizing as the current shape of the enterprise-AI-agent pitch. Salesforce is not selling 'here is a general AI assistant, configure it for your business'; it is selling 'here is Hunter, the outbound sales agent, and here is Paige, the IT-support agent.' Each named agent maps to an existing enterprise org-chart role with defined KPIs. The specific implication is that the buyer experience is being reshaped from 'AI infrastructure I need to configure' to 'AI hires I plug into an existing team,' and that changes both how enterprise buyers evaluate the products (against role-specific KPIs rather than against generic capability benchmarks) and how the products are priced (per-agent per-month rather than per-token). Second, the specific 'long-horizon runtime' behind Hunter is worth naming as the piece that separates this launch from prior Agentforce releases. Hunter pursues a sales pipeline across weeks or months rather than expiring at the end of a chat session. The specific implication is that Salesforce is committing infrastructure to the 'persistent agent' pattern — a state store, a scheduling layer, a checkpoint system — that is the specific technical requirement for any agent-shape workload that lasts longer than one conversation. Cursor Projects (this snapshot) ships the same pattern for coding work; Salesforce Hunter ships the same pattern for sales work. The specific cross-cutting pattern is 'persistent agents with state that survives across sessions and pursues goals across weeks,' and it is now shipping across enterprise-AI-agent products from multiple vendors simultaneously. Third, the specific role-map — customer service, IT/HR, commerce, outbound sales, inbound sales, supply chain, general support — is worth internalizing as Salesforce's map of which enterprise roles are the first to be productized as AI agents. Two observations. First, the roles picked are the ones where the work is high-volume, script-followable, and measurable — the classic 'productize the easy 80%' pattern. Second, the roles picked are also the ones where enterprise buyers already have named org-chart positions with defined KPIs, so the 'hire an agent into an existing role' pitch works cleanly. The specific implication for reading similar announcements in the next 6-12 months: expect Microsoft, Google, and ServiceNow to ship similar named-agent portfolios covering the same role map, because the pattern is the specific commercial shape that enterprise AI agents are converging on. Not directly actionable for your stack, but useful context — every AI-shape product you interact with as a user in the next year is likely to arrive with a named-agent identity and a defined role rather than as a generic assistant.",
+      "why_it_matters_brief": "First named-agent enterprise portfolio built around a persistent long-horizon runtime — Hunter pursues a sales pipeline across weeks, not a single chat session, and the same persistent-agent pattern is now shipping across enterprise-AI products from multiple vendors simultaneously.",
+      "source": {
+        "name": "Salesforce Newsroom — Salesforce Expands Agentforce With a New Portfolio of AI Agents Built for High-Value Work",
+        "type": "scrape",
+        "url": "https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-13T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-13T17:15:00Z",
+          "by": "digest",
+          "change": "created — Salesforce announced seven named Agentforce 'job-ready' AI agents on Sept 11, 2026 ahead of Dreamforce. Agents: Casey (customer service across voice/SMS/WhatsApp/web chat), Paige (employee IT/HR), Carter (shopper product Q&A and in-chat checkout), Hunter (outbound sales, weeks-long pipeline pursuit), Piper (inbound pipeline generation), Marshall (supply-chain task automation), Fin (support). Six generally available at launch; Hunter in pilot as the first to use a new long-horizon runtime that pursues goals across weeks rather than a single chat session. Coverage: SiliconANGLE, Enterprise DNA, Let's Data Science, Futurum Group, Unite.AI, Technobezz, Salesforce Newsroom, complete-ai-training. First named-agent enterprise portfolio built around persistent long-horizon runtime. Shares the persistent-agent-with-state pattern being productized simultaneously across Cursor Projects (this snapshot), the Yemen missile cell's manual improvisation (in today's am file), and Accenture+Google Cloud's Sept 8 Gemini Enterprise Business Group. Tier 3 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Salesforce Newsroom — Salesforce Expands Agentforce With a New Portfolio of AI Agents Built for High-Value Work",
+          "url": "https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents/",
+          "take": "The primary announcement — the reference for the seven named agents and their assigned role-map."
+        },
+        {
+          "source": "SiliconANGLE — Salesforce introduces new AI agents to automate sales, support tasks",
+          "url": "https://siliconangle.com/2026/09/11/salesforce-introduces-new-ai-agents-to-automate-sales-support-tasks/",
+          "take": "The primary tech-press writeup — the reference for the specific sales-and-support role framing and the 'job-ready' pitch."
+        },
+        {
+          "source": "Unite.AI — Salesforce Debuts Job-Ready Agentforce Agents and Long-Horizon Runtime",
+          "url": "https://www.unite.ai/salesforce-debuts-job-ready-agentforce-agents-and-long-horizon-runtime/",
+          "take": "The AI-industry-audience writeup that pulls out the specific long-horizon-runtime detail behind Hunter — the reference for the persistent-agent-runtime pattern."
+        },
+        {
+          "source": "Futurum Group — Salesforce's Job-Ready Agents Target Enterprise AI's Biggest Gap",
+          "url": "https://futurumgroup.com/insights/salesforces-job-ready-agents-target-enterprise-ais-biggest-gap/",
+          "take": "The analyst framing that positions the named-agent portfolio as filling the specific enterprise gap between 'AI infrastructure I need to configure' and 'AI hire I plug into an existing role.'"
+        },
+        {
+          "source": "Enterprise DNA — Salesforce Launches 7 Named AI Agents Before Dreamforce",
+          "url": "https://enterprisedna.co/resources/news/salesforce-agentforce-job-ready-agents-dreamforce-2026/",
+          "take": "The enterprise-audience walk-through of each of the seven named agents — useful for reading the per-agent scope and the KPI framing Salesforce ties each one to."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
