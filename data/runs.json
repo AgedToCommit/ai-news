@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-14T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-14T06:00:00Z",
+      "ended_at": "2026-09-14T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 8500,
+        "output_write": 12000
+      },
+      "fetches_made": 6,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-14-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Yesterday's pm file (2026-09-13-pm) read as primary input — 4 items. Sub-task 1 (prune + enrich): all 4 yesterday-pm items kept and enriched. (1) openai-gpt-live-1-api-full-duplex-voice — enriched with the first hard head-to-head benchmark numbers OpenAI Developers published overnight: Full-Duplex Bench 80.1% vs 45.4% for GPT-Realtime-2.1, turn-taking latency 0.8s vs 1.4s, tool-calling accuracy 87% vs 60%, banking voice-support pass rate 32% vs 12.4%, and Tau3 first-place ranking when paired with GPT-6 Astra at medium reasoning. Added The Decoder writeup in takes. (2) cursor-projects-beta-coordinator-agent-subagents — enriched with first-week self-reported usage numbers: 30% more PRs merged for new Projects users, 6x for heavy Projects users. Cursor names three use cases justifying the setup overhead: multi-PR feature development, incremental migrations, 'gardening' work. Practitioner caveat: setup overhead makes Projects worthwhile only for multi-PR work, not one-shots. Added AlphaSignal (new canonical source), byteiota, and Releasebot in takes. (3) dwarkesh-patel-schulman-millidge-oneill-rsi-2036-roundtable — enriched with Techmeme indexing (Sept 12, page 3) as the researcher-consensus RSI reference under the 'steelmanning the case against RSI' framing. Zvi Mowshowitz published follow-on commentary on the Ryan Greenblatt episode. PANews added the paradigm-shift framing: shifting from pure computational scaling toward data efficiency, sparse/modular architectures, and distillation-plus-continual-learning. Added Techmeme in takes. (4) salesforce-agentforce-seven-named-job-ready-agents — enriched with Hunter's specific November 2026 GA date and one pilot customer's '60% of pipeline is built by Hunter' data point. Added NewsBytes Philippines (Sept 14), MarketScreener, PPC Land coverage. No items dropped from yesterday's pm. Sub-task 2 (late-breaking pass): 2 items added, hitting cap. (5) specific-labs-real-swe-benchmark-private-enterprise-codebases — Tier 2 US. Specific Labs shipped Real-SWE, a coding-agent benchmark run on licensed private production codebases (not on GitHub). First leaderboard: Anthropic Claude Fable 5.1 38.8%, OpenAI GPT-6 Astra 33.8%, Google Gemini 3.8 Flash 31.2%, Zhipu GLM 5.3 28.8%. Uses 'native harnesses' (real build/test/deployment tooling). Frontier models score meaningfully lower than on public SWE-Bench Verified (60-70% range) — quantifies the training-set-contamination effect on public coding benchmarks. Coverage: withspecific.com, realswe.com, kingy.ai, Towards AI (PhynixAI), borncity, Flowtivity, Emergent. (6) anthropic-claude-code-weekly-limits-17-percent-cut-september-14-2026 — Tier 3 US. Change lands today (Sept 14). Temporary 50% boost in place since May expired Sept 13; new allowance kicked in Sept 14 as 25% above pre-May baseline / 17% below Sept-13 level. Applies to Pro, Max, Team, and seat-based Enterprise. Framing controversy: Anthropic leads with 'permanent 25% increase,' practitioner press leads with '17% cut compared to today.' First time Anthropic has publicly walked back a promotional Claude Code allowance — precedent-setting on how future usage-limit changes will be structured. Coverage: Implicator.ai, MindStudio, Windows Report, Digital Applied, Android Headlines, explainx.ai (two writeups), Manton Reece original. Directly actionable for Gabe if he uses Claude Code. Considered but not included: DeepSeek-V4.1-Flash (Sept 10 release — outside the last-12h late-breaking window and already covered adjacent-mentioned in Real-SWE); Real-SWE follow-on comparison writeups (folded into the primary Real-SWE item's takes). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (6 queries used). Final snapshot: 6 items (1 T1, 3 T2, 2 T3). No cap hits (~42k/100k tokens, 6 fetches/30, ~30 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-13T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
