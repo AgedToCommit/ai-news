@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-14T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-14T11:00:00Z",
+      "ended_at": "2026-09-14T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 3200,
+        "output_write": 2000
+      },
+      "fetches_made": 7,
+      "items_input": 2,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, all three phases enabled. This morning's am file exists (2026-09-14-am, 6 items from enrichment at 06:30 UTC). Last successful run ended_at: 2026-09-14T06:30:00Z. WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (7 queries used). Sweep window: last 5 hours since enrichment ended_at (2026-09-14T06:30:00Z). Two items added from Asia/Europe morning cycle: (1) anthropic-openai-google-ai-standards-body-talks-september-2026 — Tier 1 US. Washington Post breaks Sept 14 that Anthropic, OpenAI, and Google have been in private working-group meetings since July on forming a joint AI standards body. Three competing enforcement models: Amodei's FAA model (federal agency with power to block a release), Hassabis's FINRA model (industry-funded, federally overseen, starts voluntary), Altman's IAEA model (international forum + geopolitical leverage). Triggered partly by Amodei's Sept 12 essay 'We Must Pace the Frontier.' Coverage: Washington Post, PYMNTS, AI Weekly, kingy.ai, Cryptopolitan, PANews English, Seoul Economic Daily, Axios, Cryptobriefing. (2) microsoft-mai-code-of-conduct-satya-nadella-human-control-september-14-2026 — Tier 2 US. Satya Nadella published essay Sept 13 responding to Amodei's pacing call; Microsoft MAI models Code of Conduct published today (Sept 14) for public consultation. Three pillars: broad access at every AI stack layer, enterprise control of learning loops and models, behavioral rules for first-party MAI models. Nadella's framing: 'not worth pursuing without human control.' Coverage: Unite.AI, KuCoin, TechBriefly, Dataconomy, kingy.ai, aifront-page.com. First-ever Microsoft formal behavioral specification for its own AI models. Considered but not included: DeepSeek V4 Pro deprecation reversal (developer-facing, minor); Lyria 3.5 (Sept 4 release, outside 5-hour window); Sakana AI Fugu Max/Ultra v2 (Sept 11 release, outside 5-hour window, no significant new coverage today). Final snapshot: 8 items (2 T1, 4 T2, 2 T3). No cap hits (~28k/60k tokens, 7 fetches/20, ~15 min/25 min wall time)."
+    },
+    {
       "run_id": "2026-09-14T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
