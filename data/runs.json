@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-14T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-14T17:00:00Z",
+      "ended_at": "2026-09-14T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 5800,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-14-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Today's am file exists (2026-09-14-am, 8 items from refresh at 11:15 UTC). Last successful run ended_at: 2026-09-14T11:15:00Z. WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (9 queries used). Promotion rule applied: none of the 8 am items were promoted — no am-item materially deepened during the day (governance-standards-body and Microsoft Code of Conduct stories continued to be covered but not with new substantive detail). Three items added, all new: (1) four-us-labs-coordinated-cyber-ai-defender-programs-september-2026 — Tier 1 US. The Hacker News landed the coordinated framing today reading Google Fairwind (Sept 2, Gemini 3.8 Flash Cyber + CodeMender), Anthropic Enterprise Frontier Safeguards + Mythos (Sept 1), OpenAI Daybreak (paired with GPT-6 Astra), and Microsoft Perception (announced alongside today's MAI Code of Conduct in the am file) as one industry-shape pattern: defender-only access programs for security-tuned frontier models. Distinct from the AI-standards-body story in the am file, which was about governance rather than cybersecurity capability. (2) sakana-fugu-max-ultra-v2-orchestration-model-september-11-2026 — Tier 2 Asia. Sept 11 release noted-but-not-included by refresh (outside 5-hour window); digest picks it up on the orchestration-architecture angle. Fugu Ultra v2 tops Chartography 48.3 vs Opus 5's 27.3 (2x gap); edges GPT-6 Astra on DeepSWE 74.3 vs 74.1. $5/$30 per million tokens. Hosted API only, not open weights, not EU/EEA. (3) deepseek-v4-pro-deprecation-reversal-september-14-2026 — Tier 3 Asia. DeepSeek walked back today's scheduled V4 Pro API deprecation (Aug 25 plan: route to V4.1 Flash Sept 14 04:00 UTC). Rare public reversal of a Chinese frontier lab deprecation plan. Considered but not included: Karpathy/Simon/Mollick recent posts (no fresh Sept 14 posts surfaced); Microsoft Agent Framework AutoGen deprecation (April 2026, stale); MiniMax H3 + LTX-2.5 open-weight video model comparison (July/Aug releases, stale); Claude Code v2.1.270 patch release (Sept 12, minor bugfix release, no new capability). Final snapshot: 3 items (1 T1, 1 T2, 1 T3). No cap hits (~32k/100k tokens, 9 fetches/50, ~15 min/60 min wall time). WebFetch remains EGRESS_BLOCKED; the run used WebSearch exclusively for discovery + curation, consistent with the last several runs."
+    },
+    {
       "run_id": "2026-09-14T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
