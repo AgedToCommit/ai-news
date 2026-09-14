@@ -1,0 +1,194 @@
+{
+  "snapshot_id": "2026-09-14-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-09-14",
+  "generated_at": "2026-09-14T17:15:00Z",
+  "generated_at_local": "2026-09-14T13:15:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-09-14T17:15:00Z", "duration_ms": 900000 }
+  ],
+  "tier_counts": { "1": 1, "2": 1, "3": 1 },
+  "items": [
+    {
+      "id": "four-us-labs-coordinated-cyber-ai-defender-programs-september-2026",
+      "tier": 1,
+      "title": "Four US labs now each have a named defender-only cybersecurity AI program — Google Fairwind (Sept 2, pairs Gemini 3.8 Flash Cyber with the CodeMender harness for autonomous vulnerability find-and-patch, 650+ vetted partners including CrowdStrike, Palo Alto Networks, and Snowflake), Anthropic Enterprise Frontier Safeguards + Mythos (Sept 1, zero-data-retention with customer-held storage on S3/Azure Blob/GCS under customer keys, free), OpenAI Daybreak (paired with GPT-6 Astra, the first OpenAI model to trip the Critical cybersecurity threshold in its Preparedness Framework), and Microsoft Perception (the MAI cyber platform announced alongside today's MAI Code of Conduct) — The Hacker News landed today's coordinated framing that reads the four programs as one industry-shape shift from 'AI gets better at cyber' to 'AI paired with defenders-only access,' with additional coverage from Ground News, StartupHub.ai, Small Business Trends, Cybersecurity Insiders, Google's own blog, and Superpower Daily",
+      "summary": "In the two weeks between September 1 and September 14, each of the four major US AI labs has shipped a named cybersecurity-focused program that pairs a frontier model tuned for defensive work with an access program that limits early availability to vetted defenders (governments, healthcare providers, telecoms, cybersecurity vendors). Google Fairwind, launched September 2, pairs Gemini 3.8 Flash Cyber with the CodeMender harness to autonomously identify and repair vulnerabilities inside a customer's cloud, generating verified deployment-ready patches in minutes. Fairwind launched with 650+ partners including CrowdStrike, Datadog, Menlo Security, Palo Alto Networks, and Snowflake; access is capped to internal cybersecurity, incident response, and penetration testing teams under multi-factor authentication. Anthropic Enterprise Frontier Safeguards, announced September 1, shifts enterprise data storage to customer-controlled cloud infrastructure (Amazon S3, Azure Blob Storage, or Google Cloud Storage) under customer keys and access policies, with automated misuse detection preserved but no human review by Anthropic — supported on Claude Code, Claude Enterprise, Amazon Bedrock, Google Agent Platform, and Microsoft Foundry, and free. Anthropic Mythos is the Claude family tuned for defender workloads. OpenAI Daybreak is the defender-access program paired with GPT-6 Astra — the first OpenAI model to trip the Critical cybersecurity capability threshold under its Preparedness Framework. Microsoft Perception is the newly named MAI cyber platform, announced alongside today's Microsoft MAI Code of Conduct (this morning's am item). The shared structural pattern The Hacker News landed today: each program couples a security-tuned frontier model with a vetted-partner access surface rather than a public API. The specific implication is that autonomous vulnerability finding-and-patching capabilities are being deliberately gated behind defender-only doors, not shipped to the open market.",
+      "link": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
+      "why_it_matters": "For Gabe: this is a governance-and-industry-shape story, not a directly-actionable one for your Python or HTML/CSS work, but three specific takeaways worth pulling out. First, the specific 'defender-only access program' pattern is the piece worth internalizing as the current industry-shape answer to the dual-use problem — the same AI capability that finds and patches a vulnerability for a defender can also find and exploit it for an attacker, and all four US labs have converged this month on the same answer: gate the strongest capability behind a vetted-partner program rather than a public API. That is a specific pattern shift from the prior 'ship to the API, everyone gets it' default, and if it holds it will shape which capabilities you can expect to see in the general-purpose Claude API versus behind a defender-only gate. Second, the specific Anthropic Enterprise Frontier Safeguards commitment — customer-held storage, customer keys, no Anthropic human review, and free — is the piece worth naming as the current bar for enterprise data sovereignty on frontier AI. Prior state of AI-service-as-a-vendor was that logging and retention were generally at the vendor's discretion; Anthropic just moved the ground truth to the customer's own cloud. The specific implication for how you read future enterprise-AI privacy claims: 'customer-held storage under customer keys' is now the specific concrete commitment shape, and anything softer than that is a weaker offer. Third, the specific Google Fairwind pairing of Gemini 3.8 Flash Cyber with the CodeMender harness — autonomous find-and-patch on real cloud infrastructure in minutes — is the piece worth naming as the current best-in-class defender workflow. The specific 'autonomous patch generation for a real vulnerability' capability was research-demo shape six months ago; it is a limited-access product this week. The specific implication: expect a version of this capability to make it into public Google Cloud offerings in the 6-12 month window, and expect the shape of the tool to be 'model identifies the flaw, harness generates the patch, human reviews and merges' rather than 'model answers questions about the flaw.'",
+      "why_it_matters_brief": "All four US frontier labs have now shipped a named cybersecurity AI program in a two-week window — the shared shape is 'security-tuned frontier model + defenders-only access surface,' and it reads as the industry's coordinated answer to the dual-use problem.",
+      "source": {
+        "name": "The Hacker News — Google, Anthropic, and OpenAI Unveil Cyber AI Models, Safeguards, and Access Programs",
+        "type": "scrape",
+        "url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-14T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-14T17:15:00Z",
+          "by": "digest",
+          "change": "created — the coordinated-defender-programs pattern story landing today. Four US labs: Google Fairwind (Sept 2, Gemini 3.8 Flash Cyber + CodeMender harness, 650+ partners, autonomous find-and-patch), Anthropic Enterprise Frontier Safeguards (Sept 1, customer-held storage on S3/Azure Blob/GCS under customer keys, no Anthropic human review, free) plus Mythos (defender-tuned Claude family), OpenAI Daybreak (paired with GPT-6 Astra, first OpenAI model to trip Critical cybersecurity capability threshold), Microsoft Perception (the MAI cyber platform announced alongside today's MAI Code of Conduct — Perception itself is a distinct program from the Code of Conduct in the am file). The Hacker News led with the coordinated framing today; earlier discrete announcements landed in the two weeks prior. Coverage: The Hacker News, Ground News, StartupHub.ai, Small Business Trends, Cybersecurity Insiders, Google Blog, Superpower Daily, Unite.AI, MarkTechPost. Tier 1 US."
+        }
+      ],
+      "takes": [
+        {
+          "source": "The Hacker News — Google, Anthropic, and OpenAI Unveil Cyber AI Models, Safeguards, and Access Programs",
+          "url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
+          "take": "The primary coordinated-framing writeup — the reference for reading the four programs as one industry-shape pattern rather than four separate announcements."
+        },
+        {
+          "source": "Google Blog — Fairwind Program: Cyber defense tools for trusted partners",
+          "url": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+          "take": "Google's own announcement — the reference for the Gemini 3.8 Flash Cyber + CodeMender pairing and the specific defender-only access rules."
+        },
+        {
+          "source": "StartupHub.ai — Google Fairwind Program Arms Allies With AI Fixes",
+          "url": "https://www.startuphub.ai/ai-news/ai-research/2026/google-fairwind-program-arms-allies-with-ai-fixes",
+          "take": "The industry-audience writeup on Fairwind's specific autonomous-patch capability — useful for reading what the pairing of model + harness actually does."
+        },
+        {
+          "source": "Unite.AI — Anthropic Announces Enterprise Frontier Safeguards, Customer-Held Data",
+          "url": "https://www.unite.ai/anthropic-announces-enterprise-frontier-safeguards-customer-held-data/",
+          "take": "The primary Anthropic EFS writeup — the reference for the customer-held-storage commitment (S3, Azure Blob, GCS under customer keys) and the free-pricing detail."
+        },
+        {
+          "source": "MarkTechPost — Anthropic Introduces Enterprise Frontier Safeguards (EFS): Zero-Data-Retention Privacy Plus Cross-Session Misuse Detection",
+          "url": "https://www.marktechpost.com/2026/09/02/anthropic-enterprise-frontier-safeguards-efs/",
+          "take": "The technical-audience deep-dive on EFS — useful for reading the 'no human review by Anthropic' architectural commitment specifically."
+        },
+        {
+          "source": "Cybersecurity Insiders — Google Fairwind Program Brings AI Cyber Defense to Government and Partners",
+          "url": "https://www.cybersecurity-insiders.com/google-launches-fairwind-cybersecurity-program-to-strengthen-government-and-partner-defenses/",
+          "take": "The cybersecurity-audience writeup that names the 650+ partner list including CrowdStrike, Datadog, Menlo Security, Palo Alto Networks, and Snowflake."
+        },
+        {
+          "source": "Superpower Daily — Google Launches Fairwind to Give Selected Defenders AI Tools for Finding and Fixing Flaws",
+          "url": "https://superpowerdaily.com/posts/google-launches-fairwind-to-give-selected-defenders-ai-tools-for-finding-and-fixing-flaws",
+          "take": "The daily-industry-brief framing that leads with the 'find and fix' capability — useful for reading the specific autonomous-patch pitch."
+        }
+      ]
+    },
+    {
+      "id": "sakana-fugu-max-ultra-v2-orchestration-model-september-11-2026",
+      "tier": 2,
+      "title": "Sakana AI shipped Fugu Max and Fugu Ultra v2 on September 11 — orchestration models that route each task to other models and stitch results back together, hitting best-or-joint-best on 5 of 8 benchmarks and top-two on 7 of 8, with Fugu Ultra v2 scoring 48.3 on Chartography (vs 27.3 for Anthropic Opus 5 and 29.5 for Fable 5), 74.3 on DeepSWE (edging GPT-6 Astra's 74.1 and beating Claude Fable 5.1's 67.4), at $5 input / $30 output per million tokens — hosted API only, not open weights, and not available in the EU or EEA, per Sakana's own release page plus writeups from BuildFast with AI, DataNorth, Pondero, AiCybr, OrcaRouter, AI/TLDR, and BigGo Finance",
+      "summary": "Sakana AI (Tokyo) shipped Fugu Max and Fugu Ultra v2 on September 11, 2026 — the specific architectural bet is that Fugu is not a single model but an orchestrator, a model trained to hand each incoming task to whichever downstream model handles it best and stitch the answers back together. The two variants share the underlying orchestration architecture but target different points on the cost/capability curve. Fugu Ultra v2, the top-capability variant, hits best-or-joint-best on 5 of 8 benchmarks Sakana reports and top-two on 7 of 8. Two specific numbers stand out. First, 48.3 on Chartography — Sakana's visual reasoning and data-interpretation benchmark — against 27.3 for Anthropic Opus 5 and 29.5 for Fable 5, a nearly 20-point gap on a benchmark specifically designed around chart and data-figure interpretation. Second, 74.3 on DeepSWE (a real-world software repair benchmark), edging out GPT-6 Astra's 74.1 and beating Claude Fable 5.1's 67.4 — the specific coding-benchmark result that says an orchestrator can beat a monolithic frontier model on hard software-repair work. Pricing: $5 input / $30 output per million tokens at standard context length for Ultra v2. The models run as hosted APIs only — not open weights — and neither Ultra v2 nor Max is available in the EU or EEA. Sept 11 landed outside the enrichment window that produced today's am file, so this is Tier-2 Asia coverage the digest is picking up.",
+      "link": "https://sakana.ai/fugu-max-release/",
+      "why_it_matters": "For Gabe: this is directly relevant to how you think about AI systems architecture in your Python work, and there are three specific takeaways worth pulling out. First, the specific 'orchestrator, not a model' architecture is the piece worth internalizing as an alternative to the 'one big frontier model does everything' pattern. Fugu is trained to route each task to whichever downstream model is best at that specific task shape and to stitch the pieces back — the specific architectural analog to a Python program that calls out to different libraries for different jobs rather than trying to do everything in one function. The specific implication for your own agent-shape Python work: if you build a system that has to handle mixed workloads (chart interpretation + code repair + long-form writing), the orchestrator pattern is a real design choice, not just a research curiosity. The Sept 11 benchmark data now says an orchestrator built from many smaller models can beat a monolithic frontier model on specific tasks — that is a specific data point that supports the pattern. Second, the specific Chartography result (48.3 vs 27.3 for Opus 5, a nearly 2x gap) is worth reading as a signal that chart-and-figure interpretation is a specific weakness of current frontier models where a specialized approach can beat a general one. If you ever build anything that has to read a chart image and answer questions about the underlying data — a common shape of Python data-analysis work — the current frontier-model reality is that the general-purpose model will fail at this specific task more often than not. Fugu's result says the fix is not 'wait for the next Claude,' it is 'route chart-reading tasks to a specialist.' Third, the specific 'hosted API only, not open weights, not in EU/EEA' framing is worth naming as a competitive-and-regulatory data point. Sakana's decision to not ship weights removes the specific pattern where a Japanese lab's model gets a second life via HuggingFace downloads and community fine-tunes — the same pattern that made DeepSeek's V3 architecture a widely-studied reference point. The specific implication is that the orchestration pattern remains reproducible in principle (the architecture is described publicly) but the specific weights and routing table are Sakana's moat.",
+      "why_it_matters_brief": "Sakana Fugu Ultra v2 is not a single model — it is an orchestrator that routes each task to other models and stitches the results, and its Sept 11 benchmarks say the pattern can beat monolithic frontier models on specific tasks (Chartography 48.3 vs Opus 5's 27.3; DeepSWE 74.3 vs GPT-6 Astra's 74.1).",
+      "source": {
+        "name": "Sakana AI — Introducing Fugu Max and Fugu Ultra v2: Orchestrating the Pareto Frontier",
+        "type": "scrape",
+        "url": "https://sakana.ai/fugu-max-release/"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-09-14T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-14T17:15:00Z",
+          "by": "digest",
+          "change": "created — Sakana AI's Sept 11, 2026 release of Fugu Max and Fugu Ultra v2 was noted by the earlier refresh phase but not included then because it fell outside the 5-hour refresh window. Digest is picking it up as a Tier 2 Asia item on the specific architectural angle: Fugu is not a single model but an orchestrator that routes tasks to other models. Fugu Ultra v2 tops Chartography (48.3 vs 27.3 for Opus 5, 29.5 for Fable 5) by nearly 20 points and edges GPT-6 Astra on DeepSWE (74.3 vs 74.1). $5 input / $30 output per million tokens. Hosted API only, not open weights, not in EU/EEA. Coverage: Sakana's own release page, BuildFast with AI, DataNorth, Pondero, AiCybr, OrcaRouter, AI/TLDR, BigGo Finance. Tier 2 Asia."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Sakana AI — Introducing Fugu Max and Fugu Ultra v2: Orchestrating the Pareto Frontier",
+          "url": "https://sakana.ai/fugu-max-release/",
+          "take": "The primary release page — the reference for the specific 'orchestrator, not a model' architectural framing and the full benchmark table."
+        },
+        {
+          "source": "BuildFast with AI — Fugu Max & Fugu Ultra v2 Review: Benchmarks, Price & Is Sakana Fugu Worth It?",
+          "url": "https://www.buildfastwithai.com/blogs/fugu-max-fugu-ultra-v2-review",
+          "take": "The practitioner-audience deep-dive with the specific benchmark numbers side-by-side and the pricing analysis."
+        },
+        {
+          "source": "DataNorth — Sakana AI Fugu Max and Fugu Ultra v2: $2 per 1M tokens",
+          "url": "https://datanorth.ai/news/sakana-ai-launches-fugu-max-and-fugu-ultra-v2",
+          "take": "The pricing-focused writeup — useful for reading Fugu Max's cost position vs Ultra v2 at $5/$30 per million."
+        },
+        {
+          "source": "Pondero — Sakana AI ships Fugu Max and Fugu Ultra v2, beating frontier benchmarks without frontier models",
+          "url": "https://pondero.ai/news/2026-09-12-sakana-fugu-max-ultra-v2/",
+          "take": "The framing writeup that reads the release as 'orchestrator beats monolithic frontier' — the specific architectural-shape takeaway."
+        },
+        {
+          "source": "AiCybr — Sakana Fugu Max and Ultra v2: Pricing, Benchmarks, API and Orchestration Architecture",
+          "url": "https://aicybr.com/blog/sakana-fugu-max-ultra-v2-orchestration-pricing-api",
+          "take": "The developer-audience deep-dive on the orchestration architecture and the API surface — the reference if you want to actually try building against Fugu."
+        },
+        {
+          "source": "BigGo Finance — Sakana AI Launches 'Fugu Ultra v2,' Surpassing GPT-6 Astra; Low-Cost Version Also Unveiled",
+          "url": "https://finance.biggo.com/news/b97559a4-53ff-450c-afaa-38c98658fc76",
+          "take": "The Asia-Pacific-press framing that leads with the head-to-head 'surpassing GPT-6 Astra' angle — useful cross-check on how the release is landing in the Japanese and Asian AI press."
+        }
+      ]
+    },
+    {
+      "id": "deepseek-v4-pro-deprecation-reversal-september-14-2026",
+      "tier": 3,
+      "title": "DeepSeek reversed today's V4 Pro API deprecation — the plan announced August 25 to transparently route all DeepSeek V4 Pro API requests to the cheaper V4.1 Flash starting 04:00 UTC on September 14 was walked back 'in response to user demand,' and V4 Pro continues to be served at V4 Pro pricing indefinitely, per PANews English, Superpower Daily, Shattered.io, Chat-Deep.ai's changelog tracker, and DeepSeek's own API docs — a rare public reversal of a Chinese frontier lab's deprecation plan",
+      "summary": "DeepSeek reversed today's scheduled V4 Pro API deprecation. Under the original plan announced August 25, all DeepSeek V4 Pro API requests were to be transparently routed to the cheaper V4.1 Flash starting at 12:00 Beijing time (04:00 UTC) on September 14, 2026 — the standard deprecation pattern of migrating traffic to a newer model at the newer model's lower price point. In response to user pushback, DeepSeek announced today (per PANews English's Sept 14 story, tracked by Superpower Daily and Chat-Deep.ai) that DeepSeek V4 Pro API service will continue past September 14 with the billing method unchanged. The specific practitioner concern that drove the reversal: V4 Pro is DeepSeek's higher-parameter reasoning model with capabilities V4.1 Flash's smaller architecture does not match — specifically on long-context work and multi-step code review, where the specific reasoning-depth trade-off between the two model tiers has been the piece users pushed back on. The reversal is a rare public walk-back of a Chinese frontier lab's deprecation plan and the specific pattern to name is 'user demand can move a deprecation timeline' — the same shape as Anthropic's earlier boost-to-Claude-Code and Amazon's Bedrock-legacy-model retention patterns.",
+      "link": "https://panews.io/articles/01a09045-be46-7632-8fd6-e486b08c3c21",
+      "why_it_matters": "For Gabe: this is a small story on its own but directly useful if you use or plan to use DeepSeek's API for any Python work. Two specific takeaways worth pulling out. First, the specific practical implication: if you had DeepSeek V4 Pro-shaped calls in any script you run, they were going to silently start routing to V4.1 Flash at 04:00 UTC today and quietly land you on a smaller model with different behavior on the specific long-context and multi-step-reasoning tasks V4 Pro was serving. That risk is now off the table — V4 Pro service continues at V4 Pro pricing, so nothing changes on your end. The specific implication for how you monitor any API you depend on: the standard deprecation notice on Aug 25 said 'V4 Pro will be routed to V4.1 Flash on Sept 14,' and the practitioner-community pushback is what changed that. If you use a Chinese frontier lab's API, the specific pattern to watch is 'announced deprecation date' followed by 'user-demand-driven reversal' — both moves happen in public. Second, the specific reversal-pattern is worth naming as a data point on how Chinese frontier labs handle deprecation decisions differently from US frontier labs. The specific US pattern is 'we announced the deprecation, it happens on schedule' (OpenAI has retired several model versions on exactly the announced date). The specific DeepSeek move is closer to 'we announced the deprecation, the community pushed back, we walked it back.' The specific implication for how you model API-lifetime risk when choosing between a US and a Chinese frontier lab: the two ecosystems apparently value user-community feedback differently in the specific deprecation-window decision. Neither is obviously better — the US pattern gives you a predictable timeline; the DeepSeek pattern gives you leverage to push back — but the shape of the trade-off is worth naming.",
+      "why_it_matters_brief": "DeepSeek walked back today's planned V4 Pro deprecation 'in response to user demand,' so V4 Pro continues at V4 Pro pricing indefinitely — a rare public reversal of a Chinese frontier lab's deprecation plan, and the specific pattern of 'user pushback moves the timeline.'",
+      "source": {
+        "name": "PANews English — DeepSeek V4 Pro API Call Service Will Not Be Discontinued",
+        "type": "scrape",
+        "url": "https://panews.io/articles/01a09045-be46-7632-8fd6-e486b08c3c21"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-09-14T17:15:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-14T17:15:00Z",
+          "by": "digest",
+          "change": "created — DeepSeek reversed today's scheduled V4 Pro API deprecation (Aug 25 plan: route V4 Pro to V4.1 Flash at 04:00 UTC Sept 14; walked back today per user demand). V4 Pro continues at V4 Pro pricing indefinitely. Coverage: PANews English (primary), Superpower Daily, Shattered.io, Chat-Deep.ai's DeepSeek changelog tracker, DeepSeek's own API docs. Rare public reversal of a Chinese frontier lab deprecation plan. This was flagged as 'considered but not included' by the morning refresh (developer-facing, minor) but is worth capturing on the day the reversal itself lands. Tier 3 Asia."
+        }
+      ],
+      "takes": [
+        {
+          "source": "PANews English — DeepSeek V4 Pro API Call Service Will Not Be Discontinued",
+          "url": "https://panews.io/articles/01a09045-be46-7632-8fd6-e486b08c3c21",
+          "take": "The primary Sept 14 report on the reversal — the reference for the 'in response to user demand' framing and the timing of the walk-back."
+        },
+        {
+          "source": "Superpower Daily — DeepSeek Launches V4.1-Flash and Plans to Replace V4-Pro API Traffic",
+          "url": "https://superpowerdaily.com/posts/deepseek-launches-v4-1-flash-and-plans-to-replace-v4-pro-api-traffic",
+          "take": "The original Aug 25 report of the deprecation plan — useful for reading the specific 'route to V4.1 Flash at V4.1 Flash pricing' migration mechanic that has now been walked back."
+        },
+        {
+          "source": "Shattered.io — DeepSeek V4.1 Flash: V4 Pro Routing Explained [2026]",
+          "url": "https://shattered.io/deepseek-v4-1-flash-v4-pro-retirement-2026/",
+          "take": "The developer-audience deep-dive on the specific routing behavior and the practitioner concerns that drove the pushback — useful for reading why V4 Pro's specific capabilities matter to the specific users who complained."
+        },
+        {
+          "source": "Chat-Deep.ai — DeepSeek API Updates: Changelog & Deprecated Models Tracker",
+          "url": "https://chat-deep.ai/docs/deepseek-api-updates/",
+          "take": "The dated-changelog tracker — useful for cross-checking DeepSeek's public API history and the specific timing of the reversal."
+        },
+        {
+          "source": "DeepSeek — API Docs Changelog",
+          "url": "https://api-docs.deepseek.com/updates/",
+          "take": "DeepSeek's own official changelog — the primary source for the specific policy language on V4 Pro's continued service."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
