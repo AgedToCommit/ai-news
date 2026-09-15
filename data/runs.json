@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-15T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-15T06:00:00Z",
+      "ended_at": "2026-09-15T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 7600,
+        "output_write": 12000
+      },
+      "fetches_made": 7,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-15-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Yesterday's pm file (2026-09-14-pm) read as primary input — 3 items. Sub-task 1 (prune + enrich): all 3 yesterday-pm items kept and enriched. (1) four-us-labs-coordinated-cyber-ai-defender-programs-september-2026 — enriched with Digital Applied's overnight 'Who Gets the Cyber AI Models: Every Vetting Programme Listed' catalog and Value Add Pulse's 'Critical cyber AI models' framing. Digital Applied crystallized the shared-shape framing as 'every vetting programme listed' — the reference now for reading the four programs as one industry convention. Added specific Preparedness Framework 'Critical' cybersecurity threshold definition ('find and exploit novel vulnerabilities in hardened targets without step-by-step human guidance') and Anthropic Mythos's specific vetting mechanism (Project Glasswing + Cyber Verification Program). Added fourth takeaway on the Preparedness Framework threshold specifically. (2) sakana-fugu-max-ultra-v2-orchestration-model-september-11-2026 — enriched with the architecturally-critical detail from Orcarouter's 'a smaller pool, a higher score' writeup and AlphaSignal's overnight coverage: Sakana explicitly states that Claude Fable 5, Claude Fable 5.1, and GPT-6 Astra are NOT in Fugu Ultra v2's orchestration pool. The 74.3 DeepSWE score edging GPT-6 Astra's 74.1 was reached without any of those three frontier models. Strongest form of the orchestration-beats-flagship claim. Also added Fugu Max pricing ($2 input / $6 output per million) as the 60% cost-cut point per AlphaSignal's 'Splits Fugu Into Max and Ultra v2 to Cut Costs 60%' framing. Added second takeaway on pool composition. (3) deepseek-v4-pro-deprecation-reversal-september-14-2026 — enriched with Mehmet Ozel's Medium postmortem 'they backed down in 45 hours' — the specific timing framing plus the customer-comms mechanism (three emails in under two days). Added specific V4.1 Flash pricing ($0.15 per million input, $0.60 per million output during off-peak, less than a third of V4 Pro's rate) from Being Guru's writeup. Added third takeaway on evaluating 'deprecating the bigger tier for the cheaper tier' announcements. No items dropped from yesterday's pm. Sub-task 2 (late-breaking pass): 1 item added. (4) trump-china-reject-ai-slowdown-pace-the-frontier-september-14-2026 — Tier 1 Global. Political-rejection closing beat on Amodei's Sept 12 'We Must Pace the Frontier' essay. Trump (Doonbeg presser + Truth Social 'SICK conspiracy') and China's foreign ministry spokesman Guo Jiakun ('fearmongering, confrontation and vicious competition') both rejected the pacing proposal Sept 14. Prior 48h: Altman, Musk, Hassabis, and Nadella publicly endorsed. Coverage: Al Jazeera, NPR, CNN Business, OPB, Quartz, Seoul Economic Daily, Slay News, Reality Tea, Mandatory, Zvi Mowshowitz Sept 14 Don't Worry About the Vase. Distinct from yesterday-am's 'AI standards body' story — that was about private working-group meetings; this is about the specific political rejection of the voluntary pacing proposal that came out of them. Adds ceiling framing to the safety-body-and-pacing arc. Considered but not included: Atria Dawn Preview (Sept 11 open-weights MoE agentic release, outside the 12h late-breaking window; also FP8 checkpoint Sept 12); MAPL-EMIT Google/NASA methane plume model (Sept 9, stale); Paul Christiano OpenAI Foundation board (Sept 9, stale); Nuance Labs full-duplex waitlist (Sept 14 but early-stage, no product); Netflix 'The AI Doc' Sept 15 premiere (cultural, not capability); AWS MiniMax on Bedrock (Sept 14 but incremental). WebFetch remains EGRESS_BLOCKED (consistent with prior runs); WebSearch available (7 queries used). Final snapshot: 4 items (2 T1, 1 T2, 1 T3). No cap hits (~38k/100k tokens, 7 fetches/30, ~30 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-14T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
