@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-15T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-15T17:00:00Z",
+      "ended_at": "2026-09-15T17:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 8000,
+        "output_write": 3000
+      },
+      "fetches_made": 10,
+      "items_input": 12,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-15-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, all three phase flags enabled. Today's am file exists (2026-09-15-am, 6 items from refresh at 11:30 UTC). Last successful run ended_at: 2026-09-15T11:30:00Z. WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (10 queries used). Promotion rule applied: none of the 6 am items were promoted — no am-item materially deepened during the afternoon window (Trump/China pacing story continued to reverberate but without new substantive detail beyond the market-reaction context already captured in this morning's refresh; the OpenAI/Hugging Face Congressional oversight item had a Sanders Sept 16 private Senate briefing surface, but that's tomorrow's event, not a same-day materialization of the story). Five items added, all new: (1) google-antigravity-opens-claude-opus-5-all-engineers-september-15-2026 — Tier 1 US. Business Insider (Hugh Langley) broke on Sept 15 that Google opened Claude Opus 5 access to every engineer through Antigravity IDE with per-employee quota. Prior state: only DeepMind research + specifically-approved projects; Claude Code and OpenAI Codex blocked. Coverage: Techmeme, BI, Seoul Economic Daily, BigGo Finance, KuCoin, dev.ua, Kingy AI, Inshorts, Medium. Directly relevant to Gabe's Python coding-tool decisions. (2) anthropic-517-billion-compute-commitments-11-months-september-2026 — Tier 1 Global. Anthropic $517B / 14.8GW compute-commitments stack in 11 months through August 2026 (3x prior $180B guidance through 2029). Coverage: Yahoo Finance, Forkast, Dealroom, Data Center Dynamics, 24/7 Wall St, explainx.ai. The ground-truth compute number sitting under the pacing debate. (3) openai-ipo-delay-2027-altman-fortune-safety-september-2026 — Tier 2 Global. Altman Fortune interview (Sept 12) plus Fortune Sept 15 follow-up specifically framing the delay as 'not markets, safety timing.' CFO reiterated Sept 14. Business decision that backs Altman's pacing endorsement. (4) euclyd-samsung-230m-series-a-non-gpu-inference-chip-september-15-2026 — Tier 2 EU. Dutch chip startup Euclyd €200M+ Series A on Sept 15, co-led by Samsung + Somerset + EQT Scaleup Europe + Innovation Industries. CRAFTWERK compute-in-memory architecture (16,384 processors), 2028 products, former ASML chief Wennink as chair. The cleanest form of the 'GPUs are the wrong tool for inference' thesis. (5) rum-group-anthropic-137-billion-gpu-deal-penny-warrant-september-2026 — Tier 3 US. Benzinga's Sept 15 identification of Anthropic as RUM Group's $13.7B mystery customer, with the specific penny-warrant mechanism (50.8M Class A at $0.01/share, ~18% max, ~6% initial). Ties directly to the Anthropic $517B item as the specific single-largest contract in the stack. Considered but not included: Karpathy/Simon Willison recent posts (no new Sept 15 posts; Willison's Sept 11 Datasette security release was already outside the pm window and captured in a prior week's coverage); Meta Muse Spark 1.3 (Sept 2, stale); Anthropic Claude for Financial Advisors + Smart Reports (product-launch news, product-only, not tier-1 material); Rumble Sept 15 stock move alone (subsumed by the Benzinga identification item); EU AI Act Sept 15 GPAI-enforcement anniversary framing (background, no specific enforcement action landed today); Sanders Sept 16 private Senate briefing on Hugging Face (tomorrow's event, not today's — noted in am file's OpenAI/HF item). Final snapshot: 5 items (2 T1, 2 T2, 1 T3). No cap hits (~34k/100k tokens, 10 fetches/50, ~15 min/60 min wall time)."
+    },
+    {
       "run_id": "2026-09-15T11:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
