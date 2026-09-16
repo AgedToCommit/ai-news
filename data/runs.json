@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-16T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-16T11:00:00Z",
+      "ended_at": "2026-09-16T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 5200,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-16-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, all three phase flags enabled. Today's am file (2026-09-16-am.json) existed with 6 items from enrichment (ended_at 2026-09-16T06:30:00Z). WebFetch EGRESS_BLOCKED (consistent with prior runs); WebSearch available (8 queries used). Late-breaking sweep window: 06:30-11:00 UTC. Candidates found: 2 selected from 8 searches. Rejected: Mistral Leanstral 1.5 (June 2026, too old), Shieldstral (August 2026, too old), Cloudflare AI crawler policy (insufficient detail). Item 1 added: shanghai-ai-lab-atria-dawn-preview-744b-agentic-moe-september-2026 (Tier 1 Asia) - 744B MIT-licensed agentic MoE from Shanghai AI Lab, released Sept 11-14, missed by prior runs due to quiet-ship pattern (no blog/press release). Item 2 added: openai-anthropic-google-ai-safety-body-finra-model-september-2026 (Tier 2 Global) - OpenAI/Anthropic/Google DeepMind FINRA-model safety body talks since July 2026. Final snapshot: 8 items (3 T1, 5 T2, 0 T3)."
+    },
+    {
       "run_id": "2026-09-16T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
