@@ -2,12 +2,13 @@
   "snapshot_id": "2026-09-16-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-16",
-  "generated_at": "2026-09-16T06:30:00Z",
-  "generated_at_local": "2026-09-16T02:30:00-04:00",
+  "generated_at": "2026-09-16T11:30:00Z",
+  "generated_at_local": "2026-09-16T07:30:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-09-16T06:00:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-09-16T06:00:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh",    "ran_at": "2026-09-16T11:00:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 2, "2": 4, "3": 0 },
+  "tier_counts": { "1": 3, "2": 5, "3": 0 },
   "items": [
     {
       "id": "google-antigravity-opens-claude-opus-5-all-engineers-september-15-2026",
@@ -374,7 +375,7 @@
         },
         {
           "source": "24/7 Wall St — Rumble Soars 10% on Report Anthropic Is the $13.7B Compute Customer; CoreWeave and Nebius Drop 9%",
-          "url": "https://247wallst.com/investing/2026/09/14/rumble-soars-10-on-report-anthropic-is-the-13-7b-compute-customer-coreweave-and-nebius-drop-9/",
+          "url": "https://247wallst.com/investing/2026/09/14/rumble-soars-10-on-report-anthropic-is-the-13-7b-compute-customer-coreweave-and-nebius-sink-9/",
           "take": "The specific 'CoreWeave and Nebius Drop 9%' framing — the reference for reading the diversification signal as the market interpretation of Anthropic's counterparty choice."
         },
         {
@@ -477,6 +478,148 @@
           "source": "TFIGlobal — The Engineers Who Know Too Much: China Bolts the Departure Gate",
           "url": "https://tfiglobalnews.com/2026/08/12/the-engineers-who-know-too-much-china-bolts-the-departure-gate/amp/",
           "take": "The August preview coverage naming the mechanism explicitly — useful for reading the specific policy-design rationale before the September effective date."
+        }
+      ]
+    },
+    {
+      "id": "shanghai-ai-lab-atria-dawn-preview-744b-agentic-moe-september-2026",
+      "tier": 1,
+      "title": "Shanghai Artificial Intelligence Laboratory quietly shipped Atria Dawn Preview between September 11–14, 2026 — a 744-billion-parameter MIT-licensed agentic Mixture-of-Experts built on GLM-5.2, trained via a Verifiable Experience Pipeline that grounds tool use in executable environments; the 140-author arXiv technical report says it is 'competitive with frontier agents' across 16 benchmarks spanning real-world research, engineering, and digital work, with the highest published score on five of the 16; full-precision and FP8 checkpoints available on Hugging Face (internlm/Atria-Dawn-Preview), free public API at api.atria-asi.ai/v1, per AI Weekly, Startup Fortune, benchlm.ai, orcarouter.ai, AIFOD, and the GitHub repository (atria-asi/Atria-Dawn-Preview)",
+      "title_short": "Shanghai AI Lab ships Atria Dawn Preview: 744B MIT agentic MoE, frontier-competitive on 16 benchmarks",
+      "summary": "Shanghai Artificial Intelligence Laboratory (SAIL) — the lab behind the InternLM model series — released Atria Dawn Preview across three steps: a GitHub repository (atria-asi/Atria-Dawn-Preview) appeared September 11, an FP8 checkpoint on Hugging Face under the internlm namespace followed September 12, and a 140-author technical report was posted to arXiv on September 14. The model is a 744-billion-parameter Mixture-of-Experts built on GLM-5.2, the same base that underpins InternLM's most recent generation. The distinctive training approach is what the lab calls a Verifiable Experience Pipeline: rather than training tool use via human preference labels on outputs (the standard RLHF/DPO approach), VEP grounds each tool call in an executable environment, so the model's actions are scored on whether they produce verifiable correct outcomes rather than whether they look plausible to a human rater. Across 16 benchmarks spanning real-world research tasks, engineering tasks, and digital work tasks, the arXiv paper reports that Atria Dawn Preview is 'competitive with frontier agents' and claims the highest published score on five of the 16 — the paper explicitly measures against frontier agent baselines rather than standard chat-model benchmarks. Both full-precision and FP8 quantized checkpoints are published under the MIT License, making them freely self-hostable. Shanghai AI Lab also runs a free hosted inference API at api.atria-asi.ai/v1 (OpenAI-compatible interface) for international traffic and at discovery.intern-ai.org.cn for users inside China. Coverage of the release initially spread slowly in English-language press — the release came with no formal blog post or press release, which is characteristic of SAIL's quiet-ship pattern on InternLM — but multiple outlets picked up the story this week.",
+      "link": "https://huggingface.co/internlm/Atria-Dawn-Preview",
+      "why_it_matters": "For Gabe: two specific takeaways worth pulling out. First, the specific MIT license plus FP8 checkpoint plus free API endpoint is the combination that determines whether a 744B-parameter frontier-competitive model is actually accessible to someone who isn't a frontier lab. The specific path for your Python work: the free API endpoint at api.atria-asi.ai/v1 exposes an OpenAI-compatible interface, meaning you can call Atria Dawn Preview from any Python code that currently calls the OpenAI or Anthropic SDK by swapping the base URL. That is a specific capability that just became available this week — a 744B agentic model competitive with frontier agents, available via free API, MIT licensed, from a major Chinese AI lab. The practical implication is that the frontier-tier, agentic-capable model tier just expanded beyond the Anthropic / OpenAI / Google paywall for the first time at this scale. If you're experimenting with Python agents or multi-step coding tools, Atria Dawn Preview via the free API is now a specific option to benchmark your use case against. Second, the specific Verifiable Experience Pipeline training method is worth naming as a concrete architectural difference from the RLHF-trained models you've been using. The practical implication for agentic Python tasks: a model trained via executable verification rather than human preference labels should produce more consistent, debuggable tool calls — the model's tool call is right or wrong based on whether the execution produced a verifiable correct output, not whether a human rater found the output plausible. This is the specific architectural reason Atria's benchmarks are measured against 'real-world research, engineering, and digital work' tasks (things with verifiable ground truth) rather than general chat tasks. For multi-step Python scripting, file manipulation, or API calls — tasks where right or wrong is deterministic — a VEP-trained model is specifically targeting the task shape you care about.",
+      "why_it_matters_brief": "744B MIT-licensed agentic MoE from Shanghai AI Lab, frontier-competitive on 16 benchmarks, free OpenAI-compatible API — calling a top-tier agentic model from Python just got a new free option.",
+      "source": {
+        "name": "AI Weekly — Shanghai AI Lab Ships Atria Dawn Preview, a 744B Agentic MoE",
+        "type": "scrape",
+        "url": "https://aiweekly.co/alerts/shanghai-ai-lab-ships-atria-dawn-preview-a-744b-agentic-moe"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-09-16T11:15:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-16T11:15:00Z",
+          "by": "refresh",
+          "change": "created — Asia morning cycle pickup. Shanghai AI Lab shipped Atria Dawn Preview Sept 11–14: GitHub repo Sept 11, HuggingFace FP8 checkpoint Sept 12, arXiv technical report (140 authors) Sept 14. 744B MoE on GLM-5.2 base. MIT license. VEP training. Frontier-competitive across 16 benchmarks, highest score on 5 of 16. Free API at api.atria-asi.ai/v1. Coverage now spreading in English-language press: AI Weekly, Startup Fortune, benchlm.ai, orcarouter.ai, AIFOD. Prior runs missed — enrichment's model tracker flagged DeepSeek V4.1 Flash (Sept 10) as most recent; Atria's quiet-ship pattern (no blog post, no press release) caused the initial miss. Tier 1 Asia."
+        }
+      ],
+      "takes": [
+        {
+          "source": "AI Weekly — Shanghai AI Lab Ships Atria Dawn Preview, a 744B Agentic MoE",
+          "url": "https://aiweekly.co/alerts/shanghai-ai-lab-ships-atria-dawn-preview-a-744b-agentic-moe",
+          "take": "The primary English-language writeup — the reference for the benchmark framing and the VEP training description."
+        },
+        {
+          "source": "Startup Fortune — Shanghai AI Lab Quietly Releases Atria, a Free 744 Billion Parameter AI Agent",
+          "url": "https://startupfortune.com/shanghai-ai-lab-quietly-releases-atria-a-free-744-billion-parameter-ai-agent/",
+          "take": "The startup-audience writeup with the 'quietly releases' framing — useful for reading why this story spread slowly initially and why the 'free' API angle is the lead."
+        },
+        {
+          "source": "orcarouter.ai — Atria Dawn Preview: InternLM's 744B Agentic MoE Ships Quietly",
+          "url": "https://www.orcarouter.ai/blog/atria-dawn-preview-quiet-release",
+          "take": "The ML-infrastructure-audience writeup — useful for the specific routing and deployment detail and how Atria fits into the multi-model orchestration space."
+        },
+        {
+          "source": "benchlm.ai — Atria Dawn Preview Benchmarks & Context (September 2026)",
+          "url": "https://benchlm.ai/models/atria-dawn-preview",
+          "take": "The benchmark-specific writeup — the reference for reading the specific 16-benchmark breakdown and what 'competitive with frontier agents' means relative to named baselines."
+        },
+        {
+          "source": "AIFOD — Shanghai AI Lab Releases Atria Dawn Preview, a 744B-Parameter Open-Source MoE AI Model",
+          "url": "https://af.net/realtime/shanghai-ai-lab-releases-atria-dawn-preview-a-744b-parameter-open-source-moe-ai-model/",
+          "take": "The developing-countries-AI-access writeup — useful for reading how the MIT license and free API are landing in press coverage focused on AI access beyond the leading labs."
+        },
+        {
+          "source": "GitHub — atria-asi/Atria-Dawn-Preview",
+          "url": "https://github.com/atria-asi/Atria-Dawn-Preview",
+          "take": "The primary release artifact — the reference for the specific checkpoint format, license, and repository structure."
+        },
+        {
+          "source": "Hugging Face — internlm/Atria-Dawn-Preview",
+          "url": "https://huggingface.co/internlm/Atria-Dawn-Preview",
+          "take": "The model card and checkpoint download — the reference for FP8 checkpoint availability, license verification, and self-hosting specs."
+        }
+      ]
+    },
+    {
+      "id": "openai-anthropic-google-ai-safety-body-finra-model-september-2026",
+      "tier": 2,
+      "title": "OpenAI, Anthropic, and Google DeepMind have been in formal talks since July 2026 to create a new AI safety body modeled after FINRA — the US financial self-regulatory authority — with OpenAI global policy chief Chris Lehane confirming the discussions to reporters on September 15, framing the antitrust risk as manageable, and attributing the FINRA-style standards-body proposal specifically to Google DeepMind CEO Demis Hassabis, per the Washington Post (September 14), TechCrunch, Bloomberg, CNBC, Gizmodo, SiliconAngle, and Yahoo Finance",
+      "title_short": "OpenAI, Anthropic, and Google in talks since July to build a FINRA-style AI safety body",
+      "summary": "The Washington Post reported on September 14 that OpenAI, Anthropic, and Google DeepMind have been in discussions to create a formal new AI safety body — the most concrete institutional step yet behind the industry's pacing-debate alignment that emerged this week following Dario Amodei's 'We Must Pace the Frontier' essay. OpenAI global policy chief Chris Lehane confirmed the talks to reporters on September 15, characterizing them as having been under way for 'several weeks' and originated from a proposal Demis Hassabis of Google DeepMind put forward in July — a US-led 'Standards Body' modeled after FINRA, the Financial Industry Regulatory Authority that functions as a self-regulatory organization for US broker-dealers. Lehane specifically addressed the antitrust risk of three dominant AI labs coordinating: 'It's better to try to work together to prioritize safety.' The FINRA model is notable because FINRA is a private-sector self-regulatory body that can write and enforce rules on its member firms, funded by member dues and examination fees rather than public money — the implication is that the proposed AI safety body would have regulatory teeth beyond a voluntary pledge or a government advisory panel, without requiring an act of Congress. CNBC and SiliconAngle specifically framed the discussions as 'secretly joined forces,' though Lehane's Sept 15 on-the-record confirmation removes any secrecy. No formal on-chain agreement, charter, or membership has been announced as of this writing, and Progressive Robot flagged that antitrust issues remain unresolved. Bloomberg and TechCrunch both confirmed the Hassabis-to-Lehane-to-public-record chain of the talks.",
+      "link": "https://www.washingtonpost.com/technology/2026/09/14/anthropic-openai-google-discussed-creating-new-ai-safety-body/",
+      "why_it_matters": "For Gabe: this is a governance story, but two specific takeaways worth naming because they change the frame for reading everything else this week. First, the specific FINRA model is worth unpacking because it implies a fundamentally different kind of authority than a voluntary pledge or a government task force. FINRA is a private-sector self-regulatory organization — its rules are binding on member firms, it can conduct examinations, issue fines, and suspend members. The specific implication of the three labs modeling their proposed body after FINRA rather than (say) an IEEE standards body or a White House advisory panel is that they are discussing an organization that would have enforcement power over its own members, without waiting for Congress to pass an AI regulatory bill. If the body forms on the FINRA model, the three biggest US labs would be writing and enforcing their own safety rules — the specific upside is speed and expertise, and the specific downside (per Progressive Robot's antitrust-risk framing) is that three dominant competitors coordinating on 'safety standards' creates obvious antitrust exposure on what counts as a rule versus what counts as a cartel agreement. Second, the specific July origin point for the talks is worth naming as the timeline anchor. The talks started in July — two months before Amodei's essay, two months before the pacing debate went public. The specific implication is that the labs were already coordinating on a formal safety structure before the pacing essay made the topic publicly visible, which changes the read on the essay itself: Amodei's public call for coordination was a move in a specific institutional negotiation already under way, not the starting point. That is a specific data point on how AI safety governance is actually happening — negotiated privately between the three labs first, then surfaced publicly when the negotiation was far enough along to name.",
+      "why_it_matters_brief": "Three major labs have been building a FINRA-style self-regulatory safety body since July — the talks predate Amodei's public pacing essay, meaning the public debate is the visible surface of an institutional negotiation already well along.",
+      "source": {
+        "name": "Washington Post — Leading AI companies discussed creating new safety body, but Trump opposes a slowdown",
+        "type": "scrape",
+        "url": "https://www.washingtonpost.com/technology/2026/09/14/anthropic-openai-google-discussed-creating-new-ai-safety-body/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-09-16T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-16T11:20:00Z",
+          "by": "refresh",
+          "change": "created — Substantive new standalone item on the institutional process behind the pacing-debate alignment. WaPo reported Sept 14 that the three labs discussed creating a new safety body; TechCrunch, Bloomberg, CNBC, Gizmodo, SiliconAngle, and Yahoo Finance followed on Sept 15 with Lehane's on-the-record confirmation and the FINRA-model detail. This is distinct from the existing openai-ipo-delay item, which covers Altman's personal IPO-window framing; this covers the specific institutional structure under discussion (FINRA-model, July origin, antitrust exposure). Missed by the digest (Sept 15, which only noted Altman's vague 'may soon coordinate' framing) and by the enrichment (which added the quote but not the WaPo-sourced institutional detail). Tier 2 Global."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Washington Post — Leading AI companies discussed creating new safety body, but Trump opposes a slowdown",
+          "url": "https://www.washingtonpost.com/technology/2026/09/14/anthropic-openai-google-discussed-creating-new-ai-safety-body/",
+          "take": "The Sept 14 primary — the reference for the specific FINRA-model framing, the three-lab scope, and the Trump-opposition detail."
+        },
+        {
+          "source": "TechCrunch — OpenAI, Anthropic, Google have been in talks on AI safety for weeks",
+          "url": "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/",
+          "take": "The Sept 15 Lehane-on-the-record confirmation writeup — the reference for reading the talks as official rather than reported."
+        },
+        {
+          "source": "Bloomberg — OpenAI, Anthropic, Google DeepMind Coordinate on AI Safety Measures",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety",
+          "take": "The Bloomberg framing — useful for reading how the coordination is landing in the finance-audience press and how it connects to the IPO-timing reporting."
+        },
+        {
+          "source": "CNBC — OpenAI, Google, Anthropic discussing collaboration on AI safety issues",
+          "url": "https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html",
+          "take": "The CNBC enterprise writeup — useful for reading how the institutional-coordination frame is landing in the business-audience press."
+        },
+        {
+          "source": "Gizmodo — OpenAI, Anthropic, and Google Join Forces for Safety as Antitrust Concerns Mount",
+          "url": "https://gizmodo.com/openai-anthropic-and-google-join-forces-for-safety-as-antitrust-concerns-mount-2000811888",
+          "take": "The consumer-tech writeup naming the antitrust-concerns angle explicitly — useful for reading the specific tension between safety-coordination and antitrust exposure that makes this a governance-design problem and not just a safety pledge."
+        },
+        {
+          "source": "SiliconAngle — OpenAI, Anthropic and Google secretly joined forces to collaborate on AI safety",
+          "url": "https://siliconangle.com/2026/09/15/openai-anthropic-and-google-secretly-joined-forces-to-collaborate-on-ai-safety/",
+          "take": "The enterprise-tech writeup that specifically names the 'secretly joined forces' framing before Lehane's confirmation — useful for reading the pre-confirmation and post-confirmation arc of the story."
+        },
+        {
+          "source": "Yahoo Finance — OpenAI, Anthropic and Google are working to create an AI standards body",
+          "url": "https://www.yahoo.com/news/us/articles/openai-anthropic-google-working-create-172400965.html",
+          "take": "The financial-audience writeup with 'AI standards body' as the specific headline framing — useful for reading how the institutional-design detail is being distilled into the finance-press shorthand."
+        },
+        {
+          "source": "Progressive Robot — AI Safety Coordination: OpenAI's Surprising Antitrust Risk",
+          "url": "https://www.progressiverobot.com/2026/09/15/openai-anthropic-google-ai-safety-coordination-talks-weeks/",
+          "take": "The antitrust-risk analysis — the reference for reading the specific legal exposure that the FINRA-model creates when three dominant competitors write and enforce their own 'safety' rules."
+        },
+        {
+          "source": "KuCoin — Anthropic, OpenAI, and Google DeepMind Discuss AI Safety Pact",
+          "url": "https://www.kucoin.com/news/flash/anthropic-openai-and-google-deepmind-discuss-ai-safety-pact",
+          "take": "The crypto-finance-audience writeup — useful for reading how the safety-pact framing is landing at the AI x finance x crypto intersection that watches frontier-lab governance for market signals."
         }
       ]
     }
