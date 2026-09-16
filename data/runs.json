@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-16T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-16T06:00:00Z",
+      "ended_at": "2026-09-16T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 9500,
+        "output_write": 10000
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Yesterday's pm file (2026-09-15-pm) read as primary input — 5 items. Sub-task 1 (prune + enrich): all 5 yesterday-pm items kept and enriched. (1) google-antigravity-opens-claude-opus-5-all-engineers-september-15-2026 — enriched with Cryptopolitan/Dataconomy/Techbriefly overnight aggregation pairing the policy change with a Google DeepMind AI-safety researcher joining former Anthropic employees to warn about frontier-model risks. Sourcing broadened to nine outlets. (2) anthropic-517-billion-compute-commitments-11-months-september-2026 — enriched with the specific counterparty breakout that surfaced overnight: $30B / 1GW Microsoft Azure lease (Nov 2025), up to $45B SpaceX (May 2026), $35B Lambda, $45B nScale, plus CoreWeave / AWS / Oracle Cloud / Nebius, routed through Vera Rubin racks. Winzheng's 'pre-IPO arms race' pairing with Anthropic's separately reported ~$2.3T year-end IPO valuation added. Fourth takeaway added on the specific counterparty shape (three hyperscalers on one end, pure-play AI-infra vehicles on the other, SpaceX as the anomaly middle). (3) openai-ipo-delay-2027-altman-fortune-safety-september-2026 — enriched with the specific comparative detail from CoinMarketCap/Morocco World News/Bloomberg overnight coverage: rival Anthropic reportedly plans to go public before year-end at a valuation potentially reaching $2.3T. Added Altman's specific 'may be close to announcing a pact to slow AI development' quote. Third takeaway added on the specific competitive-signal implications of the OpenAI-Anthropic split on public-market timing criteria. Brief rewritten. (4) euclyd-samsung-230m-series-a-non-gpu-inference-chip-september-15-2026 — enriched with Quartz/Cryptobriefing/BeBeez/StartupTalky/Tech Startups overnight coverage clarifying the specific two-part platform architecture: CRAFTWERK (chip, 16,384 processors) plus CWS 32 (rack-scale, 32 chips, one exaflop per rack by 2028). Added marketing framings ('world's first agentic AI silicon' / 'world's lowest-power exascale AI factory'). Third takeaway rewritten to focus on the specific 'exaflops per rack at a power envelope' number as the competitive claim, brief updated. (5) rum-group-anthropic-137-billion-gpu-deal-penny-warrant-september-2026 — promoted from Tier 3 to Tier 2 based on the specific market reaction (RUM +20% overnight, CoreWeave and Nebius -9%). Added the specific three-tranche deal structure with the third tranche subject to Anthropic approving the delivery date; the specific Maysville, Georgia data-center delivery point; the equity-dilution-driven Monday retreat. Fourth takeaway added on the CoreWeave/Nebius drops as the market's specific 'Anthropic is diversifying compute supply away from the pure-play AI-infra names' read. Sourcing broadened with Parameter, Foreign Policy Journal, Blockonomi, CoinCentral, StockTwits, and 24/7 Wall St's specific 'CoreWeave and Nebius Drop 9%' framing. No items dropped from yesterday's pm. Sub-task 2 (late-breaking pass): 1 item added. (6) china-state-council-decree-841-exit-ban-ai-tech-september-15-2026 — Tier 2 Asia. China State Council Decree No. 841 took effect Sept 15, 2026. 19-article overhaul, most significant update to China's border management framework since 2013 Exit-Entry Administration Law. Key provision: MOFCOM and other State Council depts may stop citizens from leaving China for alleged export-control / tech-trade breach that 'may endanger' industrial or technological security, no fixed time limit. Directly relevant to AI/chip talent flow across the US-China tech-decoupling arc. Coverage: Whalesbook, Newland Chase, NomadLawyer, VisasUpdate, HNGN, Streamlinefeed, Investment Watch, Freaking Nomads, TFIGlobal (Aug preview). Missed in yesterday's pm despite Sept 15 effective date — captured in this enrichment's late-breaking pass. Ties into the Anthropic $517B and Euclyd + Samsung items as the third data point in this week's US-China AI-decoupling arc. Considered but not included: Perplexity Portable Computer on Windows (Sept 14, outside 12h window and predates yesterday's pm); Karpathy/Simon Willison recent posts (no fresh Sept 15/16 posts surfaced); AI model release tracker showed no new Sept 15/16 model drops (most recent DeepSeek V4.1 Flash was Sept 10). WebFetch remains EGRESS_BLOCKED (consistent with prior runs); WebSearch available (8 queries used). Final snapshot: 6 items (2 T1, 4 T2, 0 T3). No cap hits (~42k/100k tokens, 8 fetches/30, ~30 min/45 min wall time)."
+    },
+    {
       "run_id": "2026-09-15T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
