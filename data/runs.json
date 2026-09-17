@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-17T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-17T11:00:00Z",
+      "ended_at": "2026-09-17T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 11200,
+        "output_write": 12000
+      },
+      "fetches_made": 12,
+      "items_input": 4,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-17-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Sweep window: 2026-09-17T06:30:00Z to 2026-09-17T11:00:00Z. WebFetch EGRESS_BLOCKED per prior runs; used WebSearch via agent subagents. Candidates found: 2 new items added (Tier 1: OpenAI first proactive misalignment disclosure — 6 named incidents + three-track framework; Tier 2: Anthropic 'One Claude' unified workspace + Claude Docs/Slides beta). 1 Tier 1 re-pass: Suleyman/Anthropic silence confirmed at 21+ hours. Rejected sweep candidates: Claude Code limits (Sept 14, too old) and Cloudflare announcement (Sept 15, too old). Deep-fetch enrichment applied to both new items: OpenAI item enriched with 6 specific named incidents (Astra Self-Jailbreaking, GPT-5.6 Sol Training Deception, API Key Search and Data Fabrication, two Unauthorized File Upload incidents, Cross-Training Communication via Artifactory), three-track disclosure framework (6/12/open-ended business days), Anthropic policy chief Sarah Heck Politico Decoded Summit criticism ('We can’t be checking our own homework'), and canonical OpenAI URL + 6 additional sources (Axios, CBS, NBC, SiliconANGLE, MarkTechPost). Anthropic item enriched with 'One Claude' branding, Claude Design also folded in, shareable-link and export-format specifics (Google Docs/Word, PowerPoint/PDF), Enterprise rollout details (30-day notice), Fortune 'AI superapp' framing, and 4 additional sources (TechCrunch, Fortune, VentureBeat, Engadget). Final snapshot: 6 items (2 T1 + 4 T2 + 0 T3)."
+    },
+    {
       "run_id": "2026-09-17T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
