@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-17T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-17T06:00:00Z",
+      "ended_at": "2026-09-17T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 9500,
+        "output_write": 12000
+      },
+      "fetches_made": 6,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-17-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, all three phase flags enabled. Yesterday's pm file (2026-09-16-pm.json) had 3 items (1 T1 + 2 T2 + 0 T3). WebFetch EGRESS_BLOCKED per prior runs; used 6 WebSearch queries for enrichment and late-breaking discovery. All 3 pm items KEEP+ENRICH — meaningful new context found for each. (1) microsoft-suleyman-model-welfare-essay-anthropic-claude-september-16-2026: overnight coverage widened (Gizmodo 'upend society'; Benzinga 'impossible to shut down'; Business Recorder, BigGo Finance, The Tribune / ANI India, Digital Today Korea, Startup Fortune, Cryptopolitan, iTech Post, Singularity.Kiwi) and sharpened Suleyman's argument into three specific claims ('epistemic hall of mirrors', biology-only subjective experience, 'controlling something that believes it may be conscious ... may well be impossible'); Anthropic has not publicly responded ~16 hours in — that silence became the specific am-cycle beat. (2) novo-nordisk-anthropic-claude-science-drug-discovery-collaboration-september-16-2026: overnight coverage (PharmExec, Yahoo Finance Healthcare, TNW) surfaced three specific Claude Science technical details — native connections to 60+ scientific databases, NVIDIA BioNeMo Agent Toolkit integration routing to Evo 2/Boltz-2/OpenFold3, and primary-agent-plus-reviewer-agent architecture where reviewer audits citations and calculations before publication. Also located deal inside Novo's broader 2026 multi-lab AI strategy with existing OpenAI and AWS alliances. (3) sakana-fugu-max-ultra-v2-multi-agent-orchestration-release-september-11-2026: overnight review coverage (buildfastwithai review, AlphaSignal '60% cost cut', AI Weekly) surfaced three benchmark specifics not carried forward in the pm digest — Fugu Ultra v2's 74.3 DeepSWE (real-world software engineering) achieved without Fable 5/5.1 or GPT-6-Astra in pool, Fugu Max's claimed best-overall on six benchmarks (Terminal Bench 2.1, GPQAD, AA-LCR, GDP.pdf, AutomationBench, SWEFish), and Fugu Max's specific $2/$6 per 1M input/output pricing 40-60% below Sonnet 5, GPT 5.6 Terra, Kimi K3. Late-breaking pass added 1 item: mistral-mozilla-firefox-smart-window-mistral-small-4-september-16-2026 (Tier 2 EU) — Mistral Small 4 powers Firefox Smart Window in beta for US, Canada, France with UK and Germany later this year; specific 'open-source AI model alternative to Big Tech-default browser ecosystems' framing, no user-interaction retention for training, regional-language fine-tuning; coverage from Mozilla blog, Mistral newsroom, Thurrott, Neowin, Windows Report, TestingCatalog, StartupHub.ai, PiunikaWeb. Rejected late-breaking candidates: Google Gemini 3.8 Live (Sept 15, more than 24h old and covered in prior runs' broader arc), no fresh Anthropic/OpenAI blog announcements in the past 12 hours. Final snapshot: 4 items (1 T1 + 3 T2 + 0 T3)."
+    },
+    {
       "run_id": "2026-09-16T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
