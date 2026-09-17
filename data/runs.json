@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-17T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-17T17:00:00Z",
+      "ended_at": "2026-09-17T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 14000,
+        "output_write": 14800
+      },
+      "fetches_made": 14,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-17-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, digest.enabled=true. Today's am file exists with 6 items (Suleyman/Anthropic T1, OpenAI misalignment disclosure T1, Novo Nordisk-Anthropic T2, Sakana Fugu T2, Mistral-Mozilla Firefox T2, Anthropic One Claude + Docs/Slides T2). Promotion rule evaluated: Suleyman/Anthropic Anthropic-silence beat now at ~26 hours (Register Sept 17 writeup landed), but silence-continuation is not material deepening beyond what refresh already captured — NO promotion, item stays in am only. WebFetch EGRESS_BLOCKED per prior runs; used 14 WebSearch queries to sweep for post-refresh (11:15 UTC) Sept 17 afternoon news. Deduplication check against Sept 4-17 snapshots confirmed all 6 pm items are non-duplicates. Final composition: 6 items (3 T1 + 2 T2 + 1 T3). Item origin: (T1) Huawei Atlas 960 SuperPoD unveiled at Huawei Connect 2026 Shanghai Sept 17 — 15,488 Ascend chips, NPO + UnifiedBus, 2.3x/2.5x over Atlas 950 SuperPoD; (T1) Google Gemini 3.8 Live and Live Extended Thinking Sept 15 — 82.6 top Speech-to-Speech Quality Index, 97.7 Big Bench Audio, 68.6 τ-Voice, 35.1 Sierra τ-Voice-banking, missed by all prior 5 snapshots since Sept 15 am (grep confirmed 'gemini.3.8.live' absent from Sept 15-17 files); (T1) xAI Grok 4.7 GCP quota entry sighted 07:10 UTC Sept 17 — fifth launch-imminence signal since Musk's Sept 2 announcement, xAI still has no grok-4.7 model card/price/context, distinct from Sept 4 pm Grok 4.7 announcement item; (T2) OpenAI Sponsored Agents Sept 16 — US-only test with HubSpot (first CRM partner) + Shopify (first ecommerce partner) integrations, in-chat branded conversations distinct from ChatGPT's independent answers; (T2) Mastercard × Alchemy AgentCard mid-Sept — one-time-use Mastercard credentials + dedicated email/phone/stablecoin-wallet primitives for AI agents via Mastercard Agent Pay (June 2026 protocol), expands prior July 2026 Visa integration; (T3) Toki Coordination Sept 17 Product Hunt launch — Singapore's Orion Arm ships autonomous scheduling agent that emails attendees, negotiates group availability, protects deep-work blocks. Rejected/deferred candidates: (a) Suleyman/Anthropic Anthropic-silence — already in am, silence-only development doesn't meet material-deepening bar; (b) Anthropic-Trump/Lutnick relationship repair — Sept 2 Forbes original + Sept 17 National Interest analytical piece, too old for digest window; (c) Anthropic Enterprise Smart Reports — Sept 10 launch, already covered in Sept 11 pm + Sept 12 am; (d) Salesforce-Anthropic Claudeforce open beta — announced Aug 26, open beta 'expected September 2026' but no specific Sept 17 shipping confirmation; (e) OpenAI 'How workers are unlocking new ways of working' Economic Research report — Tier 2/3 but too research-y for digest window; (f) SpaceXAI livestream Sept 15–17 building company with Grok Bot — Tier 3, folded into T1 Grok 4.7 item context; (g) Profound $180M Series D — Tier 3 funding, declined; (h) D-Robotics $400M Series C — Tier 3 funding, declined; (i) Huawei Ascend 960 chip pre-announcement — folded into Atlas 960 SuperPoD item as the platform-level product. Caps: ~62k/100k tokens, 14/50 fetches, ~30 minutes wall time. Hero images uniformly null (WebFetch blocked for og:image extraction; per prior-run convention accept null rather than force). Final composition: 3 T1 + 2 T2 + 1 T3 = 6 items."
+    },
+    {
       "run_id": "2026-09-17T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
