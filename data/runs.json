@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-18T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-18T17:00:00Z",
+      "ended_at": "2026-09-18T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 82000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 22000,
+        "output_write": 27000
+      },
+      "fetches_made": 14,
+      "items_input": 8,
+      "items_output": 7,
+      "items_added": 7,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-18-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, digest.enabled=true. Today's 2026-09-18-am.json exists (6 items: 4 T1 + 2 T2). Read am file for promotion-rule check; no items promoted (no material afternoon deepening on any am-file item). WebFetch EGRESS_BLOCKED per prior runs; delegated WebSearch sweep to general-purpose subagent (14 queries: OpenAI/Anthropic/Google/Meta/Mistral/xAI releases, open-weight drops, AI policy/regulation, startup funding, creator RSS-adjacent). Sweep window: 2026-09-18T11:10Z\u201317:20Z. 8 candidates returned; curated to 7. Included: OpenAI misalignment reporting framework + 6 named incidents (T1 US); Claude Code Projects beta (T2 US); Amodei-Altman-Musk slow-down convergence (T3 Global); Sanders-Casar Ban Superintelligence Act (T3 US); King Charles AI summit at Dumfries House with Huang chip-volume-doubling projection folded in as take (T3 EU); BloombergNEF US data-center gas-demand doubling (T3 US); TypeSafe AI $40M stealth exit (T3 US). Skipped: standalone Nvidia Huang chip-volume item (folded into King Charles summit item as take); ANI/Punjab Kesari Anthropic 26% rewrites (same as am item, no new material); Grok 4.7 still not shipped (same as am item); Google Gemini 3.8 Live / OpenAI ChatGPT Word / DeepMind Institute / Huawei Atlas 960 (all in am file, no pm follow-ups); OpenHands 1.0 (actually shipped Dec 2025 \u2014 dating error avoided); GitHub Copilot CLI 1.0.85 (too incremental); Nvidia CUDA-Q Logical (outside pm window). Hero images uniformly null (WebFetch blocked). Tier counts: T1=1, T2=1, T3=5."
+    },
+    {
       "run_id": "2026-09-18T11:10:00Z-refresh",
       "phase": "refresh",
       "status": "success",
@@ -27,7 +55,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Today's 2026-09-18-am.json existed (written by enrichment at 06:15Z). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch (10 queries). Sweep window: 2026-09-18T06:15Z–11:10Z. New item added: DeepMind Institute (T2 Global, launched Sept 16/TechCrunch Sept 17, missed by enrichment). Updated item: Grok 4.7 (T1) — added refresh revision with Grok 4.8 angle (Musk Sept 13-14: 2.5T C++ stack, xAI may skip 4.7 entirely, estimated Oct–Nov for 4.8). Items correctly excluded: cyber AI models (early Sept, old news), Leanstral 1.5 (June 30), Doubao MAU figure (much older), Nokia AI-RAN (not relevant). Hero images uniformly null (WebFetch blocked)."
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Today's 2026-09-18-am.json existed (written by enrichment at 06:15Z). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch (10 queries). Sweep window: 2026-09-18T06:15Z\u201311:10Z. New item added: DeepMind Institute (T2 Global, launched Sept 16/TechCrunch Sept 17, missed by enrichment). Updated item: Grok 4.7 (T1) \u2014 added refresh revision with Grok 4.8 angle (Musk Sept 13-14: 2.5T C++ stack, xAI may skip 4.7 entirely, estimated Oct\u2013Nov for 4.8). Items correctly excluded: cyber AI models (early Sept, old news), Leanstral 1.5 (June 30), Doubao MAU figure (much older), Nokia AI-RAN (not relevant). Hero images uniformly null (WebFetch blocked)."
     },
     {
       "run_id": "2026-09-18T06:15:00Z-enrichment",
