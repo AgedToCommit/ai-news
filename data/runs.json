@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-19T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-19T11:00:00Z",
+      "ended_at": "2026-09-19T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36750,
+        "curation": 8000,
+        "output_write": 5750
+      },
+      "fetches_made": 10,
+      "items_input": 2,
+      "items_output": 10,
+      "items_added": 2,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-19-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Read 2026-09-19-am.json (8 items, enrichment at 06:15Z). Sweep window: 2026-09-19T06:15Z–11:00Z (Asia/Europe overnight cycle). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagent (10 queries). 2 new items added: (T1 Asia) Huawei Ascend 960DT launch accelerated from late 2027 to Q1 2027, 960PR variant for Q3 2027, Peerium Computing Architecture / UnifiedBus interconnect, domestic demand outstrips capacity — Bloomberg/TechCrunch/Japan Times/The AI Insider/Android Headlines (Sept 16–18); (T3 EU) EU AI Act first compliance audit wave launched September 2026, European AI Office + 24 national surveillance authorities, CNIL/BfDI/AESIA opening audit requests for HR/banking/healthcare AI — artificialintelligenceact.eu/blog.mean.ceo/Cubbbix. Tier-1 re-pass: no new material on OpenAI misalignment or Accenture items since 06:15Z. Candidates considered but skipped: Google/Anthropic/OpenAI cyber AI models (The Hacker News — publication date uncertain, likely predates 06:15Z window); Mistral Leanstral 1.5 / OCR 4.1 (releasebot.io aggregator only, insufficient sourcing); Samsung/Mistral €3B stake (September 2026 but exact date not confirmed within window); Kimi K2.6 open-weight ranking (no confirmed Sept 19 drop). Final composition: 10 items (3 T1 + 1 T2 + 6 T3). Hero images uniformly null (WebFetch blocked). Caps: ~52k/60k tokens, 10/20 fetches, ~30 min wall time."
+    },
+    {
       "run_id": "2026-09-19T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
