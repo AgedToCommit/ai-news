@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-20T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-20T06:00:00Z",
+      "ended_at": "2026-09-20T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 78000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 20000,
+        "output_write": 28500
+      },
+      "fetches_made": 12,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 1,
+      "snapshot_written": "2026-09-20-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-19-pm.json (5 items). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagent (12 queries: 8 per-item enrichment across 5 items, 4 late-breaking sweep). Enrichment decisions: KEEP+enrich 4 of 5. (1) Gemini/Irregular hack: Sept 19 US mainstream pick-ups (CNN, TechCrunch, NBC, Axios) added Google's 'mistaken identity, not misalignment' framing plus timing disclosure — May 2026 incident, Irregular notified Google late July, first public confirmation Sept 18 after WSJ inquiry (~3-month gap). (2) Anthropic pre-IPO: revenue arc sharpened (~$9B end-2025 → ~$65B annualized end-July); Altman-comparison layer added (his Sept 12 Fortune 'ill-advised 2026 IPO' quote, targeting 2027 — both frontier-lab CEOs signaled restraint on Sept 12); canonical link updated to Forkast's 'IPO timeline is the independent variable' framing piece. (3) OpenAI FT projections: Bloomberg confirmed under independent byline (second Tier-1 source); compute-spend escalation curve documented ($600B Feb → $750B summer → $856B July); cash-runway framing sharpened — $122B March raise on pace to exhaust by 2028, mechanical driver of $1.2T+ next-round target; Altman Sept 12 'ill-advised 2026 IPO' quote pulled in as implicit response pointing to private-bridge rather than public offering. (4) Suno second suit: $9B+ statutory-damages ceiling quantified (60,202 works × $150K); Suno's formal response ('fundamentally flawed on both the facts and the law') with formal-answer PDF at MBW; camp-split detail (Warner/BMG/Believe licensed into v6; Sony/UMG did not) makes the 'partial licensing can't cleanse weights descended from unlicensed v3-v5' theory testable; canonical link moved to Music Business Worldwide. DROPPED item 5 (Naive AI): no Sept 19-20 substance, no HF release, no first-party English comms, coverage still just recycles Sept 18 funding announcement. Late-breaking pass: 0 items added — nothing genuinely Tier-1 in the 12h window (last frontier-lab drop was Atria Dawn Preview Sept 12 and DeepSeek V4.1-Flash Sept 10; no Anthropic/OpenAI/Google/Meta/Mistral/xAI/DeepSeek/Qwen/Kimi weekend release; no scale Asia/Europe policy news). Final composition: 4 items (3 T1 + 0 T2 + 1 T3). Hero images uniformly null (WebFetch blocked). Caps: ~78k/100k tokens, 12/30 fetches, ~15 min wall time."
+    },
+    {
       "run_id": "2026-09-19T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
