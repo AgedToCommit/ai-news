@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-20T11:28:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-20T11:00:00Z",
+      "ended_at": "2026-09-20T11:28:00Z",
+      "wall_time_ms": 1680000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 3500,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 7,
+      "items_added": 3,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-20-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Today's 2026-09-20-am.json existed (4 items from enrichment run ended 2026-09-20T06:15:00Z). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagent (8 queries targeting: model releases, Claude/Anthropic news, OpenAI news, Gemini hack follow-ups, Asian lab drops, HuggingFace releases, developer tool releases). Sweep window: 2026-09-20T06:15Z to ~11:00Z (last 5 hours, Asia/Europe morning cycle + Sunday US dawn). 3 items added: (1) Trump AI czar + 'AI Force' announcement (Fox News Sunday Sept 20, Tier 1 US) — significant US federal AI governance statement, dismisses safety as 'hoax', 'AI Force' modeled on Space Force; (2) Plugin4Shell zero-click RCE (Tier 2 Global) — disclosed Sept 18, patched in Claude Code 2.1.179 and Codex 0.146.0 before public disclosure; source is AI Weekly aggregator roundup, WebFetch blocked so primary URL not independently verified but specific patch version numbers add confidence; (3) CXMT G5 DRAM mass production (Tier 2 Asia) — announced at World Manufacturing Convention, Hefei, Sept 20; Chinese domestic HBM supply chain milestone in AI compute context; source via AI Weekly aggregator, primary URL not independently verified. No Tier-1 model drops from major labs on Sept 20 specifically. Qwen/Kimi/DeepSeek most recent releases all Sept 1–12. Hero images uniformly null (WebFetch blocked). Final composition: 7 items (4 T1 + 2 T2 + 1 T3). Caps: ~42k/60k tokens, 10/20 fetches, ~28 min wall time."
+    },
+    {
       "run_id": "2026-09-20T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
