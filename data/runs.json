@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-21T11:10:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-21T11:00:00Z",
+      "ended_at": "2026-09-21T11:10:00Z",
+      "wall_time_ms": 660000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 6500,
+        "output_write": 2000
+      },
+      "fetches_made": 5,
+      "items_input": 3,
+      "items_output": 5,
+      "items_added": 3,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Today's 2026-09-21-am.json existed (2 items from enrichment run ended 2026-09-21T06:20:00Z). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch (5 queries: model releases Sept 21, morning breaking news Sept 21, DeepSeek/Qwen/Kimi/Mistral releases, Anthropic R&D automation details, FAA SMART deployment details). No Tier-1 model drops from Anthropic/OpenAI/Google/DeepMind/Meta/xAI/DeepSeek/Qwen/Kimi/Mistral on Sept 21 specifically (prior releases all Sept 1–8). 3 items added: (1) Anthropic R&D Automation Index (Tier 1 US) — published Sept 17 Bloomberg + Sept 18–19 aggregators but missed in all prior digest/enrichment/refresh windows that were focused on the Sept 20–21 political/regulatory arc; Claude leads 26% of R&D end-to-end (up from ~1% March), 30K agents, 80%+ code, 8× engineer absorption rate; directly contextualizes the antitrust and kill-switch items already in today's am; (2) AIUC $40M Series A (Tier 2 Global) — published Sept 17, also missed in prior windows; certification+insurance layer for AI agents, founded by Anthropic's first product hire (Kvist) and METR COO (Dattani), led by Ribbit Capital; connects directly to Newsom EO's independent third-party safety plans requirement; (3) FAA SMART first operational deployment (Tier 3 US) — deploying today Sept 21 at DCA/IAD/BWI; $875M Air Space Intelligence contract; decision-support not autonomous; timely given today's deployment date. Hero images uniformly null (WebFetch blocked). Final composition: 5 items (3 T1 + 1 T2 + 1 T3). Caps: ~38k/60k tokens, 5/20 fetches, ~10 min wall time."
+    },
+    {
       "run_id": "2026-09-21T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
