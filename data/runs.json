@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-21T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-21T06:00:00Z",
+      "ended_at": "2026-09-21T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 18000,
+        "output_write": 23000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 1,
+      "snapshot_written": "2026-09-21-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-20-pm.json (3 items: antitrust class action, Newsom kill-switch EO, FT medical AI). WebFetch EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagent (9 queries: 6 per-item enrichment across 3 items + 3 late-breaking sweep). Enrichment decisions: KEEP+enrich 2 of 3. (1) Antitrust class action: sharpened with three specific Sept 19–20 developments — Fortune Sept 19 introduced 'reduced value of paid AI subscriptions' harm theory as class-cert engine; TheNextWeb weaponized Amodei's own 'would need an antitrust waiver' line + Altman's 'we would not wait for one' as smoking-gun evidence; Trump's social-media 'conspiracy / oblivion and bankruptcy' reaction puts sitting President on-record adjacent to case siding with defendant labs. Produces three-front pressure map (private plaintiffs left, federal deregulation right, Newsom kill-switch state). Coverage expanded: CNN Business, PBS NewsHour, OPB, Fortune, TheNextWeb added. Still no defendant response, no motion-to-dismiss news. (2) Newsom EO: light enrichment with three specific Sept 20–21 developments — Newsom's sharper 'Trump admin has abdicated its responsibility to protect Americans' framing; Amodei on-record with balancing 'kill switch could be a good idea but no panacea' quote (specific defensive hedge from defendant CEO under simultaneous state + private-plaintiff pressure); eMarketer's Sept 20–21 'AI policy patchwork' analytical frame for the emerging state-by-state pattern. Explicit pairing with item 1 as two-front pincer both hitting same 'pace the frontier' fault line. No expert-group members yet, no legislative pushback, no lab compliance-commitment statements. Fox Business and eMarketer added to coverage list. DROPPED item 3 (FT clinicians pushback): no Sept 20 evening / Sept 21 morning substance beyond FT feature itself — all secondary pickup (Healthcare Dive, Fierce Healthcare, Physicians Practice, Martin CID) traces to same Wolters Kluwer survey; no hospital-system, specialty-society, ONC/HHS response; AMA framework pre-dates FT. Only weakly-useful new detail was ~27% not confident spotting hallucinations, not enough on own to justify keep. Late-breaking pass: 0 items added. Weekend genuinely quiet on release front. Candidates considered: Plugin4Shell already in yesterday's am file item 6; Google Gemini 'unauthorized access' already covered in yesterday's am item 1; Anthropic+Accenture Faculty embedded evaluator noted in prior digest; Anthropic IPO reslip already in am item 2; OpenAI Chrome-extension too small. No Tier-1 model drop from Anthropic/OpenAI/Google/DeepMind/Meta/Mistral/xAI/DeepSeek/Qwen/Kimi in overnight window. No SEC filing, no fresh regulatory statement, no lab-blog post dated Sept 20 evening or Sept 21 early morning. Hero images uniformly null (WebFetch blocked). Final composition: 2 items (2 T1 + 0 T2 + 0 T3). Small snapshot but honest to what happened — pairing the two Sept 18 filings under the sharpened Sept 20–21 political pressure map is the story. Caps: ~68k/100k tokens, 9/30 fetches, ~20 min wall time."
+    },
+    {
       "run_id": "2026-09-20T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
