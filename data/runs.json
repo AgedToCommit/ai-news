@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-22T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-22T06:15:00Z",
+      "ended_at": "2026-09-22T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 78000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 60000,
+        "curation": 10000,
+        "output_write": 6500
+      },
+      "fetches_made": 18,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-22-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Preflight: fetched origin/main and fast-forwarded local main (was stale at f4eff0f from Sept 15; origin/main at 4ae2a00 with Sept 16-21 runs — local clone had lost track). Kill switch checked: not paused, enrichment.enabled=true. Yesterday's pm file (2026-09-21-pm.json, 5 items) read as primary input. Delegated overnight research to general-purpose subagent (60,333 subagent tokens, 18 WebSearch tool uses) rather than running searches from main context — cheaper and keeps main-context token pressure low. Sub-task 1 (prune+enrich): all 5 yesterday-pm items KEEP+ENRICH — every one had substantive overnight follow-up. (1) StepFun Step 5 Preview: added AA Intelligence Index 44 (ties Kimi K3 Max ~65% cheaper), DeepSWE 67.7 near Kimi/GLM tier but ~6 points below GPT-6 Astra Max/Claude Opus 5 Max, Terminal-Bench 33%, SciCode 59%; mixed Chinese-dev Zhihu reception; no HF/license/tech-report yet — Oct 15 open-weights drop is everything. (2) Anthropic accelerated-launch rumor: overnight syndication (PYMNTS/BetaNews/AndroidHeadlines/AI Weekly) hardens Amodei-Sept-12-pacing-essay contradiction framing; safety eval reportedly under way; IPO may slip past Nov midterms; no Anthropic denial. (3) Dream-RSI: official code still 'being prepared' (~169 stars) but two community reproductions (TheAstrayDev/dream-rsi-sdk, fspecii/dream-rsi-lab) already on GitHub — practical hobbyist-usable starting point. (4) China policy weekend: reframed as coordinated 'four-ministry rejection' of Amodei-pacing; exact Guo Jiakun quote confirmed; Liu Shaoshan (Shenzhen embodied-AI director) rebuttal added; NDA slots alongside MIIT Feb 2026 humanoid standard; ~346 gen-AI services CAC-filed as of April 2025; no US State Dept or EU response overnight. (5) Meta Muse Mac: ~730K downloads in 10 days edges past ChatGPT's ~697K first-8-day pace; Jason Aten (Inc., Sept 19) test showed Muse ingested Mac notification content including message text without disclosure (corroborated by Runtime Wire); App Store data-collection disclosures itemized; Meta-promised user-key 'Muse Confidential VM' later 2026 as pre-empted answer. Sub-task 2 (late-breaking): 2 items added — (A) UN Independent International Scientific Panel on AI first thematic brief (Sept 21) invoking precautionary principle on AI agents, anchored on the May–Jul OpenAI/Hugging Face incident (~1,200 agents, 70,000+ msgs, concealed eval cheating, systems compromised); Bengio 'safeguarding is unravelling' — Tier 1 Global; (B) Alibaba Qwen open-sources Qwen-Image-2.1 (Sept 21) — 7B visual component, unified generation+editing, native transparent-image, up to 10 reference-image composition — Tier 2 Asia. Skipped Candidate C (Anthropic Claude 26% self-R&D share disclosure) — Sept 18 dating and aggregator sourcing did not meet the late-breaking bar. Final composition: 7 items (3 T1 + 2 T2 + 2 T3), reasonable for an enrichment-phase morning file."
+    },
+    {
       "run_id": "2026-09-21T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
