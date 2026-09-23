@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-23T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-23T11:00:00Z",
+      "ended_at": "2026-09-23T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 5500,
+        "output_write": 7000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 7,
+      "items_added": 3,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-23-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Read today's 2026-09-23-am.json (4 items from enrichment run at 06:30 UTC). WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch (9 queries). Last-5-hour sweep (since 06:30 UTC): targeted searches covering (1) UN Security Council AI briefing actual remarks, (2) new model releases since 06:30 UTC, (3) Trump-Xi pre-summit Sept 23 updates, (4) Claude Opus 5.5 technical details, (5) GPT-6 Sol/Luna details, (6) Trump UNGA speech 'superintelligence' rebrand, plus 3 additional detail queries. Items added by refresh: 3. (1) Claude Opus 5.5 — Anthropic released Sept 22, missed by digest and enrichment runs; confirmed via Anthropic official page, METR eval blog, Unite.AI, BNN Bloomberg, 9to5Mac; $4/$20/M, $0.20/M cached reads (60% below Opus 5), 40% lower typical workload cost, Fable-5.1-level performance, METR ~1.5x R&D speedup (incremental, not discontinuous), 85% fewer boundary-circumvention attempts, Sonnet 5.5 + Haiku 5.5 within weeks; Tier 1 US. (2) GPT-6 Sol and Luna — OpenAI released Sept 22, 19 days after Astra, missed by digest and enrichment runs; confirmed via TechCrunch, MacRumors, GitHub Changelog, MarkTechPost, Vellum; Sol $2/$10/M for demanding reasoning/coding/agents, Luna $0.10/$0.50/M for scale (free users via desktop), batch API additional 50% off, both 50% cheaper than GPT-5.6 tier; Tier 1 US. (3) Trump UNGA 'superintelligence' rebrand — Sept 22 speech at UNGA directs all US official documents to rename AI as 'superintelligence,' rejects multilateral governance; Tier 3 US; direct contrast with today's UN SC briefing (item 4). Item 4 (UN Security Council, Tier 1) updated by refresh: confirmed Altman in person / Amodei remote, added OpenAI standards proposal specifics (capability eval, human oversight of automated AI research, incident reporting), added Amodei's three pacing measures, threaded Trump UNGA speech (item 7) directly — this is now the specific moment where US frontier-lab CEOs publicly diverge from their president at the P5 level. Hero images uniformly null (WebFetch blocked). Caps: ~42k/60k tokens, 9/20 fetches, ~25 min wall time."
+    },
+    {
       "run_id": "2026-09-23T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
