@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-23T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-23T06:15:00Z",
+      "ended_at": "2026-09-23T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 70000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 45000,
+        "curation": 8000,
+        "output_write": 15500
+      },
+      "fetches_made": 6,
+      "items_input": 5,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-23-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-22-pm.json (3 items). WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch for all enrichment queries (6 total). Sub-task 1 (prune + enrich): all 3 items KEPT + ENRICHED with meaningful new context — (1) Xiaomi MiMo-V2.6: added Anthropic Sept 10 threat report GTG-16008 case naming Xiaomi (alleging ~400K MiMo user conversations relayed through OpenClaw/OpenCode to Claude in March–April 2026), part of a ~190M-exchange campaign across 7 Chinese labs (Xiaomi, Alibaba, Moonshot, DeepSeek, Zhipu, SenseTime, MiniMax); Alibaba's alleged 151M-exchange targeting of Claude Opus 4.6/4.7 CoT called 'the largest distillation attack we have ever measured.' Also added specific architecture (~42B active MoE, 5-layer MTP speculative decoder, hybrid attention), MiMo-V2.5-Pro=26 → V2.6-Pro=46 one-generation jump, GLM-5.3 also at 44 alongside Kimi K3, HF repo timestamps (15:39 UTC Sept 21). Sources: The Decoder, TheNextWeb, Basic Tutorials, The Hacker News, Better Stack, Rappler, CellCog, Kingy AI. (2) Lambert Interconnects podcast: added Denain's ~10% x-risk within a decade quote; added Lambert's companion post 'Where I stand on RSI' with the 'lossy self-improvement' framing; threaded the podcast's 'distillation from US-lab APIs' claim directly with the newly-enriched Xiaomi/Anthropic GTG-16008 case. Sources: aiweekly.co, Lambert Substack, Listen Notes. (3) Trump-Xi state visit: upgraded 'agreed in principle' AI dialogue to FORMALLY ANNOUNCED after Sept 22 SCMP report of ~8-hour Bessent/Greer meeting with Vice-Premier He Lifeng at JPMorgan HQ in New York; also activated bilateral 'Board of Trade' body; added Wednesday reception + Rose Garden military review + Thursday main bilateral + Thursday state-dinner arrival sequence. Sources: SCMP, CFR 'Ten Issues,' US News. Sub-task 2 (late-breaking): 1 item added — UN Security Council High-Level Briefing on Artificial Intelligence and International Security convenes Wed Sept 23 at 11am NY time; France (Sept Council presidency) chairs via FM Jean-Noël Barrot; briefers Altman (OpenAI), Amodei (Anthropic), Delangue (Hugging Face), Bengio (IISP-AI Co-Chair); open briefing (no binding resolutions); coincides with UNGA high-level week; multilateral counterpart to the newly-announced US-China bilateral AI dialogue in item 3. Tier 1 Global. Sources: Security Council Report 'What's in Blue,' BW Businessworld, Crypto Briefing, News Bytes, The Deep Dive, Startup Fortune. Did not add a second late-breaking item — no dated Sept 23 model release from Anthropic/OpenAI/Google/DeepMind/Meta/xAI/DeepSeek/Qwen/Kimi/Mistral surfaced in searches. Every item Gabe sees this morning has either survived enrichment (got new context) or been added by enrichment. All 4 items thread coherently around the Xiaomi/Anthropic distillation-controversy anchor. Hero images uniformly null (WebFetch blocked). Caps: ~70k/100k tokens, 6/30 fetches, ~15 min wall time. dropped_in_phase: []."
+    },
+    {
       "run_id": "2026-09-22T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
