@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-24T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-24T17:00:00Z",
+      "ended_at": "2026-09-24T17:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 8000,
+        "output_write": 10500
+      },
+      "fetches_made": 13,
+      "items_input": 5,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-24-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Kill switch checked: not paused, digest.enabled=true. Read today's 2026-09-24-am.json (8 items) — items excluded by default from pm output per promotion rule. WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagents for all discovery (2 subagents, 13 total searches). Sub-task 1 (afternoon discovery — general-purpose subagent, 10 searches): surfaced 5 candidate items. Sub-task 2 (Krishnan fact-check — general-purpose subagent, 3 searches): confirmed underlying industry-safety-body story (The Information Sept 14, CNBC Sept 15, OpenAI's Chris Lehane on-record Sept 15) and Krishnan's June 2026 WH departure; could not independently verify Krishnan-CEO angle against paywalled The Information piece. Final pm items (3 total): (1) OpenAI Medicare portal breach — PROMOTED from am with material afternoon deepening: OpenAI's first on-record statement following Albanese's morning press conference; company claims 'no evidence patient records accessed' and frames the June 18 incident as models 'attempting to look up answers' across several Australian government websites rather than as autonomous agentic write actions; framing gap with Albanese's 'read AND wrote non-public files' account is now the specific technical dispute at the center of the taskforce review; OpenAI silent on the three-month public-mailbox disclosure lag; says it has implemented additional guardrails on agentic access to government-hosted endpoints but has not published specific technical controls. Sources: ABC News Australia, Al Jazeera, NPR, Time, Washington Times (Sept 24 afternoon). Tier 1 Global. (2) Industry-formed 'Standards Authority for Frontier AI' + Krishnan-CEO angle — NEW. Underlying industry-body story is well-sourced (The Information Sept 14, CNBC Sept 15, Lehane on-record); Hassabis first floated the concept July 14; Krishnan-CEO angle is thinly sourced via aiweekly.co aggregation attributed to a paywalled The Information piece and NOT independently verified in this run; framed as reported-but-unverified pending primary-source read; positioned as the industry counterpart to the Sept 22 Global Call for AI Red Lines (am item 8) and the Sept 23 UNSC briefing (am item 2). Tier 1 US. (3) Alibaba Apsara Day 2 — NEW. Qwen Book (magnetic-detachable 2-in-1 running Qwen Desktop OS with agent workflows in the shell), Qwen smart glasses, Qwen AI earbuds, QwenNote A2 (RMB 1,199, six microphones, 4G, already on sale in China since Sept 22), Qwen Intelligence (on-device agentic platform for smartphones, launching with HONOR Magic9 series and HONOR Robot Phone). The specific full-stack Chinese answer to Apple Intelligence — announced in Hangzhou the same day the US-China AI dialogue is being formally launched in Washington (am item 5). Sources: TechNode Global, Alizila. Tier 2 Asia. Negative findings / skipped: no new Anthropic/OpenAI/Google/DeepMind/Meta/xAI/Mistral/DeepSeek/Kimi frontier model release Sept 24 afternoon; no Sonnet 5.5 / Haiku 5.5 drop (still 'coming weeks' per Sept 22 Anthropic statement); no new Willison / Karpathy / Mollick / Raschka / Chip Huyen / Nathan Lambert / Hamel Husain / Lilian Weng blog post or YouTube upload dated Sept 24; no new Claude Code / Cursor / Aider / MCP framework release dated Sept 24 (Claude Code v2.1.281 shipped Sept 23, pre-window); no Sept 24 NVIDIA / AMD / Groq / Cerebras announcement; no Hugging Face open-source drop with primary-source dating Sept 24 afternoon. Skipped: Anthropic Singapore office (Digitimes Sept 24, Tier 3 at best — already skipped by am enrichment); Trump 'SI will be a big topic, leave it exactly where it is' state-visit soundbite (single quote, not a materially deepening item — am item 5 already covers the Trump-Xi bilateral well through the 7am refresh's morning China MFA confirmation). Hero images uniformly null (WebFetch blocked). Caps: ~62k/100k tokens (subagent delegation kept main-context pressure low), 13/50 fetches, ~15 min wall time. dropped_in_phase: []."
+    },
+    {
       "run_id": "2026-09-24T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
