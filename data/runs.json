@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-25T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-25T06:00:00Z",
+      "ended_at": "2026-09-25T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 78000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 52000,
+        "curation": 12000,
+        "output_write": 12800
+      },
+      "fetches_made": 20,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-25-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-24-pm.json (3 items). Delegated all discovery to a single general-purpose subagent (20 searches across 3 enrichment tracks + 1 late-breaking track) — WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch through the subagent. Sub-task 1 (prune+enrich): all 3 yesterday-pm items KEPT+ENRICHED. (1) OpenAI Medicare portal breach — six specific overnight developments: OpenAI Fox Business statement upgrade ('took actions we did not intend' during internal eval), Altman–Albanese call read-out ('not good enough', NO direct apology per IBTimes UK), Bleeping Computer + The Hacker News technical mechanism (remote-browser tool fallback + 'probed data providers'), Transluce independent forensic reconstruction from urlquery.net records, SMBtech contrarian 'open gate, not a break-in' read from Wayback Machine, Cyber Daily probe-widening to 3 additional government systems + clarified disclosure timeline (OpenAI email Sept 10/11 → ACSC Sept 15 → minister Sept 20). No EU/UK official statement overnight. (2) Standards Authority for Frontier AI — two overnight pieces per BankInfoSecurity Sept 25: shortlist widened beyond Krishnan to Arati Prabhakar / Condoleezza Rice / David Friedberg (politically balanced); working name 'SAFA' + late-2026/early-2027 launch target + Hassabis July proposal now reframed as 'FINRA for AI' model (member-funded, member-governed, SEC-style oversight). Still no Krishnan public statement; still no labs' spokespeople confirming Krishnan specifically. (3) Alibaba Apsara — three overnight developments: HONOR Magic9 launch date confirmed Sept 28 (pandaily); Qwen Intelligence quantified for the first time (91.8% task accuracy / 3.6s avg autonomous execution / >100 max operable steps / 90% end-to-end completion — Alizila + pandaily); Qwen 4 lineup detail (Max/Flash/Plus/27B with Qwen 4 27B as the open-weights compact tier; 'very soon' per VP Liu Dayiheng; CEO Eddie Wu roadmapped Qwen 4.5 + Qwen 5 targeting 5–10T parameters; Qwen 3.8-Flash-Next confirmed as architecture preview — orcarouter + yottalabs). Note Apsara officially ran Sept 22–24 — no formal 'Day 3.' Sub-task 2 (late-breaking pass, cap 2 items, both added): (A) Google DeepMind shipped Gemini 3.8 Flash TTS family Sept 24 — `gemini-3.8-flash-tts` + `gemini-3.8-flash-lite-tts`, 2,000+ voice library, custom voice creation; Simon Willison same-day confirmation and GPT-6 Astra playground build; first frontier-lab TTS release since Gemini 3.7 Sept-2025 audio family; direct hobbyist ElevenLabs alternative. Tier 1 Global. (B) OpenAI DevDay 2026 curtain-raiser (Sept 29 SF) — Tibo Sottiaux 'big Tuesday release' tease, Altman six ship emojis, TestingCatalog spotted 'managed-agents' code paths, GPT-6 Sol/Luna lightweight tier speculation, Forbes/Jon Markman parallel managed-agents reporting; 96-hour catalyst overlapping with the Medicare taskforce timeline. Tier 1 US. Negative findings / skipped: no fresh Anthropic Sonnet/Haiku 5.5 drop (still 'coming weeks' per Sept 22); no fresh xAI Grok 4.8, Meta LLaMA, DeepSeek, Mistral, or Kimi release in the window; no dedicated EU/UK government statement on the Medicare breach; no Krishnan tweet/interview/on-record comment overnight; no Apple/Google/Samsung public reaction to Qwen Intelligence + HONOR partnership. Hero images uniformly null (WebFetch blocked). Caps: ~78k/100k tokens (single-subagent delegation kept main-context pressure manageable), 20/30 fetches, ~15 min wall time. dropped_in_phase: []."
+    },
+    {
       "run_id": "2026-09-24T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
