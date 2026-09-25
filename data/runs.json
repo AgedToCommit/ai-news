@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-25T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-25T11:00:00Z",
+      "ended_at": "2026-09-25T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 47000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 41780,
+        "curation": 2500,
+        "output_write": 1220
+      },
+      "fetches_made": 14,
+      "items_input": 10,
+      "items_output": 8,
+      "items_added": 3,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-25-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Read today's 2026-09-25-am.json (5 items, enrichment run ended 06:15Z). WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch via general-purpose subagent (14 searches across 10 sweep topics). Updated existing item 1 (OpenAI Medicare breach) with formal Australian government taskforce establishment detail (Computer Weekly, Sept 25) — Dept. PM&C leading with ASD, AI Safety Institute, Office of AI. Added 3 new items: (1) Anthropic Sept 2026 threat intel report — disrupted AI-orchestrated espionage campaign, 7 harm areas documented (Dec 2025–Aug 2026); Dario Amodei calls for slower AI dev + announces permanent independent evaluator model access. Tier 1 Global. (2) Anthropic Life Sciences group + wet lab (Bay Area, BSL-1/BSL-2) — first result: 950 Claude agents, 21 hours, 210M tokens of genomic data → autonomous discovery of ART (array-associated reverse transcriptases), a novel CRISPR-like enzyme system, subsequently validated in wet-lab assays. Published Sept 23, not captured by prior phases — refresh catch-up. Tier 1 US. (3) Claude Opus 5.5 released Sept 22 — $4/$20 input/output per MTok (20% cut vs Opus 5), 40% lower typical workload cost, 30% faster, cache reads $0.20/MTok (60% cheaper); Sonnet 5.5 + Haiku 5.5 confirmed 'coming weeks.' Enrichment run referenced Sonnet/Haiku 5.5 as 'coming weeks per Sept 22 Anthropic statement' but did not log the Opus 5.5 release itself — refresh catch-up. Tier 1 US. Notable items not added this refresh: Grok 4.7 (Sept 21, 2.1T params, 500k context — outside 5-hour window, skipped for slot cap); EU AI Act first compliance inspections (mid-Sept — outside window, skipped for slot cap); Mistral Vibe 2.0 merged product (Sept 14 — too old); OpenAI Aeon pre-DevDay personal agent rumors (unverified, overlaps with existing DevDay item). Tier counts updated: 7 Tier-1, 1 Tier-2, 0 Tier-3 (8 items total)."
+    },
+    {
       "run_id": "2026-09-25T06:15:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
