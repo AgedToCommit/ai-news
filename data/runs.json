@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-26T06:15:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-26T06:00:00Z",
+      "ended_at": "2026-09-26T06:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 9800,
+        "output_write": 13000
+      },
+      "fetches_made": 11,
+      "items_input": 9,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-26-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-25-pm.json (7 items — 3 T1, 3 T2, 1 T3) as primary input. WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch (10 queries) as substitute for RSS/scrape/deep-fetch. All 7 yesterday-pm items enriched with meaningful new overnight context — none dropped. Sub-task 2 late-breaking added 2 items: (Tier 1) TechCrunch expansion of OpenAI 'rogue agent' story (Transluce researchers, urlquery.net mechanism, new named victims including Data USA + UNM digital library + Australian government statistics agency, March-2026 possibly November-2025 timeline, training-incentive alignment framing, Fortune parallel report links crypto exchange attack — lands 4 days before OpenAI DevDay's GPT-6 Cyber announcement); (Tier 2) Anthropic Claude Code broad release Sept 25 (maxProseWidth setting, telemetry-status listings in /status + claude doctor, allowClaudeInChromeWithManagedMcp managed setting, faster startup + session resume, reliability fixes across plugins/MCP/background agents/remote control, Windows Terminal ctrl+enter fix now suggests ctrl+x ctrl+s, same-day Cowork-into-chat merger + Docs/Slides/Design additions). Enrichment specifics: item 1 (Meta Charm) — internal character name 'Jolly', AirPods-case size comparison, Zuckerberg 'for people who won't wear smart glasses' framing, 'Tamagotchi-like' consumer-tech narrative to fight uphill; item 2 (Google antigravity) — FindByName() + GrepSearch() tool additions, PascalCase migration, line-range file edits, 'genuinely useful upgrade' developer read; item 3 (OpenAI DevDay curtain-raiser) — Yahoo/Manila Times/Gadget Review/OODAloop pickups, red teaming + malware analysis + exploit validation + patch validation capabilities framing, GPT-5.4/5.5/5.6 Cyber lineage named, months-not-days wider launch; item 4 (Google AX) — HN 'not buying the billions number' framing, foundational-runtime-not-application-orchestrator positioning, gVisor sandboxes, egress-proxy dropouts + rudimentary secrets management teething issues; item 5 (Gemini 3.8 Live Avatar) — pricing landed ($1.50 in / $7.50 out per M tokens after Dec 31, video billed only while speaking), SynthID watermarks, US+EU endpoints, custom-avatar-from-own-photo needs allowlist caveat; item 6 (Willison) — full 2-sentence text revealed, Gergely Orosz X reply named specific model+harness combos (Opus 4.6, GPT-5.2); item 7 (Ando) — TechCrunch pickup as tier-1 press, founder Du acknowledges early feedback mixed, explicit competitive framing against Slack + Salesforce Einstein / Teams + Copilot. tier_counts: {1:4, 2:4, 3:1}."
+    },
+    {
       "run_id": "2026-09-25T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
