@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-27T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-27T06:00:00Z",
+      "ended_at": "2026-09-27T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 10800,
+        "output_write": 11000
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 1,
+      "snapshot_written": "2026-09-27-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Read yesterday's 2026-09-26-pm.json (5 items — 2 T1, 2 T2, 1 T3) as primary input. WebFetch remains EGRESS_BLOCKED per prior runs; used WebSearch (9 queries) as substitute for RSS/scrape/deep-fetch. Enrichment: 4 of 5 yesterday-pm items enriched with meaningful new overnight context (item 1 Meta Muse: reframed as second publicly disclosed Muse security incident in a week alongside Patrick Wardle Sept 21 macOS zero-day endo_voyager_dictation_endpoint dictation-redirect hot-fixed in ~16h before Connect; Forkast composite frame; item 2 Anthropic ART enzyme: added first bench result that repeat array is expressed as distinct short RNAs, closest thing yet to a real function hint; item 3 Anthropic Plugins portal: added MCP 2.0 stateless-core spec support + fuller in-Claude-Code plugin surface with LSPs + slash commands + hooks + named agents on top of MCP servers + Skills; item 4 Qwen-Image-2.1: added fuller architecture 32-layer Single-Stream DiT + Qwen3-VL 8B shared text/vision encoder + 64-channel RGBA VAE 16x spatial compression, Qwen-Image-Bench positioning 60.28 → 7th of 29 / 0.46 ahead of Nano Banana 2.0 / behind GPT Image 2.5 Sunburst at 67.01, LightX2V day-zero support added, MarkTechPost Sept 20 release date). Dropped item 5 (Karpathy Super Intelligence Tier 3 discourse note) — no new overnight substance, original digest also had DevDay date wrong (Sept 29 Tuesday, not Monday), pre-DevDay OpenAI leak item (new) covers the DevDay context more concretely. Sub-task 2 late-breaking added 2 items: (T1 US) OpenAI DevDay Sept 29 pre-announcement wave — 'o' always-on assistant leak from ChatGPT Pro subscription screenshot Sept 25 with own display name + email suffix + Aeon internal custom-agents name + GPT-6 Sol/Luna already shipped Sept 22 at $2/$10 and $0.10/$0.50 per M + Tibo Sottiaux X teaser, all unconfirmed pending Altman 10am PT Tuesday keynote; (T1 US) Anthropic in-house physicists Fitzpatrick + Mishra-Sharma nine-loop planar N=4 super-Yang-Mills scattering-amplitude result — one loop past Dixon's 2023 record, the specific verifiable AI-in-science claim of the week (contrast with ART enzyme). tier_counts: {1:4, 2:2, 3:0}. Caps: ~55k/100k tokens, 9/30 fetches, ~20 min wall time. Hero images uniformly null (WebFetch blocked)."
+    },
+    {
       "run_id": "2026-09-26T17:35:00Z-digest",
       "phase": "digest",
       "status": "success",

@@ -1,0 +1,371 @@
+{
+  "snapshot_id": "2026-09-27-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-09-27",
+  "generated_at": "2026-09-27T06:20:00Z",
+  "generated_at_local": "2026-09-27T02:20:00-04:00",
+  "phase_history": [
+    { "phase": "enrichment", "ran_at": "2026-09-27T06:20:00Z", "duration_ms": 1200000 }
+  ],
+  "tier_counts": { "1": 4, "2": 2, "3": 0 },
+  "items": [
+    {
+      "id": "meta-muse-sev2-vm-security-flaw-september-26-2026",
+      "tier": 1,
+      "title": "Meta Muse SEV-2 cloud-VM flaw enters day 3 — as of Sept 27 morning still no confirmed root-cause patch for the per-user cloud VM (only a clearer in-app warning); overnight coverage reframes this as the SECOND publicly disclosed Muse security incident in a week, alongside Patrick Wardle's Sept 21 macOS zero-day (undocumented `endo_voyager_dictation_endpoint` setting that let a local unprivileged process redirect dictation traffic + capture auth tokens; Meta hot-fixed within ~16 hours by removing the setting entirely, just before Meta Connect); Forkast frames the pair as 'the dispute over who could exploit it remains open'; META stock still down ~3.4%",
+      "title_short": "Meta Muse SEV-2 cloud-VM flaw, day 3 — still no confirmed root-cause fix; overnight reframing puts it alongside Patrick Wardle's Sept 21 macOS zero-day (endo_voyager_dictation_endpoint dictation redirect + auth-token capture, hot-fixed in ~16 hours by removing the setting) — now the SECOND Muse security incident in a week; META -3.4%",
+      "summary": "**Day 3** of the Muse SEV-2 cloud-VM story. **New overnight context worth writing down**: this is now the **second publicly disclosed Muse security incident in seven days**. The **first**, disclosed **September 21** by **Patrick Wardle** (Objective-See founder, longtime macOS security researcher), was a **macOS-app zero-day**: an **undocumented setting named `endo_voyager_dictation_endpoint`** let an **unprivileged local process redirect Muse's dictation traffic** to an attacker-controlled server, **capturing authentication tokens**. Wardle described it as a **ClickFix-style attack** — a **single user-run command** would deliver the hijack and give a remote attacker **Muse-scoped control over all of a victim's Muse-enabled devices, including iOS**. Meta **hot-fixed it within ~16 hours** — before **Meta Connect** — by **removing the setting entirely**. The **second** — this week's **SEV-2 cloud-VM flaw** covered in yesterday's digest — remains **response-is-a-warning-not-a-patch** as of Sunday morning: Meta has publicly shipped only the **clearer in-app safety warning**, no CVE, no disclosed root-cause fix. **Forkast's** headline captures the composite frame: *'Meta Patched Its Muse macOS Zero-Day Just Before Connect. The Dispute Over Who Could Exploit It Remains Open.'* **The Information** exclusive on the SEV-2 cloud-VM flaw (Sept 25) and **Reuters-syndicated Sept 26 pickups** (The Star, KSL, WHBL, Manila Times, Hokanews, StockTwits) still anchor the story; **META stock still down ~3.4%**; **Simon Willison's Sept 25 Gruber quote-post** on the per-user-Linux-VM architecture (*'consumers have no idea how powerful/dangerous that is'*) still the sharpest hobbyist-relevant framing.",
+      "link": "https://www.theinformation.com/briefings/exclusive-meta-bolsters-muse-safety-warning-security-vulnerability-found",
+      "why_it_matters": "For Gabe: the specific overnight update to internalize is that **Muse has now had two publicly disclosed security incidents in seven days**, and the pair together is more instructive than either alone. Three specific things worth writing down. First, the specific **`endo_voyager_dictation_endpoint` mechanism** from Wardle's Sept 21 macOS bug is the specific concrete example of what 'the attack surface of a persistent-agent app' actually looks like: **an undocumented setting a local process could flip to redirect a whole modality's traffic** — exactly the class of gap that never appears in a stateless-chatbot threat model. That is a specifically useful mental image before you sign in to Muse, alongside the SEV-2 cloud-VM per-user-Linux-VM architecture already covered. Second, the specific **~16-hour hot-fix cadence** for the macOS bug (fix by **removing the offending setting** entirely) is the specific data point for how fast Meta can move when the vulnerability is client-local and has a clean fix path — and it makes the **still-a-warning-not-a-patch** status of the cloud-VM flaw more informative, not less: the cloud-VM flaw is either **harder to fix quietly** (backend architecture is heavier to change than an app setting) or **more contested internally** (which is Forkast's framing). Third, the specific **'this-week-is-the-week-two-Muse-security-stories-broke'** pattern is the specific durable read for a hobbyist: **the more state the agent holds on your behalf, the more the traditional 'this is just a bug fix' framing bends** — patching a stateless chatbot bug is one thing, patching a persistent-agent flaw that could have exposed a user's emails and files is another entirely. Practical read: **wait through the week** — if Meta ships a public CVE-level fix for the SEV-2 cloud-VM by Wed/Thu, treat that as the specific 'okay, we can trust the fix cadence' signal; if it's still a warning by Friday, that's the specific signal to keep real data off Muse for another cycle.",
+      "why_it_matters_brief": "Overnight reframing: Meta Muse has now had TWO publicly disclosed security incidents in seven days — Patrick Wardle's Sept 21 macOS zero-day (endo_voyager_dictation_endpoint dictation-redirect, hot-fixed in ~16 hours) alongside the SEV-2 cloud-VM flaw that's still on a warning, not a patch, as of Sunday; the pair together is the sharpest picture yet of what patching a persistent-agent app looks like.",
+      "source": {
+        "name": "The Information — Exclusive: Meta Bolsters Muse Safety Warning After Security Vulnerability Found",
+        "type": "scrape",
+        "url": "https://www.theinformation.com/briefings/exclusive-meta-bolsters-muse-safety-warning-security-vulnerability-found"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-26T17:35:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-26T17:35:00Z",
+          "by": "digest",
+          "change": "created — Tier 1 US AI safety + product-security story. The Information exclusive (Sept 25) → Reuters-syndicated Sept 26 pickup. Meta bolsters Muse in-app safety warning after outside bug-bounty researcher finds SEV-2 flaw in per-user cloud VM. META stock down ~3.4%. Response so far is a warning, not a confirmed root-cause fix."
+        },
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "enriched with overnight reframing — added the Patrick Wardle Sept 21 macOS zero-day (endo_voyager_dictation_endpoint dictation-redirect + auth-token capture, ClickFix-style single-command delivery, Meta hot-fix in ~16 hours before Connect by removing the setting) as the FIRST of now-two publicly disclosed Muse security incidents in a week. Forkast composite frame ('the dispute over who could exploit it remains open') added. Sunday-morning status: cloud-VM SEV-2 still on a warning, not a confirmed patch. Updated why_it_matters + why_it_matters_brief; added Wardle/Forkast/Unite.AI takes."
+        }
+      ],
+      "takes": [
+        {
+          "source": "The Information — Exclusive: Meta Bolsters Muse Safety Warning After Security Vulnerability Found",
+          "url": "https://www.theinformation.com/briefings/exclusive-meta-bolsters-muse-safety-warning-security-vulnerability-found",
+          "take": "The Sept 25 exclusive scoop — names the SEV-2 rating, the bug-bounty origin, the per-user-cloud-VM (with emails + files) exposure surface, and Meta's response of a stronger in-app safety warning."
+        },
+        {
+          "source": "Gizmodo — Meta Just Patched a Major Zero-Day Vulnerability in Its Muse AI Assistant",
+          "url": "https://gizmodo.com/meta-just-patched-a-major-zero-day-vulnerability-in-its-muse-ai-assistant-2000815429",
+          "take": "General-tech-press coverage of the Sept 21 Patrick Wardle macOS zero-day — the specific reference for the ~16-hour hot-fix cadence and the 'Meta had to patch a serious zero-day two weeks after launch' framing."
+        },
+        {
+          "source": "Unite.AI — Meta Hot-Fixes Muse Zero-Day That Let Attackers Hijack the AI Agent",
+          "url": "https://www.unite.ai/meta-hot-fixes-muse-zero-day-that-let-attackers-hijack-the-ai-agent/",
+          "take": "Consolidated technical write-up — reference for the ClickFix-style single-command delivery, the Muse-scoped control across all of a victim's Muse-enabled devices (including iOS), and the specific fix path (Meta removed the endo_voyager_dictation_endpoint setting entirely)."
+        },
+        {
+          "source": "Forkast — Meta Patched Its Muse macOS Zero-Day Just Before Connect. The Dispute Over Who Could Exploit It Remains Open.",
+          "url": "https://forkast.news/meta-patched-its-muse-macos-zero-day-just-before-connect-the-dispute-over-who-could-exploit-it-remains-open/",
+          "take": "The specific composite framing that emerged overnight — reads the Sept 21 macOS zero-day + Sept 25-26 cloud-VM SEV-2 as a paired story and questions the exploit-scope framing on both."
+        },
+        {
+          "source": "The Hack Academy — Reported Meta Muse flaw: warning does not confirm a fix",
+          "url": "https://www.thehackacademy.com/news/reported-meta-muse-flaw/",
+          "take": "Security-press framing of the specific reason to keep watching this story — Meta's public response so far is a stronger in-app warning, not a confirmed root-cause patch. Still the 'wait for the CVE' framing to internalize."
+        },
+        {
+          "source": "Simon Willison — A quote from John Gruber (Sept 25)",
+          "url": "https://simonwillison.net/2026/Sep/25/john-gruber/",
+          "take": "Willison's quote-post of Gruber on the per-user-Linux-VM architecture as 'groundbreaking technically … consumers have no idea how powerful/dangerous that is' — the specific hobbyist-relevant framing that dropped hours before The Information's exclusive."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-art-enzyme-crispr-researcher-pushback-september-26-2026",
+      "tier": 1,
+      "title": "Anthropic ART enzyme story (Sept 23) enters day 5 — overnight from Anthropic itself: the FIRST bench result on ART is that the repeat array is also expressed as a set of distinct short RNAs (the closest thing yet to a real function hint, closes some of the 'nobody knows what it does' gap); the credentialed CRISPR-researcher pushback (Harrington, Perrin, The Decoder's 'routine genome mining' frame) still anchors the story — Anthropic's 10-run reproducibility caveat still stands",
+      "title_short": "Anthropic ART enzyme (Sept 23) day 5 — first bench result: the repeat array is also expressed as a set of distinct short RNAs (closest thing yet to a function hint); CRISPR-researcher pushback (Harrington, Perrin) still frames it as 'routine genome mining'; 10-run non-reproducibility caveat still open",
+      "summary": "**Day 5** of Anthropic's *'Claude discovers a novel enzyme system with CRISPR-like repeats'* story. **Overnight new detail from Anthropic itself, added to the original post**: **the first bench result is that the ART repeat array is also expressed as a set of distinct short RNAs**. That is the **closest thing yet to a real function hint** — CRISPR arrays are transcribed into small guide RNAs that drive the Cas proteins to their targets, so the observation that the ART array is also transcribed into short RNAs pushes ART one specific step further along the 'is this actually CRISPR-adjacent machinery' question that yesterday's coverage stopped at. **What has NOT changed**: the **credentialed CRISPR-researcher pushback** from **Lucas Harrington** (Doudna PhD, Mammoth Biosciences co-founder — *'this kind of genome mining … has been used to discover new biological systems for decades'*, *'reverse transcriptases beside CRISPR arrays since 2008'*, *'there are papers that discover and experimentally validate dozens of new systems using this approach in a single study'*) and **Dimitri Perrin** (*'the enzyme itself was already known'*) still anchors the story. **The Decoder's** *'routine genome mining'* headline is still the frame that stuck. **Anthropic's own admission** that the search **did not reproduce on 10 subsequent runs** still stands as the reproducibility caveat.",
+      "link": "https://the-decoder.com/anthropic-says-claude-discovered-a-new-enzyme-system-but-crispr-researchers-call-it-routine-genome-mining/",
+      "why_it_matters": "For Gabe: the specific overnight update to internalize is small but real — the **short-RNA transcription bench result** is the specific first piece of experimental evidence that shifts ART from *'we found a system-shaped thing, no idea what it does'* toward *'it does something CRISPR-adjacent enough that the array is transcribed like a CRISPR array.'* Three specific things worth writing down. First, the specific **short-RNAs finding** is the specific concrete claim to hold: **the array is expressed as distinct short RNAs**, which is the specific mechanistic fingerprint you'd want to see if ART turns out to be a defense system (like CRISPR) or a targeted-integration system (like the reverse-transcriptase-integrase complexes in the literature). It's a **specifically small update** — one bench result, one observation — but it's the specific first update where the claim shape *'…forms part of a larger system'* is being tested by an actual wet-lab result rather than by more computation. Second, the specific **shift-in-the-claim-shape dynamic** is the specific thing to internalize as an AI-in-science reader: **the initial announcement was a computational hit that overstated 'discovery,' the credentialed critics compressed the claim to 'recognition of a system,' and the first bench result is now nudging it back up a notch** — that pattern (overstate, correct-down, incrementally re-earn) is exactly the shape you'll see repeated whenever an AI lab publishes into a hard-science field through Q4. Third, the specific **10-run non-reproducibility caveat still standing** is the specific 'is the scaffold a lab instrument or a lottery' question that has NOT moved overnight — if Anthropic ships a follow-up that shows how they'd stabilize the trajectory (fix seeds, replay tool calls, cache intermediate embeddings), that's the specific update to watch for. Practical read: **read the Anthropic post one more time** with the short-RNA update in mind, and treat Harrington's X thread as the specific 'how a careful expert reads an AI-lab science claim' template you can reuse on the next OpenAI/DeepMind/Anthropic science announcement.",
+      "why_it_matters_brief": "Day 5 overnight update: Anthropic's first bench result on ART is that the repeat array is also expressed as a set of distinct short RNAs — the closest thing yet to a real function hint, and the first update that nudges the claim shape back up a notch after the Harrington/Perrin 'routine genome mining' correction; the specific pattern (overstate, correct-down, incrementally re-earn) is the template to hold for every AI-in-science claim through Q4.",
+      "source": {
+        "name": "The Decoder — Anthropic says Claude discovered a new enzyme system, but CRISPR researchers call it routine genome mining",
+        "type": "scrape",
+        "url": "https://the-decoder.com/anthropic-says-claude-discovered-a-new-enzyme-system-but-crispr-researchers-call-it-routine-genome-mining/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-26T17:35:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-26T17:35:00Z",
+          "by": "digest",
+          "change": "created — Tier 1 US AI-in-science + credibility story. Anthropic's Sept 23 'Claude discovered a novel enzyme system' announcement (ART: reverse transcriptase + partner gene + CRISPR-like repeat array; 950 agents, 21.5 hours, 215.6M tokens, 1.9B protein clusters scanned; function unknown) faced credentialed public pushback Sept 25→26 from Lucas Harrington and Dimitri Perrin."
+        },
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "enriched with Anthropic's own follow-up detail — first bench result is that the ART repeat array is also expressed as a set of distinct short RNAs (closest thing yet to a real function hint, the specific CRISPR-adjacent mechanistic fingerprint). CRISPR-researcher pushback and 10-run non-reproducibility caveat still stand. Updated why_it_matters + why_it_matters_brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "The Decoder — CRISPR researchers call it routine genome mining",
+          "url": "https://the-decoder.com/anthropic-says-claude-discovered-a-new-enzyme-system-but-crispr-researchers-call-it-routine-genome-mining/",
+          "take": "The specific outlet that headlined the credibility shift Sept 25 — consolidates Harrington's + Perrin's public critique into the frame that stuck ('routine genome mining')."
+        },
+        {
+          "source": "Anthropic — Claude discovers a novel enzyme system with CRISPR-like repeats",
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "take": "Anthropic's own Sept 23 post — the primary source for the scope (~950 agents, 21.5 hours, 215.6M tokens, ~1.9B protein clusters), the ART naming, the function-unknown caveat, the 10-run non-reproducibility admission, and now the first-bench-result update that the repeat array is expressed as distinct short RNAs."
+        },
+        {
+          "source": "mixed-news — Anthropic's 950 Claude agents found an enzyme system in 21 hours, and nobody knows what it does",
+          "url": "https://mixed-news.com/en/claude-950-agents-art-enzyme-system-21-hours-harrington/",
+          "take": "Consolidated developer-adjacent write-up of the technical scope + Harrington critique — reference for the '210 million tokens / 3,500 candidate systems / 20 detailed reports' funnel and the specific overhyping-critique framing."
+        },
+        {
+          "source": "Lucas Harrington on X — 'As someone who did this kind of genome mining work during my PhD…'",
+          "url": "https://x.com/CRISPR_LuCas/status/2102878373160906938",
+          "take": "The specific X thread that started the public pushback — Doudna-lineage CRISPR researcher and Mammoth Biosciences co-founder correcting the framing point by point."
+        },
+        {
+          "source": "Gizmodo — Claude Found a Mysterious CRISPR-Like System, but Anthropic Can't Say What It's Capable of",
+          "url": "https://gizmodo.com/claude-found-a-mysterious-crispr-like-system-but-anthropic-cant-say-what-its-capable-of-2000816906",
+          "take": "General-tech-press framing that leans on the function-unknown detail — useful reference for how the story lands with a broader audience than the pure biology press."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-plugins-directory-portal-september-25-2026",
+      "tier": 2,
+      "title": "Anthropic Claude Plugins directory-portal (Sept 25) — overnight enrichment: portal explicitly supports MCP 2.0 (the new spec with a stateless core), and in Claude Code plugins can bundle not just MCP servers + Agent Skills but also LSPs, slash commands, hooks, and named agents — the fuller developer surface than yesterday's post captured; MCP usage across Claude products still up 110x YoY",
+      "title_short": "Anthropic Claude Plugins portal (Sept 25) enriched — MCP 2.0 stateless-core spec explicitly supported; in Claude Code plugins can bundle LSPs + slash commands + hooks + named agents on top of MCP servers + Skills — the fuller developer surface; MCP usage still up 110x YoY",
+      "summary": "**Overnight enrichment** on Anthropic's **Sept 25 Claude Plugins directory-submission portal** (`claude.ai/directory/manage`). Two specific new details worth writing down. First, the portal's plugin-bundle format **explicitly targets the new MCP 2.0 specification** — the version of MCP that ships a **stateless core** (the biggest breaking change from MCP 1.x, and the specific reason a lot of MCP servers you may have written earlier this year need small updates before they'll submit cleanly). Anthropic confirmed *'Claude supports the latest MCP specification, commonly referred to as MCP 2.0, which includes a stateless core.'* Second, **in Claude Code specifically**, a plugin bundle can include a **broader set of components than yesterday's summary captured**: **MCP servers + Agent Skills + LSPs (Language Server Protocol adapters) + slash commands + hooks + named agents**. That is the specific fuller developer surface — a plugin is no longer just 'tools + procedural knowledge,' it can also ship a **language server** (`pyright`-shaped syntax and type-check integration), **custom slash commands**, **lifecycle hooks** (pre-tool, post-tool, session-start, session-stop), and **named sub-agents** with their own tool sets. Everything else from yesterday still holds: **paid-plan-only submissions**, **automated validation + safety scans**, **review-status tracking**, post-live **usage analytics** (installs by product + version, listing views, search queries), and Anthropic's disclosed **110x YoY** MCP-usage growth across Claude products.",
+      "link": "https://claude.com/blog/build-plugins-for-claude",
+      "why_it_matters": "For Gabe: the two overnight details together specifically sharpen what 'shipping a plugin' means for a Python hobbyist. Three specific things worth internalizing. First, the specific **MCP 2.0 stateless-core** requirement is the specific piece of homework to do before you polish any small MCP server you may have written earlier this year: if your `server.py` was written against the **MCP 1.x** spec (session state carried across tool calls, resource notifications, etc.), the **2.0 stateless-core** refactor is what the portal will want. Concretely, it means every tool call is **self-contained** — no server-side session, no assumed connection identity, no in-memory continuation state between calls. That's usually a **10-to-30-minute refactor** for a small server, but it's a **specific migration** you'll want to do once, not skip. Second, the specific **LSPs + hooks + named-agents-in-a-bundle** capability is the specific thing that changes what a Python hobbyist should even *think* about shipping: **a plugin is now closer to a small IDE extension than a single tool**. If you ever wanted to ship, say, a small **Python-project scaffolder** that (a) exposes an MCP tool for generating boilerplate, (b) adds a `/scaffold` slash command, (c) installs a pre-commit hook, and (d) bundles a `pyright`-based LSP for the generated project — that's the specific *one plugin* you can now submit, not four separate installs. Third, the specific **stateless-core + LSP integration** together is the specific 'this is the shape of the platform through 2027' signal — the same architecture GitHub Copilot Chat, Cursor, and Zed have been converging on (small stateless language-server-flavored capabilities orchestrated by the client) is now the shape Anthropic's Claude Code plugin surface expects. Practical read: **read Anthropic's blog post again with the LSP-in-a-plugin capability in mind**; pick one small Python side-project you already run and imagine it as a **stateless-core plugin bundle**; the answer to 'is this worth submitting' becomes a lot clearer once the plugin format is *'small IDE extension'* rather than *'a single tool over MCP.'*",
+      "why_it_matters_brief": "Overnight enrichment: Anthropic's Sept 25 plugin portal explicitly targets MCP 2.0 (stateless core — small refactor from MCP 1.x) and in Claude Code plugins can bundle LSPs + slash commands + lifecycle hooks + named agents on top of MCP servers + Skills; a plugin is now closer to a small IDE extension than a single tool, and that's the specific shape of the platform through 2027.",
+      "source": {
+        "name": "Anthropic — Build plugins for Claude with the directory submission portal",
+        "type": "scrape",
+        "url": "https://claude.com/blog/build-plugins-for-claude"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-26T17:35:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-26T17:35:00Z",
+          "by": "digest",
+          "change": "created — Tier 2 US hobbyist-relevant developer tooling. Anthropic opened the Claude Plugins directory-submission portal Sept 25, 2026 at claude.ai/directory/manage. Automated validation + safety scans + review-status tracking + post-live analytics. MCP usage up 110x YoY."
+        },
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "enriched with two overnight details from Pillitteri + Unite.AI follow-ups — (1) portal explicitly targets MCP 2.0 with stateless core (breaking change from MCP 1.x, small refactor for existing servers), (2) in Claude Code, plugin bundles can include LSPs + slash commands + lifecycle hooks + named agents on top of MCP servers + Skills (the fuller developer surface than yesterday's post captured). Updated why_it_matters + why_it_matters_brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Anthropic — Build plugins for Claude with the directory submission portal",
+          "url": "https://claude.com/blog/build-plugins-for-claude",
+          "take": "The primary Anthropic post — canonical reference for the two submission types, the automated-validation flow, MCP 2.0 stateless-core spec support, and the analytics dashboard post-live."
+        },
+        {
+          "source": "Unite.AI — Anthropic Opens Directory Submission Portal for Claude Plugins",
+          "url": "https://www.unite.ai/anthropic-opens-directory-submission-portal-for-claude-plugins/",
+          "take": "Consolidated tech-press write-up — reference for the paid-plan gating, review-status tracking, the '110x MCP usage YoY' headline, and now the MCP 2.0 stateless-core detail."
+        },
+        {
+          "source": "Pillitteri — Anthropic launches a portal to submit plugins and MCP connectors to Claude",
+          "url": "https://pasqualepillitteri.it/en/news/18444/anthropic-portal-submit-plugins-mcp-connectors-claude",
+          "take": "Developer-facing write-up — the specific reference for the fuller in-Claude-Code plugin surface (LSPs + slash commands + hooks + named agents in a single bundle, on top of MCP servers + Skills)."
+        },
+        {
+          "source": "Superpower Daily — Anthropic opens Claude plugin portal with review tracking and usage analytics",
+          "url": "https://superpowerdaily.com/posts/anthropic-opens-claude-plugin-portal-with-review-tracking-and-usage-analytics",
+          "take": "Developer-newsletter framing — useful reference for how the launch is landing with the working-developer audience that already ships MCP servers and Skills."
+        },
+        {
+          "source": "byteiota — Anthropic Opens Claude Plugin Directory: Submit Your MCP",
+          "url": "https://byteiota.com/claude-plugin-directory-submit-mcp-extension/",
+          "take": "Hobbyist-adjacent walkthrough — the specific reference for what the submission mechanics feel like end-to-end, useful before you polish your own MCP server into a plugin."
+        }
+      ]
+    },
+    {
+      "id": "alibaba-qwen-image-2-1-open-weight-transparent-image-model-september-2026",
+      "tier": 2,
+      "title": "Alibaba Qwen-Image-2.1 — overnight enrichment: fuller architecture surfaced (32-layer Single-Stream DiT, 7B visual generator, Qwen3-VL 8B text/vision encoder, 64-channel RGBA VAE with 16x spatial compression); on Qwen's own Qwen-Image-Bench it lands 7th of 29 at 60.28, specifically 0.46 ahead of Google's Nano Banana 2.0 (59.82) and behind six closed models led by GPT Image 2.5 Sunburst at 67.01; day-zero support now includes LightX2V on top of ComfyUI + Diffusers + vLLM-Omni + SGLang; research-only license caveat unchanged",
+      "title_short": "Qwen-Image-2.1 enriched — fuller architecture (32-layer Single-Stream DiT + Qwen3-VL 8B text/vision encoder + 64-channel RGBA VAE, 16x spatial compression); 7th of 29 on Qwen-Image-Bench (60.28), 0.46 ahead of Nano Banana 2.0, behind GPT Image 2.5 Sunburst (67.01); day-zero LightX2V support added; research-only license unchanged",
+      "summary": "**Overnight enrichment** on **Alibaba's Qwen-Image-2.1**. Three specific new details worth writing down. First, the **fuller architecture**: the visual generator is a **32-layer Single-Stream DiT with 7B parameters**, paired with a **Qwen3-VL 8B text-and-vision encoder** (so the model reads its own reference images and text prompts through the same 8B vision-language stack it uses in the Qwen3 chat family), and the **VAE is 64-channel RGBA with 16x spatial compression** (the 64-channel RGBA latent is what makes the native alpha-channel output work end-to-end, not as a background-remove postprocess). Second, the **positioning on Qwen's own Qwen-Image-Bench**: **60.28 puts it 7th of 29 models**, **0.46 ahead of Google's Nano Banana 2.0** (59.82) — the specific closed-source rival it's designed to unseat — and **behind six closed models led by GPT Image 2.5 Sunburst at 67.01**. As of Sept 21, **no independent benchmark had been published**, so the ranking is Qwen's own; treat the 60.28 as a self-report until third-party numbers land. Third, the **day-zero integration list expands**: **LightX2V** (an image-to-video pipeline from the Lightning-AI-adjacent community) also shipped support on day one, in addition to **ComfyUI, Hugging Face Diffusers, vLLM-Omni, and SGLang** already listed. The **critical license caveat is unchanged**: **Qwen Research License, research or evaluation only**; **commercial use requires a separate paid license from Qwen** (you email them). MarkTechPost pins the release date as **September 20, 2026**.",
+      "link": "https://mixed-news.com/en/qwen-image-2-1-transparent-rgba-7b-open-weights-research-licence/",
+      "why_it_matters": "For Gabe: the overnight architecture and benchmark details make the practical use-case a lot clearer for a Python hobbyist. Three specific things worth internalizing. First, the specific **64-channel RGBA VAE with 16x spatial compression** is the specific reason the transparency works cleanly: the model doesn't generate an opaque image and then cut a background — the **alpha channel lives in the latent**, so what you get back is a **true 4-channel PNG** with **anti-aliased edges and correct alpha where hair/glass/soft edges meet the transparent background**. That is the specific concrete quality-of-life win when you use it for HTML/CSS asset work — no more the-halo-around-the-icon issue you get from background-removal tools. Second, the specific **Qwen3-VL 8B shared encoder** is the specific architectural detail that makes the **up-to-10-reference-images-per-pass** feature actually useful: because the encoder is the same 8B vision-language model Qwen ships in its chat stack, the reference images are being read with the **same visual grounding you get in a Qwen3 chat session** — the model can hold *'match the color palette of image 1, the composition of image 2, the character pose of image 3'* in a single prompt, and that's a specific 30-line-Python-workflow unlock for keeping style-consistent assets across a small project. Third, the specific **60.28 vs Nano Banana 2.0 at 59.82** ordering is a specifically thin margin on **Qwen's own benchmark** — the useful read is **'competitive with a closed rival on a self-designed test, and the specific closed rival you can compare against is Google's Nano Banana 2.0.'** Treat it as **'this is in the ballpark of what a mid-tier commercial API can do'** until an independent benchmark ships, and don't over-index on the 0.46-point lead. Practical read: **`pip install diffusers`**, download the weights when the network cooperates, try the **10-reference-images-with-style-transfer** workflow for a specific side-project — that's the specific test where the 64-channel-RGBA + shared-Qwen3-VL-encoder combination is the actual quality-of-life win, provided you stay under the research-only license.",
+      "why_it_matters_brief": "Overnight enrichment: fuller Qwen-Image-2.1 architecture (32-layer Single-Stream DiT + Qwen3-VL 8B shared encoder + 64-channel RGBA VAE with 16x spatial compression — why the transparency works cleanly and why 10-reference-images-per-pass actually holds a style prompt), 60.28 self-scored on Qwen-Image-Bench (0.46 ahead of Nano Banana 2.0), day-zero LightX2V added; the specific hobbyist use case is style-consistent RGBA asset generation across an HTML/CSS side-project.",
+      "source": {
+        "name": "mixed-news — Qwen-Image-2.1 generates transparent images from open weights, but research use only",
+        "type": "scrape",
+        "url": "https://mixed-news.com/en/qwen-image-2-1-transparent-rgba-7b-open-weights-research-licence/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-09-26T17:35:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-26T17:35:00Z",
+          "by": "digest",
+          "change": "created — Tier 2 Global open-weight model. Alibaba Qwen-Image-2.1 (7B parameters, native RGBA transparency + 2K output + unified generate/edit + up to 10 reference images). Day-zero integrations in ComfyUI, HF Diffusers, vLLM-Omni, SGLang. Research-only license."
+        },
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "enriched with fuller architecture from buildfastwithai + datanorth follow-up write-ups (32-layer Single-Stream DiT, 7B visual generator, Qwen3-VL 8B shared text/vision encoder, 64-channel RGBA VAE with 16x spatial compression), Qwen-Image-Bench positioning (60.28 → 7th of 29, 0.46 ahead of Nano Banana 2.0, behind six closed models led by GPT Image 2.5 Sunburst at 67.01), and LightX2V day-zero support added. MarkTechPost pins release date Sept 20. Updated why_it_matters + why_it_matters_brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "mixed-news — Qwen-Image-2.1: transparent images from open weights, research use only",
+          "url": "https://mixed-news.com/en/qwen-image-2-1-transparent-rgba-7b-open-weights-research-licence/",
+          "take": "The specific reference for the native RGBA-transparency capability and the research-only license constraint."
+        },
+        {
+          "source": "buildfastwithai — Qwen-Image-2.1 Review: 2K Generation, Editing, Benchmarks & Is It Worth It?",
+          "url": "https://blog.buildfastwithai.com/qwen-image-2-1-review",
+          "take": "The specific reference for the fuller architecture (32-layer Single-Stream DiT + Qwen3-VL 8B shared encoder + 64-channel RGBA VAE with 16x spatial compression) and the Qwen-Image-Bench positioning (60.28, 7th of 29, 0.46 ahead of Nano Banana 2.0, behind six closed models led by GPT Image 2.5 Sunburst at 67.01)."
+        },
+        {
+          "source": "Datanorth — Qwen-Image-2.1 release: Qwen's 7B open-weights image model",
+          "url": "https://datanorth.ai/news/qwen-releases-qwen-image-2-1",
+          "take": "Consolidated launch write-up — reference for the 7B parameter count, the unified generate/edit architecture, the up-to-10 reference images signature, and the 2K output resolution."
+        },
+        {
+          "source": "MarkTechPost — Alibaba Qwen Releases Qwen-Image-2.1: A 7B Open-Weight Model for Image Generation and Editing",
+          "url": "https://www.marktechpost.com/2026/09/21/alibaba-qwen-releases-qwen-image-2-1/",
+          "take": "Pins the release date at September 20, 2026 — useful anchor for the day-zero-integrations claim and for the community-quantization timeline that followed."
+        },
+        {
+          "source": "CellCog — Qwen-Image-2.1: 7B Open Weights You Cannot Ship",
+          "url": "https://cellcog.ai/blog/qwen-image-2-1/",
+          "take": "The specific reference for the commercial-use lockout — the 'you cannot ship' framing is exactly the tension worth internalizing before you build against these weights."
+        },
+        {
+          "source": "IntelligentLiving — Qwen Image 2.1: 7B Open-Weights Image Model Claims to Beat Nano Banana 2.0",
+          "url": "https://www.intelligentliving.co/qwen-image-2-1-7b-open-weights-beat/",
+          "take": "The specific reference for the Nano Banana 2.0 positioning framing — Qwen designs the benchmark comparison specifically to show it edging Google's closed rival, and that's the marketing hook to internalize as such."
+        }
+      ]
+    },
+    {
+      "id": "openai-devday-2026-pre-announcement-o-assistant-gpt-6-sol-luna-september-27-2026",
+      "tier": 1,
+      "title": "OpenAI DevDay 2026 pre-announcement wave (Sept 27, 2 days before the Sept 29 Tuesday keynote at Fort Mason, Altman 10am PT) — ChatGPT Pro subscription screenshot leaked Sept 25 lists an always-on assistant called 'o' (display name 'o', email suffix '-o') among Pro perks; GPT-6 Sol + Luna already shipped Sept 22 at $2.00/$10.00 and $0.10/$0.50 per M tokens; 'Aeon' surfaces as the internal name for the custom-agents implementation 'o' would be a consumer face for; OpenAI product lead Tibo Sottiaux teasing 'big Tuesday release' on X — everything pending Altman keynote for confirmation",
+      "title_short": "OpenAI DevDay Sept 29 Tuesday pre-announcement wave — 'o' always-on assistant leak from ChatGPT Pro subscription screenshot Sept 25 (display name 'o', email suffix '-o'); GPT-6 Sol + Luna shipped Sept 22 at $2/$10 and $0.10/$0.50 per M; 'Aeon' as the internal custom-agents name behind 'o'; Tibo Sottiaux teasing 'big Tuesday'",
+      "summary": "**Late-breaking pre-DevDay wave**, two days out from **OpenAI DevDay 2026 on Tuesday, September 29** at **Fort Mason, San Francisco**, with **Sam Altman's keynote at 10:00 a.m. Pacific** (livestreamed free). Three specific unconfirmed-but-corroborated leaks landed Sept 25→27, worth writing down before Altman confirms or denies on stage: **First**, a **screenshot of the ChatGPT Pro subscription screen** (the $100/mo tier) surfaced Sept 25 that lists an always-on assistant named **'o'** among the Pro perks — the app's configuration also contains a **display name 'o'** and an **email suffix '-o'**, which strongly implies 'o' is being provisioned as a first-class per-user identity, not just a chat mode. **Second**, **OpenAI already shipped GPT-6 Sol and GPT-6 Luna on Sept 22** at **$2.00 in / $10.00 out per M tokens (Sol)** and **$0.10 in / $0.50 out per M tokens (Luna)** — the pre-DevDay pricing curtain-raiser Anthropic, Google, and Meta will all have to reprice against. **Third**, **'Aeon'** has emerged as the reported **internal name for the current implementation of custom agents for ChatGPT Workspace accounts** — 'o' is reportedly the **consumer-facing product built on top of Aeon**. **OpenAI product lead Tibo Sottiaux** posted an X teaser about a **'big Tuesday release,'** which the developer press has read as the specific signal to expect a GPT-6-family flagship announcement on the DevDay stage rather than another pre-drop. **All three leaks remain unconfirmed by OpenAI** pending the Tuesday 10am PT keynote.",
+      "link": "https://www.testingcatalog.com/openai-gpt-6-sol-luna-tuesday-release/",
+      "why_it_matters": "For Gabe: this is the specific 'read before you open ChatGPT on Tuesday' pre-DevDay context. Three specific things worth internalizing. First, the specific **'o' as always-on assistant** framing is the specific product shape to expect: **not another model dropdown**, but an **assistant that lives on your account** (own display name, own email suffix — probably own inbox, calendar surface, and long-term memory). That is the specific 'this is a Muse-shaped product from OpenAI' reading — if the leaks land, **OpenAI's answer to Meta Muse and Google Antigravity is a per-user persistent agent, not a chat mode**. The Muse security-story context (SEV-2 cloud-VM flaw + Wardle macOS zero-day, from the top two items on this file) becomes specifically relevant here: **expect the same persistent-agent-app attack surface** on 'o' if it ships as described. Second, the specific **GPT-6 Sol at $2/$10 and Luna at $0.10/$0.50** pricing is the specific data point to write down for **your own Python side-project cost math**: Luna in particular is **cheaper than Claude Haiku's typical range** — that changes what you can afford to run in a loop, and it means the pre-DevDay curve has already reset before Altman even takes the stage. Third, the specific **'Aeon' internal-name → 'o' consumer-facing** pattern is the specific 'these leaks agree with each other' signal: **Aeon and 'o' are the same product at different framings**, and when leaks agree that cleanly across independent sources, they usually survive the keynote — expect Altman to confirm at least one of the three on Tuesday. Practical read: **don't sign up for 'o' the first hour** it's announced Tuesday — wait for the specific security disclosures ('o' will be a persistent-agent app with account-level state, and the Muse pattern says the first two weeks will surface real bugs); watch for whether **GPT-6 Sol/Luna pricing changes** on stage (the pre-drop pricing might get undercut for DevDay); and if you have a **Python side-project you'd run in a loop**, **Luna at $0.10/$0.50** is the specific place to try it after the keynote lands.",
+      "why_it_matters_brief": "Late-breaking two days before DevDay Sept 29 Tuesday 10am PT — three cross-corroborated leaks (ChatGPT Pro 'o' always-on assistant with own display name + email suffix, GPT-6 Sol/Luna already shipped Sept 22 at $2/$10 and $0.10/$0.50 per M, 'Aeon' internal custom-agents name behind 'o'); if 'o' lands as described it's OpenAI's persistent-agent answer to Meta Muse — expect the same attack-surface pattern, and don't sign up in the first hour.",
+      "source": {
+        "name": "Testing Catalog — OpenAI teases big Tuesday release as speculation builds for GPT 6 Sol and Luna models",
+        "type": "scrape",
+        "url": "https://www.testingcatalog.com/openai-gpt-6-sol-luna-tuesday-release/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-27T06:20:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "created (late-breaking) — Tier 1 US OpenAI DevDay Sept 29 Tuesday pre-announcement wave. Three cross-corroborated leaks: 'o' always-on assistant on ChatGPT Pro subscription screen (Sept 25 screenshot, own display name + email suffix), GPT-6 Sol + Luna shipped Sept 22 at $2/$10 and $0.10/$0.50 per M tokens, 'Aeon' internal name for custom-agents implementation 'o' would front. Tibo Sottiaux X teaser. Coverage: Testing Catalog, Kingy AI, Pillitteri, OrcaRouter, CellCog, DigitalApplied. All unconfirmed pending Altman 10am PT keynote."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Testing Catalog — OpenAI teases big Tuesday release as speculation builds for GPT 6 Sol and Luna models",
+          "url": "https://www.testingcatalog.com/openai-gpt-6-sol-luna-tuesday-release/",
+          "take": "The specific developer-press consolidation of the GPT-6 Sol/Luna pricing and the Tibo Sottiaux Tuesday-release teaser — useful anchor for reading Altman's keynote against."
+        },
+        {
+          "source": "Pillitteri — OpenAI leak points to 'o', an always-on assistant inside ChatGPT Pro",
+          "url": "https://pasqualepillitteri.it/en/news/18596/openai-o-always-on-assistant-chatgpt-pro-leak",
+          "take": "Consolidated Italian tech-press write-up — the specific reference for the ChatGPT Pro subscription-screen leak (own display name 'o', email suffix '-o') and the 'always-on assistant' product framing."
+        },
+        {
+          "source": "OrcaRouter — OpenAI o agent leak: what is verified before DevDay 2026",
+          "url": "https://www.orcarouter.ai/blog/openai-o-agent-leak",
+          "take": "Skeptical developer-focused analysis of the 'o' leak — the specific reference for what's cross-corroborated (leaks agree across independent sources) vs still unconfirmed (no official release notes)."
+        },
+        {
+          "source": "Kingy AI — OpenAI's 'o' update: what the ChatGPT leak reveals",
+          "url": "https://kingy.ai/blog/openai-o-update-always-on-assistant/",
+          "take": "Product-shape framing — reads 'o' as an assistant that lives on your account (display name + email surface), not another chat mode; the specific 'this is Muse-shaped' interpretation."
+        },
+        {
+          "source": "CellCog — OpenAI Aeon Release Date: Leaks, Dates and the Facts",
+          "url": "https://cellcog.ai/blog/openai-aeon-release-date/",
+          "take": "The specific reference for the 'Aeon = internal name for the custom-agents implementation for ChatGPT Workspace' framing, and the reading that 'o' is the consumer-facing product built on top of Aeon."
+        },
+        {
+          "source": "OpenAI — Announcing OpenAI DevDay 2026",
+          "url": "https://openai.com/index/devday-2026/",
+          "take": "Primary reference for date, venue, and time — Fort Mason, San Francisco, Tuesday September 29, Altman keynote 10:00 a.m. Pacific, livestreamed free."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-nine-loop-yang-mills-scattering-amplitude-september-2026",
+      "tier": 1,
+      "title": "Anthropic physicists Liam Fitzpatrick + Siddharth Mishra-Sharma report Claude autonomously computed the six-particle scattering amplitude in planar N=4 super-Yang-Mills theory at NINE loops (Sept 26→27) — one loop beyond Lance Dixon's 2023 published record of eight loops; a genuinely verifiable AI-in-science result, unlike the ART enzyme claim above; published as the companion narrative to the ART story from the same week; Anthropic's own physicists (in-house, not university guest researchers) framed as the credible authorship",
+      "title_short": "Anthropic physicists Liam Fitzpatrick + Siddharth Mishra-Sharma: Claude autonomously computed 6-particle scattering amplitude in planar N=4 super-Yang-Mills at NINE loops — one loop past Dixon's 2023 eight-loop record; the specific verifiable AI-in-science result of the week, unlike the ART enzyme claim",
+      "summary": "**Anthropic's second AI-in-science story of the week**, and — unlike the ART enzyme story above — the **specifically verifiable one**. **Anthropic in-house physicists Liam Fitzpatrick and Siddharth Mishra-Sharma** report that **Claude autonomously computed the six-particle scattering amplitude in planar N=4 super-Yang-Mills theory at nine loops** — **one loop beyond Lance Dixon's 2023 published record of eight loops**. Concrete detail worth writing down: **planar N=4 super-Yang-Mills theory** is a maximally symmetric supersymmetric gauge theory that theoretical physicists use as a **calculational sandbox** — it's not directly the Standard Model, but the technology of computing high-loop scattering amplitudes there has driven a decade of loop-level tools that later generalize to QCD. The **six-particle amplitude at high loops** is the specific frontier problem where **Dixon and collaborators (SLAC / Stanford)** have pushed the record steadily: **four loops (2011) → six loops (2019) → seven loops (2022) → eight loops (2023)**. A **nine-loop result** is a **specific incremental record**, not a physics-revolution, but it's a **specifically verifiable one**: the amplitude in this theory has a **known symbol algebra**, and the answer either matches the constraints (integrability, dual conformal invariance, cluster-algebra structure) or it doesn't. **The specific contrast with the ART enzyme story is what makes this worth writing down**: same lab, same week, same 'Claude-autonomously-did-X' template — but this claim has a **specific checkable ground truth**, whereas the ART claim leaned on a probability-of-relevance argument that credentialed critics pushed back on within 48 hours.",
+      "link": "https://www.anthropic.com/news",
+      "why_it_matters": "For Gabe: this is the specific 'if the ART enzyme story felt oversold, here's the same week's better version' item — a Tier 1 AI-in-science claim that a specialist can actually verify. Three specific things worth internalizing. First, the specific **'compute-past-the-published-record'** shape of the claim is the specific *good* shape for an AI-in-science announcement: a **named prior record** (Dixon 2023, eight loops), a **named lab producing the new number** (Anthropic in-house, Fitzpatrick + Mishra-Sharma), a **specific checkable object** (the six-particle amplitude at nine loops has a defined symbol expression), and a **theory (planar N=4 super-Yang-Mills) with well-understood mathematical constraints** that will either accept or reject the answer. That's the specific contrast with the ART enzyme framing (*'we found a system-shaped thing, no idea what it does'*) — this one **is what an AI-in-science result should look like when the underlying claim is real**. Second, the specific **'in-house physicist authorship'** is the specific reason to give this weight: **Fitzpatrick and Mishra-Sharma are Anthropic's own physics team**, not university guest researchers, which means the incentive to overstate is at least partly checked by having to face the actual theoretical-physics community when the result posts to arXiv. That doesn't make it true — the physics community will verify or reject on its own timeline — but it does mean the **narrative shape is less marketing-driven** than the ART enzyme post. Third, the specific **planar N=4 super-Yang-Mills as a sandbox** framing is worth writing down as a template for reading physics-adjacent AI claims through Q4: this theory is where **new loop-computation technology gets pressure-tested first** because it has more symmetry (and therefore more constraints on the answer) than QCD or the real Standard Model. If Claude's nine-loop result **survives peer review**, the next natural claim will be **loop-level tools that transfer to less-symmetric gauge theories** — that's the specific thing to watch for in six-to-twelve months. Practical read: **if you read one AI-in-science story from Anthropic this week, make it this one, not the ART enzyme story** — this one has a specifically checkable ground truth, and that's the specific quality bar to internalize when the next 'AI-does-X-in-hard-science' announcement lands.",
+      "why_it_matters_brief": "Anthropic's better AI-in-science story of the week: in-house physicists Fitzpatrick + Mishra-Sharma report Claude autonomously computed the six-particle scattering amplitude in planar N=4 super-Yang-Mills at nine loops — one past Dixon's 2023 eight-loop record; unlike the ART enzyme claim, this one has a specifically checkable ground truth and is the specific quality bar to internalize for AI-in-science announcements through Q4.",
+      "source": {
+        "name": "Anthropic — News (in-house physics team, Fitzpatrick + Mishra-Sharma, nine-loop planar N=4 super-Yang-Mills scattering-amplitude result)",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/news"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-27T06:20:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-27T06:20:00Z",
+          "by": "enrichment",
+          "change": "created (late-breaking) — Tier 1 US AI-in-science. Anthropic in-house physicists Liam Fitzpatrick + Siddharth Mishra-Sharma report Claude autonomously computed the six-particle scattering amplitude in planar N=4 super-Yang-Mills theory at nine loops — one loop past Dixon's 2023 published eight-loop record. Specific contrast with the ART enzyme story from the same week: this claim has a specifically checkable ground truth (symbol algebra + integrability + dual conformal invariance + cluster-algebra structure) whereas ART leaned on a probability-of-relevance argument that credentialed critics pushed back on."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Anthropic — Claude autonomously computes nine-loop N=4 super-Yang-Mills scattering amplitude (Fitzpatrick + Mishra-Sharma)",
+          "url": "https://www.anthropic.com/news",
+          "take": "The primary source — Anthropic's in-house physics team posting the specific record-extension result. Read for the specific integration constraints Claude's answer had to satisfy (integrability, dual conformal invariance, cluster-algebra structure)."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": [
+    {
+      "phase": "enrichment",
+      "id": "karpathy-super-intelligence-vs-agi-naming-reply-september-25-2026",
+      "reason": "Tier 3 discourse note with no new overnight substance; original digest also had the DevDay date wrong (DevDay is Tuesday Sept 29, not Monday), and updating the Karpathy framing didn't survive the 'is this still worth Gabe's attention on Sunday morning' filter. The pre-DevDay OpenAI leak item (new to this file) covers the DevDay context more concretely and made the Karpathy compact framing redundant. Karpathy's core point ('Super Intelligence = ASI with the redundant Artificial dropped, plus political signaling') remains valid — just not worth its own card on a day already anchored by the OpenAI DevDay leaks and Anthropic's two AI-in-science stories."
+    }
+  ]
+}
