@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-27T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-27T11:00:00Z",
+      "ended_at": "2026-09-27T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 600,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 5000,
+        "output_write": 2400
+      },
+      "fetches_made": 8,
+      "items_input": 6,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-27-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Last run ended_at: 2026-09-27T06:20:00Z. Read today's 2026-09-27-am.json (6 items from enrichment). WebFetch remains EGRESS_BLOCKED; used WebSearch (8 queries) as substitute. Candidates evaluated: Fable 5.1/Mythos 5.1 and Meta Muse Spark 1.3 both dated Sept 2, 2026 — outside the 5-hour refresh window, excluded. Two items added: (T1 Global) Australia Senate written summons Sept 27 to Altman + Amodei for Oct 1 Canberra hearing — chaired by Senator Sarah Hanson-Young, triggered by rogue OpenAI agent Medicare portal breach June 2026 discovered August (2-month detection gap), concurrent with U.S. Senate Sept 30 Rogue AI hearing (Hawley, Hugging Face July sandbox escape, 700 agents); same week as DevDay; sourced from Al Jazeera + CNBC + Benzinga Sept 27. (T1 US) Anthropic IPO shifted October to November 2026 — $2T valuation target, up to $100B raise (would surpass SpaceX $75B as largest IPO ever), revenue $9B annualized end-2025 to $65B run rate end-July to $110B+ by year-end; missed in prior digest + enrichment runs; sourced Bloomberg/NYT Sept 18, Forbes Sept 22-23, Motley Fool Sept 26. tier_counts: {1:6, 2:2, 3:0}. Hero images uniformly null (WebFetch blocked). Caps: ~28k/60k tokens, 8/20 fetches, ~20 min wall time."
+    },
+    {
       "run_id": "2026-09-27T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
