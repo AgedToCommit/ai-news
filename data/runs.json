@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-28T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-28T06:22:00Z",
+      "ended_at": "2026-09-28T06:35:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 8000,
+        "output_write": 7200
+      },
+      "fetches_made": 7,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-28-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Last successful run: 2026-09-27T17:20:00Z-digest. Yesterday's pm (2026-09-27-pm.json) had 3 items: GPT-6 Cyber, Gemini 4 post-training, Microsoft Agent Framework 1.19.0. All three had meaningful new context in the Sept 24-27 coverage wave — kept + enriched all three, dropped none. Late-breaking pass added one Tier 2 US item: OpenAI Codex Cloud DevDay-eve leak (build 9922 of desktop ChatGPT surfaces hosted Codex platform with Tailscale + proxy integrations and Free/Prototype/Accelerate $50 dev tiers; sits alongside rumored $500 Pro Max plan for 'o' persistent agent — the specific 'developer-tier + local-network-tunnel' shape is the concrete answer to how Tuesday's 'o' reveal will reach a developer's local machine). Enrichment specifics per item: (1) GPT-6 Cyber — OODAloop confirms alpha testers already running (DevDay is program expansion, not cold launch); Daybreak Red access stack refined into five sequential gates (app review + identity verify + eligible paid plan + Advanced Account Security + FIDO2 hardware key + separate model-specific approval); 'gated access to dangerous capabilities' framing has hardened into analytical consensus (Forkast → Crypt0's News + tbreak). (2) Gemini 4 — pre-training-run start now dated to July 21 per 9to5Google + Dataconomy, so the ~2-month pre-to-post transition is now specifically dated at both ends; Intelligence Index v4.3.2 numbers pinned (Gemini 3.6 Flash 34.0 vs Opus 5.5 57.6, GPT-6 Astra 52.7, GPT-6 Sol 47.5); Vals Index cross-reference added. (3) Microsoft Agent Framework 1.19.0 — Releasebot Sept 26 digest + Julian Goldie writeups reveal 1.19.0 is a security + storage double-hardening pass, not just security; storage half adds vector-store provider protocols + MongoDB + Azure DocumentDB + Cosmos DB NoSQL connectors, cleanly separating agent state into session identity (MCP-scoped) + long-term memory (vector-store-provider-scoped) in one bump. WebFetch remains EGRESS_BLOCKED across the board; used WebSearch (7 queries) as substitute per prior-run pattern. tier_counts: {1:2, 2:2, 3:0}. Hero images uniformly null (WebFetch blocked). Caps: ~38k/100k tokens, 7/30 fetches, ~13 min wall time — well under all three."
+    },
+    {
       "run_id": "2026-09-27T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
