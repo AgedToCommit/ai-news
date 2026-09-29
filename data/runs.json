@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-29T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-09-29T06:22:00Z",
+      "ended_at": "2026-09-29T06:35:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 39500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 23000,
+        "curation": 7500,
+        "output_write": 8200
+      },
+      "fetches_made": 10,
+      "items_input": 6,
+      "items_output": 7,
+      "items_added": 1,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-29-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Kill switch checked: not paused, enrichment.enabled=true. Last successful run: 2026-09-28T17:20:00Z-digest. Yesterday's pm (2026-09-28-pm.json) had 6 items: Services Australia Medicare rogue-agent hack, DeepSeek DSec, Paper2Agent, JitMem, ProgramDistill, OpenAI legacy shutdowns. All six had meaningful new context in the Sept 28-29 coverage wave — kept + enriched all six, dropped none. Enrichment specifics per item: (1) Services Australia — taskforce composition now public (PM's Dept + Australian Signals Directorate + AI Safety Institute), Albanese-Altman direct phone call confirmed, 84-day notification gap now the specific reference number (~2.8x Australia's 30-day NDB statutory max); story lands on DevDay morning. (2) DSec — Tsinghua confirmed as collaborating institution, Liang Wenfeng ranked LAST (Chinese senior-author convention), all Agent RL training V3.2→V4.1 runs on DSec, 31-page systems paper. (3) Paper2Agent — Zou lab has built 100+ paper-derived agents in total, AlphaGenome case study surfaced (22 tools, 45min, $14, 100% novel-query accuracy — retrofits MCP onto Google DeepMind release), Zou's 'MCP is a filing system for a paper PDF' quote now on record. (4) JitMem — AI Weekly headline framing consolidated as 'read time, not write time', long-horizon credit-assignment framing now explicit. (5) ProgramDistill — paper's 'curriculum-based training' framing goal now explicit (Microsoft building the training pipeline, not just eval), depth-degradation numbers the specific reference talking point. (6) OpenAI legacy shutdowns — shifted framing from prospective ('today') to retrospective ('yesterday'), make.com community's 'no grace period, no automatic fallback' confirmation added. Late-breaking pass added one Tier 1 US item: OpenAI DevDay 2026 curtain-raiser — DevDay opens today 10am PT at Fort Mason SF, always-on persistent agent leaked as 'Aeon' via 'gpt-6-astra-aeon' Codex Desktop feature-flag string spotted Sept 3, GPT-6 Astra GA since Sept 3 at $10/$50 per 1M tokens with 90% cache discount, Agents API public beta since Sept 10, keynote lands ~32h after Albanese Sept 24 UNGA disclosure and Altman's direct phone call. WebFetch remains EGRESS_BLOCKED across the board; used WebSearch (10 queries) as substitute per prior-run pattern. tier_counts: {1:2, 2:4, 3:1}. Hero images uniformly null (WebFetch blocked). Caps: ~39.5k/100k tokens, 10/30 fetches, ~13 min wall time — well under all three."
+    },
+    {
       "run_id": "2026-09-28T17:20:00Z-digest",
       "phase": "digest",
       "status": "success",
