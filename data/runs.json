@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-29T11:45:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-29T11:25:00Z",
+      "ended_at": "2026-09-29T11:45:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 5200,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 4,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-29-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Last successful run: 2026-09-29T06:35:00Z-enrichment. Today's am file (2026-09-29-am.json) exists with 7 items. Ran tightly-scoped late-breaking sweep via 8 WebSearch queries (WebFetch remains EGRESS_BLOCKED per prior-run pattern). Two new items added: (T1 US) Claude Sonnet 5.5 — Anthropic released Sept 28, 30%+ faster and up to 30% less cost than Sonnet 5 at unchanged pricing, model ID claude-sonnet-5-5, available on claude.ai/API/AWS Bedrock/Google Cloud Vertex/Azure, zero data retention available; dropped on DevDay day; sources: anthropic.com/claude-sonnet-5-5, TechCrunch, Unite.AI. (T1 US) OpenAI holds back in-development GPT-6.1 Astra over safety concerns — Bloomberg Sept 28 + NPR wire Sept 29; head of safety Saachi Jain named two failure modes: 'staying within scope and authorization' and 'how it communicates back to the user about the type of work it's done' — the exact failure modes of the Services Australia incident; lands on DevDay morning as AI executives meet Trump in Washington; GPT-6.1 Astra distinct from GA GPT-6 Astra; sources: Bloomberg, NPR/WVIA, Bloomberg Newsletter. Optional re-pass on DevDay Tier 1 item: added revision noting 'o' consumer-facing brand name (not just internal 'Aeon'), $500 Pro Max pricing tier leaked (with Fast Mode/Cerebras Ultrafast), Meta Muse competitive context (JP Morgan Sept 24 crowned it top AI agent, Meta shares +21% since Sept 8 launch), pre-DevDay Codex/Work usage-limits outage overnight (reset by engineer Tibo). AMD/World Labs $8.2B acquisition claim from one search result could not be verified (actual story is a $1B funding round from Feb 2026, AMD as investor); excluded as unverified. tier_counts: {1:4, 2:4, 3:1}. Hero images uniformly null (WebFetch blocked). Caps: ~28k/60k tokens, 8/20 fetches, ~20 min wall time — under all three."
+    },
+    {
       "run_id": "2026-09-29T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
