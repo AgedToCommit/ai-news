@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-30T11:28:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-09-30T11:00:00Z",
+      "ended_at": "2026-09-30T11:28:00Z",
+      "wall_time_ms": 1680000,
+      "tokens_used": 19000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 14500,
+        "curation": 3000,
+        "output_write": 1000
+      },
+      "fetches_made": 10,
+      "items_input": 10,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-30-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Kill switch checked: not paused, refresh.enabled=true. Last successful run: enrichment ended 2026-09-30T06:20:00Z. Today's am file (2026-09-30-am.json) exists with 5 items. Ran tightly-scoped late-breaking sweep via 10 WebSearch queries (WebFetch egress-blocked per prior-run pattern; WebSearch-only sweep). Two new items added: (T1 US) GPT-6 Sol + GPT-6 Luna — released September 22 with 50% API price cuts (Sol $2/$10 per 1M input/output, Luna $0.10/$0.50/1M); completed a three-tier GPT-6 family (Astra/Sol/Luna); story had been excluded from prior runs which focused on the DevDay product launches; the Sept 22 model release slipped through without a standalone item; confirmed from Pulse2, VKTR, iClarified, AlternativeTo, ComputingForGeeks, OpenRouter. (T2 US) AMD acquires World Labs (Fei-Fei Li's spatial-intelligence startup) for $8.2B all-stock — Fei-Fei Li joins AMD as EVP and Chief Scientist; AMD's second-largest acquisition ever; deal announced September 28; story excluded from yesterday's refresh as unverified but now confirmed by Bloomberg, TechCrunch, CNBC, AMD IR press release, AMD Newsroom. Optional re-pass on Tier 1 items: added refresh revision to item 2 (DevDay by-the-numbers) to correct 'GPT-6.1 Sol' → 'GPT-6 Sol' and note the standalone Sol+Luna item. Hero images uniformly null (WebFetch egress-blocked). Caps: ~19k/60k tokens, 10/20 fetches, ~28 min wall time — under all three. Final: 2 items added, 5 kept, 0 dropped, 7 total in am snapshot. tier_counts {1:3, 2:4, 3:0}."
+    },
+    {
       "run_id": "2026-09-30T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

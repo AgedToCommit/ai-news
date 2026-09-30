@@ -2,12 +2,13 @@
   "snapshot_id": "2026-09-30-am",
   "snapshot_type": "am",
   "calendar_date": "2026-09-30",
-  "generated_at": "2026-09-30T06:20:00Z",
-  "generated_at_local": "2026-09-30T02:20:00-04:00",
+  "generated_at": "2026-09-30T11:28:00Z",
+  "generated_at_local": "2026-09-30T07:28:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-09-30T06:20:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-09-30T06:20:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-09-30T11:28:00Z", "duration_ms": 1680000 }
   ],
-  "tier_counts": { "1": 2, "2": 3, "3": 0 },
+  "tier_counts": { "1": 3, "2": 4, "3": 0 },
   "items": [
     {
       "id": "openai-devday-2026-curtain-raiser-aeon-persistent-agent-september-29",
@@ -111,6 +112,11 @@
           "at": "2026-09-30T06:20:00Z",
           "by": "enrichment",
           "change": "post-keynote enrichment — replaced pre-keynote speculation with the actually-shipped list per CNBC, KQED, Axios, KSAT, Simon Willison live blog: plugin extensions (full apps inside ChatGPT/Codex), Sign in with ChatGPT GA (from July 29 beta), GPT-6.1 Sol model tier, Ultrafast Cerebras speed tier (750 tok/sec, 14x standard), $500/mo Pro Max plan bundling Ultrafast, Dots always-on agents, 1.2B ChatGPT weekly-user disclosure. Two conspicuous non-appearances flagged: (a) Sweetpea hardware not unveiled (separately confirmed delayed to 2027 per OpenAI court filing in iyO trademark lawsuit); (b) no explicit GPT-6 Cyber stage moment (KSAT: Altman 'avoided mention of security concerns' entirely). Altman's '20+ launches' framing oversells: visible marquee list is closer to seven substantive items."
+        },
+        {
+          "at": "2026-09-30T11:28:00Z",
+          "by": "refresh",
+          "change": "name correction — 'GPT-6.1 Sol' should read 'GPT-6 Sol' (model ID on OpenRouter/API is gpt-6-sol, not gpt-6.1-sol; confirmed via Pulse2/VKTR/iClarified/AlternativeTo coverage of the Sept 22 release); GPT-6 Sol was released alongside GPT-6 Luna on September 22, a week before DevDay. A standalone item covering the Sol+Luna pricing and release has been added as a new item (id: openai-gpt-6-sol-luna-api-50-percent-price-cut-september-2026)."
         }
       ],
       "takes": [
@@ -311,6 +317,107 @@
           "source": "LetsDataScience — OpenAI Delays Shipping Mystery Hardware Device",
           "url": "https://letsdatascience.com/news/openai-delays-shipping-mystery-hardware-device-6fac53a4",
           "take": "Data-audience reference — useful for the scaled-down-form-factor framing and the 'simple headset that proxies cloud LLM calls' engineering description."
+        }
+      ]
+    }
+  ],
+    {
+      "id": "openai-gpt-6-sol-luna-api-50-percent-price-cut-september-2026",
+      "tier": 1,
+      "title": "OpenAI released GPT-6 Sol and GPT-6 Luna on September 22 — a week before DevDay — with 50% API price cuts: Sol at $2/$10 per million input/output tokens (down from $4/$20 for GPT-5.6 Sol), Luna at $0.10/$0.50 per million (down from $0.20/$1.20); Sol targets demanding agentic coding and professional workflows, Luna targets high-volume focused tasks; both share the GPT-6 Astra shape (1.05M-token context window, text+image in) and complete a three-tier GPT-6 family: Astra (flagship), Sol (capable+affordable), Luna (fast+cheap)",
+      "summary": "OpenAI released GPT-6 Sol and GPT-6 Luna on September 22, one week before DevDay, with API pricing 50% lower than the GPT-5.6 predecessors. GPT-6 Sol costs $2 per million input tokens and $10 per million output tokens (down from $4/$20 for GPT-5.6 Sol) and is positioned for demanding coding, agentic workflows, computer use, and long-horizon software engineering. GPT-6 Luna costs $0.10/$0.50 per million tokens (down from $0.20/$1.20) and is positioned for high-volume focused tasks. Both models share the GPT-6 Astra architecture — 1.05M token context window, 128K max output, text and image input — but at lower cost, completing a three-tier GPT-6 family: Astra (flagship), Sol (capable and affordable), Luna (fast and cheap).",
+      "link": "https://pulse2.com/openai-launches-gpt-6-sol-and-luna/",
+      "why_it_matters": "For Gabe: this is the specific 'the API prices that matter for your Python side-projects just dropped by half' item. Three specific things worth writing down. First, the specific **GPT-6 Luna pricing — $0.10 input / $0.50 output per 1M tokens** — is the specific concrete number that changes the hobbyist economics. At those prices, a Python script doing 1,000 calls at ~500 tokens each costs about $0.05 in input tokens — roughly equivalent to what you'd pay for a coffee every 10,000 calls. Compare: GPT-6 Astra (the flagship) still runs $10/$40 per 1M input/output. Luna is the tier you'd use for **high-throughput tasks that don't need flagship reasoning**: summarizing a bunch of documents, classifying text, generating alt text, filling structured output from semi-structured input. If your side-project involves looping over a list of items and running a quick LLM call on each, Luna is now the default cost-efficient pick. Second, the specific **GPT-6 Sol positioning — 'demanding agentic coding and professional workflows'** — is the specific concrete signal about where OpenAI sees the Sol-vs-Astra split. Sol at $2/$10 is 5x cheaper than Astra ($10/$40) but positioned for the same use cases (coding, agents, computer use). That's the specific concrete alternative to using Astra for all your agent-orchestration tasks: Sol is now OpenAI's midrange tier for tasks that need better-than-Luna reasoning but don't need full flagship. The practical implication for a Python hobbyist: **if you're calling OpenAI's API for any coding-assistant or agent-orchestration task, Sol is likely the tier you want** — not Luna (not smart enough for complex code), not Astra (5x more expensive for similar output quality on most tasks). Third, the specific **release timing — September 22, a week before DevDay** — is the signal about how OpenAI sequenced its price strategy. Sol/Luna were Altman's 'we can offer leading AI models across every price point' move ahead of the DevDay '20+ launches' narrative. Combined with the Ultrafast/$500 Pro Max tier announced at DevDay (speed as the new premium differentiator), the GPT-6 family is now tiered by capability (Astra > Sol > Luna) AND speed (Ultrafast = Cerebras-powered fast path). Practical read for anyone tracking OpenAI vs. Anthropic: **Claude Sonnet 5.5 at $3/$15 per 1M now sits between GPT-6 Sol ($2/$10) and GPT-6 Astra ($10/$40) on price, while Anthropic claims Sonnet 5.5 matches or exceeds Sol on most benchmarks per the 30%+ speed/capability improvements announced Sept 28** — that's the specific concrete competitive frame for the next month of model-pricing decisions.",
+      "why_it_matters_brief": "GPT-6 Sol ($2/$10/1M) and Luna ($0.10/$0.50/1M) released Sept 22 with 50% price cuts — Sol for demanding agentic coding, Luna for high-volume tasks; Claude Sonnet 5.5 at $3/$15 now sits between them on price, completing a 3-tier GPT-6 family that competes directly with Anthropic's Sonnet+Haiku pricing ladder.",
+      "source": {
+        "name": "Pulse2 — OpenAI Launches GPT-6 Sol And Luna With 50% Lower API Pricing",
+        "type": "scrape",
+        "url": "https://pulse2.com/openai-launches-gpt-6-sol-and-luna/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-30T11:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-30T11:20:00Z",
+          "by": "refresh",
+          "change": "created — Tier 1 US model + pricing story. GPT-6 Sol ($2/$10/1M input/output) and GPT-6 Luna ($0.10/$0.50/1M) released September 22 with 50% price cuts vs GPT-5.6 predecessors. Released a week before DevDay as part of Altman's 'leading AI models across every price point' pre-DevDay positioning. Sol for demanding agentic coding and professional workflows, Luna for high-volume focused tasks. Both share GPT-6 Astra's 1.05M-token context window and text+image input. Completes a three-tier GPT-6 family: Astra (flagship, $10/$40/1M), Sol (capable+affordable, $2/$10/1M), Luna (fast+cheap, $0.10/$0.50/1M). Story was excluded from yesterday's refresh and this morning's enrichment (those runs focused on DevDay product launches; the Sept 22 model release slipped through without a standalone item). Sources: Pulse2, VKTR, iClarified, AlternativeTo, ComputingForGeeks, Requesty.ai, OpenRouter model card (gpt-6-sol)."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Pulse2 — OpenAI Launches GPT-6 Sol And Luna With 50% Lower API Pricing",
+          "url": "https://pulse2.com/openai-launches-gpt-6-sol-and-luna/",
+          "take": "Primary reference for the 50% price cut framing and the specific Sol + Luna pricing ($2/$10 and $0.10/$0.50 per 1M input/output)."
+        },
+        {
+          "source": "VKTR — OpenAI Launches GPT-6 Sol and Luna, Cuts API Prices in Half",
+          "url": "https://www.vktr.com/ai-platforms/openai-launches-gpt6-sol-and-luna-cuts-api-prices-in-half/",
+          "take": "Mainstream reference for the 'cuts API prices in half' framing and the three-tier GPT-6 family positioning."
+        },
+        {
+          "source": "iClarified — OpenAI Cuts API Prices 50% with GPT-6 Sol and Luna",
+          "url": "https://www.iclarified.com/102351/openai-cuts-api-prices-50-with-gpt-6-sol-and-luna",
+          "take": "Consumer-audience reference — useful for the September 22 release-date confirmation and the Luna vs Sol positioning split."
+        },
+        {
+          "source": "OpenRouter — gpt-6-sol model card",
+          "url": "https://openrouter.ai/openai/gpt-6-sol",
+          "take": "Technical reference for the model ID (gpt-6-sol, not gpt-6.1-sol) and the API pricing as listed on a multi-provider aggregator — cross-check for the name correction in the DevDay by-the-numbers item."
+        }
+      ]
+    },
+    {
+      "id": "amd-acquires-world-labs-fei-fei-li-8-2-billion-physical-ai",
+      "tier": 2,
+      "title": "AMD acquires World Labs — Fei-Fei Li's spatial-intelligence startup — for $8.2 billion in an all-stock deal announced September 28, with Li joining AMD as executive VP and Chief Scientist; the deal is AMD's second-largest acquisition ever (after the ~$50B Xilinx deal), gives AMD spatial-intelligence models for generating and simulating interactive 3D environments from text/image/video inputs, and positions AMD as a direct competitor in 'physical AI' and autonomous-systems markets (robotics, self-driving) alongside NVIDIA's Cosmos platform",
+      "summary": "AMD announced on September 28 that it has agreed to acquire World Labs, the spatial-intelligence AI startup founded by Fei-Fei Li, for $8.2 billion in an all-stock transaction expected to close by year-end pending regulatory approvals. World Labs develops spatial-intelligence models that generate, reconstruct, and simulate interactive 3D environments from text, image, and video inputs, as well as technology for robotic learning and simulation. Under the deal, Fei-Fei Li joins AMD as executive vice president and Chief Scientist — Li is the Stanford computer science professor behind the ImageNet database and is widely considered a pioneer of modern computer vision. The acquisition is AMD's second-largest on record (behind the ~$50B Xilinx acquisition in 2022) and positions AMD as a direct entrant in the 'physical AI' market alongside NVIDIA's Cosmos spatial-intelligence platform.",
+      "link": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+      "why_it_matters": "For Gabe: this is the specific 'AMD just made its biggest AI strategy bet since Xilinx, and the bet is spatial intelligence rather than LLM acceleration' item. Three specific things worth writing down. First, the specific **AMD-acquiring-World-Labs strategy logic** — AMD paid $8.2B for a company that builds spatial-intelligence models (perceive + generate + simulate 3D environments) rather than another LLM/transformer research lab — is the specific concrete signal about where the AI compute strategy is heading beyond text models. NVIDIA owns the GPU market for LLM training and inference; but NVIDIA also bet early on 'physical AI' with Cosmos (launched at CES 2025). AMD acquiring World Labs is the specific response: **AMD is betting that the next wave of AI compute demand is for robotics/simulation/physical-world-reasoning rather than text + image inference**, and that Fei-Fei Li's spatial-intelligence research is the right technology base to compete with NVIDIA Cosmos for that market. For a hobbyist: this is the kind of move that shows up in Gabe's toolchain 2-3 years from now when AMD's spatial-intelligence models start appearing in PyTorch/ONNX/ML frameworks, but the story worth noting now is the strategic direction. Second, the specific **Fei-Fei Li joining AMD as Chief Scientist** is the specific concrete signal about AMD's brand-and-talent strategy. Li is one of the most credible AI researchers alive — her ImageNet work is the direct ancestor of modern computer vision (every image classification system since 2012 traces back to the AlexNet/ImageNet competition she organized). Hiring her as Chief Scientist is AMD's specific signal that it's competing at the research credibility level, not just the silicon performance level. For context: NVIDIA has Jensen Huang and a deep bench of GPU-architecture researchers; Intel has struggled to build equivalent AI credibility. AMD bringing Li onboard is the specific concrete attempt to close that credibility gap at the frontier research level. Third, the specific **AMD's previous investment context** — AMD had invested in World Labs' February 2026 $1B funding round as a minority investor alongside NVIDIA, Andreessen Horowitz, Autodesk, and Fidelity — is the specific concrete signal that the acquisition isn't a surprise pivot but a follow-on to a proven bet. AMD invested, watched World Labs for several months, liked what they saw, and then bought the company outright. The specific practical implication for anyone tracking the AI chip market: **AMD is making a harder bet on physical AI than NVIDIA is** (NVIDIA plays both LLM and physical AI; AMD is going all-in on physical AI as the differentiated play against NVIDIA's LLM-acceleration dominance). That's a specific concrete competitive dynamics shift that will play out over the next 3-5 years in ML framework support, hardware availability, and pricing for robotics/simulation workloads.",
+      "why_it_matters_brief": "AMD acquires Fei-Fei Li's World Labs for $8.2B — its second-largest deal ever — giving AMD spatial-intelligence models for 3D-world generation/simulation and Li as Chief Scientist; the strategic bet is that physical AI (robotics, simulation) is the next wave of compute demand where AMD can differentiate against NVIDIA's LLM-acceleration dominance.",
+      "source": {
+        "name": "AMD Investor Relations — AMD to Acquire World Labs to Advance the Future of AI Compute",
+        "type": "scrape",
+        "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-09-30T11:25:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-09-30T11:25:00Z",
+          "by": "refresh",
+          "change": "created — Tier 2 US compute/infrastructure story. AMD announces $8.2B all-stock acquisition of World Labs (Fei-Fei Li's spatial-intelligence startup), announced September 28; Fei-Fei Li joins AMD as EVP and Chief Scientist. AMD's second-largest acquisition ever (after ~$50B Xilinx). World Labs builds spatial-intelligence models for generating/simulating 3D environments from text/image/video; relevant to robotics, self-driving, simulation workloads. AMD was already a minority investor from the February 2026 $1B funding round (alongside NVIDIA, a16z, Autodesk, Fidelity). Strategic bet: physical AI as AMD's differentiation against NVIDIA's LLM-acceleration dominance. Story was previously excluded from yesterday's refresh as 'could not be verified' (the verifiable prior story was a $1B investment round, not an acquisition); today's extended search returned Bloomberg, TechCrunch, CNBC, AMD IR press release, and AMD Newsroom as confirming sources. Sources: ir.amd.com (AMD press release), Bloomberg, TechCrunch, CNBC, Fortune, Reuters/Investing.com, Yahoo Finance, AMD Newsroom, Tech Insider."
+        }
+      ],
+      "takes": [
+        {
+          "source": "AMD Investor Relations — AMD to Acquire World Labs to Advance the Future of AI Compute",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+          "take": "AMD's own press release — canonical reference for the deal terms ($8.2B all-stock, close by year-end), World Labs' technology description, and Fei-Fei Li's EVP + Chief Scientist title."
+        },
+        {
+          "source": "Bloomberg — AMD to Buy Fei-Fei Li's World Labs Startup for $8.2 Billion",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-28/amd-to-buy-fei-fei-li-s-world-labs-ai-startup-for-8-2-billion",
+          "take": "Mainstream financial-press reference — canonical for the 'all-stock transaction' framing and the 'second-largest acquisition on record' context (after Xilinx)."
+        },
+        {
+          "source": "TechCrunch — AMD will acquire Fei-Fei Li's World Labs for $8.2B",
+          "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+          "take": "Tech-press reference — useful for the startup/VC context framing and cross-referencing the February 2026 $1B funding-round-to-acquisition progression."
+        },
+        {
+          "source": "Fortune — AMD acquires Fei-Fei Li's physical AI startup World Labs for $8.2 billion",
+          "url": "https://fortune.com/2026/09/28/amd-acquires-world-labs-startup-fei-fei-li-8-2-billion/",
+          "take": "Business-press reference for the 'physical AI' strategic framing and the competitive-positioning-against-NVIDIA Cosmos angle."
         }
       ]
     }
