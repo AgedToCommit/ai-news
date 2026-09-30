@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-09-30T17:20:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-09-30T17:08:00Z",
+      "ended_at": "2026-09-30T17:20:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 800,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 9000,
+        "output_write": 6200
+      },
+      "fetches_made": 12,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-09-30-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest.enabled=true. Last successful run: 2026-09-30T11:28:00Z-refresh. Today's am file (2026-09-30-am.json) had a JSON structural bug — refresh had appended two items (Sol/Luna, AMD/World Labs) OUTSIDE the items[] array (extra ']' at line 323); fixed as a data-integrity repair (replaced ']  \\n    {' with '},\\n    {') before proceeding. am file now parses cleanly with 7 items. Promotion rule applied: all 7 am items excluded from pm output per default (no promotions — no am item has materially deepened during the afternoon window). Ran WebSearch-only sweep (12 queries; WebFetch remains EGRESS_BLOCKED per prior-run pattern). Items in output: (T1 US) OpenAI Apps SDK / plugin extensions post-DevDay developer deep-dive — the specific concrete developer-surface behind DevDay's plugin-extensions announcement; Apps SDK is a superset of the Model Context Protocol (MCP) that adds UI primitives on top of MCP's data-and-tools plumbing; open source and portable across ChatGPT, Claude Desktop, Cursor, Cline; July 28 MCP stateless spec revision is what makes Apps SDK practical at 1.2B-user scale; sources: openai.com Apps SDK preview page, TMCnet, IntuitionLabs, GetDrio, LLMBase, SerpApi state-of-MCP H1 2026. (T2 Asia) DeepSeek V4.1 Flash — Sept 10 open-weights 552B MoE with Compressed Expert Dispatch (CED), 1M context, vision, reasoning, tool use; specific concrete open-weights counterpoint to OpenAI's closed-ecosystem DevDay pitch; frontier-capability tier now available in both closed-API and open-weights form; sources: llmreference.com, datalearner.com, framia.converge.ai benchmark coverage. (T2 EU) EU AI Act GPAI enforcement 60 days in — enforcement powers went live Aug 2, 2026; AI Office running technical compliance dialogues rather than formal enforcement; fines up to €15M or 3% of worldwide turnover in reserve; substantive obligations (transparency, copyright, training-data summaries, and for systemic-risk models: adversarial testing) enforceable at any time; different regulatory angle from am item #4 (Trump EO 14409/CFAA, US-focused); sources: labs.cloudsecurityalliance.org research note (Aug 29), artificialintelligenceact.eu article 88, cadeproject.org, bastion.tech. (T2 Global) vLLM vs SGLang — open-source LLM serving landscape after TGI entered maintenance mode Dec 2025; vLLM for dense-model general-throughput + broadest hardware support, SGLang for MoE (DeepSeek, Qwen) + structured outputs + RAG; both Python packages exposing OpenAI-compatible HTTP APIs, so swap-in-place with existing openai-client code; broadening item for Gabe (moves past 'pay per token' toward self-hosting); sources: premai.io/blog, computingforgeeks.com, yottalabs.ai. Hero images uniformly null (WebFetch egress-blocked). tier_counts {1:1, 2:3, 3:0}. Caps: ~34k/100k tokens, 12/50 fetches, ~12 min wall time — well under all three. Final: 4 items added, 0 kept, 0 dropped, 4 total in pm snapshot."
+    },
+    {
       "run_id": "2026-09-30T11:28:00Z-refresh",
       "phase": "refresh",
       "status": "success",
