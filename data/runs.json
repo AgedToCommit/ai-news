@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-02T17:40:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-02T17:30:00Z",
+      "ended_at": "2026-10-02T17:40:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 15500,
+        "output_write": 7000
+      },
+      "fetches_made": 13,
+      "items_input": 10,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-02-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive (control.paused=false, digest.enabled=true). Last successful run: 2026-10-02T11:20:00Z-refresh. Today's am file (2026-10-02-am.json) parsed cleanly with 7 items (3 T1, 4 T2): David Luan Amazon exit, Anthropic IPO, Agno, SWE-Rebench, GitHub Copilot (from yesterday's pm, enriched), plus OpenAI Medicare breach and Google Suncatcher (added by refresh). Promotion rule applied: all 7 am items excluded from pm output per default — no am item has materially deepened in the afternoon window. Ran WebSearch-only sweep (13 queries; WebFetch intentionally skipped — pattern of EGRESS_BLOCKED on candidate domains observed in prior digest and refresh runs). Items in output: (T1 Global) Gemini 4 Pro leaked benchmarks — stealth-slot leaks on Arena since mid-September 2026 have hardened into a consistent story: DeepSWE v1.1 88.7%, Terminal-bench 2.1 95.3%, GDPval-AA v2 2064 (only above 2000), OSWorld-2.0 86.8%, leads GPT-6 Astra and Claude Fable 5.1 across software engineering / agentic / reasoning / multimodal; still unofficial; framed for Gabe around (1) wide-spectrum lead rules out single-benchmark explanation, (2) pricing-tier Google picks at launch is the market event (Fable/Astra $10/$50 vs Gemini 3.8 Flash $0.75/$3.75); sources: besthub.dev gemini-4-pro-leaked-benchmarks, cometapi.com, borncity.com, buildfastwithai.com. (T2 Global) MCP matures — the 2026-07-28 stateless spec (removed Mcp-Session-Id, removed initialize handshake, added Multi Round-Trip Requests, header-based routing, cacheable discovery, extensions framework, Tasks, MCP Apps, auth hardening) plus LangChain v1.4.0 (Sept 3, 2026) bringing MCP into core as langchain.mcp namespace with MCPAdapter means a single Python MCP server now works with Claude / Cursor / Cline / Copilot Agent Mode / LangChain / ChatGPT with no per-client adapter work; framed for Gabe as the write-once-use-everywhere pitch finally being true; sources: modelcontextprotocol.net/specification/2026-07-28/changelog, blog.cloudflare.com/mcp-v2, pub.towardsai.net MCP-grows-up, mer.vin mcps-new-roadmap, changelog.langchain.com langchain-core 1.4.0. (T2 US) Enterprise AI week Oct 6-12 — ServiceNow World Forum Chicago (Oct 6, AI Control Tower + AI Specialists + Workflow Data Fabric + Context Engine + Action Fabric), Marvell Investor Day (Oct 6, AI-infrastructure growth strategy and chip roadmap), Salesforce Winter '27 (GA Oct 12, auto-enables Agentforce across eligible orgs, Autonomous Voice scheduling, Agentic Commerce Search with 13% conversion lift, two new multi-channel-campaign and lead-nurture agents); framed for Gabe as the clearest week-sized evidence of enterprise AI finishing its move from opt-in pilot to default platform capability; surfaces agent-observability (Langfuse, Arize Phoenix, Opik, OpenInference) as the next space to watch; sources: salesforce.com/news winter-2027, salesforceben.com Agentforce-auto-enable, smallbiztrends.com, thestarrconspiracy.com, citrincooperman.com. (T3 Global) Atria Dawn arXiv paper — position piece arguing the agent SYSTEM, not the model, is now the superintelligent artifact; proposes separating 'base-model intelligence' from 'agentic intelligence' as measurement categories; connects directly to today's am SWE-Rebench item (standardized 128K-ReAct scaffold deliberately normalizes away the scaffold variable, which Atria Dawn argues is itself an underestimate of real-world agent systems); framed for Gabe as the reframing that explains why 2026 agent tools feel so different and the practical implication to pick agent tools by harness capability (sub-agents, parallel exploration, MCP support, recovery from errors) rather than by base-model benchmark; sources: arxiv.org/pdf/2609.15818, analyticsvidhya.com top-llm-research-papers-2026, magazine.sebastianraschka.com llm-research-papers-2026-part1. Hero images uniformly null (WebFetch egress-blocked on candidate domains). tier_counts {1:1, 2:2, 3:1}. Caps: ~46k/100k tokens, 13/50 fetches, ~10 min wall time — well under all three. Final: 4 items added, 0 kept, 0 dropped, 4 total in pm snapshot."
+    },
+    {
       "run_id": "2026-10-02T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
