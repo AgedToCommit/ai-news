@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-03T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-03T17:05:00Z",
+      "ended_at": "2026-10-03T17:30:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 12000,
+        "output_write": 6000
+      },
+      "fetches_made": 22,
+      "items_input": 12,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-03-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: kill switch inactive (control.paused=false, digest.enabled=true). Today's am file (2026-10-03-am.json) read with 5 items (Gemini 4 Pro T1, MCP+LangChain T2, Enterprise AI Week T2, Atria Dawn T1, GPT-6.1 Astra scrapped T1); all excluded from pm per promotion rule, no promotion exceptions applied. Pattern of EGRESS_BLOCKED on WebFetch continues from prior runs, so WebSearch-only sweep (22 queries). Items output: 5 new items created, 0 kept, 0 dropped, 0 promoted. T1 (1): Claude Sonnet 5.5 / Haiku 5.5 'coming weeks' launch-window \u2014 11 days since Anthropic's Sept 22 Opus 5.5 announcement, still no release date, pricing, or model cards; leaks (unverified) suggesting Haiku 5.5 at sub-$1/M input approaching Sonnet-5 quality. T2 (3): PyTorch Conference NA 2026 (Oct 20-21 San Jose) keynote lineup \u2014 Simon Mo/vLLM, Meta PyTorch team, Google Cloud, NVIDIA, Cohere, Sara Hooker 'Beyond Brute Force', native PyTorch on Trainium; Agent SDK proliferation \u2014 every major lab now ships one (OpenAI Agents SDK, Google ADK, Claude Agent SDK rename, Microsoft merged AutoGen+Semantic Kernel), protocol layer consolidating around MCP+A2A under Linux Foundation; Rust as the AI developer tool infrastructure language \u2014 OpenAI's Codex (Rust), uv (Rust), Ruff (Rust), litellm-rust gateway (June 2026). T3 (1): Anthropic IPO shifted to mid-October per Reuters \u2014 list before Nov midterms, Goldman/JPM/MS leading, $965B valuation discussion. Final tier_counts: {1:1, 2:3, 3:1}. 5 items in output file."
+    },
+    {
       "run_id": "2026-10-03T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
@@ -27,7 +55,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Standard refresh path. Pre-flight: kill switch inactive. This morning's am file (2026-10-03-am.json) read cleanly with 4 items (T1: Gemini 4 Pro, Atria Dawn; T2: MCP/LangChain, Enterprise AI Week). WebFetch EGRESS_BLOCKED as in prior runs — WebSearch-only approach (11 queries). Items added: 1 new Tier 1 item — OpenAI GPT-6.1 Astra scrapped release (Sept 28-29, confirmed via CNBC/Hacker News/AI Weekly/Korea Times; missed by prior digest/enrichment runs; Korea Times provides Asia-cycle provenance). Atria Dawn item updated: corrected the 'within a week API' prediction from enrichment — Vultr appears to have deployed it (docs.vultr.com/models/internlm-atria-dawn) but no official hosted API pricing announced and broader inference providers have not listed it. Gemini 4 Pro item: no new information beyond what enrichment already captured. Final tier_counts: {1:3, 2:2, 3:0}. 5 items in output file."
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive. This morning's am file (2026-10-03-am.json) read cleanly with 4 items (T1: Gemini 4 Pro, Atria Dawn; T2: MCP/LangChain, Enterprise AI Week). WebFetch EGRESS_BLOCKED as in prior runs \u2014 WebSearch-only approach (11 queries). Items added: 1 new Tier 1 item \u2014 OpenAI GPT-6.1 Astra scrapped release (Sept 28-29, confirmed via CNBC/Hacker News/AI Weekly/Korea Times; missed by prior digest/enrichment runs; Korea Times provides Asia-cycle provenance). Atria Dawn item updated: corrected the 'within a week API' prediction from enrichment \u2014 Vultr appears to have deployed it (docs.vultr.com/models/internlm-atria-dawn) but no official hosted API pricing announced and broader inference providers have not listed it. Gemini 4 Pro item: no new information beyond what enrichment already captured. Final tier_counts: {1:3, 2:2, 3:0}. 5 items in output file."
     },
     {
       "run_id": "2026-10-03T06:30:00Z-enrichment",
@@ -7509,119 +7537,6 @@
       "error": null,
       "partial": false,
       "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-04T17:15:00Z (digest). Yesterday's pm (2026-07-04-pm.json) had 5 items (1 Tier 1, 4 Tier 2, 0 Tier 3) \u2014 all 5 surfaced meaningful overnight context via web search and were kept and enriched (0 dropped). Enrichment findings by item: (1) Anthropic-Pentagon unsealed emails (Tier 1) \u2014 MAJOR ENRICHMENT: added Judge Rita Lin's July 4 order in Anthropic v. Department of War calling the unsealed emails 'exceedingly difficult to square' with the government's simultaneous 'hostile' and 'intolerable risk' supply-chain-risk-designation framing (first judicial framing on the credibility of the Pentagon's designation); expanded Emil Michael conflict-of-interest disclosure per WSJ/AI Weekly pickup \u2014 beyond the previously reported xAI stock, Michael held $2M\u2013$10M of Perplexity AI stock (direct Anthropic competitor) AND had previously sat on Perplexity's board; added Axios May 7 'no resolution in sight' Pentagon-tech-chief backgrounder and Time March 11 backgrounder as additional context takes; title/summary/why_it_matters/why_it_matters_brief all updated. (2) Anthropic Chinese-access loopholes (Tier 2) \u2014 ENRICHED: Microsoft now specifically named per Spotlight on China / TheNews.pk / Borsa Italiana / FreePressJournal / Seeking Alpha July 4-5 follow-ups: Microsoft reportedly sold Azure API access to Chinese companies whose Singapore-registered entities were the buyer of record, letting mainland engineers use Claude internally through the Azure surface; added Anthropic walkback framing per July 5 reporting \u2014 by early July Anthropic had walked back some covert detection measures (July 2 Claude Code steganographic fingerprinting removal already in yesterday's am is the concrete example) after users pushed back, leaving identity-verification + transfer-station-takedown as the public two-track enforcement architecture; Ant Financial intranet-access-connected-to-Singapore-entity detail sharpened per Spotlight on China. (3) Vercel Agent Runs (Tier 2) \u2014 ENRICHED: July 4-5 ecosystem-comparison context added \u2014 eve enters a growing agent-framework ecosystem (LangGraph, CrewAI, AutoGen, Strands Agents SDK); Vercel's substantive distinguisher is bundling durable execution + sandboxed code execution + built-in evaluations + approvals + scheduling + deployment with agent-as-directory-of-files as the organizing pattern; developer skepticism captured via Vikranth Kanumuru's comment 'I don't get what is this changing from existing frameworks \u2014 are you even removing deterministic orchestration to be more unpredictable'; portability outside the Vercel runtime flagged as the open tradeoff practitioners are watching. (4) Meta Brain2Qwerty v2 (Tier 2) \u2014 ENRICHED: added The Register June 30 skeptic-anchor framing 'improves on prior projects, but still isn't great' as the substantive counter to the 8%\u219261% step-function framing (MEG requires room-sized magnetically-shielded environment, 9-volunteer sample small, 61% average still trails implants); added Squared Technology July 4-5 read that amplifies the same skepticism while flagging the log-linear scaling curve as the substantive counter; sharpened the GitHub code-release detail (facebookresearch/brain2qwerty, convolutional-encoder + transformer + character-level-language-model architecture). (5) Z.ai ZCode (Tier 2) \u2014 ENRICHED: July 4-5 shipping-cadence detail per AI Weekly: eight public releases between June 26 and July 3, version 3.2.5 shipped July 3 (credibility signal that ZCode is not launch-and-abandon); pricing-tier clarification per Nerova and Digital Applied: three tiers not two \u2014 $16.20 Lite / $64.80 Pro (5\u00d7 Lite usage) / $144 Max (20\u00d7 Lite usage); 5-day free trial surface: 3M tokens/day GLM-5.2 + 2M tokens/day GLM-5-Turbo, ~1.5\u00d7 effective quota for GLM Coding Plan subscribers, 0.67\u00d7 off-peak, running through July 31 2026; added Tony Reviews Things and TechPlanet July 4-5 practitioner-review takes. Late-breaking pass: 1 item added. (6) UN Global Dialogue on AI Governance (Tier 2) \u2014 NEW ITEM: inaugural session opens July 6-7 in Geneva at Palexpo Convention Centre; established by UN General Assembly as first multilateral platform whose sole remit is AI governance; 193 UN Member States plus private sector, civil society, academia and technical community; co-chaired by El Salvador's H.E. Egriselda L\u00f3pez and Estonia's H.E. Rein Tammsaar; runs back-to-back with WSIS Forum 2026 (July 6-10) and ITU AI for Good Global Summit (July 7-10) as the Geneva stack \u2014 11,000+ participants from 169+ countries per Axios July 1 preview; primary sources UN official page + UNESCO + ITU media centre + Indico.UN + Axios exclusive. Considered and rejected for late-breaking: no dated July 4-5 Tier-1 model releases from Anthropic/OpenAI/Google DeepMind/Meta (July 4 US Independence Day, July 5 Sunday \u2014 lightest news cycle of the week as expected). Conservative one-add-only decision rather than promote-stale-news; matches yesterday's precedent. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (8 queries \u2014 5 per-item enrichment + 2 late-breaking sweep + 1 UN-detail confirmation). Hero images null across all items (no reliable og:image fetch in sandbox \u2014 WebFetch blocked). tier_counts: 1 tier-1 / 5 tier-2 / 0 tier-3."
-    },
-    {
-      "run_id": "2026-07-04T17:15:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-07-04T17:08:00Z",
-      "ended_at": "2026-07-04T17:15:00Z",
-      "wall_time_ms": 420000,
-      "tokens_used": 46000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 800,
-        "deep_fetch": 0,
-        "discovery_search": 26000,
-        "curation": 14000,
-        "output_write": 5200
-      },
-      "fetches_made": 15,
-      "items_input": 8,
-      "items_output": 5,
-      "items_added": 5,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-04-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled. Today's am file exists (11 items) \u2014 all excluded by default per promotion rule (no am items materially deepened enough to warrant promotion). Since-filter: 2026-07-04T11:00:00Z (last successful refresh run). WebSearch-only sourcing (WebFetch returns 403 in sandbox). 15 web searches across discovery sweeps for Anthropic/OpenAI/Google/coding-tools/research/July-3-4-specific keywords. July 4 US Independence Day \u2014 lighter US news cycle as expected; picked up international and open-source content plus a Pentagon-litigation story unsealed July 2. Items added: (1) Anthropic-Pentagon unsealed court emails (Tier 1) \u2014 July 2 unsealing in ND Cal reveals Amodei-Michael exchange, Pentagon undersecretary Emil Michael's xAI stock disclosed at $500K-$1M sold for $5M-$25M during negotiation, 'all lawful uses' framing would have voided Anthropic's no-mass-domestic-surveillance and no-fully-autonomous-weapons red lines, Feb 27 Hegseth designation of Anthropic as supply-chain risk (first time applied to a domestic US company). (2) Anthropic Chinese-access loopholes crackdown (Tier 2) \u2014 FT July 3 scoop on Ant Financial Singapore subsidiary, ByteDance VPN reimbursements, Azure foreign-shell entities, timezone/usage-pattern fingerprinting, transfer-station targeting, live-selfie + government-ID verification; MEDIANAMA transfer-station-economy explainer; complementary to the Claude Code steganography item already in today's am snapshot. (3) Vercel Agent Runs in MCP + CLI (Tier 2) \u2014 July 3 changelog ship, list_agent_run_projects/list_agent_runs/get_agent_run/get_agent_run_trace tool surface, --json + markdown-when-piped design; practitioner-relevant for Gabe's agent-architecture curiosity. (4) Meta Brain2Qwerty v2 non-invasive brain-to-text (Tier 2) \u2014 June 30 Nature Neuroscience paper, 61% word accuracy / 78% best participant, 7.6\u00d7 jump over prior 8% non-invasive best, log-linear scaling with data volume, code + BCBL dataset release. (5) Z.ai ZCode agentic coding IDE (Tier 2) \u2014 July 2 launch, free desktop client, Lite $16.20/mo + Max $144/mo hosted tiers, API $1.40/$4.40 per M tokens vs Claude Opus $5/$25, MIT-licensed GLM-5.2 weights, July 4 TechTimes angle on Chinese-cybersecurity-law-applies-to-every-API-call jurisdiction tradeoff; substantive coding-agent-category economics story directly relevant to Claude Code users. Items considered but not added: Grok 4.5 SpaceX/Tesla private beta (June 28 \u2014 outside since-filter, refresh had already skipped); Claude Sonnet 5 launch (June 30 \u2014 already covered extensively in prior snapshots); Claude Science drug discovery (June 30 \u2014 already covered); Anthropic $965B IPO filing (June 1 \u2014 well outside window); Meta Zuckerberg agents-slow + Watermelon comments (already in am file). Promotion rule: no am items promoted \u2014 none materially deepened during the day. tier_counts: 1 tier-1 / 4 tier-2 / 0 tier-3."
-    },
-    {
-      "run_id": "2026-07-04T11:00:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-07-04T10:45:00Z",
-      "ended_at": "2026-07-04T11:00:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 38000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1200,
-        "deep_fetch": 0,
-        "discovery_search": 28000,
-        "curation": 6800,
-        "output_write": 2000
-      },
-      "fetches_made": 8,
-      "items_input": 3,
-      "items_output": 11,
-      "items_added": 3,
-      "items_kept": 8,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-04-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Standard refresh path. Pre-flight: kill switch inactive, refresh enabled. Today's am file exists (8 items from digest+enrichment). Since-filter: 2026-07-04T06:00:00Z. WebSearch-only sourcing (WebFetch returns 403 in sandbox). 8 web searches across 3 targeted sweeps. Items added: (1) Meituan LongCat-2.0 (Tier 1) \u2014 1.6T MoE model trained entirely on 50,000 domestic Chinese ASICs, MIT licensed, open-sourced June 30 under alias 'Owl Alpha' that had been leading OpenRouter rankings (Claude Code category #2 by monthly call volume); SWE-bench Pro 59.5 ahead of GPT-5.5's 58.6; pricing $0.75/$2.95 per million tokens ($0.30/$1.20 launch promo); July 4 Cryptobriefing pricing article is the new-since-06:00 coverage anchor; not in any prior snapshot despite June 30 release; primary sources VentureBeat and Cryptobriefing. (2) Anthropic Claude Code steganography + Alibaba ban (Tier 2) \u2014 security researcher reverse-engineered Claude Code on June 30 and found steganographic fingerprinting present since version 2.1.91 (April 2): timezone detection (Asia/Shanghai/Urumqi \u2192 date format dashes to slashes) plus proxy URL matching against hardcoded Chinese domain/AI-lab list (\u2192 apostrophe swapped with \\u2019/\\u02BC/\\u02B9 depending on flags); post reached 605 points on Hacker News; Anthropic engineer confirmed 'anti-abuse/distillation experiment' and the pull request to remove was merged July 1, shipped July 2; Alibaba responded July 3-4 with company-wide Claude Code ban effective July 10, requirement to delete all Anthropic models (Sonnet/Opus/Fable), and recommendation of internal Qoder; background: Anthropic accused Alibaba Qwen lab of 25,000-account/28.8M-exchange distillation attack in June 10 Senate Banking Committee letter; primary sources The Decoder and TheNextWeb. (3) Meta Watermelon model (Tier 2) \u2014 Meta's superintelligence chief Alexandr Wang told employees July 3 that Watermelon (next frontier model) has caught up to GPT-5.5: MMLU 92.4% / HumanEval 96.3% vs 96.1% / SWE-bench Verified 48.2% vs 49.5%; uses 'order of magnitude more compute' than Avocado; still in training; contextual second half of the Zuckerberg-agents item already in file; primary source Benzinga. Items not added: Grok 4.5 private beta at SpaceX/Tesla (announced June 28, outside refresh window and no new July 4 data); Meta Watermelon considered for revision to existing Zuckerberg item but added as standalone given distinct angle. July 4 US Independence Day \u2014 lower volume of US news cycle as expected, Asia/Europe cycles provided primary new content. tier_counts: 0\u21921 (tier 1), 6\u21928 (tier 2), 2 (tier 3 unchanged)."
-    },
-    {
-      "run_id": "2026-07-04T06:00:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-07-04T05:35:00Z",
-      "ended_at": "2026-07-04T06:00:00Z",
-      "wall_time_ms": 1500000,
-      "tokens_used": 44000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 400,
-        "deep_fetch": 0,
-        "discovery_search": 24000,
-        "curation": 14000,
-        "output_write": 5600
-      },
-      "fetches_made": 10,
-      "items_input": 8,
-      "items_output": 8,
-      "items_added": 0,
-      "items_kept": 8,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-04-am",
-      "error": null,
-      "partial": false,
-      "notes": "Standard enrichment path. Pre-flight: kill switch inactive, enrichment enabled. Last successful run ended 2026-07-03T17:20:00Z (digest). Yesterday's pm (2026-07-03-pm.json) had 8 items (0 Tier 1, 6 Tier 2, 2 Tier 3) \u2014 all 8 surfaced meaningful overnight context via web search and were kept and enriched (0 dropped). Enrichment findings by item: (1) OpenAI 5% US govt stake \u2014 ENRICHED: CNN Business / Il Sole 24 Ore July 3 detail that Altman personally pitched Trump, Commerce Sec Lutnick, Treasury Sec Bessent and separately Sen. Bernie Sanders (bipartisan approach); Cryptonomist and Engadget surfaced the substantive July 3 Anthropic-and-Trump-administration denial that any Anthropic-specific stake has been discussed (via unnamed source to Reuters, Anthropic declined to comment on the record) \u2014 first hard signal the industry-wide framework may collapse to an OpenAI-only negotiation; Cryptonomist's '5% or 50%' escalation framing added; title / summary / why_it_matters / why_it_matters_brief updated. (2) Microsoft Frontier Company \u2014 MAJOR ENRICHMENT: added the substantive underlying data Microsoft is implicitly citing: MIT Project NANDA finding that 95% of enterprise generative-AI pilots deliver zero measurable P&L and Deloitte 2026 enterprise-AI survey (25% moved 40%+ pilots to production / 30% redesigning processes / 37% at surface level); refined the Accenture-competitor framing to a partner-AND-competitor framing per Microsoft's July 3 amplification that Frontier Company works alongside Accenture (dedicated forward-deployed practice launched earlier this year), Capgemini, EY, KPMG, PwC while directly competing on individual engagements; added CTOL Digital's 'Microsoft's $2.5B Admission: Enterprise AI Is Not Self-Serve Software' framing; TechTimes, MLQ News, The Decoder, Tech Funding News takes; title / summary / why_it_matters / why_it_matters_brief rewritten. (3) Crusoe $3B \u2014 ENRICHED: sharpened Abilene project description with 1.2-gigawatt cluster (specific number vs. ~1M sq ft), two of eight buildings operational per June disclosure and DataCenterDynamics, $11.6B combined debt-and-equity secured for the Stargate campus (substantive market vote that vertical-integration model can raise big-infrastructure-scale capital); added prior Series E co-leads Valor Equity Partners and Mubadala Capital; SiliconANGLE July 3 follow-up take added. (4) Cloudflare AI crawler rules \u2014 ENRICHED: NBC News July 3 disclosure-requirement framing (crawlers refusing to say how they use content will be blocked wholesale \u2014 new second prong on top of block-by-default); Cloudflare's own year-two 'Content Independence Day, one year on: building the business model for the agentic Internet' companion post surfaces multi-year-strategy positioning; TheNextWeb 'pay publishers or get blocked' framing; en.ain.ua July 3 automatic-blocking implementation angle; title / summary / why_it_matters / why_it_matters_brief updated to reflect the two-pronged (block-by-default + disclosure-requirement) framing. (5) Zuckerberg agent slowdown \u2014 ENRICHED: TechCrunch and PYMNTS July 3 detail that Zuckerberg specifically cited coding tools like Anthropic's Claude Code as the source of executives' 'super optimism' when planning the January-February reorganization (unusually direct hyperscaler-CEO naming a specific competitor's product as roadmap anchor \u2014 substantive practitioner-relevant context for a Claude Code user like Gabe); refined layoff figure to ~8,000 jobs per TechCrunch; Gizmodo's 'Meta Goes the Way of xAI' framing; Techtimes's '$145B Bet Hasn't Delivered' headline; title / why_it_matters / why_it_matters_brief updated with the Claude Code detail. (6) Crunchbase H1 2026 \u2014 ENRICHED: sharper Anthropic-specific number surfaced July 3 by AI Weekly and MLQ News \u2014 close to one-third of ALL Q2 global venture funding went to a single company (Anthropic, which raised $65B in Q2 and became the most valuable private company on the Crunchbase Unicorn Board as SpaceX exited via IPO); added specific July 3 acquisition metric that 24 companies were acquired at $1B+ in Q2 totaling $113B (highest quarter for $1B+ acquisitions on record); MasterNodeAI take added; title / why_it_matters / why_it_matters_brief updated to lead with Anthropic-alone-third-of-Q2 concentration. (7) Quantum Systems \u2014 ENRICHED: Sifted July 3 scoop that founder is 'eyeing humanoids' as next adjacent domain (substantive read on how the modern autonomy platform stack ports across form factors); expanded July 3 investor list per FinSMEs and Silicon Canals (BOND, Fidelity Management & Research, Wellington Management, A.P. Moller Holding, Elephant Lake Ventures alongside co-lead group and existing Balderton + HV Capital); MOSAIC UXS tactical-command software ecosystem as unifying software layer across air / land / sea (and humanoids next); Defence Industry Europe's formal Airbus Defence and Space strategic-collaboration announcement; Silicon Canals, Sifted and TechTimes takes; title / summary / why_it_matters / why_it_matters_brief updated with humanoids thread and expanded investor list. (8) Tripo AI \u2014 ENRICHED: Project Eden architectural detail per Unite.AI July 3 breakdown and Tripo research page \u2014 Eden separates underlying world state from rendering so environment exists before any camera looks at it, updated by actions / rules / feedback rather than sampled at query time (substantive design-pattern distinction from 'world models are just longer video generation'); added full product-integrations list (text-to-3D, image-to-3D, AI texturing, model segmentation, auto rigging, stylization, Smart Mesh with Blender / Unity / Unreal Engine / ComfyUI / Cocos / Godot workflows); VoxelMatters take on the multi-sector investor mix; Tripo's own research page as primary reference; title / summary / why_it_matters / why_it_matters_brief updated with Eden architecture and integrations. Late-breaking pass: 0 items added. Considered and rejected: Anthropic-and-Trump-admin Anthropic-specific-stake denial (folded into item 1 rather than standalone \u2014 extension of the same story); ElevenLabs $22B tender-offer talks (Bloomberg July 2 \u2014 in the July 2 window, not the last-12h late-breaking window; also a Tier 3 secondary-tender, outside the tight Tier-1 late-breaking scope); OpenAI + Broadcom Jalape\u00f1o inference chip (June 24 \u2014 too old); Anthropic Claude Sonnet 5 benchmark leaderboard chatter (Sonnet 5 launch June 30 already covered in 07-01 am and referenced across 07-02 pm and 07-03 items); Mistral AI ongoing DC-buildout / Vibe expansion (rolling story, no specific July 3-4 news beat); Alibaba $53B and ByteDance $23B 2026 AI capex commitments (already-reported ongoing scale, no new July 3-4 delta); Gemini 3.5 Pro slipped to July GA (rolling story, no confirmed release beat in the window); GPT-5.6 Sol/Terra/Luna preview (June 26 event, referenced in item 1 as Altman's context); Fable 5 / Mythos 5 redeployment (June 30 / July 1, already covered in 07-01 am). Conservative no-add decision rather than promote-stale-news \u2014 matches yesterday's precedent. WebFetch returns 403 in sandbox; sourcing done entirely via WebSearch (10 queries). Hero images null across all items (no reliable og:image fetch in sandbox \u2014 WebFetch blocked). tier_counts held at 0/6/2."
-    },
-    {
-      "run_id": "2026-07-03T17:20:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-07-03T16:56:00Z",
-      "ended_at": "2026-07-03T17:20:00Z",
-      "wall_time_ms": 1440000,
-      "tokens_used": 48000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1200,
-        "deep_fetch": 0,
-        "discovery_search": 26000,
-        "curation": 13000,
-        "output_write": 7800
-      },
-      "fetches_made": 15,
-      "items_input": 11,
-      "items_output": 8,
-      "items_added": 8,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-03-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Standard digest path. Pre-flight: kill switch inactive, digest enabled, last successful run ended 2026-07-03T11:35:00Z (refresh). Today's am file (2026-07-03-am) had 10 items \u2014 all 10 excluded by default per promotion rule. No am items materially deepened in the afternoon window that warrant promotion. WebFetch returns 403 in sandbox per prior run notes; sourcing done entirely via WebSearch (~15 queries, well under 50-fetch cap). Eight new items added, all fresh and not in any prior snapshot: (1) Tier 2 \u2014 OpenAI FT-reported proposal to give the US government a 5% equity stake (~$42.6B at $852B post-money March valuation) with Anthropic + Google + Meta expected to match, modeled on the Alaska Permanent Fund; conceptual and early-stage, would likely require an act of Congress; surfaces days after Washington delayed GPT-5.6 Sol/Terra/Luna general availability; primary source Bloomberg, cross-coverage CNBC, Forbes, Tom's Hardware, Quartz, MLQ News, CoinDesk, The Japan Times. (2) Tier 2 \u2014 Microsoft Frontier Company launched July 2 with $2.5B commitment and 6,000 embedded industry-and-engineering experts to co-design + deploy + continuously improve enterprise AI systems; led by Rodrigo Kede Lima (formerly president of Microsoft Asia); model-agnostic services approach; IP-protection commitment that customer data will not be used to train models commoditizing industry differentiation; directly competitive with Accenture + Deloitte + the smaller AI-deployment startup ecosystem; primary source Microsoft Blog, cross-coverage TechCrunch, GeekWire, SiliconANGLE, TechAfrica News. (3) Tier 2 \u2014 Crusoe Bloomberg July 2 scoop of ~$3B talks at ~$30B valuation (potentially $30\u201340B pre-IPO per KuCoin), tripling October 2025's ~$10B Series E; Crusoe operates the ~1M-sqft Abilene Texas Stargate campus for OpenAI + Oracle and also supplies AI compute to Meta + Oracle; vertically integrated AI-datacenter operator model; primary source Bloomberg, cross-coverage Tech Funding News, TheNextWeb, AI Weekly, KuCoin. (4) Tier 2 \u2014 Cloudflare July 2 announcement of new AI traffic controls with Search / Agent / Training three-way split available to every customer including Free plan; new default September 15 2026: Training + Agent blocked by default on ad-monetized pages for new domains; multi-purpose crawlers (Googlebot, Applebot, BingBot) blocked wholesale if Training is blocked; managed robots.txt maintained by Cloudflare; direct-charging path opens the door to bill AI companies for training-data access at network edge; primary source Cloudflare official blog, cross-coverage Help Net Security, TechTimes, developers.cloudflare.com changelog. (5) Tier 2 \u2014 Zuckerberg July 2 employee-meeting admission that AI agents haven't accelerated in the way he expected over the last four months and Meta's May reorganization was 'not as clean' as planned; Meta plans up to $145B on AI in 2026 (~2\u00d7 2025); still expects benefits within 3\u20136 months; substantive counter-narrative to AI-progress-accelerating framing; lands the same news cycle as Meta Compute Bloomberg scoop (in today's am snapshot) \u2014 reads as pre-announcement of Meta's strategic pivot from AI-app competitor to AI-infrastructure competitor; primary source CNBC video, cross-coverage Benzinga, PYMNTS, FourWeekMBA, TechXplore, 24/7 Wall St. (6) Tier 2 \u2014 Crunchbase H1 2026 global venture funding read published July 2: $510B invested (already above 2025's full-year $440B); OpenAI + Anthropic accounted for $217B (43% of H1 total); AI-focused companies captured over 70% of Q2 global capital vs ~50% a year earlier; SpaceX IPO at $1.77T ($75B raised) as largest venture-backed IPO ever, SpaceX acquisition of Anysphere (Cursor) at $60B as largest venture-backed startup acquisition ever; substantive macro data point; primary source Crunchbase News, cross-coverage SiliconANGLE, MLQ News, Beamstart. (7) Tier 3 \u2014 Quantum Systems July 2 $1.2B Series D at $8B post-money co-led by Blackstone / Noteus / Airbus / Advent with Bond / Fidelity / Balderton / HV Capital participating; Munich autonomous-drone startup; 19,000+ missions executed in Ukraine in 2025; multi-country manufacturing across Germany / Ukraine / US / Australia / Romania / UK / Baltics; Europe's largest DefenceTech financing to date; Airbus co-lead as substantive incumbent-defense-prime-integrating-startup-defense signal; primary source Quantum Systems, cross-coverage CNBC, Tech Startups, EU-Startups, Defence Industry Europe. (8) Tier 3 \u2014 Tripo AI July 2 $150M Series A3 (one month after previous ~$200M Series A+/A++); investors Geely Capital + 4399 Network + Tanwan + Giant Network + Fosun + Orinno + CoStone + Addor + T-Capital + Muhua Tech Ventures + expanded participation from existing shareholders INCE + Genesis; use of funds intelligent manufacturing + entertainment + robotics; products Tripo H3.1 and P1.0 as current 3D foundation models with 8K-resolution texture generation and object segmentation, Project Eden as world-model research preview with persistent editable environments; primary source SiliconANGLE, cross-coverage Unite.AI, Yahoo Finance, GlobeNewswire, GamesBeat. Items considered and rejected for duplication or insufficient signal: Claude Sonnet 5 (in 2026-07-02-am and 2026-07-01-am); Fable 5 return (in 2026-07-02-am and 2026-07-01-am); GPT-5.6 Sol/Terra/Luna preview (in prior snapshots and refresh notes); Anthropic-Google-Broadcom 3.5GW TPU deal (announced April 2026, too old); Google Genkit Agents / ADK 2.0 for Go (in 2026-07-03-am); Meta Compute (in 2026-07-03-am, Zuckerberg commentary added as separate item since it's fresh + distinct); TwelveLabs (in 2026-07-03-am); Together AI (in 2026-07-03-am); Anthropic Claude apps gateway (in 2026-07-03-am); Hugging Face + Cerebras speech-to-speech (in 2026-07-03-am); CAIS Remote Labor Index (in 2026-07-03-am); UBTECH UWORLD U1 (in 2026-07-03-am); BLS June Employment Situation (in 2026-07-03-am); xAI Grok Voice Agent Builder (in 2026-07-03-am); EU AI Act Digital Omnibus final adoption (in 2026-07-01-am per prior run notes); Windsurf \u2192 Devin Desktop rebrand (June 2 event, too old). Volume: 8 items reflects an honest count of genuinely new + substantive stories in the July 2-3 window; the morning wave already covered the 10 biggest same-day pieces. tier_counts 0/6/2. Hero images uniformly null (WebFetch returns 403). URLs sourced from search-result indexes; not individually verified for 200 OK."
     }
   ]
 }
