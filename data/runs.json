@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-03T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-03T11:00:00Z",
+      "ended_at": "2026-10-03T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 8000,
+        "output_write": 3000
+      },
+      "fetches_made": 11,
+      "items_input": 1,
+      "items_output": 5,
+      "items_added": 1,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: kill switch inactive. This morning's am file (2026-10-03-am.json) read cleanly with 4 items (T1: Gemini 4 Pro, Atria Dawn; T2: MCP/LangChain, Enterprise AI Week). WebFetch EGRESS_BLOCKED as in prior runs — WebSearch-only approach (11 queries). Items added: 1 new Tier 1 item — OpenAI GPT-6.1 Astra scrapped release (Sept 28-29, confirmed via CNBC/Hacker News/AI Weekly/Korea Times; missed by prior digest/enrichment runs; Korea Times provides Asia-cycle provenance). Atria Dawn item updated: corrected the 'within a week API' prediction from enrichment — Vultr appears to have deployed it (docs.vultr.com/models/internlm-atria-dawn) but no official hosted API pricing announced and broader inference providers have not listed it. Gemini 4 Pro item: no new information beyond what enrichment already captured. Final tier_counts: {1:3, 2:2, 3:0}. 5 items in output file."
+    },
+    {
       "run_id": "2026-10-03T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
