@@ -2,12 +2,13 @@
   "snapshot_id": "2026-10-04-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-04",
-  "generated_at": "2026-10-04T06:30:00Z",
-  "generated_at_local": "2026-10-04T02:30:00-04:00",
+  "generated_at": "2026-10-04T11:15:00Z",
+  "generated_at_local": "2026-10-04T07:15:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-10-04T06:30:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-10-04T06:30:00Z", "duration_ms": 900000 },
+    { "phase": "refresh",    "ran_at": "2026-10-04T11:15:00Z", "duration_ms": 915000 }
   ],
-  "tier_counts": { "1": 1, "2": 2, "3": 1 },
+  "tier_counts": { "1": 2, "2": 3, "3": 1 },
   "items": [
     {
       "id": "claude-sonnet-55-shipped-sept-28-haiku-55-still-pending-october-2026",
@@ -56,6 +57,56 @@
           "source": "Codersera — Claude Sonnet 5.5 Complete Guide 2026",
           "url": "https://codersera.com/blog/claude-sonnet-5-5-complete-guide-2026/",
           "take": "Developer-oriented reference — useful for pricing confirmation, API identifier (`claude-sonnet-5-5`), and the tool-call batching efficiency improvements that drive the 'up to 30% cheaper per task' claim."
+        }
+      ]
+    },
+    {
+      "id": "gemini-4-argon-google-limited-release-september-30-2026",
+      "tier": 1,
+      "title": "Google released Gemini 4 Argon on September 30 in restricted access — 77.9% on DeepSWE v1.1 (new state of the art per Google), 2M-token context with a 1M-token single-response output ceiling no other model offers, $2.25/$11.25 introductory pricing, but the model is currently only available to Google internal teams, the U.S. government, and Fairwind security program partners with no public access date announced",
+      "summary": "**September 30, 2026**: Google released **Gemini 4 Argon**, the first new frontier model since Gemini 3, into limited access. **Access situation**: currently restricted to Google internal teams, select U.S. government users, and cybersecurity partners in the Fairwind program. Next expansion is to paid API customers and Google AI Ultra subscribers — no date announced. No free tier. **Pricing** (introductory): **$2.25/$11.25** per million input/output tokens; standard rates are **$4/$20**; 95% discount on cached input. **Context window**: 2M tokens — with a unique output ceiling of **up to 1M tokens in a single response**, which no other currently available frontier model offers. **Benchmark picture (split)**: Google claims **12/18 benchmark wins** across Astra, Claude Opus 5.5, and Fable 5.1. Specific numbers: **DeepSWE v1.1: 77.9%** (Google's own figure; vs GPT-6 Astra 74.1%, Claude Opus 5.5 74.2% — new state of the art on this software-engineering benchmark if reproduced), **LVBench (long video understanding): 91.7%**, **AutomationBench (enterprise workflow): 51.3%** (~9 points ahead of Opus 5.5). **But Argon trails where terminal and large-codebase work happens**: Terminal-Bench 4.0 **57.4%** vs Opus 5.5's **66.4%** (a 9-point gap), and a 10.5-point gap to Astra on FrontierSWE v2. **Third-party check**: Artificial Analysis's Intelligence Index places Argon at **52.6** ('High' compute) — level with Astra at 52.7, but **5 points behind Opus 5.5** at 57.6. Bloomberg reported internal Google doubts, with employees noting the model performs worse in practical coding than on benchmarks. **The hallucination claim**: Google's marketing frames Argon as having 'the industry's lowest hallucination rate,' but no independent audit confirmed this at launch. **Where Argon is strongest**: knowledge-intensive work, long video understanding, long-context reasoning, enterprise workflow automation.",
+      "link": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release",
+      "why_it_matters": "For Gabe: this is the specific 'Google shipped a new frontier model four days ago, the benchmarks are a split picture, and you cannot use it yet' item. Three specific things worth writing down. First, the specific **split benchmark picture** is the specific signal that tells you how Argon actually compares. The shorthand version: Argon is level with GPT-6 Astra on Artificial Analysis's index, 5 points behind Opus 5.5 at the top compute setting, but ahead on long-video understanding (LVBench 91.7%) and ahead on enterprise workflow automation (AutomationBench 51.3%). For a Python hobbyist whose work tends toward coding scripts and agent tasks, the practical read: **Opus 5.5 and Sonnet 5.5 are still ahead on the benchmarks that matter most to you** (Terminal-Bench 4.0 and FrontierSWE). Argon is worth watching if your work is long-form reasoning over large documents or if you're building something that benefits from the 1M-token output ceiling. Second, the specific **1M-token output ceiling** is genuinely new. No other frontier model can output 1M tokens in a single response. For a Python hobbyist, the practical read: **this is only relevant if you're generating very long structured outputs** — full-book text generation, enormous JSON blobs, bulk data synthesis. For typical Python scripts and agent loops, output length is rarely the bottleneck. Third, the specific **limited access + Bloomberg internal-doubts signal** is the practical reason not to pivot your stack based on the benchmark numbers right now. For a Python hobbyist, the practical read: **wait for Argon to reach public API access, then run your actual prompts against it** — the benchmark-to-practice gap on coding tasks is empirically real for Argon based on the Bloomberg reporting. Practical concrete next step: note the access timeline (paid API customers after Fairwind), then check ai.google.dev or the Gemini API docs in two to four weeks — no need to act now.",
+      "why_it_matters_brief": "Gemini 4 Argon leads on long-video and enterprise-automation benchmarks but trails Opus 5.5 on Terminal-Bench 4.0 — and Bloomberg flags a benchmark-vs-practice gap on coding; still limited to government/security partners, no public access date yet.",
+      "source": {
+        "name": "VentureBeat — Google unveils Gemini 4 Argon, retaking benchmark lead over OpenAI and Anthropic — but in limited release",
+        "type": "scrape",
+        "url": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-04T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-10-04T11:00:00Z",
+          "by": "refresh",
+          "change": "created — Tier 1 US model-release item. Google released Gemini 4 Argon on September 30; missed by both the Oct 3 digest and the Oct 4 enrichment (both ran WebSearch-only sweeps that did not surface this). Caught in the 7am refresh sweep. Key facts: limited access (internal/US govt/Fairwind only), $2.25/$11.25 introductory pricing, 2M context / 1M output ceiling, DeepSWE v1.1 77.9% per Google but Artificial Analysis places it level with Astra and 5 points behind Opus 5.5, Terminal-Bench trailing Opus by 9 points, Bloomberg internal-doubts flag."
+        }
+      ],
+      "takes": [
+        {
+          "source": "VentureBeat — Google unveils Gemini 4 Argon, retaking benchmark lead over OpenAI and Anthropic — but in limited release",
+          "url": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release",
+          "take": "Primary summary — canonical for the limited-access framing (internal/US govt/Fairwind), the no-public-date announcement, and the headline benchmark claims alongside the Bloomberg internal-doubts caveat."
+        },
+        {
+          "source": "Artificial Analysis — Gemini 4 Argon: Google is back as one of the top three labs in intelligence achieved",
+          "url": "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs",
+          "take": "Third-party intelligence-index scores — canonical for the 52.6 (Argon High) vs 52.7 (Astra) vs 57.6 (Opus 5.5) comparison that puts Argon level with Astra but 5 points behind Opus."
+        },
+        {
+          "source": "NeuralTrust — Gemini 4 Argon: Benchmarks, Pricing & Security (2026)",
+          "url": "https://neuraltrust.ai/blog/gemini-4-argon",
+          "take": "Pricing and access details — useful for the $2.25/$11.25 introductory / $4/$20 standard rates, the 95% cached-input discount, and the Fairwind program description."
+        },
+        {
+          "source": "Vocal.media — Google Just Released Gemini 4 Argon. It Is Not the GPT-6 Killer Everyone Expected.",
+          "url": "https://vocal.media/01/google-just-released-gemini-4-argon-it-is-not-the-gpt-6-killer-everyone-expected",
+          "take": "Counterpoint framing — the specific Terminal-Bench 4.0 trailing (57.4% vs Opus 5.5's 66.4%) and the 10.5-point FrontierSWE v2 gap to Astra, which together explain why early developer reaction was muted."
         }
       ]
     },
@@ -161,6 +212,51 @@
           "source": "CO/AI — Linux Foundation Adopts Google's Agent2Agent Protocol for AI Collaboration",
           "url": "https://getcoai.com/news/linux-foundation-adopts-googles-agent2agent-protocol-for-ai-collaboration/",
           "take": "Secondary confirmation of the A2A donation under Linux Foundation governance — useful for the organizational structure under AAIF."
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-gadgets-open-source-sdk-diy-hardware-october-2026",
+      "tier": 2,
+      "title": "Meta open-sourced the Muse Gadgets SDK on October 2 — Apache 2.0 ESP32 firmware and Linux Device SDK (facebookincubator/muse-gadget-sdk) that turns a Raspberry Pi 5 or ESP32 into a Muse AI hardware device, with example projects including Home Assistant integration and Linux sysadmin tasks; Meta Muse Home Link (free USB-C device for U.S. Muse subscribers) also announced",
+      "summary": "**October 2, 2026**: Meta open-sourced the firmware and device SDKs for building custom Muse gadgets — DIY hardware that connects Meta's Muse AI agent to displays, buttons, sensors, and actuators. **What shipped**: the **`facebookincubator/muse-gadget-sdk` repository** on GitHub, **Apache 2.0** license, containing two main components: (1) an **ESP32 firmware** for microcontroller-class hardware (ESP32 is the chip behind most hobbyist IoT devices — smaller and cheaper than a Pi, powers things like Wio Terminal, Seeed Studio XIAO, M5Stack), and (2) a **Linux Device SDK** for single-board computers. **Raspberry Pi 5 support**: the Linux Device SDK turns a spare Raspberry Pi or Linux box into a Muse gadget, with custom-command support. **Included example projects**: a Raspberry Pi 5 build that gives Muse access to Home Assistant (automating smart home devices via natural language), and a Linux-box setup for sysadmin chores. **Also announced**: the **Muse Home Link**, a USB-C device that links Muse to a home network, offered free to U.S. Muse subscribers while supplies last. **Context**: this is the open-source hardware complement to Meta's Muse AI agent — which positions itself as an always-available AI for personal devices (phones, glasses, earbuds). The gadget SDK extends Muse to custom hardware builds rather than only Meta-sold form factors.",
+      "link": "https://www.unite.ai/meta-open-sources-muse-gadget-sdks-for-diy-ai-hardware-devices/",
+      "why_it_matters": "For Gabe: this is the specific 'Meta just published a hobbyist-grade Python-adjacent SDK for building your own AI hardware with parts you might already own' item. Three specific things worth writing down. First, the specific **Raspberry Pi 5 + Linux SDK** is the specific entry point that's directly relevant. If you have a spare Pi (a lot of hobbyist coders do), the practical read: **the SDK gives you a structured way to wire Muse AI to custom hardware projects**. The Home Assistant example is the most concrete: instead of automating your home via a web dashboard, you could build a small dedicated device that lets you describe what you want in plain English and have Muse execute it against your HA instance. Second, the specific **Apache 2.0 license** matters because it means you can use this commercially, fork it, modify it, and redistribute it without restriction. For a hobbyist, the practical read: **this is not 'available for non-commercial personal use only'** — it's the permissive license that lets you build something on top of this and ship it if you want. Third, the specific **ESP32 firmware target** is the signal for how low-cost and widely-deployable this is intended to be. An ESP32-based device costs $5–15 in components. For a hobbyist, the practical read: **if the idea of a dedicated physical AI assistant button or display appeals, you can build one for under $20 in parts**. The gap between this and the previous generation of 'AI on custom hardware' projects is that the Muse SDK handles the agent integration and conversation state — you write the hardware behavior, not the AI stack. Practical concrete next step: check `github.com/facebookincubator/muse-gadget-sdk` for the README and examples, then decide whether the Home Assistant or sysadmin example is closer to something you'd actually use.",
+      "why_it_matters_brief": "Meta open-sourced an Apache 2.0 ESP32 firmware + Linux SDK for building custom Muse AI hardware — Raspberry Pi 5 support included with Home Assistant example; the practical gap between 'hobbyist AI hardware project' and 'working thing on your shelf' just got smaller.",
+      "source": {
+        "name": "Unite.AI — Meta Open-Sources Muse Gadget SDKs for DIY AI Hardware Devices",
+        "type": "scrape",
+        "url": "https://www.unite.ai/meta-open-sources-muse-gadget-sdks-for-diy-ai-hardware-devices/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-04T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-10-04T11:00:00Z",
+          "by": "refresh",
+          "change": "created — Tier 2 US open-source hardware item. Meta open-sourced the Muse Gadgets SDK on October 2, 2026. Caught in the 7am refresh sweep. Apache 2.0 ESP32 firmware + Linux Device SDK at facebookincubator/muse-gadget-sdk; Raspberry Pi 5 support; Home Assistant example; Muse Home Link free USB-C device for U.S. subscribers."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Unite.AI — Meta Open-Sources Muse Gadget SDKs for DIY AI Hardware Devices",
+          "url": "https://www.unite.ai/meta-open-sources-muse-gadget-sdks-for-diy-ai-hardware-devices/",
+          "take": "Primary summary — canonical for the ESP32 firmware + Linux SDK announcement, the Apache 2.0 license, and the Raspberry Pi 5 Home Assistant example."
+        },
+        {
+          "source": "AI TLDR — Muse Gadgets: Meta open-sources SDKs to build AI hardware",
+          "url": "https://ai-tldr.dev/releases/meta-muse-gadgets/",
+          "take": "Short summary — useful for the Muse Home Link free USB-C device detail and the overall framing of Muse as an always-available personal AI agent."
+        },
+        {
+          "source": "NewsBytesApp — Meta releases open source Muse AI code for DIY devices",
+          "url": "https://www.newsbytesapp.com/news/science/meta-releases-open-source-muse-ai-code-for-diy-devices/tldr",
+          "take": "Mobile-summary view — useful for the 'sysadmin chores and Home Assistant' example descriptions and the facebookincubator/muse-gadget-sdk repo name."
         }
       ]
     },
