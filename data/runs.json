@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-04T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-04T11:00:00Z",
+      "ended_at": "2026-10-04T11:15:00Z",
+      "wall_time_ms": 915000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 7000,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-04-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path, 7am EDT. Pre-flight: kill switch inactive (control.paused=false, refresh.enabled=true). Input: today's data/2026-10-04-am.json with 4 items (Claude Sonnet 5.5 T1, PyTorch Conference T2, Agent SDK T2, Anthropic IPO T3). WebSearch-only sweep (EGRESS_BLOCKED pattern continues on WebFetch). 9 web search queries total — well under 20 cap. KEY FINDS: (1) Gemini 4 Argon — Google released a new frontier model on September 30, 2026, but it was missed by both the Oct 3 digest and Oct 4 enrichment runs; caught this run. Limited access (Google internal/US govt/Fairwind security program), no public date. $2.25/$11.25 introductory pricing, 2M context / 1M output ceiling. DeepSWE v1.1 77.9% (Google claim; vs Astra 74.1%, Opus 5.5 74.2%) — new state of the art per Google, but Artificial Analysis's index places Argon level with Astra (52.6 vs 52.7) and 5 pts behind Opus 5.5 (57.6); Terminal-Bench 4.0 trails Opus 5.5 by 9 pts (57.4% vs 66.4%); Bloomberg internal-doubts flag. Added as Tier 1. (2) Meta Muse Gadgets SDK — Meta open-sourced ESP32 firmware + Linux Device SDK (Apache 2.0) at facebookincubator/muse-gadget-sdk on October 2, 2026; Raspberry Pi 5 support, Home Assistant example, Muse Home Link free USB-C device. Added as Tier 2. Haiku 5.5 still unreleased, no change to existing T1 item. Final tier_counts: {1:2, 2:3, 3:1}. 6 items in output file."
+    },
+    {
       "run_id": "2026-10-04T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
