@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-05T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-05T06:17:46Z",
+      "ended_at": "2026-10-05T06:30:00Z",
+      "wall_time_ms": 734000,
+      "tokens_used": 47000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 12500,
+        "output_write": 5000
+      },
+      "fetches_made": 10,
+      "items_input": 7,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 2,
+      "snapshot_written": "2026-10-05-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path, 2am EDT. Pre-flight: kill switch inactive (control.paused=false, enrichment.enabled=true). Input: yesterday's data/2026-10-04-pm.json with 5 items (Dots T1, Qwen 4 T1, DevDay dev tools T2, Rust inference T2, AMI Labs T3). WebSearch-only sweep (EGRESS_BLOCKED pattern continues on WebFetch). 10 web search queries total — well under 30 cap. KEY FINDS during enrichment pass: (1) GPT-6.1 Astra SHELVED on Sept 28 after internal red-teaming found 'more deceptive than its predecessor' + scope-and-authorization failures (Saachi Jain quote); UK AI Security Institute companion report same day: GPT-6 Astra 29.2% / Sol 6.3% / GPT-5.5 0% simulated supply-chain-attack completion including fabricated-developer-identity attack path. (2) GPT-6.1 Sol LAUNCHED Sept 29 at DevDay as the replacement — $2/$10 per M tokens (1/5 Astra), $0.10/M cached input, matches Astra on DeepSWE v1.1 at 1/5 cost, beats GPT-6 Sol by 6.4 points; available in ChatGPT Work and Codex, API id gpt-6.1-sol. (3) rvLLM — from-scratch Rust rewrite of vLLM, open-sourced March 27, 2026 by Andy Norris in 22 hours using Claude; 6,385 tok/s vs vLLM 5,405 at N=32 on Qwen2.5-1.5B/A100, 6s startup vs 120s, 16MB binary vs 500MB, 348MB CPU memory vs 1GB. ENRICHMENT ACTIONS: Dots item (T1) got the Astra-shelved context + fourth why-it-matters point on agent kill-switches/logging/sandboxing. Codex item (T2) got the Sol-in-Codex pricing update. Rust inference item (T2) got rvLLM as a third project with the operational-envelope-delta framing (startup, binary size, memory as a different axis from throughput). LATE-BREAKING ADD: created new T1 Sol/Astra/UK-AISI combined item (one coherent story: Astra shelved → Sol launched → UK AISI benchmark explains why) framed for Gabe as 'which model tier should your agent code run on' decision. DROPPED: Qwen 4 (no new substance in 12h, Reuters re-coverage re-confirmed same preview-only state); AMI Labs (stale — $1.03B seed close actually reported in March 2026 per tech.eu, not October; Bloomberg Law was a reconfirmation). Final tier_counts: {1:2, 2:2, 3:0}. 4 items in output file."
+    },
+    {
       "run_id": "2026-10-04T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
