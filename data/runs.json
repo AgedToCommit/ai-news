@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-06T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-06T06:00:00Z",
+      "ended_at": "2026-10-06T06:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 10500,
+        "output_write": 4000
+      },
+      "fetches_made": 15,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-06-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path, 2am EDT. Pre-flight: kill switch inactive (control.paused=false, enrichment.enabled=true). Input: yesterday's data/2026-10-05-pm.json with 3 items (OpenAI-Anthropic mutual stress-test deal T2, Firmus ASX IPO T3, Trump 'Super Intelligence' EO + Accord T3). WebSearch-only sweep (EGRESS_BLOCKED pattern continues on WebFetch). 15 web search queries total — well under 30 cap. ENRICHMENT ACTIONS: all three items enriched with new overnight context, zero dropped, zero late-breaking additions. (1) OpenAI/Anthropic stress-test deal — surfaced the separate 'embedded evaluator' pledge from Sept 12, 2026: Altman and Amodei independently committed to giving independent evaluators 'employee-like access' to their labs, a more intrusive structure than the mutual-API deal. The two tracks are not mutually exclusive but it is increasingly plausible the mutual-API deal has been superseded or at minimum deprioritized — reporting has gone quiet on a 'finalized' version since late September. Added as third why-it-matters point and rewrote brief to lead with the two-templates framing. (2) Firmus IPO — firmer pricing landed overnight: A$11 share price confirmed, A$43.7B equity valuation (replacing the earlier US$60B post-money speculation), A$7.1B / US$5B raise with a US$500M greenshoe over-allotment pushing the top-end to US$5.5B. Total Project Southgate committed capital is A$73B (not just A$4.5B Launceston), including a separate A$43B Indonesian data-centre deal with Nvidia reported by Startup Daily during the bookbuild. Expanded why-it-matters with the A$11-share-price / A$43.7B valuation step-up vs the August US$10.5B private round, and the Indonesian capacity timeline for APAC latency. Link updated to the DealStreetAsia primary source for the Oct 6 bookbuild framing. (3) Trump Super Intelligence EO + Accord — overnight analyst coverage (pragma-code.de and CSIS AI Policy Podcast) now explicitly frames the EO + accord as the sharpest US-EU divergence yet: EU AI Act strict liability + audit rules with penalties up to EUR 35M per breach vs US federal explicit-self-regulation. CSIS coverage also flags a draft 'AI preemption' EO circulating that would override state/municipal AI laws, directly colliding with the NYC Council proposal from the Oct 5 am file. Also surfaced the attendance was 'roughly two dozen tech CEOs' (vs the originally-reported six named signatories) and the accord's formal name is 'Accord on Superintelligence' (readout had called it 'Joint Commitment On Frontier Responsibilities'). Added third why-it-matters point on the federal preemption order and rewrote brief to lead with the EU EUR 35M-per-breach contrast and the preemption-order collision with NYC. LATE-BREAKING PASS: searched 7 queries looking for Tier-1 lab announcements in the last 12 hours — nothing truly fresh surfaced beyond already-covered material. Haiku 5.5 still pending from the Sept 28 Sonnet 5.5 release, no new date. Thinking Machines Lab / Nvidia compute deal confirmed as March 2026 (stale, not Oct 3 2026 as one source had misreported). Amazon AGI SF Lab candidate turned out to mix 2024 opening coverage with 2026 forward-looking summaries — not solid enough. Decision: zero late-breaking adds. items_added=0. Final tier_counts: {1:0, 2:1, 3:2}. 3 items in output file."
+    },
+    {
       "run_id": "2026-10-05T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
