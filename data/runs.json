@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-07T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-07T17:00:00Z",
+      "ended_at": "2026-10-07T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 15,
+      "items_input": 6,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-07-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path, 1pm EDT. Pre-flight: kill switch inactive (control.paused=false, digest.enabled=true). Today's am file existed with 4 items (OpenAI-AMD T1, Python 3.15 T2, DIVD-Zammad T2, OpenAI portfolio compute T3) — all four excluded per promotion rule EXCEPT the AMD T1, which was promoted with new afternoon context. WebSearch-only sweep (EGRESS_BLOCKED pattern on WebFetch continues). 15 web searches across general AI news, Anthropic/OpenAI/Google announcements, open-source model releases, dev tools, Cursor/OpenAI situation, Jensen Huang comments, Hugging Face releases, humanoid robotics, agent benchmarks. OUTPUT: 2 items. (1) PROMOTED: OpenAI-AMD T1 from am file with Jensen Huang's CNBC Squawk Box Wednesday morning appearance ('surprising,' 'imaginative,' 'giving away 10% of the company before they even built it') — Nvidia's first on-camera CEO reaction to Monday's AMD-OpenAI 6 GW / 10%-warrant deal. Reframes Nvidia's position as middle-ground (not dismissal, not escalation) and surfaces the callback to Nvidia's own walked-back ~$100B OpenAI commitment (Feb 'never a commitment,' March Morgan Stanley 'probably not in the cards'). Added third why-it-matters point on the implication for Oracle/CoreWeave contract renegotiations — Huang's framing cuts AGAINST the am's 'warrant structure as template' read. (2) NEW: OpenAI → Cursor November 12 cutoff — the five-week-out calendar milestone (originally announced August 28-29) that developers on SpaceX-owned Cursor Pro now need to plan around. Framed for Gabe around (a) the exact BYO-API-key migration path, (b) the ~5% of Cursor traffic figure from Michael Truell that makes the cutoff smaller than headline suggests, (c) 'Astra specifically excluded during wind-down' as the long-term intent read, (d) the first public ownership-based LLM cutoff precedent for AI-tooling M&A risk. SKIPPED: Anthropic Claude Fable 5 (June news, not fresh); OpenAI GPT-6.1 Astra shelving (Sept 29-30, already covered in prior digests); Google Cloud Next '26 agentic platform (April news); Karpathy nanochat (Oct 13 release, future); Figure/1X/humanoid robotics (no specific recent anchor); SWE-bench Pro (arxiv paper from mid-2026, not fresh); DevDay 2026 (already extensively covered in prior Oct digests). No late-breaking Tier 1 lab announcements, model drops, or new OSS releases found in the past 24 hours. items_added=1 (Cursor Nov 12), items_output=2 (AMD T1 promoted + Cursor T2 new)."
+    },
+    {
       "run_id": "2026-10-07T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
