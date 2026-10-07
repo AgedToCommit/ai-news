@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-07T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-07T06:00:00Z",
+      "ended_at": "2026-10-07T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 10500,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-07-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path, 2am EDT. Pre-flight: kill switch inactive (control.paused=false, enrichment.enabled=true). Input: yesterday's data/2026-10-06-pm.json with 4 items (OpenAI-AMD 6GW T1, Python 3.15 T2, DIVD-Zammad T2, OpenAI portfolio compute T3). WebSearch-only sweep (EGRESS_BLOCKED pattern on WebFetch continues). 8 web search queries total — well under 30 cap. ENRICHMENT ACTIONS: all four items enriched with overnight context, zero dropped, zero late-breaking additions. (1) OpenAI-AMD 6GW deal — surfaced Lisa Su's Tuesday Morgan Stanley follow-up ('ramp phase starting in the second half of this year and continuing into 2027...that is on track' — first direct public commitment to the H2 2026 date), Forrest Norrod's 'transformative' quote, and the Tuesday Nvidia stock recovery (+1% to $186.80) with Melius Research raising Nvidia target to $275 from $240 and Goldman Sachs also raising. Analysts now explicitly frame OpenAI's total compute envelope at ~16 GW with AMD stacked on top of Nvidia (not substituted). Added fourth why-it-matters point on 'additive not displaced' framing. Rewrote brief to lead with Su's 'on track' confirmation. (2) Python 3.15 — surfaced three new facts: RC3 was specifically released due to last-minute lazy-import release blockers (GA postponed to properly test the new keyword, which is reassuring signal the Python core team is holding the release to make lazy imports production-ready); Meta has publicly reported up to ~70% startup time reduction on large codebases using the lazy keyword — credible real-world performance number; JIT speedup is 8-13% depending on architecture, not a flat 8% (ARM64 lands toward top end). Added fourth why-it-matters point on architecture-dependent JIT range. Switched link to python.org as primary. (3) DIVD-Zammad breach — surfaced three new facts: the two Zammad zero-days now have CVE numbers (CVE-2026-102489 and CVE-2026-102490, severity 9.4, published by DIVD on September 30, nine days after the breach); Zammad has NOT shipped a specifically-patched version yet — DIVD guidance is 'upgrade to Zammad 7 or take instance offline' while Zammad is 'still working on a fix' (disclosed-but-unpatched situation); Sysdig and SC World published technical detection write-ups (process-tree indicators of agentic self-commenting, simultaneous credential-harvest + brute-force patterns). Added fourth why-it-matters point on the CVE-published-without-patch problem. Rewrote brief around the CVE assignment + no-patch situation. (4) OpenAI portfolio compute — refined numbers: total envelope ~16 GW per Decrypt and Melius; Oracle Stargate capacity revised upward from ~4.5 GW to ~7 GW planned with the specific milestone of 64,000 Nvidia GB200 chips in Abilene by end-2026; CoreWeave contract breakdown confirmed as $11.9B (March) + $4B (May) + $6.5B (September) = ~$22.4B total 2025. Added two near-term calendar waypoints: Oracle Abilene end-2026 and AMD MI450 H2 2026. LATE-BREAKING PASS: searched for Tier-1 lab announcements and new model drops over the last 12 hours. Nothing truly fresh — ServiceNow World Forum Chicago Oct 6 is enterprise-marketing, not model-release; no new Anthropic Haiku 5.5 / Opus follow-up; no Gemini / DeepMind launches; no OpenAI model drops. Decision: zero late-breaking adds (same posture as yesterday's enrichment). items_added=0. Final tier_counts: {1:1, 2:2, 3:1}. 4 items in output file."
+    },
+    {
       "run_id": "2026-10-06T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
