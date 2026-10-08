@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-08T11:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-08T11:00:00Z",
+      "ended_at": "2026-10-08T11:15:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 8,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-08-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path, 7am EDT. Pre-flight: kill switch inactive (control.paused=false, refresh.enabled=true). Input: today's data/2026-10-08-am.json (2 items from enrichment). WebSearch-only sweep (EGRESS_BLOCKED pattern continues). 8 web search queries across: AI model releases Oct 8, Anthropic/OpenAI/Google/Meta morning news, China AI releases, EU AI news, Hugging Face releases, DeepSeek/Qwen/Moonshot October, Claude Haiku 5.5 pricing/benchmarks, OpenAI fired researchers letter. OVERNIGHT SWEEP FINDINGS: Claude Haiku 5.5 launched October 7 — Tier 1 Anthropic model release with $0.10/M input pricing (up to 100K), 72.4% OSWorld 2.1 (vs 15.7% Haiku 4.5), ~75% avg cost reduction vs Haiku 4.5, ~30% tokenizer inflation caveat, effort-level controls added. Added as new item. No material overnight developments on either existing item (OpenAI-AMD holding pattern confirmed, Cursor/Nov12 no new announcements). OpenAI fired-researchers letter is from September (not fresh). DeepSeek/Qwen/Moonshot — no new October releases confirmed. EU Digital Omnibus already in force since July 27; no Oct 8 regulatory news. items_added=1. Final tier_counts: {1:2, 2:1, 3:0}. 3 items in output file."
+    },
+    {
       "run_id": "2026-10-08T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
