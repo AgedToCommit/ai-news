@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-08T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-08T06:00:00Z",
+      "ended_at": "2026-10-08T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 9000,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-08-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path, 2am EDT. Pre-flight: kill switch inactive (control.paused=false, enrichment.enabled=true). Input: yesterday's data/2026-10-07-pm.json with 2 items (OpenAI-AMD 6GW T1 promoted from Monday with Jensen Huang CNBC context, OpenAI-Cursor Nov 12 cutoff T2). WebSearch-only sweep (EGRESS_BLOCKED pattern on WebFetch continues). 8 web search queries total — well under 30 cap. ENRICHMENT ACTIONS: both items enriched with overnight context, zero dropped, zero late-breaking additions. (1) OpenAI-AMD 6GW deal — overnight (Oct 7-8) brought no new material developments (no new on-the-record statements from either Lisa Su, Jensen Huang, or Sam Altman since Wednesday). Pivoted framing from 'new facts' to 'holding-pattern waypoint analysis': (a) AMD Q3 FY2026 earnings call expected late October-early November, which will be the first Street datapoint on whether MI450 Helios racks actually began shipping as the H2 2026 schedule promised (management guidance: 'a little bit in Q3,' ramp to significant volume in Q4, racks priced $5-5.5M each); (b) Oracle/CoreWeave contract renegotiation disclosures as the real test of warrant-structure-as-template vs. Huang's 'overcommitment' framing; (c) Nvidia's own ~$100B OpenAI commitment language on its next earnings or investor event as the swing variable. Added Barchart and Sherwood takes to the takes array for Wednesday aftermath color. Rewrote brief around the holding-pattern read. (2) OpenAI-Cursor Nov 12 cutoff — overnight brought no new announcements from OpenAI, Cursor, or Anysphere, but overnight reporting review surfaced three new concrete facts: (a) OpenAI's BYO-key transition guidance has specific surface exclusions — NOT covering Cursor Tab, Auto, Cloud Agents, Background Agents, Automations, CLI, API, SDK (this materially changes the migration calculus for anyone using Cursor's background agents); (b) Anthropic has made a public 'continue to increase compute to support Claude models in Cursor' commitment, a specific supply-side signal that there will be no rate-limit friction on the Claude side when the shift happens; (c) the Grok 4.5 (trained on 'trillions of tokens of Cursor data') / Grok 4.6 (61 on Artificial Analysis Intelligence Index) trajectory confirms SpaceXAI's long-term play is to make Grok the primary default. Added fourth why-it-matters point with a concrete pre-cutoff checklist (verify BYO-key fallback is configured, audit background-agent and CLI workflows for migration). Added Bloomberg Law and aicatchup takes. Rewrote brief around the 35-day holding-pattern status. LATE-BREAKING PASS: searched for Tier-1 lab announcements and new model drops over the last 12 hours. Nothing truly fresh — no Anthropic/OpenAI/Google/Meta/Mistral/xAI model releases found; no new OSS drops; Grok 4.6 is August-dated; AMD-OpenAI/Nvidia news cycle is in a settle period after Wednesday's CNBC. Decision: zero late-breaking adds (same posture as yesterday's enrichment and the enrichment-before-that). items_added=0. Final tier_counts: {1:1, 2:1, 3:0}. 2 items in output file."
+    },
+    {
       "run_id": "2026-10-07T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
