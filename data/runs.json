@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-08T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-08T17:00:00Z",
+      "ended_at": "2026-10-08T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 7000,
+        "output_write": 3500
+      },
+      "fetches_made": 15,
+      "items_input": 4,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-08-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path, 1pm EDT. Pre-flight: kill switch inactive (control.paused=false, digest.enabled=true). Today's am file existed with 3 items (OpenAI-AMD T1 holding-pattern, Claude Haiku 5.5 T1 fresh from 7am refresh, OpenAI-Cursor Nov 12 T2 holding-pattern) — all three excluded per promotion rule. None of the three had materially deepened in the afternoon: no new Anthropic/OpenAI/Google/Meta/Mistral/xAI model drops post-Haiku-5.5, no new on-the-record statements from AMD/OpenAI/Nvidia leadership on the 6GW deal, no new announcements from Cursor/Anysphere/OpenAI on the Nov 12 cutoff. WebSearch-only sweep (EGRESS_BLOCKED pattern on WebFetch continues). 15 web searches across: AI model releases Oct 8, Anthropic/OpenAI/Google announcements Oct 8, Claude Haiku 5.5 reactions, open-weight releases Oct 2026, dev-tool launches Oct 8, 'Oct 7 2026' AI announcements, SWE-bench release, Simon Willison blog Oct 2026, HuggingFace trending this week, OpenAI DevDay 2026 Agents SDK, AMD-Nvidia-OpenAI Oct 8, Python 3.15 release notes, Python 3.15 lazy imports PEP 810, AI regulation EU/US Oct 2026, Karpathy nanochat Oct 13, Rust/Tauri AI framework Oct 2026, Copilot/Cursor/Windsurf Oct 2026, humanoid robotics Figure/1X/Tesla Oct 2026, AI tool news Oct 6-8 2026, AI startup funding Oct 7 2026, 'Python 3.15.0rc3' release. OUTPUT: 1 fresh T2 item (Python 3.15 release-eve). Python 3.15.0 ships tomorrow Oct 9 after a one-week slip from the original Oct 1 target — rc3 landed Oct 2 with 156 bugfixes from 82 contributors fixing lazy-import blockers. Framed for Gabe (Python hobbyist) around (a) explicit lazy imports as the one feature that changes how you write Python scripts, (b) macOS 27.0 + tkinter/IDLE hang as the immediate day-one footgun pointing to a wait for 3.15.1, (c) Tachyon sampling profiler as the first stdlib sampling profiler, (d) UTF-8 as default encoding fixing a specific class of 'works on my laptop but breaks on CI' bugs. SKIPPED: Nothing fresh from Anthropic/OpenAI/Google/Meta/Mistral/xAI post-Haiku-5.5; no new OSS model drops; AMD/Cursor/Haiku-5.5 in holding pattern (not promoted); OpenCode 185K stars / Ollama launch command / UiPath coding agents all July 2026 (not fresh); Simon Willison Oct 3 newsletter note (minimal content); AI startup funding roundups aggregator-sourced and unreliable; AMD stock/Nvidia Oct 8 2026 news cycle returned 2025 results (one-year-old deal coverage). items_added=1 (Python 3.15 release-eve), items_output=1."
+    },
+    {
       "run_id": "2026-10-08T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",

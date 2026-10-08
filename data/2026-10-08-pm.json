@@ -1,0 +1,69 @@
+{
+  "snapshot_id": "2026-10-08-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-10-08",
+  "generated_at": "2026-10-08T17:30:00Z",
+  "generated_at_local": "2026-10-08T13:30:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-10-08T17:30:00Z", "duration_ms": 1800000 }
+  ],
+  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "items": [
+    {
+      "id": "python-3-15-release-eve-october-9-2026",
+      "tier": 2,
+      "title": "Python 3.15.0 ships tomorrow (Oct 9) after a one-week slip — explicit lazy imports (PEP 810), the Tachyon sampling profiler (PEP 799), UTF-8 as default encoding (PEP 686), a new frozendict (PEP 814) and a 3–4% JIT improvement are in; macOS 27.0 users should wait for 3.15.1 because tkinter apps and IDLE hang",
+      "summary": "Python 3.15.0 is now scheduled for final release on **October 9, 2026** — the stable launch slipped one week from the original October 1 target after last-minute lazy-import bugs forced a surprise third release candidate. 3.15.0rc3 shipped on October 2 with roughly 156 bugfixes, build improvements and documentation changes from 82 contributors since rc2. The release manager cited specific lazy-import blockers as the reason: one bug was that `lazy import a.b as c` was treating `b` as an attribute of `a` instead of importing the `a.b` submodule. The release notes confirm there are no ABI changes from rc2 onward, so wheels built against the release candidates will keep working with later 3.15 versions. **Headline features landing in 3.15**: (1) **PEP 810 — Explicit lazy imports** — a new `lazy` keyword (`lazy import json`) that creates a proxy object, defers loading until first use, and lists the module in `sys.lazy_modules` rather than `sys.modules`. The target use cases are CLI tools, test suites and large dependency graphs where startup cost dominates. (2) **PEP 814 — frozendict** as a built-in type. (3) **PEP 661 — Sentinel** type for the stdlib. (4) **PEP 799 — Tachyon sampling profiler** as a dedicated stdlib `profiling` package (new high-frequency, low-overhead statistical sampling profiler per the alpha notes). (5) **PEP 686 — UTF-8 as the default encoding**. (6) **PEP 798 — unpacking in comprehensions**, plus improved error messages. (7) **JIT upgrade** with a reported 3–4% geometric-mean performance improvement on x86-64 Linux. **Known issue flagged in rc3 coverage**: tkinter applications including IDLE can hang on macOS 27.0 — a specific day-one blocker for anyone on the newest macOS release, pointing to a wait for 3.15.1. Instagram's internal production figures for lazy imports (widely cited but not primary-source-confirmed) are 50–80% startup time reductions and 40–90% memory reductions; lazy imports speed up startup, not steady-state execution.",
+      "link": "https://www.python.org/downloads/release/python-3150rc3/",
+      "why_it_matters": "For Gabe: this is directly on-stack and the kind of release-eve moment where the practical details are the whole value. Four concrete things worth filing before you hit `brew upgrade python@3.15` or `pyenv install 3.15.0` tomorrow. First, **explicit lazy imports are the one feature that changes how you write Python scripts in a hobby context**. `lazy import json` creates a proxy object and the module isn't actually loaded until the first attribute access — which means a script that imports pandas/numpy/requests at the top just-in-case now has a near-zero cold-start cost for the paths that never touch them. For a CLI tool or a quick data-wrangling script, the real unlock is you can keep `import pandas as pd` at the top of the file and get `--help` to render in milliseconds instead of seconds. The gotcha the PEP discussion surfaced: if a lazy import fails on first use, the proxy isn't replaced, so the next access retries — not a persistent error, just a 'why does this sometimes work on retry' bug if you don't know to look for it. Second, **the macOS 27.0 + tkinter hang warning is the immediate day-one footgun**. If you're on macOS 27.0 and you use IDLE or any tkinter-based app, upgrading to 3.15.0 on launch day will hang on you. The right move: wait for 3.15.1 (first bugfix release, usually ~6 weeks later) or stay on 3.14 until the issue has a confirmed fix in a point release. Third, **the Tachyon sampling profiler ships as a stdlib package** — this is the first time Python has had a sampling profiler in the standard library (cProfile is deterministic, which adds overhead). For a hobbyist who's been reaching for `py-spy` or `scalene` when a script runs slower than expected, the practical read: for a lot of casual profiling needs, you now get a lower-friction baseline without the external install dance. Fourth, **UTF-8 as the default encoding (PEP 686) is the quiet one that fixes a specific class of 'why does my script work on my laptop but break on CI' bug** — the ones where a `open('file.txt')` call on Windows was falling through to cp1252 and corrupting non-ASCII content. If you've ever hit a `UnicodeDecodeError` on a CSV or JSON file after moving code between machines, this is the fix. Practical concrete next step: **don't upgrade production hobby workloads tomorrow — wait a week for ecosystem catchup on the big libraries (pandas, numpy, requests, cryptography) to confirm 3.15 wheel availability**. If you're on macOS 27.0 and use IDLE, wait for 3.15.1 outright. For a fresh project where you want to try `lazy import`, create a `pyenv install 3.15.0` sandbox tomorrow afternoon and see how a CLI tool's startup time looks before and after.",
+      "why_it_matters_brief": "Python 3.15.0 ships tomorrow after a one-week lazy-import-bug slip — explicit lazy imports, a stdlib sampling profiler and UTF-8 as default are the headline features, but macOS 27.0 users should wait for 3.15.1 to avoid tkinter/IDLE hangs.",
+      "source": {
+        "name": "python.org — Python 3.15.0rc3 release page",
+        "type": "scrape",
+        "url": "https://www.python.org/downloads/release/python-3150rc3/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-10-08T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-10-08T17:30:00Z",
+          "by": "digest",
+          "change": "created — Tier 2 Python release-eve item. Final 3.15.0 scheduled for Oct 9 after rc3 (Oct 2) addressed lazy-import blockers that pushed the Oct 1 target back one week. Headline features: PEP 810 lazy imports, PEP 814 frozendict, PEP 661 Sentinel, PEP 799 Tachyon sampling profiler, PEP 686 UTF-8 default, PEP 798 unpacking in comprehensions, JIT 3–4% improvement. Known issue: tkinter/IDLE hangs on macOS 27.0 — hold off until 3.15.1."
+        }
+      ],
+      "takes": [
+        {
+          "source": "python.org — Python 3.15.0rc3 release page",
+          "url": "https://www.python.org/downloads/release/python-3150rc3/",
+          "take": "Primary source — confirms Oct 9 2026 final target, ABI stability from rc2 onward, and standard 'release candidate, not for production' advisory."
+        },
+        {
+          "source": "Warp2Search — Python 3.15.0rc3 Release Candidate Announced",
+          "url": "https://www.warp2search.net/story/python-3150rc3-release-candidate-announced-stable-release-set-for-october-9-2026/",
+          "take": "Specifies the one-week slip from Oct 1 to Oct 9 and names the lazy-import blockers as the delay reason. Flags the macOS 27.0 tkinter/IDLE hang as a known day-one issue."
+        },
+        {
+          "source": "Real Python — Python News October 2026",
+          "url": "https://realpython.com/python-news-october-2026/",
+          "take": "Covers the specific lazy-import bug (`lazy import a.b as c` treating `b` as an attribute of `a` instead of importing the submodule) that caused the slip, and the 156-bugfix / 82-contributor delta between rc2 and rc3."
+        },
+        {
+          "source": "PEP 810 — Explicit lazy imports (python.org)",
+          "url": "https://peps.python.org/810",
+          "take": "Primary source for the lazy-imports feature — Steering Council acceptance dated Nov 3 2025, keyword syntax (`lazy import json`), proxy-object semantics, `sys.lazy_modules` listing. Flags that if a lazy import fails on first use, the proxy is not replaced and the next use retries."
+        },
+        {
+          "source": "JetBrains PyCharm blog — Explicit lazy imports are coming to Python 3.15",
+          "url": "https://blog.jetbrains.com/pycharm/2026/06/explicit-lazy-imports-are-coming-to-python-3-15/",
+          "take": "Developer-facing walkthrough of lazy imports — explains the proxy mechanic, the `sys.lazy_modules` listing, the retry-on-failure semantic, and open compatibility-shim concerns for libraries supporting both 3.14 and 3.15."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
