@@ -2,14 +2,45 @@
   "snapshot_id": "2026-10-09-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-09",
-  "generated_at": "2026-10-09T06:30:00Z",
-  "generated_at_local": "2026-10-09T02:30:00-04:00",
+  "generated_at": "2026-10-09T11:20:00Z",
+  "generated_at_local": "2026-10-09T07:20:00-04:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-10-08T17:30:00Z", "duration_ms": 1800000 },
-    { "phase": "enrichment", "ran_at": "2026-10-09T06:30:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-10-09T06:30:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-10-09T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "tier_counts": { "1": 1, "2": 1, "3": 1 },
   "items": [
+    {
+      "id": "mistral-large-4-le-chonk-public-preview",
+      "tier": 1,
+      "title": "Mistral opens public preview of Large 4 — a 1T-parameter MoE model nicknamed 'Le Chonk' — with native multimodality and open weights coming October 27",
+      "summary": "Mistral AI launched a public API preview of Large 4 on October 6, 2026 — a 1.05-trillion-parameter mixture-of-experts model (49B active per token) they're internally calling 'Le Chonk.' The model includes a 1.6B-parameter vision encoder for native multimodal input, a reported 1M-token context window, and a cybersecurity-focused launch pitch (vendor-reported 93% on Cybench). Open weights are expected by October 27 at the latest; current API pricing is $1.36/M input, $4.18/M output.",
+      "link": "https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5",
+      "why_it_matters": "Mistral is a French company, and this is a legitimately large-scale open-weight model — 1 trillion total parameters is a benchmark-era number, and MoE means it only activates 49B at once, so the inference cost doesn't track the raw parameter count. The 'Le Chonk' branding is intentional: Mistral's previous 'Le Chat' releases lean into that house-style naming. The cybersecurity positioning (reduced-moderation private API for 'privileged' security partners) is the most notable marketing angle — Mistral is pitching this explicitly to pen testers and defensive security teams in a way that OpenAI and Anthropic haven't. Independent benchmarks from Artificial Analysis put it 37th overall (6th among open-weight models), so it's not at the frontier, but it's squarely in the useful-for-coding-and-long-context tier. For Gabe: the open-weights drop at end of October is the practical moment — once the weights are out, you can run it locally via Ollama or pull it through Open WebUI. The MoE architecture means you'll want the right hardware (49B active params isn't small), but at open-weight API pricing it's worth testing against your Python scripts before the weights land.",
+      "why_it_matters_brief": "Mistral's 1T-param MoE with native multimodality is in API preview now — open weights land October 27, which is the practical moment for running it locally via Ollama.",
+      "source": {
+        "name": "Let's Data Science",
+        "type": "scrape",
+        "url": "https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-10-09T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T11:00:00Z", "by": "refresh", "change": "created — Tier 1 item. Mistral Large 4 public API preview opened Oct 6; 1.05T params / 49B active MoE, 1.6B vision encoder, 1M context, open weights planned Oct 27. Cybersecurity-focused launch pitch with reduced-moderation private API for security partners. Vendor-reported 93% Cybench; Artificial Analysis independent ranking: 37th overall / 6th open-weight." }
+      ],
+      "takes": [
+        { "source": "Let's Data Science", "url": "https://letsdatascience.com/news/mistral-debuts-large-4-open-weight-model-preview-cbf9e0b5", "take": "Summary of the launch: specs (1.05T params, 49B active, 1.6B vision encoder), API preview open Oct 6, weights planned later this month." },
+        { "source": "Silicon.co.uk", "url": "https://www.silicon.co.uk/cloud/ai/mistral-le-chonk-631804", "take": "UK coverage of the 'Le Chonk' launch — notes Artificial Analysis ranking (37th overall, 6th among open-weight models) as an independent data point against Mistral's own benchmarks." },
+        { "source": "AI Weekly", "url": "https://aiweekly.co/alerts/mistral-previews-1t-param-open-weight-large-4-le-chonk", "take": "Reports October 27 as the specific target date for the public open-weight release." },
+        { "source": "AI Magazine", "url": "https://aimagazine.com/news/how-does-mistral-large-4-compare-to-its-competitors", "take": "Comparative analysis against competitors — notes company-reported benchmark claims and the cybersecurity access tier." }
+      ]
+    },
     {
       "id": "python-3-15-release-eve-october-9-2026",
       "tier": 2,
@@ -27,7 +58,7 @@
       "hero_image": null,
       "added_at": "2026-10-08T17:30:00Z",
       "added_by": "digest",
-      "last_revision_by": "enrichment",
+      "last_revision_by": "refresh",
       "enriched_overnight": true,
       "promoted_from_am": false,
       "revisions": [
@@ -40,6 +71,11 @@
           "at": "2026-10-09T06:30:00Z",
           "by": "enrichment",
           "change": "updated why_it_matters, summary, title and brief — today is release day. Added the `-X lazy_imports` command-line flag and `PYTHON_LAZY_IMPORTS` environment variable as the global opt-in path (new angle: you can try lazy imports without rewriting any code). Added the abi3t wheel-break footgun for free-threaded CPython builds. Added docs.python.org 3.15 whatsnew and dev.to abi3t writeup to takes. Noted final-release blog post not yet indexed as of 2am EDT (release manager in Finland — release will land during the European workday). Confirmation of the actual tag will come via the 7am refresh."
+        },
+        {
+          "at": "2026-10-09T11:00:00Z",
+          "by": "refresh",
+          "change": "refresh check — Python 3.15.0 final release page not yet indexed by search as of 7am EDT (11am UTC / 2pm Helsinki). python.org/downloads/latest/python3.15/ still resolves to rc3; no 'Python 3.15.0 is here' post found on blog.python.org. Title and summary hold (release remains scheduled for today). Link will remain the rc3 page until the final release is indexed. No content changes."
         }
       ],
       "takes": [
@@ -78,6 +114,35 @@
           "url": "https://dev.to/mr_manushukla/python-315-upgrade-guide-lazy-imports-the-abi3t-wheel-break-and-a-jit-worth-8-9-4k0d",
           "take": "Surfaces the abi3t wheel-break footgun for free-threaded CPython builds — abi3 stable-ABI wheels don't carry forward to abi3t, so C-extension maintainers must ship a separate abi3t wheel. Also reports a higher 8–9% JIT delta on specific workloads vs. the 3–4% headline number."
         }
+      ]
+    },
+    {
+      "id": "deepseek-second-funding-round-12b-october-2026",
+      "tier": 3,
+      "title": "DeepSeek closing in on $12B+ second funding round at $74B valuation — CATL and Tencent leading, Shanghai IPO eyed for early 2027",
+      "summary": "DeepSeek, the Chinese AI lab behind the open-weight R1 family, is near the close of a second external fundraising round expected to reach at least $12B (80+ billion yuan), possibly as high as $15B, at a valuation of roughly $74B (500B yuan). Chinese battery giant CATL and Tencent have committed among the largest amounts. The round is expected to close this month, and DeepSeek has hired CITIC Securities to prepare a potential Shanghai STAR Market IPO targeting early 2027. This follows June's $7.4B first-ever external financing and a pre-money valuation that has roughly doubled since.",
+      "link": "https://www.silicon.co.uk/ai-2/deepseek-funding-round-2-630744",
+      "why_it_matters": "DeepSeek is the Chinese lab that released the R1 reasoning model in January 2025 — an openly-licensed model that matched GPT-4-class performance at a fraction of the inference cost. This second round, more than double the June raise ($7.4B), and a $74B valuation places it in the same financial weight class as Anthropic. The notable thing is who's investing: CATL is the world's largest EV battery maker, not a tech company — it's a sign that AI investment in China has crossed over into hardware/manufacturing sectors on a strategic-industrial basis. For Gabe: no practical implication for using the models today, but it's context for why the DeepSeek open-weight releases keep coming — the company can afford to give away models that compete with closed-source frontier products. If the IPO happens in early 2027, DeepSeek will be a publicly traded company making model releases on an investment-grade schedule.",
+      "why_it_matters_brief": "DeepSeek's second raise ($12B+, $74B valuation) with CATL and Tencent shows Chinese AI capex is running at Anthropic-scale — context for why open-weight releases from this lab keep coming.",
+      "source": {
+        "name": "Silicon.co.uk",
+        "type": "scrape",
+        "url": "https://www.silicon.co.uk/ai-2/deepseek-funding-round-2-630744"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-10-09T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T11:00:00Z", "by": "refresh", "change": "created — Tier 3 item. DeepSeek second funding round: 80B+ yuan floor (~$12B), up to $15B, at $74B valuation. CATL and Tencent among largest commitments. Round expected to close in October. CITIC Securities hired for Shanghai STAR Market IPO, targeting early 2027. Follows June's $7.4B first external round." }
+      ],
+      "takes": [
+        { "source": "Silicon.co.uk", "url": "https://www.silicon.co.uk/ai-2/deepseek-funding-round-2-630744", "take": "Bloomberg-sourced figures: 80B yuan floor, ~100B yuan ceiling, $74B valuation. Tencent and CATL among largest commitments." },
+        { "source": "DealStreet Asia", "url": "https://www.dealstreetasia.com/?p=497355", "take": "Reports round size in context: original target was 50B yuan; final volume expected to exceed 80B yuan, possibly reaching 100B yuan (~$15B)." },
+        { "source": "Khaleej Times", "url": "https://www.khaleejtimes.com/business/deepseek-to-raise-at-least-12-billion-in-tencent-backed-funding", "take": "Headlines the $12B+ figure and Tencent's involvement, noting this follows June's $7.4B first external financing." }
       ]
     }
   ],
