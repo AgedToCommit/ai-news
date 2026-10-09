@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-09T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-09T11:00:00Z",
+      "ended_at": "2026-10-09T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 5000,
+        "output_write": 2000
+      },
+      "fetches_made": 12,
+      "items_input": 5,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-09-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path, 7am EDT. Pre-flight: kill switch inactive (control.paused=false, refresh.enabled=true). Input: this morning's data/2026-10-09-am.json with 1 item (Python 3.15.0 release-day T2, written by enrichment at 2am). WebSearch-only sweep (EGRESS_BLOCKED pattern continues — WebFetch unavailable). 12 web searches across: Python 3.15.0 final release confirmation (python.org), AI model announcements Oct 9 (Anthropic/OpenAI/Google), AI news Asia/Europe overnight, Mistral Large 4 benchmarks/specs, DeepSeek funding round Oct 2026, Gemini 4 release status, OpenAI/DeepSeek/Mistral/xAI new models Oct 2026, HuggingFace new models Oct 8-9, Simon Willison October 2026, python.org release confirmation (extended). PYTHON 3.15.0 STATUS: Final release page not yet indexed by search as of 7am EDT (11am UTC / 2pm Helsinki). python.org/downloads/latest/python3.15 still resolves to rc3; no 'Python 3.15.0 is here' blog post found on blog.python.org. Release remains on schedule for today — added a refresh revision noting this. No content changes to the Python item. NEW ITEMS ADDED (2): (1) Mistral Large 4 'Le Chonk' — T1 item. Launched Oct 6 as public API preview; 1.05T params / 49B active MoE, 1.6B vision encoder, 1M context. Not covered in any prior snapshot despite launching Oct 6 — confirmed by enrichment notes from Oct 9 ('no Mistral model releases found overnight'). Open weights planned Oct 27. Cybersecurity-focused launch pitch (vendor-reported 93% Cybench). European lab / EU region. (2) DeepSeek $12B+ funding round — T3 item. Second external round at $74B valuation, CATL and Tencent leading; round expected to close in October, STAR Market IPO targeting early 2027. Asia region / overnight from Chinese financial press. NOT FOUND (no items from): Anthropic, OpenAI, Google new model releases Oct 9; Gemini 4 still in post-training; xAI/Mistral overnight activity beyond Large 4. FINAL: items_added=2, items_kept=1 (Python 3.15 with revision), tier_counts {1:1, 2:1, 3:1}, 3 items total."
+    },
+    {
       "run_id": "2026-10-09T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
