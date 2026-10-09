@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-09T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-09T06:17:00Z",
+      "ended_at": "2026-10-09T06:30:00Z",
+      "wall_time_ms": 780000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 5000,
+        "output_write": 2500
+      },
+      "fetches_made": 8,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-09-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path, 2am EDT. Pre-flight: kill switch inactive (control.paused=false, enrichment.enabled=true). Input: yesterday's data/2026-10-08-pm.json with 1 item (Python 3.15 release-eve T2). WebSearch-only sweep (EGRESS_BLOCKED pattern on WebFetch continues — python.org/downloads DNS lookup failed). 7 web search queries + 1 WebFetch attempt — well under 30 cap. ENRICHMENT ACTIONS: Python 3.15 item kept and enriched for release day — today IS Oct 9 2026, the scheduled release date. Final-release blog post not yet indexed in search as of 2am EDT (release manager Hugo van Kemenade is based in Finland, so the actual tag will land during the European workday). Core framing shifted from 'ships tomorrow' to 'ships today'. Two concrete new facts added: (a) `-X lazy_imports` command-line flag and `PYTHON_LAZY_IMPORTS` environment variable provide a global opt-in path for lazy loading without rewriting source `import` statements — surfaced in the docs.python.org 3.15 whatsnew page. This is the practical hobbyist-first thing to try with 3.15. (b) abi3t wheel break — the stable-ABI (`abi3`) wheel contract is not forward-compatible with 3.15's free-threaded `abi3t` tag, so C-extension packages must ship a separate abi3t wheel for free-threaded CPython. Matters mostly to package maintainers but surfaces as 'package not found' for free-threaded users. Also added that one secondary writeup reports an 8–9% JIT delta on specific workloads vs. the headline 3–4%. Added docs.python.org 3.15 whatsnew and dev.to abi3t writeup to takes array (7 takes total). Rewrote why_it_matters_brief around the `-X lazy_imports` toggle angle. LATE-BREAKING PASS: searched for Tier-1 lab announcements and new model drops over the last 12 hours. Nothing fresh — no Anthropic/OpenAI/Google/Meta/Mistral/xAI/DeepSeek model releases found overnight; most recent confirmed items are Haiku 5.5 (Oct 7) and Opus 5.5 (Sep 22). Google Gemini 4 and Mistral/DeepSeek fall releases remain unconfirmed. OpenAI-AMD and OpenAI-Cursor stories unchanged. Decision: zero late-breaking adds (continuing the same posture as recent enrichments). items_added=0. Final tier_counts: {1:0, 2:1, 3:0}. 1 item in output file. Confirmation of the actual Python 3.15.0 final-release tag/announcement will come via the 7am refresh when European workday coverage is in."
+    },
+    {
       "run_id": "2026-10-08T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
