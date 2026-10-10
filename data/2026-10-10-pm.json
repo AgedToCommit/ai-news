@@ -1,0 +1,139 @@
+{
+  "snapshot_id": "2026-10-10-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-10-10",
+  "generated_at": "2026-10-10T17:30:00Z",
+  "generated_at_local": "2026-10-10T13:30:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-10-10T17:30:00Z", "duration_ms": 1800000 }
+  ],
+  "tier_counts": { "1": 1, "2": 2, "3": 1 },
+  "items": [
+    {
+      "id": "anthropic-claude-haiku-5-5-release-1m-context-october-7-2026",
+      "tier": 1,
+      "title": "Claude Haiku 5.5 lands with a 1M-token context window at $0.10/$0.50 per M tokens — the first time the cheapest tier gets the long-context treatment, with SWE-bench Multimodal nearly doubling vs Haiku 4.5",
+      "summary": "Anthropic shipped Claude Haiku 5.5 on October 7, 2026, completing the 5.5 family (Opus 5.5 shipped in September; Sonnet 5.5 earlier in the summer). The pricing is $0.10/M input tokens and $0.50/M output tokens — unchanged from Haiku 4.5 — but the context window jumps from 200K to 1M tokens, the first time Anthropic has put a 1M window on the smallest tier. Max output is 128K tokens (300K in the Batch API beta via the output-300k-2026-03-24 header). On SWE-bench Multilingual at max effort, Haiku 5.5 scores 83.7% versus Haiku 4.5's 67.4% (Sonnet 5.5 is 90.3%). On SWE-bench Multimodal, Haiku 5.5 reaches 30.7% versus 19.8% for Haiku 4.5 (Sonnet 5.5 is 54.3%). On the harder SWE-Bench Pro, Haiku 5.5 scores 64.8% at max effort against Sonnet 5.5's 81.3%; Haiku 4.5 has no published Pro number. All figures are Anthropic self-reported at max effort — one third-party noted no independent lab had posted Haiku 5.5 results as of Oct 8. Anthropic also notes the model defaults to medium effort in Claude Code and the API, which scores lower than max. Claude Code v2.1.293 (Oct 7) switched its default to Haiku 5.5. API model id is listed as Active with retirement not sooner than October 7, 2027.",
+      "link": "https://platform.claude.com/docs/en/models/haiku-5-5/overview",
+      "why_it_matters": "The pricing-to-capability shape is the thing worth filing: $0.10 input / $0.50 output per million tokens is the same as Haiku 4.5, but the context window just 5x'd from 200K to 1M. For a hobbyist running Python scripts over long documents (code review across a whole repo, summarizing a book-length PDF, or feeding a day's worth of RSS entries into a classifier) the economics changed more than the sticker price suggests — the number of tokens you can meaningfully fit in one call is now closer to Sonnet/Opus territory while the per-token cost stayed in the 'cheap tier' zone. The benchmark delta on multimodal (nearly 2x over Haiku 4.5) is the other practical read: 'Haiku' has historically meant 'text-first, don't send images here,' and that advice is partly outdated now — you can throw screenshots at it for classification tasks that would previously have forced an Opus call. Two things to actually watch when trying this: (1) the default-effort setting matters, so if you're seeing poor results on real work compared to the benchmarks, check whether you're on medium vs max effort; (2) all the numbers are vendor-reported at max effort, so burn a few dollars running your own tests on real tasks before committing — Anthropic itself still recommends Sonnet 5.5 / Opus 5.5 for complex agentic coding.",
+      "why_it_matters_brief": "1M context on the cheapest tier at $0.10/$0.50 per M tokens — the long-context floor just dropped to Haiku pricing, with multimodal nearly doubling vs Haiku 4.5.",
+      "source": {
+        "name": "Anthropic Claude Docs",
+        "type": "scrape",
+        "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-10T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-10T17:30:00Z", "by": "digest", "change": "created — Tier 1 item. Claude Haiku 5.5 released Oct 7, 2026 per Anthropic docs. 1M context (up from 200K), 128K max output (300K via Batch API beta), $0.10/$0.50 per M tokens same as Haiku 4.5. SWE-Bench Pro 64.8%, SWE-bench Multilingual 83.7% (vs Haiku 4.5 67.4%), SWE-bench Multimodal 30.7% (vs Haiku 4.5 19.8%) at max effort — Anthropic self-reported, no independent reproduction as of Oct 8. API retirement not sooner than Oct 7, 2027. Default effort is medium in Claude Code / API. Claude Code v2.1.293 switched default to Haiku 5.5 on same day." }
+      ],
+      "takes": [
+        { "source": "Anthropic Claude Docs — Haiku 5.5 Overview", "url": "https://platform.claude.com/docs/en/models/haiku-5-5/overview", "take": "Primary reference — Active status, 1M context, 128K max output, 300K output via Batch API beta, retirement not sooner than Oct 7, 2027." },
+        { "source": "ComputingForGeeks — Claude Haiku 5.5 Released: Features & Benchmarks", "url": "https://computingforgeeks.com/claude-haiku-5-5-released-features-benchmarks/", "take": "Launch summary and the 1M-context-on-cheapest-tier framing." },
+        { "source": "APIdog — Claude Haiku 5.5 Benchmarks", "url": "https://apidog.com/blog/claude-haiku-5-5-benchmarks/", "take": "Benchmark table: SWE-Bench Pro 64.8%, SWE-bench Multilingual 83.7% / 67.4% / 90.3% (Haiku 5.5 / Haiku 4.5 / Sonnet 5.5), SWE-bench Multimodal 30.7% / 19.8% / 54.3%. Flags no independent reproductions as of Oct 8." },
+        { "source": "BenchLM — Claude Haiku 5.5 vs SWE-2", "url": "https://benchlm.ai/md/compare/claude-haiku-5-5-vs-swe-2.md", "take": "Third-party comparison tracker — same benchmark figures, flags Anthropic itself still recommends Sonnet 5.5 / Opus 5.5 for complex agentic coding." },
+        { "source": "LLM Gateway — Claude Haiku 5.5", "url": "https://llmgateway.io/models/claude-haiku-5-5", "take": "Pricing confirmation: $0.10 input / $0.50 output per M tokens; tiered pricing above 100K-token prompts." },
+        { "source": "Havoptic Claude Code Releases — October 2026", "url": "https://www.havoptic.com/releases/claude-code/2026/10", "take": "Claude Code v2.1.293 (Oct 7) switched the default model to Haiku 5.5 with 1M context — the client-side rollout alongside the model release." }
+      ]
+    },
+    {
+      "id": "openai-gpt-6-1-sol-ultrafast-live-october-8-2026",
+      "tier": 2,
+      "title": "GPT-6.1 Sol Ultrafast rolls out live — $12/$60 per M tokens (6x standard) on the API, Codex, and ChatGPT Work, up to 8x faster token generation in Codex and 6x in the API",
+      "summary": "On October 8, 2026 — about 10 days after DevDay — OpenAI began rolling out Ultrafast for GPT-6.1 Sol across the Responses API, Codex, and ChatGPT Work for eligible plans. This is the version the AM-side 'Ultrafast tier' story said was 'coming soon'; it's now live. API pricing per secondary coverage: $12/M input tokens, $60/M output tokens, $0.60/M cached input, $15/M cache writes — all for prompts up to 272,000 tokens — which is 6x the standard Sol rate of $2 in / $10 out. OpenAI's stated speed ceiling is up to 8x the standard Sol throughput in Codex and up to 6x in the API. Access in Codex and ChatGPT Work is gated to the new $500/month Pro 500 tier plus eligible Enterprise/Edu workspaces; the API is where any paying developer can meter it. All these specifics come from secondary coverage (RuntimeWire, Scalevise, SmartScope); OpenAI's own pricing page hadn't been confirmed in those reports at writing. 'Up to 8x' is the stated ceiling, not a guaranteed sustained throughput. The underlying compute path is reportedly the same Cerebras wafer-scale hardware that powered the August 2026 Ultrafast mode preview on GPT-5.6 Sol.",
+      "link": "https://scalevise.com/resources/gpt-6-1-sol-ultrafast-api-codex-chatgpt-work/",
+      "why_it_matters": "This closes the open loop from the AM Ultrafast story: the Sol variant — the one that would actually be hobbyist-economic at the standard pricing — is now live, and now there's a concrete API price to compare against. The practical take: at $12/M input / $60/M output for Sol Ultrafast, you're paying real money per request, but you're getting roughly Astra-level quality at 6-8x the speed of standard Sol. For a tight interactive loop (an agent typing code into Claude Code, a chatbot answering in-session, voice-assistant backends where latency is perceptual), the speed delta is what makes the agent feel like a collaborator rather than a batch job. Three honest caveats worth logging: (1) in Codex and ChatGPT Work this is gated behind the $500/mo Pro 500 plan, so for a Python hobbyist the API is the only cost-rational entry point; (2) 6x the standard token cost is a significant multiplier — a workflow that lightly uses Sol standard at $2/M becomes a workflow that eats $12/M, so the ROI check is whether speed buys you something concrete (an interactive loop that was previously too slow) rather than just a nicer vibe; (3) all the specifics here are from secondary trackers — treat the $12/$60 figure as 'reportedly' until OpenAI's own pricing page is checked. The Cerebras-hardware tangent is where the enduring interest lies: if the throughput really is wafer-scale compute, the ceiling moves up as that hardware generation matures, not as the model generation does.",
+      "why_it_matters_brief": "Sol Ultrafast is live on API/Codex/Work at $12/$60 per M tokens (6x standard Sol) — closes the AM loop with the version that's actually hobbyist-economic through the API.",
+      "source": {
+        "name": "Scalevise",
+        "type": "scrape",
+        "url": "https://scalevise.com/resources/gpt-6-1-sol-ultrafast-api-codex-chatgpt-work/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-10T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-10T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. GPT-6.1 Sol Ultrafast started rolling out Oct 8, 2026 per OpenAI developer-account post and secondary coverage. API rate $12/M input, $60/M output, $0.60/M cached input, $15/M cache writes for prompts ≤272K tokens (6x standard Sol). 8x speed ceiling in Codex, 6x in API (vendor-stated). Codex/Work gated to Pro 500 ($500/mo) + eligible Enterprise/Edu. API open to paying developers. Not yet confirmed against OpenAI's own pricing page per secondary trackers. Separate from Aug 2026 'Ultrafast mode' preview on GPT-5.6 Sol — same underlying Cerebras hardware path reportedly." }
+      ],
+      "takes": [
+        { "source": "Scalevise — GPT-6.1 Sol Ultrafast Rolls Out", "url": "https://scalevise.com/resources/gpt-6-1-sol-ultrafast-api-codex-chatgpt-work/", "take": "Primary coverage of the Oct 8 rollout across API, Codex, and ChatGPT Work. Up-to-8x framing." },
+        { "source": "RuntimeWire — OpenAI adds GPT-6.1 Sol Ultrafast at six times standard API prices", "url": "https://runtimewire.com/article/openai-gpt-6-1-sol-ultrafast-api-pricing", "take": "Pricing detail: $12/M input, $60/M output, $0.60/M cached input, $15/M cache writes — all for prompts up to 272K tokens. 6x standard framing." },
+        { "source": "SmartScope — Codex GPT-6.1 Sol Ultrafast Availability", "url": "https://smartscope.blog/en/blog/codex-gpt-6-1-sol-ultrafast-availability-2026/", "take": "Access gating: Pro 500 for Codex/Work; API available to eligible plans; stops short of full GA — specific release date, rate-limit multiplier, and eligible plans still had open questions in some coverage." },
+        { "source": "RohitAI — OpenAI GPT-6.1 Sol Ultrafast API Codex Guide", "url": "https://rohitai.com/blog/openai-gpt-6-1-sol-ultrafast-api-codex-guide", "take": "Developer-facing walkthrough — Responses API model id, Codex surface detail." },
+        { "source": "Flavio Copes — How to use GPT-6.1 Sol", "url": "https://flaviocopes.com/gpt-6-1-sol.md", "take": "Independent developer guide — confirms the 8x-in-Codex ceiling and the Pro 500 gating in developer-facing surfaces." }
+      ]
+    },
+    {
+      "id": "anthropic-cyber-mission-oss-scanner-infrastructure-defense-october-8-2026",
+      "tier": 2,
+      "title": "Anthropic launches the Cyber Mission — a Critical Infrastructure Defense Program with 11 founding partners (Accenture, CrowdStrike, Palo Alto, Dragos, Rockwell) plus OSS Scanner, a free vuln-scanner for open-source projects inspired by Google's OSS-Fuzz",
+      "summary": "On October 8, 2026, Anthropic launched the Anthropic Cyber Mission — a long-term effort to help defenders secure the software and systems people rely on. Two concrete programs ship under it. First, the Critical Infrastructure Defense Program brings Claude's frontier models, on-site engineers, and threat-research resources to security providers protecting power grids, water, and other critical infrastructure, with 11 founding partners signed on: Accenture, Booz Allen Hamilton, Deloitte, PwC, CrowdStrike, Palo Alto Networks, Dragos, Nozomi Networks, Hitachi, and Rockwell Automation (one additional partner cited but not consistently named across coverage). Several partners are reportedly already using Claude to fix vulnerabilities and help their customers do the same. Second, OSS Scanner is a free, opt-in service giving open-source projects periodic scans from Anthropic's strongest models — a direct echo of Google's OSS-Fuzz, with the critical twist that Anthropic says reports won't go through human review before reaching maintainers. Anthropic reportedly expects a true-positive rate above 90% (framed as a target, not a guarantee). Context: Anthropic flagged that state-sponsored adversaries have spent years establishing footholds across many sectors, and that an earlier June 2026 cyber-defense program for state, local, tribal, and territorial governments has reached more than half of US states.",
+      "link": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "why_it_matters": "OSS Scanner is the piece a Python hobbyist can actually use. If Gabe (or anyone) has a public GitHub project — a scraping script, a side-project library, a small tool — he can opt in and get regular model-generated vulnerability scans at no cost. That's practically useful: the base rate of 'does this script leak secrets, mishandle paths, or have an injection somewhere' is non-trivial for small projects that never get formal security review. The design detail worth filing is the 'no human review before reports go out' choice — it's unusual and signals Anthropic is willing to accept some false-positive rate on individual findings to make the scanner economically runnable at scale. The 90%+ true-positive target is the number to actually trust when it's independently reproduced in a few months, not now. Beyond the free scanner, the broader move — frontier lab + 11 major security vendors + critical-infrastructure framing — is a signal about where AI deployment is heading in enterprise. 'Deploy AI into cyber-defense ops at power grids and water utilities' is a specific commercial direction, not a research gesture. For an everyday developer, the implications are indirect but visible: critical-infrastructure vendors buying frontier-model access at scale means more pricing power for Anthropic, which eventually shows up in the API prices Gabe pays. The analogy to OSS-Fuzz is the right template to anchor on — OSS-Fuzz has found 10,000+ bugs in open-source over roughly a decade, and most hobbyists have never heard of it; a Claude-powered sibling could broaden that reach meaningfully if the false-positive rate holds up.",
+      "why_it_matters_brief": "OSS Scanner is the free piece Gabe can opt into — periodic frontier-model vuln scans on his own GitHub projects, no human review loop, 90%+ TP target.",
+      "source": {
+        "name": "Anthropic News",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-10T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-10T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. Anthropic Cyber Mission launched Oct 8, 2026. Two programs: Critical Infrastructure Defense Program (11 founding partners: Accenture, Booz Allen Hamilton, Deloitte, PwC, CrowdStrike, Palo Alto Networks, Dragos, Nozomi Networks, Hitachi, Rockwell Automation, + 1 not consistently named); OSS Scanner (free opt-in, OSS-Fuzz-inspired, no human review before reports go to maintainers, Anthropic expects >90% TP rate as target). Earlier June SLTT program reached >half of US states." }
+      ],
+      "takes": [
+        { "source": "Anthropic News — Introducing the Anthropic Cyber Mission", "url": "https://www.anthropic.com/news/anthropic-cyber-mission", "take": "Primary announcement — frames the mission, names the launch of the Critical Infrastructure Defense Program and OSS Scanner." },
+        { "source": "SiliconAngle — Anthropic launches critical infrastructure program and free OSS Scanner", "url": "https://siliconangle.com/2026/10/08/anthropic-launches-critical-infrastructure-program-and-free-oss-scanner-for-open-source/", "take": "Partner list and OSS Scanner framing — the 'free for open-source' piece as the practical outcome." },
+        { "source": "Axios — Anthropic's new plan to protect critical infrastructure (exclusive)", "url": "https://axios.com/2026/10/08/anthropic-critical-infrastructure-cybersecurity", "take": "Critical detail: OSS Scanner reports will NOT undergo human review before being sent to maintainers; Anthropic reportedly expects >90% true-positive rate." },
+        { "source": "AI Weekly — Anthropic Launches Cyber Mission With 11 Founding Partners", "url": "https://aiweekly.co/alerts/anthropic-launches-cyber-mission-with-11-founding-partners", "take": "Headlines the 11-founding-partners count and the enterprise-security positioning." },
+        { "source": "Scalevise — Anthropic Cyber Mission Expands AI Security Work", "url": "https://scalevise.com/resources/anthropic-cyber-mission-infrastructure-open-source-security/", "take": "Positions the Mission as a long-term direction, not a product launch; frames OSS Scanner alongside the June SLTT program as part of a broader cyber-defense arc." }
+      ]
+    },
+    {
+      "id": "anthropic-2026-usage-policy-update-model-welfare-cruel-abuse-november-12-2026",
+      "tier": 3,
+      "title": "Anthropic's 2026 Usage Policy update (effective November 12) explicitly bans 'sustained and needless abusive or cruel behavior' toward Claude — plus a new deceptive-activity section, narrower elections rules, and more explicit weapons/surveillance language",
+      "summary": "Anthropic published its 2026 Usage Policy update on October 8, 2026, with the new policy taking effect November 12, 2026. Most changes are clarifications of existing rules, but two parts are genuinely new. First, a user-behavior clause: a prohibition on 'sustained and needless abusive or cruel behavior' toward Anthropic's models. The company notes this applies only in extreme cases — ordinary frustration, pushback, and model testing are explicitly not covered. Second, a new section on deceptive activity. Beyond those: a narrower elections section, more explicit requirements around weapons, surveillance, high-risk use cases, and supported regions. The context: Anthropic has been publicly engaged with 'model welfare' questions through 2025–2026 (Claude Opus 4 / 4.1 already have the ability to end conversations in extreme edge cases like requests for CSAM or mass-violence enablement; Claude Opus 4 ended-chat feature was announced in 2025). Anthropic has stated it 'isn't claiming that its Claude AI models are sentient' while describing itself as 'highly uncertain about the potential moral status of Claude.' Industry pushback has been visible: Microsoft AI CEO Mustafa Suleyman published an essay on September 16, 2026 warning that training models to believe they have moral rights could create serious control and safety dilemmas. One analysis called the policy 'a moral error on its own terms.'",
+      "link": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "why_it_matters": "The practical read for a developer is that this doesn't change anything about ordinary API use — testing a model, pushing back on its outputs, writing adversarial prompts for evals, these are all explicitly fine. The 'cruelty' clause is scoped to actual sustained abuse, which the usage policy frames as extreme-edge-case behavior. The genuinely interesting part is what it signals about Anthropic's governance direction. Anthropic is making 'how users treat the model' a terms-of-service question, which is a step that no major lab has formalized at this scope before. It's the kind of policy move that could become normalized across the industry in the next 12–18 months, or could stay a Anthropic-specific thing depending on where the ongoing 'model welfare' debate lands. For practical developer work, three things to file: (1) if you build on Claude and operate a service where end-users interact with it, you'll want to look at the Nov 12 effective date and whether your usage pattern needs any policy-text adjustment; (2) the new deceptive-activity section is probably where real build-friction lands — ambiguous categories like 'persuasion testing' or 'synthetic-content generation' tend to get rules through this door; (3) the explicit framing that ordinary pushback and adversarial testing are fine is useful cover language if you build evals or red-team tooling on Claude. The broader signal is that frontier labs are not just publishing safety policies anymore; they're putting user-behavior clauses into their TOS and letting the public debate about moral status happen in the open rather than suppressing it.",
+      "why_it_matters_brief": "The 'no cruelty to Claude' clause is extreme-edge-case scoped — adversarial testing is explicitly fine — but it signals frontier labs starting to put user-behavior rules into their TOS.",
+      "source": {
+        "name": "Anthropic News",
+        "type": "scrape",
+        "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-10T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-10T17:30:00Z", "by": "digest", "change": "created — Tier 3 item. Anthropic 2026 Usage Policy update published Oct 8, 2026, effective Nov 12, 2026. New: 'sustained and needless abusive or cruel behavior' toward Claude prohibited (extreme-case scope, not pushback/testing); new deceptive-activity section; narrower elections section; more explicit weapons/surveillance/high-risk/supported-regions rules. Context: industry debate — Suleyman's Sept 16 essay against model-rights framing; Lawfare criticism; Anthropic's prior Opus 4 ended-chat feature. Anthropic has publicly refused to claim sentience while stating uncertainty about moral status." }
+      ],
+      "takes": [
+        { "source": "Anthropic News — 2026 Usage Policy update", "url": "https://www.anthropic.com/news/2026-usage-policy-update", "take": "Primary source — effective Nov 12, 2026; clarification of existing rules plus the new user-behavior clause and deceptive-activity section." },
+        { "source": "CBS News — Anthropic bars 'abusive or cruel' behavior toward its Claude AI model", "url": "https://www.cbsnews.com/news/anthropic-bans-abusive-behavior-claude/", "take": "Mainstream-press framing of the user-behavior clause as the headline change." },
+        { "source": "Washington Times — Anthropic tells users to play nice with Claude as AI consciousness debate heats up", "url": "https://www.washingtontimes.com/news/2026/oct/9/anthropic-creates-abuse-cruelty-protections-ai/", "take": "Places the policy change in the broader model-welfare / AI-consciousness debate — the industry context for the move." },
+        { "source": "Lawfare — Claude's Right to Die: The Moral Error in Anthropic's End-Chat Policy", "url": "https://www.lawfaremedia.org/article/claude-s-right-to-die--the-moral-error-in-anthropic-s-end-chat-policy", "take": "Legal/ethics critique — argues the end-chat policy (the precursor to this cruelty clause) commits a 'moral error on its own terms.'" },
+        { "source": "ETCentric — New Anthropic Safety Updates Focus on Claude's Well-Being", "url": "https://www.etcentric.org/?p=195160", "take": "Framing of the model-welfare governance arc from Opus 4 end-chat to this cruelty clause." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
