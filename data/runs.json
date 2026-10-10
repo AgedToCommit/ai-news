@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-10T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-10T06:00:00Z",
+      "ended_at": "2026-10-10T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 13000,
+        "output_write": 3500
+      },
+      "fetches_made": 11,
+      "items_input": 8,
+      "items_output": 9,
+      "items_added": 1,
+      "items_kept": 8,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-10-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment pass on 2026-10-09-pm (8 items). All 8 survived prune — each pulled meaningful new context from an overnight web search. ENRICHED: (1) GPT-6.1 Sol — added DeepSWE v1.1 independent benchmarks (75.2% Sol high-effort vs 74.1% Astra at ~7x cheaper per task; low-effort 37.2%→64.4%); Artificial Analysis reportedly confirmed core claim; Terminal-Bench Science still Astra at 68.1%; Claude Opus/Sonnet 5.5 reportedly lead Sol on at least one Intelligence Index. (2) Cloudflare Clef — added benchmark detail (BANKING77 94.20 vs 79.74, When2Call 72.37 vs 80.97, BRIGHT 45.91 vs 47.52 — all Cloudflare-run) plus Decision Index latency (Clef-flash 38.8ms vs Jev 524.1ms); Jev leads 2 of 3 benchmarks. (3) TypeSafe Jev — added confirmed pricing ($0.042/M input, output free) and cross-benchmark context with Clef. (4) Microsoft MAI voice stack — added independent corroboration (batch MAI-Transcribe-2 at 2.0% AA-WER, 2nd on Artificial Analysis), expanded distribution (OpenRouter, Vercel, Azure Voice Live, LiveKit soon), developer caveats (partial transcripts can be revised, no data-residency page at launch — GDPR concern). (5) Tavus Griffin — added internal baseline comparison (earlier Tavus pipeline fooled 1 of 41 vs Griffin's 26 of 54 — 25x internal improvement, same methodology), clarified recruiting-via-independent-platform vs Tavus-run study, flagged NVIDIA VideoFDB leaderboard-ranking conflict between sources. (6) OpenAI Ultrafast — confirmed GPT-6 Astra Ultrafast is live in API/Codex/Work on Pro 500/Enterprise since Sept 29; Sol Ultrafast still 'coming soon' — reframed as the actionable wait. (7) Anthropic IPO — added FT-sourced investor-math breakdown ($100-120B projected 2026 annualized revenue vs $47B May run-rate, 800% growth × 30x multiple → ~$3T model, which makes $1.8-2T range conservative); quiet-period context from June S-1. (8) OpenAI Pro 200 cuts — added compensation structure (62,500 API credits valued at $2,500, expiring Dec 31, 2026); clarified reduced limits take effect Oct 30; added developer-reaction context and OpenAI's stated rationale. LATE-BREAKING ADD: Salesforce Winter '27 release / Agentforce auto-enablement on Oct 12 as new Tier 3 item (one of the largest single-day production AI agent expansions by install base; auto-on by default across eligible orgs; concrete features: AI-suggested call-follow-up actions, Agentic Commerce Search 13% conversion lift with undisclosed baseline, Agentforce Financial Services Oct 2-10 upgrade windows with voice FNOL intake). FINAL: 9 items, tier_counts {1:1, 2:5, 3:3}. No items dropped (every yesterday-pm item earned real new context). WebSearch-only sweep. All items retain hero_image: null (WebFetch not attempted; proxy constraints as in prior runs). 11 web searches: 1 per item for the 8 enrichments plus 3 for the late-breaking Tier-1 sweep (lab announcements Oct 9/10, Meta Hatch/Watermelon status, Salesforce Agentforce Winter '27)."
+    },
+    {
       "run_id": "2026-10-09T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",

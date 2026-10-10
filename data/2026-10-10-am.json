@@ -1,0 +1,310 @@
+{
+  "snapshot_id": "2026-10-10-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-10-10",
+  "generated_at": "2026-10-10T06:30:00Z",
+  "generated_at_local": "2026-10-10T02:30:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-10-09T17:30:00Z", "duration_ms": 1620000 },
+    { "phase": "enrichment", "ran_at": "2026-10-10T06:30:00Z", "duration_ms": 1800000 }
+  ],
+  "tier_counts": { "1": 1, "2": 5, "3": 3 },
+  "items": [
+    {
+      "id": "openai-gpt-6-1-sol-cheap-coding-model-devday-2026",
+      "tier": 1,
+      "title": "OpenAI's GPT-6.1 Sol lands as the Astra-level coding model at 1/5th the price — $2/M input, $10/M output, 1.1M context, now in Codex, ChatGPT Work, and the API",
+      "summary": "OpenAI announced GPT-6.1 Sol at DevDay (Sept 29) and third-party pricing trackers now show the standard API rates live: $2 per million input tokens, $10 per million output tokens, and $0.10 per million cached input tokens. That is one-fifth of GPT-6 Astra's input and output prices ($10 in / $50 out). Independent evals have started landing: on DeepSWE v1.1, Sol hits ~75.2% at high effort versus Astra's 74.1%, at roughly $0.65/task versus $4.43/task — a cost gap of about 7x on this benchmark. The biggest gain over GPT-6 Sol shows up at low effort, where DeepSWE scores jump from 37.2% to 64.4% for roughly the same cost. Artificial Analysis reportedly confirmed the core 'Astra-level at Sol-tier cost' claim, though Terminal-Bench Science still leans Astra (68.1%), and OpenAI itself recommends Astra for the hardest scientific research. Separately, Claude Opus 5.5 and Sonnet 5.5 reportedly score higher than Sol on at least one independent Intelligence Index, which conflicts with OpenAI's framing on some benchmarks. The model has a 1.1M-token context window and a 128K max output. It is available in ChatGPT Work and Codex for paid tiers, and to developers through the API under the model id gpt-6.1-sol; a Chat rollout is not live yet.",
+      "link": "https://itbrief.co.uk/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model",
+      "why_it_matters": "The 'Astra at 1/5th the price' story now has independent-ish numbers attached, which changes what it actually tells Gabe. On DeepSWE v1.1 — a software-engineering benchmark that at least isn't an OpenAI eval — Sol lands within a point of Astra at roughly 7x cheaper per task. That's the specific shape of the shift: a hobbyist running a Python coding agent in a loop (propose, test, patch, retest) no longer has to pick between frontier quality and keeping costs sane. The low-effort number is actually the sharpest signal — jumping from 37.2% to 64.4% at the same cost means the cheap, fast tier of this model class got a lot smarter, not just the expensive tier. Two caveats worth filing. First, on hard science tasks Astra still has a real lead (68.1% on Terminal-Bench Science), so if your use case is physics/chem reasoning rather than code, the pricing math doesn't apply. Second, Claude Opus 5.5 and Sonnet 5.5 reportedly beat Sol on at least one independent Intelligence Index, which means the 'frontier-coding' crown is contested, not settled — so the honest test is still a side-by-side on one of Gabe's own Python tasks before committing a weekend to a Sol-built workflow.",
+      "why_it_matters_brief": "Independent benchmarks now land: Sol matches Astra on DeepSWE at ~7x cheaper per task — the frontier-coding tier just became something a hobbyist can actually run.",
+      "source": {
+        "name": "IT Brief UK",
+        "type": "scrape",
+        "url": "https://itbrief.co.uk/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 1 item. GPT-6.1 Sol pricing live on third-party trackers: $2/M input, $10/M output, $0.10/M cached input. 1.1M context, 128K max output. In Codex, ChatGPT Work, and the API; not yet in Chat. 1/5th Astra pricing on both input and output. Sources disagree on launch date (Sep 29 vs Oct 2); treating as DevDay launch now in rollout." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added DeepSWE v1.1 independent benchmark numbers (75.2% Sol high effort vs 74.1% Astra, ~$0.65/task vs $4.43/task; low effort 37.2%→64.4%); noted Artificial Analysis reportedly confirmed the core claim; added Terminal-Bench Science weak spot (Astra 68.1%); noted Claude Opus 5.5/Sonnet 5.5 reportedly leading Sol on some Intelligence Index. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "IT Brief UK", "url": "https://itbrief.co.uk/story/openai-launches-gpt-6-1-sol-as-cheaper-coding-model", "take": "Positions Sol as the cheap-coding model and names Codex / ChatGPT Work as the launch surfaces." },
+        { "source": "MetricNexus — GPT-6.1 Sol: Benchmarks, Pricing, and Near-Astra Results", "url": "https://metricnexus.ai/blog/gpt-6-1-sol-benchmarks-pricing", "take": "DeepSWE v1.1: 75.2% Sol high-effort vs 74.1% Astra at ~$0.65/task vs $4.43/task; low-effort jump 37.2%→64.4%; Terminal-Bench Science still Astra at 68.1%." },
+        { "source": "BenchLM — GPT-6.1 Sol vs GPT-6 Sol", "url": "https://benchlm.ai/compare/gpt-6-1-sol-vs-gpt-6-sol", "take": "Side-by-side: Sol leads GPT-6 Sol 67.0 to 63.0 on a like-for-like coding row, but 90% intervals overlap — lead not clearly significant." },
+        { "source": "ProPakistani — GPT 6.1 Sol brings Astra-level performance at 5x lower cost", "url": "https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/", "take": "Frames the price delta against Astra and attributes the '~Astra-level' performance claim to OpenAI itself, not independent benchmarks." },
+        { "source": "AnotherWrapper — GPT-6.1 Sol Pricing tracker", "url": "https://anotherwrapper.com/tools/llm-pricing/gpt-6.1-sol", "take": "Lists standard API rates, cached-input rate, cache-write rate ($2.50/M), batch rate ($1.00/M input, $5.00/M output), context (1.1M), max output (128K)." },
+        { "source": "LM Market Cap", "url": "https://lmmarketcap.com/model/gpt-6-1-sol", "take": "Independent price-tracker confirmation of standard tier numbers." }
+      ]
+    },
+    {
+      "id": "cloudflare-clef-open-weight-decision-models-october-1-2026",
+      "tier": 2,
+      "title": "Cloudflare ships Clef and Clef-flash — open-weight 'decision models' (Apache 2.0, built on Qwen3.8-27B and Qwen3.5-9B) that return calibrated probabilities instead of generating text",
+      "summary": "On October 1, 2026, Cloudflare released Clef and Clef-flash, a pair of 'decision models' aimed directly at TypeSafe's Jev. Instead of generating text, they take a state (a support ticket, a web page, an agent trace) plus a set of typed questions and return calibrated probabilities over predefined answers — yes/no, multiple choice, or rankings. Clef is post-trained on Qwen3.8-27B and Clef-flash on Qwen3.5-9B; both add a vision encoder, a 64K context window, and are API-compatible with Jev. Weights are published on Hugging Face under Apache 2.0 — The Register confirmed with Cloudflare's own product manager that training datasets are not public, so the models are open-weight, not fully open-source. Cloudflare reports median latency of 38.8ms (Clef-flash) and 209ms (Clef) on Workers AI; priced at $0.09/M (Clef-flash) and $0.24/M (Clef) tokens compared to TypeSafe Jev's $0.042/M. Early benchmark figures (all Cloudflare self-reported, not yet independently reproduced): BANKING77 macro-F1 Clef 94.20 vs Jev 79.74, When2Call Jev 80.97 vs Clef 72.37, BRIGHT Jev 47.52 vs Clef 45.91. On Cloudflare's own run of the Jev Decision Index, Clef-flash's median decision is 38.8ms versus 524.1ms for Jev. Clef also accepts images and video; Jev does not. Cloudflare also launched a reinforcement-learning fine-tuning service alongside, delivered first through its forward-deployed engineers and later as a self-serve platform built on AI Gateway, Containers, and the Replicate bring-your-own-model stack.",
+      "link": "https://alternativeto.net/news/2026/10/cloudflare-launches-open-source-clef-decision-models-and-rl-tuning/",
+      "why_it_matters": "The 'decision model' is a newish category worth understanding, even if Gabe never ships one directly: it's a bet that for a lot of production LLM calls, you don't actually need generated prose — you need a yes/no, a score, or a ranked choice, and parsing that out of free-form text is where things break. Clef is interesting for three specific reasons on top of that. First, it's open-weight on Hugging Face under Apache 2.0, which means you can download the weights and run them locally — the first time a decision model has shipped as open weights at this scale. Second, the base is Qwen3.8-27B — one of the stronger open-weight Chinese-lab models — plus Cloudflare's post-training; it's a visible example of how the open-weight stack is now the default starting point for serious vendor builds. Third, it's cheaper per call than any general-purpose model Gabe might reach for when he wants to classify emails, score article relevance, or route scraped content into buckets. The honest caveats: all the headline benchmark wins are Cloudflare's own numbers — The Register notes they haven't been independently reproduced yet, and Jev actually leads Clef on When2Call and BRIGHT. The per-token price is also higher than Jev's ($0.09–$0.24/M vs $0.042/M), so 'cheaper per decision' depends on token efficiency on your specific task.",
+      "why_it_matters_brief": "Cloudflare's own benchmarks show Clef beats Jev on BANKING77 but loses on When2Call and BRIGHT — a mixed early scorecard that still runs locally under Apache 2.0.",
+      "source": {
+        "name": "AlternativeTo",
+        "type": "scrape",
+        "url": "https://alternativeto.net/news/2026/10/cloudflare-launches-open-source-clef-decision-models-and-rl-tuning/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. Cloudflare's open-weight decision model drop (Oct 1): Clef on Qwen3.8-27B, Clef-flash on Qwen3.5-9B, 64K context, vision encoder, Apache 2.0 on Hugging Face. Jev API-compatible. $0.24/M (Clef), $0.09/M (Clef-flash). The Register verified open-WEIGHT, not open-source (training data not public). RL fine-tuning service launched same day on AI Gateway + Containers + Replicate stack." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added specific benchmark numbers (BANKING77 94.20 vs 79.74, When2Call 72.37 vs 80.97, BRIGHT 45.91 vs 47.52 — all Cloudflare self-reported); added Decision Index latency figures (Clef-flash 38.8ms vs Jev 524.1ms median); flagged that Jev leads on 2 of 3 benchmarks; noted vision/video input is a Clef-only capability. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "AlternativeTo", "url": "https://alternativeto.net/news/2026/10/cloudflare-launches-open-source-clef-decision-models-and-rl-tuning/", "take": "Positions Clef as the open-weight counter to Jev and names the RL fine-tuning service launching the same day." },
+        { "source": "OODA Loop", "url": "https://oodaloop.com/briefs/technology/cloudflare-releases-clef-open-source-decision-models-for-high-speed-ai-workflows/", "take": "Focuses on the latency figures (38.8ms Clef-flash, 209ms Clef on Workers AI) and the Apache 2.0 licensing." },
+        { "source": "Developers Digest — Cloudflare Clef Decision Models: Jev-Compatible, Benchmarked and Priced", "url": "https://www.developersdigest.tech/blog/cloudflare-clef-decision-models-2026", "take": "Benchmark detail: Clef beats Jev on BANKING77 (94.20 vs 79.74 macro-F1); Jev still leads on When2Call (80.97 vs 72.37) and BRIGHT (47.52 vs 45.91)." },
+        { "source": "Dealroom — Cloudflare launches Clef as TypeSafe decision model idea spreads", "url": "https://dealroom.co/news/158476-cloudflare-launches-clef-as-typesafes-decision-model-idea-spreads-across/", "take": "Frames the drop as the TypeSafe-Jev category spreading across the market two weeks after Jev's Sept 15 launch." },
+        { "source": "The Register (via DataNorth summary)", "url": "https://datanorth.ai/news/cloudflare-releases-clef-and-clef-flash", "take": "Verified open-weight vs open-source: training datasets not public, confirmed with Cloudflare's own product manager. Also notes self-reported benchmark scores not yet reproduced on official Decision Index ranking." },
+        { "source": "VKTR — Cloudflare open-sources Clef decision models", "url": "https://www.vktr.com/ai-platforms/cloudflare-open-sources-clef-decision-models/", "take": "Independent developer feedback mixed: more expensive per token than Jev and not always more accurate on real tasks despite Cloudflare's benchmark lead." }
+      ]
+    },
+    {
+      "id": "typesafe-ai-jev-decision-model-category-creator-september-2026",
+      "tier": 2,
+      "title": "TypeSafe AI's Jev is the ex-OpenAI 'decision model' that returns probabilities, not text — $40M seed from DCVC, 70-500ms end-to-end latency, now in rolling early access at $0.042/M input (output tokens free)",
+      "summary": "TypeSafe AI emerged from stealth on September 15, 2026, with Jev — the model that gives this category its name. Founded by Diogo Almeida (former OpenAI researcher and co-inventor of RLHF) alongside Erik Gafni and Sasha Sheng, TypeSafe closed a $40M seed round led by DCVC. Jev evaluates structured or unstructured application state against typed questions and returns bounded choices, ordinal scores, or yes/no probabilities with confidence in a single parallel pass. Developers declare the questions and the allowed answers up front — a boolean, a score, or a choice among up to 255 options. The naming nods to William Stanley Jevons, the 19th-century economist whose paradox is about efficiency gains in resource use. Pricing is listed at $0.042/M input tokens with output tokens free — materially cheaper than Cloudflare's Clef ($0.24/M) and Clef-flash ($0.09/M) competitors that landed two weeks later. TypeSafe reports 70–500ms end-to-end latency and says Jev is two orders of magnitude faster and cheaper than frontier LLMs on repetitive program questions (those are vendor-reported numbers). Jev is in early access via waitlist, with developers brought off on a rolling basis. On Cloudflare's own benchmarks run against Jev, Jev still leads on When2Call (80.97 vs 72.37) and BRIGHT (47.52 vs 45.91), though loses on BANKING77 (79.74 vs 94.20) — all Cloudflare-run, not independently reproduced.",
+      "link": "https://letsdatascience.com/news/typesafe-ai-launches-jev-decision-model-889a38c0",
+      "why_it_matters": "The thing to understand here is the category, not the single product. For roughly the last two years, every production LLM call has had to deal with the same friction: the model gives you a sentence, your code wants a boolean or a score, and the glue in between is a JSON-schema prompt plus a parser plus a retry on parse failure. 'Decision models' are the bet that a non-trivial slice of this work doesn't need any text at all. In practice, if Gabe wires an LLM into a Python script to classify emails, score article relevance for a news feed, or decide whether a scraped page is worth saving, the LLM is doing 'return a bounded answer' work the whole time — exactly what Jev is designed for. Pricing-wise, at $0.042/M input with free output, Jev is actually the cheapest option in the category now — Cloudflare's open-weight Clef comes in at 2–6x higher per token. The founder story matters too: Diogo Almeida was on the OpenAI team that invented RLHF, so this is not a random pivot but a direction one of the original authors of the modern alignment stack is taking. The caveat: Jev is still API-only and in private early access with no independent benchmarks, so the thing to actually try today is Clef (the Cloudflare Qwen3.8 version) with open weights on Hugging Face — Jev tells you the shape of the category, Clef is what you can run.",
+      "why_it_matters_brief": "At $0.042/M input with free output, Jev is now the cheapest decision model — but it's still waitlist-only, so Clef's open weights are what Gabe can actually run today.",
+      "source": {
+        "name": "Let's Data Science",
+        "type": "scrape",
+        "url": "https://letsdatascience.com/news/typesafe-ai-launches-jev-decision-model-889a38c0"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. TypeSafe AI launched Jev (Sept 15, 2026) with $40M DCVC seed. Diogo Almeida (ex-OpenAI RLHF co-inventor), Erik Gafni, Sasha Sheng co-founders. Boolean / score / up-to-255-choice outputs with calibrated probabilities. 70-500ms latency (vendor-reported). Named after 19th-century economist William Stanley Jevons. Waitlist with rolling early access." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added Jev pricing ($0.042/M input, output tokens free) and comparison to Clef pricing ($0.09–$0.24/M); added Cloudflare-run cross-benchmark results where Jev still leads 2 of 3 (When2Call, BRIGHT) but loses BANKING77. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "Let's Data Science", "url": "https://letsdatascience.com/news/typesafe-ai-launches-jev-decision-model-889a38c0", "take": "Primary summary: category positioning (System One), the 'drops string generation entirely' framing, intended uses (classification, routing, scoring, extraction, bounded decisions)." },
+        { "source": "Gradually AI — Jev early access page", "url": "https://www.gradually.ai/en/ai-models/jev/", "take": "Confirms pricing: $0.042/M input, output tokens free. Decision-model early-access framing." },
+        { "source": "YourStory — Ex-OpenAI researchers build a new kind of AI model", "url": "https://yourstory.com/ai-story/what-is-jev-typesafe-ai-decision-model", "take": "Founder angle — Diogo Almeida's RLHF co-invention credit and the parallel-pass probability output mechanic." },
+        { "source": "Nexos.ai — What is Jev and how to use it", "url": "https://nexos.ai/blog/what-is-jev/", "take": "Developer-facing walkthrough: the typed-question declaration contract, the bounded-answer primitives (boolean, ordinal score, up-to-255 choices)." },
+        { "source": "RITS Shanghai NYU — TypeSafe AI Launches Jev, a Model That Returns Decisions, Not Text", "url": "https://rits.shanghai.nyu.edu/ai/typesafe-jev-system-one-model", "take": "Academic framing of the architectural choice to drop autoregressive text generation in favor of a parallel probability pass." }
+      ]
+    },
+    {
+      "id": "microsoft-mai-voice-transcribe-streaming-october-1-2026",
+      "tier": 2,
+      "title": "Microsoft AI drops the full voice-agent stack — MAI-Transcribe-2-Streaming (60 languages over WebSocket, partial transcripts in low hundreds of ms) plus MAI-Voice-2.1 and 2.1-Flash (150ms end-to-end TTS)",
+      "summary": "Microsoft AI launched three models on October 1, 2026, all built for voice-agent developers: MAI-Transcribe-2-Streaming, MAI-Voice-2.1, and MAI-Voice-2.1-Flash. All three are served through Microsoft Foundry, with distribution expanding to OpenRouter, the MAI Playground, Vercel, and Azure Voice Live; LiveKit integration is listed as coming soon. Transcribe-2-Streaming receives audio as a continuous stream over WebSocket and returns text as it arrives — first hypotheses ('partials') in the low hundreds of milliseconds (around 100ms per one review), refined as context arrives, with a stable transcript committed 0.13 seconds after speech ends (vendor-reported). It handles 60 languages with automatic language detection and a reported 2.5% word error rate. The batch sibling MAI-Transcribe-2 scored 2.0% AA-WER on Artificial Analysis's leaderboard — second overall there — which is early independent corroboration for the model family's accuracy, even if the streaming version hasn't yet been benchmarked separately. MAI-Voice-2.1 is the expressive, higher-fidelity TTS: Microsoft says one voice can keep its identity while speaking across 23 languages and 26 locales with a native accent. Flash is the fast, cheap variant: up to 45 seconds of audio with 150ms end-to-end latency. Pricing: Transcribe-2-Streaming is $0.54 per audio hour through 2026 (introductory), Voice-2.1 is $22/M characters, Voice-2.1-Flash is $15/M characters. Caveats: Transcribe-2-Streaming is public preview — no SLA, not for production — and requires Azure Speech SDK 1.52.0, currently in Sweden Central, Central US, and Southeast Asia, with East US 2 coming soon. Microsoft had also not published a data residency page at launch, which matters for GDPR-covered audio. One reviewer notes partial transcripts can be revised, so builders need safeguards before acting on them.",
+      "link": "https://letsdatascience.com/news/microsoft-releases-streaming-transcription-and-voice-models-b394c738",
+      "why_it_matters": "If Gabe has ever thought about putting a voice interface on a Python script — a dictation layer, a 'read this article aloud' button, a mini-Alexa — the latency and language-coverage floor just moved. 150ms end-to-end TTS is close to the perceptual threshold where speech starts to feel 'natural' rather than 'synthesized with a delay.' The streaming STT model's low-hundreds-of-ms-to-partial latency means a voice agent can start reasoning on what you're saying before you've finished the sentence. One useful piece of calibration from the batch sibling MAI-Transcribe-2: it hit 2.0% AA-WER on Artificial Analysis — second on their public leaderboard — which gives you some confidence the family isn't just a vendor-marketing exercise, even if the streaming version has no public eval yet. One under-reported practical gotcha a developer should file: streaming 'partials' can be revised as more audio arrives, so if you wire this into agent logic that fires actions mid-sentence, you need to defer decisions until a stable transcript lands or you'll build a mini chaos-engine. The practical shape for a hobbyist: these are Azure/Foundry endpoints (also now on OpenRouter), not open weights, so you're paying a per-hour/per-character rate and sending audio off your machine. The free comparison alternative that's worth filing: OpenAI Whisper is still the default for STT on your own hardware if you're happy with batch-mode transcription of a recorded file. Also note: Microsoft hadn't published a data-residency page at launch — fine for English demos, worth a second look if you'd ever route EU-user audio through it.",
+      "why_it_matters_brief": "The batch sibling scored 2.0% AA-WER (2nd on Artificial Analysis) — early independent corroboration that Microsoft's new voice stack isn't just vendor marketing.",
+      "source": {
+        "name": "Let's Data Science",
+        "type": "scrape",
+        "url": "https://letsdatascience.com/news/microsoft-releases-streaming-transcription-and-voice-models-b394c738"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. Three Microsoft MAI models launched Oct 1 on Foundry: Transcribe-2-Streaming (60 lang, WebSocket, partials in low hundreds of ms, 2.5% WER vendor), Voice-2.1 (23 lang / 26 locales, expressive), Voice-2.1-Flash (150ms end-to-end, 45s max). Pricing: $0.54/audio-hour (Transcribe, intro through 2026), $22/M chars (Voice-2.1), $15/M chars (Flash). Transcribe is public preview, no SLA, Azure Speech SDK 1.52.0, Sweden Central / Central US / Southeast Asia at launch." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added independent corroboration from Artificial Analysis — batch MAI-Transcribe-2 at 2.0% AA-WER, 2nd on leaderboard; added distribution expansion (OpenRouter, Vercel, Azure Voice Live, LiveKit soon); added developer caveats (partial transcripts can be revised, no data residency page at launch — GDPR concern). Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "Let's Data Science", "url": "https://letsdatascience.com/news/microsoft-releases-streaming-transcription-and-voice-models-b394c738", "take": "Launch summary — names all three models and the Foundry endpoint." },
+        { "source": "eesel.ai — MAI-Transcribe-2 review", "url": "https://www.eesel.ai/blog/mai-transcribe-2", "take": "Artificial Analysis gave the batch MAI-Transcribe-2 2.0% AA-WER, 2nd on their leaderboard — early independent corroboration." },
+        { "source": "unite.ai — Microsoft launches MAI-Transcribe-2-Streaming and two MAI Voice models", "url": "https://unite.ai/microsoft-launches-mai-transcribe-2-streaming-and-two-mai-voice-models", "take": "Distribution footprint: Foundry, MAI Playground, Vercel, Azure Voice Live, OpenRouter; LiveKit integration coming soon." },
+        { "source": "Build Fast with AI — MAI-Transcribe-2 review", "url": "https://www.buildfastwithai.com/blogs/mai-transcribe-2-review", "take": "Developer caveats: partial transcripts can be revised; low-latency claims need independent streaming benchmarks; data residency page not yet published at launch — GDPR concern for EU audio." },
+        { "source": "Pasquale Pillitteri — MAI-Transcribe-2-Streaming", "url": "https://pasqualepillitteri.it/en/news/19840/microsoft-mai-transcribe-2-streaming", "take": "Pricing, language-count figure (60), and WebSocket streaming design." },
+        { "source": "RuntimeWire", "url": "https://runtimewire.com/article/microsoft-mai-streaming-transcription-voice-models", "take": "Positions the three models together as the MAI voice-agent stack and lists all three with pricing side-by-side." },
+        { "source": "LLM Reference — Using MAI-Transcribe-2-Streaming on Microsoft Foundry", "url": "https://www.llmreference.com/provider/microsoft-foundry/mai-transcribe-2-streaming", "take": "Documentation-level detail: public-preview status, no SLA, Azure Speech SDK 1.52.0 requirement, three-region launch footprint." }
+      ]
+    },
+    {
+      "id": "tavus-griffin-lite-full-duplex-video-turing-test-october-1-2026",
+      "tier": 2,
+      "title": "Tavus unveils Griffin-Lite — a full-duplex video-to-video model that holds face-to-face conversations in real time, with 26 of 54 participants in a 1-minute Turing test believing they were talking to a human",
+      "summary": "On October 1, 2026, San Francisco AI research lab Tavus previewed Griffin-Lite — a full-duplex, video-to-video model that holds face-to-face conversations in real time. Full-duplex here means both sides can talk at once: the model listens and speaks at the same time, back-channels, can be interrupted, and starts answering before you finish. Tavus is calling the category a 'Human Interaction Model'; earlier Tavus systems were chained STT→LLM→TTS→avatar pipelines, so Griffin is a structural change rather than an incremental upgrade. In a blind study of 54 participants recruited through an independent research platform (but run by Tavus), each spent one minute on a video call with a Personified Application Layer (PAL) running on Griffin — 26 of 54 (48%) walked away thinking they'd been speaking with a genuine human. Compare to Tavus's earlier pipeline-stack which fooled just 1 of 41 testers in the same study design. Griffin-Lite is a closed research preview for select early testers; a wider release is still pending, and Tavus says it's holding the full Griffin behind additional safety work. The sample size (54) is small, the pass-rate figure comes from Tavus itself, and there is no public paper or linked dataset. One secondary report claims Griffin-Lite ranks first on NVIDIA's VideoFDB leaderboard for non-human entries; a vendor-authored blog says Griffin has no entry on any independent video leaderboard — the two claims couldn't be reconciled.",
+      "link": "https://cryptobriefing.com/tavus-griffin-video-turing-test/",
+      "why_it_matters": "The 'full duplex' part is the actual threshold moment, not the Turing claim. For roughly the last two years, every talking-avatar demo has been a pipeline: you say something, the model transcribes you after you stop, an LLM thinks about it, a TTS speaks the answer, an avatar generator syncs the mouth to the audio. The whole conversation feels like radios, not people, because the handoff between stages introduces 300-800ms of dead air plus a 'you talk, then I talk' turn-taking structure. Griffin is the first production attempt at a single model where the listening and speaking happen in the same forward pass. The scale of the architectural change is clearer with the comparison number now visible: Tavus's own earlier pipeline fooled 1 of 41 testers in the same test design, Griffin fooled 26 of 54 — that's a 25x improvement from the same lab using the same methodology, which is the strongest internal consistency check available even if independent replication is still the thing to actually want. From a developer-and-ethics standpoint, that's a shift Gabe should file: the kind of real-time video deepfake that previously required a studio and 10 seconds of latency now plausibly needs an API call. On the practical hobbyist side, there's nothing to go play with today — the preview is closed and limited — but the 'what you can build if this gets opened up' category just got a lot wider. The caveats keep stacking: 54-person sample size, Tavus-run study, no public paper, and conflicting claims on independent video leaderboard rankings.",
+      "why_it_matters_brief": "Griffin fooled 26 of 54 testers in a Tavus-run study — up from 1 of 41 on their own earlier pipeline, which is a 25x internal improvement, pending independent replication.",
+      "source": {
+        "name": "CryptoBriefing",
+        "type": "scrape",
+        "url": "https://cryptobriefing.com/tavus-griffin-video-turing-test/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. Tavus Griffin / Griffin-Lite preview announced Oct 1. Full-duplex video-to-video. Replaces STT→LLM→TTS→avatar pipeline with a single model. 48% / 54-participant Turing claim (vendor-reported). Closed research preview — early testers only, full Griffin still gated behind safety work." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added internal baseline — same Tavus methodology on their earlier pipeline fooled 1 of 41 testers vs 26 of 54 on Griffin (25x internal improvement); clarified participants were recruited via independent research platform but the study itself is Tavus-run with no public paper; added conflict between report claiming NVIDIA VideoFDB #1 non-human ranking vs vendor-blog saying no leaderboard entry. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "CryptoBriefing", "url": "https://cryptobriefing.com/tavus-griffin-video-turing-test/", "take": "Primary launch coverage — names the Turing-test framing, the 48%/54 study, and the 'first video Turing test pass' claim." },
+        { "source": "RuntimeWire — Tavus says Griffin fooled 48% of testers in one-minute video calls", "url": "https://runtimewire.com/article/tavus-griffin-video-turing-test", "take": "Specifics: 26 of 54 participants fooled. Participants were recruited through an independent research platform; study still Tavus-run." },
+        { "source": "DIY AI — AI Agents / AI Video", "url": "https://diyai.io/news/tavus-griffin-video-turing-test/", "take": "Internal baseline: Tavus's earlier pipeline stack fooled just 1 of 41 participants in the same study design. Also claims Griffin-Lite leads NVIDIA VideoFDB non-human entries (unverified)." },
+        { "source": "Webull — Tavus Introduces Griffin, the First Face-to-Face Human Interaction Model", "url": "https://www.webull.com/news/15673923230041088", "take": "Positions Griffin as the first 'Human Interaction Model' category entrant and reiterates the full-duplex architectural framing." },
+        { "source": "Foro3D — Griffin-Lite de Tavus acerca el avatar sintético al directo", "url": "https://foro3d.com/2026/octubre/griffin-lite-de-tavus-acerca-el-avatar-sintetico-al-directo.html", "take": "Spanish-language coverage focusing on the Griffin-Lite preview status and limited-tester access." },
+        { "source": "Ecosistema Startup — Tavus Griffin: el 48% creyó hablar con un humano en vídeo", "url": "https://ecosistemastartup.com/tavus-griffin-el-48-creyo-hablar-con-un-humano-en-video/", "take": "Underlines the 54-person study is small, the pass rate is self-reported, no public paper or linked data — treats the headline figure cautiously." }
+      ]
+    },
+    {
+      "id": "openai-ultrafast-tier-pro-500-plan-devday-2026",
+      "tier": 2,
+      "title": "OpenAI's new Ultrafast speed tier promises up to 300 tokens/sec in Codex (8x standard, 6x in the API) — gated behind the $500/mo Pro 500 plan and Enterprise, with GPT-6 Astra at launch and GPT-6.1 Sol coming soon",
+      "summary": "At DevDay 2026 (Sept 29), OpenAI introduced Ultrafast — a premium speed tier generating up to 300 tokens/sec in Codex (described as up to 8× standard) and up to 6× in the API. GPT-6 Astra Ultrafast became available on September 29, 2026 in the API and in ChatGPT Work and Codex on Pro 500 and Enterprise plans; GPT-6.1 Sol Ultrafast is still 'coming soon' as of this writing. Access is restricted: in Codex and ChatGPT Work, Ultrafast is only available on the new $500/mo Pro 500 plan or on Enterprise plans. One pricing aggregator reports the API Ultrafast rate for GPT-6 Astra at $60/M input and $300/M output tokens (for prompts of 272K tokens or fewer); this hasn't been confirmed against OpenAI's own pricing page. A separate 'Ultrafast mode' preview from August 2026 ran GPT-5.6 Sol at up to 14× standard (750 tok/sec) on Cerebras hardware; the two offerings share a name but are different products. The 300 tok/sec figure is OpenAI's stated maximum ('up to'), not a guaranteed sustained throughput.",
+      "link": "https://explainx.ai/blog/openai-ultrafast-pro-500-devday-2026",
+      "why_it_matters": "The practical read for a hobbyist is that 'can I run my Python agent faster' is now a plan question, not a model question. 300 tok/sec in Codex is roughly the speed where a conversation with an agent stops feeling like 'wait a few seconds for each response' and starts feeling 'typing on your behalf.' For a sustained coding loop — propose, test, patch, retest — the throughput delta is the thing that makes the agent feel like a collaborator rather than a batch job. The downside is the gate: Ultrafast in Codex requires a $500/month Pro 500 seat or an Enterprise plan, so for anything short of a professional-dev-with-reimbursement, it's not economic. One concrete update since launch: GPT-6 Astra Ultrafast is now live in the API, Codex, and ChatGPT Work for the eligible tiers; GPT-6.1 Sol Ultrafast — the version that would make the pricing math actually interesting for a hobbyist — is still 'coming soon,' which is the version to actually watch for. The alternative-paths tangent worth noting: the August 2026 'Ultrafast mode' preview on Cerebras (750 tok/sec on GPT-5.6 Sol) suggests Cerebras hardware is doing the heavy lifting on the actual throughput, and the Cerebras-hosted Llama endpoints hit comparable numbers at a much lower price point if raw tokens/sec is what you need. For Gabe specifically: at $500/mo, Ultrafast isn't the right lever today; the $2/M Sol pricing (separate item) is where the real hobbyist-usable change lives — unless and until Sol Ultrafast lands on cheaper tiers.",
+      "why_it_matters_brief": "GPT-6 Astra Ultrafast is live in API/Codex/Work on Pro 500 and Enterprise — but Sol Ultrafast (the version that would actually be hobbyist-economic) is still 'coming soon.'",
+      "source": {
+        "name": "ExplainX",
+        "type": "scrape",
+        "url": "https://explainx.ai/blog/openai-ultrafast-pro-500-devday-2026"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 2 item. Ultrafast speed tier announced at DevDay 2026 (Sept 29). Up to 300 tok/sec in Codex (8x standard), 6x in API. GPT-6 Astra at launch, GPT-6.1 Sol coming soon. Gated to Pro 500 ($500/mo, new tier) and Enterprise in Codex/ChatGPT Work. API Ultrafast rate reported at $60/M input, $300/M output per aggregator (unverified against OpenAI). Separate from Aug 2026 'Ultrafast mode' preview on Cerebras hardware for GPT-5.6 Sol (750 tok/sec, 14x) — same name, different product." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "confirmed GPT-6 Astra Ultrafast is now live in API, Codex, and ChatGPT Work on Pro 500/Enterprise since Sept 29; Sol Ultrafast still 'coming soon'. Updated why_it_matters and brief to make the Sol-Ultrafast wait the actionable framing." }
+      ],
+      "takes": [
+        { "source": "ExplainX — OpenAI Ultrafast Pro 500 DevDay 2026", "url": "https://explainx.ai/blog/openai-ultrafast-pro-500-devday-2026", "take": "Links Ultrafast directly to the Pro 500 plan and names Codex / ChatGPT Work as the launch surfaces." },
+        { "source": "Digg — Ultrafast becomes available for GPT-6 Astra in Codex, ChatGPT Work and the API", "url": "https://digg.com/ai/80bz3334", "take": "Confirms Astra Ultrafast live in API, Codex, Work on Pro 500/Enterprise as of Sept 29; Sol Ultrafast 'coming soon.'" },
+        { "source": "SessionWatcher — AI updates: OpenAI Astra Ultrafast, Codex, Pro 500", "url": "https://sessionwatcher.com/news/openai-astra-ultrafast-codex-pro-500", "take": "Confirms Astra as the model at launch and the GPT-6.1 Sol 'coming soon' line." },
+        { "source": "ECHAI — Ultrafast tier announcement text", "url": "https://echai.ventures/feed/this-is-ultrafast-our-premium-speed-tier-ultrafast-offers-up-to-8x-693", "take": "Primary-sounding announcement wording: 8x in Codex, 6x in API, 300 tok/sec in Codex." },
+        { "source": "OpenAI Community — Ultrafast mode preview (August 2026)", "url": "https://community.openai.com/t/ultrafast-mode-preview-gpt-5-6-sol-at-up-to-14x-the-speed-in-the-api/1390344/1", "take": "The confusing-earlier-with-same-name product: GPT-5.6 Sol at up to 14x / 750 tok/sec on Cerebras hardware. Not the same as the DevDay Ultrafast tier." },
+        { "source": "DanielVaughan Codex blog — Ultrafast preview analysis", "url": "https://codex.danielvaughan.com/2026/08/15/gpt-5-6-sol-ultrafast-preview-14x-inference-speed-codex-cli-cerebras-wafer-scale-coding-agent-latency/", "take": "Deep dive on why Cerebras wafer-scale hardware is likely the actual compute path behind both Ultrafast variants." }
+      ]
+    },
+    {
+      "id": "anthropic-pre-ipo-investor-day-october-14-2026-valuation-range",
+      "tier": 3,
+      "title": "Anthropic sets October 14 pre-IPO investor day in San Francisco — investors reportedly see $1.8T–$2T valuation range, with November 9 formal IPO marketing week and a pre-Thanksgiving debut on the table",
+      "summary": "Multiple Bloomberg-sourced reports now put a specific date on Anthropic's pre-IPO investor outreach: October 14, 2026 at the company's San Francisco headquarters, where a select group of institutional investors will question management. Investors familiar with the pitch place a plausible valuation range at $1.8–$2 trillion — well above Anthropic's May 2026 funding round at a $965B valuation (which itself was the first time Anthropic topped OpenAI's $852B at the time). Backing out the math: half a dozen Anthropic investors told the Financial Times they expect annualized revenue of $100B–$120B by year-end 2026, up from the $47B run-rate reported in May — one investor's model, 800% growth on a 30x revenue multiple, lands near $3T. Bloomberg has separately reported the company could launch its formal IPO marketing the week starting November 9, positioning Anthropic to begin trading before Thanksgiving. Internally the offering is expected to match or top SpaceX's June 2026 listing at $1.77T. Anthropic confidentially filed its IPO prospectus with the SEC in June 2026 without disclosing a target debut date; the company is in a quiet period that limits public statements. All sources requested anonymity because the plans aren't public; details could still change.",
+      "link": "https://www.itiger.com/news/1134201499",
+      "why_it_matters": "The October 14 date and the $1.8T–$2T range are the two newest pieces in the Anthropic-IPO-timeline story. The investor math makes the headline number easier to interpret: at $100–$120B annualized revenue by end of 2026 (up from $47B six months ago), a 30x multiple gets you around $3T, so the $1.8–$2T range is actually conservative relative to what the backers are modeling internally. For context: at $2T, Anthropic would be IPO-ing at roughly 2x its May funding valuation in six months, and roughly on par with Google parent Alphabet's current market cap. The practical read for Gabe: this isn't 'affects my Python scripts tomorrow' news, it's an ambient-weather signal. If Anthropic goes public at a $1.8T+ valuation on a pre-Thanksgiving timeline, every lab's pricing power, hiring heat, and willingness to subsidize developer access shifts — including Anthropic's own, which is where Claude Code and the API price Gabe actually pays. The caveat worth filing: the Oct 14 meeting itself is behind closed doors and sourced via anonymous investors, so the next public confirmation will likely be the Nov 9 marketing week or a public prospectus amendment. The 800% revenue-growth figure is also an investor projection, not a filed number, and quiet-period rules mean Anthropic itself won't publicly correct it either way.",
+      "why_it_matters_brief": "Investors told the FT they're modeling $100-120B revenue (vs $47B six months ago) on a 30x multiple — that's where the $1.8-2T range actually comes from, not pure optimism.",
+      "source": {
+        "name": "iTiger (Bloomberg-sourced)",
+        "type": "scrape",
+        "url": "https://www.itiger.com/news/1134201499"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 3 item. Oct 14 is now the specific pre-IPO investor day date at Anthropic SF HQ. $1.8T–$2T valuation range disclosed by investor sources (first time banded). Nov 9 formal IPO marketing week; pre-Thanksgiving listing on the table. Earlier May 2026 round at $965B. Builds on prior anthropic-ipo-mid-october-prospectus-timeline-pre-midterms-2026 (2026-10-03-pm) and anthropic-ipo-october-100b-raise-2t-valuation-bankers-pitch (2026-10-01-pm) items — new angle is the specific Oct 14 date." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added investor-math breakdown from FT reporting: $100-120B projected annualized revenue by end-2026 (vs $47B May run-rate), 800% growth × 30x multiple → ~$3T model, which makes $1.8-2T range the conservative read; added quiet-period context from the June S-1 filing. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "iTiger — Anthropic Said to Set October 14 Pre-IPO Investor Day", "url": "https://www.itiger.com/news/1134201499", "take": "Headlines the specific Oct 14 date and the November listing target." },
+        { "source": "FBroker — Anthropic shareholders expect a $2T valuation following an October IPO", "url": "https://fbroker.kz/en/news/51473-anthropic-shareholders-expect-a-2t-valuation-following-an-october-ipo-en-2", "take": "FT-sourced investor-math breakdown: $100-120B projected annualized revenue by end-2026, 800% growth × 30x revenue multiple ≈ $3T on investor models." },
+        { "source": "Stocktwits — Anthropic Reportedly Sends Investors IPO Invitations", "url": "https://stocktwits.com/news-articles/markets/equity/anthropic-reportedly-sends-investors-ipo-invitations/cZD0ZdRRB0S", "take": "Thanksgiving-debut framing — formal IPO marketing in the week of Nov 9, listing before Thanksgiving." },
+        { "source": "Mobile World Live — Anthropic plans investor meetings as IPO looms", "url": "https://www.mobileworldlive.com/ai-cloud/anthropic-plans-investor-meetings-as-ipo-looms/", "take": "Framing of the SF investor day as the moment Anthropic answers questions ahead of the formal roadshow." },
+        { "source": "PYMNTS — Anthropic Could Seek $2 Trillion Valuation in Record IPO", "url": "https://pymnts.com/news/artificial-intelligence/2026/anthropic-could-seek-2-trillion-valuation-in-record-ipo", "take": "Positions a $2T listing as the largest IPO on record, topping SpaceX's $1.77T June 2026 listing." },
+        { "source": "NeuronFeed — Anthropic schedules investor meetings for potential $965B IPO", "url": "https://neuronfeed.com/news/anthropic-schedules-investor-meetings-for-potential-965-billion-ipo", "take": "Benchmarks against the May 2026 $965B funding round — Anthropic topping OpenAI's $852B valuation at the time." }
+      ]
+    },
+    {
+      "id": "openai-pro-200-usage-cuts-grace-period-october-29-2026",
+      "tier": 3,
+      "title": "OpenAI's $200/month Pro 200 plan loses half its allowance on October 29 — Codex/Work drop from 20x Plus to 10x Plus, GPT-6 Pro cap falls from 200 to 100 messages per week, with a $2,500 credit grant for affected subscribers",
+      "summary": "The quietest part of OpenAI's DevDay plan-shuffle is the Pro 200 downgrade, and the clock is actually running on it. OpenAI announced at DevDay 2026 (Sept 29) that it's cutting the Pro 200 plan's usage allowance roughly in half, while keeping the $200/month price unchanged. The specifics: in Codex and ChatGPT Work, the allowance drops from 20× the ChatGPT Plus allowance to 10× Plus. In ChatGPT itself, the GPT-6 Pro message cap falls from 200 to 100 per week. Existing eligible Pro 200 subscribers keep their former allowance through October 29, 2026 as a grace period (reduced limits take effect October 30), after which affected subscribers get a one-time grant of 62,500 API usage credits — valued by OpenAI at $2,500 — that expires December 31, 2026. The new $500/month Pro 500 tier is positioned as the 'highest usage' plan — 25× Plus, plus access to Ultrafast — and Enterprise plans sit above both. (OpenAI isn't lowering the Pro 200 price; the practical effect is a price hike per unit of usage.) Developer reaction when the change was first announced skewed negative: one outlet reported subscribers cancelling in protest, and 'developers aren't happy' was the general tone of early coverage. OpenAI's rationale cited heavy compute demand for GPT-6 Astra and new DevDay features; the company also promised that future API price cuts will carry into the subscription allowance.",
+      "link": "https://propakistani.pk/2026/09/30/chatgpt-gets-500-pro-plan-as-openai-halves-pro-200-limits/",
+      "why_it_matters": "This is useful mainly as a general-shape signal rather than something Gabe personally needs to act on (nobody who writes HTML/CSS/Python as a hobby is on a $200/month ChatGPT plan). The thing to notice is OpenAI's new segmentation: a $500 plan on top, a $200 plan that's effectively more expensive per token than it was, and a $20 Plus plan at the bottom. That's a classic unbundle-then-reprice move once a product has pricing power — the per-user usage allowance quietly moves to be the lever, not the sticker price. The $2,500 credit grant with an expiry baked in (Dec 31) is also worth filing as a tactic — it looks like compensation on the headline but is really 'use it or lose it on API tokens, within 60 days,' which is a lot easier for OpenAI to monetize than reducing the sticker price would be. For a developer who's shopping between labs, it's a cue to compare Anthropic's Max plan + Claude Code with the OpenAI stack by actual tokens-per-dollar rather than headline subscription price. The Oct 30 date is the specific moment to file: anyone on a Pro 200 plan who's hitting their current cap will suddenly need to upgrade to Pro 500 ($300/mo more) or feel the halving.",
+      "why_it_matters_brief": "The $2,500 compensation grant is 62,500 API credits that expire Dec 31 — compensation on the surface, 'use it or lose it on tokens within 60 days' underneath.",
+      "source": {
+        "name": "ProPakistani",
+        "type": "scrape",
+        "url": "https://propakistani.pk/2026/09/30/chatgpt-gets-500-pro-plan-as-openai-halves-pro-200-limits/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-09T17:30:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-09T17:30:00Z", "by": "digest", "change": "created — Tier 3 item. DevDay 2026 Pro 200 downgrade: Codex/Work allowance from 20x Plus to 10x Plus; GPT-6 Pro cap in ChatGPT from 200 to 100 messages/week. Oct 29 2026 grace-period end date for existing eligible subscribers. Pro 500 ($500/mo) replaces as top consumer tier with 25x Plus allowance + Ultrafast. Pro 200 price unchanged — effective price hike per unit of usage." },
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "added compensation structure: 62,500 API usage credits (OpenAI-valued at $2,500) expiring Dec 31, 2026; clarified reduced limits take effect Oct 30; added developer-reaction context (cancellations in protest, early-coverage sentiment); added OpenAI's stated rationale (Astra demand + DevDay features) and commitment to pass API price cuts into subscription allowance. Updated why_it_matters and brief." }
+      ],
+      "takes": [
+        { "source": "ProPakistani", "url": "https://propakistani.pk/2026/09/30/chatgpt-gets-500-pro-plan-as-openai-halves-pro-200-limits/", "take": "Primary coverage — lays out the specific numeric cuts and the Oct 29 grace-period deadline." },
+        { "source": "AI Weekly — OpenAI Reopens $200 ChatGPT Pro to New Users, Halves API Credits", "url": "https://aiweekly.co/alerts/openai-reopens-200-chatgpt-pro-to-new-users-halves-api-credits-and-kills-5-hour", "take": "Compensation structure: 62,500 API usage credits ($2,500 OpenAI-valued) expiring Dec 31, 2026 for existing Pro 200 subscribers." },
+        { "source": "PCWorld — ChatGPT Pro's biggest perk just got cut in half", "url": "https://pcworld.com/article/3249113/chatgpt-pros-biggest-perk-just-got-cut-in-half-meet-the-new-ai-subscription-math.html", "take": "Developer sentiment — cancellations in protest, 'new AI subscription math' framing." },
+        { "source": "The New Stack — OpenAI halves 200 plan", "url": "https://thenewstack.io/openai-halves-200-plan/", "take": "Framing of the per-token price hike despite unchanged sticker price; OpenAI's compute-demand rationale." },
+        { "source": "Digg — OpenAI announces a $500 Pro plan and cuts to its $200 tier's usage limits", "url": "https://digg.com/tech/nlrufwd9", "take": "Pairs the Pro 500 debut with the Pro 200 cut as a single pricing move, not two separate announcements." },
+        { "source": "SaasCity — Sign in with ChatGPT + OpenAI Marketplace", "url": "https://saascity.io/blog/sign-in-with-chatgpt-openai-marketplace-2026", "take": "Context for the broader DevDay plan-and-platform roll-up: Marketplace with soft rankings, Sign-in-with-ChatGPT, and the new tier structure." }
+      ]
+    },
+    {
+      "id": "salesforce-agentforce-winter-27-release-october-12-2026",
+      "tier": 3,
+      "title": "Salesforce's Winter '27 release hits GA on October 12 — Agentforce flips to auto-enabled across eligible orgs, with agents framed as running whole workflows end-to-end rather than single tasks",
+      "summary": "Salesforce's Winter '27 release reaches general availability on October 12, 2026, with the central framing being Agentforce — now auto-enabled by default across eligible orgs. The pitch is that agents move from helping with single tasks (summarize a call, draft an email) to running whole workflows end-to-end: qualifying a pipeline opportunity, resolving a service case, or working across Slack, Teams, voice, and legacy enterprise systems in one agent run. That's Salesforce's own framing, so treat it with the usual CRM-vendor skepticism. Concrete details that are easier to verify: Sales Cloud ships AI-suggested follow-up actions after calls (reps get a meeting summary with next steps drawn from the call transcription, surfaced against the record); Agentic Commerce Search is credited with a 13% conversion lift (measurement window, number of merchants, and baseline all undisclosed per third-party analyses); and Agentforce Financial Services (formerly Financial Services Cloud) is rolling out to production orgs in upgrade windows between October 2 and October 10, 2026, with voice-enabled first-notice-of-loss intake for claims and banking-agent escalations that hand off to human reps. One analysis notes the release lacks a single headline feature that dominates — it's a horizontal push on 'agents everywhere' rather than one marquee ship.",
+      "link": "https://www.salesforceben.com/salesforce-to-auto-enable-agentforce-in-winter-27-what-that-means-for-you/",
+      "why_it_matters": "This is useful more as a shape-of-the-market signal than something a Python hobbyist will touch directly. The thing worth filing is 'auto-enabled by default': Salesforce has roughly 150K enterprise orgs, so flipping Agentforce on by default across the eligible subset of them is one of the largest single-day expansions of production AI agent usage so far. The practical read: starting Oct 12, a very large share of US B2B software interactions (support cases, pipeline qualification, commerce search) is going to be routed through LLM-backed agents whether the end-customer notices or not. The 'agents running whole workflows' framing is also a tell about where the enterprise AI pitch has moved — the Jev/Clef 'decision model' category and this Salesforce 'whole workflow' category are two sides of the same bet: the LLM call that returns a sentence is being replaced either by a probability-returning model or by a multi-step automated action, with less and less free-form chat in the middle. For a developer, two concrete things to borrow from the release even if you don't use Salesforce: the 'suggested next action after a call' pattern (useful for any Python script that ingests meeting transcripts), and the voice-first-notice-of-loss claims intake pattern (an interesting template for any 'ingest unstructured input, extract a structured record' side project). The 13% conversion-lift number should get an asterisk — the baseline isn't published.",
+      "why_it_matters_brief": "Agentforce flips to auto-on across Salesforce's enterprise base on Oct 12 — one of the biggest single-day expansions of production AI agents yet.",
+      "source": {
+        "name": "SalesforceBen",
+        "type": "scrape",
+        "url": "https://www.salesforceben.com/salesforce-to-auto-enable-agentforce-in-winter-27-what-that-means-for-you/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-10T06:30:00Z",
+      "added_by": "enrichment",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-10T06:30:00Z", "by": "enrichment", "change": "created — Tier 3 item (late-breaking during enrichment phase). Salesforce Winter '27 GA Oct 12 with Agentforce auto-enabled by default. Agentic Commerce Search 13% conversion lift (measurement details undisclosed). Agentforce Financial Services upgrading Oct 2-10 production windows. Sales Cloud AI-suggested next actions after calls. Framed by Salesforce as 'agents running whole workflows' — treat vendor framing with skepticism." }
+      ],
+      "takes": [
+        { "source": "SalesforceBen — Salesforce to Auto-Enable Agentforce in Winter '27", "url": "https://www.salesforceben.com/salesforce-to-auto-enable-agentforce-in-winter-27-what-that-means-for-you/", "take": "Primary coverage of the auto-enablement change and what it means for existing Salesforce orgs." },
+        { "source": "SalesforceBen — Sales Cloud: Top 7 Salesforce Winter '27 Features", "url": "https://www.salesforceben.com/sales-cloud-top-7-salesforce-winter-27-features/", "take": "AI-suggested follow-up actions after calls, drawn from transcription — the specific Sales Cloud feature worth copying as a pattern." },
+        { "source": "Stellagent — Salesforce Winter '27: Agentforce Runs Whole Workflows", "url": "https://stellagent.ai/insights/salesforce-winter-27-agentforce-commerce", "take": "Positions the release as 'whole workflow' not 'single task' — plus the 13% conversion-lift figure (with the asterisk that the baseline isn't published)." },
+        { "source": "VantagePoint — Winter '27 Agentforce Financial Services release", "url": "https://vantagepoint.io/blog/sf/winter-27-agentforce-financial-services-release", "take": "Agentforce Financial Services rolling out Oct 2-10 with voice-enabled FNOL intake and banking-agent escalations." },
+        { "source": "Citrin Cooperman — Salesforce Winter '27: Core Platform, Flow, and Sales Cloud Upgrades", "url": "https://www.citrincooperman.com/In-Focus-Resource-Center/Salesforce-Winter-27-Core-Platform-Flow-and-Sales-Cloud-Upgrades", "take": "Framing: no single headline feature dominates — horizontal 'agents everywhere' push rather than one marquee feature." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
