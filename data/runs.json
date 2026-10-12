@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-12T17:14:06Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-12T17:05:00Z",
+      "ended_at": "2026-10-12T17:14:06Z",
+      "wall_time_ms": 540000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 1500,
+        "discovery_search": 19000,
+        "curation": 2800,
+        "output_write": 200
+      },
+      "fetches_made": 25,
+      "items_input": 8,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Monday afternoon pm digest. Outbound DNS was broken for many primary-source domains (openai.com, techcrunch.com, techmeme.com, simonwillison.net, huggingface.co, hackernews, aggregator pages) — only anthropic.com resolved cleanly, so the sweep relied on WebSearch across ~18 queries to assemble candidates. Quiet weekend after a very active Oct 6-11 run: four am items already carry the top-of-mind stories (OpenAI 722 math preprints retraction, ARC-AGI-2 Tufa Labs 88.06%, Silicon Data/PitchBook token-price-war, Gemini 4 Argon third-party benchmarks). Candidate stories evaluated and dropped: Microsoft Maia 300 Oct 12 unveiling (one headline mention, no primary-source confirmation, Reuters/The Information reporting from August still the only solid anchor); AMD/World Labs (Sept 28, stale); Amazon/Decart acquisition (unsubstantiated — Anthropic walked away in September); Google Health Guardian (Sept 24 rollout, stale); Qualcomm Snapdragon 8 Elite Gen 6 (September Snapdragon Summit, stale); OpenAI GPT-6.1 Astra shelving (Sept 28/29, past window); Virtual Biology $1.8B initiative (Oct 7, slightly past window); Brad Smith kill-switch comments (Sept 24 UN GA / Oct 8 ITV, stale); Thinking Machines Interaction models (no release date). Final: 2 items — NBER WP 35275 'Writing Code vs. Shipping Code' (Demirer/Musolff/Yang, resurfaced this week as the empirical anchor for the agentic-coding commits-vs-releases gap discussion; Tier 2, highly Gabe-relevant for Python developer stack); Salesforce Winter '27 Agentforce GA (today, Oct 12; Tier 3 product launch — first auto-enabled major cycle, agents now run multi-step workflows, 13% conversion lift reported with undisclosed methodology)."
+    },
+    {
       "run_id": "2026-10-12T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
