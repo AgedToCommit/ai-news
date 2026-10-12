@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-12T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-12T06:00:00Z",
+      "ended_at": "2026-10-12T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 2000,
+        "discovery_search": 18000,
+        "curation": 10500,
+        "output_write": 500
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment of yesterday's 2026-10-11-pm (3 items). All 3 kept + enriched: (1) OpenAI 722 math preprints — added Lean-formalization figure dispute (22% per RW/AI Weekly vs 42% per Implicator reconstruction of 719-paper catalog) and Townsend's 'should have led with Lean-verified subset' critique; (2) ARC-AGI-2 Tufa Labs — resolved prize-structure discrepancy ($200K on live page), sharpened semi-private-vs.-private evaluation-set framing, added open-source eligibility requirement and the 2025 competition's 24% top private-set score baseline; (3) AI token price war — added Vercel AI Gateway 4.4x price-vs-lab-average datapoint from TechRadar 'Apple of AI' coverage, Silicon Data 'crossed below $1' Sept 1 datapoint, Anthropic S-1 timeline slip (mid-October → late October into early November, no EDGAR filing yet), Haiku 5.5 prompts-over-100K pricing tier ($0.50/$2.50, 5x base). LATE-BREAKING: 1 new Tier 2 item added — Gemini 4 Argon third-party benchmark divergence (Artificial Analysis Argon 52.6 vs Opus 5.5 57.6; Vals ranks Argon first of 41 at 68.9%). 10 web searches total, no WebFetch (hero_images all null per prior EGRESS pattern). Final: 4 items, tier_counts {1:2, 2:2, 3:0}. No items dropped."
+    },
+    {
       "run_id": "2026-10-11T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
