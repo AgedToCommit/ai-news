@@ -2,13 +2,14 @@
   "snapshot_id": "2026-10-13-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-13",
-  "generated_at": "2026-10-13T06:19:14Z",
-  "generated_at_local": "2026-10-13T02:19:14-04:00",
+  "generated_at": "2026-10-13T11:20:00Z",
+  "generated_at_local": "2026-10-13T07:20:00-04:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-10-12T17:14:06Z", "duration_ms": 540000 },
-    { "phase": "enrichment", "ran_at": "2026-10-13T06:19:14Z", "duration_ms": 300000 }
+    { "phase": "enrichment", "ran_at": "2026-10-13T06:19:14Z", "duration_ms": 300000 },
+    { "phase": "refresh", "ran_at": "2026-10-13T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 1 },
+  "tier_counts": { "1": 1, "2": 1, "3": 1 },
   "items": [
     {
       "id": "nber-wp-35275-writing-code-vs-shipping-code-oct-2026",
@@ -75,6 +76,38 @@
         { "source": "Vantage Point — 'Winter '27 Agentforce Financial Services Release'", "url": "https://vantagepoint.io/blog/sf/winter-27-agentforce-financial-services-release", "take": "The Agentforce Financial Services (ex-FSC) production-org upgrade windows on October 2, 9, and 10 ahead of today's GA." },
         { "source": "Futurum — 'Salesforce Winter '27: Agents Now Run the Workflow'", "url": "https://futurumgroup.com/insights/salesforce-winter-27-agents-now-run-the-workflow/", "take": "Analyst framing of the release as the enterprise-SaaS pivot point from 'agents answer questions' to 'agents execute business logic' — and the point at which Salesforce's agentic AI strategy shifts from roadmap to production." },
         { "source": "The Starr Conspiracy — '10 Salesforce Winter '27 Updates Marketers Need to Consider'", "url": "https://www.thestarrconspiracy.com/insights/newsfeed/10-salesforce-winter-27-updates-marketers-need-to-c6fbc2", "take": "The two new marketing agents for campaign creation and lead nurturing, plus the Marketing Cloud Next and Account Engagement email-deliverability monitoring additions." }
+      ]
+    },
+    {
+      "id": "meta-muse-wonder-wonder-full-msl-launch-oct-2026",
+      "tier": 1,
+      "title": "Meta Muse Wonder and Wonder Full — first frontier-tier models from Meta Superintelligence Labs, scoring 56 vs Claude Opus 5.5's 58 on Artificial Analysis, API at ~$4/$20 per million tokens",
+      "summary": "Meta released Muse Wonder and Muse Wonder Full on October 12–13, 2026 — the first frontier-class models from Meta Superintelligence Labs (MSL), the research group Meta assembled in 2026 to compete directly with OpenAI and Anthropic at the top of the capability ladder. Bloomberg Law headlined the launch as 'Meta Debuts First AI Model From New Superintelligence Group'; Axios reported it as Meta unveiling 'new frontier-class AI models to compete with OpenAI, Anthropic.' Per third-party benchmark aggregators including Artificial Analysis and Latent Space's AINews, Muse Wonder Full scores 56 on the Artificial Analysis Intelligence Index v4.3 at maximum reasoning effort, versus Claude Opus 5.5 at 58; independent testing of Meta's competitive claims is still pending at time of this report. API access to the standard Muse Wonder model is reported by multiple third-party API comparison sites (OpenRouter, llm-stats, agent-one.dev) at approximately $4 per million input tokens and $20 per million output tokens with a 1M-token context window — a price point several sources describe as equivalent to Claude's current API pricing — though these figures come from third-party aggregators rather than official Meta documentation and Meta has not yet confirmed them in a public pricing page. Muse Wonder Full is reported as subscription-only: Muse Code plans are cited at $50 per month (Power) and $200 per month (Maximum). The models support text, image, video, audio, and PDF inputs with multiple reasoning effort levels, tool-calling, and computer-use capabilities, at a reported rate limit of 3,000 requests and 4M tokens per minute per team (agent-one.dev; secondary). Meta's previous Muse line included Muse Spark (April 2026, closed, first Muse model, natively multimodal) and Muse Glimmer (August 10, 2026, open-weight, single-GPU runnable); Muse Wonder marks the shift from an accessibility and openness target toward frontier benchmark performance. A Taiwanese report on Zuckerberg's podcast remarks notes Meta is working with Signal co-founder Moxie Marlinspike on confidential computing for personal data so that Muse-processed data is inaccessible even to Meta — a single secondary source cited here as unverified context.",
+      "link": "https://axios.com/2026/10/12/meta-new-ai-models-anthropic-openai",
+      "why_it_matters": "Meta has historically competed on open-weight accessible models — Muse Glimmer can run on a single GPU and Zuckerberg positioned it as a 'future is for everyone' anti-centralization move. Muse Wonder is a different bet: a closed, API-priced, frontier-tier model from a dedicated Superintelligence Labs team, going head-to-head with Claude Opus 5.5 and GPT-6 on the benchmarks that matter to enterprise buyers. That is a meaningful positioning shift, and if the Artificial Analysis scores hold up under independent testing, it means there are now three credible frontier players instead of two. For Gabe as a Python developer and API user, the practical import is a third source of frontier-tier capability at competitive pricing. If the $4/$20 per million token figures are confirmed, Muse Wonder is directly interchangeable with Claude Opus 5.5 at API level for agentic Python projects. The Python ecosystem (LangChain, LlamaIndex, CrewAI) will add it as a provider option; the LLM library abstraction layer means you can swap models with a one-line config change, so having three credible frontier options is unambiguously good for anyone building on that stack. The 1M-token context window (if confirmed) is also a jump — Opus 5.5 is 200K — which matters for long-codebase context, RAG-free long-document work, and multi-turn agentic sessions that accumulate a lot of tool-call history. Two things to hold skeptically: (1) the pricing and specs are from third-party API aggregators, not Meta's own documentation, and Meta has historically been slower to publish clean API pricing pages than Anthropic or OpenAI; (2) the benchmark score of 56 vs Opus 5.5's 58 on Artificial Analysis is a small gap and will close or widen depending on which specific tasks you benchmark — a 2-point gap on a composite index usually means rough parity on most tasks and meaningful differences on a specific subset. The confidential-computing angle (Marlinspike collaboration) is interesting for anyone building privacy-sensitive personal-assistant applications — Meta has a real reputational problem in that segment, and technical controls on data access are the kind of move that could change the calculus for developers who've avoided Meta infrastructure on privacy grounds. One source, unverified, treat as a flag to watch.",
+      "why_it_matters_brief": "Meta's first frontier-tier model from Superintelligence Labs scores 56 vs Claude Opus 5.5's 58 on Artificial Analysis at matching API pricing — third credible player at the top of the benchmark stack, with a reported 1M context window.",
+      "source": {
+        "name": "Axios",
+        "type": "scrape",
+        "url": "https://axios.com/2026/10/12/meta-new-ai-models-anthropic-openai"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-13T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-13T11:00:00Z", "by": "refresh", "change": "created — Tier 1 model-release item. Meta announced Muse Wonder and Muse Wonder Full on Oct 12–13, 2026, first frontier models from Meta Superintelligence Labs (MSL). Bloomberg Law: 'Meta Debuts First AI Model From New Superintelligence Group.' Artificial Analysis scores Wonder Full at 56 vs Claude Opus 5.5 at 58 (third-party; independent testing pending). API pricing ~$4/$20 per million tokens from multiple aggregators (not yet confirmed in official Meta docs). 1M context window, tool calling, computer use, multimodal inputs. Wonder Full subscription-only ($50–200/mo). Previous Muse line: Spark (April, closed), Glimmer (August, open-weight single-GPU). Enrichment run missed it due to DNS failures on primary sources; picked up in refresh sweep." }
+      ],
+      "takes": [
+        { "source": "Axios — 'Meta unveils new frontier-class AI models to compete with OpenAI, Anthropic'", "url": "https://axios.com/2026/10/12/meta-new-ai-models-anthropic-openai", "take": "Primary US business news report on the launch, framing it as Meta's direct competitive move against OpenAI and Anthropic at the frontier tier." },
+        { "source": "The Information — 'Meta Unveils New AI Models to Challenge OpenAI and Anthropic'", "url": "https://theinformation.com/briefings/meta-unveils-new-ai-models-challenge-openai-anthropic", "take": "Notes that Zuckerberg's claim of 'millions' of Muse users conflicts with The Information's own figure of just over half a million users in the first week." },
+        { "source": "Bloomberg Law — 'Meta Debuts First AI Model From New Superintelligence Group'", "url": "https://news.bloomberglaw.com/tech-and-telecom-law/meta-debuts-first-ai-model-from-new-superintelligence-group-1", "take": "Frames Muse Wonder specifically as the first output from Meta's new Superintelligence Labs organization, distinct from Meta AI's prior model releases." },
+        { "source": "CNBC — 'Meta debuts Muse Wonder AI model in latest test of users' willingness to pay'", "url": "https://www.cnbc.com/2026/10/12/meta-muse-wonder-ai-model-agent.html", "take": "Positions the subscription pricing for Wonder Full as a test of whether Meta's user base will pay for a frontier-tier AI product, given Meta's historically free-to-consumer model." },
+        { "source": "Latent Space AINews — 'Meta Muse Wonder & Wonder Full: MSL's Claude 5.5-tier Frontier Model'", "url": "https://latent.space/p/ainews-meta-muse-wonder-and-wonder", "take": "Third-party benchmark framing: Artificial Analysis Intelligence Index v4.3 scores Wonder at 52 and Wonder Full at 56 at max reasoning effort, versus Claude Opus 5.5 at 58." },
+        { "source": "agent-one.dev — 'Meta Muse Wonder: Benchmarks, Pricing, API, and How to Use It'", "url": "https://www.agent-one.dev/blog/muse-wonder", "take": "Technical specs from API aggregation: text/image/video/audio/PDF inputs, tool calling, computer use, 3,000 req/4M tokens per minute rate limits; notes per-task cost ~$4.52 due to high output token generation." }
       ]
     }
   ],
