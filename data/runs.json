@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-13T11:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-13T11:00:00Z",
+      "ended_at": "2026-10-13T11:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 1500,
+        "tier_ranking": 1000,
+        "deep_fetch": 5000,
+        "discovery_search": 30000,
+        "curation": 7000,
+        "output_write": 500
+      },
+      "fetches_made": 17,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-13-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path — today's am file existed (enrichment ran at 06:19 UTC). Sweep window: 06:19 UTC to 11:00 UTC (2:19am–7:00am EDT). DNS reachability poor again: axios.com, cnbc.com, bloomberglaw.com, latent.space, kie.ai, malaymail.com, and most API comparison sites all failed to resolve — sweep relied entirely on WebSearch. Anthropic newsroom reachable, confirmed nothing new since Oct 8. One Tier 1 item added: Meta Muse Wonder and Muse Wonder Full — first frontier models from Meta Superintelligence Labs (MSL), announced late Oct 12 US time, missed by enrichment sweep. Multiple API aggregators (OpenRouter, llm-stats, agent-one.dev) report $4/$20 per million tokens, 1M context, tool calling, computer use; Wonder Full scores 56 on Artificial Analysis Intelligence Index v4.3 vs Claude Opus 5.5 at 58. Pricing/specs from secondary aggregator sources only — not confirmed in official Meta documentation yet; flagged in item summary. No other overnight items cleared the sourcing bar: European/Asian cycle search yielded no other confirmed stories in window."
+    },
+    {
       "run_id": "2026-10-13T06:19:14Z-enrichment",
       "phase": "enrichment",
       "status": "success",
