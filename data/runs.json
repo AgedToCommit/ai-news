@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-14T17:12:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-14T17:00:00Z",
+      "ended_at": "2026-10-14T17:12:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 500,
+        "tier_ranking": 500,
+        "deep_fetch": 1500,
+        "discovery_search": 20000,
+        "curation": 4500,
+        "output_write": 1000
+      },
+      "fetches_made": 20,
+      "items_input": 8,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-14-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path — today's am file existed with 3 items (Gemini 4 Argon T1, AI Engineer NYC T3, Ireland EU AI Summit T3), excluded by default from pm. Promotion rule not triggered — Gemini 4 Argon didn't materially deepen through the afternoon; no new sources beyond what was in the am takes[]. Sweep window: 11:58 UTC to 17:12 UTC (7:58am–1:12pm EDT). DNS reachability still spotty on direct WebFetch (simonwillison.net, llm-stats.com both failed with getaddrinfo ENOTFOUND); relied primarily on WebSearch and the Anthropic newsroom direct fetch which succeeded. Two items added: (1) Anthropic opens Singapore office + MOU with MDDI (Tier 2) — primary source Anthropic newsroom; secondary context Fortune, DealStreetAsia, CRN Asia, Mothership. Fifth APAC office, first in Southeast Asia; Dale Finlay ASEAN GM; GovTech Singapore ~1,500 technical staff Claude Code access; Bedrock in-region inference for regulated customers. Timing coincides with Anthropic's SF pre-IPO investor day. (2) Senator Cantwell six-principle frontier AI governance framework (Tier 3) — released Oct 7, missed by prior runs' DNS issues; captured here as late-breaking policy item. Mandatory NIST standards, independent audits before launch, continuous testing. Contrasts with Trump White House voluntary-standards position. No legislative text yet. Several candidates evaluated and dropped: Google DeepMind + GovTech Singapore scam detector (secondary-source claim, could not verify primary source in follow-up); SPUR coalition NYT/AFP/Economist expansion (specific publisher adds not independently verifiable); Nvidia AI chip China H1 2026 44% decline figure (could not verify in IDC/Reuters primary); Facebook feed algorithm customization (secondary coverage pointed to 2022 feature, no fresh Oct 2026 announcement); Mistral Large 4 open weights (still pending end-of-October per Mistral, not yet news). Simon Willison blog Oct 3 newsletter mentioned 'vulnapocalypse' affecting Datasette — followed up and found Sep 11 Datasette security releases already past the news window. Microsoft MAI expansion into GitHub Copilot (ongoing since August, no Oct 2026 fresh announcement). Nvidia GTC Washington keynote (not until Nov 30 – Dec 3). All drops recorded here for transparency."
+    },
+    {
       "run_id": "2026-10-14T11:58:00Z-refresh",
       "phase": "refresh",
       "status": "success",
