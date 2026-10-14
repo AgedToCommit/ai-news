@@ -2,13 +2,44 @@
   "snapshot_id": "2026-10-14-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-14",
-  "generated_at": "2026-10-14T06:20:00Z",
-  "generated_at_local": "2026-10-14T02:20:00-04:00",
+  "generated_at": "2026-10-14T11:58:00Z",
+  "generated_at_local": "2026-10-14T07:58:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-10-14T06:20:00Z", "duration_ms": 300000 }
+    { "phase": "enrichment", "ran_at": "2026-10-14T06:20:00Z", "duration_ms": 300000 },
+    { "phase": "refresh",    "ran_at": "2026-10-14T11:58:00Z", "duration_ms": 3480000 }
   ],
-  "tier_counts": { "1": 0, "2": 0, "3": 1 },
+  "tier_counts": { "1": 1, "2": 0, "3": 2 },
   "items": [
+    {
+      "id": "google-gemini-4-argon-general-availability",
+      "tier": 1,
+      "title": "Google makes Gemini 4 Argon broadly available at $2/$10 introductory pricing — first model in the Gemini 4 family",
+      "summary": "Google opened Gemini 4 Argon to general availability on October 13, 2026, after a restricted preview that began September 30. The model runs a 1M-token context window and targets coding, scientific research, cybersecurity, and enterprise workflows. Introductory API pricing is $2 per million input tokens and $10 per million output tokens through November 30, 2026 — roughly half the rate at which Meta Muse Wonder Full and Claude Opus 5.5 are currently priced at $4/$20. Access comes through the paid Gemini API, Google AI Studio, the Antigravity agentic development environment, and the Gemini app for Pro and Ultra subscribers. Google reports Argon increased agentic code submissions in Antigravity by more than 35% and cut rollbacks by nearly a third in internal testing. This is the first release in the Gemini 4 family; further models are planned.",
+      "link": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud",
+      "why_it_matters": "Google just put a 1M-context frontier model into the API at $2/$10 introductory pricing — roughly half of what Meta Muse Wonder Full and Opus 5.5 currently cost at $4/$20. That price expires December 1 when the intro rate ends, but for the next six weeks you have three near-equivalent frontier options (Anthropic, Meta, Google) and pricing is the real differentiator. If you're building anything with API calls right now, Argon's cost-per-token is the cheapest serious contender in the market. The Antigravity production metrics are also the first concrete public numbers from a major lab on how a frontier model upgrade moved real agentic workflows: +35% code submissions, -33% rollbacks. That's not a benchmark score; it's the actual effect on an internal coding agent that people were actively using. Worth noting for calibration when you see performance claims on new models. The Gemini 4 'first in family' framing signals a Haiku/Sonnet/Opus-style product line rather than a one-off release — expect smaller and faster Gemini 4 variants to land over the following months. The $2/$10 window is also a reasonable explanation for why Google timed this launch right after Meta Muse Wonder Full's launch at $4/$20: matching capability at half the price is a pricing-pressure move, not a coincidence. Set a calendar reminder for December 1 if you're building something today that relies on the intro rate.",
+      "why_it_matters_brief": "Google's frontier model hits GA at $2/$10 intro pricing — half of what Opus 5.5 and Meta Muse Wonder Full cost, through Nov 30, making this the cheapest serious frontier API option right now.",
+      "source": {
+        "name": "Google Cloud Blog",
+        "type": "scrape",
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-4-argon-available-on-google-cloud"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-14T11:58:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-14T11:58:00Z", "by": "refresh", "change": "created — Gemini 4 Argon went GA on Oct 13 after Sep 30 restricted preview. Google Cloud blog primary source; VentureBeat, Neowin, Analytics India Mag, aiidelist.com corroboration. $2/$10 introductory pricing through Nov 30 confirmed via VentureBeat/Neowin; $4/$20 standard price noted by Vals AI (both figures cited, intro price flagged in summary). Benchmarks from Google's own reporting: DeepSWE v1.1 77.9%, Vals Index 68.90%. Antigravity production metrics (+35% code submissions, -33% rollbacks) from Google internal data per VentureBeat. Item missed by Oct 13 and Oct 14 enrichment runs due to DNS failures; added in refresh sweep." }
+      ],
+      "takes": [
+        { "source": "VentureBeat", "url": "https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token", "take": "Confirms $2/$10 introductory pricing through Nov 30; reports 1M context window, GA on Oct 13 after Sep 30 restricted preview, first in Gemini 4 family with further models planned. Notes availability in Gemini API, AI Studio, Antigravity, Gemini app (Pro/Ultra)." },
+        { "source": "Neowin", "url": "https://www.neowin.net/news/googles-much-awaited-gemini-4-argon-is-now-available-beats-astra-and-opus-55-on-pricing/", "take": "Headline frames the pricing as beating Astra and Opus 5.5 specifically; confirms GA and $2/$10 intro rate." },
+        { "source": "Analytics India Mag", "url": "https://analyticsindiamag.com/ai-news/google-makes-gemini-4-argon-available-globally-to-developers-and-enterprises", "take": "Confirms global availability for developers and enterprises; notes enterprise-workflow and cybersecurity focus alongside coding and research." },
+        { "source": "Google AI Developer Docs", "url": "https://ai.google.dev/gemini-api/docs/latest-model", "take": "Developer-facing model documentation; lists 1,048,576-token context window, 65,536 output tokens per synchronous request (some secondary trackers give differing figures), confirms gemini-4-argon model string." }
+      ]
+    },
     {
       "id": "ai-engineer-nyc-2026-financial-services-mainstage-oct-13",
       "tier": 3,
@@ -40,6 +71,35 @@
         { "source": "Yahoo Finance — 'Anthropic continues enterprise push with new financial services software'", "url": "https://finance.yahoo.com/sectors/technology/article/anthropic-continues-enterprise-push-with-new-financial-services-software-150000330.html", "take": "The Claude for Financial Services update: Claude Opus 4.7, 10 customizable agents, Claude inside Microsoft 365 (Excel and Word), and new data connectors for Third Bridge, IBISWorld, Guidepoint, Dun & Bradstreet and Fiscal AI, plus a Moody's MCP server for credit ratings." },
         { "source": "Caixin (via cls.cn, September 15, 2026) — Claude for Financial Advisors launch", "url": "https://www.cls.cn/detail/2482869", "take": "Separate Anthropic product line for advisors, with integrations into investment-analysis and wealth-management software from BlackRock, Charles Schwab and Vanguard, targeting client-meeting prep, portfolio review and follow-up work." },
         { "source": "Tiger Brokers (itiger.com) — 'Anthropic Said to Set October 14 Pre-IPO Investor Day, Targeting November Listing'", "url": "https://www.itiger.com/news/1134201499", "take": "Anthropic scheduled a closed pre-IPO investor meeting at its San Francisco headquarters for October 14 local time, with a select group of institutional investors; roadshow timing has slipped to mid-October-or-later with the formal start as late as the week of November 9, trading potentially before Thanksgiving; valuations circulating at $1.8T–$2T vs the May 2026 Series H $965B mark." }
+      ]
+    },
+    {
+      "id": "ireland-eu-international-ai-summit-oct-2026",
+      "tier": 3,
+      "title": "Ireland's International AI Summit launches European AI Innovation Month — first major EU summit after the AI Act's August 2026 transparency obligations took effect",
+      "summary": "Ireland is hosting the International AI Summit today, October 14, 2026, at the Royal Dublin Society in Dublin, marking the official launch of European AI Innovation Month under Ireland's EU Council Presidency. The summit — themed 'Harnessing AI to Revolutionise Europe's Competitiveness' — convenes EU and global leaders, heads of government, CEOs, investors, and academics. The Taoiseach, Micheál Martin, is opening the event; Henna Virkkunen, the European Commission's Executive Vice-President for Tech Sovereignty, Security and Democracy, is delivering the keynote on Europe's AI vision. European AI Innovation Month continues through November 17, with a closing event in Brussels. The summit comes six weeks after the EU AI Act's Article 50 transparency obligations took effect in August 2026 — the first tranche of enforcement obligations in the Act's phased compliance calendar.",
+      "link": "https://enterprise.gov.ie/en/news-and-events/department-news/2026/october/202610061.html",
+      "why_it_matters": "This is the first big EU-level policy temperature check after the AI Act's transparency obligations (Article 50) kicked in August 2026 and after the Digital Omnibus simplification package pushed the high-risk system compliance deadlines out to December 2027 and August 2028. The 'competitiveness' framing of the summit theme — rather than 'safety' or 'governance' — signals that Europe's public messaging has shifted from 'how do we regulate AI' to 'how do we catch up economically.' The Henna Virkkunen keynote is worth scanning when the official readout appears: she's the EC commissioner responsible for AI Act implementation timelines, so anything she says about enforcement rhythm or the 2027/2028 compliance calendar carries downstream weight for anyone building AI products that might reach EU users. For a Python developer building agent-based tools, the practical read is: the compliance clock is running but the enforcement focus is transparency labeling (Article 50) first, high-risk systems second — and the summit framing suggests Brussels is more interested in making European companies competitive than in slowing down builders. The Irish government's eu2026.ie and enterprise.gov.ie pages will carry the official summit readout and keynote summaries, probably within a few hours.",
+      "why_it_matters_brief": "Europe's AI Innovation Month opens in Dublin today — the theme is 'competitiveness,' not safety, which is a clear signal about where EU policy priorities have shifted since the AI Act took effect.",
+      "source": {
+        "name": "Irish Department of Enterprise",
+        "type": "scrape",
+        "url": "https://enterprise.gov.ie/en/news-and-events/department-news/2026/october/202610061.html"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-10-14T11:58:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-14T11:58:00Z", "by": "refresh", "change": "created — Tier 3 EU governance/policy item. Ireland hosting International AI Summit at RDS Dublin, Oct 14, under Irish EU Council Presidency. Official launch of European AI Innovation Month (Oct 14 – Nov 17, closing in Brussels). Theme: 'Harnessing AI to Revolutionise Europe's Competitiveness'. Speakers: Taoiseach Micheál Martin (opening), Henna Virkkunen EVP EC (keynote). Confirmed via enterprise.gov.ie, ideal-ist.eu, tyndall.ie, digital-skills-jobs.europa.eu, hospitalityireland.com. Item is timely because it's the first major EU summit after AI Act Article 50 transparency obligations took effect August 2026." }
+      ],
+      "takes": [
+        { "source": "Irish Department of Enterprise — International AI Summit 2026", "url": "https://enterprise.gov.ie/en/news-and-events/department-news/2026/october/202610061.html", "take": "Official government announcement: summit at RDS Dublin, Oct 14; launches European AI Innovation Month; Irish EU Council Presidency event; aimed at global and EU leaders, CEOs, investors and academics." },
+        { "source": "EU Digital Skills & Jobs — event listing", "url": "https://digital-skills-jobs.europa.eu/en/latest/events/international-ai-summit-2026", "take": "EU Commission event listing confirming Oct 14 date, RDS venue, and Irish Presidency framing." },
+        { "source": "Irish Tech News", "url": "https://irishtechnews.ie/?p=181779", "take": "Media coverage noting the EU Innovation Month framing and Taoiseach opening." }
       ]
     }
   ],

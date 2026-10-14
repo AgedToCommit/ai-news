@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-14T11:58:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-14T11:00:00Z",
+      "ended_at": "2026-10-14T11:58:00Z",
+      "wall_time_ms": 3480000,
+      "tokens_used": 33000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 500,
+        "tier_ranking": 1000,
+        "deep_fetch": 500,
+        "discovery_search": 25000,
+        "curation": 5000,
+        "output_write": 1000
+      },
+      "fetches_made": 6,
+      "items_input": 2,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path — today's am file existed (enrichment ran at 06:20 UTC). Sweep window: 06:20 UTC to 11:58 UTC (2:20am–7:58am EDT). DNS reachability poor again (pattern persists from prior runs); relied entirely on WebSearch. Two items added: (1) Gemini 4 Argon GA (Tier 1) — Google opened Gemini 4 Argon to general availability on Oct 13 after a Sep 30 restricted preview. $2/$10 introductory pricing through Nov 30 (vs standard $4/$20 matching Meta Muse Wonder Full). 1M context window; available via paid Gemini API, AI Studio, Antigravity, Gemini app (Pro/Ultra). First in Gemini 4 family; further models planned. Internal Antigravity metrics: +35% agentic code submissions, -33% rollbacks. DeepSWE v1.1 77.9%, Vals Index 68.90%. This item was missed by Oct 13 and Oct 14 enrichment runs due to DNS failures; confirmed via VentureBeat, Neowin, Analytics India Mag, Google Cloud blog, Google AI Dev Docs. (2) Ireland International AI Summit (Tier 3) — Ireland hosting at RDS Dublin Oct 14, official launch of European AI Innovation Month under Irish EU Council Presidency. Theme: competitiveness, not safety. Speakers: Taoiseach Micheál Martin (opening), Henna Virkkunen EC EVP (keynote). Month runs Oct 14 – Nov 17, closes in Brussels. Confirmed via enterprise.gov.ie, digital-skills-jobs.europa.eu, Irish Tech News. Existing item (AI Engineer NYC, Tier 3) kept without modification — still in closing day. No Mistral Large 4 weights (still late-October target). No additional confirmed overnight Asia/Europe model releases cleared the sourcing bar."
+    },
+    {
       "run_id": "2026-10-14T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
