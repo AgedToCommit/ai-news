@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-15T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-15T11:00:00Z",
+      "ended_at": "2026-10-15T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 25000,
+        "curation": 5500,
+        "output_write": 500
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-15-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Today's am file existed (3 items: 0 Tier1, 2 Tier2, 1 Tier3). Sweep since enrichment ended at 2026-10-15T06:30:00Z. DNS has been intermittent on recent runs; relied on WebSearch for this run (9 searches). Two items added from overnight EU/UK cycles missed by prior runs due to DNS issues: (1) EU AI Act first enforcement action (Tier 1) — EU AI Office sent formal information requests to OpenAI and Anthropic on Oct 14 at Dublin AI Summit, triggered by two summer 2026 agent incidents; first enforcement under the EU AI Act. Sources: Euronews, aiweekly.co, DEV Community, FourWeekMBA. (2) UK Parliament hearing on AI safety (Tier 3) — Oct 13, OpenAI and Anthropic backed binding UK AI requirements, Google DeepMind opposed; cross-party committee calls for dedicated regulator. Sources: The Next Web, Cryptobriefing, CityAM. Skipped: Mistral Large 4 (public preview from Oct 6, outside sweep window), DeepSeek $12B funding (single aggregator only, unverified), LiquidAI LFM2.5-24B-A2B (insufficient sourcing for curation), Anthropic self-replicating AI warning (Oct 12-13, outside sweep window). Final tier_counts: {1:1, 2:2, 3:2}."
+    },
+    {
       "run_id": "2026-10-15T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
