@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-16T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-16T06:18:38Z",
+      "ended_at": "2026-10-16T06:30:00Z",
+      "wall_time_ms": 682000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 1500,
+        "tier_ranking": 500,
+        "deep_fetch": 2000,
+        "discovery_search": 15000,
+        "curation": 4500,
+        "output_write": 500
+      },
+      "fetches_made": 13,
+      "items_input": 4,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 1,
+      "snapshot_written": "2026-10-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Yesterday's pm (2026-10-15-pm.json) had 2 items: Anthropic Frontier Red Team self-replicating IoT paper (Tier 2) and GitHub Copilot default-enablement policy Oct 22 (Tier 3). Anthropic self-replicating paper KEPT + ENRICHED — added connection to today's new Anthropic 'update on independent evaluators' (Oct 15) which names SecureBio as the CBRN-chapter reviewer for the August Risk Report; the capability-claim (Oct 12 paper) → governance-claim (Oct 15 evaluators framework) pattern is now visible from outside. Also noted overnight sweep found no new benchmark data, no technical rebuttal from security researchers, no counter-paper. GitHub Copilot default-enablement DROPPED — no new substance in last 24h, Sep 24/25 changelog remains primary source, policy effective date (Oct 22) still 6 days out, GitHub Universe (Oct 28-29) preview coverage not yet live. Late-breaking pass added two items: (1) Anthropic 'An update on independent evaluators' Oct 15 (Tier 2) — three-tier access model, METR at Tier 3 with employee-like access + publication rights (narrow redactions only), SecureBio reviewing CBRN chapter, Accenture + Faculty broader partnership, early talks with Hugging Face, reiterates White House Accord on Super Intelligence signing. Direct response to Reuters Oct 13 report that labs sought publication control through Oct 5. Primary WebFetch to anthropic.com/news/an-update-on-independent-evaluators succeeded. (2) Nvidia DGX Spark 128GB on sale Oct 15 (Tier 3) — five months late, Jensen hand-delivered first unit to Elon Musk at Starbase (staged callback to 2016 DGX-1/OpenAI handoff), launch-day sold out at Nvidia store, Micro Center had few hundred units. Pricing contradictory ($3,999 launch vs $6,950 price-increase claim). 64GB variant lands Oct 23 at $4,999 with QSFP pairing option. Bandwidth trade-off flagged — box can't comfortably run ~70B models. Captured as T3 for Gabe's Python-on-consumer-hardware stack. Skipped: Hinton/Bengio '400 scientists call' — looked like a conflation with October 2025 Future of Life letter, could not verify a dated Oct 14 2026 event; Mistral Large 4 open weights (still late-October target per prior refresh run); EU AI Act probe updates (no new material beyond Oct 14 Dublin speech captured in yesterday's am); Simon Willison LLM 0.36 (unverified single Spanish-language source). DNS to anthropic.com worked this run; relied on WebSearch for the rest (10 searches). Final tier_counts: {1:0, 2:2, 3:1}."
+    },
+    {
       "run_id": "2026-10-15T17:12:00Z-digest",
       "phase": "digest",
       "status": "success",
