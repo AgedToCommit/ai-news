@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-17T17:05:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-17T16:54:00Z",
+      "ended_at": "2026-10-17T17:05:00Z",
+      "wall_time_ms": 660000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 7000,
+        "output_write": 500
+      },
+      "fetches_made": 30,
+      "items_input": 3,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-17-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Today's am (2026-10-17-am.json) had 4 items (Mac Studio M5 Ultra benchmark T2, TSMC Q3 earnings T3, Nvidia Nemotron 3.5 Super VL T2, FTC CIDs to OpenAI/Anthropic T2). All excluded from pm per promotion rule — none has materially deepened in the ~6-hour window since 2026-10-17T11:20:00Z. DNS reachability intermittent across the run (simonwillison.net, techmeme.com, llmgateway.io all ENOTFOUND for WebFetch); fell back to WebSearch (~27 queries across major labs Anthropic/OpenAI/Google/Meta/Mistral/xAI, Hugging Face, Simon Willison, AI aggregators Techmeme/Last Week in AI/AI Weekly, specific topics around chip news/AI safety/EU regulation/startup funding/robotics/benchmarks). One solid fresh item captured: Gemini 4 Argon enterprise agentic benchmark data firming up three days after Oct 13-14 general availability on Google Cloud. Distinct from the Oct 14 am Argon item which focused on safety framing (no ML R&D acceleration kept for Fairwind cyber-defender vetted access). This pm item captures the operational second wave: ServiceNow NowAI-Bench +20% task success vs Gemini 3.8 Flash in early access; Google ADK internal test (205K Python LOC audit, 6 proposals, 2 approved shipping 40% session-prep + 21% package-import improvements, 4 failed external validation); Chromium 6M-LOC refactor in weeks rather than months; Box +14 points over Gemini 3.1 Pro; Antigravity teams +35% agentic code submissions and ~1/3 fewer rollbacks (no methodology published); 300+ TiB memory freed across Google data centers. Pricing cliff Dec 1 (introductory $2/M input + $10/M output doubling to $4/M + $20/M after Nov 30). Vendor benchmark positioning: GPT-6 Astra beats Argon on FrontierSWE v2 and Terminal-Bench Science 0.1; Argon beats on DeepSWE v1.1, Vibe Code Bench, GraphWalks 256K-1M, LVBench. All numbers vendor-reported with Gartner's Nitish Tyagi (via InfoWorld) urging independent validation. Scanned candidates and skipped: Reflection AI Beam weights (announced Oct 5) still not on Hugging Face per most recent coverage (~Oct 10), Oct 31 implied deadline, no fresh news hook today; Mistral Large 4 weights still due Oct 31, no update today; Anthropic IPO status unclear (confidential S-1 filed June 1, no confirmed date-of-flip); OpenAI Sora API (Sep 20) outside window; Google ChatGPT Atlas Windows/iOS/Android availability no update today; DeepSeek V5 not announced (current V4.1-Flash from Sep 10). 1 item is on the smaller end but matches the quiet pm window on a Saturday with DNS-degraded discovery. Prior pm cadence: 2026-10-16-pm 2 items, 2026-10-15-pm 2 items, 2026-10-14-pm 2 items, 2026-10-13-pm 1 item."
+    },
+    {
       "run_id": "2026-10-17T11:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
