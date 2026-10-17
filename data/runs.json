@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-17T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-17T06:15:00Z",
+      "ended_at": "2026-10-17T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 1500,
+        "discovery_search": 24000,
+        "curation": 9500,
+        "output_write": 500
+      },
+      "fetches_made": 13,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-17-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Enriched both pm items (no drops). (1) Mac Studio M5 Ultra vs DGX Spark benchmark — folded in two overnight reads: MindStudio two-Spark RDMA cluster vs single M5 Ultra on DeepSeek V4 Flash (both 34–38 t/s decode, Spark cluster 2–3x faster on prompt processing, ~$10K for pair vs $12,299 for 256GB M5 Ultra), new Implicator.ai follow-up on M5 Ultra prompt processing walking back the day-one 'Mac wins' framing. Also added concrete pricing (base $5,499/96GB, tested 256GB $12,299, 512GB variant due late Oct no price, two Sparks + RDMA ~$10K) and the Context Studios caveat that MLX kernels for the M5's Neural Accelerators are still being written (46.3 t/s is a floor, not a ceiling). (2) TSMC Q3 2026 earnings — folded in NT$763.06B net income actual vs NT$746.3B LSEG SmartEstimate consensus (clean 2.2% beat), Q4 projection of up to 61% YoY USD revenue growth, and the overnight chip-stock rally anchored on CFO Wendell Huang's 'AI is real' framing. No new sell-side price-target revisions tied specifically to Oct 16 trading surfaced overnight — flagged as a gap. Late-breaking pass: 13 WebSearch queries across major labs (Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, Hugging Face), Techmeme attempt, Simon Willison, and the general-news / startup-funding slots; DNS reachability remained intermittent (techmeme.com, simonwillison.net, implicator.ai all ENOTFOUND for WebFetch — fell back to WebSearch throughout). No credible Tier-1 announcement from the Oct 16/17 window surfaced that wasn't already captured in yesterday's am (Meta Muse Spark Open, Anthropic independent evaluators, Microsoft MAI-Base-2) or pm (M5 Ultra benchmark, TSMC earnings). 0 late-breaking items added — morning file begins at 2 items; the 7am refresh will have room to add 1–3 overnight-cycle items."
+    },
+    {
       "run_id": "2026-10-16T17:12:00Z-digest",
       "phase": "digest",
       "status": "success",
