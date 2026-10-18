@@ -1,0 +1,48 @@
+{
+  "snapshot_id": "2026-10-18-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-10-18",
+  "generated_at": "2026-10-18T17:05:00Z",
+  "generated_at_local": "2026-10-18T13:05:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-10-18T17:05:00Z", "duration_ms": 720000 }
+  ],
+  "tier_counts": { "1": 1, "2": 0, "3": 0 },
+  "items": [
+    {
+      "id": "reflection-ai-beam-weights-oct-16",
+      "tier": 1,
+      "title": "Reflection AI Beam goes live on OpenRouter at $0.25/$1 per M tokens — ~10x cheaper than Argon's current rates, HN thread at 549 points flags 501 GB VRAM floor, independent benchmark verification still pending",
+      "summary": "Two days after Reflection AI released Beam's weights on Hugging Face under Apache 2.0, hosted API access has materialized. OpenRouter lists reflection/beam-1.0-501b-a23b with 1M-token context, configurable reasoning effort, function calling and structured output. Pricing on the cheapest listed provider is $0.25 per million input tokens and $1.00 per million output tokens; a second provider row shows $0.40 input / $1.20 output. OpenRouter reports 99.96% availability over the last three days, around 134 tokens per second throughput and roughly 0.56s median latency from the best provider. Baseten is also carrying the model, and self-serve API keys from Reflection opened the same day as the weight drop (Oct 16). Community reception: the Hugging Face announcement thread reached ~549 points and ~174 comments on Hacker News within the first few days, and the center of gravity shifted quickly from launch excitement to hardware math — ~501 GB of VRAM in FP8 just to load the weights, and roughly 250 GB at 4-bit. Reflection's performance claims against DeepSeek V4.1 Flash and GLM 5.2 remain vendor-reported; TechCrunch and others have explicitly noted that no third party has reproduced the numbers yet. Epoch AI and independent SWE-Bench evaluations are listed as expected late October or early November.",
+      "link": "https://openrouter.ai/models/reflection/beam-1.0-501b-a23b",
+      "why_it_matters": "The am item on Beam flagged OpenRouter as 'where Beam should be appearing this week.' It did — and the actual pricing is the useful signal, more than any benchmark number right now. $0.25/M input and $1/M output on OpenRouter is roughly 8x cheaper than Argon's current introductory API rates ($2 input / $10 output) and 16–20x cheaper after Argon's December 1 price doubling. For a hobbyist Python workflow where cost per experiment compounds fast, that's the actionable number: if Beam is 'good enough' for refactoring, docstring drafting, or exploratory code review on Gabe's HTML/CSS/Python side projects, the per-token economics now let it be the default rather than a budget-conscious fallback. The structured output and function-calling support matter too — those are the two features that make a hosted API usable from a Python script without rolling your own JSON parsing or tool-calling glue. Three caveats worth sitting with: (1) no independent benchmark has reproduced Reflection's claimed scores yet, and the Reflection 70B episode from 2024 (benchmark overclaims, inflated eval code, API calling Claude Sonnet behind the scenes) is still fresh enough in the community that caution is warranted — Epoch AI results in a few weeks will be the first real test. (2) The 501 GB VRAM floor in FP8 means self-hosting is a non-starter without serious hardware, so the OpenRouter pricing is the entire access story for most hobbyists. (3) Even at $0.25/M input, 'long-horizon reasoning' at a 1M-token context chews through tokens fast — the headline price doesn't survive if the model needs 100K thinking tokens per response. The practical move for Gabe is to pull a test key, try Beam on three or four of his real tasks (not benchmarks), and compare quality against Sonnet 5.5 at Anthropic's higher but known-steady output price. The am's Argon item still points at Sonnet 5.5 as the better default for his stack on Vibe Code Bench and Code Migration; Beam enters as a cheaper, open-weight third option worth measuring against both.",
+      "why_it_matters_brief": "Beam's hosted API is live on OpenRouter at $0.25/$1 per M tokens — roughly 10x cheaper than Argon on the stack Gabe uses, if the vendor-reported quality survives independent testing.",
+      "source": {
+        "name": "OpenRouter / Reflection AI / Hacker News",
+        "type": "scrape",
+        "url": "https://openrouter.ai/models/reflection/beam-1.0-501b-a23b"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-18T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "digest",
+      "enriched_overnight": true,
+      "promoted_from_am": true,
+      "revisions": [
+        { "at": "2026-10-18T11:00:00Z", "by": "refresh", "change": "created — Reflection AI Beam weights released Oct 16, 2026 under Apache 2.0 on Hugging Face. 501B total / 23B active MoE, 23.8T token pretraining. BF16/FP8/NVFP4 + speculative decoding drafter. Vendor-reported: DeepSWE v1.1 44.4, SWE-bench Verified 80.9, Terminal Bench v2.1 80.1. Artificial Analysis: 30 on Intelligence Index, #19/120. Missed by enrichment run (06:30Z Oct 18) which had noted weights still pending based on pre-Oct-16 coverage; Unite.ai and SiliconAngle both confirm Oct 16 Hugging Face release." },
+        { "at": "2026-10-18T17:05:00Z", "by": "digest", "change": "promoted from am with afternoon context: OpenRouter now carrying reflection/beam-1.0-501b-a23b with concrete API pricing ($0.25/M input, $1/M output on cheapest provider; secondary row $0.40/$1.20), 1M context, structured output + function calling, 99.96% availability last 3 days, ~134 t/s throughput, ~0.56s median latency. Baseten also hosting. Self-serve Reflection API keys opened Oct 16 alongside weights. HN thread ~549 points / ~174 comments; discussion shifted to the 501 GB FP8 VRAM floor for self-hosting. Reframed why_it_matters around the cost delta vs Argon (~8x cheaper now, ~16-20x after Dec 1) and the three caveats: no independent benchmark reproduction yet (Epoch AI pending), self-hosting bar is high so OpenRouter pricing is the real access story, long-horizon thinking tokens can erode the headline price. Title rewritten; new why_it_matters_brief emphasizes the pricing-delta framing." }
+      ],
+      "takes": [
+        { "source": "OpenRouter — reflection/beam-1.0-501b-a23b model page", "url": "https://openrouter.ai/models/reflection/beam-1.0-501b-a23b", "take": "Primary source for pricing and operational metrics. Cheapest listed provider at $0.25/M input and $1/M output; secondary row $0.40/$1.20. 1M context window, configurable reasoning effort, function calling, structured outputs. 99.96% availability over last 3 days, ~134 t/s throughput, ~0.56s median latency." },
+        { "source": "Reflection AI Blog — Beam is Available", "url": "https://reflection.ai/blog/beam-is-available", "take": "Primary source for Oct 16 release. Apache 2.0 weights on Hugging Face alongside the Beam API. Vendor benchmark table included." },
+        { "source": "Unite.ai — Reflection Releases Beam's Open Weights Under Apache 2.0 License", "url": "https://www.unite.ai/reflection-releases-beams-open-weights-under-apache-2-0-license/", "take": "Confirms Oct 16 Apache 2.0 weight release. BF16, FP8, and NVFP4 formats plus speculative decoding drafter. 23.8T token pretraining. Artificial Analysis Intelligence Index score of 30, ranked #19 of 120 models." },
+        { "source": "LLMReference — Beam Models by Reflection AI", "url": "https://www.llmreference.com/model-family/beam", "take": "Dates the API transition: Beam was announced Oct 5 as a waitlisted API preview; weights released on Hugging Face under Apache 2.0 on Oct 16, with self-serve API keys opened the same day. Lists Baseten as an additional hosting provider." },
+        { "source": "AI Plain English — What Reflection AI Left Out of Its 501B Beam Launch", "url": "https://ai.plainenglish.io/what-reflection-ai-left-out-of-its-501b-beam-launch-510c7bee880f", "take": "The caution read. Discussions shifted quickly from launch excitement to infrastructure reality — ~501 GB VRAM in FP8 just to load the weights. Flags that performance and efficiency claims remain unverified by independent third parties, and notes Reflection's compute comparisons omit parts of the serving workload." },
+        { "source": "Hermes AI — Reflection AI's Beam Challenges DeepSeek With 501B Open-Weight Reasoning Model", "url": "https://hermes-ai.net/news/reflection-ai-s-beam-challenges-deepseek-with-501b-open-weight-reasoning-model/", "take": "Positions Beam as an open-weight challenger to DeepSeek V4.1 Flash and GLM 5.2 on reasoning. Reports vendor claims of 3-4x less inference compute than GLM 5.2 at comparable reasoning accuracy — explicitly flagged as self-reported and not independently evaluated." },
+        { "source": "The Decoder — World's Best Open Source Model Falls Short of Promised Performance", "url": "https://the-decoder.com/worlds-best-open-source-model-falls-short-of-promised-performance/", "take": "Points to a gap between Reflection's launch claims and what the vendor table actually shows: on SWE-bench Pro v1 Beam scores 65.5 against DeepSeek V4.1 Flash's 67.7, and Beam's Terminal Bench v2.1 score of 80.1 lands behind several competitors. Reasoning level, test environment, sample size and units are not disclosed. The 2024 Reflection 70B overclaim episode is cited as context for why community caution is high this time around." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
