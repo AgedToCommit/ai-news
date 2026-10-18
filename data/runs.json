@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-18T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-18T06:15:00Z",
+      "ended_at": "2026-10-18T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 500,
+        "discovery_search": 22000,
+        "curation": 8500,
+        "output_write": 500
+      },
+      "fetches_made": 17,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-18-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Yesterday's pm had 1 item (Gemini 4 Argon enterprise agentic benchmark data, Tier 2). Enriched (no drops) with the overnight signal: Vals.ai Vals Index (41 models, 22 benchmarks) — Argon #1 overall at 68.90% at ~$15.68 per test, ahead of Claude Sonnet 5.5 (67.04%) and Claude Opus 5.5 (66.97%); Argon #1 on Finance Agent v2 (65.40%), tied #1 on IOI (100%), #2 on Vibe Code Bench (91.91%) behind Sonnet 5.5, #2 on Code Migration behind Sonnet 5.5. Also folded in two hands-on reads: Argon-generated Kubernetes manifests pass linter but fail to start on real clusters; high thinking-token overhead on long-horizon tasks eroding introductory-pricing arbitrage. Reframed the practical takeaway for Gabe's HTML/CSS/Python stack — Sonnet 5.5 still looks like the better default on the two sub-benchmarks closest to his day-to-day coding work; Argon's lead sits on finance-agent, olympiad-math (IOI), and long-horizon agentic tasks further from his stack. Caveat captured in revision: Vals.ai page dated Sep 30 2026 (originating cyber-defender preview window), reached via cached WebSearch snapshot only — DNS reachability remained intermittent for direct WebFetch (simonwillison.net, techmeme.com, vals.ai, implicator.ai all ENOTFOUND), same pattern as prior runs. Added one new takes[] entry for Vals.ai. why_it_matters_brief rewritten per brief.md: 'Four days post-GA, Argon takes #1 on Vals' independent index at 68.90% but loses Vibe Code Bench and Code Migration to Sonnet 5.5 — API pricing still doubles Dec 1, forcing a workload-vs-cost call.' Late-breaking pass: ~17 WebSearch queries across Anthropic, OpenAI, Google DeepMind, Meta, Mistral, xAI, Hugging Face, Simon Willison, Techmeme/Hacker News, DeepSeek, Alibaba Qwen, LightOn OCR, GitHub Universe prep, AI startup funding, chip/robotics. No credible Tier-1 announcement from the Oct 17-18 overnight 12-hour window surfaced beyond aggregator noise. Specifically scanned and skipped as not-overnight-material: Reflection AI Beam weights (still pending, Oct 31 implied deadline); Mistral Large 4 weights (still due ~Oct 27 — Vals.ai preview score 48.05% overall and 1st among open-weight models on Harvey Legal Agent Benchmark is pre-overnight material); Grok 5 (no overnight hook, still in training per Sep 30 roadmap, Grok 4.8 and 4.9 ahead of it); DeepSeek (V4.1-Flash from Sep 10 remains latest, no Pro-tier update); Anthropic Opus 5.5 Sep 22 and Sonnet 5.5 Sep 28; Qwen 3.8 Aug; Microsoft Decision-1 Oct 9 and Cloudflare Clef Omni Oct 9; LightOn OCR-3 Oct 8 (vision/document OCR, Apache 2.0, 0.8B+4B — not overnight); GitHub Universe Oct 28-29 upcoming (sessions not live). 0 late-breaking items added — morning file begins at 1 item; the 7am refresh will have room to add 1-3 overnight-cycle items if anything materializes."
+    },
+    {
       "run_id": "2026-10-17T17:05:00Z-digest",
       "phase": "digest",
       "status": "success",
