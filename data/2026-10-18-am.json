@@ -2,12 +2,13 @@
   "snapshot_id": "2026-10-18-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-18",
-  "generated_at": "2026-10-18T06:30:00Z",
-  "generated_at_local": "2026-10-18T02:30:00-04:00",
+  "generated_at": "2026-10-18T11:20:00Z",
+  "generated_at_local": "2026-10-18T07:20:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-10-18T06:30:00Z", "duration_ms": 900000 }
+    { "phase": "enrichment", "ran_at": "2026-10-18T06:30:00Z", "duration_ms": 900000 },
+    { "phase": "refresh", "ran_at": "2026-10-18T11:20:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "tier_counts": { "1": 1, "2": 1, "3": 0 },
   "items": [
     {
       "id": "gemini-4-argon-enterprise-agentic-benchmarks-oct-17",
@@ -40,6 +41,35 @@
         { "source": "DataCamp — Gemini 4 Argon", "url": "https://www.datacamp.com/blog/gemini-4-argon", "take": "Technical overview with the originating Sep 30 cyber-defender preview timeline. Includes the vendor-reported benchmark table: GPT-6 Astra beats Argon on FrontierSWE v2 and Terminal-Bench Science 0.1; Argon beats on DeepSWE v1.1, Vibe Code Bench, GraphWalks 256K-1M, LVBench. The output-token limit expansion from 64K is positioned as the enabling change for long-horizon reasoning." },
         { "source": "VKTR — Google debuts Gemini 4 Argon for cyber defenders", "url": "https://www.vktr.com/ai-news/google-debuts-gemini-4-argon-for-cyber-defenders/", "take": "September 30 originating announcement coverage — Argon was first launched for vetted cyber defenders only, with public enterprise access expanding after feedback and guardrail iteration. The three-stage rollout (Sep 30 cyber-defender preview → Oct 13-14 general availability → this week's benchmark data) is the arc the enterprise coverage is now consolidating." },
         { "source": "Vals.ai — Gemini 4 Argon model page (Vals Index v1)", "url": "https://www.vals.ai/models/google_gemini-4-argon", "take": "First independent cross-model third-party score for Argon: #1 of 41 on the overall Vals Index at 68.90% ($15.68 per test), ahead of Claude Sonnet 5.5 (67.04%) and Claude Opus 5.5 (66.97%). Argon #1 on Finance Agent v2 (65.40%) and tied #1 on IOI (100%); #2 on Vibe Code Bench (91.91%) and #2 on Code Migration — both behind Claude Sonnet 5.5. One roundup notes Argon lands in the top five on 20 of the 22 benchmarks Vals ran. Page is dated Sep 30 2026 (originating cyber-defender preview window) but is the published non-vendor leaderboard entry that this week's enterprise coverage has been pointing at for independent verification." }
+      ]
+    },
+    {
+      "id": "reflection-ai-beam-weights-oct-16",
+      "tier": 1,
+      "title": "Reflection AI releases Beam weights on Hugging Face under Apache 2.0 — 501B MoE, 23B active, BF16/FP8/NVFP4 checkpoints available",
+      "summary": "Reflection AI released the weights for Beam, its first open-weight model, on Hugging Face on October 16, 2026. The model is a 501B-parameter sparse mixture-of-experts with 23B active parameters per token, trained on 23.8 trillion tokens, built for coding and agentic workloads. Weights ship in BF16, FP8, and NVFP4 formats alongside a speculative decoding drafter; the full BF16 checkpoint runs around 1 TB and a 4-bit version brings that to roughly 250 GB. Vendor-reported benchmark figures: 44.4 on DeepSWE v1.1 (trailing Kimi K3's 68.0 and Inkling's 74.2), 80.9 on SWE-bench Verified, and 80.1 on Terminal Bench v2.1. Artificial Analysis independently rates it at 30 on its Intelligence Index, placing it #19 of 120 models — solid mid-tier but not near the frontier coding leaders. The release resolves a gap between Reflection's October 5 model announcement and the actual downloadable weights; the enrichment run this morning had incorrectly marked weights as still pending based on prior coverage.",
+      "link": "https://reflection.ai/blog/beam-is-available",
+      "why_it_matters": "The 'announced Oct 5, weights Oct 16' gap tells you something about how the open-weight frontier actually ships: the announcement creates the buzz, the weights are what the benchmarks and the community need, and there's often a two-week delay. Anyone building with Reflection's API was already getting Beam's outputs — the Oct 16 release unlocks private deployment, fine-tuning, and running without an API dependency. The Apache 2.0 license is the headline here: no commercial restriction, no usage policy negotiation, same license as most open-source tooling Gabe already uses. The benchmark numbers tell you where it actually sits: 44.4 on DeepSWE v1.1 is meaningfully below Kimi K3's 68.0 and Inkling's 74.2 — two models not widely covered but apparently scoring higher on that benchmark. Beam's SWE-bench Verified score of 80.9 is competitive but those figures shift fast as more providers submit. Artificial Analysis puts it at #19 of 120 overall, which is a useful sanity check against the launch-week hype. For a hobbyist Python context, the hardware bar is real: 250 GB at 4-bit needs at minimum a serious GPU rig to self-host. The more immediate path for Gabe is via hosted APIs on OpenRouter and similar, where Beam should be appearing this week.",
+      "why_it_matters_brief": "Reflection AI's 501B MoE is now downloadable Apache 2.0 — DeepSWE v1.1 at 44.4 puts it behind current open-weight coding leaders, but the license is clean and Hugging Face weights are live.",
+      "source": {
+        "name": "Reflection AI",
+        "type": "scrape",
+        "url": "https://reflection.ai/blog/beam-is-available"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-18T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-18T11:00:00Z", "by": "refresh", "change": "created — Reflection AI Beam weights released Oct 16, 2026 under Apache 2.0 on Hugging Face. 501B total / 23B active MoE, 23.8T token pretraining. BF16/FP8/NVFP4 + speculative decoding drafter. Vendor-reported: DeepSWE v1.1 44.4, SWE-bench Verified 80.9, Terminal Bench v2.1 80.1. Artificial Analysis: 30 on Intelligence Index, #19/120. Missed by enrichment run (06:30Z Oct 18) which had noted weights still pending based on pre-Oct-16 coverage; Unite.ai and SiliconAngle both confirm Oct 16 Hugging Face release." }
+      ],
+      "takes": [
+        { "source": "Unite.ai — Reflection Releases Beam's Open Weights Under Apache 2.0 License", "url": "https://www.unite.ai/reflection-releases-beams-open-weights-under-apache-2-0-license/", "take": "Confirms Oct 16 Apache 2.0 weight release. Notes BF16, FP8, and NVFP4 formats plus speculative decoding drafter. Reports 23.8T token pretraining. Artificial Analysis Intelligence Index score of 30, ranked #19 of 120 models." },
+        { "source": "Reflection AI Blog — Beam is Available", "url": "https://reflection.ai/blog/beam-is-available", "take": "Primary source. Apache 2.0 weights on Hugging Face alongside the Beam API; includes the vendor benchmark table." },
+        { "source": "DataCamp — Reflection AI Beam", "url": "https://www.datacamp.com/blog/reflection-ai-beam", "take": "Technical overview; 501B total / 23B active MoE architecture and the full benchmark table including DeepSWE v1.1 (44.4), SWE-bench Verified (80.9), and Terminal Bench v2.1 (80.1) figures." }
       ]
     }
   ],
