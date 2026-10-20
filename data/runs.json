@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-20T17:12:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-20T17:00:00Z",
+      "ended_at": "2026-10-20T17:12:00Z",
+      "wall_time_ms": 720000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 15000,
+        "curation": 6000,
+        "output_write": 600
+      },
+      "fetches_made": 16,
+      "items_input": 2,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-20-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path on a quiet Tuesday-afternoon window — 2026-10-20T11:35Z-to-17:00Z. Today's am (2026-10-20-am.json) had 1 Tier-1 item: MiniMax M3.1 Flash with the 'full public launch is contested, access is MiniMax-Code-only preview, open weights unverified' overnight framing. Pm window ran ~16 WebSearch queries across Anthropic / OpenAI / Google DeepMind / Meta / Mistral / xAI, MiniMax M3.1 Flash follow-ups, Mistral Large 4 open-weight status, GitHub Universe prep, Hugging Face recent releases, DeepSeek V4.1 Flash, Thinking Machines Lab Inkling, Techmeme and Hacker News, LangChain/LlamaIndex release windows, Alibaba Qwen late-October, Reflection AI Beam. Key findings: (1) No credible Tier-1 announcement from the Oct 19-20 pm window. (2) No material MiniMax M3.1 Flash deepening beyond the am's coverage — Simon Willison blog unreachable from this run's environment (DNS ENOTFOUND for simonwillison.net, repeated across runs), no new Hacker News front-page thread surfaced, no corroborating independent benchmark anchor beyond ModelDial and Artificial Analysis which the am already catalogs. (3) Mistral Large 4 open weights still due end of October / ~Oct 27 per third-party sources, no overnight update. (4) GitHub Universe Oct 28-29 remains pre-event. (5) Thinking Machines Lab Inkling (975B / 41B active MoE, Apache 2.0) released July 15 — well outside window, not a pm story. (6) The one Tier-2-worthy pm anchor: DeepSeek V4.1 Flash-1017 parameter-count discrepancy. V4.1 Flash is the Chinese open-weight baseline the am's MiniMax M3.1 Flash launch numbers keep referencing (Automation-Bench 62.2 vs V4.1 Flash-1017 60.5; DeepSWE v1.1 73.7 vs V4.1 Flash-1017 77.0). Third-party aggregators (Requesty, Gradually.ai, GetDeploying, DataLearner) list it as 552B total / 16B active, but Neura News reports Hugging Face safetensors show ~748.5B for backbone + engram and ~763B including MTP + vision, and references a Reddit thread arguing the real total is 748B not 552B. Checkpoint size figures split: ~314 GB at 4-bit (one aggregator) vs ~511.76 GB (Neura News). Gateway pricing splits 2-4x: Requesty $0.30/$1.20 per M input/output; another aggregator $0.15/$0.60 off-peak; a third $0.22/$0.66. MIT license and Hugging Face publication are the single consistent facts. Written up as a Tier-2 'what has actually shipped' companion to the am's preview-vs-launch MiniMax framing — the practical read for Gabe is model-card hygiene: pull safetensors metadata before trusting an aggregator's parameter count, and verify per-token prices across gateways before scripting. 6 takes[] entries (Neura News, Requesty, Gradually.ai, GetDeploying, DataLearner, Artificial Analysis). No AM item promoted — MiniMax M3.1 Flash did not materially deepen during the pm window. Specifically scanned and skipped: Anthropic / OpenAI / Google DeepMind / Meta / xAI Grok (no new Oct 19-20 lab announcements); Mistral Large 4 (open weights still Oct 27 under custom license, no update); Reflection AI Beam (no new overnight hook, prior-week coverage still current); Alibaba Qwen (no late-October 2026 release surfaced); Thinking Machines Lab Inkling (July 15, outside window); LangChain / LlamaIndex (no October 2026 release surfaced); GitHub Copilot (no new feature dated Oct 19-20); Simon Willison / Karpathy / Matt Pocock (no new posts in window; DNS to primary sources failed). hero_image set to null — DNS to huggingface.co, deepseek.com, artificialanalysis.ai, benchlm.ai, neura.market all failed from this run's environment. 1 item is on the smaller end but matches the quiet-weekday-pm cadence (Oct 19-pm 1, Oct 18-pm 1, Oct 17-pm 1, Oct 16-pm 2, Oct 15-pm 2, Oct 14-pm 2, Oct 13-pm 1). Final tier_counts: {1:0, 2:1, 3:0}."
+    },
+    {
       "run_id": "2026-10-20T11:35:00Z-refresh",
       "phase": "refresh",
       "status": "success",
