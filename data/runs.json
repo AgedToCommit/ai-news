@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-20T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-20T06:00:00Z",
+      "ended_at": "2026-10-20T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 7200,
+        "output_write": 400
+      },
+      "fetches_made": 7,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-20-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase on a quiet Monday-overnight window. Yesterday's pm (2026-10-19-pm.json) had 1 T1 item: MiniMax M3.1 Flash full public launch. Kept + enriched with sharper access-status and open-weight nuance. Key overnight reads: (1) Four separate third-party technical references (eesel.ai across six language variants, CometAPI, Gradually.ai, OrcaRouter) all still describe M3.1 Flash as preview-only — model ID MiniMax-M3.1-Flash-Preview, access via MiniMax Agent / MiniMax Code and the Token Plan rather than standard pay-as-you-go, reasoning not switchable off; the $0.15/$0.60 pricing is on BenchLM/MarkTechPost but not on a MiniMax-hosted pricing page any of these references can point at. The MarkTechPost 'full public launch' framing is contested by the technical refs. (2) OrcaRouter reports MiniMaxAI Hugging Face organization returns 401 for MiniMax-M3.1 and preview variants; most recent public uploads are MiniMax-Music3 and MiniMax-H3; a 250 GB MiniMax-M3.1-preview-private checkpoint is referenced but is leak-based, not a confirmed public release. Pasquale Pillitteri Oct 23 open-weight date remains vendor-adjacent, no MiniMax confirmation overnight. (3) New independent anchor: ModelDial scored M3.1-Flash-Preview 75/100 backend and 57/100 frontend at maximum reasoning effort — private tasks, 'scores describe those tasks only', a second third-party read alongside Artificial Analysis's Intelligence Index 42. Added three takes[] entries: eesel.ai (access/model-ID), Gradually.ai (ModelDial scores), OrcaRouter (Hugging Face 401 + leaked checkpoint note). Title rewritten to foreground preview/launch nuance; new why_it_matters_brief. Late-breaking pass: ~7 WebSearch queries across major labs Anthropic/OpenAI/Google DeepMind/Meta/Mistral/xAI, Reflection Beam follow-ups, Mistral Large 4 open-weight status, GitHub Universe prep, Simon Willison, Techmeme/Hacker News. No credible Tier-1 announcement from the Oct 19-20 overnight 12-hour window surfaced. Specifically scanned and skipped: Mistral Large 4 (weights still due ~Oct 27 under custom license, no overnight update); GitHub Universe (Oct 28-29 pre-event, no announcements landed yet); Reflection AI Beam (no new overnight hook — yesterday am's open-weight landscape framing still current, no new Epoch/Artificial Analysis published eval); DeepSeek / Alibaba Qwen (no overnight update); Anthropic / OpenAI / Google DeepMind / Meta / xAI Grok (no new overnight items from the 12h window); Simon Willison (no fresh post on M3.1 Flash or Beam). DNS reachability continues to be inconsistent for direct WebFetch to primary sources — relied on WebSearch summaries across queries; no WebFetch calls attempted. 0 late-breaking items added — morning file begins at 1 item; 7am refresh will have room to add 1-3 overnight-cycle items if anything materializes in the remaining Asia/Europe window."
+    },
+    {
       "run_id": "2026-10-19T17:08:00Z-digest",
       "phase": "digest",
       "status": "success",
