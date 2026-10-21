@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-21T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-21T06:19:00Z",
+      "ended_at": "2026-10-21T06:35:00Z",
+      "wall_time_ms": 960000,
+      "tokens_used": 18500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 300,
+        "deep_fetch": 0,
+        "discovery_search": 11000,
+        "curation": 6500,
+        "output_write": 700
+      },
+      "fetches_made": 7,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-21-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment path on a quiet overnight window. Yesterday's pm (2026-10-20-pm) carried a single Tier-2 item: DeepSeek V4.1 Flash-1017 parameter-count discrepancy. Overnight ran 7 WebSearch queries — 1 on the DeepSeek parameter breakdown, 6 covering late-breaking Tier-1 sources (Anthropic/OpenAI/Google DeepMind/Meta/Mistral/Alibaba Qwen) and a Hugging Face / general AI-release sweep. Key finding on the enrichment: the 552B-vs-748B figure resolves to a layered architecture — getmaxim.ai explicitly describes a 552B MoE backbone with a ~200B n-gram component on top (552B + ~200B ≈ 748B, matching Neura News safetensors), and pasqualepillitteri.it (DE) corroborates 748B total with a 512 GB unified-memory full-quality threshold. The 763B figure in the Hugging Face card is the V4.1-Flash-1017 revision which adds vision + MTP on top of the 748B base; aiweekly.co (FR) confirms 763B MIT with 42.6 HLE no-tools. Updated the item summary, why_it_matters, and why_it_matters_brief around the resolved framing; added two sources to takes[] (getmaxim.ai, pasqualepillitteri.it, aiweekly.co). Late-breaking pass added 0 items — strict 12-hour window from 2026-10-20T18:00Z surfaced nothing from Anthropic, OpenAI, DeepMind, Meta, Mistral, or Alibaba Qwen. Mistral Large 4 open-weights release confirmed for Oct 27 but outside the window. GitHub Universe 2026 Oct 28-29 schedule out but event is still pre-conference. Hugging Face DeepSeek-V4-Flash-Vision-Exp dates to August 31, well outside window. No DNS access to deepseek.com or huggingface.co directly from this run; all enrichment relied on WebSearch summaries. hero_image remained null for the carried item."
+    },
+    {
       "run_id": "2026-10-20T17:12:00Z-digest",
       "phase": "digest",
       "status": "success",
