@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-22T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-22T06:19:00Z",
+      "ended_at": "2026-10-22T06:35:00Z",
+      "wall_time_ms": 960000,
+      "tokens_used": 23000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 300,
+        "deep_fetch": 0,
+        "discovery_search": 15500,
+        "curation": 6500,
+        "output_write": 700
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-22-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment path on yesterday's pm which carried 3 items: Tier-1 Mistral Large 4 preview, Tier-2 Cloudflare Clairic, Tier-2 Inception Mercury 3. Ran 8 WebSearch queries total: 3 focused per-item deepening queries + 1 late-breaking Tier-1 sweep across Anthropic / OpenAI / Google DeepMind / Meta / xAI / Mistral + 1 Mistral Hugging Face check + 1 'Oct 21-22 2026' lab-release scan + 1 Hugging Face trending check + 1 Simon Willison late-October coverage check. Key enrichment findings: (1) Mistral Large 4 — official docs now list placeholder Hugging Face repo mistralai/Mistral-Large-4-1T-A52B tagged 'Coming soon,' which resolves the active-parameter conflict (official is 52B, not the 49B from the launch post which has been quietly updated); license text still not published as of Oct 22; five days to the Oct 27 open-weights drop. Updated summary, why_it_matters, brief, primary link (now docs.mistral.ai), added takes[] entries for docs.mistral.ai, lindy.ai, and letsdatascience. (2) Cloudflare Clairic — three days post-launch, no independent benchmark replication; added the trap-flag that the Clef/Clef-flash benchmark tables (BFCL, API-Bank, BANKING77, PhishNChips vs Jev/Laya) belong to the Oct 1 decision-model release, not Clairic, and conflating them is a common search mistake; added takes[] entries for zeli.app and orcarouter.ai (Clef reference). (3) Inception Mercury 3 — three days post-launch, still single-source: Unite.AI original + AlphaSignal + Inception blog; the apparent coverage sprawl is Unite.AI's own 9 non-English editions (IT, PT, DE, DA, RO, PL, NL, FR, ES), not independent corroboration. Mind2Web step budget still undisclosed. Added take[] entry for ecosistemastartup.com (ES edition note). Late-breaking pass: 0 items added. Strict 12-hour window from 2026-10-21T18:19Z (one hour after digest end) surfaced no confirmed Oct 21-22 model announcement from Anthropic, OpenAI, DeepMind, Meta, Mistral, or xAI. Prediction markets listed Grok 4.8 and Meta Muse Spark 1.4 as October possibilities, but those are odds not announcements. GitHub Universe Oct 28-29 remains pre-event. Mistral Large 4 weights still Oct 27. All 3 items set hero_image: null, DNS to mistral.ai, cloudflare.com, unite.ai still unreachable from this run's environment — relied on WebSearch summaries throughout."
+    },
+    {
       "run_id": "2026-10-21T17:00:00Z-digest",
       "phase": "digest",
       "status": "success",
