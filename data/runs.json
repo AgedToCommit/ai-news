@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-22T17:09:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-22T17:09:00Z",
+      "ended_at": "2026-10-22T17:24:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 40000,
+        "curation": 6500,
+        "output_write": 1000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-22-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-22-am.json present with 5 items (Claude Duet, Mistral Large 4, Mistral Voxtral 3, Cloudflare Clairic, Inception Mercury 3) — all excluded from pm per promotion rule, no promotions warranted (nothing has materially deepened in the 5-6 hours since refresh). Swept Oct 20-22 window via 10 WebSearch queries (DNS to all primary sources — openai.com, anthropic.com, deepseek.com, nvidia.com, elevenlabs.io, cloud.google.com — unreachable from this environment, continuing pattern). Candidate pool (8): (1) OpenAI 12-hour prompt caching, Oct 20; (2) Google Cloud + OpenAI Model Garden private preview, Oct 21; (3) DeepSeek DeepInfer open-source inference engine, Oct 20; (4) NVIDIA OpenShell Reference Architecture + Anthropic 'Claude OpenShell' partnership at GTC Berlin, Oct 21; (5) ElevenLabs Eleven Realtime v1 Mini/Max, Oct 20; (6) NVIDIA DSX POD containerized AI-factory, Oct 21; (7) NVIDIA Agile ONE SN humanoid; (8) NVIDIA Microduck training robots. Final 5 after tier ranking: Tier 1 — DeepSeek DeepInfer (major open-source inference stack with first-class Huawei Ascend support), Google Cloud + OpenAI Model Garden (first direct rival carrying flagship closed-source models with Marketplace billing). Tier 2 — OpenAI 12-hour prompt caching (API primitive for persistent agents, strong Python/dev relevance), NVIDIA OpenShell Reference Architecture + Anthropic partnership (shared agent-sandboxing stack across major labs), ElevenLabs Eleven Realtime (companion to Voxtral 3 with OpenAI-Realtime-protocol wire compatibility — different deployment shape worth including). Dropped: DSX POD, Agile ONE SN, Microduck (Tier 3 hardware; not core AI relevance for Gabe this cycle). Reflection AI Beam already covered in Oct 18 snapshots so not re-included. All items hero_image: null per continuing DNS pattern — relied on WebSearch summaries for every item. 90-day runs.json cleanup deferred (file size)."
+    },
+    {
       "run_id": "2026-10-22T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
