@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-22T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-22T11:00:00Z",
+      "ended_at": "2026-10-22T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 400,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 2100,
+        "output_write": 500
+      },
+      "fetches_made": 5,
+      "items_input": 4,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: control.paused=false, refresh enabled, 2026-10-22-am.json exists with 3 items from enrichment (ended_at 2026-10-22T06:35:00Z). Swept since 06:35Z via 5 WebSearch queries total (DNS unreachable pattern continues). Found 2 items not yet in any snapshot: (1) Tier 1 — Anthropic Claude Duet research preview, announced Oct 21, a proactive personal AI agent built on Opus 5.5 competing with Meta Muse and OpenAI Dots; covered by CNBC, 9to5Google, Engadget, MacRumors, Digital Trends; US-only waitlist for Pro/Max subscribers. (2) Tier 2 — Mistral Voxtral 3 voice agent SDK, announced Oct 20, chains STT → reasoning → tool calls → TTS in one streaming call, 50+ languages, $0.0035/min transcription, EU-hosted. Both items predated the strict 5-hour window (06:35Z) but were not present in any prior snapshot; enrichment's strict Oct 21 18:19Z window missed Claude Duet (announced Oct 21, likely prior to or concurrent with enrichment sweep) and Voxtral 3 (Oct 20, explicitly before the enrichment window). Added both as refresh items with enriched_overnight: true. Hero images null for both per continuing DNS pattern. Items_input=4 reflects the candidate pool evaluated (Claude Duet, Voxtral 3, Bloomberg AI hacking story, EU publishers vs Meta); items_added=2 after tier ranking and quality check. Bloomberg hacking story unverifiable against primary sources; EU publishers story is regulatory/policy without strong Tier 1-2 signal for Gabe. 90-day runs.json cleanup deferred (file too large to fully read in one pass)."
+    },
+    {
       "run_id": "2026-10-22T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

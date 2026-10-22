@@ -2,13 +2,45 @@
   "snapshot_id": "2026-10-22-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-22",
-  "generated_at": "2026-10-22T06:35:00Z",
-  "generated_at_local": "2026-10-22T02:35:00-04:00",
+  "generated_at": "2026-10-22T11:30:00Z",
+  "generated_at_local": "2026-10-22T07:30:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-10-22T06:19:00Z", "duration_ms": 960000 }
+    { "phase": "enrichment", "ran_at": "2026-10-22T06:19:00Z", "duration_ms": 960000 },
+    { "phase": "refresh",    "ran_at": "2026-10-22T11:00:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 1, "2": 2, "3": 0 },
+  "tier_counts": { "1": 2, "2": 3, "3": 0 },
   "items": [
+    {
+      "id": "anthropic-claude-duet-agent",
+      "tier": 1,
+      "title": "Anthropic announces Claude Duet — a proactive personal AI agent built on Opus 5.5 that works while you're away",
+      "summary": "Anthropic announced a research preview of Claude Duet on October 21, 2026, positioning it directly against Meta Muse and OpenAI Dots. Each morning it scans connected apps and sends a brief on today's priorities; it can then schedule meetings, build dashboards, prepare financial or sales forecasts, draft follow-up emails, and work on web apps — all in its own sandboxed virtual machine and browser so tasks keep running even when your computer is off. It requests approval before high-risk actions. The preview is US-only, limited to Claude Pro and Max subscribers via a waitlist across iOS, Android, and web. Anthropic acknowledges current limitations: it can misread a thread, misjudge urgency, or miss an update that arrives between check-ins.",
+      "link": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+      "why_it_matters": "Claude Duet marks Anthropic's move from chat product to background-process product — the architecture shift that Meta and OpenAI already made this year. For Gabe's Python side, the most useful angle is how Anthropic has built the permission model: the agent runs in a sandboxed VM and browser so it can interact with real services (email, calendar, web) without those services needing special AI hooks, and it asks for explicit approval before anything that can't be undone. That pattern — agentic task execution with a human-in-the-loop gate for high-stakes actions — is the template that anyone writing Python agents calling external APIs should be thinking through. The 'morning brief on priorities across connected apps' feature is the clearest look yet at how proactive agents work in practice: not waiting to be asked, but deciding what you probably need to know. Practical caveat: it's waitlisted, US-only, and Anthropic itself flags that it can misread context or miss updates between check-ins. A useful item to watch: does the sandboxed VM approach hold up to third-party scrutiny once researchers get access.",
+      "why_it_matters_brief": "Claude Duet is Anthropic's first personal AI agent — proactive, sandboxed VM+browser, competing with Meta Muse and OpenAI Dots, waitlisted now for US Pro/Max users.",
+      "source": {
+        "name": "CNBC / 9to5Google / Engadget / MacRumors",
+        "type": "scrape",
+        "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-22T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-22T11:00:00Z", "by": "refresh", "change": "created — Anthropic research preview announced Oct 21 2026. Proactive personal AI agent on Opus 5.5, sandboxed VM+browser, morning brief and background task execution (meetings, dashboards, forecasts, email, web apps). Approval-gated on high-risk actions. US-only waitlist for Pro/Max subscribers on iOS/Android/web. Competing with Meta Muse and OpenAI Dots. Covered by CNBC, 9to5Google, Engadget, MacRumors, Digital Trends. Item dated Oct 21; missed by enrichment sweep (strict window from 2026-10-21T18:19Z surfaced nothing from major labs per prior enrichment notes). DNS to anthropic.com unreachable; relied on WebSearch summaries across second-party coverage. hero_image null." }
+      ],
+      "takes": [
+        { "source": "CNBC — Anthropic announces preview of Claude Duet, a personal AI agent", "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html", "take": "CNBC primary coverage. Positions Claude Duet against Meta Muse (less than two months old) and OpenAI Dots from DevDay. Notes the waitlist and the Pro/Max-only restriction." },
+        { "source": "9to5Google — Claude Duet is Anthropic's proactive AI agent", "url": "https://9to5google.com/2026/10/21/claude-duet-anthropic-ai-agent-waitlist/", "take": "Confirms the waitlist mechanics and the research-preview framing. Notes iOS and Android availability in addition to web." },
+        { "source": "Engadget — Claude Duet is Anthropic's answer to Meta Muse and OpenAI Dots", "url": "https://www.engadget.com/2293646/claude-duet-is-anthropics-answer-to-meta-muse-and-openai-dots/", "take": "Clearest framing of the competitive context: all three major proactive-agent products (Muse, Dots, Duet) arrived in roughly a two-month window in late 2026." },
+        { "source": "MacRumors — Anthropic Launches Claude Duet, a Proactive AI Agent", "url": "https://www.macrumors.com/2026/10/21/anthropic-claude-duet/", "take": "Coverage emphasizing the sandboxed VM and browser setup — tasks can complete even when the user's device is off." },
+        { "source": "shattered.io — Claude Duet: Anthropic's Agent Runs on Opus 5.5", "url": "https://shattered.io/claude-duet-anthropic-ai-agent-opus-5-5-2026/", "take": "Technical detail on the Opus 5.5 backing and the approval-gate design for high-risk actions. Notes the research-preview limitations Anthropic acknowledged (thread misreads, urgency misjudgments)." }
+      ]
+    },
     {
       "id": "mistral-large-4-preview-oct-27-weights",
       "tier": 1,
@@ -43,6 +75,37 @@
         { "source": "Simon Willison — Le Chonk", "url": "https://simonwillison.net/2026/oct/6/le-chonk/", "take": "Noted the reasoning-effort limitation on the API ('none' or 'high' only, no middle setting) and the general framing. Simon's branding for Large 4 as 'Le Chonk' has stuck in the follow-on coverage." },
         { "source": "eesel.ai — Mistral Large 4 review: a real jump that still lands mid-pack", "url": "https://www.eesel.ai/blog/mistral-large-4-review", "take": "The adversarial read on the AA Intelligence Index jump: 4.1x score increase came with 12.5x more output tokens per task and the AA index cost rising from $46 to $1,602. Also surfaces the active-parameter conflict (52B card vs 49B launch post) and the context-window conflict (1M card vs 524K AA)." },
         { "source": "Artificial Analysis — Mistral Large 4 Preview page", "url": "https://artificialanalysis.ai/models/mistral-large-4", "take": "Third-party benchmark anchor for the Intelligence Index 38 figure and the current 524K context-window reading. Will be the first page to update with the Oct 27 release's final numbers." }
+      ]
+    },
+    {
+      "id": "mistral-voxtral-3-voice-agent-sdk",
+      "tier": 2,
+      "title": "Mistral releases Voxtral 3 — a voice agent SDK covering 50+ languages, with transcription from $0.0035/min",
+      "summary": "Mistral released Voxtral 3 on October 20, 2026 — a family of speech models and a voice agent SDK for building real-time voice pipelines. The package includes Voxtral Small Transcribe 3 (24B) and Voxtral Mini Transcribe 3 (3B), a speech synthesis model, and a realtime streaming model. Transcription covers 50+ languages at $0.0035–$0.008 per minute; speech synthesis covers 35+ languages and 50 dialects at $13 per million characters. The SDK chains the steps — listening, reasoning, tool calling, and speaking — in one continuous streaming pipeline without separate round-trips per step. Mistral says its transcription models beat Whisper large-v3 on word error rate across 45 languages in FLEURS tests; this is a vendor-reported benchmark with no independent replication yet. The models run on Mistral's EU-hosted API, on customer infrastructure, and on OpenRouter. License terms for Voxtral 3 were not confirmed in available secondary coverage; the original July 2025 Voxtral (24B/3B Apache 2.0) predates this release.",
+      "link": "https://www.testingcatalog.com/mistral-launches-voxtral-3-with-a-voice-agent-sdk/",
+      "why_it_matters": "For Gabe's Python work, the practical addition here is the SDK pipeline pattern: one streaming call that routes voice input through reasoning and tool calls and back out to speech, without having to hand-wire a separate STT → LLM → TTS chain yourself. Libraries like pipecat or LiveKit Agents already offer this pattern on top of OpenAI or Deepgram, but Voxtral 3 is Mistral's attempt to own the whole stack under one API call. The transcription pricing ($0.0035/min) is notably cheaper than OpenAI's Whisper ($0.006/min), and Mistral's FLEURS word-error-rate claim versus Whisper large-v3 is the kind of benchmark worth testing on your own audio before trusting. The EU-only hosting is a real constraint if you're building US-market apps, but it's the right choice for European-market projects where data-residency matters. One practical snag: the SDK's streaming architecture means you'll need to handle mid-utterance interruptions and turn-taking yourself — the model handles the pipeline but not the conversational state machine. Worth picking up the testingcatalog walkthrough to see what a minimal example actually looks like before committing.",
+      "why_it_matters_brief": "Mistral's Voxtral 3 chains STT → reasoning → tool calls → speech in one streaming call — $0.0035/min transcription, EU-hosted, 50+ languages, vendor claims beat Whisper large-v3.",
+      "source": {
+        "name": "testingcatalog.com / KuCoin News / dutchstartup.ai",
+        "type": "scrape",
+        "url": "https://www.testingcatalog.com/mistral-launches-voxtral-3-with-a-voice-agent-sdk/"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-10-22T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-22T11:00:00Z", "by": "refresh", "change": "created — Mistral Voxtral 3 announced Oct 20 2026 (some outlets date to Oct 21). Family includes Voxtral Small Transcribe 3 (24B), Voxtral Mini Transcribe 3 (3B), a speech synthesis model, and a realtime streaming model. SDK chains STT → reasoning → tool calling → TTS in one streaming pipeline. Transcription: 50+ languages, $0.0035–$0.008/min. TTS: 35+ languages / 50 dialects, $13/million chars. Available on Mistral EU-hosted API, self-hosted, and OpenRouter. Vendor claim: beats Whisper large-v3 on FLEURS across 45 languages — no independent replication yet. Oct 20 predates enrichment's 2026-10-21T18:19Z sweep window, so missed by prior runs. DNS to mistral.ai unreachable; relied on WebSearch summaries across multiple aggregator sources. hero_image null." }
+      ],
+      "takes": [
+        { "source": "testingcatalog — Mistral launches Voxtral 3 with a voice agent SDK", "url": "https://www.testingcatalog.com/mistral-launches-voxtral-3-with-a-voice-agent-sdk/", "take": "Primary secondary coverage with SDK architecture details. Describes the one-streaming-pipeline approach (listen → reason → tool call → speak) and positions it against separately-chained STT/TTS stacks." },
+        { "source": "KuCoin News — Mistral AI Launches Voxtral 3 SDK Supporting 50+ Languages", "url": "https://www.kucoin.com/news/flash/mistral-ai-launches-voxtral-3-sdk-supporting-50-languages", "take": "Anchor for the language count (50+ for transcription, 35+ for TTS) and pricing ($0.0035/min for transcription, $13/million chars for speech)." },
+        { "source": "dutchstartup.ai — Mistral AI launches Voxtral 3, a suite of speech models for real-time voice agents", "url": "https://www.dutchstartup.ai/en/news/mistral-ai-launches-voxtral-3-a-suite-of-speech-models-for-real-time-voice", "take": "EU-focused framing on deployment. Confirms EU-hosted API as the primary deployment path and notes the self-hosted option for infrastructure that requires data residency." },
+        { "source": "superpowerdaily — Mistral releases Voxtral 3 to connect live voice conversations with business tools", "url": "https://superpowerdaily.com/posts/mistral-releases-voxtral-3-to-connect-live-voice-conversations-with-business-tools", "take": "Use-case framing: voice queries routed through tool calls to business backends (CRM, scheduling, lookup). Confirms availability on OpenRouter in addition to Mistral's own API." },
+        { "source": "shattered.io — Mistral Voxtral 3: Speech AI Hits $0.0035/Min", "url": "https://shattered.io/mistral-voxtral-3-speech-ai-pricing-2026/", "take": "Pricing breakdown and comparison against OpenAI Whisper ($0.006/min). Notes the vendor FLEURS benchmark claim and that no third-party WER test has been published yet." }
       ]
     },
     {
