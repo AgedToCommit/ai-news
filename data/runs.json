@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-23T11:25:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-23T11:00:00Z",
+      "ended_at": "2026-10-23T11:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 44000,
+        "curation": 6500,
+        "output_write": 1000
+      },
+      "fetches_made": 8,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-23-am",
+      "fallback_did_enrichment": true,
+      "error": null,
+      "partial": false,
+      "notes": "Resilience fallback — 2am enrichment did not produce 2026-10-23-am.json, so refresh ran both enrichment and refresh in one combined run. Pre-flight: control.paused=false, refresh enabled. Input: 5 items from 2026-10-22-pm.json (DeepSeek DeepInfer, OpenAI on Google Cloud, OpenAI 12h prompt caching, NVIDIA OpenShell/Claude Managed Agents, ElevenLabs Eleven Realtime). All 5 items kept and enriched: (1) DeepSeek DeepInfer — minor: added V4.1-Flash-1017 version name, corrected lineage to vLLM+SGLang+TRT-LLM, added missing components list from README; (2) OpenAI on Google Cloud — moderate: added Codex CLI/Desktop routing, Google's 'all three closed-source families' claim with AWS/Microsoft September GA caveat, Gemini for Business/Antigravity coming-soon integrations; (3) OpenAI 12h caching — minor: clarified '12h' is minimum lifetime not hard deadline, updated conflicting read-rate caveat; (4) NVIDIA OpenShell — significant: corrected to Sep 28 2026 original announcement, Anthropic blog URL as canonical, product name is 'Claude Managed Agents' (not Claude OpenShell agents), model-agnostic/harness-agnostic detail, compatible tools list; (5) ElevenLabs — significant: added full Artificial Analysis benchmark suite (Mini BBaudio 75.9%, FDB Mini 95.8%/Max 94.1%, Arena Max 998/Mini 988, tool-use Max 87.1%/Mini 60.3%), Deepgram pipeline-vs-model-inference latency caveat. Late-breaking pass (last 12h): no Tier-1 new releases confirmed for Oct 22-23 overnight window; one candidate (Verus-Insight 8B video artifact model) lacked sufficient sourcing for a proper item. Refresh pass (last 5h): nothing found. Items added: 0. DNS to primary lab sites continues to be unreachable; relied on WebSearch summaries throughout."
+    },
+    {
       "run_id": "2026-10-22T17:09:00Z-digest",
       "phase": "digest",
       "status": "success",
