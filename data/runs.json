@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-23T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-23T17:12:00Z",
+      "ended_at": "2026-10-23T17:30:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 44000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 6500,
+        "output_write": 1000
+      },
+      "fetches_made": 12,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-23-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-23-am.json present with 5 items (DeepSeek DeepInfer, Google Cloud + OpenAI, OpenAI 12h prompt caching, NVIDIA OpenShell / Claude Managed Agents, ElevenLabs Eleven Realtime) — all excluded from pm per promotion rule default. Direct HTTPS to curl via proxy returned 403 for RSS feeds (simonwillison.net, importai.substack.com, blog.langchain.dev) and WebFetch returned DNS ENOTFOUND on theneuron.ai and aiweekly.co — same pattern as prior runs. Relied on WebSearch (12 queries) + search-snippet synthesis throughout. Candidate pool: (1) DeepSeek ~100B yuan funding round closing Oct 22 [included, Tier 1]; (2) Microsoft Storm-0940 / ARTEX agentic pentest in ConnectWise supply-chain compromise, Oct 21 Microsoft Security Blog [included, Tier 2]; (3) Nick Cammarata/Goodfire 'Neural Networks Are Already Clean' Qwen3-32B interpretability essay, Oct 15 with Oct 22-23 secondary-coverage wave [included, Tier 2 — essay predates last run but was not in prior snapshots and is cycling now]; (4) Microsoft diagnostic AI outperforming physicians [excluded — turned out to be June 2025 MAI-DxO story, not new]; (5) Meta ~$825B AI commitments filing [excluded — could not corroborate the $825B figure against primary sources; only ~$600B 2025 figure confirmed]; (6) Verus-Insight 8B AI-video-artifact-detection model [excluded — name unverifiable; closest match is Artifact-Bench paper arXiv:2605.18984 from May 2026, which is not an 8B model and is 5+ months old]; (7) Treasury rule expanding AI/supercomputing investment restrictions [excluded — could not corroborate as fresh Oct 2026 rule; only 2024 outbound-investment rule confirmed]; (8) Axios banks containing third-party AI agents risk [excluded — tier-3 industry-watch; low signal for Gabe's stack]. Tier counts {1:1, 2:2, 3:0}, item count 3. Lower volume than the am (which had 5 enriched carry-overs); honest reflection of a quiet news day between Oct 20-21 lab announcements and the next release wave."
+    },
+    {
       "run_id": "2026-10-23T11:25:00Z-refresh",
       "phase": "refresh",
       "status": "success",
