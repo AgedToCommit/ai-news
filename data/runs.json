@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-24T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-24T10:50:00Z",
+      "ended_at": "2026-10-24T11:00:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 26000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 21000,
+        "curation": 3000,
+        "output_write": 1000
+      },
+      "fetches_made": 7,
+      "items_input": 12,
+      "items_output": 6,
+      "items_added": 3,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-24-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Pre-flight: control.paused=false, refresh enabled. Today's am file exists (2026-10-24-am.json, 3 items from enrichment ended 06:30Z). Last run ended_at: 2026-10-24T06:30:00Z. Sweep window: last ~4.5 hours. 7 WebSearch queries across 4 parallel + 3 follow-up. Candidate pool: (1) UK AI Biosecurity Lab \u2014 UK government \u00a3100M cash + OpenAI \u00a3100M compute credits + Anthropic up to \u00a3100M credits + Google DeepMind as research partner [included, Tier 1, dated Oct 23-24 2026, first time all three major labs co-anchor a government biosafety institution]; (2) MiniMax M3.1 Flash open weights \u2014 428B total / 23B active sparse MoE, 1M context, text+image+video, Together AI /bin/bash.15/M, MiniMax community licence, Oct 23 2026 [included, Tier 2, not in any prior snapshot]; (3) OpenAI valuation cut 50B \u2014 .4T\u2192.25T fundraising target, 0B round, Coatue + UAE leads, Oct 22-23 2026 [included, Tier 3, not in any prior snapshot]; (4) Hugging Face Carbon-X DNA model [excluded \u2014 dated Oct 22-23, Tier 2 but bumped by stronger candidates]; (5) EU investigation of OpenAI/Anthropic over AI agents [excluded \u2014 same story as ARTEX item already in am file, no new angle since 6:30Z]; (6) NVIDIA GTC Berlin Germany AI declaration [excluded \u2014 Oct 20 event, outside window]. No Tier 1 major model releases from Anthropic, OpenAI, or Google DeepMind confirmed for Oct 24. DNS to primary lab sites still unreachable; relied on WebSearch throughout. Tier counts updated: {1:2, 2:3, 3:1}, item count 6 (was 3). All 3 new items marked added_by: refresh, enriched_overnight: true."
+    },
+    {
       "run_id": "2026-10-24T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
@@ -26,7 +55,7 @@
       "snapshot_written": "2026-10-24-am",
       "error": null,
       "partial": false,
-      "notes": "Enrichment of 2026-10-23-pm (3 items). Pre-flight: control.paused=false, enrichment enabled. All three carryovers kept and enriched with substantive new overnight context. (1) DeepSeek funding: added Reuters-sourced chip-design hiring angle + CrowdStrike cross-ref to ARTEX backend-model usage. (2) Microsoft Storm-0940/ARTEX: major enrichment — added CrowdStrike-attributed South Korean financial-sector campaign (late-Sep–early-Oct 2026, 9+ institutions including Shinhan Bank and Yegaram Savings Bank, operators routing through DeepSeek + Z.ai GLM-5.3 + Grok 4.6 via a reseller), ARTEX origin (Autumn-27, GitHub, July 26 2026 release under AGPL-3.0), Oct 8 closed-source conversion predating Microsoft disclosure, ~897 forks surviving the takedown, exposed open directories (Claude Code session histories, ARTEX configs, Claude memory files), CrowdStrike suspect profile (likely China-based 26-year-old, financially motivated). (3) Goodfire Cammarata: added ACL 2026 feature-consistency counter-paper, Goodfire's own Feb 2026 SAE demo/API deprecation, reported DeepMind SAE deprioritization context, source-conflict acknowledgment on Nanda's exact response. Late-breaking pass: 2 web searches scoped to Oct 23-24 Tier-1 announcements. No qualifying item surfaced — Mistral Large 4 'Le Chonk' open-weight drop is Oct 27-31 (not yet), Meta Muse Wonder/Wonder Full were Oct 12 (already prior-cycle), no Anthropic/OpenAI/DeepMind announcement for Oct 23-24 confirmed. Honest quiet-news-day finding, no items added. Direct HTTPS to many primary sources (microsoft.com/security/blog, deepseek.com) still unreachable; relied on WebSearch snippet aggregation + secondary coverage throughout. Tier counts {1:1, 2:2, 3:0}, item count 3 (unchanged from pm). all three items marked enriched_overnight: true, last_revision_by: enrichment, with new revisions appended and why_it_matters_brief rewritten per brief.md guidance."
+      "notes": "Enrichment of 2026-10-23-pm (3 items). Pre-flight: control.paused=false, enrichment enabled. All three carryovers kept and enriched with substantive new overnight context. (1) DeepSeek funding: added Reuters-sourced chip-design hiring angle + CrowdStrike cross-ref to ARTEX backend-model usage. (2) Microsoft Storm-0940/ARTEX: major enrichment \u2014 added CrowdStrike-attributed South Korean financial-sector campaign (late-Sep\u2013early-Oct 2026, 9+ institutions including Shinhan Bank and Yegaram Savings Bank, operators routing through DeepSeek + Z.ai GLM-5.3 + Grok 4.6 via a reseller), ARTEX origin (Autumn-27, GitHub, July 26 2026 release under AGPL-3.0), Oct 8 closed-source conversion predating Microsoft disclosure, ~897 forks surviving the takedown, exposed open directories (Claude Code session histories, ARTEX configs, Claude memory files), CrowdStrike suspect profile (likely China-based 26-year-old, financially motivated). (3) Goodfire Cammarata: added ACL 2026 feature-consistency counter-paper, Goodfire's own Feb 2026 SAE demo/API deprecation, reported DeepMind SAE deprioritization context, source-conflict acknowledgment on Nanda's exact response. Late-breaking pass: 2 web searches scoped to Oct 23-24 Tier-1 announcements. No qualifying item surfaced \u2014 Mistral Large 4 'Le Chonk' open-weight drop is Oct 27-31 (not yet), Meta Muse Wonder/Wonder Full were Oct 12 (already prior-cycle), no Anthropic/OpenAI/DeepMind announcement for Oct 23-24 confirmed. Honest quiet-news-day finding, no items added. Direct HTTPS to many primary sources (microsoft.com/security/blog, deepseek.com) still unreachable; relied on WebSearch snippet aggregation + secondary coverage throughout. Tier counts {1:1, 2:2, 3:0}, item count 3 (unchanged from pm). all three items marked enriched_overnight: true, last_revision_by: enrichment, with new revisions appended and why_it_matters_brief rewritten per brief.md guidance."
     },
     {
       "run_id": "2026-10-23T17:30:00Z-digest",
@@ -54,7 +83,7 @@
       "snapshot_written": "2026-10-23-pm",
       "error": null,
       "partial": false,
-      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-23-am.json present with 5 items (DeepSeek DeepInfer, Google Cloud + OpenAI, OpenAI 12h prompt caching, NVIDIA OpenShell / Claude Managed Agents, ElevenLabs Eleven Realtime) — all excluded from pm per promotion rule default. Direct HTTPS to curl via proxy returned 403 for RSS feeds (simonwillison.net, importai.substack.com, blog.langchain.dev) and WebFetch returned DNS ENOTFOUND on theneuron.ai and aiweekly.co — same pattern as prior runs. Relied on WebSearch (12 queries) + search-snippet synthesis throughout. Candidate pool: (1) DeepSeek ~100B yuan funding round closing Oct 22 [included, Tier 1]; (2) Microsoft Storm-0940 / ARTEX agentic pentest in ConnectWise supply-chain compromise, Oct 21 Microsoft Security Blog [included, Tier 2]; (3) Nick Cammarata/Goodfire 'Neural Networks Are Already Clean' Qwen3-32B interpretability essay, Oct 15 with Oct 22-23 secondary-coverage wave [included, Tier 2 — essay predates last run but was not in prior snapshots and is cycling now]; (4) Microsoft diagnostic AI outperforming physicians [excluded — turned out to be June 2025 MAI-DxO story, not new]; (5) Meta ~$825B AI commitments filing [excluded — could not corroborate the $825B figure against primary sources; only ~$600B 2025 figure confirmed]; (6) Verus-Insight 8B AI-video-artifact-detection model [excluded — name unverifiable; closest match is Artifact-Bench paper arXiv:2605.18984 from May 2026, which is not an 8B model and is 5+ months old]; (7) Treasury rule expanding AI/supercomputing investment restrictions [excluded — could not corroborate as fresh Oct 2026 rule; only 2024 outbound-investment rule confirmed]; (8) Axios banks containing third-party AI agents risk [excluded — tier-3 industry-watch; low signal for Gabe's stack]. Tier counts {1:1, 2:2, 3:0}, item count 3. Lower volume than the am (which had 5 enriched carry-overs); honest reflection of a quiet news day between Oct 20-21 lab announcements and the next release wave."
+      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-23-am.json present with 5 items (DeepSeek DeepInfer, Google Cloud + OpenAI, OpenAI 12h prompt caching, NVIDIA OpenShell / Claude Managed Agents, ElevenLabs Eleven Realtime) \u2014 all excluded from pm per promotion rule default. Direct HTTPS to curl via proxy returned 403 for RSS feeds (simonwillison.net, importai.substack.com, blog.langchain.dev) and WebFetch returned DNS ENOTFOUND on theneuron.ai and aiweekly.co \u2014 same pattern as prior runs. Relied on WebSearch (12 queries) + search-snippet synthesis throughout. Candidate pool: (1) DeepSeek ~100B yuan funding round closing Oct 22 [included, Tier 1]; (2) Microsoft Storm-0940 / ARTEX agentic pentest in ConnectWise supply-chain compromise, Oct 21 Microsoft Security Blog [included, Tier 2]; (3) Nick Cammarata/Goodfire 'Neural Networks Are Already Clean' Qwen3-32B interpretability essay, Oct 15 with Oct 22-23 secondary-coverage wave [included, Tier 2 \u2014 essay predates last run but was not in prior snapshots and is cycling now]; (4) Microsoft diagnostic AI outperforming physicians [excluded \u2014 turned out to be June 2025 MAI-DxO story, not new]; (5) Meta ~$825B AI commitments filing [excluded \u2014 could not corroborate the $825B figure against primary sources; only ~$600B 2025 figure confirmed]; (6) Verus-Insight 8B AI-video-artifact-detection model [excluded \u2014 name unverifiable; closest match is Artifact-Bench paper arXiv:2605.18984 from May 2026, which is not an 8B model and is 5+ months old]; (7) Treasury rule expanding AI/supercomputing investment restrictions [excluded \u2014 could not corroborate as fresh Oct 2026 rule; only 2024 outbound-investment rule confirmed]; (8) Axios banks containing third-party AI agents risk [excluded \u2014 tier-3 industry-watch; low signal for Gabe's stack]. Tier counts {1:1, 2:2, 3:0}, item count 3. Lower volume than the am (which had 5 enriched carry-overs); honest reflection of a quiet news day between Oct 20-21 lab announcements and the next release wave."
     },
     {
       "run_id": "2026-10-23T11:25:00Z-refresh",
@@ -83,7 +112,7 @@
       "fallback_did_enrichment": true,
       "error": null,
       "partial": false,
-      "notes": "Resilience fallback — 2am enrichment did not produce 2026-10-23-am.json, so refresh ran both enrichment and refresh in one combined run. Pre-flight: control.paused=false, refresh enabled. Input: 5 items from 2026-10-22-pm.json (DeepSeek DeepInfer, OpenAI on Google Cloud, OpenAI 12h prompt caching, NVIDIA OpenShell/Claude Managed Agents, ElevenLabs Eleven Realtime). All 5 items kept and enriched: (1) DeepSeek DeepInfer — minor: added V4.1-Flash-1017 version name, corrected lineage to vLLM+SGLang+TRT-LLM, added missing components list from README; (2) OpenAI on Google Cloud — moderate: added Codex CLI/Desktop routing, Google's 'all three closed-source families' claim with AWS/Microsoft September GA caveat, Gemini for Business/Antigravity coming-soon integrations; (3) OpenAI 12h caching — minor: clarified '12h' is minimum lifetime not hard deadline, updated conflicting read-rate caveat; (4) NVIDIA OpenShell — significant: corrected to Sep 28 2026 original announcement, Anthropic blog URL as canonical, product name is 'Claude Managed Agents' (not Claude OpenShell agents), model-agnostic/harness-agnostic detail, compatible tools list; (5) ElevenLabs — significant: added full Artificial Analysis benchmark suite (Mini BBaudio 75.9%, FDB Mini 95.8%/Max 94.1%, Arena Max 998/Mini 988, tool-use Max 87.1%/Mini 60.3%), Deepgram pipeline-vs-model-inference latency caveat. Late-breaking pass (last 12h): no Tier-1 new releases confirmed for Oct 22-23 overnight window; one candidate (Verus-Insight 8B video artifact model) lacked sufficient sourcing for a proper item. Refresh pass (last 5h): nothing found. Items added: 0. DNS to primary lab sites continues to be unreachable; relied on WebSearch summaries throughout."
+      "notes": "Resilience fallback \u2014 2am enrichment did not produce 2026-10-23-am.json, so refresh ran both enrichment and refresh in one combined run. Pre-flight: control.paused=false, refresh enabled. Input: 5 items from 2026-10-22-pm.json (DeepSeek DeepInfer, OpenAI on Google Cloud, OpenAI 12h prompt caching, NVIDIA OpenShell/Claude Managed Agents, ElevenLabs Eleven Realtime). All 5 items kept and enriched: (1) DeepSeek DeepInfer \u2014 minor: added V4.1-Flash-1017 version name, corrected lineage to vLLM+SGLang+TRT-LLM, added missing components list from README; (2) OpenAI on Google Cloud \u2014 moderate: added Codex CLI/Desktop routing, Google's 'all three closed-source families' claim with AWS/Microsoft September GA caveat, Gemini for Business/Antigravity coming-soon integrations; (3) OpenAI 12h caching \u2014 minor: clarified '12h' is minimum lifetime not hard deadline, updated conflicting read-rate caveat; (4) NVIDIA OpenShell \u2014 significant: corrected to Sep 28 2026 original announcement, Anthropic blog URL as canonical, product name is 'Claude Managed Agents' (not Claude OpenShell agents), model-agnostic/harness-agnostic detail, compatible tools list; (5) ElevenLabs \u2014 significant: added full Artificial Analysis benchmark suite (Mini BBaudio 75.9%, FDB Mini 95.8%/Max 94.1%, Arena Max 998/Mini 988, tool-use Max 87.1%/Mini 60.3%), Deepgram pipeline-vs-model-inference latency caveat. Late-breaking pass (last 12h): no Tier-1 new releases confirmed for Oct 22-23 overnight window; one candidate (Verus-Insight 8B video artifact model) lacked sufficient sourcing for a proper item. Refresh pass (last 5h): nothing found. Items added: 0. DNS to primary lab sites continues to be unreachable; relied on WebSearch summaries throughout."
     },
     {
       "run_id": "2026-10-22T17:09:00Z-digest",
@@ -111,7 +140,7 @@
       "snapshot_written": "2026-10-22-pm",
       "error": null,
       "partial": false,
-      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-22-am.json present with 5 items (Claude Duet, Mistral Large 4, Mistral Voxtral 3, Cloudflare Clairic, Inception Mercury 3) — all excluded from pm per promotion rule, no promotions warranted (nothing has materially deepened in the 5-6 hours since refresh). Swept Oct 20-22 window via 10 WebSearch queries (DNS to all primary sources — openai.com, anthropic.com, deepseek.com, nvidia.com, elevenlabs.io, cloud.google.com — unreachable from this environment, continuing pattern). Candidate pool (8): (1) OpenAI 12-hour prompt caching, Oct 20; (2) Google Cloud + OpenAI Model Garden private preview, Oct 21; (3) DeepSeek DeepInfer open-source inference engine, Oct 20; (4) NVIDIA OpenShell Reference Architecture + Anthropic 'Claude OpenShell' partnership at GTC Berlin, Oct 21; (5) ElevenLabs Eleven Realtime v1 Mini/Max, Oct 20; (6) NVIDIA DSX POD containerized AI-factory, Oct 21; (7) NVIDIA Agile ONE SN humanoid; (8) NVIDIA Microduck training robots. Final 5 after tier ranking: Tier 1 — DeepSeek DeepInfer (major open-source inference stack with first-class Huawei Ascend support), Google Cloud + OpenAI Model Garden (first direct rival carrying flagship closed-source models with Marketplace billing). Tier 2 — OpenAI 12-hour prompt caching (API primitive for persistent agents, strong Python/dev relevance), NVIDIA OpenShell Reference Architecture + Anthropic partnership (shared agent-sandboxing stack across major labs), ElevenLabs Eleven Realtime (companion to Voxtral 3 with OpenAI-Realtime-protocol wire compatibility — different deployment shape worth including). Dropped: DSX POD, Agile ONE SN, Microduck (Tier 3 hardware; not core AI relevance for Gabe this cycle). Reflection AI Beam already covered in Oct 18 snapshots so not re-included. All items hero_image: null per continuing DNS pattern — relied on WebSearch summaries for every item. 90-day runs.json cleanup deferred (file size)."
+      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled, 2026-10-22-am.json present with 5 items (Claude Duet, Mistral Large 4, Mistral Voxtral 3, Cloudflare Clairic, Inception Mercury 3) \u2014 all excluded from pm per promotion rule, no promotions warranted (nothing has materially deepened in the 5-6 hours since refresh). Swept Oct 20-22 window via 10 WebSearch queries (DNS to all primary sources \u2014 openai.com, anthropic.com, deepseek.com, nvidia.com, elevenlabs.io, cloud.google.com \u2014 unreachable from this environment, continuing pattern). Candidate pool (8): (1) OpenAI 12-hour prompt caching, Oct 20; (2) Google Cloud + OpenAI Model Garden private preview, Oct 21; (3) DeepSeek DeepInfer open-source inference engine, Oct 20; (4) NVIDIA OpenShell Reference Architecture + Anthropic 'Claude OpenShell' partnership at GTC Berlin, Oct 21; (5) ElevenLabs Eleven Realtime v1 Mini/Max, Oct 20; (6) NVIDIA DSX POD containerized AI-factory, Oct 21; (7) NVIDIA Agile ONE SN humanoid; (8) NVIDIA Microduck training robots. Final 5 after tier ranking: Tier 1 \u2014 DeepSeek DeepInfer (major open-source inference stack with first-class Huawei Ascend support), Google Cloud + OpenAI Model Garden (first direct rival carrying flagship closed-source models with Marketplace billing). Tier 2 \u2014 OpenAI 12-hour prompt caching (API primitive for persistent agents, strong Python/dev relevance), NVIDIA OpenShell Reference Architecture + Anthropic partnership (shared agent-sandboxing stack across major labs), ElevenLabs Eleven Realtime (companion to Voxtral 3 with OpenAI-Realtime-protocol wire compatibility \u2014 different deployment shape worth including). Dropped: DSX POD, Agile ONE SN, Microduck (Tier 3 hardware; not core AI relevance for Gabe this cycle). Reflection AI Beam already covered in Oct 18 snapshots so not re-included. All items hero_image: null per continuing DNS pattern \u2014 relied on WebSearch summaries for every item. 90-day runs.json cleanup deferred (file size)."
     },
     {
       "run_id": "2026-10-22T11:00:00Z-refresh",
@@ -140,7 +169,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Standard refresh path. Pre-flight: control.paused=false, refresh enabled, 2026-10-22-am.json exists with 3 items from enrichment (ended_at 2026-10-22T06:35:00Z). Swept since 06:35Z via 5 WebSearch queries total (DNS unreachable pattern continues). Found 2 items not yet in any snapshot: (1) Tier 1 — Anthropic Claude Duet research preview, announced Oct 21, a proactive personal AI agent built on Opus 5.5 competing with Meta Muse and OpenAI Dots; covered by CNBC, 9to5Google, Engadget, MacRumors, Digital Trends; US-only waitlist for Pro/Max subscribers. (2) Tier 2 — Mistral Voxtral 3 voice agent SDK, announced Oct 20, chains STT → reasoning → tool calls → TTS in one streaming call, 50+ languages, $0.0035/min transcription, EU-hosted. Both items predated the strict 5-hour window (06:35Z) but were not present in any prior snapshot; enrichment's strict Oct 21 18:19Z window missed Claude Duet (announced Oct 21, likely prior to or concurrent with enrichment sweep) and Voxtral 3 (Oct 20, explicitly before the enrichment window). Added both as refresh items with enriched_overnight: true. Hero images null for both per continuing DNS pattern. Items_input=4 reflects the candidate pool evaluated (Claude Duet, Voxtral 3, Bloomberg AI hacking story, EU publishers vs Meta); items_added=2 after tier ranking and quality check. Bloomberg hacking story unverifiable against primary sources; EU publishers story is regulatory/policy without strong Tier 1-2 signal for Gabe. 90-day runs.json cleanup deferred (file too large to fully read in one pass)."
+      "notes": "Standard refresh path. Pre-flight: control.paused=false, refresh enabled, 2026-10-22-am.json exists with 3 items from enrichment (ended_at 2026-10-22T06:35:00Z). Swept since 06:35Z via 5 WebSearch queries total (DNS unreachable pattern continues). Found 2 items not yet in any snapshot: (1) Tier 1 \u2014 Anthropic Claude Duet research preview, announced Oct 21, a proactive personal AI agent built on Opus 5.5 competing with Meta Muse and OpenAI Dots; covered by CNBC, 9to5Google, Engadget, MacRumors, Digital Trends; US-only waitlist for Pro/Max subscribers. (2) Tier 2 \u2014 Mistral Voxtral 3 voice agent SDK, announced Oct 20, chains STT \u2192 reasoning \u2192 tool calls \u2192 TTS in one streaming call, 50+ languages, $0.0035/min transcription, EU-hosted. Both items predated the strict 5-hour window (06:35Z) but were not present in any prior snapshot; enrichment's strict Oct 21 18:19Z window missed Claude Duet (announced Oct 21, likely prior to or concurrent with enrichment sweep) and Voxtral 3 (Oct 20, explicitly before the enrichment window). Added both as refresh items with enriched_overnight: true. Hero images null for both per continuing DNS pattern. Items_input=4 reflects the candidate pool evaluated (Claude Duet, Voxtral 3, Bloomberg AI hacking story, EU publishers vs Meta); items_added=2 after tier ranking and quality check. Bloomberg hacking story unverifiable against primary sources; EU publishers story is regulatory/policy without strong Tier 1-2 signal for Gabe. 90-day runs.json cleanup deferred (file too large to fully read in one pass)."
     },
     {
       "run_id": "2026-10-22T06:35:00Z-enrichment",
@@ -168,7 +197,7 @@
       "snapshot_written": "2026-10-22-am",
       "error": null,
       "partial": false,
-      "notes": "Enrichment path on yesterday's pm which carried 3 items: Tier-1 Mistral Large 4 preview, Tier-2 Cloudflare Clairic, Tier-2 Inception Mercury 3. Ran 8 WebSearch queries total: 3 focused per-item deepening queries + 1 late-breaking Tier-1 sweep across Anthropic / OpenAI / Google DeepMind / Meta / xAI / Mistral + 1 Mistral Hugging Face check + 1 'Oct 21-22 2026' lab-release scan + 1 Hugging Face trending check + 1 Simon Willison late-October coverage check. Key enrichment findings: (1) Mistral Large 4 — official docs now list placeholder Hugging Face repo mistralai/Mistral-Large-4-1T-A52B tagged 'Coming soon,' which resolves the active-parameter conflict (official is 52B, not the 49B from the launch post which has been quietly updated); license text still not published as of Oct 22; five days to the Oct 27 open-weights drop. Updated summary, why_it_matters, brief, primary link (now docs.mistral.ai), added takes[] entries for docs.mistral.ai, lindy.ai, and letsdatascience. (2) Cloudflare Clairic — three days post-launch, no independent benchmark replication; added the trap-flag that the Clef/Clef-flash benchmark tables (BFCL, API-Bank, BANKING77, PhishNChips vs Jev/Laya) belong to the Oct 1 decision-model release, not Clairic, and conflating them is a common search mistake; added takes[] entries for zeli.app and orcarouter.ai (Clef reference). (3) Inception Mercury 3 — three days post-launch, still single-source: Unite.AI original + AlphaSignal + Inception blog; the apparent coverage sprawl is Unite.AI's own 9 non-English editions (IT, PT, DE, DA, RO, PL, NL, FR, ES), not independent corroboration. Mind2Web step budget still undisclosed. Added take[] entry for ecosistemastartup.com (ES edition note). Late-breaking pass: 0 items added. Strict 12-hour window from 2026-10-21T18:19Z (one hour after digest end) surfaced no confirmed Oct 21-22 model announcement from Anthropic, OpenAI, DeepMind, Meta, Mistral, or xAI. Prediction markets listed Grok 4.8 and Meta Muse Spark 1.4 as October possibilities, but those are odds not announcements. GitHub Universe Oct 28-29 remains pre-event. Mistral Large 4 weights still Oct 27. All 3 items set hero_image: null, DNS to mistral.ai, cloudflare.com, unite.ai still unreachable from this run's environment — relied on WebSearch summaries throughout."
+      "notes": "Enrichment path on yesterday's pm which carried 3 items: Tier-1 Mistral Large 4 preview, Tier-2 Cloudflare Clairic, Tier-2 Inception Mercury 3. Ran 8 WebSearch queries total: 3 focused per-item deepening queries + 1 late-breaking Tier-1 sweep across Anthropic / OpenAI / Google DeepMind / Meta / xAI / Mistral + 1 Mistral Hugging Face check + 1 'Oct 21-22 2026' lab-release scan + 1 Hugging Face trending check + 1 Simon Willison late-October coverage check. Key enrichment findings: (1) Mistral Large 4 \u2014 official docs now list placeholder Hugging Face repo mistralai/Mistral-Large-4-1T-A52B tagged 'Coming soon,' which resolves the active-parameter conflict (official is 52B, not the 49B from the launch post which has been quietly updated); license text still not published as of Oct 22; five days to the Oct 27 open-weights drop. Updated summary, why_it_matters, brief, primary link (now docs.mistral.ai), added takes[] entries for docs.mistral.ai, lindy.ai, and letsdatascience. (2) Cloudflare Clairic \u2014 three days post-launch, no independent benchmark replication; added the trap-flag that the Clef/Clef-flash benchmark tables (BFCL, API-Bank, BANKING77, PhishNChips vs Jev/Laya) belong to the Oct 1 decision-model release, not Clairic, and conflating them is a common search mistake; added takes[] entries for zeli.app and orcarouter.ai (Clef reference). (3) Inception Mercury 3 \u2014 three days post-launch, still single-source: Unite.AI original + AlphaSignal + Inception blog; the apparent coverage sprawl is Unite.AI's own 9 non-English editions (IT, PT, DE, DA, RO, PL, NL, FR, ES), not independent corroboration. Mind2Web step budget still undisclosed. Added take[] entry for ecosistemastartup.com (ES edition note). Late-breaking pass: 0 items added. Strict 12-hour window from 2026-10-21T18:19Z (one hour after digest end) surfaced no confirmed Oct 21-22 model announcement from Anthropic, OpenAI, DeepMind, Meta, Mistral, or xAI. Prediction markets listed Grok 4.8 and Meta Muse Spark 1.4 as October possibilities, but those are odds not announcements. GitHub Universe Oct 28-29 remains pre-event. Mistral Large 4 weights still Oct 27. All 3 items set hero_image: null, DNS to mistral.ai, cloudflare.com, unite.ai still unreachable from this run's environment \u2014 relied on WebSearch summaries throughout."
     },
     {
       "run_id": "2026-10-21T17:00:00Z-digest",
@@ -7448,261 +7477,6 @@
       "error": null,
       "partial": false,
       "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-25-pm.json) had 5 items \u2014 all five enriched with meaningful new context and kept. WebFetch remained 403-blocked per established pattern; WebSearch-only across 7 queries (5 per-item enrichment + 2 late-breaking sweeps). Enrichment updates by item: (1) Claude Opus 5 \u2014 added OSWorld 2.0 result (beats Fable 5 at ~1/3 cost, computer-use axis specifically), added automated behavioral audit misaligned-behavior score 2.30 (lowest of any recent Claude \u2014 ahead of Opus 4.8, Sonnet 5, and Fable 5), added 'near-frontier not the frontier' framing consolidated from Vellum/buildfastwithai/aitoolsreview independent reviews; (2) Meta Muse Spark 1.1 consumer \u2014 added specific developer-API pricing ($1.25/$4.25 per MTok with $20 free credits) and Alexandr Wang's 'very aggressive and attractive' framing, added price-discrimination read (bounded free developer credits vs unlimited free consumer access same model), added day-two observation that no substantive consumer-side reviews have surfaced in first 30 hours; (3) Grok 4.6/4.7 \u2014 added day-two competitive-framing consolidation (multiple outlets frame Grok 4.6 explicitly as 'Musk's answer to China's AI monster' targeting Kimi K3), added timeline-realism read (independent trackers peg realistic public Grok 4.6 launch at late August to mid-September once post-training + eval + deployment finish); (4) Gemini 4 \u2014 added Andrew Curran interpretation ('largest model Google has ever trained') and Manifold prediction market pricing 83% probability of 2026 launch with caveat that Google has not committed a quarter; (5) OpenAI Codex July 24 \u2014 added the July 25 5am ET global outage (ChatGPT + API + Codex simultaneously, no published root cause, services restored later Saturday) and the day-two developer-facing caveat that GPT-Live developer API is still 'coming soon' so third-party voice-agent builders still use older Realtime API \u2014 updated title to include the outage. Late-breaking pass added one Tier-2 item: Jensen Huang first-ever X post on Thursday July 24 sharing a 25-organization open letter (NVIDIA, Microsoft, Meta, IBM, Dell, Mistral, Mozilla, Hugging Face, The Linux Foundation, Perplexity, Y Combinator + 14 others; notable absentees Anthropic, OpenAI, Google DeepMind) urging Washington not to restrict Chinese open-weight models \u2014 the coalition is designed to shape the response to Kimi K3's July 27 open-weights release. Cross-item pattern: the July 25 OpenAI outage is the specific reliability signal that lands 20 hours after the July 24 launch bundle, and the Jensen Huang letter is the specific policy signal that lands ahead of Kimi K3's July 27 open-weights arrival \u2014 carry both into next week's coverage. Final tier_counts {1:1, 2:5, 3:0}; item_count 6."
-    },
-    {
-      "run_id": "2026-07-25T17:20:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-07-25T17:05:00Z",
-      "ended_at": "2026-07-25T17:20:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 58000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 2500,
-        "deep_fetch": 0,
-        "discovery_search": 42000,
-        "curation": 11000,
-        "output_write": 2500
-      },
-      "fetches_made": 12,
-      "items_input": 8,
-      "items_output": 5,
-      "items_added": 5,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-25-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT. Pre-flight: kill switch inactive (paused=false), digest enabled. Today's am file (2026-07-25-am.json) exists with 9 items \u2014 all excluded from pm output per promotion rule (no items materially deepened enough to warrant promotion). WebFetch remained 403-blocked per established pattern; WebSearch-only across 12 queries covering: general AI news July 24-25, OpenAI/Anthropic/Google/Meta/xAI announcements, Claude Opus 5 detail, Meta Muse Spark consumer rollout detail, Grok roadmap detail, Gemini 4 confirmation, OpenAI Codex July 24 updates, Simon Willison sandbox-escape commentary. Sweep window: since last run ended_at 2026-07-25T11:20:00Z. Five items added: (1) Anthropic Claude Opus 5 release Friday July 24 as Tier 1 Global \u2014 the top miss from yesterday's pm digest; near Fable-5 capability at half input cost, Frontier-Bench 43.3% vs Fable 5 33.7%, new default on Claude Max, low/medium/high effort toggle; (2) Meta Muse Spark 1.1 consumer rollout via Meta AI app + Facebook Verified video-selfie + Marketplace Seller app in the same July 24 bundle as Tier 2 Global; (3) xAI Grok 4.6/4.7 back-to-back roadmap from Musk's July 24 X post as Tier 2 US \u2014 Grok 4.6 in two weeks (2T params targeting Kimi K3), Grok 4.7 in four weeks; (4) Google Gemini 4 pre-training confirmation buried in July 21 Gemini 3.6 Flash launch post + Sundar Pichai 'almost monthly' Gemini cadence framing from July 23 Alphabet Q2 earnings call as Tier 2 Global; (5) OpenAI Codex July 24 updates: ChatGPT Voice via GPT-Live for voice-steered coding across threads + Local Projects multi-folder support with designated primary folder for chats/Git ops as Tier 2 Global. Cross-item pattern: three of the five items (Opus 5, Grok 4.6/4.7 roadmap, Gemini 4 'almost monthly' framing) map to the specific structural read that all major frontier labs are now on a roughly monthly release cadence \u2014 the pre-2026 quarterly-to-semi-annually pattern has cleanly broken. Final tier_counts {1:1, 2:4, 3:0}; item_count 5."
-    },
-    {
-      "run_id": "2026-07-25T11:20:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-07-25T11:00:00Z",
-      "ended_at": "2026-07-25T11:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 28000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 20000,
-        "curation": 5000,
-        "output_write": 1500
-      },
-      "fetches_made": 12,
-      "items_input": 9,
-      "items_output": 9,
-      "items_added": 2,
-      "items_kept": 7,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-25-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT. Kill switch inactive, refresh enabled. Standard path: today's am file exists from enrichment at 06:16Z. WebFetch 403-blocked per established pattern; WebSearch-only across 12 queries. Sweep window since 2026-07-25T06:16:28Z. Two items added: (1) Alibaba Qwen3.8-Max preview (2.4T MoE, previewed July 19-20 at WAIC, missed by July 24 digest) as Tier 2 Asia; (2) EU AI Act Article 50 August 2 deadline (8 days away, chatbot disclosure + watermarking go live) as Tier 2 EU. Final tier_counts {1:1, 2:8, 3:0}; item_count 9."
-    },
-    {
-      "run_id": "2026-07-25T06:16:28Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-07-25T06:00:00Z",
-      "ended_at": "2026-07-25T06:16:28Z",
-      "wall_time_ms": 988000,
-      "tokens_used": 44000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 30000,
-        "curation": 10000,
-        "output_write": 2500
-      },
-      "fetches_made": 10,
-      "items_input": 7,
-      "items_output": 7,
-      "items_added": 1,
-      "items_kept": 6,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-25-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-24-pm.json) had 6 items \u2014 all six enriched and kept, none dropped. Enrichment substance per item: (1) AI Kill Switch Act \u2014 noted 48-hour OpenAI/Anthropic public silence as substantive new data point + added Quartz/TheNextWeb/Cybersecurity Magazine overnight coverage to takes; (2) Anthropic Claude voice mode \u2014 clarified Google Docs is in the connector set, added transcript-save-to-chat-history detail and mid-conversation model-switching + text/voice-continuity detail, added MacRumors/Engadget overnight coverage; (3) Kimi K3 \u2014 SUBSTANTIVE CORRECTION: yesterday's item claimed vLLM/TensorRT-LLM/Ollama did not yet support KDA/AttnRes, but the July 22 vLLM preview blog announced production-scale K3 support with Moonshot's KDA-prefix-caching contributed upstream directly, so open-source inference will be day-0 rather than deferred; added vLLM blog to takes; (4) DeepSeek API migration \u2014 deadline has passed, updated framing from 'action-item-today' to 'lesson-in-migration-hygiene,' added concrete peak-hour Beijing pricing structure (\u00a50.025/\u00a53.00/\u00a56.00 for V4-Pro cache-hit-input/cache-miss-input/output, \u00a50.02/\u00a51.00/\u00a52.00 for V4-Flash, both doubling during Beijing peak 9:00-12:00 and 14:00-18:00) and the 17x-cheaper-than-GPT-5.6-Terra output-price framing that persists through the surge; added ChinaBizInsider/TheNextWeb/TheRouter.ai to takes; (5) Google ATLAS \u2014 added the overnight Implicator.ai independent-analysis finding that Google's underlying tables show automation intent above 25% for routine cognitive work (a number the announcement omitted), which is the specific asterisk on the 'less than 10% fully automate' top-line; added Implicator/BestMediaInfo to takes; (6) BFL FLUX 3 \u2014 added the overnight-clarified technical differentiator that FLUX 3 generates video and audio together in one inference pass from the same flow-matching framework and that no other major AI video model does this at parity; added Decrypt/Wan27 to takes. Late-breaking pass: added 1 new item \u2014 AMD-Cerebras disaggregated inference partnership announced July 23 (AMD Helios rackscale for compute-bound prompt-processing + Cerebras WSE for memory-bandwidth-bound token-generation, vendor-modeled up-to-5x tokens-per-second-per-kilowatt vs WSE-only on Kimi K2.6 1T, arriving via Cerebras Cloud in H2 2026); this ties structurally into the K3 memory-bound serving-economics story. Alphabet Q2 2026 earnings (July 22 report, capex raised to $195-205B) was NOT re-added because it was already covered in the 2026-07-24-am and 2026-07-23-pm files. WebFetch remained 403-blocked per established pattern; WebSearch-only across 10 queries. Final tier_counts {1:1, 2:6, 3:0}; item_count 7; items_kept 6; items_added 1; items_dropped 0."
-    },
-    {
-      "run_id": "2026-07-24T17:15:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-07-24T17:00:00Z",
-      "ended_at": "2026-07-24T17:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 55000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 3000,
-        "deep_fetch": 0,
-        "discovery_search": 42000,
-        "curation": 8000,
-        "output_write": 2000
-      },
-      "fetches_made": 17,
-      "items_input": 12,
-      "items_output": 6,
-      "items_added": 6,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-24-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT. Pre-flight: kill switch inactive (paused=false), digest phase enabled. Today's 2026-07-24-am.json exists with 5 items from the 2am enrichment + 7am refresh chain (4 Tier 1, 1 Tier 2) \u2014 promotion rule applied: all 5 am items excluded from pm output by default, none met the 'materially deepened during the day' exception bar (Kratsios/Moonshot got AA hallucination critique, but the AA angle is structurally NEW information so pm covers it as a new item rather than promotion; ExploitGym/Hugging Face story got the AI Kill Switch Act which is a distinct policy story worth a new item rather than a promotion). WebFetch remains 403-blocked per established pattern; WebSearch-only across 17 queries covering: model releases (OpenAI/Anthropic/Google/Meta/DeepSeek/Alibaba/xAI/BFL), policy (AI Kill Switch Act, EU AI Act August 2 deadline), tooling (Cursor/Windsurf/Codex/Cline, DeepSeek migration, Hetzner inference), research (Google ATLAS, Kimi K3 hallucination critique, Simon Willison), agent platforms (Anthropic voice, ChatGPT Ads, Presence), and infrastructure (Nvidia GB300/GB200). Candidate pool after tier ranking: (1) AI Kill Switch Act \u2014 Tier 1 US, INCLUDE (CNBC, Lieu press release, TechTimes, Gizmodo, Nextgov, Yahoo News); (2) Anthropic Claude voice mode expansion \u2014 Tier 2 Global, INCLUDE (TechCrunch, The Decoder, 9to5Mac, Dataconomy, SQ Magazine); (3) Kimi K3 hallucination + open-weights economics \u2014 Tier 2 Global, INCLUDE (TechTimes, Artificial Analysis, Towards AI, TECHi, Interconnects, Hugging Face); (4) DeepSeek API migration deadline TODAY \u2014 Tier 2 Global, INCLUDE (Digital Applied, Enterprise DNA, DEV Community, byteiota, Developers Digest); (5) Google ATLAS v1.0 \u2014 Tier 2 Global, INCLUDE (Google Blog, Axios, PPC Land, Fox Business, Storyboard18, Google PDF); (6) Black Forest Labs FLUX 3 \u2014 Tier 2 EU, INCLUDE (VentureBeat, CryptoBriefing, Digital Today, IBTimes SG, AlternativeTo). Not included: (a) TIME article on OpenAI/Hugging Face \u2014 mainstream escalation of am item, no new facts; (b) Anthropic Economic Index (July 21-22) \u2014 2-3 days old, outside window; (c) Meta Seller iOS app July 24 \u2014 Tier 3 product launch, held for potential enrichment; (d) MetaX Hong Kong IPO filing \u2014 Tier 3 China business context, held; (e) Grok 4.6 training completion \u2014 no discrete July 23-24 launch, held. Final tier_counts {1:1, 2:5, 3:0}; item_count 6; items_added 6; items_kept 0 (digest phase doesn't kept-from-am); items_dropped 0."
-    },
-    {
-      "run_id": "2026-07-24T11:15:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-07-24T11:00:00Z",
-      "ended_at": "2026-07-24T11:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 22000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 18000,
-        "curation": 1500,
-        "output_write": 1000
-      },
-      "fetches_made": 10,
-      "items_input": 5,
-      "items_output": 5,
-      "items_added": 1,
-      "items_kept": 4,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-24-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Today's 2026-07-24-am.json exists with 4 items (all tier-1) from the 2am enrichment run (ended_at 2026-07-24T06:25:00Z) \u2014 standard path triggered. WebFetch remains 403-blocked per established pattern; WebSearch-only across 10 queries: (1) AI model release announcement July 24 2026, (2) Anthropic Claude announcement July 24 2026, (3) Google DeepMind Gemini release July 24 2026, (4) OpenAI GPT announcement July 24 2026, (5) OpenAI voice control computer use multi-agent Codex ChatGPT Work July 24 2026, (6) Kimi K3 Moonshot AI open weights release July 24 2026, (7) AI news Asia Europe July 24 2026 model announcement, (8) OpenAI ChatGPT small business GPT-5.6 July 24 2026, (9) DeepSeek Qwen Alibaba Baidu new AI model July 24 2026, (10) EU AI Act enforcement August 2026 OpenAI Anthropic new development July 24. Candidate pool after tier ranking: (a) ChatGPT Voice for desktop rollout July 24 via GPT-Live full-duplex model \u2014 Tier 2 Global, INCLUDE (sources: VentureBeat, OpenAI Dev Community, 9to5Mac, Neowin, CryptoBriefing); (b) ChatGPT for small businesses program \u2014 announced July 21, 3 days old, outside the 5-hour overnight window; (c) Kimi K3 open weights \u2014 slated for July 27, not yet released; (d) EU AI Act August 2 enforcement countdown \u2014 ongoing context, no discrete new July 24 overnight development with a specific news hook; (e) DeepSeek/Qwen/Alibaba/Baidu \u2014 no discrete July 24 model releases. Small re-pass on existing tier-1 items: Moonshot/K3/Bessent statement is from July 22 and already covered by enrichment; ExploitGym/The National/FBI-declining-to-comment angle from July 23 is a nuance but not a material new fact beyond what enrichment already recorded. No existing-item revisions warranted. 1 item added. Final tier_counts {1:4, 2:1, 3:0}; item_count 5; items_added 1; items_kept 4; items_dropped 0."
-    },
-    {
-      "run_id": "2026-07-24T06:00:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-07-24T06:00:00Z",
-      "ended_at": "2026-07-24T06:25:00Z",
-      "wall_time_ms": 1500000,
-      "tokens_used": 42000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 22000,
-        "curation": 12000,
-        "output_write": 6500
-      },
-      "fetches_made": 10,
-      "items_input": 7,
-      "items_output": 4,
-      "items_added": 0,
-      "items_kept": 4,
-      "items_dropped": 3,
-      "snapshot_written": "2026-07-24-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's 2026-07-23-pm.json exists with 7 items (5 tier-1 + 2 tier-2) \u2014 standard prune+enrich path triggered (no fallback). WebSearch-only across 10 targeted queries per established 403-block pattern: (1) Anthropic Claude Security plugin reactions/bugs, (2) Moonshot Kimi K3 Fable distillation White House response, (3) OpenAI Hugging Face ExploitGym follow-up, (4) OpenAI Presence customer reactions pricing, (5) OpenAI Project Camellia Effingham community response, (6) HF MCP server hf_fs sandboxes developer reactions, (7) Anthropic OpenAI Q2 2026 lobbying record, (8) AI news July 24 model release, (9) 'July 23' 2026 AI announcement overnight, (10) Alphabet Q2 2026 earnings analysis capex Anthropic; plus supplementary Claude Opus 5 confirmation query, DeepSeek V4 follow-up query, Meta xAI Grok DeepSeek Mistral overnight query, FLI AI Safety Index Summer 2026 query, and Boston Dynamics Google DeepMind Gemini Robotics query for late-breaking pass. Prune+enrich outcome: 4 items KEEP+ENRICH, 3 items DROP. KEEP+ENRICH items: (a) Kratsios/Moonshot/K3 \u2014 enriched with TechCrunch Treasury-sanctions-actively-drafted development and with researcher-community pushback ('multiple AI researchers have since publicly disputed the claim' per Cryptobriefing) citing narrow 15-day Fable-to-K3 window; primary source shifted to TechCrunch; (b) OpenAI ExploitGym/Hugging Face \u2014 enriched with Ken Huang's writeup that HF's containment specifically deployed Zhipu's GLM 5.2 as a defensive agent (first documented AI-vs-AI containment case + geopolitical wrinkle of a Chinese model defending against a US model) and with CNN Business July 22 mainstream escalation ('An OpenAI test model escaped and broke into a real company's servers') + HF confirmed law-enforcement report; (c) OpenAI Presence \u2014 enriched with three overnight developments: Australian insurer IAG as first named customer with severe-weather-claims use case, VentureBeat pricing-opacity note (asked twice, no answer), and Reworked's 'Pitches Trusted AI Agents a Day After Owning Hugging Face Hack' reputational-timing read; (d) OpenAI Camellia \u2014 substantially enriched with July 23 local-pushback developments (hundreds packed 24-hour-notice open house in Effingham, 'Say no to data centers' pins, 'You can't drink data' + 'Protect our water' signs, sheriff's deputies directing traffic to overflowing parking lot) and Senator Reverend Raphael Warnock's formal EPA letter demanding stronger water-protection guidance for communities near data centers; primary source shifted to WTOC. DROP items with dropped_in_phase entries: (a) Anthropic Claude Security plugin \u2014 no substantive follow-up in last 24h, aggregator-repetition only; (b) HF MCP server hf_fs+Sandboxes \u2014 no third-party developer benchmarking/adoption commentary; (c) Q2 2026 AI-lab lobbying record \u2014 no new disclosures/lobbyist-meeting reporting/policy movement, underlying policy fight picked up structurally in the Kratsios/Moonshot enrichment. Late-breaking pass sub-task 2: 0 items added. Candidates considered: (a) Claude Opus 5 rumor cycle continuing but not launched as of July 23 (Polymarket implied 62-88% probability window for July 23-24 launch that did not materialize; Anthropic docs still list Opus 4.8 as active); (b) FLI AI Safety Index Summer 2026 \u2014 real substantive tier-2 governance report but published July 19 (5 days old), outside the last-12h window and not fresh late-breaking; (c) Boston Dynamics/Google DeepMind Gemini Robotics-ER 1.6 on Spot \u2014 dated April 2026 despite aggregator noise, not new; (d) DeepSeek V4 follow-up \u2014 already carried in yesterday's am file; (e) Meta/xAI/Grok/Mistral overnight \u2014 no discrete tier-1 news surfaced. Final tier_counts {1:4, 2:0, 3:0}; item_count 4; items_added 0; items_kept 4; items_dropped 3. All 4 surviving items are tier-1 and were substantively enriched with material new to the last 24h."
-    },
-    {
-      "run_id": "2026-07-23T17:00:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-07-23T17:00:00Z",
-      "ended_at": "2026-07-23T17:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 46000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 3000,
-        "deep_fetch": 0,
-        "discovery_search": 30000,
-        "curation": 8500,
-        "output_write": 4500
-      },
-      "fetches_made": 14,
-      "items_input": 12,
-      "items_output": 7,
-      "items_added": 7,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-23-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT. Pre-flight: kill switch inactive, digest phase enabled. Today's am file (2026-07-23-am.json) exists with 4 items from the enrichment + refresh cascade (Alphabet Q2 2026 earnings + Anthropic markup, OpenAI ChatGPT Ads public-launch, DeepSeek V4 GA + peak-valley pricing, Anthropic Economic Futures Research Fund research agenda). Promotion rule: no am items materially deepened during today so no promotions applied. WebFetch remains 403-blocked per established pattern \u2014 WebSearch-only across 14 targeted queries: (1) AI news July 23 model releases, (2) Anthropic Claude July 23, (3) OpenAI GPT July 23, (4) Google DeepMind Gemini July 23, (5) Anthropic Claude Security plugin vulnerability scanning, (6) Claude Opus 5 release rumor, (7) Moonshot Kimi K3 distillation Anthropic White House Kratsios, (8) OpenAI enterprise agent platform July 23 data center, (9) Meta xAI Grok Mistral July 22-23, (10) open source LLM release Hugging Face July 22, (11) AI coding tool framework library, (12) Kimi K3 Moonshot benchmark, (13) OpenAI Hugging Face cyberattack agentic, (14) OpenAI $30B data center campus, (15) OpenAI Presence enterprise platform, (16) Hugging Face MCP server hf_fs sandboxes, (17) Anthropic Q2 2026 lobbying, (18) Simon Willison/Karpathy/Mollick July 22 blog. Candidate pool after tier ranking (~12 items): Anthropic Claude Security plugin beta (tier 1 US July 22), White House OSTP director Kratsios/Moonshot K3 distillation of Anthropic Fable + banned Nvidia GB300 chips via Thailand + Treasury sanctions threatened (tier 1 US July 22-23), OpenAI ExploitGym harness escape + Hugging Face breach on July 16 acknowledged July 21 with Simon Willison writeup July 22 (tier 1 US safety-incident), OpenAI Presence enterprise agent platform launch (tier 1 US July 22), OpenAI Project Camellia $30B 3.2GW Georgia data center announcement (tier 1 US July 22), Hugging Face MCP Server enhancements: hf_fs + Sandboxes (tier 2 Global tools July 22), Q2 2026 AI-lab lobbying disclosures record $4.3M + Anthropic $1.97M +26% + Fable/Mythos June Commerce takedown context (tier 2 US July 21). Excluded but considered: OpenAI safety publication on long-horizon models July 22 (folded conceptually as context in the ExploitGym item \u2014 same underlying phenomenon), Claude Opus 5 Honeycomb-leak rumor (unconfirmed and July 20-21 predicted window passed with no launch \u2014 not a discrete event), Microsoft-Mistral partnership expansion July 21 (2 days stale, not sharp discrete news at digest cadence), Kimi K3 open-weights approach (already covered contextually via the Moonshot distillation item + open-weights July 27 date is anticipatory not present-tense). Final tier_counts {1:5, 2:2, 3:0}; item_count 7; items_added 7 (all new items not in am); items_kept 0 (digest phase does not carry am items forward \u2014 those remain in am section)."
-    },
-    {
-      "run_id": "2026-07-23T11:00:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-07-23T11:00:00Z",
-      "ended_at": "2026-07-23T11:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 38000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 2500,
-        "deep_fetch": 0,
-        "discovery_search": 27000,
-        "curation": 5500,
-        "output_write": 3000
-      },
-      "fetches_made": 13,
-      "items_input": 8,
-      "items_output": 4,
-      "items_added": 2,
-      "items_kept": 2,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-23-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive, refresh phase enabled. Today's am file (2026-07-23-am.json) exists with 2 items from enrichment (ended_at 2026-07-23T06:20:00Z \u2014 fallback mini-digest path). Standard refresh path triggered. WebFetch 403-blocked per established pattern \u2014 WebSearch-only across 13 targeted queries covering: (1) AI news July 23 overnight model releases, (2) Anthropic Economic Futures Research Fund July 2026, (3) SAP Prior Labs acquisition Europe, (4) Microsoft Singapore AI infra $5.5B, (5) Anthropic Project Glasswing vulnerabilities, (6) Google DeepMind Gemini July 23 announcement, (7) Anthropic Economic Futures Fund research agenda July 22, (8) AI model release Europe/Asia overnight, (9) DeepSeek Qwen China AI models July 22-23, (10) Mistral Meta xAI news July 23, (11) DeepSeek V4 general availability launch date pricing, (12) Mistral robotics model 8B embodied AI, (13) Future of Life Institute AI Safety Index Summer 2026. Two items surfaced as genuine additions. ITEM 1 (tier-1 Asia): DeepSeek V4 GA \u2014 launched mid-July 2026 (approximately July 19) in Pro and Flash variants; 1M context; peak-valley pricing (costs double 9am\u201312pm and 2pm\u20136pm Beijing time, 24-hour email advance notice); off-peak V4 Pro output ~6 RMB (~$0.84/1M tokens) vs $50+/1M for Fable 5, ratio cited as ~1/57th at off-peak rates; near-Opus benchmark performance on coding/reasoning per early third-party reports; DeepSeek trains on Huawei Ascend + older Nvidia hardware post-export controls; open weights July 27 under Modified-MIT; NOTE: prior runs (July 22 11:00Z refresh, July 23 06:14Z enrichment) excluded this item citing incorrect expected-launch dates (July 27 and July 24 respectively) based on pre-launch coverage; multiple post-launch sources including wan27.org, KuCoin flash, deepseek.ai canonical page, deepinfra pricing guide now confirm GA occurred around July 19; adding to current refresh as a missed-but-real item. ITEM 2 (tier-2 US): Anthropic Economic Futures Research Fund research agenda \u2014 published July 22 2026; $200M fund part of $350M total commitment ($150M Claude Corps separately); five priority areas: firm/workplace AI impact, navigating transitions, income support modernization, building worker stakes proactively, public investment evidence; preference for partners sharing findings publicly at key milestones; explicitly deferred from the July 23 02am enrichment run due to enrichment 2-item cap. Also considered but excluded: SAP/Prior Labs acquisition (May 2026 announcement, too old even accounting for July 17 tech.eu closing-progress article \u2014 2+ months old); Microsoft Singapore $5.5B (April 2026, 3+ months old); Project Glasswing 10K+ vulnerability update (May/June 2026, 1-2 months old); Mistral Robostral Navigate 8B robotics model (July 9, 2 weeks old \u2014 too stale for refresh window); Future of Life Institute AI Safety Index Summer 2026 (published July 7, 2+ weeks old); no fresh Asia/Europe overnight announcements July 23 specifically surfaced beyond DeepSeek V4 already identified. Final tier_counts {1:3, 2:1, 3:0}; item_count 4; items_added 2; items_kept 2."
-    },
-    {
-      "run_id": "2026-07-23T06:14:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-07-23T06:14:00Z",
-      "ended_at": "2026-07-23T06:20:00Z",
-      "wall_time_ms": 360000,
-      "tokens_used": 32000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 21000,
-        "curation": 6500,
-        "output_write": 3000
-      },
-      "fetches_made": 8,
-      "items_input": 2,
-      "items_output": 2,
-      "items_added": 2,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-23-am",
-      "error": "no yesterday pm file \u2014 performed mini-digest only",
-      "partial": false,
-      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive, enrichment phase enabled. Yesterday's 2026-07-22-pm.json does NOT exist (July 22 1pm digest did not run \u2014 a consistent pattern for the past several days, digest phase appears to be down at the scheduler level). Triggered fallback path per enrichment.md: skip prune+enrich, perform mini late-breaking pass only. WebFetch not attempted \u2014 established 403-block pattern per prior runs \u2014 WebSearch-only across 8 targeted queries covering: (1) Alphabet Q2 2026 earnings results + Anthropic mark-to-market, (2) AI news July 22 2026 model releases, (3) 'July 22' 2026 AI model release announcements (Google/Meta/xAI), (4) Alphabet Google Q2 2026 capex hike + after-hours stock reaction, (5) Anthropic Claude news July 22 2026, (6) Meta AI moderation 13% errors story, (7) OpenAI news July 22 2026 announcements, (8) Anthropic Economic Futures Research Fund July 22. Sweep window ~19 hours since last refresh ended (2026-07-22T11:15Z). Two items surfaced as genuinely late-breaking and material. ITEM 1 (tier-1 US): Alphabet Q2 2026 earnings after-bell Wednesday July 22 \u2014 revenue $119.8B (+24% YoY), Google Cloud $24.8B (+82%), Cloud backlog $514B (+~$50B QoQ), Cloud operating margin 35.6% (roughly 3x YoY), operating income $40.8B (+30%), net profit +298% YoY, Q2 capex record $44.9B, FCF -$5.9B; BofA's $80B Anthropic mark-to-market thesis played out as modeled (Anthropic valuation Q1-end $380B \u2192 Q2-end $965B post-$65B-round, Alphabet ~14% stake produced ~$80B paper gain, headline EPS ~$8.38 vs Street ~$2.90); GOOGL -5% after-hours on 2026 capex guide raised to $195\u2013205B (from prior $180\u2013190B) and CFO Ashkenazi statement that 2027 capex will be significantly higher; Pichai 'early innings' AI framing; directly ties to Google Frozen v2 / anticipated-earnings item in yesterday's am file (that item's thesis played out \u2014 Anthropic markup did land, but market moved on the capex ratchet, not the paper EPS) and to Gemini 3.6 Flash / Flash-Lite / Flash Cyber item (82% Cloud growth + tripled margin explains why Google can cut Flash-tier prices while raising Cloud profitability). ITEM 2 (tier-1 US): OpenAI publicly launched 'Advertise in ChatGPT' self-serve Ads Manager on July 22 \u2014 moving out of May 2026 beta; any US advertiser can now create campaigns, set budgets, target on OpenAI Ads Manager console; sponsored blocks appear below ChatGPT answers (not inline, not above answer, OpenAI explicitly states ads do not shape response text); served only to adult users on Free and Go plans (Plus/Pro/Business remain ad-free \u2014 new retention lever for paid tiers); targeting on conversational-context signals distinct from search keywords; Best Buy, Lowe's, VistaPrint as day-one launch advertisers; previous $50K beta minimum-spend eliminated; launched ~14 hours before Alphabet Q2 earnings \u2014 first structural competitive move OpenAI has made against Google's ad monopoly; strategic pattern to watch: 'answer-surface sponsorship' as native ad format for conversational AI. Also considered but excluded: (a) Anthropic Economic Futures Research Fund research agenda published July 22 ($200M fund; part of $350M total commitment with $150M Claude Corps) \u2014 real but tier-2/3 policy-and-research item, and enrichment cap is 2 items; deferring to refresh at 7am to pick up if room. (b) Meta AI moderation claims \u2014 13% fewer errors, 10% more violations vs humans, but NYT reports business-account false-positives \u2014 real but tier-3 governance item, deferred to refresh. (c) Sam Altman briefing US officials next week on next AI models \u2014 real but not a shipped event yet, no news value until briefing occurs. (d) OpenAI security incident report \u2014 actually old (July 20 Hugging Face incident already covered in yesterday's am file, not new). (e) SAP-Prior Labs acquisition and $1.18B/4y frontier-lab plan \u2014 real EU story, tier-2, deferred to refresh if not stale. (f) Microsoft $5.5B Singapore AI infra pledge \u2014 deferred to refresh. (g) Anthropic Project Glasswing 10K+ vulnerabilities update \u2014 deferred to refresh; ties to Flash Cyber theme. (h) DeepSeek V4 July 24 launch \u2014 not yet released. (i) Kimi K3 weights July 27 \u2014 not yet released, already carried in yesterday's am. Final tier_counts {1:2, 2:0, 3:0}; item_count 2; items_added 2; items_kept 0 (fallback path \u2014 no yesterday-pm to keep from); items_dropped 0. Note in error field per enrichment.md fallback path spec. Standard commit + push."
     }
   ]
 }
