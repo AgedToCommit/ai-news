@@ -1,6 +1,33 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-24T17:12:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-24T17:12:00Z",
+      "ended_at": "2026-10-24T17:30:00Z",
+      "wall_time_ms": 1080000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 3500,
+        "scrape_sweep": 7200,
+        "tier_ranking": 2400,
+        "deep_fetch": 11000,
+        "discovery_search": 15000,
+        "curation": 8700,
+        "output_write": 200
+      },
+      "fetches_made": 18,
+      "items_input": 11,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-24-pm",
+      "error": null,
+      "partial": false
+    },
+    {
       "run_id": "2026-10-24T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
@@ -7420,63 +7447,6 @@
       "error": null,
       "partial": false,
       "notes": "Digest run 1pm EDT Sunday July 26. Pre-flight: kill switch inactive (paused=false), digest enabled. Today's am file (2026-07-26-am.json) exists with 8 items \u2014 all excluded from pm output by default per promotion rule, with one exception (Jensen Huang open-model letter \u2014 see below). WebFetch remained 403-blocked per established pattern; WebSearch-only across 12 queries covering: Sunday July 26 AI news sweep, Kimi K3 pre-release, Simon Willison / Ethan Mollick / ThursdAI weekend content, Karpathy bio follow-up, Trump administration Chinese AI ban considerations, Nvidia open-weights letter update, OpenRouter Chinese-AI market share, arxiv weekend papers. Sweep window: since last run ended_at 2026-07-26T11:00:00Z (7am ET) \u2014 6-hour Sunday morning window, historically the quietest digest window of the week. Two items in the output: (1) PROMOTION from am \u2014 Jensen Huang open-model letter (nvidia-jensen-huang-first-x-post-25-org-open-model-letter-july-24-2026) materially deepened over the weekend: signatory list doubled from 25 to 50 in roughly 36 hours with OpenAI and Google both flipping from initial absentees to signatories, along with AMD, Cisco, Cloudflare, GitHub, Block, Ollama, Palantir, ServiceNow, Replit, Cohere, Andreessen Horowitz, Palo Alto Networks and 12 others; Anthropic, Amazon, and xAI remain absent as of Sunday July 26, and multiple outlets (Forbes, Startup Fortune, Benzinga, Tom's Hardware) frame Anthropic's continued silence as the more revealing signal than the letter itself with Dario Amodei's 'open source is a red herring' as the philosophical marker; the story shape has cleanly shifted from 'US industry vs three frontier labs' to 'US industry vs Anthropic alone.' (2) NEW Tier 2 \u2014 OpenRouter market-share sweep (openrouter-chinese-ai-models-sweep-top-10-only-claude-us-july-26-2026): weekend-of-July-25-26 data shows Chinese AI models at 46.4% of routed tokens vs US models at 35.7% on OpenRouter; Chinese models now hold 8 of top 10 slots with only Anthropic's Claude family at 13.3% aggregate remaining from US labs; OpenAI and Google both dropped out of top 10 entirely; DeepSeek V4 Flash at $0.14/M input vs OpenAI GPT-5.5 at $5.00/M is the specific price mechanism (35x differential); the 46.4% is now the specific number Washington is citing in its Kimi K3 executive-order deliberations, hours before Kimi K3 open weights land tonight at 8pm ET. Cross-item pattern: both items point to the same specific structural read that hardened over the weekend \u2014 the US open-vs-closed weights fight has now become a specific commercial-alignment story where every major US technology company except Anthropic (and Amazon, xAI) has aligned on the open-weights side, and the specific market-share data on OpenRouter is the specific concrete number driving both the industry coalition-formation and the Washington executive-order deliberations. Final tier_counts {1:0, 2:2, 3:0}; item_count 2 \u2014 small but tight Sunday pm digest appropriate for a quiet news window with two substantive weekend-of-July-25-26 developments."
-    },
-    {
-      "run_id": "2026-07-26T11:00:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-07-26T10:45:00Z",
-      "ended_at": "2026-07-26T11:00:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 32000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 2000,
-        "deep_fetch": 0,
-        "discovery_search": 24000,
-        "curation": 4500,
-        "output_write": 1500
-      },
-      "fetches_made": 8,
-      "items_input": 2,
-      "items_output": 8,
-      "items_added": 2,
-      "items_kept": 6,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-26-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT. Pre-flight: kill switch inactive (paused=false), refresh enabled. Today's am file exists (2026-07-26-am.json, 6 items from 2am enrichment). Last run ended_at: 2026-07-26T06:22:00Z. WebFetch 403-blocked per established pattern; WebSearch-only across 8 queries covering overnight July 26 2026 window. Two items added: (1) Moonshot Kimi K3 open weights dropping tonight at 00:00 UTC July 27 (8pm ET July 26) \u2014 2.8T params, ~594GB MXFP4 safetensors, Modified MIT license, largest open-weight release in AI history, 4-8\u00d7 H100 80GB minimum to run, Microsoft evaluating for Copilot/Azure, data-sovereignty self-hosting angle; added as Tier 1 because the Jensen Huang letter and Grok 4.6/4.7 items already in the snapshot are both explicitly framed as responses to Kimi K3 without a dedicated K3 item existing; (2) Andrej Karpathy bio-removal incident July 26 \u2014 removed 'Anthropic' from X bio, fake departure leaks spread, he denied quickly ('I'd write a 10-paragraph essay'); framed against Anthropic's absence from the Jensen Huang 25-org open-model letter and Karpathy's 68-day tenure on the pre-training team; added as Tier 2. No tier-1 tier-1 refinements needed \u2014 existing Opus 5 item has no new overnight chatter that changes the substance. Final tier_counts {1:2, 2:6, 3:0}; item_count 8."
-    },
-    {
-      "run_id": "2026-07-26T06:22:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-07-26T06:00:00Z",
-      "ended_at": "2026-07-26T06:22:00Z",
-      "wall_time_ms": 1320000,
-      "tokens_used": 42000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 26000,
-        "curation": 12000,
-        "output_write": 2500
-      },
-      "fetches_made": 7,
-      "items_input": 6,
-      "items_output": 6,
-      "items_added": 1,
-      "items_kept": 5,
-      "items_dropped": 0,
-      "snapshot_written": "2026-07-26-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT. Pre-flight: kill switch inactive (paused=false), enrichment enabled. Yesterday's pm (2026-07-25-pm.json) had 5 items \u2014 all five enriched with meaningful new context and kept. WebFetch remained 403-blocked per established pattern; WebSearch-only across 7 queries (5 per-item enrichment + 2 late-breaking sweeps). Enrichment updates by item: (1) Claude Opus 5 \u2014 added OSWorld 2.0 result (beats Fable 5 at ~1/3 cost, computer-use axis specifically), added automated behavioral audit misaligned-behavior score 2.30 (lowest of any recent Claude \u2014 ahead of Opus 4.8, Sonnet 5, and Fable 5), added 'near-frontier not the frontier' framing consolidated from Vellum/buildfastwithai/aitoolsreview independent reviews; (2) Meta Muse Spark 1.1 consumer \u2014 added specific developer-API pricing ($1.25/$4.25 per MTok with $20 free credits) and Alexandr Wang's 'very aggressive and attractive' framing, added price-discrimination read (bounded free developer credits vs unlimited free consumer access same model), added day-two observation that no substantive consumer-side reviews have surfaced in first 30 hours; (3) Grok 4.6/4.7 \u2014 added day-two competitive-framing consolidation (multiple outlets frame Grok 4.6 explicitly as 'Musk's answer to China's AI monster' targeting Kimi K3), added timeline-realism read (independent trackers peg realistic public Grok 4.6 launch at late August to mid-September once post-training + eval + deployment finish); (4) Gemini 4 \u2014 added Andrew Curran interpretation ('largest model Google has ever trained') and Manifold prediction market pricing 83% probability of 2026 launch with caveat that Google has not committed a quarter; (5) OpenAI Codex July 24 \u2014 added the July 25 5am ET global outage (ChatGPT + API + Codex simultaneously, no published root cause, services restored later Saturday) and the day-two developer-facing caveat that GPT-Live developer API is still 'coming soon' so third-party voice-agent builders still use older Realtime API \u2014 updated title to include the outage. Late-breaking pass added one Tier-2 item: Jensen Huang first-ever X post on Thursday July 24 sharing a 25-organization open letter (NVIDIA, Microsoft, Meta, IBM, Dell, Mistral, Mozilla, Hugging Face, The Linux Foundation, Perplexity, Y Combinator + 14 others; notable absentees Anthropic, OpenAI, Google DeepMind) urging Washington not to restrict Chinese open-weight models \u2014 the coalition is designed to shape the response to Kimi K3's July 27 open-weights release. Cross-item pattern: the July 25 OpenAI outage is the specific reliability signal that lands 20 hours after the July 24 launch bundle, and the Jensen Huang letter is the specific policy signal that lands ahead of Kimi K3's July 27 open-weights arrival \u2014 carry both into next week's coverage. Final tier_counts {1:1, 2:5, 3:0}; item_count 6."
     }
   ]
 }
