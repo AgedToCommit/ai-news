@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-24T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-24T06:00:00Z",
+      "ended_at": "2026-10-24T06:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 36000,
+        "curation": 9000,
+        "output_write": 3000
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-24-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment of 2026-10-23-pm (3 items). Pre-flight: control.paused=false, enrichment enabled. All three carryovers kept and enriched with substantive new overnight context. (1) DeepSeek funding: added Reuters-sourced chip-design hiring angle + CrowdStrike cross-ref to ARTEX backend-model usage. (2) Microsoft Storm-0940/ARTEX: major enrichment — added CrowdStrike-attributed South Korean financial-sector campaign (late-Sep–early-Oct 2026, 9+ institutions including Shinhan Bank and Yegaram Savings Bank, operators routing through DeepSeek + Z.ai GLM-5.3 + Grok 4.6 via a reseller), ARTEX origin (Autumn-27, GitHub, July 26 2026 release under AGPL-3.0), Oct 8 closed-source conversion predating Microsoft disclosure, ~897 forks surviving the takedown, exposed open directories (Claude Code session histories, ARTEX configs, Claude memory files), CrowdStrike suspect profile (likely China-based 26-year-old, financially motivated). (3) Goodfire Cammarata: added ACL 2026 feature-consistency counter-paper, Goodfire's own Feb 2026 SAE demo/API deprecation, reported DeepMind SAE deprioritization context, source-conflict acknowledgment on Nanda's exact response. Late-breaking pass: 2 web searches scoped to Oct 23-24 Tier-1 announcements. No qualifying item surfaced — Mistral Large 4 'Le Chonk' open-weight drop is Oct 27-31 (not yet), Meta Muse Wonder/Wonder Full were Oct 12 (already prior-cycle), no Anthropic/OpenAI/DeepMind announcement for Oct 23-24 confirmed. Honest quiet-news-day finding, no items added. Direct HTTPS to many primary sources (microsoft.com/security/blog, deepseek.com) still unreachable; relied on WebSearch snippet aggregation + secondary coverage throughout. Tier counts {1:1, 2:2, 3:0}, item count 3 (unchanged from pm). all three items marked enriched_overnight: true, last_revision_by: enrichment, with new revisions appended and why_it_matters_brief rewritten per brief.md guidance."
+    },
+    {
       "run_id": "2026-10-23T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
