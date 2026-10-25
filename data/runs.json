@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-25T11:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-25T11:15:00Z",
+      "ended_at": "2026-10-25T11:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 23200,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 3500,
+        "output_write": 200
+      },
+      "fetches_made": 6,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-25-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. am file present (4 items from enrichment). Late-breaking sweep (since 2026-10-25T06:30:00Z) via 6 web searches. No Tier-1 model releases confirmed for Oct 25 itself. Two items added: (1) Kimi K3.1 Pro — Moonshot AI post-trained upgrade of Kimi K3, released Oct 23, 2.8T parameters, 1M-token context, open weights dropping Nov 4; sourced from AI model release aggregators; primary Moonshot AI announcement not directly verified — treat specs as provisional; Tier 1, region Asia. (2) UK AI Biosecurity Lab — UK government commits £100M, OpenAI £100M compute credits (Rosalind Biodefense programme), Anthropic up to £100M model access + tech support, Google DeepMind research collaboration; announced Oct 24 2026; not surfaced in enrichment late-breaking pass; Tier 2, region EU. No hero images confirmed. 6 web searches total. Also: fast-forwarded main branch to include 5 previously detached-HEAD commits (Oct 23-25 digest/enrichment/refresh runs that were not on main)."
+    },
+    {
       "run_id": "2026-10-25T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
