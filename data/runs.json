@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-26T17:25:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-26T17:10:00Z",
+      "ended_at": "2026-10-26T17:25:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 2000,
+        "tier_ranking": 500,
+        "deep_fetch": 2000,
+        "discovery_search": 22000,
+        "curation": 10000,
+        "output_write": 1500
+      },
+      "fetches_made": 13,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-26-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest sweep since 2026-10-26T11:15:00Z (last refresh end). Pre-flight: control.paused=false, digest enabled. Direct fetch of anthropic.com/news succeeded (WebFetch-verified) and surfaced Oct 26 2026 announcement: Anthropic files Form S-1 with SEC for proposed IPO on Nasdaq, ticker 'ANT', Goldman Sachs & Morgan Stanley as lead underwriters. All other direct lab fetches DNS-failed this run (openai.com, deepmind.google, huggingface.co, mistral.ai, simonwillison.net, aiweekly.co, vktr.com, investinglive.com, cryptobriefing.com, futurumgroup.com, sec.gov) — same DNS pattern as prior runs. Backfilled S-1 financial and share-structure details from web search aggregation of WSJ-sourced coverage: $16.3B H1 2026 revenue (Q1 $4.73B / Q2 $11.5B, ≈15x YoY), two customers = ~25% H1 revenue, Amazon+Google marketplaces = 47% of 2025 revenue, $80.7B H1 non-cash loss from convertible financing re-valuation, positive adjusted operating income (Bloomberg), compute commitments $518B–$750B. Share structure sourced from search excerpt of SEC-hosted S-1 (anthropicpbc-sx1.htm): Class A (public), Class T (LTBT, no economic rights, elects majority of board), single Class F share to Founder LLC entitled to 50.1% of total voting power on certain matters, PBC retained under Delaware law. Target IPO valuation ~$2T, November timing per secondary coverage. Second item: Mistral Large 4 open weights expected Oct 27 (one source) / 'end of October' (official). 1.05T total / 49B active MoE, 1M context (Mistral docs) vs 512k (Vals AI), custom license (not Apache 2.0 like Large 3), early access gated to developers/cybersec/government; private API with reduced moderation for privileged partners. Vals Index #32/44 at 48.05%. Promotion rule: not applied — am items (Stubbs/LTBT, Guest Investigators, Agent Skills donation) have not materially deepened during the day; the S-1 is a materially new event rather than afternoon context on the Stubbs item (even though both relate to the LTBT, the S-1 is the actual filing). 13 web interactions total (1 direct WebFetch success + 12 web searches, several of which cited DNS-failed hosts in search results that would need direct fetch). 2 items added, both Tier 1 / Tier 2. Final snapshot: 2 items (1 Tier 1, 1 Tier 2). hero_image null for both (anthropic.com post has no og:image, mistral.ai direct fetch DNS-failed)."
+    },
+    {
       "run_id": "2026-10-26T11:15:00Z-refresh",
       "phase": "refresh",
       "status": "success",
