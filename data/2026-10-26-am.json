@@ -2,13 +2,14 @@
   "snapshot_id": "2026-10-26-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-26",
-  "generated_at": "2026-10-26T06:30:00Z",
-  "generated_at_local": "2026-10-26T02:30:00-04:00",
+  "generated_at": "2026-10-26T11:15:00Z",
+  "generated_at_local": "2026-10-26T07:15:00-04:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-10-25T17:00:00Z", "duration_ms": 1800000 },
-    { "phase": "enrichment", "ran_at": "2026-10-26T06:00:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-10-26T06:00:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh", "ran_at": "2026-10-26T11:00:00Z", "duration_ms": 900000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 0 },
+  "tier_counts": { "1": 0, "2": 3, "3": 0 },
   "items": [
     {
       "id": "christopher-stubbs-anthropic-long-term-benefit-trust",
@@ -71,6 +72,33 @@
         { "source": "Anthropic — Open call for guest investigators in the life sciences", "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences", "take": "Primary source. The 8–12 week collaboration structure, the no-cost framing, the five-domain scope, and the data-rights/open-source commitments." },
         { "source": "Honolulu Star-Advertiser — Anthropic sets up wet lab as it expands AI drug program", "url": "https://www.staradvertiser.com/2026/09/18/breaking-news/anthropic-sets-up-wet-lab-as-it-expands-ai-drug-program/", "take": "Confirms the Bay Area physical biology lab (Sept 18, 2026). Head of life sciences Eric Kauderer-Abrams describes the lab as focused on fundamental biology, not drug discovery, with some work going to outside partners; staffing, opening date and biosafety level undisclosed." },
         { "source": "Unite.AI — Anthropic launches Life Sciences Verification Program in beta", "url": "https://www.unite.ai/anthropic-launches-life-sciences-verification-program-in-beta/", "take": "The Sept 17, 2026 LSVP context: verified life-sciences orgs get access to Mythos, Opus, and Sonnet models under relaxed safeguards for biology-related work, initially open to teams/institutions with Pro/Max access expected later. Explains the model-access leg of the stack the guest investigator program sits inside." }
+      ]
+    },
+    {
+      "id": "anthropic-agent-skills-agentic-ai-foundation",
+      "tier": 2,
+      "title": "Anthropic donates Agent Skills standard to the Agentic AI Foundation — 280M installs, ChatGPT, Cursor, GitHub Copilot, and VS Code already integrated",
+      "summary": "Anthropic announced on October 22, 2026 that it is donating the Agent Skills standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, covering the Agent Skills name and logo, the GitHub organization, and the agentskills.io domain. Agent Skills is an open format for giving AI agents specialized procedural knowledge and workflows — a skill is a folder with a SKILL.md file plus any needed scripts or reference material — developed originally while building Claude Code. The standard was published in December 2025 and has since been adopted by over 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code; about 1 million skills have been published and nearly 280 million have been installed. AAIF was co-founded by Anthropic, Block, and OpenAI in 2025 and previously received the Model Context Protocol (MCP) donation. Engineers from Anthropic, Google, OpenAI, and other companies will maintain the Agent Skills standard as individual contributors; David Soria Parra and Mahesh Murag are named Lead Maintainers. The proposed roadmap covers versioned releases, a formal proposal process, and security guidance for skill writers and installers. You do not need to join AAIF to use or contribute to Agent Skills.",
+      "link": "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "why_it_matters": "Agent Skills is the same format powering the SKILL.md files this site's own agent reads at the start of each run — so it is a concretely visible standard, not an abstract one. Moving ownership to AAIF under the Linux Foundation does the same thing the MCP donation did before it: it gives the standard a neutral home that's not subject to Anthropic's roadmap priorities alone, and it signals that Anthropic and its main competitors have reached enough agreement on the core mechanic — a structured text file in a folder that teaches an agent a task — to commit to shared governance. That is a higher bar than just shipping compatible things. The 280M install number is the most useful proxy for how much this has already saturated the tooling layer of AI development: if that figure is accurate, Agent Skills is already a de facto standard for the agentic coding-tool ecosystem (Cursor, Copilot, VS Code, and ChatGPT are the majority of where developers currently run AI-assisted code), and the AAIF donation is formalization of something already in wide use rather than a speculative bet on adoption. The MCP parallel is the right comparison: after Anthropic donated MCP in 2025, it became the dominant integration layer for connecting AI agents to tools and data sources across platforms. If Agent Skills follows that trajectory, the implication is that how you write and distribute agent instructions becomes a commodity format — something you can learn once and apply across Claude Code, ChatGPT, Copilot, and Cursor without re-encoding the knowledge for each platform. For Gabe specifically: this matters because Claude Code's skill system, which he's interacted with indirectly every time he runs it, is now governed by a cross-vendor standards body, and the public roadmap (versioned releases, formal proposals, security guidance) gives him a place to see what's coming and comment on it. The one caveat worth naming: the governance here is individual-contributor rather than organizational-representative, which means Anthropic engineers still have substantial de facto influence while Anthropic formally holds no privileged role — the same structure MCP runs under. Whether that separation is meaningful depends on how active the contributor base outside Anthropic becomes.",
+      "why_it_matters_brief": "Anthropic's SKILL.md format — the one powering Claude Code's own agent instructions — goes to a cross-vendor standards body under Linux Foundation, with 280M installs and ChatGPT, Cursor, and GitHub Copilot already integrated.",
+      "source": {
+        "name": "Anthropic News",
+        "type": "scrape",
+        "url": "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-10-26T11:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-26T11:00:00Z", "by": "refresh", "change": "created — Anthropic news post Oct 22 2026, missed by digest and enrichment runs. Agent Skills standard donated to Agentic AI Foundation (AAIF) under Linux Foundation. Oct 22 post not captured by prior runs: digest (Oct 25) swept anthropic.com/news and captured Stubbs (Oct 21) and Guest Investigators (Oct 22) but not this third Oct 22 post; enrichment (Oct 26 02:00Z) verified anthropic.com/news listing and noted 'no new posts since Oct 22' but this post was already there on Oct 22. Primary source: anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation — WebFetch-verified this run. Key facts: 70+ platforms, 280M installs, Linux Foundation / AAIF home, ChatGPT + Cursor + GitHub Copilot + VS Code integrated, individual-contributor governance (Soria Parra + Murag lead maintainers). No overnight (post-06:30Z Oct 26) items found in sweep: DNS failures for RSS feeds (HuggingFace, Simon Willison), no confirmed major lab announcements Oct 26, Mistral Large 4 open weights not yet released (due Oct 27). hero_image null." }
+      ],
+      "takes": [
+        { "source": "Anthropic — Donating Agent Skills to the Agentic AI Foundation", "url": "https://anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation", "take": "Primary source. The donation scope (name, logo, GitHub org, agentskills.io domain), the 70+ platform adoption figure, 280M installs, the individual-contributor governance model, and the roadmap items (versioned releases, formal proposals, security guidance)." }
       ]
     }
   ],
