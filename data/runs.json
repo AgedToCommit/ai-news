@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-27T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-27T06:17:54Z",
+      "ended_at": "2026-10-27T06:35:00Z",
+      "wall_time_ms": 1026000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 1500,
+        "tier_ranking": 0,
+        "deep_fetch": 2500,
+        "discovery_search": 18000,
+        "curation": 9000,
+        "output_write": 1000
+      },
+      "fetches_made": 7,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-27-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment of 2026-10-26-pm (1 Tier-1 Anthropic S-1, 1 Tier-2 Mistral Large 4). Pre-flight: control.paused=false, enrichment enabled. Both items had meaningful new overnight context and were kept + enriched. (1) Anthropic S-1: EDGAR filing now publicly accessible (direct search surfaced anthropicpbc-sx1.htm and Class F exhibit33-sx1.htm on sec.gov). Added Class F split-vote mechanics (holder can split vote at discretion up to total voting power; Founder LLC run by majority vote of the seven co-founders). Added expanded underwriter group (Morgan Stanley, Goldman Sachs, JPMorgan, Citi per secondary reporting). Added Reuters-sourced investor-day valuation pushback: ~$1.5T floor (down from ~$2T) tied to Q3 revenue growth of 45% to $16.8B — this also reconciles yesterday's 'disputed $16.8B' figure as a Q3 standalone rather than an alternative H1 number. Added Michael Burry's public skepticism toward trillion-dollar Anthropic+SpaceX valuations. Added three macro risk factors (Chinese open-weight competition, Trump-admin tensions, data center construction backlash). (2) Mistral Large 4: Release date firmed up as October 31 per Hugging Face listing for 'Mistral-Large-4-1T-A52B' (three outlets converge: aiweekly.co, Online Tech Tips, HF listing itself). Yesterday's Forklog Oct 27 cite now looks like a single-outlet mis-read of 'end of October'. License text still 'Coming soon' per Mistral docs three days before HF-pinned release. HF repo-name suffix 'A52B' is first public hint active-param count could be 52B rather than 49B — would reconcile yesterday's flagged discrepancy if confirmed. Both items now have enriched_overnight: true and last_revision_by: enrichment. Late-breaking pass (12-hour window since 2026-10-26T18:17Z): directly fetched anthropic.com/news — only post is yesterday's S-1 announcement (Oct 26); no Oct 27 posts yet. openai.com DNS failed on direct fetch (same pattern as prior runs). Multiple web searches for Oct 26-27 AI announcements turned up no confirmable Tier-1 announcements for the window — all surfaced items are the S-1 story itself. 0 items added. ~5 web searches + 2 WebFetches (anthropic.com succeeded, openai.com DNS-failed). hero_image stayed null for both items (anthropic.com post has no og:image per yesterday's direct fetch; mistral.ai DNS-failed)."
+    },
+    {
       "run_id": "2026-10-26T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
