@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-27T11:52:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-27T11:26:28Z",
+      "ended_at": "2026-10-27T11:52:00Z",
+      "wall_time_ms": 1532000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 12000,
+        "output_write": 2000
+      },
+      "fetches_made": 6,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-27-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path (am file existed from enrichment run). Since-filter: 2026-10-27T06:35:00Z. RSS sweep skipped (no rss-access sources reached due to DNS failures — consistent with prior runs). Scrape sweep: openai.com DNS-failed; aiweekly.co DNS-failed; direct WebFetches to most secondary sources DNS-failed. All sourcing via WebSearch. 6 extended/standard searches in Pass 1 scope, 3 more targeted verification searches for GPT-6.1 Terra. Items added: 1 — GPT-6.1 Terra (Tier 1), OpenAI launch Oct 26 2026, confirmed by BleepingComputer, TheNextWeb, cybersecuritynews.com, OpenAI X post, and openai.com URL in search results (direct fetch DNS-failed). Details sourced from search result snippets: $1/M input / $5/M output, 50% below Sol, 3× faster than Astra/Sol per OpenAI benchmarks, Critical Preparedness Framework rating, gpt-6.1-terra API name, available Plus/Pro/Enterprise/Edu. Items revised: 1 — Anthropic S-1 item updated with Bloomberg roadshow timing (week of Nov 9 start, pre-Thanksgiving debut) sourced from implicator.ai summary of Bloomberg. hero_image null for new item (openai.com DNS-failed; no og:image extracted from any secondary source). No Tier 1 items from today's refresh window beyond GPT-6.1 Terra. Mistral Large 4 weights still pending (Oct 31 target unchanged). Other Oct 27 search results were aggregator noise (unconfirmed GPT-6 Astra/Sol private-preview claims from low-quality sites) or pre-window items (Kimi K3.1 Pro, Nemotron 3.5 Bolt, Oct 23-24)."
+    },
+    {
       "run_id": "2026-10-27T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
