@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-27T17:25:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-27T17:10:00Z",
+      "ended_at": "2026-10-27T17:25:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 1500,
+        "tier_ranking": 500,
+        "deep_fetch": 1500,
+        "discovery_search": 32000,
+        "curation": 11000,
+        "output_write": 1500
+      },
+      "fetches_made": 32,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-27-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest sweep since 2026-10-27T11:52:00Z (last refresh end). Pre-flight: control.paused=false, digest enabled. Pass 1 (RSS): skipped — all rss-access host direct fetches DNS-failed from this agent's egress on all prior runs this week (consistent pattern); same again this run. Pass 2 (scrape): direct WebFetch of anthropic.com/news succeeded and surfaced only yesterday's Oct 26 S-1 announcement (already in am file). Direct WebFetches of openai.com, deepmind.google, huggingface.co, simonwillison.net, aiweekly.co, theneuron.ai, techmeme.com, riorundown.substack.com, apple.com all DNS-failed. anthropic.com/engineering succeeded — most recent post is Oct 13 (Redesigning source control), outside window. Pass 3-5 (ranking + deep fetch + discovery): ~28 WebSearch calls (mix standard + extended) covering today's AI aggregator leads, each major lab's Oct 27 activity (OpenAI, Anthropic, Google DeepMind, Meta, xAI, Mistral, DeepSeek, Alibaba Qwen, Cohere, Hugging Face), AI-adjacent hardware (NVIDIA, Apple M6), AI funding/acquisitions, AI research papers, AI regulation, AI partnerships. Pass 6 (curate+dedup+brief): wrote why_it_matters_brief per brief.md guidance for the one surviving item. Pass 7 (write): atomic write of 2026-10-27-pm.json + index.json prepend + this runs.json entry. Promotion rule: today's am file has 3 items (Anthropic S-1 T1, GPT-6.1 Terra T1, Mistral Large 4 T2); all three were refreshed earlier today at 11:52 UTC and have not materially deepened in the ~5-hour afternoon window — none promoted. Afternoon aggregator leads resolved: AMD/World Labs = Sep 28, 2026 (stale); OpenAI 722/377 math manuscripts = Oct 6, 2026 (stale, already covered historically); Reflection Beam open-weight model = Oct 5, 2026 (stale); SpaceX $40B GPU financing led by Apollo = Oct 7, 2026 (stale); Meta multi-billion-dollar equity raise FT report = June 2026 reporting being re-circulated (stale); Akamai/Anthropic $11.6B compute deal = Oct 7 (stale); Oracle/Tencent $7B AI Cloud = Oct 8 (stale). The Cohere / Qwen3.8-Flash-Next 'unexpected upload during evaluation' claim surfaced by one aggregator (riorundown via web search snippet) could not be verified by independent search — treated as unconfirmed, not written. The Anthropic FTC CIDs story was Oct 14, 2026 (stale, previously covered). Final digest: 1 item, Tier 3 — Apple's expected Oct 27 M6 Mac refresh (Gurman/Bloomberg reporting; separate 'Pro and Tell' hands-on event reportedly Oct 28). The AI-relevant angle (Dual 16-core Neural Engine, ~50% quantized AI uplift per Macwelt's Mac mini M6 Geekbench AI run in September) is anchored on already-shipped M6 Mac mini facts, so even if the Oct 27 announcement date slips to Oct 28 the item's core claims hold. hero_image null (apple.com DNS-failed; no og:image extractable from secondary coverage this run). Quiet-day digest by design — ~15 item cap is a ceiling not a floor, and the afternoon window produced one legitimately-today story worth cataloguing rather than padding with stale aggregator items."
+    },
+    {
       "run_id": "2026-10-27T11:52:00Z-refresh",
       "phase": "refresh",
       "status": "success",
