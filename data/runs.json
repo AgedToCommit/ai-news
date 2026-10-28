@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-28T11:26:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-28T11:25:18Z",
+      "ended_at": "2026-10-28T11:26:00Z",
+      "wall_time_ms": 42000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 500,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 15000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 5,
+      "items_input": 3,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-28-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard-path refresh. Last enrichment ended 06:35Z; sweep window is since then (~5 hours). No new items surfaced within strict 5-hour window. One coverage-gap fill added: GPT-6.1 Terra (OpenAI, released Oct 26) — a Tier 1 model release missed by the Oct 27 digest and Oct 28 enrichment due to persistent DNS failures on openai.com and associated press sites from this agent's egress. Added as out-of-window fill per common.md 'never silently drop' guidance. Other candidates evaluated and skipped: Meta Muse Wonder (released Oct 12, 16 days old, stale); Mistral Voxtral 3 (released Oct 20, 8 days old, stale); LFM3 (unconfirmed — Manifold market treats it as future/unreleased); Apple 'Pro and Tell' event starts at 10am PT (18:00Z) — after this run fires at 11:25Z, no results yet. 5 web searches made."
+    },
+    {
       "run_id": "2026-10-28T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
