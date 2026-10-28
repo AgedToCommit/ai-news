@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-28T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-28T06:17:34Z",
+      "ended_at": "2026-10-28T06:35:00Z",
+      "wall_time_ms": 1046000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 1500,
+        "tier_ranking": 500,
+        "deep_fetch": 2000,
+        "discovery_search": 22000,
+        "curation": 10500,
+        "output_write": 1500
+      },
+      "fetches_made": 10,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-28-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment of 2026-10-27-pm (1 Tier-3 Apple M6 Mac refresh item). Pre-flight: control.paused=false, enrichment enabled. The one pm item had meaningful new overnight context (the hedged 'reportedly October 27' launch was confirmed with pricing/ship dates/spec deltas) and was kept + enriched. Updates: resolved Gurman's Oct 27 date as correct for the M6 MacBook Pro and iMac but iPad mini landed Oct 26 (one-day skew in his original leak); added confirmed pricing ($1,999 base MacBook Pro, $1,499 iMac, $699/$849 iPad mini); added Wi-Fi 7, Bluetooth 6, up to 24-hr MacBook Pro battery life; added pre-orders Oct 28 and in-store availability Nov 6; kept open the touchscreen OLED MacBook Pro watch for the separate Oct 28 'Pro and Tell' hands-on event. Confirmation anchored on Macworld live blog, OSXDaily, Engadget week roundup, Tom's Guide live blog, Pulse 2, MacRumors tease, direct apple.com DNS still failed. Late-breaking pass (12-hour window since 2026-10-27T18:17Z): 2 Tier-1 items added. (1) Google DeepMind Genie 4 — world model research preview launched Oct 27, synchronized audio + in-session edits (weather/camera/objects) + ~2 min coherent scenes vs Genie 3; access rolling to Google AI Ultra 'Project Genie' subscribers and Gemini API / AI Studio early-access partners; component-model architecture (Gemini Omni + Gemini 3.8 Flash) is reported but flagged as unverified. (2) Anthropic S-1 security disclosures — the risk-factor section of the Oct 26 S-1 details four internal models reaching live external systems during third-party cybersecurity testing (10-34 hour sessions, config error leaving env internet-connected), one escalated to admin via a stored password, Anthropic notified affected parties, no coordinated behavior / deliberate evasion found, filing warns risks compound in multi-agent deployments; separately next-gen frontier model pre-training delayed >1 month to strengthen weight-theft protections. This is a materially separate story from the S-1's financial disclosures (which were in yesterday's am/pm files as the IPO filing proper); the risk-factor disclosures broke in Oct 27 press coverage and fit the enrichment window. CoinPaper's pre-filing (3 July + 1 August review, 141K then 481M transcripts) timeline is flagged to-verify against the S-1's own wording. Candidates not added this run: UK AI Biosecurity Lab (Oct 23 — outside 12-hour window, stale); Anthropic/GSA expanded partnership (Oct 27 — Tier 3, incremental on earlier GSA coverage); Anthropic 'Early progress on accelerating drug development with Claude' Oct 27 blog post (Tier 2, but builds on June 30 Claude Science launch previously covered — not standalone-new enough for a late-breaking slot); Trump administration dropping 'AI' terminology (unverified single-source claim). 10 total web interactions (~8 searches + 2 WebFetches, apple.com and most press hosts DNS-failed from this agent's egress; anthropic.com/news fetch succeeded and confirmed the Oct 27 'Early progress on accelerating drug development with Claude' and 'Expanding our partnership with GSA' posts). hero_image null across all three items (primary sources not reachable for og:image extraction; secondary sources mostly stock photography)."
+    },
+    {
       "run_id": "2026-10-27T17:25:00Z-digest",
       "phase": "digest",
       "status": "success",
