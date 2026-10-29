@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-29T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-29T17:00:00Z",
+      "ended_at": "2026-10-29T17:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 72000,
+      "tokens_breakdown": {
+        "rss_sweep": 1000,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 2000,
+        "discovery_search": 48000,
+        "curation": 14000,
+        "output_write": 4000
+      },
+      "fetches_made": 20,
+      "items_input": 5,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-29-pm",
+      "error": null,
+      "partial": false,
+      "notes": "RSS/scrape sweep largely blocked — simonwillison.net, huggingface.co, unite.ai, apple.com, deepmind.google, blog.google, github.blog all DNS-fail from this agent's egress; relied on ~18 web searches. Candidate pool after Pass 3: 5 (Gemini 4 Carbon reactions, GitHub Universe 2026 Day 1-2, Mistral Large 4 weights, Nvidia Rubin CPX, assorted analyst blog posts). Final: 2 items. (1) Gemini 4 Carbon — promoted from am (promoted_from_am: true) with afternoon context: Artificial Analysis independent knowledge-benchmark run reports Carbon hallucinating MORE than Argon (reversing Google's launch-day '2x reduction in unsupported claims' claim); Vals Index v2.2 lead over Opus 5.5 shrinks to 70.4% vs 70.2% within confidence band, Sonnet 5.5 still leads v2.2 at 70.85%; cost delta per Intelligence Index task settles at ~23% cheaper than Opus 5.5. Added takes from Artificial Analysis (via Mindstudio), Jake Handy / Handy AI, 9to5Google, cellcog.ai. Rationale: a launch-day marketing claim was reversed by independent testing on exactly the dimension (honesty / hallucination rate) Google led its announcement with — materially deepened, not just more coverage. (2) GitHub Universe 2026 (Oct 28-29 at Fort Mason, SF) — Day 1 keynote by Jay Parikh (EVP CoreAI, Microsoft) opened 9 AM PT Oct 28. Core announcements: Copilot Fusion GA (multi-model router), Copilot desktop app expanding to all paid plans with App Canvases, Agent HQ broadening coverage across OpenAI/Anthropic/Google/xAI/Cognition. Theme: 'All together now, in the agentic era.' Source confidence: medium — primary github.blog post DNS-fails from here, so all specifics from secondary sources (Unite.ai, blockchain.news, Microsoft Tech Hub, Cloudsmith, AGTP tweet). Some sub-feature claims (Copilot Dreaming, HydraFusion Max tier, exact pricing changes) did not reproduce across independent sources — flagged as unverified in item body. Rejected: Mistral Large 4 open weights (planned end-of-October release still 'Coming soon' on Mistral docs as of search time, no confirmed drop), Nvidia Rubin CPX (end-of-2026 announcement, not news this week), fresh Anthropic interpretability paper (search index didn't surface anything dated late Oct), AI acquisitions / regulation (nothing dated Oct 28-29). hero_image null on both items — primary source domains not reachable."
+    },
+    {
       "run_id": "2026-10-29T11:29:03Z-refresh",
       "phase": "refresh",
       "status": "success",
