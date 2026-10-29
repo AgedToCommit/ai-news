@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-29T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-29T06:15:00Z",
+      "ended_at": "2026-10-29T06:35:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 500,
+        "tier_ranking": 500,
+        "deep_fetch": 1000,
+        "discovery_search": 28000,
+        "curation": 10000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-29-am",
+      "error": null,
+      "partial": false,
+      "notes": "Pre-flight: control.paused=false, enrichment enabled, last successful run ended 2026-10-28T17:40:00Z (digest). Yesterday's pm had 1 item (Apple Pro-and-Tell touchscreen MacBook Pro). Sub-task 1 (prune+enrich): KEPT and ENRICHED with (a) concrete community-benchmark numbers for the already-shipping M5 Max 128 GB config — ~18–25 tok/s on quantized 70B via MLX, ~36 tok/s Qwen 3 27B via GGUF jumping to ~68 tok/s via MLX, ~72 tok/s Qwen3-Coder-Next 8-bit via MLX (sources: Tom's Hardware M5 Max review, promptquorum, insiderllm, Reddit threads); (b) macOS 27.2 beta touch-API context — gesture-recognizer APIs seeded Oct 6, two weeks before the hardware ships; (c) developer-reaction read via Michael Tsai's blog, 'touch-friendly not touch-first' framing. Updated summary, why_it_matters, why_it_matters_brief; added revisions entry; added 3 new takes (Tom's Hardware, Michael Tsai, iClarified). Set enriched_overnight=true, last_revision_by='enrichment'. Sub-task 2 (late-breaking): 8 web searches across Anthropic, OpenAI, DeepMind, Alibaba/Qwen, Mistral, Meta, generic 'AI news Oct 28–29 2026,' and Apple post-event recap. Nothing confirmed-new in the last 12 hours — GPT-6.1 Terra (Oct 26) was already captured in Oct 28 am; Gemini 4 remains unreleased per DeepMind's own public framing; Mistral Large 4 weights 'promised by end of October' per one tracker but no public release landed overnight; Anthropic / Alibaba / Meta Llama all quiet. Zero items added. Hard caps all under: 42k tokens, 20 min wall, 9 fetches. apple.com, techradar.com, engadget.com continue to DNS-fail from this agent's egress — no primary-source Apple confirmation possible, hero_image remains null. Final count: 1 item (same as yesterday's pm, enriched)."
+    },
+    {
       "run_id": "2026-10-28T17:40:00Z-digest",
       "phase": "digest",
       "status": "success",
