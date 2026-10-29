@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-29T11:29:03Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-29T11:29:03Z",
+      "ended_at": "2026-10-29T11:29:03Z",
+      "wall_time_ms": 0,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 8000,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-29-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard path (am file existed from 2am enrichment run). RSS sweep skipped — simonwillison.net, huggingface.co DNS-fail from this agent's egress. Scrape sweep also blocked (venturebeat.com DNS-fail). Relied on 7 web searches total. Items since 2026-10-29T06:35:00Z: (1) Gemini 4 Carbon (Oct 28 Google DeepMind announcement) — confirmed by VentureBeat/WCCFTech/RD World, missed by enrichment which searched DeepMind and found 'Gemini 4 unreleased'; Carbon is a sub-release under the Gemini 4 family, announced late Oct 28. Score 59 on Artificial Analysis Intelligence Index v5.0, tops 15/17 benchmark rows, 88.2% SEC-bench Pro, restricted to cyber defenders. Added as Tier 1. (2) Liquid AI LFM3 (Oct 27) — six 2B-class open-weight multimodal models (text/vision/audio/omni/decision), 1 GB at 4-bit, GGUF/MLX/ONNX on HuggingFace. Missed by Oct 28 digest (which focused on Apple/GPT-6.1 Terra/Genie 4/Anthropic S-1) and enrichment (which didn't search Liquid AI). Added as Tier 2. Rejected: Nvidia Nemotron 3.5 ASR (June 2026, too old), Gemini 4 Argon (Sep 30, already in prior snapshots), ETH disproof claim (Oct 26, pre-dates digest window). Final count: 3 items (1 tier 1, 1 tier 2, 1 tier 3). Caps: ~45k tokens (under 60k), under 25min wall, 9 fetches (under 20)."
+    },
+    {
       "run_id": "2026-10-29T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
