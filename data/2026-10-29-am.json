@@ -2,13 +2,71 @@
   "snapshot_id": "2026-10-29-am",
   "snapshot_type": "am",
   "calendar_date": "2026-10-29",
-  "generated_at": "2026-10-29T06:35:00Z",
-  "generated_at_local": "2026-10-29T02:35:00-04:00",
+  "generated_at": "2026-10-29T11:29:03Z",
+  "generated_at_local": "2026-10-29T07:29:03-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-10-29T06:35:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-10-29T06:35:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-10-29T11:29:03Z", "duration_ms": 0 }
   ],
-  "tier_counts": { "1": 0, "2": 0, "3": 1 },
+  "tier_counts": { "1": 1, "2": 1, "3": 1 },
   "items": [
+    {
+      "id": "google-gemini-4-carbon-frontier-oct-28",
+      "tier": 1,
+      "title": "Google DeepMind releases Gemini 4 Carbon — tops Artificial Analysis Intelligence Index v5.0 at score 59, leads 15 of 17 benchmark rows, 88.2% on SEC-bench Pro; initial access restricted to cyber defenders",
+      "summary": "Google unveiled Gemini 4 Carbon on October 28, taking the top spot on Artificial Analysis's Intelligence Index v5.0 with a score of 59 — one point ahead of Claude Opus 5.5 and two ahead of GPT-6.1 Terra Astra. Carbon leads 15 of 17 benchmark rows in Google's launch table, including 88.2% on SEC-bench Pro (vulnerability discovery), 54.8% on ExploitGym (exploitation), and 71.0% on CWE-bench (security patching). It also uses 29% fewer output tokens per task than Opus 5.5. Google is releasing access first to 'trusted cyber defenders,' followed by broader partner access via the Fairwind Program; no API or consumer date has been announced.",
+      "link": "https://deepmind.google/discover/blog/",
+      "why_it_matters": "This is Google retaking the benchmark crown from Anthropic. The headline number is 59 on Artificial Analysis's Intelligence Index v5.0 — that's the same benchmark that tracks Claude Opus 5.5 (58), GPT-6.1 Terra Astra (57), and other frontier models. One point sounds small, but the benchmark is a composite across a wide range of tasks and it's hard to game the whole thing at once, so a consistent lead across 15 of 17 rows is a real signal that Carbon is the current top performer. The cybersecurity framing is specific: 88.2% on SEC-bench Pro for finding vulnerabilities, 71.0% on CWE-bench for patching them. Google evaluated these numbers without safety guardrails, which matters for the comparison — deployed products run with guardrails, so the raw numbers aren't what you'd get from a production API. The 'trusted cyber defenders first' rollout repeats the pattern set by Gemini 4 Argon (Sep 30): Google routes frontier model access through government-adjacent security partners before opening it to developers. For Gabe: this model isn't available to try today, and Google hasn't committed a date for API access. The practical upshot is that the benchmark leaderboard just flipped again — the model you'd call the current best is now a Google model rather than an Anthropic or OpenAI one, though none of them are accessible in the same way for a hobbyist. The 29% output-token efficiency figure is commercially significant: at the same output-quality level, Carbon is meaningfully cheaper to run than Opus 5.5, which will matter when Google opens it up. The enrichment run at 2am EDT missed this announcement — Google's own framing appeared to say 'Gemini 4' was unreleased, but Carbon is a distinct sub-release under the Gemini 4 family name, announced late on Oct 28.",
+      "why_it_matters_brief": "Google's Gemini 4 Carbon just took the benchmark lead at score 59 on Artificial Analysis's index — ahead of Opus 5.5 and GPT-6.1 Terra — though it's only available to cyber-defender partners for now.",
+      "source": {
+        "name": "Google DeepMind (via VentureBeat, WCCFTech, RD World Online, OfficeChat, Kingy.ai coverage of the Oct 28 announcement)",
+        "type": "scrape",
+        "url": "https://deepmind.google/discover/blog/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-10-29T11:29:03Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-29T11:29:03Z", "by": "refresh", "change": "created — Google announced Gemini 4 Carbon on Oct 28. Missed by the 2am enrichment run, which searched DeepMind and found 'Gemini 4 unreleased' — likely because Carbon is a sub-release under the Gemini 4 family, and the enrichment's web searches didn't distinguish it from the broader 'Gemini 4' framing. Multiple secondary sources (VentureBeat, WCCFTech, RD World) confirm the Oct 28 announcement and the benchmark figures. Primary DeepMind blog not reachable from this agent's egress (DNS failure). hero_image null." }
+      ],
+      "takes": [
+        { "source": "VentureBeat — Google unveils Gemini 4 Carbon, retaking the world's no. 1 spot on updated, harder benchmarks — but access is limited", "url": "https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited", "take": "Lead coverage. Confirms the Oct 28 announcement, the Artificial Analysis Index score of 59 (one point ahead of Opus 5.5), and the 29% output-token efficiency advantage. Notes access is restricted to cyber defenders with no public API date." },
+        { "source": "WCCFTech — Google's Gemini 4 Carbon Tops Every Other Model In All But Two Of Google's Benchmarks", "url": "https://wccftech.com/googles-gemini-4-carbon-mogs-every-other-model-on-nearly-every-benchmark-performs-over-10x-better-than-any-publicly-available-model-when-generating-high-quality-security-patches/", "take": "Highlights the 88.2% SEC-bench Pro score for vulnerability discovery. Notes the benchmarks were run without safety guardrails, which matters for comparing to production deployments." },
+        { "source": "RD World Online — Gemini 4 Carbon tops AI index; cyber defenders get it first", "url": "https://www.rdworldonline.com/googles-gemini-4-carbon-takes-benchmark-lead-with-access-limited-to-cyber-defenders/", "take": "Confirms the Fairwind Program rollout path and the absence of a public release date. Notes the Vals AI index ranking puts Carbon second (70.36%) behind Claude Sonnet 5.5 (70.85%) on that separate index." }
+      ]
+    },
+    {
+      "id": "liquid-ai-lfm3-open-weight-2b-multimodal-oct-27",
+      "tier": 2,
+      "title": "Liquid AI ships LFM3 — six open-weight 2B-class multimodal models (text, vision, audio, omni, decision) that run in ~1 GB at 4-bit quantization, weights on Hugging Face with GGUF/MLX/ONNX",
+      "summary": "Liquid AI released LFM3 on October 27, a family of six 2B-class open-weight models built on LFM3-1.7B-Base covering text, vision, audio, omni, and decision tasks. Weights ship to Hugging Face with GGUF, MLX, ONNX, FP8, and NVFP4 checkpoints. At 4-bit quantization, the models use roughly 1 GB of RAM, targeting phone and laptop deployment. Liquid's own benchmarks show the text model averaging 49.37 across 29 tests, ahead of Qwen3.5-9B at 47.24 on the same suite, though the larger Qwen leads on harder reasoning tasks like GPQA Diamond (63.37 vs 80.40). Liquid positions LFM3 as fine-tuning starting points for specific tasks rather than general-purpose frontier models.",
+      "link": "https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/",
+      "why_it_matters": "Six open-weight models covering text, vision, audio, omni, and decision — all fitting in about 1 GB at 4-bit — is a lot of useful surface area for a hobbyist. The GGUF checkpoint means Ollama can pull it today; the MLX checkpoint means it runs natively on Apple Silicon with the bandwidth efficiency that makes MLX faster than llama.cpp on Macs. For Gabe's Python stack, `pip install mlx-lm` or `ollama pull lfm3:1.7b` and you have a multimodal model for local inference on whatever hardware is nearby. The benchmark honesty stands out: Liquid's own evaluation shows the model leading Qwen3.5-9B on its composite, but the GPQA Diamond gap (63.37 vs 80.40) is large — a 9B model wins decisively on hard reasoning. That's the right frame: these 2B models are genuinely useful for targeted tasks (vision Q&A, audio transcription, decision-making flows) and as fine-tuning bases, not as general chat assistants where the bigger models still win. The multi-format checkpoint release (GGUF, MLX, ONNX, FP8, NVFP4) is unusually broad for a single release and suggests Liquid is optimizing for adoption across the deployment-target spectrum rather than locking in one framework.",
+      "why_it_matters_brief": "Six open-weight 2B multimodal models (text, vision, audio, omni, decision) in ~1 GB at 4-bit — GGUF for Ollama, MLX for Apple Silicon, ONNX for everything else — all pulled from one HuggingFace release.",
+      "source": {
+        "name": "Liquid AI (via MarkTechPost, Orcarouter.ai coverage of the Oct 27 release)",
+        "type": "scrape",
+        "url": "https://liquid.ai/liquid-foundation-models"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-10-29T11:29:03Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-10-29T11:29:03Z", "by": "refresh", "change": "created — LFM3 was released Oct 27. Not captured by the Oct 28 digest (which focused on Apple Pro and Tell, GPT-6.1 Terra, Genie 4, Anthropic S-1) or the Oct 29 enrichment (which searched Anthropic/OpenAI/DeepMind/Qwen/Mistral/Meta but not Liquid AI). Benchmarks are from Liquid AI's own evaluation; no independent third-party benchmarks found. hero_image null — liquid.ai not reachable from this agent's egress." }
+      ],
+      "takes": [
+        { "source": "MarkTechPost — Liquid AI LFM3: Open-Weight 2B Multimodal Models", "url": "https://www.marktechpost.com/2026/10/27/liquid-ai-lfm3-open-weight-2b-multimodal-models/", "take": "Primary secondary coverage. Confirms the six-model family structure, 1 GB at 4-bit, and Hugging Face availability. Covers benchmark figures from Liquid's own evaluation." },
+        { "source": "Orcarouter.ai — LFM3-1.7B Ollama release", "url": "https://www.orcarouter.ai/blog/lfm3-1-7b-ollama-release", "take": "Confirms the model is pullable via Ollama, documenting the GGUF checkpoint availability for local inference." }
+      ]
+    },
     {
       "id": "apple-touchscreen-oled-macbook-pro-proled-xdr-oct-28",
       "tier": 3,
