@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-30T11:45:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-30T11:25:34Z",
+      "ended_at": "2026-10-30T11:45:00Z",
+      "wall_time_ms": 1166000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 8000,
+        "output_write": 3000
+      },
+      "fetches_made": 9,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-30-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path (am file existed from Oct 30 2am enrichment run). RSS/scrape sweep skipped — mistral.ai, thenextweb.com, betanews.com, thenewstack.io, vktr.com, labmemo.com all DNS-fail from this agent's egress (same pattern as prior runs). Relied on 9 web searches total. Sweep window: Oct 30 06:35Z to ~11:25Z (since last enrichment). Item added: (1) Mistral Large 4 open weights — confirmed released October 29, 2026 via TNW article (thenextweb.com/news/mistral-large-4-open-weights-release, dated Oct 29 2pm) and OODALoop brief. Official Mistral blog at mistral.ai/news/mistral-large-4-oss/ confirms (DNS-blocked, sourced via secondary coverage). Tier 1. Le Chonk: 1T params, ~49B active, Mistral Ecosystem Open-Weight license (modified MIT), HuggingFace, vLLM/SGLang recommended, 4× B200/B300 GPUs for quantized version, Terminal-Bench 4.0 41% post-RL. Missed by Oct 30 enrichment, which searched Mistral news but found weights still 'Coming soon' — likely because mistral.ai DNS-fails and the targeted search queries did not surface the TNW confirmation article in time. Existing items: (2) Gemini 4 Carbon — NO new developments found in the 5-hour sweep window; still no new independent benchmarks. Item kept unchanged. (3) GitHub Universe Mission Report — no official recap published yet as of this run; item kept unchanged. Optional re-pass on tier 1: Gemini 4 Carbon has no new chatter to integrate. Caps: ~52k tokens (under 60k), ~20min wall (under 25min), 9 fetches (under 20)."
+    },
+    {
       "run_id": "2026-10-30T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
