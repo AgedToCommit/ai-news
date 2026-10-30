@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-30T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-10-30T06:21:47Z",
+      "ended_at": "2026-10-30T06:35:00Z",
+      "wall_time_ms": 793000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 10000,
+        "output_write": 3000
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-30-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — simonwillison.net, github.blog, deepmind.google, blog.google, anthropic.com, openai.com, apple.com all DNS-fail from this agent's egress (same pattern as the Oct 29 pm digest). Relied on 8 web searches total. Yesterday's pm input: 2 items (Gemini 4 Carbon tier 1, GitHub Universe 2026 tier 2). Decisions: (1) Gemini 4 Carbon — KEEP+ENRICH. Overnight searches found no new independent benchmark results dated Oct 29–30 that would move the Oct 28 afternoon picture; story stands where the pm digest left it. Added one unverified-chatter note: OrcaRouter blog describes a Carbon checkpoint appearing on Chatbot Arena with internal Google staff impressions comparing coding quality to Opus 5.5 — flagged as leak-adjacent, not a benchmark, with the publisher's commercial-aggregator conflict of interest noted. Updated why_it_matters and why_it_matters_brief to reflect the 36-hour-later framing: the hole in Google's launch-day story (the hallucination claim) remains unfilled by Google or any new third party. (2) GitHub Universe 2026 — KEEP+ENRICH. Day 2 (Oct 29) now confirmed via a GitHub Blog Mission Report snippet as featuring a keynote by VP Social Impact Nicole Sanchez; no new Day 2 product announcements surfaced in reachable secondary coverage. Added a caveat on the overloaded 'Copilot Fusion' name (Microsoft has also used it for a planned consumer+enterprise app merger with an August 2026 target). Noted no official GitHub Blog post-event recap has published yet; Mission Report is the next source to watch. Late-breaking pass: 0 items added. Searched OpenAI/Anthropic/Mistral/xAI/DeepMind for Oct 29–30 news — no confirmed Tier-1 announcements surfaced. Mistral Large 4 open weights (end-of-October target) still 'coming soon' per vendor docs; no confirmed drop. Anthropic S-1 story is from Oct 26, pre-dates the 12-hour window. Caps: ~38k tokens (well under 100k), ~13min wall (well under 45min), 8 fetches (under 30). hero_image remains null on both items — primary source domains still DNS-unreachable."
+    },
+    {
       "run_id": "2026-10-29T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
