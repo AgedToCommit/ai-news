@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-30T17:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-10-30T17:05:00Z",
+      "ended_at": "2026-10-30T17:30:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 2000,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 48000,
+        "curation": 13000,
+        "output_write": 3000
+      },
+      "fetches_made": 15,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-30-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Pre-flight: control.paused=false, digest enabled. Today's am file (2026-10-30-am.json) had 3 items (Gemini 4 Carbon T1, Mistral Large 4 open weights T1, GitHub Universe T2), excluded by default. RSS/scrape sweep: anthropic.com WebFetch succeeded (returned no Oct 29–30 posts; most recent Anthropic news post is Oct 28); openai.com DNS-failed (same pattern as prior runs); other primary labs not individually fetched to conserve the fetch budget. Primary sourcing via 13 WebSearches (mostly standard, 2 extended). Items added (2 new, 1 promoted): (1) Big Tech Q3 2026 earnings bundle — Alphabet reported Oct 28 after close with $127.6B revenue (+25%), Google Cloud $30.7B (+103%), capex $51.4B, FCF −$9.1B, EPS $2.12 vs ~$3.00 expected, shares −8.25% after-hours; Meta reported Oct 29 after close with $64.6B revenue beat, EPS $3.83 vs $6.67 expected (dragged by $9.89B litigation charge), 2026 capex guide narrowed to $135–145B. Combined four-hyperscaler 2026 capex ~$700–725B. Tier 1. Confirmed by SEC 8-K URL for Alphabet, Newsquawk + LetsDataScience + Yahoo Finance for Meta, Tom's Hardware for aggregate. (2) OpenAI reportedly plans to buy Google TPUs — The Information scoop Oct 27, Reuters pickup Oct 27–28, OpenAI and Google not confirmed, Oracle TPUs-in-cloud 2027 angle from TrendForce. Tier 1. (3) Mistral Large 4 open weights — PROMOTED from am with afternoon context: first independent benchmarks landed (Artificial Analysis Intelligence Index 38 vs 9 for Large 3; Vals Harvey Legal Agent 6th of 75 at 15.83%; context window 524K independent vs 1M claimed). Material deepening of the am item, which had explicitly flagged that independent third-party benchmark comparisons had not yet been published. Promotion rare per the rule but justified by the specific flag in the am item. Not promoted: Gemini 4 Carbon (no new overnight developments beyond the am's framing) and GitHub Universe (Tier 2 in am, no new Day 2 announcements beyond what the am already noted). Candidates considered but dropped: Google Genie 4 (already covered in 2026-10-28-am and 2026-10-28-pm; no new material); GPT-6.1 Terra (already covered in prior days' snapshots); OpenAI containment / cut-internet-training (Oct 23, already covered); Trump voluntary AI accord (Sep 29, old); Nvidia earnings (not in this window); Qwen releases (none in window); AI startup funding (none in window). hero_image null across all three items (SEC filing has no og:image; secondary coverage sites not reliably reachable from this agent's egress). Caps: ~68k tokens (under 100k), ~25min wall (under 60min), ~15 fetches (under 50)."
+    },
+    {
       "run_id": "2026-10-30T11:45:00Z-refresh",
       "phase": "refresh",
       "status": "success",
