@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-10-31T11:55:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-10-31T11:00:00Z",
+      "ended_at": "2026-10-31T11:55:00Z",
+      "wall_time_ms": 3300000,
+      "tokens_used": 35000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 3000,
+        "output_write": 3000
+      },
+      "fetches_made": 10,
+      "items_input": 0,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-10-31-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to DNS-fail from this agent's egress (consistent with every prior run in this stretch). Ran 10 web searches across: model releases Oct 31 2026, OpenAI/Anthropic/Google lab announcements, AI research tools, Gemini 4 Carbon (Oct 28 — already in prior snapshots), GPT-6.1 Terra (Oct 26 — already in prior snapshots), China AI (DeepSeek/Alibaba/Baidu — no Oct 31 news), EU AI Act enforcement (August milestone, no specific Oct 31 news), Apple fiscal Q4 pre-earnings preview, Siri AI iOS 27 rollout status, Anthropic/OpenAI blog posts. Overnight Asia/Europe window (06:40Z–11:55Z) was quiet — no Tier 1 model releases, no lab announcements. Items added: 0. Applied one small revision to the Big Tech earnings item with Apple pre-earnings context: call confirmed Nov 2 at 2:00 PM PT, fiscal Q4 covers iPhone 18 Pro launch-week sales, guidance 9–11% YoY (~$111.7–$113.7B), Siri AI launched English with iOS 27 on September 14."
+    },
+    {
       "run_id": "2026-10-31T06:40:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
