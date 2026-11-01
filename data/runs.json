@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-01T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-01T11:45:00Z",
+      "ended_at": "2026-11-01T12:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 5000,
+        "output_write": 6000
+      },
+      "fetches_made": 9,
+      "items_input": 10,
+      "items_output": 6,
+      "items_added": 3,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-01-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to CONNECT-tunnel-403 from this agent's egress (consistent with every prior run in this stretch). Ran 9 web searches (5 parallel initial sweep + 4 targeted follow-ups) covering: Nov 1 AI model releases, OpenAI/Anthropic/Google/DeepMind news, Apple earnings preview, Chinese labs (DeepSeek/Alibaba/Moonshot), Mistral Large 4 license, OpenAI funding round, AI crawling opt-out standard. Three new items added: (1) Apple + Alibaba Qwen for China (iOS 27.3, December public rollout, developer beta Nov 4) — announced Oct 31, missed by prior enrichment sweep which searched 'Chinese labs' generically but didn't catch the Apple-specific angle; (2) OpenAI funding round cut ($30B → $20B target, $1.4T → $1.25T valuation, $11B committed as of Oct 31) — CNBC Oct 31 primary, missed by prior digest and enrichment runs whose searches focused on model releases and specific deal stories rather than the active funding round; (3) AI crawling opt-out standard (Google/Anthropic/OpenAI/Microsoft unified robots.txt directive, Oct 30) — missed by prior digest and enrichment runs. Two existing items revised: (a) Big Tech earnings — added Zacks consensus split note ($112.95B within Apple's guide vs Chartmill/FXEmpire above guide); (b) Mistral Large 4 — confirmed license as 'Mistral Ecosystem Open-Weight License' (modified MIT, MaaS commercial restriction), resolved prior 'Coming soon' ambiguity. OpenAI-TPU item: no new primary confirmation; no revision. hero_image remains null on all items — primary source domains unreachable. Caps: ~55K tokens (under 60K), ~15min wall (under 25min), 9 fetches (under 20)."
+    },
+    {
       "run_id": "2026-11-01T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
