@@ -1,0 +1,73 @@
+{
+  "snapshot_id": "2026-11-01-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-11-01",
+  "generated_at": "2026-11-01T17:25:00Z",
+  "generated_at_local": "2026-11-01T13:25:00-04:00",
+  "phase_history": [
+    { "phase": "digest", "ran_at": "2026-11-01T17:00:00Z", "duration_ms": 1500000 }
+  ],
+  "tier_counts": { "1": 0, "2": 2, "3": 0 },
+  "items": [
+    {
+      "id": "eu-ai-act-article-50-watermarking-deadline-dec-2026",
+      "tier": 2,
+      "title": "EU AI Act Article 50(2) machine-readable watermarking deadline lands December 2, 2026 — 31 days from today for providers of synthetic text/image/audio/video",
+      "summary": "Under the EU AI Act, providers of AI systems that generate synthetic text, image, audio, or video content must apply machine-readable markers to that output so downstream detectors can recognize it as AI-generated. The specific Article 50(2) obligation on the provider (upstream) side carries a grace period that ends December 2, 2026 — one month from today — after the EU's Digital Omnibus proposal moved the deadline from the original August 2, 2026 roll-in date. The other Article 50 transparency duties (user disclosure when interacting with a chatbot under 50(1); deployer-side deepfake labeling under 50(3) and 50(4)) remain in force from August 2, 2026. A separate downstream obligation sits with signatories to the EU's Transparency Code of Practice (finalized June 2026) to stand up an interoperable watermark-detection mechanism by February 2, 2027. Non-compliance penalties reach up to €35 million or 7% of global revenue. Secondary commentary notes the Digital Omnibus text is still subject to formal adoption and Official Journal publication, so the exact date could still shift by a few weeks in either direction.",
+      "link": "https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-article50-watermarking-deadline/",
+      "why_it_matters": "For a developer who ships any public-facing tool that generates AI content for users in the EU — a chatbot that writes product descriptions, a Python script that drafts HTML/CSS, a hobby project that outputs AI-generated images — Article 50(2) says the output must carry machine-readable markers that let a downstream detector recognize it as synthetic. The practical implementation picture is still being resolved: C2PA (Coalition for Content Provenance and Authenticity) is the leading candidate for images and video (OpenAI, Microsoft, and Adobe all already sign C2PA manifests on their outputs); the text-watermarking landscape is less settled, with Google's SynthID-Text and Meta's lineage-based approaches as the main contenders but no agreed standard. The December 2 provider-side deadline matters for anyone building before year-end who plans to serve EU users; the February 2 2027 detection-side deadline matters for anyone running a model-hosting service that wants to claim interoperable support. For Gabe specifically: if his personal Python projects don't generate content for the public in the EU, this doesn't bind him today — but Article 50 is the first concrete AI-content obligation with real teeth (up to €35M or 7% of global revenue), which makes it the leading indicator for how AI product requirements will look in other jurisdictions over the next 12–18 months. Practical implication: if Gabe builds a public web tool that calls an API like Claude or GPT and renders the output as a web page, the API provider already handles the C2PA/metadata path for images and audio; for text, the burden is more likely to land on the application developer rather than the model provider, which is where personal projects get caught up. Items to watch: whether the European Commission publishes the final guidance before December 2 (currently expected mid-November); whether the Digital Omnibus text pushes 50(2) to a later date in the Official Journal; and whether a major open-source Python package (watermarking-utils, invisible-watermark) emerges as the de facto standard for small developers.",
+      "why_it_matters_brief": "EU AI Act Article 50(2) watermarking deadline lands December 2, 2026 — anyone shipping synthetic text/image/audio/video to EU users has one month to get machine-readable markers in place, with up to €35M in fines.",
+      "source": {
+        "name": "CSA Labs Research Note (CSA_research_note_eu_ai_act_article50_watermarking_deadline_20260921); compliancehub.wiki Digital Omnibus analysis; Slaughter & May 'EU clarifies AI transparency duties as deadline looms'; Everything PR News 'EU AI Act December 2 Deadline Marketers Watermarking'; cross-referenced with the earlier CSA note on Article 50 transparency obligations (20260729)",
+        "type": "scrape",
+        "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-article50-watermarking-deadline/"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-11-01T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-01T17:25:00Z", "by": "digest", "change": "created — EU AI Act Article 50(2) machine-readable watermarking deadline documented as December 2, 2026 following the Digital Omnibus proposal that moved it from the original August 2, 2026 roll-in. Primary source: CSA Labs research note dated September 21, 2026. Secondary coverage from compliancehub.wiki, Slaughter & May, and Everything PR News corroborates the December date. Other Article 50 duties (50(1), 50(3), 50(4)) remain in force from August 2, 2026 — no change. Related February 2, 2027 detection-side deadline flagged for Code of Practice signatories." }
+      ],
+      "takes": [
+        { "source": "Cloud Security Alliance Labs — EU AI Act Watermarking Grace Period Ends December 2026", "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-article50-watermarking-deadline/", "take": "Primary explanation of the Article 50(2) scope: upstream provider-side obligation to apply machine-readable markers; downstream detection-side obligation falls on Transparency Code of Practice signatories by February 2, 2027. Carries the Digital Omnibus deadline shift and the retention of other Article 50 duties under the August 2, 2026 roll-in." },
+        { "source": "Compliance Hub Wiki — EU AI Act Article 50 Transparency Digital Omnibus 2026", "url": "https://compliancehub.wiki/eu-ai-act-article-50-transparency-digital-omnibus-2026/", "take": "Specifies that the Digital Omnibus moved only the provider-side marking duty, not the entire Article 50 regime. The deployer-side duties (chatbot disclosure, deepfake labeling) remain unchanged from August 2, 2026." },
+        { "source": "Slaughter and May — EU clarifies AI transparency duties as deadline looms", "url": "https://thelens.slaughterandmay.com/post/102ne38/eu-clarifies-ai-transparency-duties-as-deadline-looms", "take": "Lays out the practical compliance timeline. Useful for the status-of-formal-adoption caveat: 'depends on formal adoption and Official Journal publication' means the specific December 2 date could shift by a few weeks in either direction." },
+        { "source": "Everything PR News — EU AI Act December 2 Deadline Marketers Watermarking", "url": "https://everything-pr.com/eu-ai-act-december-2-deadline-marketers-watermarking", "take": "The marketing/publishing-side framing: anyone running an AI-content pipeline that reaches EU users should treat the December 2 date as the point of compliance exposure, not the earlier August 2 one." }
+      ]
+    },
+    {
+      "id": "tenstorrent-series-e-15b-oct-19-2026",
+      "tier": 2,
+      "title": "Tenstorrent closes $1.5B Series E at $6.2B valuation — Jim Keller's RISC-V AI chip startup more than doubles its December 2024 valuation, with Morgan Stanley and T. Rowe Price joining the cap table",
+      "summary": "Tenstorrent, the AI chip startup led by veteran CPU architect Jim Keller, closed a $1.5 billion Series E on October 19, 2026 at a $6.2 billion post-money valuation — more than double its December 2024 valuation. Investors reportedly include Trace Capital, Innovation X, ARK Invest, Morgan Stanley, and T. Rowe Price. Tenstorrent builds RISC-V-based AI accelerators (Grayskull, Wormhole, and Blackhole generations) and ships an open-source training/inference software stack (Metalium, TT-Buda, TT-NN) as an alternative to Nvidia's CUDA. The round is sized to carry Tenstorrent through the Blackhole production ramp and the next-generation chip's tape-out in 2027.",
+      "link": "https://valueaddvc.com/blog/october-2026-ai-funding-rounds-tenstorrent-typesafe-modal",
+      "why_it_matters": "The Tenstorrent round is the clearest signal in the October 2026 funding window that institutional capital is willing to put real money behind alternatives to Nvidia — not in the 'custom hyperscaler silicon' category (TPU, Trainium, MAIA) that the Alphabet October 28 call surfaced, but as an independent chip company competing on open hardware and open software. For Gabe's Python stack, two things are specific. (1) Tenstorrent's software stack is PyTorch-tuned and increasingly Hugging Face-compatible — Metalium is the kernel-level API, TT-NN is the PyTorch-equivalent high-level framework, TT-Buda is the model compiler. The next 12 months of API-level stability on PyTorch is what determines whether non-CUDA inference becomes a credible option for personal projects, rather than remaining a research curiosity. If the Blackhole production ramp in Q1 2027 ships with a stable torch.compile backend, that would be the clearest practical signal that Tenstorrent is production-ready for the kind of workloads Gabe's hobby projects run. (2) Jim Keller's architectural approach — Tensix cores with scale-out via Ethernet rather than Nvidia's proprietary NVLink interconnect — is a bet that commodity-ish hardware with better software can catch up to Nvidia's full-stack dominance. The $6.2 billion valuation says enough institutional investors are willing to bet on it alongside Morgan Stanley and T. Rowe Price, which typically don't enter at this stage unless they expect an IPO window in the next 18–24 months. The connection to this morning's Big Tech earnings (AM file) and the OpenAI–Google TPU report (AM file): all three are signals that Nvidia's compute monopoly is under commercial pressure from distinct directions — hyperscaler custom silicon, cross-cloud TPU resale, and now Series E-funded independent chip companies. The 2027–2028 window is where these converge or don't. Specific near-term watch items: (a) Blackhole samples now, production ramp Q1 2027 — whether the chip actually ships at advertised 745 TFLOPs FP8 and the quoted $999 developer-card price; (b) the next Grayskull and Wormhole production ramps and whether $1.5B of Series E translates into revenue by Q4 2027; (c) whether Tenstorrent's open-source software stack attracts a critical mass of PyTorch-ecosystem contributors.",
+      "why_it_matters_brief": "Tenstorrent's $1.5B Series E at $6.2B valuation signals institutional appetite for Nvidia alternatives beyond hyperscaler custom silicon — RISC-V hardware plus PyTorch-tuned open software, from Jim Keller.",
+      "source": {
+        "name": "Reuters report relayed via Value Add VC October 2026 roundup, aifunding.me weekly roundup Oct 19–23, 2026, af.net real-time AI funding tracker",
+        "type": "scrape",
+        "url": "https://valueaddvc.com/blog/october-2026-ai-funding-rounds-tenstorrent-typesafe-modal"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-01T17:25:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-01T17:25:00Z", "by": "digest", "change": "created — Tenstorrent $1.5B Series E at $6.2B post-money valuation, closed October 19, 2026 per Reuters relay via Value Add VC and aifunding.me. More than double the December 2024 valuation ($2.75B). Investor list per Reuters: Trace Capital, Innovation X, ARK Invest, Morgan Stanley, T. Rowe Price. Framed as the clearest October 2026 signal of institutional appetite for Nvidia alternatives outside the hyperscaler-custom-silicon category." }
+      ],
+      "takes": [
+        { "source": "Value Add VC — October 2026 AI Funding Rounds: Tenstorrent, TypeSafe, Modal", "url": "https://valueaddvc.com/blog/october-2026-ai-funding-rounds-tenstorrent-typesafe-modal", "take": "Clean summary of the three largest October 2026 AI-infra rounds. Carries the Tenstorrent $1.5B Series E as the largest, TypeSafe AI at $870M at $7.5B (October 9), and Modal Labs at $750M Series D at $15.75B — useful for understanding the comparative scale of institutional interest in AI chips vs. AI developer platforms." },
+        { "source": "AI Funding — This Week in AI Funding: Oct 19–23, 2026", "url": "https://aifunding.me/insights/weekly-roundup-oct-19-23-2026", "take": "Confirms the October 19 Tenstorrent close date and the $6.2B post-money valuation, independent of the Value Add VC roundup. Also carries the Reuters attribution for the figure." },
+        { "source": "af.net — AI startups raise $74.1 billion across 77 funding rounds by October 2026", "url": "https://af.net/realtime/ai-startups-raise-74-1-billion-across-77-funding-rounds-by-october-2026/", "take": "The aggregated-total context: Tenstorrent's $1.5B is one of the largest single rounds in a month where the aggregate AI-startup fundraise count hit 77. Excluding OpenAI's $20B March-round tranche that was reported in October, the organic October 2026 AI funding is roughly $6B of new money, which puts Tenstorrent at about 25% of that total — a signal of how concentrated the chip-startup bet is." }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
