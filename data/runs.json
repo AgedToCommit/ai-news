@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-01T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-01T06:00:00Z",
+      "ended_at": "2026-11-01T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 11500,
+        "output_write": 3000
+      },
+      "fetches_made": 10,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-01-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains (anthropic.com, openai.com, deepmind.google, mistral.ai, github.blog, huggingface.co, simonwillison.net) continue to be unreachable from this agent's egress (consistent with every prior run in this stretch). Relied on 10 web searches. Yesterday's pm file (2026-10-31-pm.json) was intentionally empty per the no-promotion-by-default rule — its own notes route enrichment to prune/enrich the three items in yesterday's am file (2026-10-31-am.json), which is the source of truth for the three Tier-1 items being carried forward: Big Tech Q3 2026 earnings, OpenAI/Google TPU report, Mistral Large 4 open weights. Decisions: (1) Big Tech Q3 2026 earnings — KEEP+ENRICH. Two concrete overnight additions: Wedbush raised its 2027 Meta capex estimate from $210B to $249B specifically citing Muse AI compute needs (first concrete sell-side number put on Zuckerberg's 'notably larger' 2027 framing); Morgan Stanley separately lifted its 2027 estimate to ~$225B (~29% above prior work); Needham's Laura Martin advised 'stay on the sidelines' on Meta. Also firmed up Apple's Monday Nov 2 consensus: Chartmill $115.33B revenue / $2.02 EPS, FXEmpire $115.06B / $2.01 EPS (27 analysts), ChartRow $1.98 EPS (8 analysts) — this consensus is ~$1.3–$3.6B above the top of Apple's own $111.7–$113.7B guide, which raises the bar going into Monday's print. (2) OpenAI/Google TPU — KEEP+ENRICH light. Two further secondary signals: Alphabet CFO reportedly said most TPU-sales revenue would show up in 2027 (which explains the Oct 28 non-mention without requiring a disconfirmation); Google Cloud's Thomas Kurian quoted saying the company wants customers to have 'a broad selection of models, including those from OpenAI' (pattern-matches a reciprocal commercial arrangement — OpenAI confirmed last week it will make its frontier models available through Google Cloud — without confirming the TPU-purchase scope). Still no primary confirmation from either company. (3) Mistral Large 4 — KEEP+ENRICH light. Small refinements: Vals AI composite now showing 32nd of 44 at 48.05% (slight shift from the Oct 31 reading of 35th of 48 at 48.1%, reflecting Vals adjusting its tracked model set); full published pricing beyond the Oct 31 input number ($0.14/M cached input, $4.18/M output alongside the $1.36/M input list and $0.68/M launch discount); license status still mixed in widely-indexed sources — some aggregator HuggingFace card references show 'Coming soon' in the license cell for Large 4 and secondary reporting is split between 'custom license' and 'near-MIT.' Does not contradict the Oct 29 weights-released status. Late-breaking pass: 0 items added. The Oct 31 17:15Z → Nov 1 06:00Z window was genuinely quiet — Saturday Nov 1 is traditionally a quiet model-release day, and no confirmed Tier-1 model releases or lab announcements surfaced across 10 web searches covering: Oct 31/Nov 1 model releases, Hugging Face trending, Chinese labs (DeepSeek/Alibaba/Moonshot), Simon Willison weeknotes, Anthropic Nov 12 usage policy enforcement, Apple pre-earnings analyst consensus, Nvidia-OpenAI $100B deal status, Mistral HuggingFace license. Caps: ~48k tokens (well under 100k), ~20min wall (well under 45min), 10 fetches (well under 30). hero_image remains null on all three items — primary source domains still unreachable."
+    },
+    {
       "run_id": "2026-10-31T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
