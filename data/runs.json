@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-02T17:50:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-02T17:31:33Z",
+      "ended_at": "2026-11-02T17:50:00Z",
+      "wall_time_ms": 1107000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 9500,
+        "output_write": 3000
+      },
+      "fetches_made": 14,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-02-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. RSS/scrape passes skipped — primary lab domains (simonwillison.net, www.theneuron.ai, aiweekly.co) continue to be unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 12 web searches covering: Nov 2 model releases, Anthropic/OpenAI/Google/DeepMind news, Simon Willison blog, Hugging Face releases, Qwen/DeepSeek/Kimi/Zhipu Chinese labs, Chip/semiconductor news, Apple earnings preview, developer tool launches, dated 'November 2 2026' AI announcement, SemiAnalysis GDPx benchmark, OpenAI robots.txt token, ADNOC/G42/OpenAI partnership, Alphabet Q3 2026 earnings, Nathan Lambert Interconnects, Microsoft MAI model release. Three items selected and written: (1) Alphabet Q3 2026 earnings (Oct 28) — Google Cloud $30.7B +103%, TPU 'meaningful contributor,' 2027 capex >$300B; (2) Shared robots.txt AI-training opt-out token `__usage_ai-training` (Oct 30, Anthropic Kevin Kelley IETF draft) — four-lab commitment, Anthropic implementing now, Google/Microsoft/OpenAI through 2027; (3) Apple Intelligence coming to mainland China with iOS 27.3 in December — iOS 27.3 developer beta launching this week, Alibaba Qwen model stack. am-file items (EU AI Act Article 50 countdown, Tenstorrent Series E, DeepSeek $15B round) excluded by default per promotion rule — none materially deepened during the day. Candidates considered but dropped: SemiAnalysis GDPx benchmark (could not corroborate the benchmark's existence across any primary or independent source); ADNOC/G42/OpenAI partnership at ADIPEC (coverage ambiguous — appears to be an extension of the 2019 ADNOC/G42 JV and 2024 ENERGYai launch, not a new November 2 OpenAI deal); iQIYI AI film studio Shanghai (Tier-3, product-launch adjacent, below the volume target cut); Ebix/intentyx SMARE agentic AI governance platform (vendor-specific product launch, no connection to Gabe's stack); South Korea 21.3T won AI budget in 820.9T won total budget proposal (policy proposal, awaiting legislative action); Microsoft MAI-Image-2.7 preview (Oct 27 — single-source, not corroborated against Microsoft's own release post). Caps: ~38K tokens (well under 100K), ~18.5 min wall (well under 60 min), 14 fetches (well under 50). No fallback paths triggered. hero_image null for all three — Alphabet investor-relations PDF has no og:image path; Unite.AI opt-out token coverage is content-only; MacRumors Apple Intelligence coverage uses author-specific thumbnails that would not render as hero images at hot-link quality."
+    },
+    {
       "run_id": "2026-11-02T11:54:00Z-refresh",
       "phase": "refresh",
       "status": "success",
