@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-02-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-02",
-  "generated_at": "2026-11-02T06:35:00Z",
-  "generated_at_local": "2026-11-02T02:35:00-04:00",
+  "generated_at": "2026-11-02T11:54:00Z",
+  "generated_at_local": "2026-11-02T07:54:00-04:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-02T06:35:00Z", "duration_ms": 1080000 }
+    { "phase": "enrichment", "ran_at": "2026-11-02T06:35:00Z", "duration_ms": 1080000 },
+    { "phase": "refresh",    "ran_at": "2026-11-02T11:54:00Z", "duration_ms": 1620000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 0 },
+  "tier_counts": { "1": 1, "2": 2, "3": 0 },
   "items": [
     {
       "id": "eu-ai-act-article-50-watermarking-deadline-dec-2026",
@@ -72,6 +73,36 @@
         { "source": "KuCoin — Tether Invests $1.5 Billion in Tenstorrent's E-Round at a $6.2 Billion Valuation", "url": "https://www.kucoin.com/news/flash/tether-invests-in-tenstorrent-s-1-5b-e-round-at-6-2b-valuation", "take": "The KuCoin headline over-states Tether's share (Tether participated in the $1.5B round, did not provide the full amount), but the underlying confirmation that Tether Investments participated is corroborated across Dealroom and other secondary sources. Represents a notable crypto-balance-sheet entry into an AI-chip Series E." },
         { "source": "Tom's Hardware — Jim Keller's Tenstorrent Downgrading Blackhole p150 From 140 to 120 Tensor Cores Via Firmware", "url": "https://www.tomshardware.com/tech-industry/semiconductors/jim-kellers-tenstorrent-is-downgrading-blackhole-p150-cards-from-140-to-120-tensor-cores-via-firmware-update-will-ship-cards-with-120-tensor-cores-going-forward-company-claims-existing-users-should-expect-1-2-percent-performance-drop", "take": "Independent-of-the-funding-round production signal — the Blackhole p150 ships with a firmware-level tensor-core reduction. Tenstorrent frames the impact as 1–2% performance loss; the practical read is that silicon yields on 140 cores were not meeting production targets, which is the kind of production-execution issue that the $1.5B Series E is sized to resolve." },
         { "source": "AI Funding — This Week in AI Funding: Oct 19–23, 2026", "url": "https://aifunding.me/insights/weekly-roundup-oct-19-23-2026", "take": "Confirms the October 19 Tenstorrent close date and the $6.2B post-money valuation, independent of the Value Add VC roundup. Also carries the Reuters attribution for the figure." }
+      ]
+    },
+    {
+      "id": "deepseek-15b-series-b-oct-22-2026",
+      "tier": 1,
+      "title": "DeepSeek closes ~$15B round at ~$74B valuation — Tencent and CATL lead China's largest-ever AI fundraise, with IPO preparations begun",
+      "summary": "DeepSeek, the Hangzhou-based AI lab behind the open-weight R1 and V3 model series, closed approximately 100 billion yuan (about $15B) in its latest funding round, per Bloomberg's October 22, 2026 report. CATL — the world's largest EV battery maker — and Tencent were the largest backers, both doubling down from DeepSeek's first external round (50B yuan, June 2026, at ~$52–59B post-money valuation). DeepSeek raised its target at least twice during the process — from 50B yuan to 80B yuan, then to the final ~100B yuan tally as investor demand exceeded the initial ask. A report dated October 27 noted the round had not formally closed as of that date; a secondary source citing The Information placed the final close at approximately 105.5B yuan (~$15.8B) on October 30. The new post-money valuation is approximately 500 billion yuan (~$74–75B). DeepSeek is reportedly preparing a STAR Market IPO filing as early as late 2026, targeting a public listing in 2027.",
+      "link": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs",
+      "why_it_matters": "At $15B, this is China's largest single AI funding round on record, and the investor mix is unusual. CATL's presence isn't a typical VC play — it's the world's leading EV battery manufacturer betting that AI-driven manufacturing optimization, battery design, and energy management will need owned inference infrastructure, not rented US-provider access. Tencent's doubling-down covers cloud and gaming angles; implied state-fund participation points to the geopolitical read that a well-funded domestic lab is a strategic asset independent of commercial returns. For developers who use DeepSeek's open-weight models (R1, V3, and whatever follows): a $15B war chest funds the next-generation training runs and the datacenter buildout needed to serve them at scale. DeepSeek's current models run locally on consumer hardware in quantized form, are on Hugging Face, and are torch-compatible — directly relevant to Gabe's Python projects and often the best open-weight option in the 70B–200B parameter class. A well-funded DeepSeek accelerates the open-weight frontier, which broadly benefits anyone who doesn't want to pay API costs or be locked into a single provider. On chips: US export restrictions on H100/H200/B200 have pushed DeepSeek toward Huawei Ascend and custom ASICs; this round is sized to push through that constraint. The 2027 STAR Market IPO timeline, if it holds, would be the first major Chinese AI lab public listing and the first real price-discovery event for what frontier AI infrastructure is worth outside the US venture ecosystem.",
+      "why_it_matters_brief": "DeepSeek's $15B raise at a ~$74B valuation — backed by CATL and Tencent — is China's largest AI fundraise and sizes the lab to push the open-weight frontier on a non-Nvidia chip stack.",
+      "source": {
+        "name": "Bloomberg — DeepSeek Raises $15 Billion in Challenge to Leading US Labs (Oct 22, 2026); Bloomberg — DeepSeek to Raise at Least $12 Billion in Tencent-Backed Funding (Oct 6, 2026); LetsDataScience relay; WOWTALE — DeepSeek Pursues $15B Funding Round as Valuation Jumps to $74B (Oct 27, 2026)",
+        "type": "scrape",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-02T11:54:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-02T11:54:00Z", "by": "refresh", "change": "created — DeepSeek's ~100B yuan ($15B) round confirmed by Bloomberg Oct 22 2026. CATL and Tencent led. Post-money valuation ~$74–75B, up from ~$52–59B in June 2026 first round. Round target raised twice (50B→80B→~100B yuan) as demand exceeded initial ask. October 27 report notes formal close not yet confirmed; secondary source citing The Information places close at ~105.5B yuan on October 30. 2027 STAR Market IPO preparations underway. Prior runs (Nov 1 enrichment, Nov 1 refresh, Nov 2 enrichment) searched 'Chinese labs' generically and focused on model releases — missed this capital-event story." }
+      ],
+      "takes": [
+        { "source": "Bloomberg — DeepSeek Raises $15 Billion in Challenge to Leading US Labs", "url": "https://www.bloomberg.com/news/articles/2026-10-22/deepseek-raises-15-billion-in-challenge-to-leading-us-labs", "take": "Primary report confirming the ~100B yuan figure, CATL and Tencent as largest backers, and the round's doubled-twice target growth from 50B to final ~100B yuan. The 'in challenge to leading US labs' framing is Bloomberg's." },
+        { "source": "Bloomberg — DeepSeek to Raise at Least $12 Billion in Tencent-Backed Funding", "url": "https://www.bloomberg.com/news/articles/2026-10-06/deepseek-to-raise-at-least-12-billion-in-tencent-backed-funding", "take": "Earlier October 6 report that gave the initial 80B yuan lower bound and flagged the round could approach 100B yuan — useful for the timeline showing how the target grew as demand came in." },
+        { "source": "LetsDataScience — DeepSeek reportedly raises $15 billion in round backed by CATL, Tencent", "url": "https://letsdatascience.com/news/deepseek-reportedly-raises-15-billion-in-round-backed-by-cat-58fc740c", "take": "Secondary relay of the Bloomberg Oct 22 report — clean summary of the $15B figure and investor mix." },
+        { "source": "WOWTALE — DeepSeek Pursues $15B Funding Round as Valuation Jumps to $74B", "url": "https://en.wowtale.net/2026/10/27/235743/", "take": "October 27 report noting that as of that date the round had not formally closed and final terms could still change — key caveat on formal-close status." }
       ]
     }
   ],

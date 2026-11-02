@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-02T11:54:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-02T11:27:00Z",
+      "ended_at": "2026-11-02T11:54:00Z",
+      "wall_time_ms": 1620000,
+      "tokens_used": 21000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 2000,
+        "output_write": 1500
+      },
+      "fetches_made": 8,
+      "items_input": 1,
+      "items_output": 3,
+      "items_added": 1,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-02-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (consistent with every prior run in this stretch). Ran 8 web searches covering: Nov 2 model releases, Anthropic/OpenAI/Google/DeepMind news, Apple Q4 earnings preview, DeepSeek/Qwen/Chinese labs, Hugging Face model releases, EU/Asia lab announcements, Simon Willison blog, OpenAI products. No confirmed Tier-1 model releases from major labs in the 06:35Z–11:26Z window. One new item added: DeepSeek's ~100B yuan ($15B) Series B round (Bloomberg Oct 22 2026, CATL and Tencent led) at a ~$74–75B post-money valuation — not captured by prior runs because those searches targeted model releases rather than capital events; this story surfaced via targeted DeepSeek funding search in this run. hero_image null — Bloomberg is paywalled and primary source domain unreachable for og:image extraction. Apple Q4 FY2026 earnings scheduled for 5 PM ET today (22:00 UTC) — well outside this refresh window; the Big Tech earnings item remains in 2026-11-01-am.json and was not promoted to today's file per design. No Tier-1 or Tier-2 items in current file needed refresh re-pass (existing items are Tier 2 with no overnight chatter detected). Caps: ~21K tokens (well under 60K), ~27min wall (just over 25min standard cap but within enrichment fallback cap; single-item outcome warrants noting), 8 fetches (under 20)."
+    },
+    {
       "run_id": "2026-11-02T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
