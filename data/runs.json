@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-03T17:15:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-03T16:50:00Z",
+      "ended_at": "2026-11-03T17:15:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 5000,
+        "output_write": 3000
+      },
+      "fetches_made": 15,
+      "items_input": 2,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-03-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest sweep. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (news.ycombinator.com, simonwillison.net, techmeme.com all failed getaddrinfo ENOTFOUND; consistent with every prior run in this stretch). Ran 15 web searches covering: AI model releases Nov 3 2026 (nothing fresh); Anthropic/OpenAI/Google/DeepMind news Nov 3 (nothing fresh); AI tools/libraries November 2026 (nothing fresh); Simon Willison / Karpathy blogs November 2026 (nothing in search index for Nov); AMD / Qualcomm / Palantir earnings November 3 2026 (Palantir Q3 2026 confirmed reported Nov 2 2026 after close, missed by am refresh); EU AI Act Article 50 December 2 deadline (already covered in am robots.txt opt-out item's why_it_matters paragraph — no new dedicated angle warranted); Nvidia GTC DC and AWS re:Invent 2026 (events run Nov 30–Dec 3/Dec 4, forward-looking, not news); Qualcomm Q3/Q4 2026 earnings (nothing fresh for Nov 3); OpenAI Atlas (October 21 2025 launch, year-old news); AI startup funding $500M November 2026 (nothing specific to Nov 3); AI coding assistants October 2026 (nothing specific to Nov 3); OpenAI browser Atlas (October 2025 launch, year-old news); AI breaking news this week Nov 3 2026 (nothing dated). One new Tier 1 item added: Palantir Q3 2026 earnings reported Nov 2, 2026 after market close — $2.313B revenue (+96% YoY), first-ever quarter above $2B, GAAP EPS $0.44 vs $0.36 consensus, US commercial $984M (+148% YoY) overtook US gov for first time ever (a long-promised AIP inflection), adjusted operating income $1.427B vs $1.292–$1.296B guide, $10.4B cash+Treasuries, AIP boot camp commentary (5 days or less for working workflow vs 1-3 months previously; 10x speed, 3x fewer resources). Item missed by Nov 3 am refresh because that refresh's search set focused on model releases and Anthropic/OpenAI/Google/DeepMind news rather than quarterly earnings; Palantir slipped through. Primary source: SEC Form 8-K Exhibit 99.1. Not promoted from am (not in am). Tier 2/3 considered but no fresh material for Nov 3 — am already captured Anthropic IPO, Apple Q4, Alphabet Q3, DeepSeek Super-agent, robots.txt opt-out, Apple Intelligence China. The am's 6 items remain the canonical day-of record and the Palantir Q3 addition is the single material gap. Final tier_counts {1:1, 2:0, 3:0}; item_count 1."
+    },
+    {
       "run_id": "2026-11-03T11:42:00Z-refresh",
       "phase": "refresh",
       "status": "success",
