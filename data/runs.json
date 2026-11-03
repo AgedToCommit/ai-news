@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-03T11:42:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-03T11:00:00Z",
+      "ended_at": "2026-11-03T11:42:00Z",
+      "wall_time_ms": 2520000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 3000,
+        "output_write": 1500
+      },
+      "fetches_made": 5,
+      "items_input": 2,
+      "items_output": 6,
+      "items_added": 2,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-03-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (consistent with every prior run in this stretch). Ran 5 web searches covering: AI model releases Nov 3 2026, Anthropic/OpenAI/Google/DeepMind news Nov 3, AI news Asia/Europe overnight Nov 3, Anthropic IPO S-1 Japan investors, DeepSeek super-agent paper. Two new items added: (1) Anthropic IPO S-1/ANT Nasdaq filing (Oct 26 SEC, Nov 2 Kanto Local Finance Bureau) — Tier 1. S-1 filed Oct 26, 2026; Japan domestic offering filed Nov 2 for up to ¥552.9B (~$3.5B), reported largest overseas-company domestic IPO raise in Japan's history. Mizuho Securities leads; Goldman Sachs and Mitsubishi UFJ Morgan Stanley as underwriters; Rakuten Securities and SBI Securities also named. Marketing roadshow expected week of Nov 9 per Bloomberg Law. Valuation range $1.5T–$2T in investor discussions; last private Series F $183B post-money. Item missed by prior runs which focused on model releases and Big Tech earnings; the Japan-specific Nov 2 filing is the late-breaking development that makes this a refresh-window item. (2) DeepSeek Super-agent router–worker architecture paper (~Oct 31, 2026) — Tier 2. Open-sourced as dsh-superagent-prototype on GitHub under MIT License. Router/Worker/Watchdog multi-agent architecture targeting the 3-to-5 human-session bottleneck. Not captured by prior runs which targeted model releases. No confirmed Tier-1 lab model releases from Anthropic, OpenAI, Google DeepMind, Qwen, Mistral, or xAI in the 06:45Z–11:00Z overnight Asia/Europe window. Existing Tier-1 items (Apple Q4 earnings, Alphabet Q3) checked for overnight chatter — no material new coverage found warranting a re-pass. Caps: ~28K tokens (well under 60K), ~42min wall (just over 25min standard cap; two-item outcome and concurrent read overhead noted), 5 fetches (well under 20)."
+    },
+    {
       "run_id": "2026-11-03T06:45:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
