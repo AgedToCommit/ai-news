@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-03T06:45:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-03T06:17:00Z",
+      "ended_at": "2026-11-03T06:45:00Z",
+      "wall_time_ms": 1680000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 10500,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-03-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (consistent with every prior run in this stretch). Relied on 9 web searches. Yesterday's pm file (2026-11-02-pm.json) carried 3 items — Alphabet Q3 2026 earnings (Tier 1), shared robots.txt AI opt-out token (Tier 2), Apple Intelligence China/iOS 27.3 (Tier 3). All three kept and enriched; 0 dropped. Decisions: (1) Alphabet Q3 — KEEP+ENRICH LIGHT. No new direct Alphabet Q3 reaction overnight (Sunday evening → Monday morning US window). Linked summary and why_it_matters to the new Apple Q4 FY2026 memory-chip-shortage callout as the first consumer-electronics confirmation that hyperscaler capex is crowding out other memory markets. (2) Shared robots.txt token — KEEP+ENRICH LIGHT. Clarified the IETF standards-process context: the Kelley individual Internet-Draft runs in parallel to the IETF AIPREF Working Group vocabulary draft (Keller/Thomson) and a separate Illyes/Thomson `Content-Usage` WG draft — three parallel efforts, not one. Also linked to the EU AI Act Article 50(2) December 2 2026 deadline countdown (29 days as of today). No new adopters beyond the original four labs. (3) Apple Intelligence China — KEEP+ENRICH. Updated title and summary with firmer feature-scope detail (Writing Tools, Genmoji, Clean Up, Notification Summaries, Priority Notifications, Visual Intelligence, Live Translation with AirPods — iPhone 15 Pro+) and clearer model-stack split (Qwen = text/reasoning, Tongyi Wanxiang = image/multimodal, integrated across iOS/iPadOS/macOS/visionOS). Added widely-cited Nov 4 2026 beta release date. Noted that CEO John Ternus's first Nov 2 earnings call did not include new AI investment commitments or a China-rollout commentary. Late-breaking pass: 1 item added. (4) Apple Q4 FY2026 earnings (Nov 2 after close): Tier 1 — $114.5B revenue +12%, Services record $31.6B +10%, iPhone $57.58B September-quarter record, EPS $2.10 incl $0.05 tariff-refund benefit, stock -3% in extended trading on margin forecast + iPad miss + global memory chip shortage callout. Ternus's first call as CEO, Parekh CFO. FY26 full year ~$478.8B +15%, EPS $8.98 +20%. Primary source: SEC 8-K Exhibit 99.1 (Form 8-K filed Nov 2, 2026). Secondary: MacRumors, 9to5Mac, CNBC live blog, Motley Fool transcript, Benzinga transcript. The memory-shortage callout is the key AI-adjacent signal — first consumer-electronics confirmation that AI data-center HBM/DRAM demand is crowding out other end markets, directly connecting to Alphabet's $300B+ 2027 capex guide carried in yesterday's digest. No confirmed Nov 2–3 model releases from Anthropic, OpenAI, Google DeepMind, Qwen, DeepSeek, Moonshot, or any other Tier-1 lab across 4 targeted overnight searches. Caps: ~46k tokens (well under 100k), ~28min wall (well under 45min), 9 fetches (well under 30). hero_image remains null on all four items — primary source domains unreachable from this agent's egress for og:image extraction."
+    },
+    {
       "run_id": "2026-11-02T17:50:00Z-digest",
       "phase": "digest",
       "status": "success",
