@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-04T07:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-04T06:35:00Z",
+      "ended_at": "2026-11-04T07:00:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 6500,
+        "output_write": 2000
+      },
+      "fetches_made": 6,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-04-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains (and SEC's www.sec.gov) continue to be unreachable from this agent's egress, consistent with every prior run in this stretch; relied on 6 web searches plus one attempted direct fetch that failed. Yesterday's pm file (2026-11-03-pm.json) carried 1 item — Palantir Q3 2026 earnings (Tier 1, reported Nov 2 after close). Decision: KEEP+ENRICH. Day-after (Nov 3) analyst reaction was substantive and split cleanly along the long-standing business-vs-valuation fault line: Wedbush's Dan Ives called the US commercial surge 'a major validation moment' for the AIP strategy, Mizuho stayed cautious at Hold despite raising estimates (Gregg Moskowitz, citing valuation), and Jefferies reiterated its bearish risk/reward view. Updated summary to incorporate the Nov 3 analyst split and to cross-reference the new AMD Q3 2026 print (below) as the second same-week post-cycle AI revenue confirmation. Updated why_it_matters to the broadened four-way framing (Alphabet Cloud +103% / Apple memory shortage / AMD Data Center +97% / Palantir US commercial +148%) spanning silicon, hyperscaler, consumer hardware, and application layer. Rewrote why_it_matters_brief to foreground the analyst split. 0 dropped. Late-breaking pass: 1 item added. AMD Q3 2026 earnings (Nov 3 after close, SEC Form 8-K Exhibit 99.1) — Tier 1. Record $13.4B revenue +45% YoY, non-GAAP gross margin 56%, non-GAAP operating income $3.9B, non-GAAP net income $3.5B, non-GAAP EPS $2.09. Data Center segment +97% YoY driven by record Instinct GPU and EPYC CPU sales; implied Data Center dollar figure ~$8.5B against the prior-year $4.3B base, though exact segment splits should be read from the 8-K rather than inferred. CFO Jean Hu's Q4 commentary: 'accelerating revenue and earnings growth, driven by strong demand across our Data Center portfolio.' CEO Lisa Su cited scaling of Helios rack-scale platform and Venice (next-gen EPYC) production. Cross-referenced to Palantir Q3 for the four-way post-cycle framing. The AMD print directly undercuts the 'AI capex peak' narrative floated across 2026: Data Center +97% YoY on top of last quarter's +107%, with Q4 guided to accelerate further. Second late-breaking candidate (overnight model release from an Asia/Europe lab) searched but no confirmed Nov 3–4 Tier-1 model release from Anthropic, OpenAI, Google DeepMind, Qwen, DeepSeek, Mistral, or xAI in 2 targeted searches; stopping at 1 added item is within cap guidance. Caps: ~32k tokens (well under 100k), ~25min wall (well under 45min), 6 fetches (well under 30). hero_image remains null on both items — primary source domains (sec.gov in particular) unreachable from this agent's egress for og:image extraction."
+    },
+    {
       "run_id": "2026-11-03T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
