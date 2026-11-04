@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-04T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-04T11:00:00Z",
+      "ended_at": "2026-11-04T12:00:00Z",
+      "wall_time_ms": 3600000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 23000,
+        "curation": 2500,
+        "output_write": 1000
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 5,
+      "items_added": 3,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-04-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (consistent with every prior run in this stretch); simonwillison.net, cryptobriefing.com, theneuron.ai, aiweekly.co all ENOTFOUND. Ran 8 web searches covering: AI model releases Nov 4 2026 overnight Asia/Europe (no Qwen/DeepSeek/Mistral releases found); Anthropic IPO roadshow Nov 4 (earliest roadshow start expected Nov 9-10, no new dev); AI news Nov 4 OpenAI/Google/DeepMind (surfaced OpenAI GPT-6 Astra hardware story and DeepMind non-disparagement story); Baidu Apollo World details Nov 3; OpenAI AI-designed hardware Nov 4; DeepMind non-disparagement Nov 2026 (confirmed as older non-compete story from April 2025 repackaged — not a Nov 4 item, excluded); Anthropic FlashProve Nov 2026; AI news Asia/Europe overnight Nov 4 (no additional confirmed items). Three new items added: (1) Anthropic FlashProve (Nov 2, 2026) — Tier 2. Open-source (Apache 2.0, v0.16.0, GitHub) zkSNARK proof system for LLM inference verification. Demonstrated on Llama 4 Maverick (400B MoE) at 110 tokens/sec with 70–95× GPU overhead, 1,024-token limit. Research contribution from StarkWare co-founder Alessandro Chiesa. Item slipped through Nov 2–4 search sets which focused on model releases and earnings — FlashProve is a research tool release. Primary source anthropic.com/research/provable-inference unreachable; content verified via unite.ai, alphasignal.ai, kucoin.com, newsbytesapp.com. (2) OpenAI GPT-6 Astra hardware design (Nov 3, 2026) — Tier 2. Two staff used Astra to design enclosure/PCB/interface/firmware in under a week; contract manufacturer batch in under a month. BenchCAD 2.0: Astra 0.594, internal model 0.875. Token usage in hardware teams up 23× since February. Missed by Nov 4 enrichment which ran 2 searches focused on model releases and earnings. Primary secondary source: the-decoder.com. (3) Baidu Apollo World (Nov 3, 2026, Baidu AI Day Shenzhen) — Tier 2. Agent-driven multimodal world model for autonomous driving; every simulated vehicle and pedestrian is an independent AI agent. Real-time camera and lidar output. Apollo Go uses it already. 100,000km/day claimed (Baidu-stated, not independently verified). '2+3 standard' for world model eval. No paper or open-source release. Asia overnight content. Final tier_counts {1:2, 2:3, 3:0}; item_count 5."
+    },
+    {
       "run_id": "2026-11-04T07:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
