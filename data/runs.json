@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-05T07:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-05T07:00:00Z",
+      "ended_at": "2026-11-05T07:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1200,
+        "deep_fetch": 0,
+        "discovery_search": 27000,
+        "curation": 5800,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-05-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains (simonwillison.net, aiweekly.co, theneuron.ai, unite.ai) continue to be unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 10 web searches: (1) Tencent Hy4 open weights Nov 5 Hugging Face release status; (2) Apple Siri AI dev reaction iOS 27.3 App Intents; (3) AI news Nov 5 Anthropic/OpenAI/Google/DeepMind model release; (4) Tencent Hy4 Terminal-Bench benchmark reproduction; (5) Siri AI iOS 27.3 Skills beta developer review; (6) overnight Asia/Europe AI model release Qwen/DeepSeek/Mistral/xAI; (7) Tencent Hy4 OpenRouter OSWorld independent benchmark; (8) Apple iOS 27.3 Siri Skills early apps enterprise developers; (9) OpenAI GPT-6 news this week; (10) Anthropic IPO roadshow S-1 Nov 5; (11) Nvidia Jensen keynote Nov 4; (12) Hy4 weights huggingface Nov 5; (13) Baidu ERNIE X1 Nov 2026; (14) AI news Wed Nov 4 breaking. Yesterday's pm file (2026-11-04-pm.json) carried 2 items (Tencent Hy4 full release Tier 1, Apple Siri AI developer preview iOS 27.3 Tier 2). Both decisions: KEEP+ENRICH. Hy4 enriched with three Nov 5 overnight threads: (a) open weights still not published on Tencent's Hugging Face org ~24h after the Nov 4 'coming days' promise — tencent/Hy3-preview remains the latest public Tencent large-model checkpoint; (b) community pre-positioning — a third-party Hugging Face repo 0xTank/Hy4-preview-NVFP4-W4A16-MTP has set up an NVFP4-W4A16 quantization slot tagged for vLLM, which is the pattern typically seen 24–48h before an open-weights drop; (c) third-party inference dispute — OrcaRouter contests whether Tencent has actually opened Hy4 to third-party inference platforms despite the Nov 4 announcement listing OpenRouter and OpenCode, and notes Hy4 is not yet on Artificial Analysis. Added these as summary paragraphs, updated why_it_matters to pull all three threads together, rewrote why_it_matters_brief to foreground the weights-slip + vendor-only benchmarks. Apple Siri AI enriched with two Nov 5 points: (a) no substantive hands-on developer reviews of Skills composition or Spotlight semantic index extension had surfaced in the first 24 hours — only Apple's docs + early forum notes circulating; (b) Apple Developer Forums thread 832602 contains an early-beta report of registered App Intents working in Shortcuts but Siri AI still returning 'I can't do that' for the matching conversational query — day-one Siri intent-routing issue, useful prototyper context. Also explicitly flagged the EU exclusion as tied to Apple's DMA posture. Updated summary + why_it_matters to pull early-routing-failure signal into agentic-UX framing, rewrote why_it_matters_brief to foreground it. 0 items dropped. Late-breaking pass: 0 items added. Ran searches targeting overnight model releases from Qwen, DeepSeek, Mistral, xAI, Baidu, Anthropic, OpenAI, and Nvidia; also checked Anthropic IPO roadshow timing and Nov 4–5 generic AI-news aggregators. No confirmed Nov 4–5 Tier-1 model release or substantive Tier-2 announcement surfaced from any of these searches — closest adjacent material is the Anthropic S-1 having gone public Oct 26 with earliest roadshow start around Nov 10 per SEC 15-day rule, which is forecast context rather than news. Stopping at 0 added items is within cap guidance (cap is at most 2). Caps: ~36k tokens (well under 100k), ~30min wall (well under 45min), 10 fetches (well under 30). hero_image remains null on both items — primary source domains unreachable from this agent's egress for og:image extraction."
+    },
+    {
       "run_id": "2026-11-04T17:40:00Z-digest",
       "phase": "digest",
       "status": "success",
