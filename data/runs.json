@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-05T12:40:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-05T12:00:00Z",
+      "ended_at": "2026-11-05T12:40:00Z",
+      "wall_time_ms": 2400000,
+      "tokens_used": 24000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 2200,
+        "output_write": 300
+      },
+      "fetches_made": 8,
+      "items_input": 10,
+      "items_output": 5,
+      "items_added": 3,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-05-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue to be unreachable from this agent's egress (consistent with every prior run in this stretch). Ran 8 web searches covering: (1) AI news Nov 5 2026 morning model release; (2) Tencent Hy4 open weights Hugging Face Nov 5; (3) OpenAI/Anthropic/Google/DeepMind announcement Nov 5; (4) Qwen/DeepSeek/Mistral/xAI model release Nov 5; (5) Cognition SWE-2 Flash Nov 4 release speed/price; (6) Anthropic Claude watermark model verification Nov 2026; (7) ChatGPT Images 2.6 animated GIF Nov 2026; (8) Tencent Hy4 weights huggingface.co/tencent Nov 5. Tencent Hy4 open weights: still not confirmed dropped — searches return Aug 28 Hy4-preview open weights only; full Hy4 weights 'in coming days' promise from Nov 4 still unresolved as of this run. No new Tier-1 model release from any lab found (DeepSeek, Qwen, Mistral, xAI all without Nov 5 releases per trackers). Three items added: (1) Cognition SWE-2 Flash (Nov 4) — Tier 2 — 276B/12B-active MoE on Thinking Machines Inkling-Small, 3x faster at 1/5 the price of SWE-2, inside Devin only, closed weights, free for paid Devin users through Nov 30, mixed benchmarks (Flash leads FrontierCode 2.0, SWE-2 leads DeepSWE 1.1 and Terminal-Bench 4.0). (2) Anthropic Claude text watermark expansion (Nov 2–3) — Tier 2 — expands to Mythos 5, Opus 4.7, Opus 4.6, Sonnet 4.6; The Decoder found sampling-param bypass on Opus 4.6 and Sonnet 4.6; public detection API still not shipped 5 months after August commitment; EU AI Act December deadline driver. (3) OpenAI ChatGPT Images 2.6 (Nov 4) — Tier 3 — animated GIF creation from prompt or photo, frame editing, speed control, two new API models (Flare and Sunburst); 4B weekly images (up from 3B in September, OpenAI-stated). No re-pass on existing Tier-1 items: Hy4 weights status unchanged (not dropped); no additional chatter on Apple Siri AI beyond prior enrichment. Final tier_counts {1:1, 2:3, 3:1}; item_count 5."
+    },
+    {
       "run_id": "2026-11-05T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
