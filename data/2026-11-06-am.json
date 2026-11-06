@@ -2,15 +2,77 @@
   "snapshot_id": "2026-11-06-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-06",
-  "generated_at": "2026-11-06T07:30:00Z",
-  "generated_at_local": "2026-11-06T02:30:00-05:00",
+  "generated_at": "2026-11-06T12:00:00Z",
+  "generated_at_local": "2026-11-06T07:00:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-06T07:30:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-11-06T07:30:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh",    "ran_at": "2026-11-06T12:00:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 0, "2": 1, "3": 0 },
+  "tier_counts": { "1": 2, "2": 1, "3": 0 },
   "items": [
     {
-      "id": "openai-gpt-6-rosalind-research-life-sciences-oct-30",
+      "id": "openai-gpt-6-cyber-daybreak-red",
+      "tier": 1,
+      "title": "OpenAI launches GPT-6 Cyber for Daybreak Red — first Critical-rated model under its Preparedness Framework",
+      "summary": "OpenAI released GPT-6 Cyber on November 5, 2026, available only to approved customers in its Daybreak Red vetted offensive-security program. It scored 48.5% on OpenAI's ExploitGym benchmark (up from 32.1% for GPT-5.6 Cyber and 42.4% for GPT-6 Astra), found 81 previously unknown high-severity vulnerabilities in Mozilla Firefox, and produced working exploits for 948 of 1,724 reproduced Linux kernel vulnerabilities — earning a Critical rating under OpenAI's Preparedness Framework, the first Cyber-class model to reach that threshold.",
+      "link": "https://cyberscoop.com/openai-gpt-6-cyber-security-model/",
+      "why_it_matters": "Two things are worth pulling apart here. First, the Critical rating is a Preparedness Framework first for a Cyber model — previous Cyber releases were rated High. OpenAI's own framework says models at Critical require stronger pre-deployment controls; the fact that it shipped anyway (behind a gate) tells you the company's view is that the access tier is the control. That framing — 'we can release Critical-rated models as long as we control who gets them' — is now live policy, and it's worth watching how that holds as the gating criteria evolve. Second, the benchmark numbers: 48.5% on ExploitGym is a meaningful jump but also means the model fails more than half the time, and OpenAI's own disclosure flags that the 100% ExploitBench score may be inflated by contamination. The Firefox finding (81 high-severity vulns reported to Mozilla) is the more concrete signal — that's a real-world result from a production codebase, not a benchmark. For Gabe's Python and HTML work, the direct relevance is thin, but the access-control-as-safety-control pattern is going to show up in every frontier lab's model deployment strategy for the next two years, and understanding what 'Critical-rated but gated' actually means is useful context for anyone working with these APIs.",
+      "why_it_matters_brief": "First Critical-rated Cyber model under OpenAI's Preparedness Framework ships behind a gate — the benchmark jump is real, but the Firefox vulns are the more concrete signal.",
+      "source": {
+        "name": "CyberScoop",
+        "type": "scrape",
+        "url": "https://cyberscoop.com/openai-gpt-6-cyber-security-model/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-06T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-06T12:00:00Z", "by": "refresh", "change": "created — OpenAI GPT-6 Cyber launched Nov 5, 2026 to Daybreak Red approved customers. 48.5% ExploitGym (vs 32.1% GPT-5.6 Cyber, 42.4% GPT-6 Astra). 81 previously unknown high-severity Firefox vulns. Working exploits for 948/1,724 reproduced Linux kernel vulns. Critical rating under Preparedness Framework (first Cyber model at Critical, previous were High). Pricing: $20/$2/$100 per M input/cached/output. No Batch/Flex/Priority pricing. hero_image null (direct fetch blocked by network policy)." }
+      ],
+      "takes": [
+        { "source": "CyberScoop", "url": "https://cyberscoop.com/openai-gpt-6-cyber-security-model/", "take": "Lead coverage of the launch, with sourcing on the benchmark numbers and the Preparedness Framework Critical rating." },
+        { "source": "Dataconomy", "url": "https://dataconomy.com/2026/11/06/openai-launches-critical-rated-gpt-6-cyber-for-approved/", "take": "November 6 coverage confirming the Critical rating and gated access model." },
+        { "source": "pasqualepillitteri.it", "url": "https://pasqualepillitteri.it/en/news/30433/openai-launches-gpt-6-cyber-daybreak-red", "take": "Documents the Daybreak Red gating structure and the separate GPT-6 Cyber approval requirement on top of the base Daybreak Red enrollment." },
+        { "source": "datastudios.org", "url": "https://www.datastudios.org/post/openai-gpt-6-cyber-daybreak-red-api-pricing-20-input-100-output", "take": "Confirms $20/$100 input/output pricing and notes no Batch, Flex, or Priority pricing is offered for either Cyber model endpoint." },
+        { "source": "help.apiyi.com", "url": "https://help.apiyi.com/en/gpt-6-cyber-release-exploitgym-48-5-en.html", "take": "Breaks down ExploitGym score of 48.5% alongside GPT-5.6 Cyber at 32.1% and GPT-6 Astra at 42.4%. Notes the 0.07% out-of-scope honeypot rate." }
+      ]
+    },
+    {
+      "id": "thinking-machines-inkling-2-small-594b-moe",
+      "tier": 1,
+      "title": "Thinking Machines Lab releases Inkling 2 Small — 594B MoE, 17B active, scoring 31 on the Intelligence Index; Apache 2.0 weights next week",
+      "summary": "Thinking Machines Lab shipped Inkling 2 Small on November 5, 2026, a 594B-parameter mixture-of-experts model that activates 17B parameters per token (8 of 384 routed experts in a 48-layer decoder), supports text and image inputs with a 1M-token context window, and scores 31 on the Artificial Analysis Intelligence Index — roughly doubling its predecessor Inkling Small's score of 13. The model is live on Thinking Machines' Tinker platform for inference and fine-tuning; full weights are expected next week under an Apache 2.0 license pending safety testing and red-teaming.",
+      "link": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+      "why_it_matters": "Inkling 2 Small is notable on two dimensions. First, the architecture: 17B active parameters out of 594B total is a pretty aggressive sparsity ratio, and the Artificial Analysis Intelligence Index score of 31 — more than double the original Inkling Small's 13 — suggests the MoE scaling is working the way the lab intended. That's a bigger jump per release than most open-weight labs have been posting, and it's happening outside the usual suspects (Meta/Mistral/HuggingFace). Second, the release pattern: weights closed at launch, Apache 2.0 pending safety testing, available on the lab's own inference platform first. That's exactly the pattern Mistral used in its early releases, and it tends to signal a lab that takes the ecosystem play seriously — they want community adoption before they get absorbed into another company's model zoo. For Gabe's Python work, the practical angle is that a 17B-active MoE at Apache 2.0 is a credible local-runner candidate once the weights drop: at 17B activation, it's closer to a 20B dense model in compute terms, which a modern GPU workstation can handle for fine-tuning. The 1M-token context is also notable for local use cases. Worth bookmarking the weights release next week.",
+      "why_it_matters_brief": "17B active / 594B total MoE at Apache 2.0 next week — scores 31 on the Intelligence Index, more than double its predecessor, from an open-weights lab outside the usual Meta/Mistral lineup.",
+      "source": {
+        "name": "Thinking Machines Lab / Latent Space",
+        "type": "scrape",
+        "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-06T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-06T12:00:00Z", "by": "refresh", "change": "created — Thinking Machines Lab released Inkling 2 Small Nov 5, 2026. 594B total params / 17B active per token (8 of 384 experts, 48-layer decoder). 1M token context. Text+image input, text output. Scores 31 on Artificial Analysis Intelligence Index (predecessor scored 13). Live on Tinker for inference and fine-tuning; weights due next week under Apache 2.0 after safety testing. Pricing on Tinker: $0.30/$1.00 per M input/output. hero_image null (direct fetch blocked by network policy)." }
+      ],
+      "takes": [
+        { "source": "Latent Space AI Newsletter", "url": "https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark", "take": "Lead technical newsletter coverage. Title anchors the key training facts: 68 hours on 12T tokens, beats Muse Spark on the Intelligence Index." },
+        { "source": "Thinking Machines Lab Model Card", "url": "https://thinkingmachines.ai/model-card/inkling-2-small/", "take": "Primary source: official architecture details including 384-expert routing, 48-layer decoder structure, and context window." },
+        { "source": "MarkTechPost", "url": "https://www.marktechpost.com/2026/11/05/thinking-machines-inkling-2-small-release/", "take": "November 5 secondary coverage confirming the Intelligence Index score of 31, the Apache 2.0 licensing timeline, and the Tinker pricing." },
+        { "source": "pasqualepillitteri.it", "url": "https://pasqualepillitteri.it/en/news/30515/inkling-2-small-thinking-machines-launch-open-weights", "take": "Notes the open-weights-delayed-for-safety pattern and the absence of a firm date for the Apache 2.0 drop." }
+      ]
+    },
+    {
+      "id": "openai-gpt-6-rosalind-research-oct-30",
       "tier": 2,
       "title": "OpenAI quietly ships GPT-6 Rosalind Research — the GPT-6 generation of its gated life-sciences model, same weights as GPT-6 Astra, available only to approved enterprise partners in ChatGPT Work and Codex",
       "summary": "On October 30, 2026, OpenAI began rolling out GPT-6 Rosalind Research — the GPT-6-generation successor to GPT-Rosalind (first released in April 2026) — to approved enterprise customers inside its Trusted Access Program for life sciences. The model is positioned for drug discovery and translational medicine workflows, exposed in ChatGPT Work and Codex but not in the regular Chat tab; the API id is gpt-6-rosalind. Per secondary coverage of OpenAI's system card addendum, GPT-6 Rosalind Research uses the same base weights as GPT-6 Astra (OpenAI's current flagship) with no additional training or post-training — specialization comes from access gating and tool / evaluation choices rather than a new checkpoint. OpenAI's own reported risk ratings carry over: High for biological and chemical capability (below the Critical threshold that would trigger stronger pre-deployment controls), and Critical for cybersecurity (also still below OpenAI's deployment-blocking Critical threshold under the Preparedness Framework). Named launch partners across secondary coverage include Amgen, Moderna, Thermo Fisher Scientific, NVIDIA, the Allen Institute, and UCSF School of Pharmacy, with Novo Nordisk cited in one later source. On pricing, a week of enrichment search now gives a cleaner picture than the launch-day reporting: multiple secondary outlets consistently list the gpt-6-rosalind endpoint at $15.00 per million input tokens, $1.50 per million cached input tokens, and $75.00 per million output tokens in Standard mode, with one source citing a higher long-prompt tier at $30.00 / $3.00 / $112.50 per million. The older, non-GPT-6 Rosalind family (gpt-rosalind-research / gpt-rosalind-discovery) remains at $5 / $0.50 / $25 per million. Still unverified against primary sources: OpenAI has not published a standalone technical model card or benchmark table for GPT-6 Rosalind in developer documentation, and the shared-weights-with-GPT-6-Astra claim rests on a single secondary source (techjacksolutions.com) which itself advises waiting for OpenAI's own system card before relying on its figures.",
