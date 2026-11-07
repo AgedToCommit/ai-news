@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-07T12:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-07T12:00:00Z",
+      "ended_at": "2026-11-07T12:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 22000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 3000,
+        "output_write": 500
+      },
+      "fetches_made": 8,
+      "items_input": 2,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-07-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary domains continue to be unreachable from this agent's egress, consistent with all prior runs in this stretch. Ran 8 web searches. Two new Tier-1 items found and appended. Item 1: deepmind-ai-agents-rsa-1024-cryptanalysis-nov6 — Google DeepMind announced Nov 6 2026 that AI agents working with cryptanalysts Nadia Heninger (UCSD) and Emmanuel Thomé (Inria) compressed months of expert cryptanalysis into weeks, finding two advances in legacy 1024-bit RSA: signature forgery ~1600x more efficient; batch factoring ~30x cheaper per additional key. Follow-up to the Sept 2026 academic paper (IACR 2026/2131) which took 1,380 CPU core-years over 5 months without AI assistance. RSA-2048+ unaffected. Dedup confirmed clean against Nov 6 am and Nov 6 pm snapshots. Source: Pushmeet Kohli on X (Nov 6); secondary via FourWeekMBA, CryptoBriefing, RuntimeWire. Item 2: kimi-k3-1-pro-open-weights-nov4 — Moonshot AI released Kimi K3.1 Pro weights Nov 4-5 2026 at moonshotai/Kimi-K3.1-Pro on Hugging Face (96 safetensors, ~1.56TB, MXFP4). 2.8T total / 104B active MoE, 1M context, text+image. Ranked 4th on Artificial Analysis Intelligence Index (55.1). Notably, Epoch AI named this model in their GLM 5.3 Firefox patch-gap report as the open-weight model most likely to extend their exploit result to Chrome. Dedup confirmed clean. Source: kimi.com blog; weights at moonshotai/Kimi-K3.1-Pro; secondary via RuntimeWire, OfficeChai, tech-insider.org. hero_image null on both new items (primary source domains unreachable). Final tier_counts {1:3, 2:1, 3:0}; item_count 4."
+    },
+    {
       "run_id": "2026-11-07T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
