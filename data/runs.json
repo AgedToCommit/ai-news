@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-07T17:40:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-07T17:00:00Z",
+      "ended_at": "2026-11-07T17:40:00Z",
+      "wall_time_ms": 2400000,
+      "tokens_used": 56000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 2000,
+        "discovery_search": 45000,
+        "curation": 7000,
+        "output_write": 1000
+      },
+      "fetches_made": 16,
+      "items_input": 7,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-07-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. RSS sweep and scrape sweep both skipped — primary lab/newsletter/press-release domains (thoughtworks.com, github.blog, simonwillison.net, openai.com, anthropic.com, deepmind.google, huggingface.co) continue to be unreachable from this agent's egress, consistent with every prior run in this stretch; WebFetch against thoughtworks.com failed DNS resolution during this run. Ran 15 web searches covering: (1) AI news Nov 7 2026 model release announcement; (2) OpenAI/Anthropic/DeepMind Nov 7 2026; (3) 'November 7 2026' AI announcement model launch; (4) Anthropic Opus/Sonnet/Mythos Nov 2026 release; (5) Qwen/DeepSeek/Mistral/Hunyuan Nov 2026 open weights; (6) AI developer tool framework Nov 6-7 2026; (7) Nvidia GTC Nov 2026 keynote (scheduled Nov 30 - Dec 3, not yet happened); (8) Simon Willison blog Nov 7 2026; (9) Hugging Face trending Nov 7 2026; (10) Thinking Machines Inkling Nov 2026 (July 2026 release, not fresh); (11) AI arxiv Nov 2026 agentic coding; (12) Thoughtworks Technology Radar Vol 35 Nov 2026 AI; (13) latent space / news.smol.ai daily digest Nov 6 2026; (14) 'November 6 2026' AI release; (15) AI coding agent Cursor/Cline/Aider Nov 2026; (16) Anthropic IPO roadshow Nov 7 2026; (17) OpenAI Codex Nov 2026 GPT-6.2; (18) Google Gemini 4 Argon Nov 2026; (19) ChatGPT Images 2.6 OpenAI Nov 4; (20) GitHub Copilot Opus 5 deprecation Nov 16 2026; (21) AI news Nov 6 2026; (22) Apple Siri Qwen Nov 2026; (23) OpenAI speed limits FRONTIER Act Nov 2026; (24) 'Nov 7' 2026 AI launch; (25) data center Nov 6-7 2026; (26) Thoughtworks Radar Vol 35 blips; (27) 'this week in' AI Nov 7 2026; (28) NYT Tribune Brave lawsuit Nov 2; (29) Thoughtworks Radar Vol 35 spec driven. Findings: Three strong NEW items all verified against prior snapshots (Nov 1 am through Nov 7 am) with no dedup hits. Item 1: thoughtworks-technology-radar-vol-35-harness-engineering-nov-4 — Tier 2 — Thoughtworks Radar Vol 35 published Nov 4 2026 (date confirmed by Thoughtworks podcast page listing 'vol.35 published Nov. 4, 2026'; press release title 'Thoughtworks Technology Radar highlights stronger controls'). Harness engineering elevated from blip to theme; feedforward controls named: GitHub Spec-Kit, OpenSpec; feedback control named: mutation testing; CTO Rachel Laycock quote. Highly relevant to Gabe's Python stack. Item 2: github-copilot-model-deprecation-nov-16-2026 — Tier 2 — GitHub Copilot removes Claude Opus 4.8, Claude Opus 5, and GPT-5.6 Terra on Nov 16, 2026 (changelog dated Oct 15 2026, deadline nine days from digest). Replacements: Opus 5.5 for either Opus variant; GPT-6.1 Sol or GPT-6 Luna for GPT-5.6 Terra. Annual-plan carve-out specifically for Opus 4.8 (not Opus 5 or GPT-5.6 Terra). Enterprise/Business admins get automatic replacement enablement. Three weeks old but deadline-imminent. Item 3: nyt-tribune-v-brave-ai-scraping-lawsuit-nov-2 — Tier 3 — NYT Co. and three Tribune Publishing papers (Daily News, Chicago Tribune, Orlando Sentinel) filed two parallel SDNY lawsuits Nov 2, 2026 (case numbers 1:26-cv-09549 and 1:26-cv-09554) against Brave Software Inc. Allegation: 30-billion-page scraping index resold to Anthropic, Perplexity, Mistral, xAI, Cohere. AI companies named as customers, not defendants. New legal theory: push liability up the training-data supply chain. Five days old but not covered in any prior snapshot. Dedup checks passed: ran grep across Nov 1 am through Nov 7 am for 'thoughtworks', 'harness engineering', 'copilot deprecation', 'opus 5 deprecation', 'brave', 'new york times'; none of these three items appear. Related items that exist in prior snapshots and were considered for promotion/duplication but excluded: anthropic-ipo-s1-nasdaq-ant-japan-offering-nov-2026 (Nov 3 am) already covers the Nov 9 roadshow framing; apple-intelligence-china-ios-27-3-december-2026 (Nov 2 pm, Nov 3 am) and apple-alibaba-qwen-china-ios27-3 (Nov 1 am) already cover the Apple-Qwen China partnership; openai-chatgpt-images-2-6-animated-gif-nov-4 (Nov 5 am) already covers ChatGPT Images 2.6; ai-crawling-opt-out-robots-standard-oct30 and shared-ai-training-opt-out-token-robots-txt-oct-30-2026 cover the robots.txt opt-out standard, a distinct story from the Brave lawsuit. No promotion from today's am — nothing has materially deepened between the Nov 7 refresh (12:35 UTC) and this digest (17:40 UTC); only ~5 hours have elapsed. Final tier_counts {1:0, 2:2, 3:1}; item_count 3. hero_image null on all three items (primary source domains unreachable from this agent's egress for og:image extraction, consistent with every prior run in this stretch)."
+    },
+    {
       "run_id": "2026-11-07T12:35:00Z-refresh",
       "phase": "refresh",
       "status": "success",
