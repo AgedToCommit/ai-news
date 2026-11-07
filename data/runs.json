@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-07T07:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-07T07:00:00Z",
+      "ended_at": "2026-11-07T07:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 18000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 14000,
+        "curation": 3000,
+        "output_write": 500
+      },
+      "fetches_made": 6,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-07-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains, newsletter sites, and security-press primary sources (bleepingcomputer.com, epoch.ai, blog.mozilla.org, simonwillison.net, openai.com, anthropic.com, deepmind.google, huggingface.co) continue to be unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 6 web searches covering: (1) Epoch AI GLM 5.3 Firefox patch-gap follow-up Nov 2026; (2) Cursor Claude Code extension SSH backdoor Nov 7 follow-up; (3) AI news Nov 6 2026 model release; (4) AI model release Nov 7 2026 frontier launch; (5) Mozilla Bobby Holley Firefox patch-gap strategy Nov 2026; (6) Cursor marketplace malicious extension Phorion Beaumont Anthropic official account. Sub-task 1 enrichment: (a) Epoch GLM 5.3 — surfaced Mozilla CTO Bobby Holley's Oct 29 response post plus Nov 4 IT-Connect French follow-up. Mozilla's strategy: coordinate fixes across browser security layers so patch-gap bugs don't line up, and stagger when individual fixes land in public builds so attackers can't reconstruct the chain from a single advisory. Holley's framing that closing the patch gap erodes an attacker's long-term advantage by making discoveries cheap. Added Neoteo, CyberInsider, IT-Connect, TheModelWire to source list. Updated title, summary, why_it_matters, why_it_matters_brief. KEEP + ENRICH. (b) Cursor extension — surfaced two overnight clarifications. First: CSO Online, InfoWorld, and ox.security coverage confirm the SSH-enabling step mostly failed in practice because of errors in the malicious code and standard Windows/macOS permission prompts — required Cursor launched with admin privileges to succeed, which most normal installs are not. Recon on load still ran; persistence files still landed in some runs. Second: Beaumont and Phorion claim distribution happened via Anthropic's official publisher account on Cursor; Cursor's public notice says the build was not developed by Anthropic and frames it as an attacker using marketplace access to publish under Anthropic's name. Neither side has explained how the account or marketplace access was obtained. Reinforced remediation guidance that updating to 2.1.314 does not clean up earlier compromise. Added ox.security, implicator.ai, aicybr.com to source list. Updated title, summary, why_it_matters, why_it_matters_brief. KEEP + ENRICH. Sub-task 2 late-breaking: No verifiable Tier-1 or Tier-2 item surfaced from Nov 6 or Nov 7 2026. Nov 6 model-release searches returned only forecasts, undated aggregator pages, stale Jun–Aug 2026 Hugging Face trending items, and GPT-5.6 preview coverage from June 2026 — no confirmed Nov 6 or Nov 7 launch. Tencent Hy4 open-weights status unchanged since Aug 28 Hy4-preview; full Hy4 weights 'in coming days' still unresolved. 0 items added. Final tier_counts {1:1, 2:1, 3:0}; item_count 2. hero_image null on both items (primary source domains unreachable, consistent with every prior run in this stretch)."
+    },
+    {
       "run_id": "2026-11-06T17:15:00Z-digest",
       "phase": "digest",
       "status": "success",
