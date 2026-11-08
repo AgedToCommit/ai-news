@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-08-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-08",
-  "generated_at": "2026-11-08T07:30:00Z",
-  "generated_at_local": "2026-11-08T02:30:00-05:00",
+  "generated_at": "2026-11-08T12:35:00Z",
+  "generated_at_local": "2026-11-08T07:35:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-08T07:00:00Z", "duration_ms": 1800000 }
+    { "phase": "enrichment", "ran_at": "2026-11-08T07:00:00Z", "duration_ms": 1800000 },
+    { "phase": "refresh", "ran_at": "2026-11-08T12:00:00Z", "duration_ms": 2100000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 1 },
+  "tier_counts": { "1": 0, "2": 3, "3": 1 },
   "items": [
     {
       "id": "thoughtworks-technology-radar-vol-35-harness-engineering-nov-4",
@@ -106,6 +107,36 @@
         { "source": "Lets Data Science — 'New York Times and Publishers Sue Brave Over AI Scraping and Paywalls'", "url": "https://letsdatascience.com/news/new-york-times-and-publishers-sue-brave-over-ai-scraping-and-b4d8d347", "take": "Cross-references the earlier Brave v. News Corp action and the July 2026 News Corp countersuit, providing the longer-running backdrop for understanding why Brave was targeted first among data brokers." },
         { "source": "PPC Land — 'New York Times and three papers sue Brave over AI answers and ad blocking'", "url": "https://ppc.land/new-york-times-and-three-papers-sue-brave-over-ai-answers-and-ad-blocking/", "take": "Best source for the three-pronged structure of the complaints: Brave Search API, Ask Brave AI answers, and the Paywall-blocking browser feature are all separately targeted — the suit is broader than the scraping-index story." },
         { "source": "Xenospectrum — 'Brave NYT lawsuit search API'", "url": "https://xenospectrum.com/en/brave-nyt-lawsuit-search-api/", "take": "Documents the two letters NYT sent to Brave CEO Brendan Eich (August 2025, April 2026) that went unanswered — the silence pattern that preceded the suit." }
+      ]
+    },
+    {
+      "id": "baidu-ernie-5-5-flash-base-open-weights-nov5",
+      "tier": 2,
+      "title": "Baidu releases ERNIE 5.5 Flash Base weights — 280B MoE pretraining checkpoint, 33.5T training tokens, custom license with 'Powered by ERNIE' attribution requirement",
+      "summary": "On November 5, 2026, Baidu's ERNIE team released the weights for ERNIE 5.5 Flash Base — a text-only mixture-of-experts pretraining checkpoint with roughly 280 billion total parameters activating about 14 billion per token, trained from scratch on 33.5 trillion tokens. The weights are available on Hugging Face (FP8 and BF16 variants at baidu/ERNIE-5.5-Flash-Base and baidu/ERNIE-5.5-Flash-Base-BF16) and on ModelScope. This is a base model intended for downstream fine-tuning, not a chat or instruct model; Baidu says a post-trained ERNIE 5.5 Flash will follow. The license is a custom agreement (ERNIE 5.5 Flash Base Model License Agreement v1.0), not a standard open-source license: commercial use below $50 million in annual revenue is allowed with a one-time notice and a 'Powered by ERNIE' attribution requirement; above that threshold, Baidu's separate written authorization is required. Baidu's own benchmark tables show ERNIE 5.5 Flash Base scoring 93.3% on MMLU against DeepSeek-V4-Flash-Base's 89.4%, though the comparisons are mixed — Hy3-preview-Base leads on FullStackBench and DeepSeek leads on InfiniteBench. Context window: 128K tokens during pretraining, with the model card citing up to 1 million tokens available for fine-tuning and inference. The Hugging Face widget reports 286B parameters (a different counting convention applied to the same files), and one source notes the HF repositories existed with minimal content since October 21 before receiving the full checkpoints on or around November 2.",
+      "link": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base",
+      "why_it_matters": "This is a pretraining base checkpoint rather than a ready-to-use model, so the direct practical relevance depends on whether you're doing any fine-tuning work. If you're experimenting with training or fine-tuning smaller models, a well-trained base at this scale provides a starting point that someone else paid the compute for — which is the whole point of base checkpoint releases. The practical floor here is 'the base model for fine-tuning consumer-scale variants' rather than a model you'd load in its full 280B form on consumer hardware.\n\nTwo things worth noticing. First, the license is not standard open-source — it's Baidu's own agreement, and the 'Powered by ERNIE' attribution requirement is a commercial condition you'd need to track. For a personal project it's effectively permissive below $50M revenue, but it's not MIT or Apache 2.0, and that matters if you're ever putting a product on something built on top of this base. This is the same 'open weights but with conditions' pattern as Kimi K3.1 Pro last week (which requires the Kimi name on large products) and Mistral Large 4 (Mistral Ecosystem Open-Weight license, not plain MIT) — the broader trend is that labs are releasing weights with branding or use-restriction conditions rather than clean open-source terms, and you need to read the license file before assuming these are as free as Apache 2.0.\n\nSecond, Baidu releasing this at all is notable from an industry direction standpoint. For much of 2025 and early 2026, Baidu looked like it was moving toward closed API-only models as its competitive strategy. ERNIE 5.0 was API-only at launch; this is the first pretraining release in the ERNIE 5.x generation. That shift suggests Baidu is responding to the same open-weight competitive pressure that pushed Meta to open-source Muse Glimmer (August 2026) and Mistral to open-weight Large 4 (October 2026). The pattern across all three: labs with strong research pipelines are releasing pretraining checkpoints or near-inference weights not because they want to but because staying closed in a world where Kimi K3.1 Pro and Mistral Large 4 weights are freely downloadable makes you look like you're hiding something — or charging for access to something the ecosystem has decided should be free.",
+      "why_it_matters_brief": "Baidu releases its first open-weight pretraining checkpoint of the ERNIE 5.x generation — a custom license (not Apache/MIT, requires 'Powered by ERNIE' attribution below $50M revenue), following the same 'open weights with marketing-string conditions' pattern as Kimi K3.1 Pro and Mistral Large 4.",
+      "source": {
+        "name": "Baidu ERNIE Team / Hugging Face (baidu/ERNIE-5.5-Flash-Base); coverage via FourWeekMBA, Unite.AI, Tech-Insider, gradually.ai, llmreference.com, orcarouter.ai, zeli.app",
+        "type": "scrape",
+        "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-08T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-08T12:00:00Z", "by": "refresh", "change": "created — Baidu ERNIE 5.5 Flash Base weights released Nov 5, 2026. 280B total / 14B active MoE pretraining checkpoint. 33.5T training tokens. FP8 and BF16 variants on Hugging Face (baidu/ERNIE-5.5-Flash-Base and baidu/ERNIE-5.5-Flash-Base-BF16) and ModelScope. Custom ERNIE 5.5 Flash Base Model License Agreement v1.0 — not standard open-source; commercial use below $50M with 'Powered by ERNIE' attribution; above requires Baidu's written authorization. Self-reported MMLU 93.3% vs DeepSeek-V4-Flash-Base 89.4%; mixed results across other benchmarks. Post-trained ERNIE 5.5 Flash chat model to follow. hero_image null (Baidu and HuggingFace domains unreachable from this agent's egress, consistent with prior runs). Not in any existing November snapshot." }
+      ],
+      "takes": [
+        { "source": "FourWeekMBA — 'Baidu Opens ERNIE 5.5 Flash Weights, Free Up to $50M Revenue'", "url": "https://fourweekmba.com/ai-baidu-opens-ernie-5-5-flash-weights-free-up-to-50m-revenue/", "take": "Best source for the license structure: the $50M revenue threshold, the 'Powered by ERNIE' attribution condition, and how the custom license compares to Baidu's earlier closed-weight approach." },
+        { "source": "Tech-Insider — 'Baidu ERNIE 5.5 Flash Base: 280B MoE, 33.5T tokens'", "url": "https://tech-insider.org/baidu-ernie-5-5-flash-base-280b-moe-33-5t-tokens-2026/", "take": "Documents the benchmark table comparing ERNIE 5.5 Flash Base against DeepSeek-V4-Flash-Base, Hy3-preview-Base, and MiMo-V2.5-Base — ERNIE leads MMLU but trails on InfiniteBench and FullStackBench." },
+        { "source": "Unite.AI — ERNIE 5.5 Flash Base", "url": "https://www.unite.ai/?p=504284", "take": "Covers the split between FP8 and BF16 release variants and the dual Hugging Face / ModelScope hosting, and notes that a post-trained chat model (ERNIE 5.5 Flash) is planned to follow this base release." },
+        { "source": "orcarouter.ai — 'ERNIE 5.5 Flash Base open weights license'", "url": "https://www.orcarouter.ai/blog/ernie-5-5-flash-base-open-weights-license", "take": "Detailed license analysis: confirms the custom agreement is not one of the standard recognized open-source licenses, with the revenue threshold and attribution requirements spelled out." }
       ]
     }
   ],
