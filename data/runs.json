@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-08T12:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-08T12:00:00Z",
+      "ended_at": "2026-11-08T12:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 15000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 12000,
+        "curation": 2000,
+        "output_write": 500
+      },
+      "fetches_made": 18,
+      "items_input": 1,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-08-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue unreachable from this agent's egress. Ran 18 web searches. 1 new Tier-2 item added: baidu-ernie-5-5-flash-base-open-weights-nov5 (Baidu ERNIE 5.5 Flash Base weights released Nov 5, 2026, 280B MoE / 14B active, 33.5T tokens). Candidates checked and excluded: Inkling 2 Small (already in Nov 6 am snapshot), Mistral Large 4 weights (already in Nov 1 am snapshot), Qwen4 (not released — still in training), xAI Grok Build (Aug 2026, old news)."
+    },
+    {
       "run_id": "2026-11-08T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
