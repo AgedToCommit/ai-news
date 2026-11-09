@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-09T11:27:35Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-09T11:00:00Z",
+      "ended_at": "2026-11-09T11:27:35Z",
+      "wall_time_ms": 1655000,
+      "tokens_used": 19000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 16000,
+        "curation": 2000,
+        "output_write": 500
+      },
+      "fetches_made": 8,
+      "items_input": 1,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-09-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue unreachable from this agent's egress (simonwillison.net, huggingface.co DNS failed; consistent with every prior run). Ran 8 web searches: (1) AI model release announcement Nov 9 2026 — no tracked releases today; (2) Anthropic OpenAI Google Meta AI news Nov 9 — Anthropic security breach and IPO S-1 surfaces; (3) Anthropic security breach enterprise notification Nov 2026; (4) Anthropic IPO S-1 infrastructure buildout 2026; (5) DeepSeek v4 flash open weights Nov 5 2026 — not confirmed, actual releases are July/Aug/Oct; (6) South Korea PIPC Anthropic Claude data breach Nov 9 2026; (7) AI news Nov 9 Asia Europe overnight — no major overnight model releases found; (8) OpenAI Codex CLI 0.167.0 agent command center Nov 5 2026 — confirmed but Nov 5-6 date is outside refresh window. 1 new Tier-3 item added: anthropic-cathedral-breach-south-korea-nov9. The South Korea PIPC announced Nov 9 that Anthropic reported the Cathedral breach on Oct 31; ~100 Korean enterprise accounts affected; PIPC in preliminary review. This is the fresh overnight (Asia-cycle) element. Candidates excluded: DeepSeek v4 flash (Nov 5 tracker listing unconfirmed, actual release older); Codex CLI 0.167.0 (Nov 5-6, outside refresh window); Anthropic IPO S-1 amended Nov 2 (outside refresh window; would need to check if already in prior snapshot). No overnight chatter on existing Tier-1 item (Gemini Omni 1.2 Flash) warranted a revision."
+    },
+    {
       "run_id": "2026-11-09T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
