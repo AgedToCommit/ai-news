@@ -2,13 +2,14 @@
   "snapshot_id": "2026-11-09-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-09",
-  "generated_at": "2026-11-09T06:35:00Z",
-  "generated_at_local": "2026-11-09T01:35:00-05:00",
+  "generated_at": "2026-11-09T11:27:35Z",
+  "generated_at_local": "2026-11-09T06:27:35-05:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-11-08T17:00:00Z", "duration_ms": 2400000 },
-    { "phase": "enrichment", "ran_at": "2026-11-09T06:18:56Z", "duration_ms": 970000 }
+    { "phase": "enrichment", "ran_at": "2026-11-09T06:18:56Z", "duration_ms": 970000 },
+    { "phase": "refresh", "ran_at": "2026-11-09T11:00:00Z", "duration_ms": 1655000 }
   ],
-  "tier_counts": { "1": 1, "2": 2, "3": 0 },
+  "tier_counts": { "1": 1, "2": 2, "3": 1 },
   "items": [
     {
       "id": "google-gemini-omni-1-2-flash-video-nov-5",
@@ -110,6 +111,37 @@
         { "source": "Havoptic — 'Claude Code — November 2026 Releases'", "url": "https://www.havoptic.com/releases/claude-code/2026/11", "take": "Source for the version-by-version breakdown of v2.1.308–v2.1.319 and the specific user-visible changes in each. Covers cost reporting for gateway admins and the `onFailure: 'block'` SDK hook option." },
         { "source": "claude-world.com — 'Claude Code 新功能:2026 年 11 月 (v2.1.308–2.1.318)'", "url": "https://claude-world.com/zh-tw/articles/claude-code-november-2026-whats-new/", "take": "Traditional Chinese-language changelog digest covering the full release train from 2026/10/22 to 11/3. Best source for the `onFailure: 'block'` callback detail and the quieter-config-writes change." },
         { "source": "VentureBeat — 'Claude Code 2.1.0 arrives with smoother workflows and smarter agents'", "url": "https://venturebeat.com/orchestration/claude-code-2-1-0-arrives-with-smoother-workflows-and-smarter-agents", "take": "Backstory on the 2.1.x line: the broader 2.1 release introduced the Agent SDK and the mod system back in late September/early October. Context for understanding what `onFailure: 'block'` is a refinement of." }
+      ]
+    },
+    {
+      "id": "anthropic-cathedral-breach-south-korea-nov9",
+      "tier": 3,
+      "title": "Anthropic enterprise customers notified after security firm Cathedral accessed business-account metadata via third-party vendor; South Korea's PIPC confirms it received report Oct 31, opens preliminary review",
+      "summary": "On November 7, 2026, Anthropic emailed enterprise Claude customers saying an unnamed third-party cybersecurity research company may have accessed limited internal business data. Reporting from The Washington Post identifies the firm as Cathedral, a U.S. security startup that exploited vulnerabilities in third-party office software to access Anthropic's internal systems. Cathedral claims to have done this in under 12 hours according to a draft report reviewed by The Post. Data accessed includes account IDs, organization IDs, plan tier, usage and spend metrics, names, and email addresses; conversation content, passwords, and payment data were not accessed. Anthropic says it cut off the affected systems on the day of discovery and worked with the vendor to fix the vulnerability, but has not confirmed the full timeline from access to discovery to notification. Separately, South Korea's Personal Information Protection Commission (PIPC) confirmed on November 9 that Anthropic reported the incident to the regulator on October 31, saying roughly 100 Korean enterprise Claude accounts were affected. The PIPC is in preliminary review and has not yet formally opened an investigation; it said it will confirm the specific scale of damage once a formal probe begins. The gap between Anthropic's October 31 PIPC report and its November 7 customer notification has drawn scrutiny — one outlet calculates roughly 28 days between discovery and customer notice, though that timeline has not been confirmed by Anthropic.",
+      "link": "https://en.sedaily.com/international/2026/11/09/data-breach-at-anthropics-claude-hits-over-100-korean",
+      "why_it_matters": "The incident has two distinct threads worth tracking separately. The first is the breach mechanics: Cathedral's access path was through third-party office software, not Anthropic's model infrastructure or API. The data reached (account IDs, org IDs, plan tiers, usage and spend metrics) is the kind of metadata that could be useful for competitive intelligence or for targeting phishing, but it's not the sensitive content — no prompts, outputs, or payment data. For enterprise Claude users, the practical takeaway is that the attack surface isn't the AI platform itself; it's the surrounding vendor ecosystem. The second thread is the regulatory one: South Korea's PIPC received the notification on October 31 — a week before Anthropic emailed enterprise customers on November 7. This is the first confirmed privacy-regulator involvement in a major AI lab security incident (at least in the public record), and it's notable that the South Korean regulator moved first. The PIPC is currently in preliminary review. If a formal investigation opens, it proceeds under South Korea's Personal Information Protection Act, which allows fines of up to 3% of annual revenue for serious violations. The gap in the story is Anthropic's silence on the broader timeline: how long between Cathedral's access and Anthropic's discovery, and why the customer notification took as long as it did. For Gabe: if you're using Claude via API for anything where your subscription metadata matters (plan tier, usage patterns), nothing about your conversation content is at risk here. The story is worth watching in case the PIPC formal investigation turns up details about the access window or expands the scope — South Korea is an active privacy regulator with a track record of acting quickly on AI-adjacent incidents.",
+      "why_it_matters_brief": "Cybersecurity firm Cathedral accessed Anthropic's internal systems in under 12 hours via a third-party vendor — no prompt or payment data reached, but South Korea's PIPC is now in preliminary review, the first privacy regulator to formally receive the incident report.",
+      "source": {
+        "name": "Seoul Economic Daily (en.sedaily.com) Nov 9; PANews; Phemex; FourWeekMBA; esecurityplanet.com; CPO Magazine; chaincatcher.com; The Washington Post (via secondary reporting)",
+        "type": "scrape",
+        "url": "https://en.sedaily.com/international/2026/11/09/data-breach-at-anthropics-claude-hits-over-100-korean"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-09T11:27:35Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-09T11:27:35Z", "by": "refresh", "change": "created — Anthropic Nov 7 enterprise customer notice; Cathedral (U.S. security startup) accessed internal systems via third-party office software vulnerability in under 12 hours per WaPo draft report. Data: account IDs, org IDs, plan tiers, usage/spend metrics, names, emails. No prompts, passwords, or payment data. South Korea PIPC confirmed Oct 31 notification by Anthropic; ~100 Korean enterprise accounts affected; preliminary review only, no formal investigation yet. Hero_image null (source domains unreachable from this agent's egress)." }
+      ],
+      "takes": [
+        { "source": "Seoul Economic Daily — 'Data Breach at Anthropic's Claude Hits Over 100 Korean Corporate Accounts'", "url": "https://en.sedaily.com/international/2026/11/09/data-breach-at-anthropics-claude-hits-over-100-korean", "take": "English-language source for the South Korea PIPC angle dated November 9, 2026. Confirms the regulator's preliminary-review status and the ~100 Korean enterprise accounts figure." },
+        { "source": "FourWeekMBA — 'Anthropic Says Outside Security Firm Accessed Account Data'", "url": "https://fourweekmba.com/ai-anthropic-says-outside-security-firm-accessed-account-data/", "take": "Best source for the customer-notice text details: account ID, organization ID, plan tier, usage and spend metrics accessed; conversations, passwords, payment data not accessed. Notes Anthropic's 'you face no heightened risk' statement." },
+        { "source": "esecurityplanet.com — 'AI Agents Breached Anthropic's Business Systems in 12 Hours, Report Says'", "url": "https://www.esecurityplanet.com/artificial-intelligence/news-anthropic-ai-agents-third-party-business-systems-intrusion/", "take": "Source for the under-12-hours access claim from Cathedral's draft WaPo report. Confirms third-party office software as the vector and Anthropic's same-day system shutdown response." },
+        { "source": "CPO Magazine — 'Ex-DOGE Staffer Startup Claims Breach of Anthropic AI Agents Via Vendor Tools'", "url": "https://www.cpomagazine.com/cyber-security/ex-doge-staffer-startup-claims-breach-of-anthropic-ai-agents-via-vendor-tools/", "take": "Background on Cathedral's founders (linked to ex-DOGE staff) and the firm's vendor-tool attack methodology." },
+        { "source": "PANews — 'Anthropic Reports Claude Leak to South Korea, Affecting About 100 Enterprise Accounts'", "url": "https://panews.io/articles/01a1bff3-8014-7266-bbd6-f086c11d61e0", "take": "Confirmed the Oct 31 PIPC report filing date and the South Korea preliminary-review framing. Consistent with Seoul Economic Daily on scope." }
       ]
     }
   ],
