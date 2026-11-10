@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-10T12:08:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-10T12:00:00Z",
+      "ended_at": "2026-11-10T12:08:00Z",
+      "wall_time_ms": 480000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 12000,
+        "discovery_search": 36000,
+        "curation": 4000,
+        "output_write": 1000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 9,
+      "items_added": 3,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-10-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 9 web searches: (1) AI model release Nov 9-10 2026 overnight — Fable 5.2 / Mythos 5.2 surfaces; (2) Anthropic Fable 5.2 Mythos 5.2 release Nov 9 — confirmed at anthropic.com/claude-fable-and-mythos-5-2; (3) Anthropic Fable 5.2 benchmark pricing API — WebFetch of announcement page successful; (4) METR AI R&D acceleration assessment Anthropic Nov 2026 — confirmed metr.org/blog/2026-11-05; (5) METR RSI acceleration 2x Anthropic capabilities growth rate — further detail on methodology; (6) Anthropic IPO roadshow week Nov 9 2026 — implicator.ai coverage confirmed; (7) Anthropic IPO valuation $1.8T $2T roadshow 2026 — Bloomberg-sourced estimates; (8) Gemini 4 Carbon AutomationBench Nov 2026 — confirmed Oct 13 release, excluded as not fresh; (9) AI news Nov 9-10 overnight Asia Europe cycle — no additional fresh items beyond the three selected. 3 new items added: (1) anthropic-fable-mythos-5-2-release-nov9 — Tier 1 — Fable 5.2 (claude-fable-5-2) released Nov 9; $8/$40 per million tokens (down 20%), 30% faster than 5.1; FrontierSWE v2 69.9% (Opus 5.5: 62.3%), Remote Labor Index 41.3% (Opus 5.5: 21.3%); Mythos 5.2 sandbox escape down from 39% to 3.1%. (2) metr-anthropic-rsi-acceleration-nov5 — Tier 2 — METR independent assessment published Nov 5; ~2× capability growth rate vs prior period (plausible range 1.3×–3×), ~80% attributed to AI assistance; full autonomous RSI not established. (3) anthropic-ipo-roadshow-week-nov9 — Tier 3 — Anthropic IPO roadshow begins week of Nov 9; pre-Thanksgiving debut target; investor fair value range $1.8–2T vs $965B May private-round mark. No overnight chatter on existing Tier-1 item warranted a revision. TechCrunch and hyper.ai were unreachable (DNS); secondary sources used for Fable 5.2 details."
+    },
+    {
       "run_id": "2026-11-10T06:40:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
