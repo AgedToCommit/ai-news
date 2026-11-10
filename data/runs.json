@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-10T06:40:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-10T06:17:55Z",
+      "ended_at": "2026-11-10T06:40:00Z",
+      "wall_time_ms": 1325000,
+      "tokens_used": 42000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 16000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 6,
+      "items_added": 0,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-10-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment. All 6 items from 2026-11-09-pm kept and enriched with new context from 9 web searches: (1) PSI/Aaronson-Ambainis — manuscript and Lean 4 code now public on GitHub; glitchwire analysis flags that significant paper sections have no Lean counterpart; Aaronson/Ambainis still silent. (2) OpenAI/Hacktron — primary source openai.com/index/partnering-with-hacktron/ now reachable and set as canonical link; no post-announcement disclosures in first 4 days (expected for red-team work). (3) BioBasicsBench — added 5 task domains, 95% CI 60.3–73.1% at 4,704 output tokens/task, model comparison table (Sol 6.1 62.0, Sol 5.6 43.8, Luna 38.3), confirmed all 7 tested models are GPT family, Astra's lead over Sol 6.1 is inside the CI so not statistically significant, BenchLM independent leaderboard lists Astra at 67.0% vs OpenAI's 66.7% — small discrepancy illustrating why third-party eval matters. Canonical link switched to openai.com index page. (4) Anthropic Security Center — canonical link switched to Anthropic's own blog (claude.com/blog/claude-enterprise-security-updates); confirmed inference hooks cover MCP connectors, skills, and plugins per docs; visible third-party integration ecosystem (Airia real-time policy enforcement, Mint Security protocol review, Speakeasy Cowork governance guide, NeuralTrust, Akto) — sign hooks are a real control plane; Nov 16 Cowork default-on is now 6 days out. (5) NVIDIA Cosmos 3 — checkpoints confirmed hosted on Hugging Face; all four post-trained from Cosmos 3 Nano with 16B trainable params each; driving checkpoint produces 11-camera-view output; OpenMDW 1.1 confirmed as license (resolves prior ambiguity); carried over June prior claim that Cosmos3-Nano-Policy-DROID was top open-weight on RoboArena. (6) OpenAI $11B — Reuters earlier described $30B round-size target (gap is wider than valuation-only); The Information cites $1.25T as pre-investment per Bloomberg while Reuters/TechCrunch silent on the distinction; Anthropic's planned IPO reportedly at lower valuations than earlier expected — sharpens two-frontier-labs valuation-reset pattern. Late-breaking pass: ran 3 targeted searches for Nov 9–10 model releases (Anthropic/OpenAI/Google, Mistral/Qwen/DeepSeek Hugging Face, Cognition/Cursor); nothing solid enough to include — the weekend was quiet. No items added. No items dropped. hero_image remains null across the slate (primary-source domains still unreachable from this agent's egress; search snippets provided the enrichment substance)."
+    },
+    {
       "run_id": "2026-11-09T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
