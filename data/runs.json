@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-10T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-10T17:30:00Z",
+      "ended_at": "2026-11-10T18:00:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 72000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 10000,
+        "discovery_search": 50000,
+        "curation": 8000,
+        "output_write": 1500
+      },
+      "fetches_made": 18,
+      "items_input": 11,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-10-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. RSS/scrape sweeps skipped — primary lab domains (openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai) continue unreachable from this agent's egress; theneuron.ai and winterm.substack.com also failed DNS resolution via WebFetch. Fell back to WebSearch for discovery — 18 searches across model releases, developer tooling, hardware, regulation, and specific day-of angles. 5 new items added (no promotion from today's am): (1) cursor-openai-model-access-shutoff-nov12 — Tier 2 — OpenAI's Nov 12 shutoff of Cursor's GPT access is 48 hours out; SpaceX's $60B Anysphere acquisition is the trigger; Cursor's replacement path is Anthropic + Google + Grok + in-house Composer. (2) thinking-machines-inkling-2-small-nov5 — Tier 2 — Murati's lab shipped Inkling 2 Small Nov 5: 594B/17B-active MoE, image-input, Tinker-only at launch with Apache 2.0 weights promised next week; AA Intelligence Index 31 (up from 13 for Inkling Small). (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 — Tier 2 — Claude Code v2.1.317 (~Nov 2) adds the gateway admin cost report API and blocking Agent SDK hook callbacks; SDK-level completion of the onFailure:'block' pattern from v2.1.295. (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 — Tier 2 — CoRL 2026 is this week in Austin; NVIDIA/Jim Fan keynote teaser frames real humanoid hardware operating autonomously at normal speed; no post-event confirmation yet. (5) anthropic-onepwr-3-4b-gas-generators-nov8 — Tier 3 — FT reported Sunday that Anthropic signed a $3.4B late-September deal with OnePWR Solutions for 1.7GW of Caterpillar gas-fired generators; biggest known AI power-kit buy; corrects the am item's misattribution of the $3.4B figure to OpenAI. No Tier-1 items in pm — today's Fable 5.2/Mythos 5.2 release is already in the am from the refresh sweep. Skipped stories: Meta Muse Spark (April release, old); Fireworks AI breach (October, old); Mistral Large 4 weights (Oct 29, old); OpenAI Presence (July, old). Primary unreachable domains from this agent's egress (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com."
+    },
+    {
       "run_id": "2026-11-10T12:08:00Z-refresh",
       "phase": "refresh",
       "status": "success",
