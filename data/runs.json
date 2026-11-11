@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-11T11:35:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-11T11:26:00Z",
+      "ended_at": "2026-11-11T11:35:00Z",
+      "wall_time_ms": 540000,
+      "tokens_used": 25000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 2500,
+        "output_write": 1000
+      },
+      "fetches_made": 7,
+      "items_input": 7,
+      "items_output": 8,
+      "items_added": 2,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-11-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress). Ran 7 web searches targeting overnight Asia/Europe cycles: (1) general Nov 11 AI model release sweep, (2) Cursor/OpenAI shutoff status check, (3) Anthropic IPO S-1/A filing check, (4) CoRL 2026 day-2 news, (5) Gemini 4 Carbon confirmation, (6) Meituan LongCat-2.5 confirmation, (7) Anthropic Mythos 5.2 confirmation. 2 new items added: (1) google-gemini-4-carbon-ga-nov10 \u2014 Tier 1 \u2014 Google opened Gemini 4 Carbon to all paying API developers on Nov 10 at /0 intro pricing (through Nov 30, rising to /0 from Dec 1); strong timing signal as it goes GA one day before Cursor drops OpenAI; undercuts Fable 5.2 by 75% at intro rate; (2) meituan-longcat-2-5-mit-weights-nov9 \u2014 Tier 2 \u2014 Meituan put LongCat-2.5 weights on HuggingFace under MIT Nov 9; 1.6T/48B-active multimodal MoE explicitly designed for long-horizon agent tasks; trained on Chinese chips; largest open-weight Chinese model drop this year. No formal Anthropic S-1/A price range filed as of this snapshot \u2014 Crypto Briefing expects price range revealed early this week, with Nov 19-20 trading target; this is incremental on the existing ipo item and not added as a separate item. Fable 5.2 / Mythos 5.2 (Nov 9) already carried in prior snapshots (Nov 10-am). CoRL 2026 no new post-keynote developments beyond Nov 9 coverage. Existing tier-1 items in am: none pre-refresh; Gemini 4 Carbon is the only Tier-1 added."
+    },
+    {
       "run_id": "2026-11-11T06:35:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
@@ -26,7 +55,7 @@
       "snapshot_written": "2026-11-11-am",
       "error": null,
       "partial": false,
-      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains remain unreachable from this agent's egress, consistent with every prior run in this stretch; relied on WebSearch for discovery. Ran 9 web searches, one per existing pm item plus three late-breaking probes. All 5 items from yesterday's pm (2026-11-10-pm) kept + enriched: (1) cursor-openai-model-access-shutoff-nov12 — enriched with the specific list of affected features per OpenAI's transition notice (Cursor Tab, autocomplete, Auto, Cloud Agents, Background Agents, Automations, Cursor CLI, Cursor's API/SDK) including that BYOK does NOT survive since OpenAI's terms govern the model regardless of billing, and Anthropic/Tom Brown's public commitment to keep increasing Claude compute for Cursor through the transition; (2) thinking-machines-inkling-2-small-nov5 — light enrichment noting that six days past launch the Tinker page still shows Tinker Terms of Use rather than Apache 2.0, and no Hugging Face weights release has surfaced; (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 — significant enrichment expanding scope to the full v2.1.317 → v2.1.318 → v2.1.319 release train; v2.1.319 (Nov 6-7) adds MCP-tasks-in-the-background with two env-var escape hatches, permissions.denyInsteadOfPrompting, headless auto-mode exit code 1 on missed safety check (silently breaks CI scripts reading exit 0 as success), auto-mode-behind-LLM-gateway behavior; (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 — significant enrichment with the actual Nov 9 keynote outcome: GR00T 2 (2B-param world action model on Cosmos, single checkpoint covering parallel grippers + dexterous hands + humanoid, GR00T 2 Turbo previewed), Isaac Lab 3.0 (GA Oct 20, pluggable physics Newton+PhysX, 2.5× throughput vs 2.3 PhysX), demos (60% success on 4-min toy-truck assembly from human-only fine-tune, chemistry mocap-glove task, ASPIRE trial-and-error skill-writing), open code promised in December, Foxconn + Siemens adopters; (5) anthropic-onepwr-3-4b-gas-generators-nov8 — light enrichment noting Heatmap and Futurism coverage with environmental-permitting framing under current EPA power-plant carbon rules, no state TCEQ permit filings surfaced yet. 1 late-breaking item added: anthropic-ipo-roadshow-pricing-slip-nov10 — Tier 3 — IPO roadshow is this week, pricing targeted Nov 18-19, indicative valuation band has dropped from $2T+ to $1.25-$1.75T (~$1T lower than a month ago per Axios); no formal S-1/A price range filed. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com. No items dropped from yesterday's pm — all five had meaningful new substance to carry forward."
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped \u2014 primary lab domains remain unreachable from this agent's egress, consistent with every prior run in this stretch; relied on WebSearch for discovery. Ran 9 web searches, one per existing pm item plus three late-breaking probes. All 5 items from yesterday's pm (2026-11-10-pm) kept + enriched: (1) cursor-openai-model-access-shutoff-nov12 \u2014 enriched with the specific list of affected features per OpenAI's transition notice (Cursor Tab, autocomplete, Auto, Cloud Agents, Background Agents, Automations, Cursor CLI, Cursor's API/SDK) including that BYOK does NOT survive since OpenAI's terms govern the model regardless of billing, and Anthropic/Tom Brown's public commitment to keep increasing Claude compute for Cursor through the transition; (2) thinking-machines-inkling-2-small-nov5 \u2014 light enrichment noting that six days past launch the Tinker page still shows Tinker Terms of Use rather than Apache 2.0, and no Hugging Face weights release has surfaced; (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 \u2014 significant enrichment expanding scope to the full v2.1.317 \u2192 v2.1.318 \u2192 v2.1.319 release train; v2.1.319 (Nov 6-7) adds MCP-tasks-in-the-background with two env-var escape hatches, permissions.denyInsteadOfPrompting, headless auto-mode exit code 1 on missed safety check (silently breaks CI scripts reading exit 0 as success), auto-mode-behind-LLM-gateway behavior; (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 \u2014 significant enrichment with the actual Nov 9 keynote outcome: GR00T 2 (2B-param world action model on Cosmos, single checkpoint covering parallel grippers + dexterous hands + humanoid, GR00T 2 Turbo previewed), Isaac Lab 3.0 (GA Oct 20, pluggable physics Newton+PhysX, 2.5\u00d7 throughput vs 2.3 PhysX), demos (60% success on 4-min toy-truck assembly from human-only fine-tune, chemistry mocap-glove task, ASPIRE trial-and-error skill-writing), open code promised in December, Foxconn + Siemens adopters; (5) anthropic-onepwr-3-4b-gas-generators-nov8 \u2014 light enrichment noting Heatmap and Futurism coverage with environmental-permitting framing under current EPA power-plant carbon rules, no state TCEQ permit filings surfaced yet. 1 late-breaking item added: anthropic-ipo-roadshow-pricing-slip-nov10 \u2014 Tier 3 \u2014 IPO roadshow is this week, pricing targeted Nov 18-19, indicative valuation band has dropped from $2T+ to $1.25-$1.75T (~$1T lower than a month ago per Axios); no formal S-1/A price range filed. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com. No items dropped from yesterday's pm \u2014 all five had meaningful new substance to carry forward."
     },
     {
       "run_id": "2026-11-10T18:00:00Z-digest",
@@ -54,7 +83,7 @@
       "snapshot_written": "2026-11-10-pm",
       "error": null,
       "partial": false,
-      "notes": "Standard digest path. RSS/scrape sweeps skipped — primary lab domains (openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai) continue unreachable from this agent's egress; theneuron.ai and winterm.substack.com also failed DNS resolution via WebFetch. Fell back to WebSearch for discovery — 18 searches across model releases, developer tooling, hardware, regulation, and specific day-of angles. 5 new items added (no promotion from today's am): (1) cursor-openai-model-access-shutoff-nov12 — Tier 2 — OpenAI's Nov 12 shutoff of Cursor's GPT access is 48 hours out; SpaceX's $60B Anysphere acquisition is the trigger; Cursor's replacement path is Anthropic + Google + Grok + in-house Composer. (2) thinking-machines-inkling-2-small-nov5 — Tier 2 — Murati's lab shipped Inkling 2 Small Nov 5: 594B/17B-active MoE, image-input, Tinker-only at launch with Apache 2.0 weights promised next week; AA Intelligence Index 31 (up from 13 for Inkling Small). (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 — Tier 2 — Claude Code v2.1.317 (~Nov 2) adds the gateway admin cost report API and blocking Agent SDK hook callbacks; SDK-level completion of the onFailure:'block' pattern from v2.1.295. (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 — Tier 2 — CoRL 2026 is this week in Austin; NVIDIA/Jim Fan keynote teaser frames real humanoid hardware operating autonomously at normal speed; no post-event confirmation yet. (5) anthropic-onepwr-3-4b-gas-generators-nov8 — Tier 3 — FT reported Sunday that Anthropic signed a $3.4B late-September deal with OnePWR Solutions for 1.7GW of Caterpillar gas-fired generators; biggest known AI power-kit buy; corrects the am item's misattribution of the $3.4B figure to OpenAI. No Tier-1 items in pm — today's Fable 5.2/Mythos 5.2 release is already in the am from the refresh sweep. Skipped stories: Meta Muse Spark (April release, old); Fireworks AI breach (October, old); Mistral Large 4 weights (Oct 29, old); OpenAI Presence (July, old). Primary unreachable domains from this agent's egress (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com."
+      "notes": "Standard digest path. RSS/scrape sweeps skipped \u2014 primary lab domains (openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai) continue unreachable from this agent's egress; theneuron.ai and winterm.substack.com also failed DNS resolution via WebFetch. Fell back to WebSearch for discovery \u2014 18 searches across model releases, developer tooling, hardware, regulation, and specific day-of angles. 5 new items added (no promotion from today's am): (1) cursor-openai-model-access-shutoff-nov12 \u2014 Tier 2 \u2014 OpenAI's Nov 12 shutoff of Cursor's GPT access is 48 hours out; SpaceX's $60B Anysphere acquisition is the trigger; Cursor's replacement path is Anthropic + Google + Grok + in-house Composer. (2) thinking-machines-inkling-2-small-nov5 \u2014 Tier 2 \u2014 Murati's lab shipped Inkling 2 Small Nov 5: 594B/17B-active MoE, image-input, Tinker-only at launch with Apache 2.0 weights promised next week; AA Intelligence Index 31 (up from 13 for Inkling Small). (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 \u2014 Tier 2 \u2014 Claude Code v2.1.317 (~Nov 2) adds the gateway admin cost report API and blocking Agent SDK hook callbacks; SDK-level completion of the onFailure:'block' pattern from v2.1.295. (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 \u2014 Tier 2 \u2014 CoRL 2026 is this week in Austin; NVIDIA/Jim Fan keynote teaser frames real humanoid hardware operating autonomously at normal speed; no post-event confirmation yet. (5) anthropic-onepwr-3-4b-gas-generators-nov8 \u2014 Tier 3 \u2014 FT reported Sunday that Anthropic signed a $3.4B late-September deal with OnePWR Solutions for 1.7GW of Caterpillar gas-fired generators; biggest known AI power-kit buy; corrects the am item's misattribution of the $3.4B figure to OpenAI. No Tier-1 items in pm \u2014 today's Fable 5.2/Mythos 5.2 release is already in the am from the refresh sweep. Skipped stories: Meta Muse Spark (April release, old); Fireworks AI breach (October, old); Mistral Large 4 weights (Oct 29, old); OpenAI Presence (July, old). Primary unreachable domains from this agent's egress (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com."
     },
     {
       "run_id": "2026-11-10T12:08:00Z-refresh",
@@ -83,7 +112,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Standard refresh path. RSS/scrape sweep skipped — primary lab domains continue unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 9 web searches: (1) AI model release Nov 9-10 2026 overnight — Fable 5.2 / Mythos 5.2 surfaces; (2) Anthropic Fable 5.2 Mythos 5.2 release Nov 9 — confirmed at anthropic.com/claude-fable-and-mythos-5-2; (3) Anthropic Fable 5.2 benchmark pricing API — WebFetch of announcement page successful; (4) METR AI R&D acceleration assessment Anthropic Nov 2026 — confirmed metr.org/blog/2026-11-05; (5) METR RSI acceleration 2x Anthropic capabilities growth rate — further detail on methodology; (6) Anthropic IPO roadshow week Nov 9 2026 — implicator.ai coverage confirmed; (7) Anthropic IPO valuation $1.8T $2T roadshow 2026 — Bloomberg-sourced estimates; (8) Gemini 4 Carbon AutomationBench Nov 2026 — confirmed Oct 13 release, excluded as not fresh; (9) AI news Nov 9-10 overnight Asia Europe cycle — no additional fresh items beyond the three selected. 3 new items added: (1) anthropic-fable-mythos-5-2-release-nov9 — Tier 1 — Fable 5.2 (claude-fable-5-2) released Nov 9; $8/$40 per million tokens (down 20%), 30% faster than 5.1; FrontierSWE v2 69.9% (Opus 5.5: 62.3%), Remote Labor Index 41.3% (Opus 5.5: 21.3%); Mythos 5.2 sandbox escape down from 39% to 3.1%. (2) metr-anthropic-rsi-acceleration-nov5 — Tier 2 — METR independent assessment published Nov 5; ~2× capability growth rate vs prior period (plausible range 1.3×–3×), ~80% attributed to AI assistance; full autonomous RSI not established. (3) anthropic-ipo-roadshow-week-nov9 — Tier 3 — Anthropic IPO roadshow begins week of Nov 9; pre-Thanksgiving debut target; investor fair value range $1.8–2T vs $965B May private-round mark. No overnight chatter on existing Tier-1 item warranted a revision. TechCrunch and hyper.ai were unreachable (DNS); secondary sources used for Fable 5.2 details."
+      "notes": "Standard refresh path. RSS/scrape sweep skipped \u2014 primary lab domains continue unreachable from this agent's egress, consistent with every prior run in this stretch. Ran 9 web searches: (1) AI model release Nov 9-10 2026 overnight \u2014 Fable 5.2 / Mythos 5.2 surfaces; (2) Anthropic Fable 5.2 Mythos 5.2 release Nov 9 \u2014 confirmed at anthropic.com/claude-fable-and-mythos-5-2; (3) Anthropic Fable 5.2 benchmark pricing API \u2014 WebFetch of announcement page successful; (4) METR AI R&D acceleration assessment Anthropic Nov 2026 \u2014 confirmed metr.org/blog/2026-11-05; (5) METR RSI acceleration 2x Anthropic capabilities growth rate \u2014 further detail on methodology; (6) Anthropic IPO roadshow week Nov 9 2026 \u2014 implicator.ai coverage confirmed; (7) Anthropic IPO valuation $1.8T $2T roadshow 2026 \u2014 Bloomberg-sourced estimates; (8) Gemini 4 Carbon AutomationBench Nov 2026 \u2014 confirmed Oct 13 release, excluded as not fresh; (9) AI news Nov 9-10 overnight Asia Europe cycle \u2014 no additional fresh items beyond the three selected. 3 new items added: (1) anthropic-fable-mythos-5-2-release-nov9 \u2014 Tier 1 \u2014 Fable 5.2 (claude-fable-5-2) released Nov 9; $8/$40 per million tokens (down 20%), 30% faster than 5.1; FrontierSWE v2 69.9% (Opus 5.5: 62.3%), Remote Labor Index 41.3% (Opus 5.5: 21.3%); Mythos 5.2 sandbox escape down from 39% to 3.1%. (2) metr-anthropic-rsi-acceleration-nov5 \u2014 Tier 2 \u2014 METR independent assessment published Nov 5; ~2\u00d7 capability growth rate vs prior period (plausible range 1.3\u00d7\u20133\u00d7), ~80% attributed to AI assistance; full autonomous RSI not established. (3) anthropic-ipo-roadshow-week-nov9 \u2014 Tier 3 \u2014 Anthropic IPO roadshow begins week of Nov 9; pre-Thanksgiving debut target; investor fair value range $1.8\u20132T vs $965B May private-round mark. No overnight chatter on existing Tier-1 item warranted a revision. TechCrunch and hyper.ai were unreachable (DNS); secondary sources used for Fable 5.2 details."
     },
     {
       "run_id": "2026-11-10T06:40:00Z-enrichment",
@@ -111,7 +140,7 @@
       "snapshot_written": "2026-11-10-am",
       "error": null,
       "partial": false,
-      "notes": "Standard enrichment. All 6 items from 2026-11-09-pm kept and enriched with new context from 9 web searches: (1) PSI/Aaronson-Ambainis — manuscript and Lean 4 code now public on GitHub; glitchwire analysis flags that significant paper sections have no Lean counterpart; Aaronson/Ambainis still silent. (2) OpenAI/Hacktron — primary source openai.com/index/partnering-with-hacktron/ now reachable and set as canonical link; no post-announcement disclosures in first 4 days (expected for red-team work). (3) BioBasicsBench — added 5 task domains, 95% CI 60.3–73.1% at 4,704 output tokens/task, model comparison table (Sol 6.1 62.0, Sol 5.6 43.8, Luna 38.3), confirmed all 7 tested models are GPT family, Astra's lead over Sol 6.1 is inside the CI so not statistically significant, BenchLM independent leaderboard lists Astra at 67.0% vs OpenAI's 66.7% — small discrepancy illustrating why third-party eval matters. Canonical link switched to openai.com index page. (4) Anthropic Security Center — canonical link switched to Anthropic's own blog (claude.com/blog/claude-enterprise-security-updates); confirmed inference hooks cover MCP connectors, skills, and plugins per docs; visible third-party integration ecosystem (Airia real-time policy enforcement, Mint Security protocol review, Speakeasy Cowork governance guide, NeuralTrust, Akto) — sign hooks are a real control plane; Nov 16 Cowork default-on is now 6 days out. (5) NVIDIA Cosmos 3 — checkpoints confirmed hosted on Hugging Face; all four post-trained from Cosmos 3 Nano with 16B trainable params each; driving checkpoint produces 11-camera-view output; OpenMDW 1.1 confirmed as license (resolves prior ambiguity); carried over June prior claim that Cosmos3-Nano-Policy-DROID was top open-weight on RoboArena. (6) OpenAI $11B — Reuters earlier described $30B round-size target (gap is wider than valuation-only); The Information cites $1.25T as pre-investment per Bloomberg while Reuters/TechCrunch silent on the distinction; Anthropic's planned IPO reportedly at lower valuations than earlier expected — sharpens two-frontier-labs valuation-reset pattern. Late-breaking pass: ran 3 targeted searches for Nov 9–10 model releases (Anthropic/OpenAI/Google, Mistral/Qwen/DeepSeek Hugging Face, Cognition/Cursor); nothing solid enough to include — the weekend was quiet. No items added. No items dropped. hero_image remains null across the slate (primary-source domains still unreachable from this agent's egress; search snippets provided the enrichment substance)."
+      "notes": "Standard enrichment. All 6 items from 2026-11-09-pm kept and enriched with new context from 9 web searches: (1) PSI/Aaronson-Ambainis \u2014 manuscript and Lean 4 code now public on GitHub; glitchwire analysis flags that significant paper sections have no Lean counterpart; Aaronson/Ambainis still silent. (2) OpenAI/Hacktron \u2014 primary source openai.com/index/partnering-with-hacktron/ now reachable and set as canonical link; no post-announcement disclosures in first 4 days (expected for red-team work). (3) BioBasicsBench \u2014 added 5 task domains, 95% CI 60.3\u201373.1% at 4,704 output tokens/task, model comparison table (Sol 6.1 62.0, Sol 5.6 43.8, Luna 38.3), confirmed all 7 tested models are GPT family, Astra's lead over Sol 6.1 is inside the CI so not statistically significant, BenchLM independent leaderboard lists Astra at 67.0% vs OpenAI's 66.7% \u2014 small discrepancy illustrating why third-party eval matters. Canonical link switched to openai.com index page. (4) Anthropic Security Center \u2014 canonical link switched to Anthropic's own blog (claude.com/blog/claude-enterprise-security-updates); confirmed inference hooks cover MCP connectors, skills, and plugins per docs; visible third-party integration ecosystem (Airia real-time policy enforcement, Mint Security protocol review, Speakeasy Cowork governance guide, NeuralTrust, Akto) \u2014 sign hooks are a real control plane; Nov 16 Cowork default-on is now 6 days out. (5) NVIDIA Cosmos 3 \u2014 checkpoints confirmed hosted on Hugging Face; all four post-trained from Cosmos 3 Nano with 16B trainable params each; driving checkpoint produces 11-camera-view output; OpenMDW 1.1 confirmed as license (resolves prior ambiguity); carried over June prior claim that Cosmos3-Nano-Policy-DROID was top open-weight on RoboArena. (6) OpenAI $11B \u2014 Reuters earlier described $30B round-size target (gap is wider than valuation-only); The Information cites $1.25T as pre-investment per Bloomberg while Reuters/TechCrunch silent on the distinction; Anthropic's planned IPO reportedly at lower valuations than earlier expected \u2014 sharpens two-frontier-labs valuation-reset pattern. Late-breaking pass: ran 3 targeted searches for Nov 9\u201310 model releases (Anthropic/OpenAI/Google, Mistral/Qwen/DeepSeek Hugging Face, Cognition/Cursor); nothing solid enough to include \u2014 the weekend was quiet. No items added. No items dropped. hero_image remains null across the slate (primary-source domains still unreachable from this agent's egress; search snippets provided the enrichment substance)."
     },
     {
       "run_id": "2026-11-09T17:30:00Z-digest",
@@ -7446,175 +7475,6 @@
       "error": null,
       "partial": false,
       "notes": "Enrichment run 2am EDT Thursday August 13 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-12-pm.json) exists with 1 item (T3 Google Pixel 11 / Made by Google '26); standard prune+enrich path applied. Last successful run ended_at: 2026-08-12T17:20:00Z (digest). WebFetch not attempted per prior-run pattern; relied entirely on WebSearch (6 targeted queries covering: Pixel 11 Gemini Automation hands-on reviews Aug 13, Gemini calling businesses backlash, Zocdoc partnership doctor reactions, Apple response Pixel 11 competitive, overnight AI model releases, Apple Gemini Siri partnership timing/rumor). The 1 T3 Pixel 11 item KEPT + ENRICHED (0 dropped): added overnight follow-up detail from 9to5Google that Gemini Automation task-handling works across MORE THAN 40 apps (not just the OpenTable/Ticketmaster/Zocdoc launch partners) \u2014 the specific canary that graduates the connected-app pattern from three-launch-partners to a real ecosystem; added Gboard Rambler filler-word-filtering detail ('umm'/'ah' filtering, run-on-sentence cleanup); added HiLight LED array on Pro models that pulses to indicate Gemini listening/thinking/responding (physical AI-status hardware indicator, unusual UX); added location-aware At A Glance widget detail; added Zocdoc onboarding-model detail (providers already on Zocdoc automatically enabled in Gemini with no additional integration required) and the 85%-of-providers-see-more-AI-informed-patients data point; added Duplex-era identify-as-robot precedent that Gemini business-calls announce upfront that they are an automated system calling on the user's behalf; added the STRATEGIC-PARADOX WRINKLE (Quartz/CNBC follow-up, Seeking Alpha, AppleInsider) that Apple is rebuilding Siri around Google's own Gemini models (iOS 27 September with iPhone 18) \u2014 so Google is simultaneously competing against Apple on the Pixel and providing the underlying model Apple will use to compete back; added Quartz specific framing 'Google launched Pixel 11 with agentic AI weeks before Apple ships a Gemini-powered Siri'; added Google's marketing-response detail (#BestPhonesForever 'Generation Gap' episode poking fun at Apple's AI intelligence); added CNBC consumer-adoption baseline (AI ranks 6th\u20137th among consumers' reasons for upgrading a smartphone but climbing 1\u20132 spots as Gemini/Apple Intelligence become more capable); rewrote why_it_matters_brief to lead with the '40+ apps' + 'iOS 27 September Gemini-Siri' timing paradox; added takes[] entries for Quartz, AppleInsider, Seeking Alpha, and 9to5Google Gboard Rambler follow-up; refreshed watch-list to include the iOS 27 September head-to-head and whether HiLight LED array becomes a template for physical AI-status indicators. Late-breaking pass: 0 items added. No frontier lab drops overnight from Anthropic/OpenAI/Google DeepMind/Meta/xAI/Mistral/DeepSeek \u2014 most recent tracked release is GPT-5.6-Cyber (Aug 10) and Qwen 3.8-Max/27B (Aug 12), both already in prior snapshots; next projected Anthropic release ~Aug 17. Wall time ~22min."
-    },
-    {
-      "run_id": "2026-08-12T17:20:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-08-12T17:00:00Z",
-      "ended_at": "2026-08-12T17:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 34000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 18000,
-        "curation": 8000,
-        "output_write": 6500
-      },
-      "fetches_made": 12,
-      "items_input": 3,
-      "items_output": 1,
-      "items_added": 1,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-12-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT Wednesday August 12 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-12-am.json) exists with 8 items (T1:3 Anthropic watermark + Theseus JV + Muse Glimmer; T2:4 OpenAI Daybreak + Arc phages + data-center backlash + Qwen3.8-Max; T3:1 TSMC); promotion rule applied \u2014 no T1 items materially deepened since the 11:15 UTC refresh, so nothing promoted. WebFetch blocked per prior-run pattern; relied entirely on WebSearch (12 queries covering: Qwen3.8-Max Hugging Face open weights afternoon reactions, AI news Aug 12 afternoon, Muse Glimmer LMArena, AI model release Aug 12 open source, Simon Willison Anthropic watermark, arxiv Aug 11-12, Anthropic-OpenAI announcements, Made by Google Pixel 11 event, Cursor/Windsurf/Claude Code, MCP server release, Gemini Automation OpenTable/Ticketmaster/Zocdoc, Qwen3.8-Max GGUF/quantization). Digest is small (1 T3 item) because am file already covered the major Aug 10-12 stories and the fresh window (11:15 UTC \u2192 17:00 UTC, ~6 hours) yielded only one genuinely new digest-worthy story: Made by Google '26 event with Pixel 11 launch. New item: (T3) Google Made by Google '26 event / Pixel 11 lineup with substantive Gemini AI features \u2014 Gemini Automation multi-step natural-language app navigation, Rambler upgraded speech-to-text, Magic Capture photo AI, Gemini calling businesses on user's behalf, sign-language-to-text accessibility, Gemini-generated custom watchfaces on Pixel Watch 5, connected-app integrations wave (OpenTable, Ticketmaster, Zocdoc \u2014 Zocdoc announced same day as 'first-of-its-kind' agentic healthcare booking across 200,000+ providers), Pixel 11 Pro $1,099 (+$100 hike), Rick Osterloh CNBC quote 'Pixel and iPhone are going in very different directions.' Excluded by promotion rule: all 8 am items \u2014 Qwen3.8-Max hands-on/LMArena details would materially deepen but strict rule limits promotion to T1 only. Wall time ~20min per historical pattern."
-    },
-    {
-      "run_id": "2026-08-12T11:15:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-08-12T11:00:00Z",
-      "ended_at": "2026-08-12T11:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 38000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 0,
-        "discovery_search": 28000,
-        "curation": 7000,
-        "output_write": 3000
-      },
-      "fetches_made": 12,
-      "items_input": 7,
-      "items_output": 8,
-      "items_added": 1,
-      "items_kept": 7,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-12-am",
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT Wednesday August 12 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file (2026-08-12-am.json) exists with 7 items (T1:3, T2:3, T3:1); standard path applied. Since-filter: 2026-08-12T06:45:00Z (enrichment ended_at). WebFetch EGRESS_BLOCKED as with prior runs; relied entirely on WebSearch (12 queries covering: Qwen3.8-Max open weights Hugging Face, Qwen3.8-27B open weights, Alibaba Qwen3.8 August 12, Muse Glimmer LMArena Elo update, Anthropic watermark detection API confirmation, NVIDIA open secure AI alliance August 12, EU AI Act enforcement August 12, AI model releases August 12 morning, Latent Space AINews August 12). 1 new item added: Alibaba Qwen3.8-Max (2.4T MoE, 95B active, Apache 2.0) and Qwen3.8-27B open weights dropped on Hugging Face and ModelScope at 10 AM UTC+8 August 12 \u2014 first Qwen Max-tier open-weight release, second-largest open-weight MoE after Kimi K3; vendor benchmarks claim OSWorld-Verified 86.1 lead over Fable 5 85.0 but independent evaluation pending (BenchLM.ai tracking, Artificial Analysis and LMArena expected later this week). 1 T1 item revised (Anthropic watermark): Anthropic engineer publicly confirmed detection API is in development ('We'll also be shipping a text detection API'), clarified watermark is applied at sampler level not model weights, and confirmed multi-lab direction. LMArena Elo for Muse Glimmer still pending \u2014 no update. NVIDIA Open Secure AI Alliance announcement dated July 2026 \u2014 outside refresh window, excluded. Wall time ~15min."
-    },
-    {
-      "run_id": "2026-08-12T06:45:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-08-12T06:23:00Z",
-      "ended_at": "2026-08-12T06:45:00Z",
-      "wall_time_ms": 1320000,
-      "tokens_used": 46000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 0,
-        "discovery_search": 26000,
-        "curation": 14000,
-        "output_write": 6000
-      },
-      "fetches_made": 10,
-      "items_input": 7,
-      "items_output": 7,
-      "items_added": 0,
-      "items_kept": 7,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-12-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT Tuesday August 12 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-11-pm.json) exists with 7 items (T1:3, T2:3, T3:1); standard prune+enrich path applied. Last successful run ended_at: 2026-08-11T17:20:00Z (digest). WebFetch not attempted per prior-run pattern; relied entirely on WebSearch (10 queries covering: Anthropic watermark reactions/Simon Willison, Anthropic Theseus overnight coverage, Muse Glimmer LMArena/GDPval, OpenAI GPT-5.6-Cyber benchmark, Arc Institute Evo bacteriophages biosecurity reactions, AI data-center moratorium bill legislation update, TSMC July revenue analyst reaction, Aug 12 overnight AI model releases, Qwen 3.8 Max open weights, general overnight AI news). All 7 items KEPT + ENRICHED (0 dropped): (1) Anthropic watermark \u2014 added overnight developer-backlash including Simon Willison public objection about token-bias degrading code-generation quality, The New Stack 'survives copy-paste but not the real dev workflow,' Forbes 'internet isn't happy,' subscriber cancellations, The Decoder 'may persist through some editing' false-positive risk; (2) Theseus Infrastructure \u2014 added HPCwire and Alternatives Watch coverage framing the deal as the emerging default template for how alternative-asset-management platforms enter AI infrastructure at scale; (3) Muse Glimmer \u2014 added the second independent-benchmark leg (GDPval-AA v2 953 Elo below 1,000-human baseline vs Intelligence Index 35 pattern showing model tops open-weight reasoning rankings but trails same-tier closed models on business-workflow tasks); (4) OpenAI Daybreak \u2014 added the specific benchmark numbers (GPT-5.6-Cyber 95.0% on Advanced Cybersecurity Completion Rate vs 1.5-2% for base GPT-5.6 Sol via Blue vs 57.3% for GPT-5.5-Cyber, ~60\u00d7 gap), 16-company partner program (IBM, CrowdStrike, Accenture, Cisco, Cloudflare + 11 more), The Hacker News 'reduced safeguards for exploit development' framing as substantive safety-side story, source URL updated to openai.com/index/ canonical; (5) Arc Institute phages \u2014 added crystallized biosecurity commentary from Johns Hopkins experts publicly naming synthetic-DNA-order screening infrastructure gap (cannot detect Evo-2-generated novel sequences) and the specific dual-use warning about genome-LM-modified flu; (6) data-center backlash \u2014 added specific bill numbers (S.4214 Senate / H.R.9442 House), 20 MW threshold, March 25 2026 introduction, Brookings 'relatively little traction' analysis capturing federal-vs-local political-alignment gap, Al Jazeera complementary 36-projects/$162B May 2024\u2013June 2025 figure; (7) TSMC \u2014 added Ben Barringer / Quilter Cheviot analyst quote validation, 2-nanometer node named as primary single driver of growth (mix-shift to higher-ASP wafers), 2026 capex raised to $60\u201364B. Late-breaking pass: no substantive new items surfaced. Qwen 3.8 Max/27B open weights still pending on Hugging Face (@hqmank pointed to Aug 12 as rumored date but no repo yet as of 2am EDT); no frontier lab drops overnight from Anthropic/OpenAI/Google DeepMind/Meta/xAI/Mistral/DeepSeek; items_added=0. Wall time ~22min."
-    },
-    {
-      "run_id": "2026-08-11T17:20:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-08-11T17:00:00Z",
-      "ended_at": "2026-08-11T17:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 62000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 3000,
-        "deep_fetch": 0,
-        "discovery_search": 32000,
-        "curation": 15000,
-        "output_write": 12000
-      },
-      "fetches_made": 15,
-      "items_input": 12,
-      "items_output": 7,
-      "items_added": 6,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-11-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT Tuesday August 11 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-11-am.json) exists with 4 items (T1:1 Muse Glimmer, T2:2 Fable 5 biology + Intel $15B, T3:1 Unitree IPO); promotion rule applied. WebFetch blocked as usual; relied entirely on WebSearch (15 queries covering: Aug 11 model releases, Anthropic/OpenAI/Google/Meta announcements, Qwen 3.8-Max open weights status, Simon Willison, developer tools Cursor/Windsurf, AI research papers arxiv, Anthropic Cowork/watermarks, robotics/humanoid news, Chinese AI Alibaba/Moonshot/Baidu/ByteDance, NVIDIA Blackwell, EU AI Act Article 50, Muse Glimmer Artificial Analysis, Ollama/Unsloth Muse Glimmer, TSMC 45% revenue growth, bipartisan data-center opposition, Arc Institute AI-designed phages, GPT-5.6 Sol slider, AI-Weekly Issue 229, Theseus Infrastructure Macquarie GIC). Final digest 7 items (T1:3, T2:3, T3:1). Promotion decision: Muse Glimmer promoted from am because Artificial Analysis published Independent Intelligence Index score of 35 on Aug 11 \u2014 the specific vendor-scorecard-caveat resolution that was pending in am file's revisions[]. Excluded from digest by promotion rule (per digest.md): Fable 5 biology (T2), Intel $15B (T2), Unitree IPO (T3) \u2014 all in today's am with no materially deepened afternoon signal. New items: (T1) Anthropic invisible-text-watermark rollout under EU AI Act Article 50 \u2014 Aug 11 primary Anthropic disclosure, 9+ cross-source coverage including TechCrunch/The Register/Interesting Engineering/TechTimes/Notebookcheck/ExplainX/TheAIInsider/Cryptobriefing/Pasquale Pillitteri; (T1) Anthropic + Macquarie + GIC Theseus Infrastructure JV Aug 10 with 100% grid-upgrade-cost + consumer-electricity-price-shield commitments; (T2) OpenAI Daybreak Blue/Red tier restructure + GPT-5.6-Cyber Aug 10 (TechCrunch/CNBC/TechRadar/CyberScoop/CSO Online/Forbes/ExplainX); (T2) Stanford + Arc Institute AI-designed working bacteriophages published in Science Aug 6 (700K candidates \u2192 285 built \u2192 16 functional including phiX174-resistant strains) \u2014 first AI-designed working viruses, connects to Fable 5 biology-safeguards timing already in am; (T2) bipartisan AI-data-center opposition roundup \u2014 70% Gallup, $130B blocked Q1 2026 \u2014 directly explains structural context for Theseus electricity commitments; (T3) TSMC July 2026 monthly revenue +44.7% YoY Aug 10 report ($14.5B, 66% HPC/AI-accelerator mix). Wall time ~20min per historical pattern."
-    },
-    {
-      "run_id": "2026-08-11T11:30:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-08-11T11:00:00Z",
-      "ended_at": "2026-08-11T11:30:00Z",
-      "wall_time_ms": 1800000,
-      "tokens_used": 42000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 2000,
-        "deep_fetch": 0,
-        "discovery_search": 30000,
-        "curation": 8000,
-        "output_write": 2000
-      },
-      "fetches_made": 13,
-      "items_input": 0,
-      "items_output": 4,
-      "items_added": 0,
-      "items_kept": 4,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-11-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT Tuesday August 11 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Today's am file (2026-08-11-am.json) exists with 4 items (T1:1 Muse Glimmer, T2:2 Fable 5 biology safeguards + Intel $15B, T3:1 Unitree); standard path applied. Last enrichment ended_at: 2026-08-11T06:15:00Z (5-hour sweep window). WebFetch blocked as expected; relied entirely on WebSearch (13 queries covering: Qwen 3.8-Max open weights status, Aug 11 model releases, OpenAI/Anthropic/Google/Meta announcements, Unitree IPO oversubscription results, Muse Glimmer BenchLM/Artificial Analysis independent status, ByteDance Seedance 2.5, Mistral Leanstral 1.5, xAI Grok 4.6, EU AI Act Aug 2 enforcement, developer tools, Baidu/Zhipu China overnight, Simon Willison/Hugging Face overnight). No new standalone Tier-1 or Tier-2 items found from the overnight Asia/Europe cycle: Qwen 3.8-Max open weights still pending on Hugging Face (promised this week, no repository yet); Grok 4.6 not released (Aug 7 date passed without announcement \u2014 only Grok Build V1.0 coding harness shipped Aug 7, outside refresh window); no new frontier lab model drops overnight from OpenAI/Anthropic/Google DeepMind/Meta/xAI/Mistral. Items_added=0. T1 re-pass (Muse Glimmer): BenchLM now shows 14 sourced rows exposed, ranks #19/37 on instruction following \u2014 no full public ranking yet; Artificial Analysis has no Muse Glimmer entry as of 7am EDT; all independent like-for-like benchmarks still underway; the vendor-scorecard caveat already in the item holds. Summary and revision entry updated. T3 re-pass (Unitree): IPO subscription closed overnight with historic result \u2014 8,288.82\u00d7 retail oversubscription (9.78M valid accounts, 53.64B shares ordered, 800B+ yuan / $118.8B frozen); clawback triggered; final online issuance 9.707M shares; lottery win rate 0.01809759% (one of STAR Market's lowest ever); values Unitree at 219\u00d7 earnings. Summary, why_it_matters_brief, and revision entry updated. Intel item: no meaningful overnight update \u2014 pricing supplement not yet published. Fable 5 item: no meaningful overnight update."
-    },
-    {
-      "run_id": "2026-08-11T06:15:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-08-11T06:00:00Z",
-      "ended_at": "2026-08-11T06:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 38000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 0,
-        "discovery_search": 20000,
-        "curation": 10000,
-        "output_write": 8000
-      },
-      "fetches_made": 7,
-      "items_input": 4,
-      "items_output": 4,
-      "items_added": 0,
-      "items_kept": 4,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-11-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT Tuesday August 11 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-10-pm.json) exists with 4 items (T1:1 Muse Glimmer, T2:2 Fable 5 safeguards + Intel $15B, T3:1 Unitree IPO). WebSearch worked (WebFetch blocked as usual \u2014 did not attempt). Sub-task 1 (prune+enrich): all 4 items KEPT + ENRICHED, 0 dropped. Enrichment findings by item: (1) Muse Glimmer \u2014 overnight third-party benchmark replications from Kingy.ai + Andrew Zhu/Mehul Gupta Medium writeups added (AIME 2026 94.7%, SWE-Bench Pro 51.2%, DeepSearch QA 74.6%, Gaia2 43.3%, IFBench 77.0%, AA-LCR 80.0%); specific MCP Atlas comparison sharpened (75.5 vs Qwen3.6-27B 62.5 vs Gemma4-31B 54.2); vendor-scorecard caveat pending BenchLM.ai/lmarena re-runs; noted Qwen 3.8-Max open weights promised for this week but not yet dropped as of overnight. (2) Fable 5 biology safeguards \u2014 added Forkast angle on same-day Stanford AI-designed-virus paper (awkward timing); added DigitalApplied observation that this is the first frontier lab to publish per-surface guardrail false-positive numbers (transparency template competitors will have to match); added the overnight subscriber-pushback framing (any auto-downgrade undercuts the paid tier); updated why_it_matters_brief lead to the first-frontier-lab framing. (3) Intel $15B \u2014 added the specific detail that initial announcement carried no price range/share count/closing date (pricing supplement to follow); reconciled the ~3% premarket / ~5% intraday / ~4% settled stock-move numbers; added Quartz as an accessible general-audience source. (4) Unitree IPO \u2014 added the specific 40.446 million shares / 10% post-offering-float detail from TechNode/Global Times; added the specific $9B / 60.99B yuan post-offering market cap reconciliation; added Global Times/TechNode confirmation that Unitree ships more humanoid robots than any manufacturer worldwide by unit volume (strengthens the profitability-at-scale framing); noted no oversubscription figure yet (retail allocation typically follows within 48h). Sub-task 2 (late-breaking pass): checked overnight for Tier-1 lab announcements from OpenAI/Anthropic/Google DeepMind/Meta/Alibaba/Moonshot \u2014 none in the 12h window. Qwen 3.8-Max open weights still promised for the week but not yet dropped as of overnight; nothing else at Tier-1 threshold. Added 0 late-breaking items. Final output: 4 items (T1:1, T2:2, T3:1), all enriched_overnight=true and last_revision_by=enrichment."
     }
   ]
 }

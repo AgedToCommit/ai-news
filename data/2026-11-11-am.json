@@ -2,13 +2,14 @@
   "snapshot_id": "2026-11-11-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-11",
-  "generated_at": "2026-11-11T06:35:00Z",
-  "generated_at_local": "2026-11-11T01:35:00-05:00",
+  "generated_at": "2026-11-11T11:35:00Z",
+  "generated_at_local": "2026-11-11T06:35:00-05:00",
   "phase_history": [
     { "phase": "digest", "ran_at": "2026-11-10T17:30:00Z", "duration_ms": 1800000 },
-    { "phase": "enrichment", "ran_at": "2026-11-11T06:19:25Z", "duration_ms": 935000 }
+    { "phase": "enrichment", "ran_at": "2026-11-11T06:19:25Z", "duration_ms": 935000 },
+    { "phase": "refresh", "ran_at": "2026-11-11T11:26:00Z", "duration_ms": 840000 }
   ],
-  "tier_counts": { "1": 0, "2": 4, "3": 2 },
+  "tier_counts": { "1": 1, "2": 5, "3": 2 },
   "items": [
     {
       "id": "cursor-openai-model-access-shutoff-nov12",
@@ -211,6 +212,66 @@
         { "source": "pepperstone — 'Anthropic IPO — pre-IPO market points to 10% potential debut upside'", "url": "https://pepperstone.com/en/insights/market-analysis/equities/anthropic-ipo-pepperstone-pre-ipo-market-points-to-10-potential-debut-upside", "take": "Trading-desk framing with the $1.25T–$1.75T band explicit and a Nov 18–19 pricing window estimate." },
         { "source": "fourweekmba — 'Anthropic Said to Start IPO Roadshow Next Week; No Price Yet'", "url": "https://fourweekmba.com/ai-anthropic-said-to-start-ipo-roadshow-next-week-no-price-yet/", "take": "The 'no price yet' context — a reminder that press-reported indicative numbers are not the same as a filed S-1/A price range." },
         { "source": "bitmex — 'Anthropic IPO Date, Price, and Valuation: What traders need to know'", "url": "https://www.bitmex.com/blog/anthropic-ipo-guide", "take": "Summary-level overview with the private-mark context ($965B from May 2026 Series H) and a snapshot of where the various press-reported ranges sit against each other." }
+      ]
+    },
+    {
+      "id": "google-gemini-4-carbon-ga-nov10",
+      "tier": 1,
+      "title": "Google Gemini 4 Carbon is now generally available to all paying API developers — $2/$10 per million tokens introductory through Nov 30, rising to $4/$20 from December 1",
+      "summary": "Google opened Gemini 4 Carbon to all paying developers on November 10, 2026, setting an introductory price of $2 per million input tokens and $10 per million output tokens through November 30. From December 1, standard pricing doubles to $4 input and $20 output. The model ID is gemini-4-carbon. Cached input is 95% off the input rate — $0.10/million during the promotional period, $0.20/million after. Access is paid only on the API; there is no free API tier. Google AI Ultra subscribers can use Gemini 4 Carbon in the Gemini app, AI Mode in Search, and Antigravity. Carbon ranks first on CursorBench 4.0, Perplexity's WANDR benchmark, and Zapier's AutomationBench according to vendor-reported numbers — independent third-party verification is still pending. The release positions Carbon as a direct API alternative to Claude Fable 5.2 ($8/$40) and Opus 5.5, undercutting both on input price at the introductory rate. The timing is deliberate: Gemini 4 Carbon goes generally available the day before Cursor's OpenAI shutoff (November 12), when developer teams running Cursor are actively evaluating their replacement API provider.",
+      "link": "https://venturebeat.com/technology/google-gemini-4-carbon-is-now-publicly-available-and-it-undercuts-claude-fable-5-2-and-opus-5-5-on-api-price",
+      "why_it_matters": "The timing is the story. Gemini 4 Carbon goes generally available on November 10 — one day before Cursor users discover that OpenAI models are gone from their IDE and they need to pick a default provider. If you are evaluating replacement API providers for Cursor, the two most common recommendations are Anthropic (Fable 5.2 / Opus 5.5) and Google (Gemini family), and Carbon's introductory pricing changes the math: $2/$10 is 75% below Fable 5.2 at $8/$40 through November 30, and 50% below at the December 1 standard rate ($4/$20). That is a meaningful difference for a team running inference at scale, less so for a solo hobbyist whose monthly API bill is below $10 anyway. The CursorBench 4.0 number-one claim is from Google's own reporting — vendor benchmarks are vendor benchmarks — but the benchmark exists specifically to measure coding-assistant performance, so it is at least asking the right question. For Gabe specifically: if you use the Anthropic API for any project and you've noticed Fable 5.2 dropped 20% in price last week, the Gemini Carbon release is part of why prices are moving — Google is using Cursor's transition week to price-compete, and Anthropic's pricing response suggests it was anticipated. The practical thing: try Carbon via Google AI Studio (which wraps a lower-capacity version for testing) before the November 30 pricing terms expire, then decide whether $4/$20 from December is worth switching a project's provider. For a Python project that calls an LLM API, provider is a one-line config change.",
+      "why_it_matters_brief": "Gemini 4 Carbon hits the paid API at $2/$10 through Nov 30 — landing one day before Cursor's OpenAI shutoff, it undercuts Claude Fable 5.2 by 75% at intro price and is the clearest pricing pressure on Anthropic this week.",
+      "source": {
+        "name": "VentureBeat (primary GA coverage); mlq.ai; dataconomy (Nov 11); atomicagent.io (Fable 5.2 price comparison); aipricing.guru (Cursor access and pricing detail); biggo finance",
+        "type": "scrape",
+        "url": "https://venturebeat.com/technology/google-gemini-4-carbon-is-now-publicly-available-and-it-undercuts-claude-fable-5-2-and-opus-5-5-on-api-price"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-11T11:35:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-11T11:35:00Z", "by": "refresh", "change": "created — Google opened Gemini 4 Carbon to all paying API developers on Nov 10, 2026. Introductory pricing $2/$10 per million tokens through Nov 30, rising to $4/$20 from Dec 1. Cached input 95% off. API model ID gemini-4-carbon. Paid only; no free API tier. Available to AI Ultra subscribers in Gemini app. Vendor-reported top of CursorBench 4.0, WANDR, AutomationBench. hero_image null." }
+      ],
+      "takes": [
+        { "source": "VentureBeat — 'Google Gemini 4 Carbon is now publicly available — and it undercuts Claude Fable 5.2 and Opus 5.5 on API price'", "url": "https://venturebeat.com/technology/google-gemini-4-carbon-is-now-publicly-available-and-it-undercuts-claude-fable-5-2-and-opus-5-5-on-api-price", "take": "Primary GA coverage. Best single source on the pricing structure ($2/$10 intro / $4/$20 from Dec 1) and the competitive positioning against Claude." },
+        { "source": "mlq.ai — 'Google makes Gemini 4 Carbon widely available at $2 per million input tokens and previews agent swarms'", "url": "https://mlq.ai/news/google-makes-gemini-4-carbon-widely-available-at-2-per-million-input-tokens-and-previews-agent-swarms/", "take": "Covers the agent-swarms preview (separate from the Carbon GA) and the access tiers — paid API only, AI Ultra in the app." },
+        { "source": "dataconomy — 'Google Opens Gemini 4 Carbon To The Public With Lower API Prices'", "url": "https://dataconomy.com/2026/11/11/google-opens-gemini-4-carbon-to-the-public-with-lower-api/", "take": "November 11 coverage confirming general availability and the pricing timeline." },
+        { "source": "atomicagent.io — 'Gemini 4 Carbon vs Fable 5.2: Price, Benchmarks, Cost per Task'", "url": "https://atomicagent.io/blog/gemini-4-carbon/", "take": "Side-by-side price and benchmark comparison — most direct single source on how Carbon stacks against Fable 5.2 by task." },
+        { "source": "aipricing.guru — 'Gemini 4 Carbon: API Pricing and Cursor Access'", "url": "https://www.aipricing.guru/news/gemini-4-carbon-api-cursor-pricing-november-2026/", "take": "Covers Gemini 4 Carbon's availability inside Cursor and how the pricing maps to Cursor's existing paid plans." }
+      ]
+    },
+    {
+      "id": "meituan-longcat-2-5-mit-weights-nov9",
+      "tier": 2,
+      "title": "Meituan's LongCat-2.5 is on Hugging Face under MIT — 1.6T-parameter multimodal MoE targeting long-horizon agents, trained on Chinese chips, the largest open-weight drop from a Chinese lab this year",
+      "summary": "On November 9, 2026, Meituan published the full weights of LongCat-2.5 on Hugging Face under the MIT license, one week after the model's closed API debut on November 1. LongCat-2.5 is a mixture-of-experts model with approximately 1.6 trillion total parameters and about 48 billion active per token; a metadata discrepancy between the model card (1.6T) and the Hugging Face metadata (1.8T) is attributed to whether embedding tables are counted. The model is native multimodal — image and text inputs together — and is designed specifically for long-horizon agent tasks: multi-step reasoning chains, tool-use sequences, and planning under uncertainty. All training was done on Chinese chips; Meituan does not specify the chip family. Every benchmark result in the release is vendor-reported; independent testing from organizations like Artificial Analysis or LMSYS was still pending at the time of the weight release. The MIT license grants full commercial and modification rights, with no revenue thresholds and no field-of-use restrictions — Meituan explicitly retains trademark rights but does not restrict the weights. The November 9 date makes this a few days before today's enrichment run that produced this am, and it was not swept in that pass — this refresh pick-up is the first entry in this snapshot.",
+      "link": "https://venturebeat.com/technology/meituan-releases-the-open-weights-of-its-longcat-2-5-llm-with-vision-under-a-permissive-mit-license",
+      "why_it_matters": "LongCat-2.5 is worth watching for a specific reason that is different from most large-MoE drops. The other large open-weight Chinese models this year — DeepSeek V4 Pro, Kimi K3, Qwen3.8-2.4T-A95B — are general-purpose or coding-focused; they arrived with strong MMLU-class and coding benchmark numbers. LongCat-2.5 is explicitly built for long-horizon agent tasks: multi-step planning, tool calling in long sequences, and reasoning over long contexts. That is a specific capability gap in the open-weight landscape — most of the leading open models are still better at the kind of one-shot code generation or question answering that benchmarks measure, and notably weaker at agent loops that run for tens of steps. If the independent benchmarks confirm the vendor claims, LongCat-2.5 becomes the first credible open-weight option for agentic workflows that is not gated behind a closed API or restricted license. The Chinese-chips training detail is secondary but worth noting: Meituan is demonstrating that the NVIDIA-free training path is viable at the trillion-parameter scale, which matters for the long-term hardware supply picture. For Gabe specifically: if you are building a Python tool that uses an LLM for a multi-step task (a scraper that decides what to fetch next, a code-revision loop, a planning agent), the benchmark question for LongCat-2.5 is specifically whether it holds coherence over 20–50 tool calls better than alternatives like Fable 5.2 or Qwen-class models — that is the gap it is trying to fill. The MIT license means you can wrap it in a commercial product without revenue-threshold restrictions — a contrast to the DeepSeek R2 license or OpenAI-based licenses that restrict competing AI products. The practical constraint is the download size (~1.6TB at bf16), which limits self-hosting to researchers with serious GPU budgets; API access via Meituan's platform is available today.",
+      "why_it_matters_brief": "Meituan's 1.6T-parameter LongCat-2.5 is now on Hugging Face under MIT — explicitly designed for long-horizon agent tasks, trained on Chinese chips, the largest open-weight Chinese model drop this year with no license restrictions.",
+      "source": {
+        "name": "VentureBeat (primary); mlq.ai; aiweekly.co; pasqualepillitteri.it; longcatai.org (model page)",
+        "type": "scrape",
+        "url": "https://venturebeat.com/technology/meituan-releases-the-open-weights-of-its-longcat-2-5-llm-with-vision-under-a-permissive-mit-license"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-11T11:35:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-11T11:35:00Z", "by": "refresh", "change": "created — Meituan published LongCat-2.5 weights on Hugging Face under MIT license on Nov 9, 2026, one week after Nov 1 API debut. ~1.6T total / 48B active MoE, native multimodal (image+text), designed for long-horizon agent tasks. All benchmarks vendor-reported; independent testing pending. Trained on Chinese chips. hero_image null." }
+      ],
+      "takes": [
+        { "source": "VentureBeat — 'Meituan releases the open weights of its LongCat-2.5 LLM with vision under a permissive MIT License'", "url": "https://venturebeat.com/technology/meituan-releases-the-open-weights-of-its-longcat-2-5-llm-with-vision-under-a-permissive-mit-license", "take": "Primary open-weight release coverage. Best single source on the license terms (MIT, no revenue thresholds, trademark retained) and the Hugging Face availability." },
+        { "source": "mlq.ai — 'Meituan releases open weights for its trillion-parameter LongCat multimodal model under the MIT license'", "url": "https://mlq.ai/news/meituan-releases-open-weights-for-its-trillion-parameter-longcat-multimodal-model-under-the-mit-license/", "take": "Clearest summary of the architecture (1.6T/48B active, MoE, multimodal, agent focus) and the November 9 weights-on-HuggingFace date." },
+        { "source": "aiweekly.co — 'Meituan Open-Sources LongCat-2.5, 1.6T MoE, Under MIT License'", "url": "https://aiweekly.co/alerts/meituan-open-sources-longcat-25-16t-moe-under-mit-license", "take": "Alert-style coverage confirming the model card parameter count (1.6T) and the HuggingFace metadata discrepancy (1.8T, attributed to embedding tables)." }
       ]
     }
   ],
