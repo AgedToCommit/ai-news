@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-11T06:35:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-11T06:19:25Z",
+      "ended_at": "2026-11-11T06:35:00Z",
+      "wall_time_ms": 935000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 14000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 5,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-11-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweep skipped — primary lab domains remain unreachable from this agent's egress, consistent with every prior run in this stretch; relied on WebSearch for discovery. Ran 9 web searches, one per existing pm item plus three late-breaking probes. All 5 items from yesterday's pm (2026-11-10-pm) kept + enriched: (1) cursor-openai-model-access-shutoff-nov12 — enriched with the specific list of affected features per OpenAI's transition notice (Cursor Tab, autocomplete, Auto, Cloud Agents, Background Agents, Automations, Cursor CLI, Cursor's API/SDK) including that BYOK does NOT survive since OpenAI's terms govern the model regardless of billing, and Anthropic/Tom Brown's public commitment to keep increasing Claude compute for Cursor through the transition; (2) thinking-machines-inkling-2-small-nov5 — light enrichment noting that six days past launch the Tinker page still shows Tinker Terms of Use rather than Apache 2.0, and no Hugging Face weights release has surfaced; (3) claude-code-2-1-317-gateway-cost-sdk-hooks-block-nov2 — significant enrichment expanding scope to the full v2.1.317 → v2.1.318 → v2.1.319 release train; v2.1.319 (Nov 6-7) adds MCP-tasks-in-the-background with two env-var escape hatches, permissions.denyInsteadOfPrompting, headless auto-mode exit code 1 on missed safety check (silently breaks CI scripts reading exit 0 as success), auto-mode-behind-LLM-gateway behavior; (4) nvidia-gr00t-corl-2026-austin-jim-fan-keynote-nov9 — significant enrichment with the actual Nov 9 keynote outcome: GR00T 2 (2B-param world action model on Cosmos, single checkpoint covering parallel grippers + dexterous hands + humanoid, GR00T 2 Turbo previewed), Isaac Lab 3.0 (GA Oct 20, pluggable physics Newton+PhysX, 2.5× throughput vs 2.3 PhysX), demos (60% success on 4-min toy-truck assembly from human-only fine-tune, chemistry mocap-glove task, ASPIRE trial-and-error skill-writing), open code promised in December, Foxconn + Siemens adopters; (5) anthropic-onepwr-3-4b-gas-generators-nov8 — light enrichment noting Heatmap and Futurism coverage with environmental-permitting framing under current EPA power-plant carbon rules, no state TCEQ permit filings surfaced yet. 1 late-breaking item added: anthropic-ipo-roadshow-pricing-slip-nov10 — Tier 3 — IPO roadshow is this week, pricing targeted Nov 18-19, indicative valuation band has dropped from $2T+ to $1.25-$1.75T (~$1T lower than a month ago per Axios); no formal S-1/A price range filed. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, theneuron.ai, winterm.substack.com. No items dropped from yesterday's pm — all five had meaningful new substance to carry forward."
+    },
+    {
       "run_id": "2026-11-10T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
