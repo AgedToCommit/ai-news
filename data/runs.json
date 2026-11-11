@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-11T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-11T17:45:00Z",
+      "ended_at": "2026-11-11T18:00:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 48000,
+        "curation": 15000,
+        "output_write": 2500
+      },
+      "fetches_made": 23,
+      "items_input": 12,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-11-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path with reduced source-access footprint. RSS/scrape passes 1-2 skipped (primary lab domains unreachable from this egress — same pattern as prior refresh). Deep-fetch Pass 4 attempted and failed on all 4 URLs (winzheng.com, venturebeat.com, mlq.ai, ai.engineer — all ENOTFOUND); fell through to discovery-search-only curation. Ran 20+ web searches (well above the suggested 5 for Pass 5) because deep-fetch was unavailable — every candidate went through snippets rather than full-article reads. Promotion rule applied (no promotions — Gemini 4 Carbon GA is the only Tier-1 in today's am and has no material deepening in the 6.5-hour window since the am refresh landed at 11:35 UTC; no other Tier-1 candidate surfaced in the search pass). Three items curated for pm: (1) google-antigravity-teamwork-preview-nov10 — Tier 2 — Antigravity's /teamwork-preview multi-agent mode, companion to yesterday's Carbon GA, gated to $200 AI Ultra tier; (2) mistral-large-4-le-chonk-open-weights-oct29 — Tier 2 — catch-up item on Mistral's Oct 29 1T-param open-weight release that did not surface in prior digests, picking up fresh attention during Cursor transition week; (3) ai-engineer-code-summit-sf-nov10-12 — Tier 3 — scene-setting item on the Nov 10-12 Code Summit in SF. Quiet afternoon overall; no major lab announcements broke in the digest window. US Veterans Day holiday likely a contributing factor to the thin news cycle."
+    },
+    {
       "run_id": "2026-11-11T11:35:00Z-refresh",
       "phase": "refresh",
       "status": "success",
