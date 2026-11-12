@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-12T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-12T11:54:00Z",
+      "ended_at": "2026-11-12T12:00:00Z",
+      "wall_time_ms": 360000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 6000,
+        "output_write": 2000
+      },
+      "fetches_made": 7,
+      "items_input": 2,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-12-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. am file existed (enrichment ran at 06:20 UTC). RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same persistent pattern). Relied on WebSearch for discovery. Ran 7 web searches: (1) AI news Nov 12 2026 morning sweep — surfaced Google AlphaGenome 2 (Nov 11) and Anthropic IPO roadshow launched ~Nov 9-10; (2) AlphaGenome 2 extended search — confirmed Nov 11 release, TenK10K benchmark numbers (30% vs 16% causal variant detection, 43% vs 23% directional, DeepMind's own figures), 1 Mb DNA context, 107M+ cell profiles, free non-commercial API, weights not on HF, Antigravity Skills integration announced; (3) Anthropic IPO roadshow Nov 12 search — confirmed roadshow started ~Nov 9, pricing target Nov 18-19, Nasdaq ANT, S-1/A price range still blank as of Nov 2, investor valuation discussions $1.2T-$2T, Reuters investor-doubt report; (4) OpenAI/Google DeepMind Nov 12 releases — no new releases surfaced; (5) AI Engineer Code Summit Day 2 — no product announcements from Day 1, Day 2 (final day) under way; (6) open-source model releases Nov 11-12 — no new dated releases found; (7) Cursor OpenAI shutoff Day-of — shutoff went into effect today as expected, already covered in prior context. Added 2 items: (a) google-deepmind-alphagenome-2-dna-cell-type-nov11 (Tier 2, Global) — missed in enrichment because deepmind.google was unreachable; captured via secondary sources; (b) anthropic-ipo-roadshow-november-2026 (Tier 3, US) — roadshow now live, enrichment noted it as incremental on a Nov 11-am item not promoted to pm; promoted here as a standalone capture. No tier-1 items found in the overnight window. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+    },
+    {
       "run_id": "2026-11-12T06:20:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
