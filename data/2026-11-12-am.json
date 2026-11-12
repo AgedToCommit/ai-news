@@ -2,13 +2,74 @@
   "snapshot_id": "2026-11-12-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-12",
-  "generated_at": "2026-11-12T06:20:00Z",
-  "generated_at_local": "2026-11-12T01:20:00-05:00",
+  "generated_at": "2026-11-12T12:00:00Z",
+  "generated_at_local": "2026-11-12T07:00:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-12T06:20:00Z", "duration_ms": 600000 }
+    { "phase": "enrichment", "ran_at": "2026-11-12T06:20:00Z", "duration_ms": 600000 },
+    { "phase": "refresh",    "ran_at": "2026-11-12T12:00:00Z", "duration_ms": 360000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 1 },
+  "tier_counts": { "1": 0, "2": 3, "3": 2 },
   "items": [
+    {
+      "id": "google-deepmind-alphagenome-2-dna-cell-type-nov11",
+      "tier": 2,
+      "title": "Google DeepMind releases AlphaGenome 2 — a DNA model that predicts how genetic variants affect individual cell types, nearly doubling causal-variant detection on a 28-cell-type immune benchmark",
+      "summary": "Google DeepMind released AlphaGenome 2 on November 11, 2026, a substantial upgrade to its genomics model that adds cell-type-specific prediction — the ability to tell you not just what a DNA variant does, but which specific cell types are affected and how. The original AlphaGenome averaged effects across a tissue; AlphaGenome 2 conditions on a single cell type per call, giving predictions tied to individual cell states. On TenK10K, a benchmark covering 28 primary immune cell types from 1,000 donors, AlphaGenome 2 identified nearly twice as many causal variants (30% vs. 16%) and directional gene effects (43% vs. 23%) compared to the previous AlphaGenome fine-tuned on the same single-cell data — these figures are DeepMind's own. The model uses a 1 Mb DNA context window and was trained on over 107 million individual cell profiles from human and mouse. It also adds DNA methylation prediction. API access is open to non-commercial researchers now, with Colab tutorials provided; commercial access is in private preview. Model weights are not released on Hugging Face. DeepMind separately announced that AlphaGenome 2 Skills are coming to Google Antigravity — the multi-agent IDE surface that is already in this snapshot — though no date was given.",
+      "link": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
+      "why_it_matters": "This is a DeepMind research release, not a coding tool, so there is nothing here that Gabe would use in a weekend project tomorrow — but there are three reasons it is worth putting in the snapshot. First, the API is free for non-commercial research right now, and it is a Python API. If Gabe or anyone he knows is curious about applying ML to genomics — or just wants to poke at a large sequence model's predictions via an API — this is the most accessible entry point that has existed for a tool of this capability level. The Colab tutorials are a minimal barrier: pick a gene, pick a cell type, ask what a point mutation does. That is a genuinely interesting thing to be able to do in a Saturday afternoon. Second, the cell-type conditioning pattern is worth understanding at a conceptual level because it shows up in the LLM tooling world too. 'Condition this model on a specific context before making a prediction' is exactly what system-prompt engineering does for language models; in genomics, DeepMind is doing the equivalent with cell-state embeddings. The technique — a large pretrained trunk conditioned on a lightweight adapter per cell type — maps cleanly onto the LoRA and adapter patterns that show up in the open-weight LLM space. Third, the Antigravity connection is concrete: DeepMind announced AlphaGenome 2 Skills are coming to Antigravity, the multi-agent developer surface already covered in this snapshot. That means the same /teamwork-preview slash command that today delegates to planner-and-worker agents for coding tasks will, at some future date, be able to call a genomics prediction tool directly. Antigravity's MCP-style tool integration is what makes that plausible — and understanding that AlphaGenome 2 is the kind of tool being wired into Antigravity helps clarify what the Teamwork pattern is ultimately being built toward.",
+      "why_it_matters_brief": "DeepMind's AlphaGenome 2 predicts DNA variant effects per cell type, not per tissue average — free Python API for non-commercial research is live now, and DeepMind is wiring it into Antigravity.",
+      "source": {
+        "name": "Google DeepMind Blog (primary); MarkTechPost (Nov 11 coverage); Startup Fortune; datastudios.org (benchmark and API detail); alphasignal.ai; mlq.ai",
+        "type": "scrape",
+        "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-12T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-12T12:00:00Z", "by": "refresh", "change": "created — Google DeepMind AlphaGenome 2 released Nov 11 2026. Cell-type-specific DNA variant prediction, 1 Mb context, 107M+ cell-profile training, TenK10K benchmark nearly 2x improvement. Free non-commercial API + Colab tutorials live. Weights not on HF. Commercial preview. Antigravity Skills integration announced. Item missed in enrichment because deepmind.google was unreachable (consistent with prior-run pattern). hero_image null." }
+      ],
+      "takes": [
+        { "source": "Google DeepMind Blog — 'AlphaGenome 2: Deciphering how cells read DNA to better understand disease'", "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/", "take": "Primary source. Contains the TenK10K benchmark numbers (30% vs 16% causal variant detection, 43% vs 23% directional effects), the training corpus size (107M+ cell profiles), and the Antigravity Skills announcement." },
+        { "source": "MarkTechPost — 'Google DeepMind Releases AlphaGenome 2 for Cell-Type-Specific Variant Effects'", "url": "https://www.marktechpost.com/2026/11/11/google-deepmind-alphagenome-2-cell-type-variant-effects/", "take": "Best secondary-source breakdown of the benchmark methodology and what cell-type conditioning actually changes versus the original model." },
+        { "source": "datastudios.org — 'Google DeepMind AlphaGenome 2: cell-type DNA variant predictions, benchmarks and API access'", "url": "https://www.datastudios.org/post/google-deepmind-alphagenome-2-cell-type-dna-model-api-non-commercial-research", "take": "Clearest summary of the API access tiers (non-commercial free now, commercial private preview) and confirmation that weights are not yet listed on Hugging Face." },
+        { "source": "alphasignal.ai — 'Google DeepMind's AlphaGenome 2 Doubles Disease Variant Detection Across 28 Cell Types'", "url": "https://alphasignal.ai/news/google-deepmind-s-alphagenome-2-doubles-disease-variant-across-28", "take": "Headline-level confirmation of the '28 cell types' and 'doubles detection' framing. Useful for validating the benchmark scope." }
+      ]
+    },
+    {
+      "id": "anthropic-ipo-roadshow-november-2026",
+      "tier": 3,
+      "title": "Anthropic's IPO roadshow is live — pricing expected November 18-19, Nasdaq ticker 'ANT', valuation discussions between $1.2T and $2T, with investor skepticism running throughout",
+      "summary": "Anthropic launched its IPO roadshow around November 9-10, 2026, targeting a Nasdaq trading debut the week of November 16-19 and aiming to price before Thanksgiving. The company's S-1/A filed November 2 still shows a blank price range; no formal price has been filed as of this snapshot. Press coverage and investor discussions have cited a wide valuation range: $1.2T-$1.3T in some investor conversations, $1.5T-$1.6T in others, and $2T in earlier ambitions. Crypto Briefing reported a target trading start of November 19-20. The planned Nasdaq listing symbol is 'ANT.' Reuters reported ahead of the roadshow that potential investors doubted whether Anthropic could hold the roadshow on the stated timeline and still debut before Thanksgiving — that skepticism has persisted throughout the buildup, alongside an ongoing question about whether the company's current revenue run-rate can support any of the valuation figures in circulation.",
+      "link": "https://www.implicator.ai/anthropic-could-start-ipo-roadshow-week-of-nov-9-putting-debut-before-thanksgiving.md",
+      "why_it_matters": "Anthropic going public is worth tracking for two practical reasons, neither of which requires following financial markets. First, an IPO changes the pressure environment around product and pricing decisions. Pre-IPO, Anthropic has primarily answered to a small set of strategic investors (Google, Amazon, Spark) who tolerate long-horizon safety bets. Post-IPO, the company will answer to public shareholders on a quarterly cadence, which typically accelerates the push toward revenue-generating features and can complicate long-horizon commitments to research priorities. That tension is not unique to Anthropic — OpenAI went through a version of it when it restructured — but it is worth noticing as a user of Claude tools, because product decisions that look puzzling in isolation often make more sense against a background of investor expectations. Second, the valuation range is itself a signal about how the market is currently pricing AI companies with large revenue aspirations and large compute costs. The gap between $1.2T and $2T in circulation — a 60% spread — is unusually wide for a company this close to pricing. That spread reflects genuine uncertainty about whether Anthropic's revenue trajectory justifies a multiple that would put it among the most valuable companies on earth. For Gabe: nothing changes about the API or Claude Code on IPO day. But over the following 6-12 months, the pressure to grow revenue from the enterprise and developer tiers tends to produce faster feature shipping, more aggressive pricing tiers, and occasionally a rationalization of costs that shows up as model availability changes. The $200/month AI Ultra equivalent is currently a reasonable near-term concern for agentic products like Teamwork; post-IPO investor pressure is the structural reason that tier is likely to either grow or get discounted, not stay flat.",
+      "why_it_matters_brief": "Anthropic's roadshow is live with pricing expected November 18-19 — the $1.2T-$2T valuation range is unusually wide this close to pricing, reflecting real investor uncertainty about the revenue-to-compute equation.",
+      "source": {
+        "name": "implicator.ai (roadshow timing); Crypto Briefing (Nasdaq ANT, Nov 19-20 debut); FourWeekMBA (S-1/A blank price, investor valuation discussions); letsdatascience (Reuters investor-doubt report); roic.ai (roadshow launched Nov 9); admiralmarkets.com",
+        "type": "scrape",
+        "url": "https://cryptobriefing.com/anthropic-nasdaq-ipo-november-valuation-range/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-12T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-12T12:00:00Z", "by": "refresh", "change": "created — Anthropic IPO roadshow launched ~Nov 9-10. Pricing target Nov 18-19. Nasdaq ticker 'ANT'. Latest S-1/A (Nov 2) has blank price range. Investor discussions range $1.2T-$2T — wide spread. Reuters investor-doubt report noted. Enrichment noted this as incremental on a Nov 11-am item that was not promoted to pm; refresh picks it up as a standalone capture given the roadshow is now live. hero_image null." }
+      ],
+      "takes": [
+        { "source": "roic.ai — 'Anthropic kicks off Nasdaq IPO roadshow as AI valuation questions loom'", "url": "https://www.roic.ai/news/anthropic-kicks-off-nasdaq-ipo-roadshow-as-ai-valuation-questions-loom-11-09-2026", "take": "Best source confirming the roadshow launched November 9. Notes the valuation questions as the dominant investor concern." },
+        { "source": "Crypto Briefing — 'Anthropic Nasdaq IPO November valuation range'", "url": "https://cryptobriefing.com/anthropic-nasdaq-ipo-november-valuation-range/", "take": "Reports the November 19-20 trading start target and the 'ANT' Nasdaq symbol. Also notes the $1.1T-$1.75T expected range as a step up from a prior $965B mark." },
+        { "source": "FourWeekMBA — 'Anthropic Said to Start IPO Roadshow Next Week; No Price Yet'", "url": "https://fourweekmba.com/ai-anthropic-said-to-start-ipo-roadshow-next-week-no-price-yet/", "take": "Documents the S-1/A blank price range as of November 2 and the investor valuation discussions at $1.2T-$1.3T — the most grounded single data point amid the range of figures in circulation." },
+        { "source": "letsdatascience — 'Investors Doubt Anthropic Can Hold November IPO Roadshow, Reuters Reports'", "url": "https://letsdatascience.com/news/investors-doubt-anthropic-can-hold-november-ipo-roadshow-reu-a69a034f", "take": "Reuters report (via letsdatascience) documenting pre-roadshow investor skepticism about whether the timeline was achievable. Useful for calibrating how smooth the process has been." }
+      ]
+    },
     {
       "id": "google-antigravity-teamwork-preview-nov10",
       "tier": 2,
@@ -31,7 +92,7 @@
       "promoted_from_am": false,
       "revisions": [
         { "at": "2026-11-11T18:00:00Z", "by": "digest", "change": "created — Google Antigravity Teamwork research preview surfaced alongside the Gemini 4 Carbon GA on Nov 10. Invoked with /teamwork-preview slash command. AI Ultra ($200/mo) gating, with Google's own quota-exhaustion warning. Underlying model ambiguous between Gemini 4 Argon and Gemini 3.7 Flash depending on source. Companion item to today's am Gemini 4 Carbon GA — this is the multi-agent product angle, not the pricing angle. hero_image null (primary coverage is text-first)." },
-        { "at": "2026-11-12T06:20:00Z", "by": "enrichment", "change": "enriched — added Google's own 'teamwork-when-ai-becomes-a-research-partner' Antigravity blog post as a source, with the key quote 'rolling out these improvements to the /teamwork-preview command in Antigravity over the coming weeks' (an active-preview signal). Expanded the model-ambiguity note: Gemini 3.7 Flash now also named in Google's own materials, Gemini 3.5 Flash in the Antigravity 2.0 post with 3.5 Pro 'next month,' MindStudio still on Gemini 4 Argon, 9to5Google confirmed Argon as the general Antigravity flagship on Oct 15. Added the ai.google.dev developer-forum 'working not working?' thread with the scratch-Markdown-file complaint as evidence that practical rough edges are surfacing. Updated why_it_matters with a new caveat on not building production workflows on Teamwork today. Refreshed why_it_matters_brief to reflect the active-research-preview framing." }
+        { "at": "2026-11-12T06:20:00Z", "by": "enrichment", "change": "enriched — added Google's own 'teamwork-when-ai-becomes-a-research-partner' Antigravity blog post as a source, with the key quote 'rolling out these improvements to the /teamwork-preview command in Antigravity over the coming weeks' (an active-preview signal). Expanded the model-ambiguity note: Gemini 3.7 Flash now also named in Google's own materials, Gemini 3.5 Flash in the Antigravity 2.0 post with 3.5 Pro 'next month,' MindStudio still on Gemini 4 Argon, 9to5Google confirmed Argon as the general Antigravity flagship for AI Pro — but does NOT say Argon is specifically what powers Teamwork for AI Ultra, so the Teamwork-specific pairing remains open. Added the ai.google.dev developer-forum 'working not working?' thread with the scratch-Markdown-file complaint as evidence that practical rough edges are surfacing. Updated why_it_matters with a new caveat on not building production workflows on Teamwork today. Refreshed why_it_matters_brief to reflect the active-research-preview framing." }
       ],
       "takes": [
         { "source": "TechWyse — 'Google Antigravity's Teamwork System Uses Coordinated AI Agents to Solve Open Math Problems and Build CPU Simulators'", "url": "https://www.techwyse.com/news/ai-search/google-antigravity-teamwork-multi-agent-gemini-math-engineering", "take": "Best single source on the planner + specialist workers + auditors structure and the open-math-problem / CPU-simulator demos. Frames Teamwork as a multi-agent mode distinct from a single-agent chat." },
