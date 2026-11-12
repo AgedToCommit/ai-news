@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-12T06:20:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-12T06:10:00Z",
+      "ended_at": "2026-11-12T06:20:00Z",
+      "wall_time_ms": 600000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 28000,
+        "curation": 8000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-12-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same pattern as every recent run); relied on WebSearch for discovery. Ran 9 web searches across the 3 pm items plus 6 late-breaking probes (Cursor shutoff day-of status, general Nov 11-12 release sweep, Anthropic Claude Code Nov 11, Gemini 4 Carbon Nov 11 benchmarks, Chinese open-weight Nov 11, AI Engineer Code Summit Day 1 announcements). All 3 pm items kept + enriched: (1) google-antigravity-teamwork-preview-nov10 — moderate enrichment with Google's own 'teamwork-when-ai-becomes-a-research-partner' Antigravity blog post (new source) and its 'rolling out these improvements over the coming weeks' active-preview framing; expanded model-ambiguity note to add Gemini 3.7 Flash alongside the existing Argon/3.5 Flash candidates; added ai.google.dev developer forum thread documenting Markdown-file-sprawl rough edges; refreshed why_it_matters_brief; (2) mistral-large-4-le-chonk-open-weights-oct29 — significant enrichment with independent-leaderboard context: benchmarklist.com and llm-stats.com added as sources, broader AA data shows GLM-5.3 ahead of Mistral on Terminal-Bench 4.0, AutomationBench-AA, and AA-Briefcase (contradicting Mistral's 'effectively tied' framing on the single Coding Agent Index); Mythos 5.1 at 60.9% TB4 ~20pts ahead of Mistral's 41%; Hugging Face independent post lists 28.3% TB4 and 49.8% CAI, raising a scaffolding-reproducibility question; reframed as 'strongest EU-based open-weight' rather than 'frontier-parity'; (3) ai-engineer-code-summit-sf-nov10-12 — light enrichment noting Day 1 (Nov 11) completed without visible major-lab product announcements surfacing through overnight search; noted Sessionize/ai.engineer date conflict (Nov 10-12 authoritative); shifted framing from 'watch for tool releases' toward 'watch swyx/Latent Space writeups over 1–2 weeks.' Late-breaking pass: 0 items added. Six probes across Anthropic/OpenAI/Google (nothing from Nov 11-12 beyond already-covered Nov 10 Gemini 4 Carbon GA and Nov 9 Fable 5.2/Mythos 5.2 which were carried in prior snapshots), Cursor shutoff (today, already covered in prior days' am), Anthropic IPO (roadshow this week, pricing targeted Nov 18-19, no formal S-1/A price range filed yet — incremental on existing item from Nov 11-am, not promoted into pm so no enrichment anchor), Chinese open-weight (nothing new since Oct-Aug), Code Summit announcements (Day 1 quiet). Veterans-Day-aftermath + Code-Summit-week pattern — news cycle is genuinely thin. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+    },
+    {
       "run_id": "2026-11-11T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
