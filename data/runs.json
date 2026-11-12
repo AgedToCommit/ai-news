@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-12T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-12T17:40:00Z",
+      "ended_at": "2026-11-12T18:00:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 72000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 52000,
+        "curation": 14000,
+        "output_write": 3500
+      },
+      "fetches_made": 15,
+      "items_input": 11,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-12-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress \u2014 same persistent pattern as every recent run). Relied on WebSearch for discovery. Ran 15 web searches across: general Nov 11-12 roundup, AI Engineer Code Summit Day 2, Cursor OpenAI shutoff day-of reaction, NY RAISE Act portal, Anthropic China-block/Supported-Regions policy effective Nov 12, open-weight model Nov 11 releases, LangChain/CrewAI/AutoGen/Agents SDK Nov updates, Simon Willison / Karpathy Nov 11-12 posts, NVIDIA/AMD chip Nov news, ChatGPT/OpenAI Nov feature launch, arxiv Nov 11 papers, Meta/Qwen/DeepSeek/Mistral Nov 11 releases, ByteDance Trae Nov update, AI daily digest for Nov 11, Claude Sheets/Whiteboards/Meetings launch verification, ChatGPT Businesses beta verification, DeepMind AlphaProof Code / Signal protocol verification, IBM-Microsoft Imagine Enterprise verification. Plus one WebFetch to anthropic.com/legal/supported-regions for primary-source policy confirmation. Six items added, none duplicating today's am or yesterday's pm. Tier 1 (2): anthropic-claude-office-suite-sheets-whiteboards-meetings-nov10 (Anthropic launched Sheets + Whiteboards + Meetings Nov 10, Microsoft shares down 2.2%, Claude Dashboards \u2192 Claude Data GA, Enterprise admin defaults have Claude Data auto-on Nov 19); anthropic-supported-regions-policy-nov12 (effective TODAY, confirmed from primary source anthropic.com/legal/supported-regions \u2014 scope now names Claude Code explicitly, indirect-control test strengthened, Persona-based ID verification mechanism). Tier 2 (2): openai-chatgpt-businesses-business-agents-beta-nov10 (Business Hub verified profiles with blue check, US e-commerce Business Agents free at launch, Mention Analytics in testing, Shopify fast-track verification); deepmind-alphaproof-code-signal-protocol-nov10 (multi-agent formal-verification framework proved four Signal properties \u2014 forward secrecy, authentication, post-compromise security, handshake secrecy \u2014 on compiled AArch64 binary in four weeks, 6.5M lines of machine-checked proof, open-sourcing artifacts, no new vulnerabilities found, scope caveats documented). Tier 3 (2): ibm-microsoft-imagine-enterprise-nov10 (joint agentic platform Nov 10 Microsoft Ignite week, 6,000+ IBM Consulting pre-built agents on Azure + Microsoft security, FS/insurance/retail at launch); new-york-raise-act-registration-portal-nov10 (first US state-level frontier-AI law with operational machinery, DIGIT office inside NY DFS, $500M revenue threshold, Jan 1 2027 deadline, 72-hour critical-incident reporting, up to $1M/$3M penalties). Promotion rule: no items from today's am file were promoted into pm; all 6 are new. Items not promoted from today's am: anthropic-ipo-roadshow-november-2026 was considered given today's new office-suite launch landing day before roadshow, but the office-suite item is its own standalone story and the roadshow item's status (prices expected Nov 18-19) has not changed since this morning \u2014 no material deepening justifies promotion. Unreachable primary domains (consistent): openai.com (post-list page), anthropic.com (news blog, though legal page reachable), deepmind.google (blog index, though specific post pages reachable), ai.meta.com, mistral.ai, nvidia.com."
+    },
+    {
       "run_id": "2026-11-12T12:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
@@ -27,7 +55,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Standard refresh path. am file existed (enrichment ran at 06:20 UTC). RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same persistent pattern). Relied on WebSearch for discovery. Ran 7 web searches: (1) AI news Nov 12 2026 morning sweep — surfaced Google AlphaGenome 2 (Nov 11) and Anthropic IPO roadshow launched ~Nov 9-10; (2) AlphaGenome 2 extended search — confirmed Nov 11 release, TenK10K benchmark numbers (30% vs 16% causal variant detection, 43% vs 23% directional, DeepMind's own figures), 1 Mb DNA context, 107M+ cell profiles, free non-commercial API, weights not on HF, Antigravity Skills integration announced; (3) Anthropic IPO roadshow Nov 12 search — confirmed roadshow started ~Nov 9, pricing target Nov 18-19, Nasdaq ANT, S-1/A price range still blank as of Nov 2, investor valuation discussions $1.2T-$2T, Reuters investor-doubt report; (4) OpenAI/Google DeepMind Nov 12 releases — no new releases surfaced; (5) AI Engineer Code Summit Day 2 — no product announcements from Day 1, Day 2 (final day) under way; (6) open-source model releases Nov 11-12 — no new dated releases found; (7) Cursor OpenAI shutoff Day-of — shutoff went into effect today as expected, already covered in prior context. Added 2 items: (a) google-deepmind-alphagenome-2-dna-cell-type-nov11 (Tier 2, Global) — missed in enrichment because deepmind.google was unreachable; captured via secondary sources; (b) anthropic-ipo-roadshow-november-2026 (Tier 3, US) — roadshow now live, enrichment noted it as incremental on a Nov 11-am item not promoted to pm; promoted here as a standalone capture. No tier-1 items found in the overnight window. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+      "notes": "Standard refresh path. am file existed (enrichment ran at 06:20 UTC). RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress \u2014 same persistent pattern). Relied on WebSearch for discovery. Ran 7 web searches: (1) AI news Nov 12 2026 morning sweep \u2014 surfaced Google AlphaGenome 2 (Nov 11) and Anthropic IPO roadshow launched ~Nov 9-10; (2) AlphaGenome 2 extended search \u2014 confirmed Nov 11 release, TenK10K benchmark numbers (30% vs 16% causal variant detection, 43% vs 23% directional, DeepMind's own figures), 1 Mb DNA context, 107M+ cell profiles, free non-commercial API, weights not on HF, Antigravity Skills integration announced; (3) Anthropic IPO roadshow Nov 12 search \u2014 confirmed roadshow started ~Nov 9, pricing target Nov 18-19, Nasdaq ANT, S-1/A price range still blank as of Nov 2, investor valuation discussions $1.2T-$2T, Reuters investor-doubt report; (4) OpenAI/Google DeepMind Nov 12 releases \u2014 no new releases surfaced; (5) AI Engineer Code Summit Day 2 \u2014 no product announcements from Day 1, Day 2 (final day) under way; (6) open-source model releases Nov 11-12 \u2014 no new dated releases found; (7) Cursor OpenAI shutoff Day-of \u2014 shutoff went into effect today as expected, already covered in prior context. Added 2 items: (a) google-deepmind-alphagenome-2-dna-cell-type-nov11 (Tier 2, Global) \u2014 missed in enrichment because deepmind.google was unreachable; captured via secondary sources; (b) anthropic-ipo-roadshow-november-2026 (Tier 3, US) \u2014 roadshow now live, enrichment noted it as incremental on a Nov 11-am item not promoted to pm; promoted here as a standalone capture. No tier-1 items found in the overnight window. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
     },
     {
       "run_id": "2026-11-12T06:20:00Z-enrichment",
@@ -55,7 +83,7 @@
       "snapshot_written": "2026-11-12-am",
       "error": null,
       "partial": false,
-      "notes": "Standard enrichment path. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same pattern as every recent run); relied on WebSearch for discovery. Ran 9 web searches across the 3 pm items plus 6 late-breaking probes (Cursor shutoff day-of status, general Nov 11-12 release sweep, Anthropic Claude Code Nov 11, Gemini 4 Carbon Nov 11 benchmarks, Chinese open-weight Nov 11, AI Engineer Code Summit Day 1 announcements). All 3 pm items kept + enriched: (1) google-antigravity-teamwork-preview-nov10 — moderate enrichment with Google's own 'teamwork-when-ai-becomes-a-research-partner' Antigravity blog post (new source) and its 'rolling out these improvements over the coming weeks' active-preview framing; expanded model-ambiguity note to add Gemini 3.7 Flash alongside the existing Argon/3.5 Flash candidates; added ai.google.dev developer forum thread documenting Markdown-file-sprawl rough edges; refreshed why_it_matters_brief; (2) mistral-large-4-le-chonk-open-weights-oct29 — significant enrichment with independent-leaderboard context: benchmarklist.com and llm-stats.com added as sources, broader AA data shows GLM-5.3 ahead of Mistral on Terminal-Bench 4.0, AutomationBench-AA, and AA-Briefcase (contradicting Mistral's 'effectively tied' framing on the single Coding Agent Index); Mythos 5.1 at 60.9% TB4 ~20pts ahead of Mistral's 41%; Hugging Face independent post lists 28.3% TB4 and 49.8% CAI, raising a scaffolding-reproducibility question; reframed as 'strongest EU-based open-weight' rather than 'frontier-parity'; (3) ai-engineer-code-summit-sf-nov10-12 — light enrichment noting Day 1 (Nov 11) completed without visible major-lab product announcements surfacing through overnight search; noted Sessionize/ai.engineer date conflict (Nov 10-12 authoritative); shifted framing from 'watch for tool releases' toward 'watch swyx/Latent Space writeups over 1–2 weeks.' Late-breaking pass: 0 items added. Six probes across Anthropic/OpenAI/Google (nothing from Nov 11-12 beyond already-covered Nov 10 Gemini 4 Carbon GA and Nov 9 Fable 5.2/Mythos 5.2 which were carried in prior snapshots), Cursor shutoff (today, already covered in prior days' am), Anthropic IPO (roadshow this week, pricing targeted Nov 18-19, no formal S-1/A price range filed yet — incremental on existing item from Nov 11-am, not promoted into pm so no enrichment anchor), Chinese open-weight (nothing new since Oct-Aug), Code Summit announcements (Day 1 quiet). Veterans-Day-aftermath + Code-Summit-week pattern — news cycle is genuinely thin. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+      "notes": "Standard enrichment path. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress \u2014 same pattern as every recent run); relied on WebSearch for discovery. Ran 9 web searches across the 3 pm items plus 6 late-breaking probes (Cursor shutoff day-of status, general Nov 11-12 release sweep, Anthropic Claude Code Nov 11, Gemini 4 Carbon Nov 11 benchmarks, Chinese open-weight Nov 11, AI Engineer Code Summit Day 1 announcements). All 3 pm items kept + enriched: (1) google-antigravity-teamwork-preview-nov10 \u2014 moderate enrichment with Google's own 'teamwork-when-ai-becomes-a-research-partner' Antigravity blog post (new source) and its 'rolling out these improvements over the coming weeks' active-preview framing; expanded model-ambiguity note to add Gemini 3.7 Flash alongside the existing Argon/3.5 Flash candidates; added ai.google.dev developer forum thread documenting Markdown-file-sprawl rough edges; refreshed why_it_matters_brief; (2) mistral-large-4-le-chonk-open-weights-oct29 \u2014 significant enrichment with independent-leaderboard context: benchmarklist.com and llm-stats.com added as sources, broader AA data shows GLM-5.3 ahead of Mistral on Terminal-Bench 4.0, AutomationBench-AA, and AA-Briefcase (contradicting Mistral's 'effectively tied' framing on the single Coding Agent Index); Mythos 5.1 at 60.9% TB4 ~20pts ahead of Mistral's 41%; Hugging Face independent post lists 28.3% TB4 and 49.8% CAI, raising a scaffolding-reproducibility question; reframed as 'strongest EU-based open-weight' rather than 'frontier-parity'; (3) ai-engineer-code-summit-sf-nov10-12 \u2014 light enrichment noting Day 1 (Nov 11) completed without visible major-lab product announcements surfacing through overnight search; noted Sessionize/ai.engineer date conflict (Nov 10-12 authoritative); shifted framing from 'watch for tool releases' toward 'watch swyx/Latent Space writeups over 1\u20132 weeks.' Late-breaking pass: 0 items added. Six probes across Anthropic/OpenAI/Google (nothing from Nov 11-12 beyond already-covered Nov 10 Gemini 4 Carbon GA and Nov 9 Fable 5.2/Mythos 5.2 which were carried in prior snapshots), Cursor shutoff (today, already covered in prior days' am), Anthropic IPO (roadshow this week, pricing targeted Nov 18-19, no formal S-1/A price range filed yet \u2014 incremental on existing item from Nov 11-am, not promoted into pm so no enrichment anchor), Chinese open-weight (nothing new since Oct-Aug), Code Summit announcements (Day 1 quiet). Veterans-Day-aftermath + Code-Summit-week pattern \u2014 news cycle is genuinely thin. Primary unreachable domains (consistent with every recent run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
     },
     {
       "run_id": "2026-11-11T18:00:00Z-digest",
@@ -83,7 +111,7 @@
       "snapshot_written": "2026-11-11-pm",
       "error": null,
       "partial": false,
-      "notes": "Standard digest path with reduced source-access footprint. RSS/scrape passes 1-2 skipped (primary lab domains unreachable from this egress — same pattern as prior refresh). Deep-fetch Pass 4 attempted and failed on all 4 URLs (winzheng.com, venturebeat.com, mlq.ai, ai.engineer — all ENOTFOUND); fell through to discovery-search-only curation. Ran 20+ web searches (well above the suggested 5 for Pass 5) because deep-fetch was unavailable — every candidate went through snippets rather than full-article reads. Promotion rule applied (no promotions — Gemini 4 Carbon GA is the only Tier-1 in today's am and has no material deepening in the 6.5-hour window since the am refresh landed at 11:35 UTC; no other Tier-1 candidate surfaced in the search pass). Three items curated for pm: (1) google-antigravity-teamwork-preview-nov10 — Tier 2 — Antigravity's /teamwork-preview multi-agent mode, companion to yesterday's Carbon GA, gated to $200 AI Ultra tier; (2) mistral-large-4-le-chonk-open-weights-oct29 — Tier 2 — catch-up item on Mistral's Oct 29 1T-param open-weight release that did not surface in prior digests, picking up fresh attention during Cursor transition week; (3) ai-engineer-code-summit-sf-nov10-12 — Tier 3 — scene-setting item on the Nov 10-12 Code Summit in SF. Quiet afternoon overall; no major lab announcements broke in the digest window. US Veterans Day holiday likely a contributing factor to the thin news cycle."
+      "notes": "Standard digest path with reduced source-access footprint. RSS/scrape passes 1-2 skipped (primary lab domains unreachable from this egress \u2014 same pattern as prior refresh). Deep-fetch Pass 4 attempted and failed on all 4 URLs (winzheng.com, venturebeat.com, mlq.ai, ai.engineer \u2014 all ENOTFOUND); fell through to discovery-search-only curation. Ran 20+ web searches (well above the suggested 5 for Pass 5) because deep-fetch was unavailable \u2014 every candidate went through snippets rather than full-article reads. Promotion rule applied (no promotions \u2014 Gemini 4 Carbon GA is the only Tier-1 in today's am and has no material deepening in the 6.5-hour window since the am refresh landed at 11:35 UTC; no other Tier-1 candidate surfaced in the search pass). Three items curated for pm: (1) google-antigravity-teamwork-preview-nov10 \u2014 Tier 2 \u2014 Antigravity's /teamwork-preview multi-agent mode, companion to yesterday's Carbon GA, gated to $200 AI Ultra tier; (2) mistral-large-4-le-chonk-open-weights-oct29 \u2014 Tier 2 \u2014 catch-up item on Mistral's Oct 29 1T-param open-weight release that did not surface in prior digests, picking up fresh attention during Cursor transition week; (3) ai-engineer-code-summit-sf-nov10-12 \u2014 Tier 3 \u2014 scene-setting item on the Nov 10-12 Code Summit in SF. Quiet afternoon overall; no major lab announcements broke in the digest window. US Veterans Day holiday likely a contributing factor to the thin news cycle."
     },
     {
       "run_id": "2026-11-11T11:35:00Z-refresh",
@@ -7475,91 +7503,6 @@
       "error": null,
       "partial": false,
       "notes": "Enrichment run 2am EDT Thursday August 14 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-13-pm.json) had 5 T1 items \u2014 all 5 survived enrichment with substantive new context. WebFetch not used; 7 WebSearch queries covered: (1) Gemini 3.7 Flash reactions/independent benchmarks \u2014 added Artificial Analysis Intelligence Index 56 (up from 52 for 3.6 Flash) as first independent verification, AA #1-of-186 output-speed rank at 340.1 t/s, AutomationBench 17.0 \u2192 30.4 vendor delta, 23-day cadence (not just 'three weeks'); (2) Anthropic-Decart deal status \u2014 added preliminary-as-of-Aug-14 status, DOS platform product-name confirmation, Radical Ventures backer, PYMNTS cost-cutting framing; (3) DeepSeek V4-Pro-0813 independent verification \u2014 added AA Intelligence Index 53 (up from 45 for April V4 Pro) as first third-party number, flagged that agentic-benchmark vendor claims still have no independent replication, weights status update (DeepSeek's own HF still hosts April builds, unsloth GGUF community port exists); (4) Grok 4.6 independent verification \u2014 added AA Intelligence Index 60.92 vs vendor 61 (clean overlap), Cursor 2\u00d7 included-usage launch-week promotion, 35-day cadence confirmation, SWE-bench Vals 95.60% headline with v3.0 harness caveat; (5) Encrypted-CoT vulnerability response \u2014 added paper reproducibility statement (main attack no longer works as of Aug 2026), Microsoft and Hugging Face added to disclosure targets, 367 PII items alongside 182 credentials, Simon Willison Aug 11 coverage as seed source, note that per-session key architecture has not been publicly committed. Late-breaking pass: 2 WebSearch queries covering overnight Asia/Europe cycle and major-lab announcements for Aug 14 \u2014 no fresh Tier-1 items surfaced (the Aug 12-13 cycle already pulled in Gemini 3.7 Flash, DeepSeek V4-Pro-0813, Grok 4.6, Anthropic-Decart, CoT vulnerability paper \u2014 no new frontier release overnight), so 0 items added. Final snapshot: 5 T1 items, all enriched_overnight=true, last_revision_by='enrichment'. Wall time and token counts approximate."
-    },
-    {
-      "run_id": "2026-08-13T17:20:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-08-13T17:00:00Z",
-      "ended_at": "2026-08-13T17:20:00Z",
-      "wall_time_ms": 1200000,
-      "tokens_used": 52000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 2000,
-        "deep_fetch": 0,
-        "discovery_search": 34000,
-        "curation": 10000,
-        "output_write": 6000
-      },
-      "fetches_made": 21,
-      "items_input": 8,
-      "items_output": 5,
-      "items_added": 5,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-13-pm",
-      "error": null,
-      "partial": false,
-      "notes": "Digest run 1pm EDT Thursday August 13 2026. Pre-flight: kill switch inactive (paused=false, digest.enabled=true). Today's am file (2026-08-13-am.json) exists with 1 item (T3 Pixel 11) \u2014 promotion rule evaluated and item NOT promoted (afternoon coverage shows mixed hands-on reception per 9to5Google/PhoneArena/Engadget but no materially deeper accumulation of coverage or follow-up posts from Google beyond what the am/enrichment already captured). Last successful run ended_at: 2026-08-13T11:15:00Z (refresh). WebFetch blocked by egress proxy on first attempt (simonwillison.net EGRESS_BLOCKED), switched to WebSearch per prior-run pattern. Ran 21 WebSearch queries covering: frontier lab releases (Anthropic/OpenAI/Google/Meta/xAI/Mistral), open-source releases (DeepSeek/Hugging Face/Qwen), Anthropic-Decart acquisition talks, DeepSeek V4-Pro-0813 details, Grok 4.6 details, reasoning-traces API vulnerability paper, Meta Muse Glimmer (skipped \u2014 already covered across Aug 10/11/12 snapshots), Gemini Omni Flash (skipped \u2014 May/July 2026 release), Karpathy LOTR post (skipped \u2014 Aug 2 story not fresh for pm), OpenAI Astra/Ode with Anthropic JV (skipped \u2014 Jul 15/Aug 7 already stale), Anthropic Q2 profit (skipped \u2014 May 2026 projections not fresh), AMD Helios (skipped \u2014 July 22-23 event not fresh), Nvidia $500B alliance (skipped \u2014 Aug 10 already in adjacent snapshots), arXiv position-papers ban (skipped \u2014 Nov 2025 policy reinforced May 2026, not fresh). Written 5 T1 items: (1) Google Gemini 3.7 Flash launch Aug 13 with DeepSWE 49.0\u219265.3 jump and half-price intro pricing $0.75/$3.75 per 1M; (2) Anthropic-Decart $6B acquisition talks reported by Bloomberg late Wed Aug 12 confirmed by Reuters, chip optimization + world models, team folds into Anthropic inference-and-performance group; (3) DeepSeek V4-Pro-0813 quiet GA Aug 12 with 1.6T MoE + 1M context + hybrid attention cutting long-context FLOPs to 27% of V3.2, IntelIndex 53, ~$0.435/M input; (4) SpaceXAI Grok 4.6 Aug 12 with 500K context (200K standard band + 300K premium), IntelIndex 61 ties GPT-5.6 Sol, $2/$6 per 1M standard, Cursor default all plans launch afternoon \u2014 cheapest at frontier tier; (5) 'Stealing Reasoning Traces' paper Aug 12 alphaXiv 2608.09867 showing OpenAI/Anthropic/Google single-global-key architecture let weaker model in same provider family decode stronger model reasoning, 315,320 blocks decoded, 182 credentials recovered from real user sessions, all three labs shipped mitigations but not per-session key architecture. All items tier 1; no tier 2 or 3 in this pm \u2014 the fresh news since 11:15 UTC was concentrated in the frontier model + lab strategic-moves layer. Pixel 11 NOT promoted from am. Snapshot phase_history populated with single digest entry."
-    },
-    {
-      "run_id": "2026-08-13T11:15:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-08-13T11:00:00Z",
-      "ended_at": "2026-08-13T11:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 28000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 0,
-        "discovery_search": 25000,
-        "curation": 1500,
-        "output_write": 1500
-      },
-      "fetches_made": 16,
-      "items_input": 0,
-      "items_output": 1,
-      "items_added": 0,
-      "items_kept": 1,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-13-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Refresh run 7am EDT Thursday August 13 2026. Pre-flight: kill switch inactive (paused=false, refresh.enabled=true). Standard path: today's am file (2026-08-13-am.json) exists with 1 item (T3 Pixel 11). Last successful run ended_at: 2026-08-13T06:45:00Z (enrichment). WebFetch blocked by egress proxy for all domains \u2014 switched to WebSearch per prior-run pattern. Ran 16 WebSearch queries covering: frontier lab model releases Aug 13 (Anthropic/OpenAI/Google), open-source model releases Aug 13 (Qwen/HuggingFace), AI lab morning news (DeepMind/Meta/xAI/Mistral), AI developer tools Aug 13, Pixel 11 overnight reviews, Qwen/Alibaba Aug 13 releases, EU AI Act enforcement response, Simon Willison Aug 13 post, Anthropic Claude for Government date, Claude Code self-hosted date, Anthropic IPO update, China/Asia AI Aug 13, creator posts Aug 13, arxiv Aug 13, tech news Aug 13 morning. Summary: overnight Asia/Europe cycle quiet \u2014 no new frontier model releases since 06:45 UTC. Most recent tracked releases: GPT-5.6-Cyber (Aug 10), Qwen3.8-Max/27B (Aug 12). Stories investigated and ruled out as stale: Claude for Government beta (Jul 28), Claude Code self-hosted (Aug 6), Anthropic IPO roadshow (Jul 15), EU AI Act high-risk enforcement live (Aug 2, 11 days old), Anthropic chip team hiring (Aug 5). T3 Pixel 11 item does not qualify for optional re-pass (tier 1 only). Result: 0 new items added, 1 item kept, snapshot phase_history appended."
-    },
-    {
-      "run_id": "2026-08-13T06:45:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-08-13T06:23:00Z",
-      "ended_at": "2026-08-13T06:45:00Z",
-      "wall_time_ms": 1320000,
-      "tokens_used": 32000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 0,
-        "discovery_search": 18000,
-        "curation": 9000,
-        "output_write": 5000
-      },
-      "fetches_made": 6,
-      "items_input": 1,
-      "items_output": 1,
-      "items_added": 0,
-      "items_kept": 1,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-13-am",
-      "error": null,
-      "partial": false,
-      "notes": "Enrichment run 2am EDT Thursday August 13 2026. Pre-flight: kill switch inactive (paused=false, enrichment.enabled=true). Yesterday's pm file (2026-08-12-pm.json) exists with 1 item (T3 Google Pixel 11 / Made by Google '26); standard prune+enrich path applied. Last successful run ended_at: 2026-08-12T17:20:00Z (digest). WebFetch not attempted per prior-run pattern; relied entirely on WebSearch (6 targeted queries covering: Pixel 11 Gemini Automation hands-on reviews Aug 13, Gemini calling businesses backlash, Zocdoc partnership doctor reactions, Apple response Pixel 11 competitive, overnight AI model releases, Apple Gemini Siri partnership timing/rumor). The 1 T3 Pixel 11 item KEPT + ENRICHED (0 dropped): added overnight follow-up detail from 9to5Google that Gemini Automation task-handling works across MORE THAN 40 apps (not just the OpenTable/Ticketmaster/Zocdoc launch partners) \u2014 the specific canary that graduates the connected-app pattern from three-launch-partners to a real ecosystem; added Gboard Rambler filler-word-filtering detail ('umm'/'ah' filtering, run-on-sentence cleanup); added HiLight LED array on Pro models that pulses to indicate Gemini listening/thinking/responding (physical AI-status hardware indicator, unusual UX); added location-aware At A Glance widget detail; added Zocdoc onboarding-model detail (providers already on Zocdoc automatically enabled in Gemini with no additional integration required) and the 85%-of-providers-see-more-AI-informed-patients data point; added Duplex-era identify-as-robot precedent that Gemini business-calls announce upfront that they are an automated system calling on the user's behalf; added the STRATEGIC-PARADOX WRINKLE (Quartz/CNBC follow-up, Seeking Alpha, AppleInsider) that Apple is rebuilding Siri around Google's own Gemini models (iOS 27 September with iPhone 18) \u2014 so Google is simultaneously competing against Apple on the Pixel and providing the underlying model Apple will use to compete back; added Quartz specific framing 'Google launched Pixel 11 with agentic AI weeks before Apple ships a Gemini-powered Siri'; added Google's marketing-response detail (#BestPhonesForever 'Generation Gap' episode poking fun at Apple's AI intelligence); added CNBC consumer-adoption baseline (AI ranks 6th\u20137th among consumers' reasons for upgrading a smartphone but climbing 1\u20132 spots as Gemini/Apple Intelligence become more capable); rewrote why_it_matters_brief to lead with the '40+ apps' + 'iOS 27 September Gemini-Siri' timing paradox; added takes[] entries for Quartz, AppleInsider, Seeking Alpha, and 9to5Google Gboard Rambler follow-up; refreshed watch-list to include the iOS 27 September head-to-head and whether HiLight LED array becomes a template for physical AI-status indicators. Late-breaking pass: 0 items added. No frontier lab drops overnight from Anthropic/OpenAI/Google DeepMind/Meta/xAI/Mistral/DeepSeek \u2014 most recent tracked release is GPT-5.6-Cyber (Aug 10) and Qwen 3.8-Max/27B (Aug 12), both already in prior snapshots; next projected Anthropic release ~Aug 17. Wall time ~22min."
     }
   ]
 }
