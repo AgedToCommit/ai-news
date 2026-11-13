@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-13T07:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-13T07:10:00Z",
+      "ended_at": "2026-11-13T07:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 12000,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 1,
+      "snapshot_written": "2026-11-13-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Primary input: data/2026-11-12-pm.json (6 items). RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same persistent pattern as every recent run). Relied on WebSearch for enrichment. Ran 6 per-item enrichment searches (one for each yesterday-pm item) plus 2 late-breaking searches (one general overnight AI news, one Nov 13 lab-announcement sweep). Enrichment decisions: KEEP+ENRICH 5 of 6 items: (a) anthropic-claude-office-suite — added Sheets Excel export, Whiteboards canvas-to-doc-or-deck, Meetings external-guest carve-out from Japanese coverage (gori.me), reframed Microsoft -2.2% paragraph around Google+Microsoft investor-vs-competitor tension (Digg); (b) anthropic-supported-regions — added reported Claude Code client-side detection logic (FT via a security researcher, not confirmed by Anthropic), developer-forum reports of post-Persona-verification suspensions including a Russian-citizen-in-NZ case where citizenship appears to be the flag, 11.4M H1-2026 banned-accounts figure as scale context with speculation caveat; (c) openai-chatgpt-businesses — added two-step eligibility gate (verification alone does not qualify for the Agent builder; OpenAI reviews business category + intended use), Business Agents double as paid placements through ChatGPT Ads extending September Sponsored Agents format, 'paying does not change recommendation frequency' framing to track; (d) ibm-microsoft-imagine-enterprise — added IBM Consulting signings fell 3.7% in most recent quarter (FourWeekMBA), analyst caution on commercial proof, no named-customer testimonials in first 48 hours; (e) ny-raise-act — added DIGIT frontier-developer portal requires NY State ID account (dfs.ny.gov/digit/Frontier-Developers), 52-day countdown now a real corporate-compliance deadline, no covered developer has publicly filed as of Nov 12, Davis Polk and Wiley have moved from policy explainers to client-advisory alerts, DIGIT's companion 'AI Safety and Public Reporting' page signals disclosure-pressure enforcement design. DROP 1: deepmind-alphaproof-code-signal-protocol-nov10 — no new substance in 24-48h; search surfaced follow-on DeepMind work (AlphaProof Nexus on Erdős problems + OEIS conjectures) but nothing new on the Signal/AArch64 result specifically. No new vulnerabilities data, no community analysis, no Signal-team response. Late-breaking pass: 0 items added. Overnight search surfaced no dated Nov 12/13 Tier-1 lab releases; the Nov 11 AlphaGenome 2 and Nov 11 Google AI items from yesterday's am are already in the day's context. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com. Final am file: 5 items (2/1/2 tier split)."
+    },
+    {
       "run_id": "2026-11-12T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
