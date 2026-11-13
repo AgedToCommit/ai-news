@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-13T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-13T17:35:00Z",
+      "ended_at": "2026-11-13T18:00:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 68000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 0,
+        "discovery_search": 50000,
+        "curation": 12000,
+        "output_write": 3000
+      },
+      "fetches_made": 23,
+      "items_input": 5,
+      "items_output": 2,
+      "items_added": 2,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-13-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. RSS/scrape sweeps skipped (primary lab domains — openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com — remain unreachable from this egress, same persistent pattern as every recent run). Relied on WebSearch for discovery (22 searches) + 2 WebFetch probes to thursdai.news and simonwillison.net which both failed with ENOTFOUND (hosts outside allowed-network list). Search probes covered: general Nov 13 PM sweep, OpenAI/Anthropic/Google/DeepMind/Meta Nov 13 releases, open-weight model Nov 12-13, developer tools Nov 13, Chinese labs (Qwen/DeepSeek/Moonshot/GLM) Nov 2026, Nvidia Huang succession, Anthropic IPO pricing, Simon Willison Nov 12-13, Hugging Face Nov 2026, JetBrains Mellum2 verification (Jun 2026 release, not fresh), PP-OCRv6/MolmoMotion verification (PP-OCRv6 Jun 2026, MolmoMotion unverified), AI Engineer Code Summit Nov 11-12 talks (no post-event recaps surfaced), AMD/Intel/TPU Nov 12-13, Microsoft Ignite 2026 Nov 12-13, Cursor/SpaceX/OpenAI shutoff aftermath (shutoff was proposed Nov 12 but no confirmed day-of reporting), arxiv Nov 12 papers, Mistral/Cohere/xAI Nov 12-13, Antigravity Nov updates, Nvidia stock price Nov 13, Nov 12 2026 general, Rust/Go/Tauri Nov 2026, AI startup funding Nov 11-13, METR Frontier Risk Report (May 2026 — too old), Nov 13 specific AI news (surfaced Fireworks+Notion, Hydrogen rumor, Google Hydrogen rumor, Nvidia succession), Google Hydrogen verification (unconfirmed — leak chatter only, no AI Studio listing), United Airlines Contract of Carriage AI agents ban (not confirmed in results — only commentary), Notion Fireworks disconnect verification (confirmed), Fireworks AI breach customer-data scope (confirmed), Anthropic Q3 vs OpenAI Q3 revenue (confirmed via FourWeekMBA + SaaStr + letsdatascience), Nvidia succession candidates (Su/Haas/Schmidt — floated but speculative), Alibaba Qwen4 teaser (Nov 6 teaser, release date unconfirmed), Anthropic IPO roadshow reception (conflicting signals — CNBC covered-book-day-one vs Reuters-sourced investor-doubt). Final items (2): (a) fireworks-ai-second-breach-widens-nov9 (Tier 2, Global) — Fireworks AI expanded Nov 9 disclosure of second October incident covering stored secrets, datasets, incomplete model weights, billing/account data; Notion disconnected, Insights disabled, Cursor + Harvey named; LLMJacking attribution; Harvey says no data impacted; Cursor impact unconfirmed. (b) anthropic-q3-s1-a-revenue-outpaces-openai-nov10 (Tier 2, US) — Anthropic S-1/A Q3 revenue $16.96B (~47% QoQ growth, $567M operating loss) vs reported OpenAI Q3 $10B (The Information); first filing-grade data point flipping the frontier-lab revenue leaderboard; gross-vs-net cloud-marketplace accounting caveat; IPO pricing Nov 18-19; conflicting demand signals (CNBC covered-book vs Reuters investor-doubt). Promotion rule: no items from today's am were promoted. Candidates considered but not promoted: (i) Nvidia resignation (nvidia-ceo-huang-resignation-nov12) — considered promotion given succession speculation (Lisa Su / Rene Haas / Eric Schmidt headhunting, Yale 'asleep at the wheel' governance critique, Harvey C. Jones chair appointment), but the am item already covers 'board search for permanent successor considering internal and external candidates' + 'Harvey C. Jones first-ever board chair' + 'multiple sell-side downgrades on leadership uncertainty'; the new candidate-name specifics are speculative (headhunters scouting, not approached), so material-deepening threshold not cleared. No duplication of am items. Thin news cycle sustained: Veterans-Day-aftermath + AI Engineer Code Summit week + no major frontier-lab product announcements dated Nov 12-13."
+    },
+    {
       "run_id": "2026-11-13T12:30:00Z-refresh",
       "phase": "refresh",
       "status": "success",
