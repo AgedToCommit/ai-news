@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-13T12:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-13T12:00:00Z",
+      "ended_at": "2026-11-13T12:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 34000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 6,
+      "items_input": 3,
+      "items_output": 8,
+      "items_added": 3,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-13-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. am file existed (enrichment ran at 07:30 UTC). RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same persistent pattern as every recent run). Relied on WebSearch for discovery. Ran 6 web searches: (1) general AI news Nov 13 2026 morning sweep; (2) OpenAI/Anthropic/Google/DeepMind/Meta release sweep Nov 13; (3) open-source model release Nov 13 sweep; (4) Jensen Huang Nvidia resignation verification; (5) nonprofit frontier-AI training lawsuit verification; (6) Anthropic Claude for Manufacturing verification. Added 3 items: (a) nvidia-ceo-huang-resignation-nov12 (Tier 1, Global) — Jensen Huang resigned as Nvidia CEO Nov 12 amid dual affair scandal including alleged Chinese-spy relationship; CFO Colette Kress interim; stock -13%; Congress summons; (b) anthropic-claude-for-manufacturing-nov12 (Tier 2, US) — 17-skill manufacturing plugin launched Nov 12 mid-IPO-roadshow, connectors to Autodesk Fusion/Infor/Microsoft 365/Oracle NetSuite, mandatory human-review design, Team/Enterprise plans; (c) frontier-ai-training-lawsuit-california-nov12 (Tier 2, US) — four nonprofits filed in SF Superior Court Nov 12 to halt frontier AI training using California UCL + public nuisance, no injunction granted. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+    },
+    {
       "run_id": "2026-11-13T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

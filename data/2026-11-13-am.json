@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-13-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-13",
-  "generated_at": "2026-11-13T07:30:00Z",
-  "generated_at_local": "2026-11-13T02:30:00-05:00",
+  "generated_at": "2026-11-13T12:30:00Z",
+  "generated_at_local": "2026-11-13T07:30:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-13T07:30:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-11-13T07:30:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-11-13T12:30:00Z", "duration_ms": 1800000 }
   ],
-  "tier_counts": { "1": 2, "2": 1, "3": 2 },
+  "tier_counts": { "1": 3, "2": 3, "3": 2 },
   "items": [
     {
       "id": "anthropic-claude-office-suite-sheets-whiteboards-meetings-nov10",
@@ -42,6 +43,38 @@
         { "source": "tech-ish — 'Anthropic adds spreadsheets and whiteboards to Claude, with Claude Meetings coming next'", "url": "https://tech-ish.com/2026/11/11/anthropic-claude-sheets-whiteboards-meetings/", "take": "Best source on the admin-defaults mechanics: Team all-on, Enterprise Whiteboards + Sheets opt-in, Claude Data auto-on November 19. The compliance angle other coverage skipped." },
         { "source": "mlq.ai — 'Anthropic launches Claude Sheets and Meetings in a push into office software as Microsoft shares fall'", "url": "https://mlq.ai/news/anthropic-launches-claude-sheets-and-meetings-in-a-push-into-office-software-as-microsoft-shares-fall/", "take": "Documents the Microsoft share reaction (-2.2%) as the direct market signal that this is a competitive move against Microsoft 365, not just a feature add." },
         { "source": "BigGo Finance — 'Anthropic Takes On Office Software With Whiteboards and Sheets Launch as IPO Roadshow Begins'", "url": "https://finance.biggo.com/news/fc66abb1-4602-47ff-bb89-bbb81709cebd", "take": "Ties the office-suite launch directly to the IPO roadshow opening the next day — useful for understanding the revenue narrative." }
+      ]
+    },
+    {
+      "id": "nvidia-ceo-huang-resignation-nov12",
+      "tier": 1,
+      "title": "Nvidia CEO Jensen Huang resigns amid affair scandal and alleged Chinese-spy relationship — CFO Colette Kress named interim CEO, stock falls 13%, Congress summons Huang",
+      "summary": "On November 12, 2026, Nvidia's board announced that Jensen Huang had resigned as CEO amid a personal scandal involving a confirmed relationship with Nvidia executive Kimberly Powell (head of healthcare) and an alleged separate relationship with a woman US intelligence officials believe is a Chinese spy. Nvidia said it had earlier announced an internal investigation into 'a foreign intelligence effort' targeting Huang. Colette Kress, Nvidia's CFO since 2013, was named interim CEO while the board conducts a permanent-successor search considering both internal and external candidates; Harvey C. Jones was named the company's first-ever board chair. Nvidia stock fell over 13% in early trading before paring some losses; multiple sell-side shops downgraded the stock on leadership uncertainty. The Senate Banking Committee reportedly summoned Huang and Treasury Secretary Howard Lutnick to testify. The departure threatens what sources describe as a $500 billion Nvidia-backed AI financing push.",
+      "link": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html",
+      "why_it_matters": "This is the most consequential AI hardware leadership change in years, and the national-security dimension makes it materially different from a standard CEO exit. Three threads worth watching. First, the roadmap-decision risk. Nvidia's competitive position in AI chips depends on the Blackwell and Rubin GPU roadmaps, which require sustained technical leadership at the top. Kress is a finance executive, not a product or engineering leader — her interim role is explicitly a holding pattern while the board runs a permanent search. During that window, roadmap and pricing decisions for the next-generation chips will be slower to execute and harder to defend publicly, which is an opening for AMD's MI400 program, Intel's Gaudi successor, and the in-house chip programs at Google (TPU), Meta, Microsoft, and Amazon. For anyone monitoring AI cloud pricing and GPU availability, the transition period is the highest-risk interval. Second, the export-control acceleration risk. The Chinese-spy allegation lands in a context where the US Commerce Department has been managing chip export controls (the H100/H800/H20 series) since 2022. The optics of Nvidia's founder-CEO having an alleged intelligence connection — regardless of whether the allegation is proven — will almost certainly be used as political and regulatory justification for tightening export controls or expanding the scrutiny of Nvidia's compliance posture. The Commerce BIS office has been slow to enforce against semiconductor channel partners; expect Congressional hearings to push for faster enforcement. Third, the market signal is the 13% single-day drop. Jensen Huang was both CEO and primary spokesperson for the AI-hardware bull case — the thesis that GPU scarcity and training-compute demand would sustain Nvidia's margins for another 5+ years. That thesis relied heavily on his ability to articulate roadmap certainty to hyperscalers. With Kress in an interim role, hyperscaler contract negotiations for the Rubin cycle are a structurally weaker position for Nvidia, which creates the first real negotiating leverage cloud providers have had in this relationship since 2022. For Gabe, none of this affects API access in the next few months — hosted GPU infrastructure is a layer below what Claude/GPT/Gemini services surface. But the medium-term chip-supply story — which influences whether frontier labs keep scaling, and at what cost — just got materially more uncertain.",
+      "why_it_matters_brief": "Nvidia's CEO-less interval threatens roadmap-decision velocity on Blackwell/Rubin while the Chinese-spy allegation will accelerate Commerce Department scrutiny of Nvidia's export-compliance posture.",
+      "source": {
+        "name": "CNBC (live updates primary); Yahoo Finance (board announcement + Kress interim role); ABC News (affair-and-spy allegation summary); CBC (market reaction + intelligence angle); CNN (Congressional summons); PC Gamer (live scandal tracking); SEC Form 8-K (NVDA filing confirming CEO change)",
+        "type": "scrape",
+        "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-13T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-13T12:00:00Z", "by": "refresh", "change": "created — Jensen Huang resigned as Nvidia CEO Nov 12. CFO Colette Kress interim, Harvey C. Jones first board chair. Confirmed relationship with exec Kimberly Powell; alleged relationship with suspected Chinese spy. Stock -13%+ early trading. Senate Banking Committee summons. $500B financing push threatened. Sources: CNBC, Yahoo Finance, ABC News, CBC, CNN, PC Gamer, SEC 8-K. hero_image null." }
+      ],
+      "takes": [
+        { "source": "CNBC — 'Nvidia CEO Jensen Huang resigns: Live updates'", "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html", "take": "Primary US financial-press source for the board announcement and the interim-CEO/board-chair structure." },
+        { "source": "Yahoo Finance — 'Nvidia live updates: Following Jensen Huang's resignation, allegations of a third affair emerge'", "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-jensen-huang-resigns-cfo-colette-kress-to-serve-as-interim-ceo-140341430.html", "take": "Live-updates format tracking the evolving scandal, including the emerging third-affair allegation post-filing." },
+        { "source": "ABC News — 'Nvidia CEO Jensen Huang resigns amid alleged affair with reported spy'", "url": "https://abcnews.com/Business/nvidia-ceo-jensen-huang-resigns-amid-alleged-affair/story?id=138076256", "take": "Best single-source summary of the dual scandal: confirmed Kimberly Powell relationship plus the intelligence-services-alleged-spy thread." },
+        { "source": "CNN — 'Jensen Huang summoned to testify before Congress after resigning as Nvidia CEO'", "url": "https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout", "take": "Source for the Congressional-testimony summons and the Senate Banking Committee angle." },
+        { "source": "CBC — 'Nvidia CEO's resignation after affair with suspected Chinese spy rattles markets, tech world'", "url": "https://www.cbc.ca/news/business/livestory/nividia-jensen-huang-affairs-ceo-9.7418886", "take": "Best non-US source on the market reaction and the broader geopolitical framing of the intelligence angle." },
+        { "source": "SEC — 'NVIDIA CORP Form 8-K FY2026'", "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm", "take": "Primary regulatory filing confirming the CEO change and the board's actions — the only source that should be cited for the formal corporate-governance record." }
       ]
     },
     {
@@ -112,6 +145,66 @@
       ]
     },
     {
+      "id": "anthropic-claude-for-manufacturing-nov12",
+      "tier": 2,
+      "title": "Anthropic launches Claude for Manufacturing — a 17-skill plugin for quoting, quality investigation, and production reporting, with connectors to Autodesk Fusion, Infor, Microsoft 365, and Oracle NetSuite",
+      "summary": "Anthropic launched Claude for Manufacturing on November 12, 2026 — a Claude plugin with 17 workflow skills covering quoting, quality investigation, production reporting, maintenance diagnosis, sourcing, and design. The plugin connects to four manufacturing systems: Autodesk Fusion, Infor (limited to Infor Velocity Suite customers holding their own Claude licenses), Microsoft 365, and Oracle NetSuite. The design keeps humans in the loop: Claude drafts work products but the responsible person reviews and approves before anything reaches a customer or supplier — the plugin has no physical control role and cannot actuate machinery. The plugin is available on Claude Team and Enterprise plans. A technical webinar is scheduled for November 17 at 11am. The launch lands three days after Anthropic's office-suite announcement (Sheets, Whiteboards, Meetings) and in the middle of the company's IPO roadshow, adding a third vertical to the revenue narrative alongside knowledge-worker office tools and enterprise developer tools.",
+      "link": "https://www.unite.ai/anthropic-launches-claude-for-manufacturing-with-17-workflow-skills/",
+      "why_it_matters": "This is worth watching for three threads, not all of them about manufacturing. First, the plugin-with-connectors model is distinct from Anthropic's first-party office products (Sheets, Whiteboards, Meetings). The office suite is built-in and proprietary. The manufacturing plugin is an installable component that connects to ERP and CAD software — a different architectural bet that says Anthropic thinks high-value enterprise workflows are won through connector depth, not by rebuilding the entire surface. The Autodesk Fusion connector is specifically interesting: Fusion is used by hobbyist CNC, 3D-printing, and small-batch product-design communities alongside large manufacturers, so this is probably the least enterprise-exclusive connector of the four. If this model matures, expect hobbyist-accessible connectors (GitHub, Linear, Figma, Notion) to follow by mid-2027, since the technical pattern is now proven. Second, the 'review before it reaches a customer or supplier' framing is the clearest line Anthropic has drawn yet on agentic autonomy in a high-stakes domain. The plugin does not send quotes, production reports, or quality findings autonomously — a human approves each outbound action. That is the same boundary Claude Meetings drew (Meetings does not send meeting notes without review) and it is a consistent position across the product line: Anthropic is shipping agentic products with mandatory human checkpoints rather than fully autonomous loops. For Gabe building automation in Python, this is the reference design to watch: mandatory-review-before-action is likely to become the standard for any Claude-powered agent in a workflow that touches money, compliance, or external parties. Third, the IPO timing reads: Claude for Manufacturing is the third wave of Anthropic's pre-IPO product push in four days. Sheets/Whiteboards/Meetings on Nov 10, Supported-Regions enforcement on Nov 12, and Claude for Manufacturing on Nov 12. The three products together tell a coherent IPO-roadshow story: a consumer/prosumer office-suite layer (Sheets/Meetings), a compliance/access-control layer (Supported Regions), and a vertical-industry layer (Manufacturing). Expect at least one more vertical plugin (Healthcare, Legal, or Financial Services) before the pricing date.",
+      "why_it_matters_brief": "The 'review before it reaches a customer' constraint is Anthropic's clearest autonomy boundary yet — and three product launches in four days mid-roadshow suggests at least one more vertical plugin before the Nov 18-19 pricing date.",
+      "source": {
+        "name": "unite.ai (17-skill summary primary); Yahoo Finance / Manufacturing Dive (launch coverage); FourWeekMBA (IPO-roadshow timing context); dataconomy.com (connector breakdown); cryptobriefing (manufacturing-plugin framing); superpowerdaily (quoting-and-investigation framing); digitaltoday.co.kr (connector details); releasebot.io (Anthropic November 2026 release notes)",
+        "type": "scrape",
+        "url": "https://www.unite.ai/anthropic-launches-claude-for-manufacturing-with-17-workflow-skills/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-13T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-13T12:00:00Z", "by": "refresh", "change": "created — Anthropic launched Claude for Manufacturing Nov 12. 17 skills (quoting, quality investigation, production reporting, maintenance diagnosis, sourcing, design). Connectors: Autodesk Fusion, Infor (Velocity Suite / own Claude license only), Microsoft 365, Oracle NetSuite. Human-review-before-send design. Available Team + Enterprise plans. Webinar Nov 17 11am. Landing mid-IPO roadshow, 3 days after office suite. Sources: unite.ai, Yahoo Finance, FourWeekMBA, dataconomy, cryptobriefing, superpowerdaily. hero_image null." }
+      ],
+      "takes": [
+        { "source": "unite.ai — 'Anthropic Launches Claude for Manufacturing With 17 Workflow Skills'", "url": "https://www.unite.ai/anthropic-launches-claude-for-manufacturing-with-17-workflow-skills/", "take": "Best comprehensive summary of the 17 skills, four connectors, and human-in-the-loop design constraint." },
+        { "source": "FourWeekMBA — 'Anthropic Launches Claude for Manufacturing Mid-IPO Roadshow'", "url": "https://fourweekmba.com/ai-anthropic-launches-claude-for-manufacturing-ipo-roadshow/", "take": "Source for the IPO-roadshow timing context — frames the launch as part of the pre-pricing revenue narrative." },
+        { "source": "dataconomy — 'Anthropic Launches Claude Manufacturing Plugin With 17 AI Skills'", "url": "https://dataconomy.com/2026/11/13/anthropic-launches-claude-manufacturing-plugin-with-17-ai/", "take": "Details on the connector breakdown, including the Infor eligibility constraint (Velocity Suite + own Claude license)." },
+        { "source": "superpowerdaily — 'Anthropic launches Claude for Manufacturing to draft quotes and investigate factory problems'", "url": "https://superpowerdaily.com/posts/anthropic-launches-claude-for-manufacturing-to-draft-quotes-and-investigate-factory-problems", "take": "Best framing of the quoting-and-investigation use cases and the no-autonomous-send design intent." }
+      ]
+    },
+    {
+      "id": "frontier-ai-training-lawsuit-california-nov12",
+      "tier": 2,
+      "title": "Four nonprofits file suit in California to halt frontier AI training — Public Citizen, Heat Initiative, Irreplaceable Education Fund, and Alliance for Secure AI name OpenAI, Anthropic, Google, Meta, and SpaceX AI, using the Unfair Competition Law",
+      "summary": "On November 12, 2026, four nonprofits — Irreplaceable Education Fund, Public Citizen, Heat Initiative, and Alliance for Secure AI — filed suit in San Francisco Superior Court against OpenAI, Anthropic, Google, Meta, and SpaceX's AI unit, seeking an emergency injunction to halt frontier AI training. The legal theory is California's Unfair Competition Law (UCL) and public nuisance doctrine, not a new AI statute — the plaintiffs deliberately bypassed the gridlocked federal AI legislative process to use existing state consumer-protection law. The complaint cites the defendant companies' own executives' public warnings about AI risk, and references reports of AI models operating outside controlled environments. The relief sought is an emergency injunction blocking next-generation model development until the companies prove their systems are under human control. No injunction has been granted as of filing. A related but separate federal antitrust case filed on September 18, 2026 alleges the same companies formed an agreement to slow frontier AI advancement.",
+      "link": "https://aiweekly.co/alerts/four-nonprofits-sue-openai-anthropic-google-meta-and-spacex-in-california-to",
+      "why_it_matters": "This matters more as a legal-strategy story than as a near-term operational risk. Three threads. First, the UCL theory is deliberate and aggressive. California's Unfair Competition Law has an unusually broad standing rule — any person acting in the public interest can sue, without needing to show personal injury — and it has historically been used against pharmaceutical companies (opioids), insurers, and tech platforms for practices that harmed consumers in the aggregate. The plaintiffs are testing whether that same theory can reach AI safety. The public nuisance doctrine is the stronger long-shot: state public-nuisance cases have succeeded in opioids and lead-paint litigation against large technology companies. The chance of an emergency injunction being granted is low — courts rarely issue broad preemptive injunctions against lawful commercial activity — but if the case survives a motion to dismiss, it creates a discovery pathway that could force labs to produce internal safety assessments, alignment failure logs, and catastrophic-risk model documentation that the companies have never publicly released. Second, the complaint's use of the companies' own executives' public risk warnings is specifically designed to close the 'we didn't know' defense before it opens. If Anthropic's safety team has documented internal catastrophic-risk assessments — which the RAISE Act now requires them to publish quarterly, starting January 1 — those documents become discoverable evidence in this case. The two-track structure (this UCL/nuisance case in Superior Court + the September federal antitrust case) means the defense burden spans two parallel proceedings with overlapping document production. Third, the nonprofit plaintiff list is worth reading: Heat Initiative focuses on child-safety harms in AI-generated content; Alliance for Secure AI is a newer safety-focused org; Public Citizen is a long-running consumer advocacy group with significant litigation infrastructure. This is not a one-filing group — Public Citizen in particular has the legal capacity to maintain complex multi-year litigation. For Gabe building on these APIs, the operational risk is effectively zero in the near term. No injunction, no model shutdown, no access disruption. The interesting signal is the discovery track, which will produce primary-source documents about how labs internally assess catastrophic risk — better reference material than any published safety card.",
+      "why_it_matters_brief": "The UCL/public-nuisance theory bypasses federal AI legislation and creates a discovery pathway for internal safety documents — with the RAISE Act's quarterly catastrophic-risk assessments becoming discoverable if the case survives dismissal.",
+      "source": {
+        "name": "aiweekly.co (primary — filing summary); kucoin.com (plaintiff/defendant list); tribune.com.pk (legal-theory summary); cryptopolitan (safety-advocates framing); opentools.ai (halt-frontier-AI framing); insideai.news (plaintiff breakdown); shattered.io (recursive-self-improvement angle); globalbankingandfinance.com (overview)",
+        "type": "scrape",
+        "url": "https://aiweekly.co/alerts/four-nonprofits-sue-openai-anthropic-google-meta-and-spacex-in-california-to"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-13T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-13T12:00:00Z", "by": "refresh", "change": "created — Four nonprofits (Irreplaceable Education Fund, Public Citizen, Heat Initiative, Alliance for Secure AI) filed suit Nov 12 in San Francisco Superior Court against OpenAI, Anthropic, Google, Meta, SpaceX AI unit. Legal theory: California UCL + public nuisance. Relief sought: emergency injunction to halt next-gen model training until human-control demonstrated. No injunction granted. Cites executives' own risk warnings. Related to separate federal antitrust case filed Sept 18 2026. Sources: aiweekly.co, kucoin.com, tribune.com.pk, cryptopolitan, opentools.ai, insideai.news, shattered.io. hero_image null." }
+      ],
+      "takes": [
+        { "source": "aiweekly.co — 'Four Nonprofits Sue OpenAI, Anthropic, Google, Meta and SpaceX in California to Freeze Frontier AI Training'", "url": "https://aiweekly.co/alerts/four-nonprofits-sue-openai-anthropic-google-meta-and-spacex-in-california-to", "take": "Best summary of the filing, the plaintiff list, and the UCL/public-nuisance legal theory." },
+        { "source": "cryptopolitan — 'AI giants face legal war as safety advocates seek development freeze'", "url": "https://www.cryptopolitan.com/ai-giants-face-legal-war-as-safety-advocates-seek-development-freeze/", "take": "Clearest framing of the safety-advocacy strategy and the plaintiffs' decision to use existing state law rather than waiting for federal AI legislation." },
+        { "source": "opentools.ai — 'Nonprofits Sue OpenAI, Anthropic, Google to Halt Frontier AI'", "url": "https://opentools.ai/news/nonprofits-sue-openai-anthropic-google-halt-frontier-ai", "take": "Coverage of the relief sought — emergency injunction blocking next-gen development until human-control is demonstrated — and the case's connection to the September 2026 federal antitrust filing." },
+        { "source": "insideai.news — 'Nonprofits Sue OpenAI, Google, Anthropic to Halt Frontier AI Development'", "url": "https://insideai.news/news/ai-policy-and-regulation/lawsuit-halt-frontier-ai-development/15112/", "take": "Best breakdown of the individual plaintiff organizations and their prior litigation histories — useful for assessing how likely this case is to be maintained over time." }
+      ]
+    },
+    {
       "id": "ibm-microsoft-imagine-enterprise-nov10",
       "tier": 3,
       "title": "IBM and Microsoft launch Imagine Enterprise — 6,000+ pre-built agents on Azure, aimed at FS/insurance/retail, landing against a quarter where IBM Consulting signings fell 3.7%",
@@ -133,7 +226,7 @@
       "promoted_from_am": false,
       "revisions": [
         { "at": "2026-11-12T18:00:00Z", "by": "digest", "change": "created — IBM + Microsoft announced Imagine Enterprise Nov 10. Joint agentic platform, IBM Consulting 6,000+ pre-built agents + Microsoft Azure + security + identity. Launch verticals: financial services, insurance, retail. Future: manufacturing, energy, public sector, mobility. Three delivery models. Includes real-time telemetry (latency, cost, tokens, run history) and governance (autonomy, human approval, escalation). Ignite-week timing. hero_image null." },
-        { "at": "2026-11-13T07:30:00Z", "by": "enrichment", "change": "added two threads — (1) IBM Consulting signings fell 3.7% in the most recent quarter (FourWeekMBA), which reframes the launch as a packaging move to re-open the consulting pipeline; (2) analyst caution on commercial proof and the absence of independent named-customer testimonials in the first 48 hours. Updated why_it_matters and why_it_matters_brief to foreground the signings-backdrop and the real commercial test (next quarter's signings number)." }
+        { "at": "2026-11-13T07:30:00Z", "by": "enrichment", "change": "added two threads — (1) IBM Consulting signings fell 3.7% in most recent quarter (FourWeekMBA), which reframes the launch as a packaging move to re-open the consulting pipeline; (2) analyst caution on commercial proof and the absence of independent named-customer testimonials in the first 48 hours. Updated why_it_matters and why_it_matters_brief to foreground the signings-backdrop and the real commercial test (next quarter's signings number)." }
       ],
       "takes": [
         { "source": "CIO Dive — 'Microsoft, IBM team up on AI agent platform'", "url": "https://www.ciodive.com/news/microsoft-ibm-team-up-ai-agent-platform/874152/", "take": "Best enterprise-IT-angle source. Clearest summary of the two companies' contributions and the governance mechanics (autonomy levels, human-approval thresholds)." },
