@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-14T07:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-14T07:10:00Z",
+      "ended_at": "2026-11-14T07:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 10000,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 0,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-14-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Primary input: data/2026-11-13-pm.json (2 items). RSS/scrape sweeps skipped (primary lab domains — openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com — remain unreachable from this egress; same persistent pattern as every recent run). Relied on WebSearch for enrichment (7 queries) plus 2 late-breaking sweeps. Enrichment decisions: KEEP+ENRICH 2 of 2: (a) anthropic-q3-s1-a-revenue-outpaces-openai-nov10 — meaningful enrichment with four Nov 11-13 developments: Bloomberg-sourced multiple-times-oversubscribed book at $70-$78; up to 20% of Class A shares reserved for retail investors with JPMorgan (US) + Citigroup (international) retail split; AI Weekly report of Nvidia and Google each anchoring ~$10B and bankers weighing $1.5T+ valuation; Nov 13 Amodei + Dimon livestream as retail-marketing move. Also tightened pricing timeline to Wed Nov 18 / Thu Nov 19 trading. Updated why_it_matters and brief. (b) fireworks-ai-second-breach-widens-nov9 — light enrich only: no new named customers, no cloud-provider identification, no new breach details surfaced. Added framing: Fireworks CEO Lin Qiao named in customer-notification coverage (Gadget Review, The Record), and the continued cloud-provider silence five days post-disclosure as an informative absence-of-info signal. Updated brief only. DROP 0. Late-breaking pass: 0 items added. Searches covered general Nov 13 AI sweep, OpenAI/Google/Anthropic/DeepMind/Meta Nov 13, frontier-model + open-weight Nov 13-14 releases, Nvidia Huang succession Nov 13, Chinese lab Nov 13 (Qwen4/Kimi/DeepSeek), Simon Willison / developer-tooling Nov 13. Nothing solid dated Nov 13-14 surfaced; nearest dated content remained Nov 9-11 items already in the digest cycle. The Anthropic Nov 13 livestream was treated as enrichment on the existing item rather than a standalone late-breaking addition. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com. Final am file: 2 items (0/2/0 tier split)."
+    },
+    {
       "run_id": "2026-11-13T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
