@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-14-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-14",
-  "generated_at": "2026-11-14T07:30:00Z",
-  "generated_at_local": "2026-11-14T02:30:00-05:00",
+  "generated_at": "2026-11-14T12:28:00Z",
+  "generated_at_local": "2026-11-14T07:28:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-14T07:30:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-11-14T07:30:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-11-14T12:28:00Z", "duration_ms": 1680000 }
   ],
-  "tier_counts": { "1": 0, "2": 2, "3": 0 },
+  "tier_counts": { "1": 0, "2": 4, "3": 0 },
   "items": [
     {
       "id": "anthropic-q3-s1-a-revenue-outpaces-openai-nov10",
@@ -82,6 +83,66 @@
         { "source": "Beri — 'Rotate every secret you stored on Fireworks after breach'", "url": "https://www.beri.net/article/fireworks-ai-breach-november-9-update-customer-model-weights-datasets-secrets-billing-llmjacking-rotate-secrets-zdr", "take": "Practical action guidance. Surfaces the LLMJacking framing and the key-rotation recommendation. The most actionable single read for a developer or team using any hosted inference platform." },
         { "source": "theoutpost.ai — 'Fireworks AI hit by second breach in October — customer billing data and model weights exposed'", "url": "https://theoutpost.ai/news-story/fireworks-ai-hit-by-second-breach-in-october-customer-billing-data-and-model-weights-exposed-33321/", "take": "Good secondary summary of the customer-data scope and the fact that some large-spend customers are reportedly reviewing alternatives." },
         { "source": "SmartScope — 'Notion AI × Fireworks AI incident affected under 1%'", "url": "https://smartscope.blog/en/blog/notion-ai-fireworks-ai-incident-affected-under-1-2026/", "take": "Documents the specific Notion timeline anchors (Fireworks notice Nov 2 evening; Notion disconnect Nov 3; Fireworks confirmation of affected dataset Nov 8) that disagree slightly with Notion's own advisory date of Nov 6 — useful for understanding the chronology ambiguity in the public record." }
+      ]
+    },
+    {
+      "id": "anthropic-claude-meetings-google-meet-beta-nov10",
+      "tier": 2,
+      "title": "Anthropic launches Claude Meetings in beta for Google Meet — joins calls as a visible participant and can draft plans and timelines live; also ships Claude Whiteboards, Sheets beta, and moves Claude Data to GA",
+      "summary": "On November 10, 2026, Anthropic launched Claude Meetings in beta for Team and Enterprise plan users, with Google Meet as the first supported platform. Claude joins the call as a visible participant and can answer questions during the meeting, draft plans and timelines on a Claude Whiteboard in real time, and generate follow-up materials. The same announcement introduced Claude Whiteboards and Claude Sheets (both in beta on paid plans) and moved Claude Data — previously called Claude Dashboards — to general availability. Support for other video conferencing platforms is planned but no dates were given.",
+      "link": "https://www.anthropic.com/news/claude-meetings",
+      "why_it_matters": "Anthropic is building out Claude beyond the chat interface at a steady clip. Claude Meetings is the most visible sign of that — moving from 'AI you consult after a meeting' to 'AI that participates in the meeting itself.' Whether that's useful depends heavily on the team's work patterns, but the access level is higher than a notetaker: Claude is reading the conversation live and can respond mid-meeting. The companion launches matter at least as much as the headline: Claude Whiteboards (live collaborative whiteboard during the meeting), Claude Sheets (AI-native spreadsheets in beta), and Claude Data (formerly Dashboards, now GA) round out what looks like a deliberate push into workspace-productivity territory. For Gabe, the most practical near-term relevance is Claude Sheets in beta — an AI-native spreadsheet that can interact with live data is the kind of tool worth watching as it moves toward GA. The enterprise gating (Team + Enterprise only at launch) is a signal that Anthropic is prioritizing high-ARR business usage, consistent with the 900% NRR story in the IPO filing. The Google Meet partnership first (not Zoom or Teams) is likely tied to the Google Workspace partnership track rather than a neutral platform choice.",
+      "why_it_matters_brief": "Anthropic moved Claude from chat into live meetings — it joins Google Meet calls as a visible participant, can draft plans and timelines live, and ships Claude Sheets beta and Claude Data GA alongside it.",
+      "source": {
+        "name": "Anthropic (primary — Nov 10 announcement); Axios; BetaNews; Neowin; The Decoder; Maginative",
+        "type": "scrape",
+        "url": "https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-14T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-14T12:00:00Z", "by": "refresh", "change": "created — Anthropic Nov 10 2026 launch: Claude Meetings in beta for Team+Enterprise on Google Meet (joins as visible participant, answers questions live, drafts plans/timelines on Claude Whiteboard, generates follow-up materials). Companion launches: Claude Whiteboards (beta, paid plans), Claude Sheets (beta, paid plans), Claude Data (GA — formerly Claude Dashboards). Additional platforms planned, no dates given. hero_image null." }
+      ],
+      "takes": [
+        { "source": "Axios — 'Anthropic wants Claude to join your meetings'", "url": "https://www.axios.com/2026/11/10/anthropic-claude-meetings-knowledge-work", "take": "Primary news coverage from Nov 10. Frames the product as Anthropic's move into real-time knowledge work, with Claude acting as a live meeting participant rather than a post-meeting summarizer." },
+        { "source": "BetaNews — 'Claude meetings, whiteboards, sheets: Anthropic'", "url": "https://betanews.com/article/claude-meetings-whiteboards-sheets-anthropic/", "take": "Best summary of all four concurrent launches: Meetings, Whiteboards, Sheets (all beta), and Data (GA). Notes that all three beta products are on paid plans only." },
+        { "source": "Neowin — 'Anthropic Claude announces Google Workspace integration and new Research tool'", "url": "https://www.neowin.net/news/anthropic-claude-announces-google-workspace-integration-and-new-research-tool/", "take": "Covers the Google Workspace integration angle alongside the meeting feature — frames it as Claude gaining access to Docs, Sheets, and Drive data for context during calls." },
+        { "source": "Dataconomy — 'Anthropic Brings Claude Meetings To Google Meet In Beta'", "url": "https://dataconomy.com/2026/11/13/anthropic-brings-claude-meetings-to-google-meet-in-beta", "take": "Nov 13 follow-on coverage confirming the beta rollout is live for Team and Enterprise customers." }
+      ]
+    },
+    {
+      "id": "moonshot-ai-kimi-hk-ipo-50b-valuation",
+      "tier": 2,
+      "title": "Moonshot AI (Kimi) confidentially files for Hong Kong IPO at ~$50B valuation — first major Chinese frontier-AI lab to pursue a public listing as Kimi K3 drives ARR to $300M",
+      "summary": "Moonshot AI, the Beijing-based lab behind the Kimi assistant and Kimi K3 reasoning model, has confidentially filed for an initial public offering on the Hong Kong Stock Exchange, with a reported target raise of between $3 billion and $5 billion and an indicative pre-IPO valuation of approximately $50 billion. The valuation marks a rapid jump from the company's $35 billion close on a $3.5 billion funding round in mid-2026, and from roughly $4.3 billion in late 2025. Moonshot's ARR reportedly reached $300 million by June 2026, up from $200 million in April, driven primarily by the Kimi K3 reasoning model. Keling AI, a video-generation spinout, has also reportedly filed separately. No listing date has been confirmed; some estimates put the first quarter of 2027 as the likely window.",
+      "link": "https://kr-asia.com/moonshot-ai-targets-usd-50-billion-valuation-ahead-of-hong-kong-ipo",
+      "why_it_matters": "Moonshot AI going public would be the first IPO from a major Chinese frontier-AI lab, and it is happening almost simultaneously with Anthropic's US listing — a data point on how the AI-lab investment cycle is playing out in both hemispheres at once. The valuation path (from roughly $4B at end-2025 to $50B now) reflects the broader pattern of Chinese AI labs scaling fast on domestic demand: Kimi competes with Alibaba's Qianwen and Baidu's Ernie for Chinese-market users, and Kimi K3's strong reasoning benchmark performance has earned it real usage share. For context, Moonshot's $50B target is roughly 3% of Anthropic's $1.4T filed valuation — a significant gap, but Moonshot is also a much younger company and operating in a tighter regulatory environment for outbound capital. The Keling AI simultaneous filing is worth watching separately: AI video generation is a fast-moving segment and a standalone public listing would give it a market price independent of the LLM narrative. The broader takeaway is that the first cohort of Chinese frontier-AI lab IPOs is arriving, and the Hong Kong exchange is the primary venue — which matters for understanding how the global AI-capital cycle will look in 2027.",
+      "why_it_matters_brief": "Moonshot AI is the first major Chinese frontier-AI lab to pursue a public listing — the $50B valuation is 10× in one year, and the HK IPO timing mirrors Anthropic's US listing almost exactly.",
+      "source": {
+        "name": "KR Asia (primary — Bloomberg-sourced); FourWeekMBA; AI Weekly; The Bamboo Works; iTiger",
+        "type": "scrape",
+        "url": "https://kr-asia.com/moonshot-ai-targets-usd-50-billion-valuation-ahead-of-hong-kong-ipo"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-14T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-14T12:00:00Z", "by": "refresh", "change": "created — Moonshot AI (Kimi) confidential HK Stock Exchange IPO filing; target raise $3B-$5B; indicative pre-IPO valuation ~$50B (up from $35B close on $3.5B round mid-2026, from ~$4.3B late-2025). Kimi K3 driving ARR $300M (June 2026). Keling AI (video spinout) also filed separately. First major Chinese frontier-AI lab public listing. No confirmed date; Q1 2027 estimate in some sources. hero_image null." }
+      ],
+      "takes": [
+        { "source": "KR Asia — 'Moonshot AI targets USD 50 billion valuation ahead of Hong Kong IPO'", "url": "https://kr-asia.com/moonshot-ai-targets-usd-50-billion-valuation-ahead-of-hong-kong-ipo", "take": "Primary English-language coverage of the $50B target. Bloomberg-sourced. Notes the rapid valuation jump from $35B in mid-2026 and positions it as the first major Chinese AI lab to pursue a public listing." },
+        { "source": "FourWeekMBA — 'Moonshot AI Targets a $50 Billion Valuation Before Its Hong Kong IPO as Kimi K3 Drives ARR to $300 Million'", "url": "https://fourweekmba.com/ai-moonshot-ai-50-billion-valuation-hong-kong-ipo-kimi-k3/", "take": "Best source on the ARR trajectory: $300M by June 2026, up from $200M in April. Ties the valuation jump directly to Kimi K3 benchmark performance and domestic market share." },
+        { "source": "AI Weekly — 'Moonshot AI closes $3.5B round at $35B, eyes $50B pre-IPO'", "url": "https://aiweekly.co/alerts/moonshot-ai-closes-35b-round-at-35b-eyes-50b-pre-ipo", "take": "Documents the $3.5B round at $35B close and the $50B pre-IPO target as a planned step, not a completed round." },
+        { "source": "The Bamboo Works — 'Moonshot aims for meteoric valuation with a $3 billion Hong Kong IPO plan'", "url": "https://thebambooworks.com/moonshot-aims-for-meteoric-valuation-with-a-3-billion-hong-kong-ipo-plan/", "take": "Best source on the raise size ($3B target) and the Keling AI separate filing detail." }
       ]
     }
   ],
