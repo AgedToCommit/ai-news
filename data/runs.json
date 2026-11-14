@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-14T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-14T17:11:00Z",
+      "ended_at": "2026-11-14T18:00:00Z",
+      "wall_time_ms": 2940000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 13,
+      "items_input": 9,
+      "items_output": 3,
+      "items_added": 3,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-14-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Standard digest path. Am file (data/2026-11-14-am.json, 4 items — 0 Tier 1, 4 Tier 2) existed and was consulted for the promotion-exclusion rule. RSS/scrape sweeps skipped — primary lab domains (openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com) remain unreachable from this egress, same persistent pattern as every recent run. Relied on WebSearch for discovery (13 queries). Items added (all newly created, none in am file): (1) anthropic-claude-fable-5-2-mythos-5-2-release-nov9 (Tier 1, US) — Anthropic Nov 9 2026 release of Claude Fable 5.2 (GA on paid plans, API, cloud) and Claude Mythos 5.2 (restricted); first Fable price cut ($8/$40 per million tokens, ~20% below 5.1), up to 30% faster, Artificial Analysis Intelligence Index v5 #1 at 65; Claude Code v2.1.321 Nov 10 made Fable 5.2 CLI default. Multiple sources: Constellation Research, 9to5Mac, TestingCatalog, SQ Magazine, Cryptobriefing, Gadgetscout, labmemo.com. (2) baidu-ernie-5-5-flash-preview-open-source-nov11 (Tier 1, Asia) — Baidu Nov 11 2026 release of ERNIE 5.5 Flash Preview on Qianfan, post-trained on ERNIE 5.5 Flash Base (released Nov 5, open-weights 280B total / 14B active MoE, 33.5T-token pretraining). Open-source weights for Preview promised before Nov 25. Custom license with geographic + revenue-based commercial-use restrictions. Multiple sources: LetsDataScience, Phemex, Rootdata, AIBase, Tech-Insider, BrainDetox. (3) anthropic-ipo-roadshow-nov13-amodei-dimon-livestream (Tier 2, US) — Final-week roadshow framing with Nov 13 Amodei/Dimon livestream as closing retail-outreach event; Nov 18 pricing / Nov 19 trading as ticker 'ANT'. Deliberately distinct framing from the am-section S-1/A item: foregrounds pricing-week outcome rather than filing detail. Dropped/not added: Kimi K3.1 Pro (Oct 23 — too far before last_run_ended_at 2026-11-14T12:28:00Z); DeepSeek enhanced coding agent Nov 1 (single-source, unverified); AMD Helios MI450 / Anthropic $5B deal (July 22 — too old); Gemini 4 Carbon (conflicting sourcing, Gemini 4 Argon is the confirmed model, Carbon unverified); EU AI Act Nov 2 transition deadline (regulation item with low urgency, no fresh news hook)."
+    },
+    {
       "run_id": "2026-11-14T12:28:00Z-refresh",
       "phase": "refresh",
       "status": "success",
