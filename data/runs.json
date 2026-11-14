@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-14T12:28:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-14T12:00:00Z",
+      "ended_at": "2026-11-14T12:28:00Z",
+      "wall_time_ms": 1680000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 30000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 2,
+      "items_kept": 2,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-14-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Am file (enrichment output) existed. RSS/scrape sweeps skipped (primary lab domains remain unreachable from this egress — same persistent pattern). Relied on WebSearch for discovery (10 queries). Items input from refresh sweep: 8 candidates evaluated. Items added: 2. (1) anthropic-claude-meetings-google-meet-beta-nov10 (Tier 2, US) — Anthropic Nov 10 2026 launch of Claude Meetings beta on Google Meet (Team+Enterprise), with concurrent launches of Claude Whiteboards beta, Claude Sheets beta, and Claude Data GA. Multiple sources confirmed (Axios, TechCrunch, BetaNews, Neowin, Dataconomy). Item was missed by prior digest and enrichment sweeps due to unreachable primary lab domains; captured here on refresh. (2) moonshot-ai-kimi-hk-ipo-50b-valuation (Tier 2, Asia) — Moonshot AI (Kimi) confidential HK Stock Exchange IPO filing at ~$50B indicative pre-IPO valuation; target raise $3B-$5B; Kimi K3 driving $300M ARR (Jun 2026). First major Chinese frontier-AI lab to pursue public listing. KR Asia (Bloomberg-sourced), FourWeekMBA, AI Weekly, The Bamboo Works confirm. Keling AI also filed separately. No confirmed listing date; Q1 2027 estimate. Dropped/not added: ChatGPT Wallet (not launched — only found in app code per RuntimeWire; no official announcement); Fed fall 2026 stability report AI risk stats (no November 2026 report confirmed, most recent was Spring 2026); OpenAI robotics team disbanded (Nov 2026 claim unverified — that event was in 2020/2021); Google Gemini 4 Hydrogen (only one aggregator mention, not confirmable)."
+    },
+    {
       "run_id": "2026-11-14T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
