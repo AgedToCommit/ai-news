@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-15T18:30:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-15T18:00:00Z",
+      "ended_at": "2026-11-15T18:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 23,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 1,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-15-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Quiet-Saturday digest. Today's am file existed (6 items, written across enrichment + refresh runs). Apply promotion rule — excluded all 6 am items from pm by default; no am item had materially deepened enough during the ~6-hour afternoon window (12:20–18:00 UTC Nov 15, Saturday) to warrant promotion. RSS/scrape sweeps skipped (primary lab domains — openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com — remain unreachable from this egress; same persistent pattern as every recent run). Relied on WebSearch for discovery (~20 queries). Searches covered: broad Nov 14-15 AI news sweeps; Anthropic IPO weekend content (retail allocation + post-livestream recap — no material deepening beyond am content); OpenAI/Google/DeepMind/Meta/Mistral/xAI Nov 14-15 release check (none confirmed); Gemini 4 Hydrogen leak verification (unconfirmed — Russian source + blog chatter only, Google has not confirmed codename); NVIDIA GR00T 2 Nov 2026 release check (research page live, paper/code to come December — thin single-aggregator sourcing, skipped); Edge0-145B/120B Nov 12 verification (unverified — no primary source, only one aggregator mention, skipped); PyTorch 2.15 Oct 28 release (CONFIRMED multi-source — added); vLLM/SGLang Nov release check (no November release confirmed); Hugging Face Nov 13 model release check (no confirmed release found); OpenAI Sora Nov 13-14 check (not a Sora release; original Sora 2 was Sept 2025, shut down Apr 2026); Anthropic Pentagon lawsuit post-Aug-2026 update check (no new weekend ruling). Final pm snapshot: 1 Tier 2 item (pytorch-2-15-release-nccl-rewrite-flight-recorder). This is the PyTorch 2.15 Oct 28 2026 release — rewritten NCCL backend as default with legacy fallback, flight recorder dumps on hangs, new torch.distributed.transport one-sided API with NIXL backend + CUDA-graph-capturable transfers; CUDA 12.6 wheels dropped (Maxwell/Pascal/Volta support gone); Python 3.10 wheels dropped; checkpoints saved by 2.15 incompatible with 2.14. Primary Nov 7 coverage: DevClass 'PyTorch 2.15 tackles the one bad GPU problem'. This release was systematically missed by five prior runs (Nov 13 pm digest, Nov 14 am refresh, Nov 14 pm digest, Nov 15 am enrichment, Nov 15 am refresh). Rationale for catching it in Nov 15 pm digest despite being 18 days old: quiet-Saturday afternoon left no fresh items to anchor the digest; PyTorch 2.15 is a major developer-tooling release genuinely relevant to the reader profile; multiple post-release coverage pieces have now landed (DevClass Nov 7, AlphaSignal, FuturumGroup, Welcome.ai), giving enough independent sourcing to avoid relying on the primary release blog alone. Unreachable primary domains (consistent across run): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com, simonwillison.net, dev.to, llmgateway.io, thursdai.news, releases.sh."
+    },
+    {
       "run_id": "2026-11-15T12:20:00Z-refresh",
       "phase": "refresh",
       "status": "success",
