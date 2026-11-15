@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-15-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-15",
-  "generated_at": "2026-11-15T07:30:00Z",
-  "generated_at_local": "2026-11-15T02:30:00-05:00",
+  "generated_at": "2026-11-15T12:20:00Z",
+  "generated_at_local": "2026-11-15T07:20:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-15T07:10:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-11-15T07:10:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-11-15T12:00:00Z", "duration_ms": 1200000 }
   ],
-  "tier_counts": { "1": 2, "2": 2, "3": 1 },
+  "tier_counts": { "1": 2, "2": 3, "3": 1 },
   "items": [
     {
       "id": "anthropic-claude-fable-5-2-mythos-5-2-release-nov9",
@@ -170,6 +171,37 @@
         { "source": "Neowin — 'OpenAI launches ChatGPT Wallet, allowing AI agents to make purchases on your behalf'", "url": "https://www.neowin.net/news/openai-launches-chatgpt-wallet-allowing-ai-agents-to-make-purchases-on-your-behalf/", "take": "Confirms launch and documents the per-transaction approval requirement." },
         { "source": "Yahoo Tech — 'OpenAI Launches ChatGPT Wallet. AI Agents Can Now Shop And Make Purchases For Users'", "url": "https://tech.yahoo.com/ai/chatgpt/articles/openai-launches-chatgpt-wallet-ai-164615852.html", "take": "Confirms tokenized-payments architecture and the merchant-blocking footnote." },
         { "source": "timelinedigi — 'OpenAI Launches ChatGPT Wallet: AI Agents That Pay at Checkout'", "url": "https://timelinedigi.com/news/chatgpt-wallet-ai-agents-pay-at-checkout-what-it-means-for-sellers", "take": "Retail-industry framing: sellers' Commerce Partner Playbook response options and the agent-commerce-wars framing." }
+      ]
+    },
+    {
+      "id": "nvidia-jensen-huang-ceo-departure-nov12",
+      "tier": 2,
+      "title": "Nvidia CEO Jensen Huang resigns — Colette Kress named interim CEO, three House committees request December 1 testimony; shares fell on the news",
+      "summary": "On November 12, 2026, Nvidia announced that Jensen Huang resigned as president, CEO, and board member, effective immediately. Huang had led Nvidia since co-founding it in 1993 and personally drove the company's pivot from gaming chips to the dominant AI-accelerator supplier in the world. Nvidia named EVP and CFO Colette Kress as interim CEO and Harvey C. Jones as the company's first Chair of the Board. Nvidia's official announcement did not give a reason for the resignation; multiple outlets reported it followed a personal scandal, with CBS News citing an affair with a woman suspected of espionage — Nvidia has not confirmed that characterization. Three House committees have asked Huang to appear for a closed-door interview on December 1; he faces a congressional subpoena if he declines. Nvidia shares fell on the news. TechCrunch reported that investors and founders expect the departure to change Nvidia's approach to startup partnerships, as Huang was personally central to steering the company's AI-ecosystem investments and relationships.",
+      "link": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html",
+      "why_it_matters": "Nvidia is the company that physically builds the infrastructure every frontier AI lab runs on — Blackwell GPU clusters underpin the multi-year compute commitments Anthropic, OpenAI, Google, and Meta all made in 2025-2026. Jensen Huang did not just execute that strategy; he personally negotiated the largest deals, chose which labs got early access to new silicon, and was the face of Nvidia's AI pivot for over a decade. Three threads worth watching. First, infrastructure continuity. Colette Kress is a highly credentialed CFO with 12 years at Nvidia, but not a product or technical leader. The key operational question for every frontier AI lab is whether the Blackwell Ultra (H300) and Rubin (R100) roadmap stays on schedule — those transitions directly affect the speed at which labs can expand compute. No roadmap changes have been announced, and Nvidia's core engineering org is intact; this is a leadership-transition risk, not a capability risk, at least for now. Second, Anthropic IPO timing. Huang resigned three trading days before Anthropic's shares are expected to begin trading on November 19. The $895 billion in forward compute commitments Anthropic disclosed in its S-1/A are largely Nvidia-infrastructure commitments. Any indication that Nvidia's pricing or roadmap terms might be renegotiated under new management would be directly relevant to Anthropic's cost structure at IPO — so far the ~4% share drop does not signal systemic concern from the market. Third, the AI ecosystem support structure. TechCrunch's reporting is the most practically useful angle: Huang was an unusually active CEO in terms of personal startup-relationship stewardship. Startups that had informal Nvidia backing relationships should expect those to formalize or cool over the next two quarters. The congressional angle adds an X-factor: a December 1 closed-door interview could produce disclosures about Nvidia's practices that have market or regulatory consequences independent of whoever is running the company. Worth monitoring, not cause for alarm.",
+      "why_it_matters_brief": "Nvidia shipped no roadmap change with the CEO news — Blackwell/Rubin timeline is intact for now — but Huang personally stewarded the lab partnerships that every frontier AI company relies on, and that changes immediately.",
+      "source": {
+        "name": "CNBC (primary — live updates on the Nov 12 resignation); CBS News (primary — resignation announcement, espionage-scandal framing); Al Jazeera ('Nvidia did not give a reason'; confirmed Huang admitted personal infidelity); CNN (congressional-subpoena angle, three House committees); TechCrunch ('Jensen Huang's departure blasts big hole in AI startup funding' — VC and founder reactions); Nvidia investor relations page (official CEO-transition announcement)",
+        "type": "scrape",
+        "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-15T12:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        { "at": "2026-11-15T12:20:00Z", "by": "refresh", "change": "created — Nvidia Nov 12 2026 CEO resignation (Jensen Huang, effective immediately). Colette Kress named interim CEO; Harvey C. Jones named first Board Chair. Official reason not given. Reports cite personal scandal. Congressional interview requested for December 1. Added outside the strict 5-hour refresh window (event is Nov 12) because nvidia.com is consistently unreachable from this egress, which prevented all prior runs from catching the story via direct scraping or targeted search; the enrichment run Nov 15T07:30 also did not search for it. Story has ongoing Nov 15 relevance (congressional subpoena, market impact). hero_image null." }
+      ],
+      "takes": [
+        { "source": "CNBC — 'Nvidia CEO Jensen Huang resigns: Live updates'", "url": "https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html", "take": "Primary running coverage of the Nov 12 resignation. Confirms the effective-immediately framing and names Colette Kress as interim CEO." },
+        { "source": "CBS News — 'Nvidia CEO Jensen Huang resigns in wake of affair with woman suspected of spying for China'", "url": "https://www.cbsnews.com/news/nvidia-ceo-jensen-huang-resigns/", "take": "Source for the personal-scandal characterization; Nvidia's official announcement does not confirm this framing." },
+        { "source": "Al Jazeera — 'Why did Nvidia CEO Jensen Huang resign, and who is Colette Kress?'", "url": "https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress", "take": "Notes that Nvidia did not give a public reason. Confirmed Huang admitted personal infidelity and apologised. Best factual summary of the leadership transition." },
+        { "source": "CNN — 'Jensen Huang summoned to testify before Congress after resigning as Nvidia CEO'", "url": "https://www.cnn.com/2026/11/11/business/live-news/nvidia-jensen-huang-investigation-fallout", "take": "Source for the three-House-committee request for December 1 closed-door testimony and potential subpoena." },
+        { "source": "TechCrunch — 'Jensen Huang's departure blasts big hole in AI startup funding, VCs and founders say'", "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/", "take": "Most practically useful angle: documents how Huang personally stewarded Nvidia's startup-ecosystem relationships and what changes immediately." }
       ]
     }
   ],

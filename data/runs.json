@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-15T12:20:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-15T12:00:00Z",
+      "ended_at": "2026-11-15T12:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 20000,
+        "curation": 5000,
+        "output_write": 3000
+      },
+      "fetches_made": 12,
+      "items_input": 1,
+      "items_output": 6,
+      "items_added": 1,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-15-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Standard refresh path. Today's am file existed (5 items, written by enrichment). 5-hour sweep (07:30–12:00 UTC Nov 15, Saturday) returned no new items — quiet Asia/Europe overnight period. Extended search to identify items missed by prior runs due to systematic egress restriction on nvidia.com and other primary lab domains. Added 1 item outside the strict 5-hour window: nvidia-jensen-huang-ceo-departure-nov12 (Tier 2). This story (Nov 12 2026, Jensen Huang resignation as Nvidia president/CEO/board member; Colette Kress named interim CEO; congressional testimony request by three House committees for Dec 1) was systematically missed by all four prior runs (Nov 13 pm digest, Nov 14 am refresh, Nov 14 pm digest, Nov 15 enrichment) because nvidia.com is unreachable from this egress, and the story did not surface through non-Nvidia search queries targeting AI model/tool releases. Sources: CNBC, CBS News, Al Jazeera, CNN, TechCrunch. Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com."
+    },
+    {
       "run_id": "2026-11-15T07:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
