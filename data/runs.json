@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-15T07:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-15T07:10:00Z",
+      "ended_at": "2026-11-15T07:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 10000,
+        "output_write": 4000
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 5,
+      "items_added": 2,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-15-am",
+      "error": null,
+      "partial": false,
+      "notes": "Standard enrichment path. Primary input: data/2026-11-14-pm.json (3 items). RSS/scrape sweeps skipped (primary lab domains — openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com — remain unreachable from this egress; same persistent pattern as every recent run). Relied on WebSearch for enrichment (6 queries) plus 2 late-breaking verification sweeps. Enrichment decisions: KEEP+ENRICH 3 of 3: (a) anthropic-claude-fable-5-2-mythos-5-2-release-nov9 — substantive enrichment with post-launch independent-benchmark data (Vals AI #1 of 36 at 71.31% with second-place 70.85%; Artificial Analysis Intelligence Index v5 refined to 64.6 vs Gemini 4 Carbon 60.0; Anthropic FrontierCode 2.0 49.1% xhigh vs Opus 5.5 45.5%; Gemini 4 Carbon still leads AutomationBench by ~2.5 pts), Vals weak-spot breakdown (HLAB-Vals-1 15.00% tied 29/37; Tax Agent Bench 32.09% 27/84; Legal Research Bench 46.15% 19/93), Ethan Mollick 'Jagged AGI' essay (28-agent test, 87,500-word rulebook, world production 211→2), and developer-reaction split (architectural/open-ended jump vs ordinary-coding 2.4x cost for little difference). Updated summary, why_it_matters, brief. (b) baidu-ernie-5-5-flash-preview-open-source-nov11 — moderate enrichment: added English-vs-Chinese-announcement license-wording discrepancy (English says Apache 2.0, Chinese says only 'before Nov 25' with no license named — unresolved), Base weights on HF in FP8/BF16, confirmation that Preview weights still unpublished as of Nov 14. Reframed brief to foreground the Apache-2.0-vs-custom-license question. Updated summary, why_it_matters, brief. (c) anthropic-ipo-roadshow-nov13-amodei-dimon-livestream — substantive enrichment with Nov 13 livestream content (Amodei 'deepest business dilemma' compute quote; Dimon citing ~$900B forward commitments ~matching S-1/A $895B; Dimon on AI-capability commoditization; Amodei 'brilliant jerks' culture quote; Yahoo Finance carriage from ~17:03 UTC) plus Nov 12-14 market signals (Bloomberg oversubscription refined from 'multiple times' to 'about six times'; $26B private placement to seven firms including Alphabet/Nvidia/Microsoft/TSMC; bankers prioritizing existing backers; Forbes $1.3T vs BigGo $1.4T vs banker-discussion $1.5T+ valuation gap). Updated summary, why_it_matters, brief. DROP 0. Late-breaking pass: 2 items added (both Nov 13 releases missed by three prior digest/enrichment/refresh cycles). (1) llamacpp-1-0-stable-release-nov13 (Tier 2, Global) — llama.cpp Nov 13 v1.0.0 first stable release after 3.5 years. Semantic-versioning policy for public C API/ABI; removed 36 deprecated functions including llama_set_warmup; NextN speculative decoding API moved from llama-ext.h to main llama.h; FP8 KV cache halves VRAM at long context; server security fixes; new /v1/audio/speech endpoint for llama-server. Four sources: ai-tldr.dev, Medium / Data Science in Your Pocket, systemdesign.academy, freakyjolly.com. (2) openai-chatgpt-wallet-launch-nov13 (Tier 3, US) — OpenAI Nov 13 launch of ChatGPT Wallet for agent-side checkout. US ChatGPT Pro 18+, dots-conversation scoping, tokenized card payments via Amex/Mastercard/Visa, per-transaction biometric approval, no virtual-card support at launch, Commerce Partner Playbook published, explicit merchant-blocking footnote. Replaces September 2025 Instant Checkout feature. Four sources: Decrypt, Neowin, Yahoo Tech, timelinedigi.com. Rationale for adding both despite 12h-window spec: Nov 13 items were explicitly predicted-not-shipped by the Nov 13 pm digest ('ChatGPT Wallet (not launched — only found in app code per RuntimeWire; no official announcement)') and were missed by all three subsequent runs, so the enrichment sweep is the right phase to capture them. Searches covered: Fable 5.2 post-launch benchmarks, ERNIE 5.5 Flash Preview weights-watch, Anthropic IPO livestream recap, general Nov 14 AI news sweep, OpenAI/Google/DeepMind/Meta/Mistral/xAI Nov 14 release check, Gemini 4 Hydrogen Nov 13 verification (unconfirmed — leak chatter only, no AI Studio listing per Nov 8 source), Thinking Machines Inkling 2 Small verification (open weights were Nov 12 not Nov 14 — too old), llama.cpp 1.0 verification, ChatGPT Wallet verification, ElevenAI verification (Nov 11 — too old). Unreachable primary domains (consistent): openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com. Final am file: 5 items (2/2/1 tier split)."
+    },
+    {
       "run_id": "2026-11-14T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
