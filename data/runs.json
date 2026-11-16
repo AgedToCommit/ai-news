@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-16T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-16T06:15:00Z",
+      "ended_at": "2026-11-16T06:30:00Z",
+      "wall_time_ms": 900000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 9,
+      "items_input": 2,
+      "items_output": 2,
+      "items_added": 1,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-16-am",
+      "error": null,
+      "partial": false,
+      "notes": "Sub-task 1: enriched the single item from yesterday's pm (pytorch-2-15-release-nccl-rewrite-flight-recorder). Added three independently-sourced post-release details: (a) the new NCCL backend's design mechanism — one communicator per process group during initialization vs the legacy design's dozens-of-communicators-per-process-group (The Register, DevClass); (b) release scale — 3,117 commits from 583 contributors since 2.14 (dev-discuss GA post); (c) vendor-reported benchmark — 1.32-1.34x MoE decode throughput on Apple M3 Ultra from PyTorch release materials via AlphaSignal (no independent third-party benchmark surfaced). Added positive reception signal — no community bug report against the new NCCL backend has surfaced in searches of pytorch/pytorch issue tracker or discuss.pytorch.org three weeks after release. Noted the Nov 5 Q&A webinar (already happened). Reframed brief to foreground the quiet-reception data point rather than the release headline. Sub-task 2: Sunday-to-Monday overnight window (18:30 UTC Nov 15 to 06:30 UTC Nov 16) returned nothing in the strict 12-hour late-breaking window. Added 1 late-breaking catch-up outside the strict window: alphagenome-2-deepmind-release-nov11 (Tier 2). This Nov 11 DeepMind release of AlphaGenome 2 (conditional per-cell-type DNA-variant-effect prediction model, 107M single-cell training profiles across 68 tissues, adds DNA methylation readout, 30% vs 16% causal-variant recall on TenK10K immune data, non-commercial API live + commercial private preview, Antigravity Skills integration) was systematically missed by all prior runs over the last 5 days (Nov 11 pm digest, Nov 12-14 am/pm cycles, Nov 15 enrichment + refresh, Nov 15 pm digest) because queries targeted model-release and developer-tooling venues rather than science-AI venues. Unreachable primary domains (consistent across runs): openai.com, anthropic.com, ai.meta.com, mistral.ai, nvidia.com. deepmind.google was not fetched directly but secondary coverage was abundant (AI Weekly, AlphaSignal, MarkTechPost, ai-tldr.dev, labmemo, Phemex, magica, SiliconANGLE)."
+    },
+    {
       "run_id": "2026-11-15T18:30:00Z-digest",
       "phase": "digest",
       "status": "success",
