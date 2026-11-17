@@ -2,17 +2,22 @@
   "snapshot_id": "2026-11-17-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-17",
-  "generated_at": "2026-11-17T07:00:00Z",
-  "generated_at_local": "2026-11-17T02:00:00-05:00",
+  "generated_at": "2026-11-17T12:00:00Z",
+  "generated_at_local": "2026-11-17T07:00:00-05:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-11-17T07:00:00Z",
       "duration_ms": 3600000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-11-17T12:00:00Z",
+      "duration_ms": 300000
     }
   ],
   "tier_counts": {
-    "1": 3,
+    "1": 4,
     "2": 1,
     "3": 0
   },
@@ -269,6 +274,56 @@
           "source": "letsdatascience — 'Google and Mercor launch Physical-Engineering's Last Exam benchmark for agents'",
           "url": "https://letsdatascience.com/news/google-and-mercor-launch-physical-engineerings-last-exam-ben-ba48f755",
           "take": "Developer-audience framing. Source for the four-discipline task breakdown and the containerized-environment detail."
+        }
+      ]
+    },
+    {
+      "id": "thinking-machines-inkling-2-small-open-weights",
+      "tier": 1,
+      "title": "Thinking Machines confirms Apache 2.0 weights for Inkling 2 Small — 594B MoE with 17B active params, 1M context, image input, and an Artificial Analysis Intelligence Index score of 31; weights available on Hugging Face since November 12",
+      "summary": "Thinking Machines Lab, the AI company founded by former OpenAI CTO Mira Murati, released the full weights for Inkling 2 Small on Hugging Face on November 12, 2026, one week after the model's closed-access launch on the lab's Tinker platform on November 5. Inkling 2 Small is a 594-billion-parameter mixture-of-experts model with 17 billion active parameters per forward pass, multimodal image input, and a one-million-token context window. The weights are available under Apache 2.0 license (with a separate acceptable-use policy that also applies). The download is approximately 394–532 GB across 33 files, with both a base FP16 and an MXFP8 quantized version on Hugging Face. On Artificial Analysis's Intelligence Index, Inkling 2 Small scores 31 — up from 13 for the original Inkling Small — placing it in the mid-tier range of publicly benchmarked open-weight models. Additional reported scores: AutomationBench-AA 46%, FrontierCode 2.0 25%, HLE-Diamond 29%, hallucination rate 27% (down from 61% for the original). Thinking Machines positioned Inkling 2 Small as a step-up from its first open-weight Inkling Small release (the original Inkling, a 975B MoE, was released in July 2026). The 594B total / 17B active architecture is lighter in active compute than its predecessor. Thinking Machines has not announced a full-weight release for the flagship Inkling 2 model.",
+      "link": "https://alphasignal.ai/news/thinking-machines-opens-inkling-2-small-s-594b-weights-to-developers/",
+      "why_it_matters": "This is the confirmation that the Nov 16 digest was waiting on before including this item — the Thinking Machines weights were 'planned but unconfirmed' at the time, and now they're on Hugging Face. Three things to pull out. First, the lab context. Thinking Machines is Mira Murati's company, started in early 2026 after she left OpenAI. The original Inkling (975B, July 2026) was the first model; Inkling Small was released in late July at 975B total / 41B active open-weight; Inkling 2 Small is the third major release and the second one with open weights. For anyone tracking where former frontier-lab talent is building, Thinking Machines is now a confirmed open-weight lab, which means usable checkpoints, not just API access. Second, the benchmark positioning. 31 on the Artificial Analysis Intelligence Index puts Inkling 2 Small somewhere in the same tier as Qwen3-72B and the previous-generation frontier models. The hallucination rate dropping from 61% to 27% is a larger practical improvement than the benchmark headline — a model that hallucinates 27% of the time is in the range of usable for many tasks, whereas 61% was not. FrontierCode 2.0 at 25% is not competitive with the frontier (Claude Opus 5.5 is in the 65–70% range), so Inkling 2 Small is not a coding workhorse, but it is competitive for general-purpose agentic and reasoning tasks in the mid-tier open-weight bracket. Third, the practical angle. 394–532 GB is a large download — this is a consumer NAS / multi-GPU setup, not a single-consumer-GPU model. The MXFP8 quantized variant is the more realistic path for local inference on a single high-end GPU (like an RTX 5090 or an A100). For Gabe's Python stack: if the specific use case is running a capable multimodal local model for coding or document work, Inkling 2 Small is now a real option to benchmark, though setup cost is higher than something like a Qwen3.8-72B. The more immediately practical question is whether it shows up on OpenRouter or Groq in the next week — if it does, API access at a reasonable price point will make it easy to test without the download.",
+      "why_it_matters_brief": "Mira Murati's Thinking Machines confirms Inkling 2 Small weights are live on Hugging Face under Apache 2.0 — 594B MoE / 17B active, hallucination rate cut from 61% to 27%, practical mid-tier open-weight option once it lands on OpenRouter.",
+      "source": {
+        "name": "AlphaSignal ('Thinking Machines Opens Inkling 2 Small's 594B Weights to Developers'); letsdatascience ('Thinking Machines Lab releases Inkling 2 Small, a 594B MoE model'); casrai.org ('thinking machines inkling 2 small open weights 2026'); Hermes AI (benchmark details — Artificial Analysis Intelligence Index 31, AutomationBench-AA 46%, FrontierCode 2.0 25%, HLE-Diamond 29%, hallucination 27%); The Decoder ('thinking machines bets on efficiency over size with its second model inkling small'); DEV Community ('Thinking Machines ships Inkling Small's open weights — all 532 gigabytes of them'); runtimewire ('Thinking Machines launches Inkling 2 Small on Tinker with closed weights')",
+        "type": "scrape",
+        "url": "https://alphasignal.ai/news/thinking-machines-opens-inkling-2-small-s-594b-weights-to-developers/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-17T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-17T12:00:00Z",
+          "by": "refresh",
+          "change": "created — Thinking Machines Inkling 2 Small weights confirmed released Nov 12 2026 on Hugging Face under Apache 2.0. Item was noted as 'planned but unconfirmed' in the Nov 16 digest run and not included. Weights now confirmed with benchmark data: 594B total / 17B active MoE, 1M context, image input, AAII score 31, AutomationBench-AA 46%, FrontierCode 2.0 25%, HLE-Diamond 29%, hallucination rate 27%. Download ~394–532 GB."
+        }
+      ],
+      "takes": [
+        {
+          "source": "AlphaSignal — 'Thinking Machines Opens Inkling 2 Small's 594B Weights to Developers'",
+          "url": "https://alphasignal.ai/news/thinking-machines-opens-inkling-2-small-s-594b-weights-to-developers/",
+          "take": "Primary aggregator coverage confirming Apache 2.0 release on Hugging Face on November 12."
+        },
+        {
+          "source": "letsdatascience — 'Thinking Machines Lab releases Inkling 2 Small, a 594B MoE model'",
+          "url": "https://letsdatascience.com/news/thinking-machines-lab-releases-inkling-2-small-a-594b-moe-mo-2b2a96ce",
+          "take": "Full model description and architecture details."
+        },
+        {
+          "source": "The Decoder — 'Thinking Machines bets on efficiency over size with its second model Inkling Small'",
+          "url": "https://the-decoder.com/thinking-machines-bets-on-efficiency-over-size-with-its-second-model-inkling-small/",
+          "take": "Efficiency-over-size framing for the 594B total / 17B active design."
+        },
+        {
+          "source": "DEV Community — 'Thinking Machines ships Inkling Small's open weights — all 532 gigabytes of them'",
+          "url": "https://dev.to/breachprotocol/thinking-machines-ships-inkling-smalls-open-weights-all-532-gigabytes-of-them-1lg3",
+          "take": "Developer-audience angle; source for the 532 GB download size and 33-file count."
         }
       ]
     }
