@@ -1,0 +1,277 @@
+{
+  "snapshot_id": "2026-11-17-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-11-17",
+  "generated_at": "2026-11-17T07:00:00Z",
+  "generated_at_local": "2026-11-17T02:00:00-05:00",
+  "phase_history": [
+    {
+      "phase": "enrichment",
+      "ran_at": "2026-11-17T07:00:00Z",
+      "duration_ms": 3600000
+    }
+  ],
+  "tier_counts": {
+    "1": 3,
+    "2": 1,
+    "3": 0
+  },
+  "items": [
+    {
+      "id": "alibaba-qwen4-max-release-nov16",
+      "tier": 1,
+      "title": "Alibaba launches Qwen4-Max — 2.4T MoE with 71B active params, 1M context and native vision; claims coding wins over Claude Opus 5.5 and Kimi K3.1 Pro on DeepSWE v1.1, but trails on Terminal-Bench 4.0 and Humanity's Last Exam; closed weights, $1.50/M input tokens",
+      "summary": "Alibaba unveiled Qwen4-Max on November 15–16, 2026 — the first model in its new Qwen4 architecture and the company's flagship successor to Qwen3 Max. It is a 2.4-trillion-parameter mixture-of-experts model with 71B active parameters per token, a one-million-token context window, and native vision. Weights are closed; Alibaba has said smaller open-weight siblings are expected soon. API list price is $1.50 per million input tokens (Alibaba's own figure; output pricing not consistently reported across sources). Alibaba's claimed benchmarks show Qwen4-Max scoring 75.7 on DeepSWE v1.1 — just ahead of Claude Opus 5.5 at 74.2 and ahead of Moonshot's Kimi K3.1 Pro — but behind Opus 5.5 on Terminal-Bench 4.0 (48.5 vs 59.6, with Kimi K3.1 Pro at 67.2) and on Humanity's Last Exam (51.7 vs 59.8). Independent evaluation from Vals AI places it at #11 of 38 models on the Vals Index with a composite score of 63.20%, roughly tied with Kimi K3.1 Pro at 62.52% (standard error 1.14 points) — a more modest position than the Alibaba-reported coding figures suggest in isolation. On Alibaba's internal Work360 agent-task benchmark, Qwen4-Max cut average task cost from $4.43 to $1.67, a 62% reduction, which is the number Alibaba is leading the pitch with.\n\nFollow-up reporting overnight (Nov 16–17) frames the Qwen4-Max release as a cloud-only preview tier — Alibaba's own preview window for the model reportedly runs until 2026-11-25 (UTC+8), after which the preview may be retired, reshaped, or replaced by a GA release. Independent benchmark pages (BenchLM, Vals AI) still show only Alibaba-reported scores plus the Vals Index composite; no third-party coding or terminal-tool benchmark has been posted yet. On open weights, secondary coverage of the Qwen4 lineup announced at the Apsara Conference (Amsterdam, Oct 29) lists four Qwen4 tiers — Max, Plus, Flash, and 27B — with the 27B as the likeliest open-weights release, consistent with Alibaba's Qwen3.8 cadence of shipping open weights roughly a week after the paid API launch. Alibaba has not confirmed dates for any of the smaller Qwen4 variants.",
+      "link": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
+      "why_it_matters": "This is the day's biggest Tier-1 model release and the first chapter of the Qwen4 architecture — Alibaba's answer to the gap that opened between the Qwen3 family and the frontier western labs over the summer. Three things worth pulling out. First, the shape of the claim matters more than the headline number. Alibaba is pointing specifically at DeepSWE v1.1 (software engineering), where Qwen4-Max narrowly beats Opus 5.5, and at per-task cost on its own Work360 benchmark, where the model cuts cost 62%. On Terminal-Bench 4.0 — a harder agent-reasoning test — Qwen4-Max trails both Opus 5.5 and Kimi K3.1 Pro by double digits, and Humanity's Last Exam shows the same pattern. The read is: Alibaba shipped a strong coding-and-cost-optimized model, not a universal frontier win. The marketing frame will be 'beats Claude on coding'; the actual benchmark surface is narrower than that. Second, Vals AI's independent composite at 63.20% puts Qwen4-Max roughly where Kimi K3.1 Pro already is — meaning China now has two models at that tier (soon three with Tencent Hy4). For anyone tracking the frontier, this is the quiet story of 2026's second half: the top-5 picture is no longer three US labs plus one Chinese lab, it is three US labs plus three Chinese labs clustered close together. Third, no open weights at launch is the one place Alibaba broke from its own Qwen3 playbook. Qwen3 Max shipped with open weights two weeks after its preview; Alibaba is holding Qwen4-Max closed and promising smaller variants later. For Gabe's Python stack this is practical: you'll likely be able to try Qwen4-Max via the Alibaba Cloud API or OpenRouter in the next week or two (watch for the Terminal-Bench scores in independent testing), but running a local variant at home means waiting on whichever smaller Qwen4 ships next. No model has been more useful to hobby developers over the last year than Qwen3's 32B and 72B open-weight variants, so the Qwen4 release cadence is worth watching.\n\nUpdate overnight: the cloud-only-preview framing is now the dominant read of the release. The practical implication is that Qwen4-Max should be treated as a time-limited evaluation window rather than a permanent new tier of the API — if you want to build on it, plan for a GA transition before the end of November, and for the smaller open-weight siblings (27B being the likeliest first release) to arrive on the Qwen3.8 precedent timetable.",
+      "why_it_matters_brief": "Overnight framing clarifies Qwen4-Max is a cloud-only preview tier running until Nov 25 — independent benchmarks still thin, and the 27B open-weight sibling is the practical waypoint.",
+      "source": {
+        "name": "MarkTechPost ('Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context'); Bloomberg ('Alibaba Unveils New Flagship AI Model in Riposte to US Rivals', Nov 16); Quartz ('Alibaba launches Qwen4-Max flagship AI model to rival U.S. leaders', Nov 16); Vals AI (independent Vals Index scoring, #11 of 38 at 63.20%); The Next Web ('Alibaba launches Qwen4-Max flagship AI model without open weights'); DataCamp ('Qwen4-Max: Features, Benchmarks, and Pricing'); AlphaSignal ('Alibaba's Qwen4-Max Slashes Agent Task Costs 62% With 1M-Token Context'); CryptoBriefing ('Alibaba unveils Qwen4-Max, claims it beats rival models on coding')",
+        "type": "scrape",
+        "url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-16T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-16T18:00:00Z",
+          "by": "digest",
+          "change": "created — Alibaba Qwen4-Max release dated Nov 15 (Vals AI) / Nov 16 (MarkTechPost headline, Bloomberg, Quartz). 2.4T MoE / 71B active / 1M context / native vision / closed weights. Alibaba-reported DeepSWE v1.1 75.7 vs Opus 5.5 74.2; Terminal-Bench 4.0 48.5 vs Opus 5.5 59.6 and Kimi K3.1 67.2; HLE 51.7 vs Opus 5.5 59.8. Vals Index independent score: #11 of 38 at 63.20%, roughly tied with Kimi K3.1 Pro at 62.52% (SE 1.14). API list price $1.50/M input. Work360 agent-task cost reduction 62% (from $4.43 to $1.67 per task). hero_image null."
+        },
+        {
+          "at": "2026-11-17T06:30:00Z",
+          "by": "enrichment",
+          "change": "enrichment — added the cloud-only-preview framing (end date reportedly Nov 25 UTC+8), the Qwen4 lineup from Apsara Oct 29 (Max/Plus/Flash/27B with 27B as likeliest open release), and a note that independent third-party benchmarks beyond Vals AI's composite have not yet surfaced. Updated why_it_matters_brief to reflect the preview framing."
+        }
+      ],
+      "takes": [
+        {
+          "source": "MarkTechPost — 'Alibaba Releases Qwen4-Max: 2.4T MoE, 71B Active, 1M Context'",
+          "url": "https://www.marktechpost.com/2026/11/16/alibaba-qwen4-max-release/",
+          "take": "Primary technical write-up. Source for the architecture details (2.4T total / 71B active) and the headline coding-benchmark framing."
+        },
+        {
+          "source": "Bloomberg — 'Alibaba Unveils New Flagship AI Model in Riposte to US Rivals'",
+          "url": "https://bloomberg.com/news/articles/2026-11-16/alibaba-unveils-new-flagship-ai-model-in-riposte-to-us-rivals",
+          "take": "Market framing. The 'riposte to US rivals' frame captures the strategic positioning Alibaba is pushing. Dated Nov 16."
+        },
+        {
+          "source": "Quartz — 'Alibaba launches Qwen4-Max flagship AI model to rival U.S. leaders'",
+          "url": "https://qz.com/alibaba-qwen4-max-flagship-ai-model-us-rivals-111626",
+          "take": "Coding-benchmark summary and mention that smaller open-weight versions are expected soon."
+        },
+        {
+          "source": "Vals AI — Qwen4-Max benchmarks and composite",
+          "url": "https://www.vals.ai/models/alibaba_qwen4-max",
+          "take": "Independent evaluation. Places Qwen4-Max at #11 of 38 on Vals Index with 63.20%, roughly tied with Kimi K3.1 Pro at 62.52%. The counterweight to Alibaba's own benchmark framing."
+        },
+        {
+          "source": "The Next Web — 'Alibaba launches Qwen4-Max flagship AI model without open weights'",
+          "url": "https://thenextweb.com/news/alibaba-launches-qwen4-max-flagship-ai-model-without-open-weights",
+          "take": "Clearest statement of the closed-weights policy break from Alibaba's Qwen3 playbook."
+        },
+        {
+          "source": "AlphaSignal — 'Alibaba's Qwen4-Max Slashes Agent Task Costs 62% With 1M-Token Context'",
+          "url": "https://alphasignal.ai/news/alibaba-s-qwen4-max-slashes-agent-task-costs-62-with-1m-token-context",
+          "take": "Source for the Work360 internal-benchmark cost-reduction figure ($4.43 → $1.67)."
+        },
+        {
+          "source": "CryptoBriefing — 'Alibaba unveils Qwen4-Max, claims it beats rival models on coding'",
+          "url": "https://cryptobriefing.com/alibaba-unveils-qwen4-max-ai-model/",
+          "take": "Good at calling out that independent rankings place Qwen4-Max behind Kimi on composite — a counterweight to Alibaba's cherry-picked coding claims."
+        }
+      ]
+    },
+    {
+      "id": "tencent-hy4-flash-release-nov16",
+      "tier": 1,
+      "title": "Tencent ships Hy4 flash — 224B MoE with 12B active params and 1M context, priced at $0.07 per million input tokens (roughly 18x cheaper than Claude Haiku 5.5); open-source release planned, no date",
+      "summary": "Tencent's Hunyuan team launched Hy4 flash on November 16, 2026, the cost-optimized sibling of the flagship Hy4 released earlier this year. It is a 224-billion-parameter mixture-of-experts model (including 64B 'Engram' parameters, Tencent's name for a persistent-memory parameter class) with 12B active parameters per forward pass, accepting multimodal input and a context of up to one million tokens (max 960K input, 64K output per request). API list prices are $0.07 per million input tokens, $0.281 per million output, and $0.003 per million cached input — roughly 18x cheaper than Claude Haiku 5.5 on input, and the lowest hosted price for any model Tencent has ever shipped. Tencent recommends Hy4 flash for everyday productivity work — research, slide decks, spreadsheets — and explicitly points users with heavier software-engineering workloads to the full Hy4 model. In an internal blind user test of 85 WorkBuddy users, Tencent reports Hy4 flash scored close to Claude Haiku 5.5 on user satisfaction while posting the lowest cost and shortest completion time of the models tested. These numbers are self-reported; no independent benchmark has surfaced yet. WorkBuddy users get free access through November 30, and third-party gateway TokenHub is offering API access at half the list price. Tencent has said it plans to open-source the weights but has given no date. TechNode's Nov 16 piece — framing the release as 'cutting AI task costs by 95% in internal tests' — is the primary English-language coverage.\n\nAs of early Nov 17 UTC, no independent benchmark or coverage of Hy4 flash specifically has surfaced outside Tencent's own numbers — Hugging Face shows only the earlier Hy4-preview weights (the 770B open-weight checkpoint from August), and no Hy4 flash weights or hosted third-party endpoint. The $0.07/M input price remains a Tencent-only listing; TokenHub's 50% discount is the only alternative access path currently documented. No independent third-party corroboration of the 'close to Claude Haiku 5.5 on user satisfaction' claim has appeared yet.",
+      "link": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/",
+      "why_it_matters": "The second Chinese Tier-1 model to launch on the same day as Qwen4-Max, which is itself the story — China is now shipping frontier and cost-optimized models in the same news cycle. Three practical reads. First, the cost structure is where the pattern-break is. Hy4 flash at $0.07 per million input tokens is cheaper than any other hosted model at this capability level by a wide margin: Haiku 5.5 is roughly $1.25 per million input, GPT-5 Nano (the OpenAI equivalent) is $0.20 per million, and the cheapest Gemini variant is around $0.30. Tencent is pricing well below the floor the major labs seem comfortable sitting at. If the Haiku-5.5-level performance claim survives independent testing (which it may not — vendor tests are vendor tests), this is the first time a Chinese model has been both as capable as and dramatically cheaper than the Western cost-tier equivalents. For Python developers doing high-volume classification, summarization, or extraction tasks in hobby projects, Hy4 flash is worth watching once it hits OpenRouter or similar aggregators — it would change the economics of 'throw an LLM at it' for anything at scale. Second, the architecture detail to notice is the 'Engram' parameter class. Tencent uses this label for a persistent-memory parameter type — 64B of the 224B total — that stores information across requests rather than being re-derived each call. This is the first time a major lab has shipped a persistent-memory parameter class as a first-class architectural feature in production. It is the direction research has been pointing (Hopfield networks, Titans, and various long-term-memory architectures) and the first time it is in a shipping product. Whether it actually behaves like persistent memory in practice, and what the privacy and isolation story is, will only become clear over the next few weeks of user reports. Third, the Haiku-5.5 comparison is explicit and worth engaging with critically. 85 users is a small sample, WorkBuddy is Tencent's own product (so the test is in-domain for the model's training), and 'user satisfaction' is a soft metric. Treat it as a directional claim about Tencent's confidence in the model, not as an established result. The real test will be third-party coding and reasoning benchmarks over the next two weeks, especially on tasks outside the productivity-work band Tencent is pointing the model at.\n\nUpdate overnight: the Hy4-flash story is still entirely Tencent-shaped — no external benchmark, no third-party review, no leaked weights. That changes the weighting on the pricing claim specifically: $0.07/M input tokens at Haiku-5.5-ish capability would be a cost-structure break, but 'Haiku-5.5-ish capability' is still only a vendor assertion at this point. The next few days of independent testing (particularly any coding benchmark on OpenRouter or Artificial Analysis) will decide whether this is a real price-performance point or a demo that doesn't survive contact with public benchmarks.",
+      "why_it_matters_brief": "Overnight: Hy4-flash coverage is still entirely Tencent-shaped — no third-party benchmark, no leaked weights, so the $0.07/M claim is directional, not verified.",
+      "source": {
+        "name": "TechNode (primary English-language coverage — 'Tencent launches Hy4 flash, cutting AI task costs by 95% in internal tests', Nov 16); AlphaSignal ('Tencent Drops Hy4 Flash at $0.07 per Million Tokens for High-Volume AI Work'); KuCoin news flash ('Tencent Hunyuan launches Hy4Flash with 224B parameters and 1M context'; '224B total parameters and 12B activated parameters'; 'Claude Haiku 5.5 Performance at 18x Lower Cost'); CASRAI ('Tencent launches lower-cost Hy4 flash AI model'); Mid-East.info ('Tencent Launches Hy4 flash to Power High-Speed, Cost-Efficient AI Deployment'); Tbreak ('Tencent Hy4 flash: cheaper AI model for office work'); AIjournal ('Tencent Unveils Hy4 flash: The Ultimate Cost-Effective Model for Everyday Work'); Superpowerdaily (release flash summary)",
+        "type": "scrape",
+        "url": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-16T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-16T18:00:00Z",
+          "by": "digest",
+          "change": "created — Tencent Hy4 flash release Nov 16 2026 from the Hunyuan team. 224B total MoE (including 64B Engram parameters — persistent-memory parameter class) / 12B active per forward pass / 1M context (960K input, 64K output max). Multimodal. API pricing: $0.07/M input, $0.281/M output, $0.003/M cached input (roughly 18x cheaper than Claude Haiku 5.5 on input). Tencent internal blind test (85 WorkBuddy users): close to Haiku 5.5 on user satisfaction, lowest cost and shortest completion time. WorkBuddy users free through Nov 30; TokenHub at 50% of list price. Open-source planned, no date. Primary coverage: TechNode Nov 16. hero_image null."
+        },
+        {
+          "at": "2026-11-17T06:30:00Z",
+          "by": "enrichment",
+          "change": "enrichment — added a status note that no independent benchmark or third-party review of Hy4 flash specifically has surfaced as of early Nov 17; Hugging Face still shows only Hy4-preview weights; TokenHub remains the only alternative access path. Updated why_it_matters and brief to reflect the still-vendor-only evidence base."
+        }
+      ],
+      "takes": [
+        {
+          "source": "TechNode — 'Tencent launches Hy4 flash, cutting AI task costs by 95% in internal tests'",
+          "url": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/",
+          "take": "Primary English-language release coverage. Clearest framing of the cost-reduction claim and the WorkBuddy internal-test framing."
+        },
+        {
+          "source": "AlphaSignal — 'Tencent Drops Hy4 Flash at $0.07 per Million Tokens for High-Volume AI Work'",
+          "url": "https://alphasignal.ai/news/tencent-drops-hy4-flash-at-0-07-per-million-tokens-for-high-volume-ai-work",
+          "take": "Headlines the pricing-floor framing. Good for the direct comparison to other cost-tier models."
+        },
+        {
+          "source": "KuCoin news flash — 'Hy4Flash with 224B parameters and 1M context'",
+          "url": "https://www.kucoin.com/news/flash/tencent-hunyuan-launches-hy4flash-with-224b-parameters-and-1m-context",
+          "take": "Architecture-detail flash. Confirms 224B total, 12B active, 1M context, multimodal input."
+        },
+        {
+          "source": "KuCoin news flash — 'Claude Haiku 5.5 Performance at 18x Lower Cost'",
+          "url": "https://www.kucoin.com/news/flash/tencent-launches-hy4-flash-ai-model-with-claude-haiku-5-5-performance-at-18x-lower-cost",
+          "take": "Source for the explicit 18x-lower-cost-than-Haiku-5.5 framing that Tencent is using in its marketing."
+        },
+        {
+          "source": "AIjournal — 'Tencent Unveils Hy4 flash: The Ultimate Cost-Effective Model for Everyday Work'",
+          "url": "https://aijourn.com/tencent-unveils-hy4-flash-the-ultimate-cost-effective-model-for-everyday-work/",
+          "take": "Positioning detail: Tencent explicitly points heavier software-engineering workloads to full Hy4, framing Hy4 flash as the productivity-work tier."
+        }
+      ]
+    },
+    {
+      "id": "openai-science-blog-launch-craig-standard-model",
+      "tier": 1,
+      "title": "OpenAI launches a science blog with a guest post from a UC Santa Barbara physicist crediting GPT-6 Astra with the detailed proof work on a candidate lattice definition of the Standard Model",
+      "summary": "OpenAI launched a new science blog on November 15, 2026. The inaugural guest post is from Nathaniel Craig, a UC Santa Barbara particle theorist and visiting OpenAI scientist, describing how GPT-6 Astra helped him develop a candidate nonperturbative lattice definition of the Standard Model. The underlying paper, 'A gauge-invariant measure for lattice chiral fermions,' was posted as a preprint on October 6, 2026. In Craig's framing, he came to Astra with a strategy for how the construction should work but had not been able to prove it covered every case needed; Astra 'took the lead in developing the detailed proof' from that strategy. The result is a candidate construction, not a finished solved proof — mathematical checks and realistic lattice simulations remain on the to-do list. The problem of defining the Standard Model nonperturbatively on a lattice has been open for several decades (sources vary between 25 and 50 years depending on which formulation is referenced). OpenAI has not published independent audits of the AI contribution; the claim that Astra led the proof work is Craig's own characterization and has not been verified by third-party review. Several outlets have run 'AI helps prove Standard Model' headlines that overstate the result — Craig's own language is more modest.\n\nAs of early Nov 17 UTC, no mathematical physicist has publicly audited or reproduced the construction described in Craig's preprint (arXiv 'A gauge-invariant measure for lattice chiral fermions', Oct 6 2026), and no independent evaluation of the AI-led portion of the proof has appeared in developer or physics coverage. The 48-hour coverage pattern is settling into two framings — careful write-ups that echo Craig's own 'candidate construction, hard work remaining' language, and less careful ones that still read as 'AI helped prove the Standard Model'. OpenAI has not published any additional posts on the science blog since the Craig guest piece.",
+      "link": "https://mlq.ai/news/openai-says-gpt-6-astra-led-the-proof-behind-a-candidate-lattice-definition-of-the-standard-model-as-it-launches-a-science-blog/",
+      "why_it_matters": "This is notable for two reasons that are separable from the physics. First, the format: OpenAI has launched a dedicated science blog, and the first post is a guest post from an outside physicist, not an internal communications piece. That is the same playbook DeepMind has used for AI-for-science for several years (AlphaFold papers in Nature, AlphaProof write-ups) and it is the first time OpenAI has used it. If the pattern continues — outside domain experts credited as first authors, OpenAI as the tool provider — it signals that OpenAI's science play is going to look a lot more like DeepMind's. For Gabe this is mostly worth noticing as a pattern shift: the AI-for-science race is no longer DeepMind-only, and the way these claims get presented is converging. Second, the content: the Nathaniel Craig claim is interesting but it's worth engaging with it skeptically. 'Candidate lattice definition of the Standard Model' is a real, important open problem — defining the Standard Model mathematically precisely so it can be simulated on a computer, without perturbative approximations. But 'candidate construction' is a specific status in mathematical physics that means 'here is an object we think works; checking whether it actually works is a separate (often harder) project.' Craig's own words in his preprint are careful: Astra helped him turn a strategy into a construction, and took the lead on the detailed technical proofs within that construction. The construction still needs to be checked by mathematical physicists and tested in actual lattice simulations before anyone will say the Standard Model has been defined on a lattice. The 'GPT helped prove the Standard Model' framing in some coverage is wrong. The 'AI helped produce a candidate construction that still needs verification' framing is right, and even in that modest frame, this is the first widely-cited case of a frontier LLM credited with leading the technical proof work in a mathematical-physics paper. Third — practical for Python developers thinking about AI-for-work patterns — the structure of the collaboration is the piece worth studying. Craig brought the strategy; Astra filled in the detailed proof steps. That is a different division of labor than 'LLM brainstorms, human writes' or 'human directs, LLM reviews.' It is 'human sets the research strategy, LLM executes the technical construction,' and it is the division of labor that competent researchers in mathematical fields are increasingly settling on with frontier models.\n\nUpdate overnight: the coverage split (careful vs overstated) is now the story's shape, and it will probably stay that way until a lattice-physics working group actually publishes a verification note on the construction — which, given the review cadence in that corner of mathematical physics, will likely be weeks or months, not days. The practical takeaway for AI-for-work patterns is unchanged: watch the division of labor Craig described (human sets strategy, LLM leads detailed proof construction) as a reference template, but treat the specific physics claim as unresolved.",
+      "why_it_matters_brief": "Overnight: no lattice-physics working group has audited the Craig construction yet, and coverage is settling into a split between careful 'candidate' framing and overstated 'AI proved it' framing.",
+      "source": {
+        "name": "mlq.ai (primary aggregator coverage — 'OpenAI says GPT-6 Astra led the proof behind a candidate lattice definition of the Standard Model, as it launches a science blog'); Digg ('GPT-6 Astra helped build a Standard Model lattice proposal, Craig says—not a finished solution'); DEV Community alifar ('GPT-6 Astra Helped Build a Candidate Lattice Definition of the Standard Model'); DEV Community rpgbyters ('GPT-6 Astra Helped Prove the Standard Model on a Lattice. Now Comes the Hard Part.'); daily.dev ('Astra helps physicist Nathaniel Craig on a lattice definition of the Standard Model'); zeniteq ('GPT-6 Astra's Role in a Candidate Standard Model Lattice'); superpowerdaily ('Physicist credits GPT-6 Astra with leading proof work on Standard Model proposal'); runtimewire ('GPT-6 Astra led proof for candidate lattice definition of the Standard Model'); AI Weekly ('OpenAI Says GPT-6 Astra Led Proof for Lattice Standard Model')",
+        "type": "scrape",
+        "url": "https://mlq.ai/news/openai-says-gpt-6-astra-led-the-proof-behind-a-candidate-lattice-definition-of-the-standard-model-as-it-launches-a-science-blog/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-16T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-16T18:00:00Z",
+          "by": "digest",
+          "change": "created — OpenAI science blog launched Nov 15 2026. Inaugural guest post: Nathaniel Craig (UC Santa Barbara particle theorist, visiting OpenAI scientist) credits GPT-6 Astra with the detailed proof work on a candidate lattice definition of the Standard Model. Underlying paper: 'A gauge-invariant measure for lattice chiral fermions', preprint posted Oct 6 2026. Caveats: candidate construction (not finished solved proof); no independent audit of AI contribution; mathematical checks and realistic simulations still on to-do list; several outlets overstated the result as 'AI helps prove Standard Model'. Craig's own characterization is more modest: he had the strategy, Astra took the lead on detailed proof development. hero_image null."
+        },
+        {
+          "at": "2026-11-17T06:30:00Z",
+          "by": "enrichment",
+          "change": "enrichment — added status that no mathematical physicist has publicly audited the construction as of early Nov 17, OpenAI has posted nothing further on the science blog, and coverage has settled into two framings (careful vs overstated). Updated why_it_matters and brief accordingly."
+        }
+      ],
+      "takes": [
+        {
+          "source": "mlq.ai — 'OpenAI says GPT-6 Astra led the proof behind a candidate lattice definition of the Standard Model, as it launches a science blog'",
+          "url": "https://mlq.ai/news/openai-says-gpt-6-astra-led-the-proof-behind-a-candidate-lattice-definition-of-the-standard-model-as-it-launches-a-science-blog/",
+          "take": "Primary summary coverage. Pairs the model-credit claim with the blog launch and cites OpenAI as the source of the credit framing."
+        },
+        {
+          "source": "Digg — 'GPT-6 Astra helped build a Standard Model lattice proposal, Craig says—not a finished solution'",
+          "url": "https://digg.com/ai/pr72emnn",
+          "take": "The clearest skeptical framing in general coverage. Explicit on the 'proposal not finished solution' distinction."
+        },
+        {
+          "source": "DEV Community (rpgbyters) — 'GPT-6 Astra Helped Prove the Standard Model on a Lattice. Now Comes the Hard Part.'",
+          "url": "https://dev.to/rpgbyters/gpt-6-astra-helped-prove-the-standard-model-on-a-lattice-now-comes-the-hard-part-1gh",
+          "take": "Developer-audience framing. Good for the point that mathematical checks and realistic lattice simulations are the remaining work."
+        },
+        {
+          "source": "daily.dev — 'Astra helps physicist Nathaniel Craig on a lattice definition of the Standard Model'",
+          "url": "https://daily.dev/posts/astra-helps-physicist-nathaniel-craig-on-a-lattice-definition-of-the-standard-model-4henmjkc4",
+          "take": "Source for Craig's direct-quote framing: 'took the lead in developing the detailed proof' from his strategy."
+        },
+        {
+          "source": "AI Weekly — 'OpenAI Says GPT-6 Astra Led Proof for Lattice Standard Model'",
+          "url": "https://aiweekly.co/alerts/openai-says-gpt-6-astra-led-proof-for-lattice-standard-model",
+          "take": "Short-form summary. Useful for confirming the Nov 15 science-blog launch date."
+        }
+      ]
+    },
+    {
+      "id": "google-mercor-physical-engineering-last-exam-ple",
+      "tier": 2,
+      "title": "Google and Mercor release Physical-Engineering's Last Exam — an 85-task long-horizon engineering agent benchmark; Claude Opus 5.5 leads at 48.3% on the hidden test set, 29 tasks and grading scripts open-sourced for public competition",
+      "summary": "Google Cloud AI Research and Mercor released Physical-Engineering's Last Exam (PLE) on November 3, 2026. It is a benchmark of 85 long-horizon engineering tasks across four disciplines (30 mechanical, 27 electrical, 18 civil, 10 structural). Each task runs in a containerized environment with real-world inputs — PDFs, spreadsheets, emails, 2D CAD drawings, 3D BIM models, and superseded revisions — designed to test whether agents can complete multi-hour end-to-end engineering work rather than isolated prompts. Google's own evaluation reports Claude Opus 5.5 (running inside Claude Code) reaches 48.3% on the hidden test set, followed by GPT-6 Astra at 45.8% and Gemini 4 Argon at 40.6%. The headline finding is a reliability gap, not an accuracy gap: the top agent's designs satisfied 91% of individual engineering constraints on average, but only 41% of design attempts cleared every single hard constraint. 29 of the 85 tasks, the grading scripts, and the evaluation container are open; the remaining 56 tasks form a hidden test set used for the open competition leaderboard. A companion paper on arXiv (2610.30537, dated Oct 21 2026) reports a mean score of 50.6% for the strongest agent configuration across the full 85-task set — this is a different number from the 48.3% hidden-test-set score reported on the leaderboard and is not directly comparable.\n\nFollow-up Mercor reporting through Nov 16–17 adds one additional framing: on the private 56-task test set, all 14 frontier models evaluated to date have scored below 50%, which Mercor cites as evidence that long-horizon engineering agents remain qualitatively below the single-attempt-usable threshold. That figure is consistent with the 48.3% top-score headline but adds the 'no model has cleared 50%' framing that didn't appear in launch-day coverage. Mercor also notes that leaderboard rankings can shift with each new frontier model release, so the live leaderboard at mercor.com/apex/partner-benchmarks/ple-bench-leaderboard/ is the authoritative current view.",
+      "link": "https://www.mercor.com/blog/introducing-physical-engineering-s-last-exam-ple-with-google-cloud-ai-research/",
+      "why_it_matters": "Three reasons this benchmark is worth noticing, even outside engineering. First, the reliability framing is the correct one for evaluating agents in 2026 and it is the first widely-covered benchmark to lead with it. Everyone building agent systems has learned the hard way that 'the agent gets 91% of individual steps right, but the compound failure rate on multi-step tasks is 59%' is the gap that actually matters, and that framing has been missing from public benchmarks. PLE puts it front and center. For Gabe or anyone building Python agents, the specific pattern — track per-constraint satisfaction *and* per-task completion rate, not just accuracy — is the one worth borrowing even if the engineering domain is irrelevant. Second, the hidden-test-set-plus-open-tasks structure is a response to the benchmark-contamination problem. Over the last two years, every open benchmark has eventually ended up in some pretraining corpus and model scores have crept upward in ways that stopped being meaningful. PLE gives developers 29 tasks they can test their own agents on locally, plus a hidden competition set that model creators can't train on. This is the structure every serious new benchmark is going to adopt from now on. Third, the lineup of top scores is interesting on its own terms. Claude Opus 5.5 at 48.3% and GPT-6 Astra at 45.8% are close; Gemini 4 Argon at 40.6% is a meaningful step back. The read is that on long-horizon tool-use tasks requiring real-world documents, the frontier is currently Opus and Astra, with Gemini still catching up on long-context tool integration. Also notable: no Chinese model made the public leaderboard, which suggests either that none of them were tested, or that they're not yet competitive on multi-hour tool-use tasks in English-language engineering contexts. For practical use: the open 29 tasks plus the Docker container make PLE one of the better agent-benchmarks to actually run yourself on a weekend, which is unusual — most benchmarks in this class require significant infrastructure effort.\n\nUpdate overnight: the 'no model has cleared 50% on the private set' framing is the sharper way to say what the PLE scores are actually showing. The read is unchanged — long-horizon engineering agents are still well below the reliability threshold that would make them useful for single-attempt production work in engineering domains — and the open-task-plus-hidden-set structure is still the right benchmark-design response to contamination concerns.",
+      "why_it_matters_brief": "Overnight framing adds the sharper headline — all 14 frontier models evaluated on PLE's private test set have scored below 50%, which Mercor cites as the single-attempt usability threshold.",
+      "source": {
+        "name": "Mercor blog (primary source — 'Introducing Physical-Engineering's Last Exam (PLE) with Google Cloud AI Research', Nov 3); Mercor PLE leaderboard page (hidden test set scores); fourweekmba ('Google's Engineering Exam: Claude Leads at 48.3%, Gemini 4th'); fourweekmba ('Google Test: Best AI Engineer Agent Hits 50.6% at $17 a Task'); AF.NET ('Google releases 85-task engineering benchmark PLE with Mercor'); letsdatascience ('Google and Mercor launch Physical-Engineering's Last Exam benchmark for agents'); ITBrief ('Google launches engineering benchmark for frontier AI'); artiverse.ca ('Google Turns Engineering Work Into a New Test for AI Agents'); undercodetesting (open competition framing); companion arXiv paper 2610.30537 (Oct 21 2026, cited for the 50.6% full-set figure, not directly fetched)",
+        "type": "scrape",
+        "url": "https://www.mercor.com/blog/introducing-physical-engineering-s-last-exam-ple-with-google-cloud-ai-research/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-16T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-16T18:00:00Z",
+          "by": "digest",
+          "change": "created — Google Cloud AI Research + Mercor released Physical-Engineering's Last Exam (PLE) Nov 3 2026. 85 long-horizon engineering tasks across 4 disciplines (30 mechanical, 27 electrical, 18 civil, 10 structural). Containerized evaluation with real-world inputs (PDFs, spreadsheets, 2D CAD, 3D BIM, superseded revisions). Hidden-test-set scores: Claude Opus 5.5 (in Claude Code) 48.3%, GPT-6 Astra 45.8%, Gemini 4 Argon 40.6%. Reliability finding: 91% of individual constraints met on average, 41% of attempts cleared every hard check. 29 tasks + grading scripts + container open; 56 tasks hidden. Companion arXiv paper 2610.30537 (Oct 21) reports 50.6% for strongest config on full set — different metric, not directly comparable. hero_image null. Caught in this pm digest as a late catch — benchmark released Nov 3 but has continued to gather coverage as more teams run their agents against it."
+        },
+        {
+          "at": "2026-11-17T06:30:00Z",
+          "by": "enrichment",
+          "change": "enrichment — added Mercor's 'all 14 frontier models scored below 50% on the private set' framing from Nov 16–17 follow-up coverage, and the note that the live leaderboard is the authoritative current view. Updated why_it_matters and brief to center the reliability-gap framing."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Mercor — 'Introducing Physical-Engineering's Last Exam (PLE) with Google Cloud AI Research'",
+          "url": "https://www.mercor.com/blog/introducing-physical-engineering-s-last-exam-ple-with-google-cloud-ai-research/",
+          "take": "Primary source. Benchmark description, methodology, task breakdown, and scoring framework."
+        },
+        {
+          "source": "Mercor PLE leaderboard",
+          "url": "https://www.mercor.com/apex/partner-benchmarks/ple-bench-leaderboard/",
+          "take": "Live leaderboard. Source for the hidden-test-set scores and continued updates as more models are evaluated."
+        },
+        {
+          "source": "fourweekmba — 'Google's Engineering Exam: Claude Leads at 48.3%, Gemini 4th'",
+          "url": "https://fourweekmba.com/ai-googles-engineering-exam-claude-leads-at-48-3-gemini-4th/",
+          "take": "Primary summary of the leaderboard-at-launch. Clearest statement of the model-by-model standings."
+        },
+        {
+          "source": "fourweekmba — 'Google Test: Best AI Engineer Agent Hits 50.6% at $17 a Task'",
+          "url": "https://fourweekmba.com/ai-google-test-best-ai-engineer-agent-hits-50-6-at-17-a-task/",
+          "take": "Source for the 50.6% full-set figure from the arXiv companion paper and the per-task cost framing ($17/task for the strongest agent configuration)."
+        },
+        {
+          "source": "ITBrief — 'Google launches engineering benchmark for frontier AI'",
+          "url": "https://itbrief.news/story/google-launches-engineering-benchmark-for-frontier-ai",
+          "take": "Industry framing. Positions PLE as the next step after Humanity's Last Exam in frontier-benchmark design."
+        },
+        {
+          "source": "letsdatascience — 'Google and Mercor launch Physical-Engineering's Last Exam benchmark for agents'",
+          "url": "https://letsdatascience.com/news/google-and-mercor-launch-physical-engineerings-last-exam-ben-ba48f755",
+          "take": "Developer-audience framing. Source for the four-discipline task breakdown and the containerized-environment detail."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
