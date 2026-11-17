@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-17T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-17T17:30:00Z",
+      "ended_at": "2026-11-17T18:00:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 46000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 20,
+      "items_input": 8,
+      "items_output": 4,
+      "items_added": 4,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-17-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Tuesday 1pm EDT digest, Nov 17 2026. Today's am file existed (5 items: Qwen4-Max, Hy4 flash, OpenAI science blog, Google/Mercor PLE, Thinking Machines Inkling 2 Small weights). Applied promotion rule: excluded all 5 am items from pm by default; no am item had materially deepened enough during the ~6-hour afternoon window (12:00–17:30 UTC Nov 17, Tuesday) to warrant promotion. Primary lab domains (openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, nvidia.com) remain unreachable from this egress — consistent pattern. aiweekly.co, theneuron.ai, and thursdai.news also unreachable this session. Relied entirely on WebSearch for discovery (~20 queries). Searches covered: broad Nov 16–17 AI news sweeps; OpenAI/Anthropic/Google/Meta/Mistral/xAI release checks; Hy4-flash independent benchmarks (none found beyond vendor numbers); Qwen4-Max third-party verification (BenchLM and Vals still coming-soon); Qwen4 27B open weights check (unverified); llama.cpp v1.0.0 (already in Nov 15 am); Simon Willison LLM 0.32 (August 2026, old); Cursor/Windsurf/Zed November releases (none confirmed); vLLM/SGLang/Ollama November releases (none confirmed); Veo/Sora/Runway November releases (none confirmed); AI startup funding Nov 17 (no new deals); Anthropic IPO Nov 16–17 update (no new material); Gemini Robotics 2.5 verification (Nov 10); OpenAI robotics team disbanding verification (Nov 13 Fortune); SlackBench benchmark (Nov 3 arXiv); DeepMind Cheminformatics Skills for Antigravity (Nov 3). Final pm snapshot: 4 items (1 Tier-1, 3 Tier-2). Theme pairing: OpenAI disbanding robotics team (Nov 13) vs Google DeepMind shipping Gemini Robotics 2.5 (Nov 10) — strategic contrast. Secondary pairing: SlackBench and DeepMind Cheminformatics Skills as agent-benchmark/scientific-agent Tier-2 pieces. (1) google-deepmind-gemini-robotics-2-5-nov10 (Tier 1, US) — Gemini Robotics 2.5 VLA model, 96% success on Apptronik Apollo 2 at Mercedes-Benz Kecskemét/Sindelfingen, ASIMOV-Jailbreak safety benchmark open-sourced. Systematically missed by Nov 10 pm → Nov 17 am runs. (2) openai-disbands-robotics-team-nov13 (Tier 2, US) — Fortune exclusive by Wen Shao Nov 13, OpenAI confirmed disbanding standalone robotics team, researchers fold into Research (Mark Chen) and Applied (Greg Brockman) orgs. Second dissolution in 6 years. Not in any prior snapshot. (3) slackbench-collaborative-agent-benchmark-nov3 (Tier 2, US) — SlackBench arXiv 2611.05512 posted Nov 3, NeurIPS 2026 poster. 140 queries, 4 task families, dataset on HuggingFace as HuanzhiMao/SlackBench. Agent-benchmark pair for am's PLE item. (4) deepmind-cheminformatics-antigravity-nov3 (Tier 2, US) — DeepMind blog Nov 3, Cheminformatics Skills for Antigravity built on RDKit + ChEMBL + PubChem. Crizotinib rigidification demo. Builds on open-source Science Skills repo (Apache 2.0). Items considered but dropped: Pushmeet Kohli 'phase transition' post Nov 8 (social post, no release); Cursor extension backdoor (Oct 29, outside window and confirmed in prior runs); llama.cpp v1.0.0 (already in Nov 15 am); Qwen4-Max benchmark updates (nothing new beyond Vals composite); Hy4 flash third-party reviews (none beyond Tencent-only); Gemini 4 Hydrogen open weights (hosted/closed, no open-weights release in this window); Shanghai AI Lab Sage followups (none); DeepSeek V5 OCR (no Nov release confirmed); Google AI chip news Nov 10 (secondary coverage thin)."
+    },
+    {
       "run_id": "2026-11-17T12:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
