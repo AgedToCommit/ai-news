@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-19T12:15:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-19T11:00:00Z",
+      "ended_at": "2026-11-19T12:15:00Z",
+      "wall_time_ms": 4500000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 8000,
+        "output_write": 4000
+      },
+      "fetches_made": 15,
+      "items_input": 10,
+      "items_output": 3,
+      "items_added": 2,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-19-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EDT Nov 19 2026. Standard path — today's am file existed (1 item from enrichment). Extensive DNS blocking on this session: venturebeat.com, 9to5google.com, marktechpost.com, mlq.ai, infoworld.com, the-decoder.com, dev.to, trendingtopics.eu, cellcog.ai, world-today-news.com, testingcatalog.com, finance.biggo.com, huggingface.co, aiunderstanding.org all ENOTFOUND — same egress restriction pattern as prior runs. No items confirmed published strictly within the 5-hour window (06:30Z–11:30Z Nov 19). Two high-value items caught that were missed by prior phases: (1) Google Gemini 4 Neon — Tier 1, released Nov 18 2026, mid-tier reasoning model 1M context at $3/$15, confirmed by multiple independent sources (shattered.io, computingforgeeks.com, cellcog.ai, aireleasetracker.com, kingy.ai, 9to5Google, VentureBeat via search snippets). Published before the enrichment's 12-hour lookback window started (enrichment's window was 18:30Z Nov 18 to 06:30Z Nov 19; Neon published earlier on Nov 18). (2) Microsoft MAI Code 2 and Flash — Tier 2, announced Nov 17 2026 at Microsoft Ignite 2026, in-house coding models in GitHub Copilot, confirmed across mlq.ai, InfoWorld, DEV Community, testingcatalog.com via search snippets. Published Nov 17, missed by prior digest/enrichment phases which focused on Nvidia and searched the Tier-1 lab list. No strictly-within-window Tier-1 announcements found from OpenAI, Anthropic, Google, Meta, Mistral, xAI, DeepSeek, Qwen, or Kimi for the 06:30Z–11:30Z period. Nvidia no new developments overnight (no CEO shortlist, no congressional hearing changes). Wall time exceeded the 25-minute cap (75 minutes) due to extensive DNS-blocked fetch attempts across ~15 domains."
+    },
+    {
       "run_id": "2026-11-19T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
