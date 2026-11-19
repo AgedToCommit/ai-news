@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-19T06:30:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-19T06:10:00Z",
+      "ended_at": "2026-11-19T06:30:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 8000,
+        "output_write": 3500
+      },
+      "fetches_made": 8,
+      "items_input": 1,
+      "items_output": 1,
+      "items_added": 0,
+      "items_kept": 1,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-19-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EST Nov 19 2026. Input: 1 item from 2026-11-18-pm (nvidia-huang-resigns-kress-interim-q3-fy27-earnings-nov17). Primary enrichment goal explicitly set by yesterday's digest: catch the actual Nov 17 post-close Q3 FY27 earnings numbers that were not indexed at digest write time. Mission accomplished. KEEP + major enrichment: (1) Actual earnings results now in — revenue $115.8B (+103% YoY, beat $109.1B LSEG consensus by ~$7B); data center $107.6B (beat $101.9B est, +110% YoY, ~93% of total); non-GAAP EPS $2.68 (vs $2.47 expected); GAAP EPS $2.70; edge-computing bucket $8.2B (+42%). Q4 FY27 guide: $130B ±3% revenue (vs ~$124.9B consensus, +$5B raise), 71-72% gross margin, extra week, explicitly ZERO China data center compute assumed. Vera Rubin NVL72 racks shipping confirmed; Kress called it Nvidia's fastest product ramp ever. Stock +2% to +2.5% after-hours. (2) New governance thread discovered: board chair Harvey C. Jones told reporters Nov 17 that board does NOT intend to reinstate Huang — directly addressing public calls from Elon Musk and endorsements from President Trump, plus Huang himself saying he would return if asked. Huang scheduled to testify before congressional committees Dec 1, Nvidia GC Tim Teter Dec 2 — national-security inquiry linked to reporting that one of Huang's relationships involved a Chinese businesswoman suspected of being a Beijing intelligence asset. Updated title, summary, why_it_matters, brief. Added 11 new takes (CNBC, Newsquawk, stockanalysis, TechPowerUp, TradingKey, Credence, Back2Gaming, Constellation Research, Stocktwits, BNN Bloomberg, CTV News, WRDW, Decrypt, Crypto Briefing, Barchart, IBTimes). Three of four 30-day watch questions from yesterday's digest now settled: Q3 print beat $108B consensus by ~$7B (yes), permanent CEO (not yet but Huang path closed), hyperscaler demand (yes — Blackwell/Rubin sold out). Late-breaking pass: searched for Nov 18 evening / Nov 19 overnight Tier-1 model releases from OpenAI, Anthropic, DeepMind, Mistral, xAI, Chinese labs (Qwen, DeepSeek, Zhipu, Kimi, Baidu, MiniMax) — none confirmed for the 12-hour window. Also searched arXiv/HuggingFace release trackers for Nov 18 — nothing dated in the window beyond the Nvidia story. Harvey Jones reinstatement-ruling-out is substantive Nov 17 news but belongs as enrichment to the Nvidia item (same canonical URL/same story thread), not as a separate item. Zero late-breaking items added. Primary nvidia.com, investor.nvidia.com, openai.com, anthropic.com, deepmind.google, ai.meta.com, mistral.ai, venturebeat.com, winbuzzer.com, newsbytesapp.com all still DNS-blocked from this egress — same pattern as every prior run. All numbers triangulated across 25+ secondary sources with consistent figures. Final am snapshot: 1 item (1 Tier-1). Stayed well under token/wall-time/fetch caps (38k/20min/8 fetches)."
+    },
+    {
       "run_id": "2026-11-18T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
