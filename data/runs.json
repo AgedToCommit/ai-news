@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-20T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-20T12:00:00Z",
+      "ended_at": "2026-11-20T12:35:00Z",
+      "wall_time_ms": 2100000,
+      "tokens_used": 28000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 2500,
+        "output_write": 1500
+      },
+      "fetches_made": 7,
+      "items_input": 10,
+      "items_output": 9,
+      "items_added": 2,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-20-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EDT Nov 20 2026. Standard path — today's am file existed (7 items from enrichment). Last enrichment ended 2026-11-20T06:20:00Z. Swept for items since that timestamp (last ~5h). DNS blocking continues on this session for primary lab/blog domains. Ran 7 web searches targeting: AI news Nov 20, ANT day-2 trading, DeepSeek/Kimi/MiniMax, OpenAI/Google/Mistral Nov 20, GPT-6.2 details, overnight Asia/Europe releases, Genie 4 API details. No ANT day-2 trading data surfaced (market opened at 9:30am EDT, after this refresh window closed). No new Chinese-lab releases dated today. Added 2 items: (1) OpenAI GPT-6.2 Astra and Sol — released Nov 17, Tier 1, missed in prior runs because Nov 17 digest covered Replit/Sage/Nvidia and Nov 19 digest was dominated by Anthropic IPO. API pricing: Astra $8/$40 (20% cut), Sol $2/$10 (unchanged), 1M context, long-context cliff above 272K tokens, tighter cyber safeguards. (2) Google Genie 4 in Gemini API — released Nov 19, Tier 2. Real-time interactive world generation over WebRTC/WebSocket, 720p/24fps, $0.10/sec, 120s hard cap, v1beta. Distinct from Project Genie consumer surface. No Tier-1 items appended in the last-5h Asia/Europe window. No existing Tier-1 item refinements — no new overnight chatter found for ANT or Qwen4-Max. hero_images null across all items."
+    },
+    {
       "run_id": "2026-11-20T06:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
