@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-20T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-20T18:00:00Z",
+      "ended_at": "2026-11-20T18:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 54000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 38000,
+        "curation": 7500,
+        "output_write": 6500
+      },
+      "fetches_made": 16,
+      "items_input": 11,
+      "items_output": 5,
+      "items_added": 5,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-20-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest phase, 1pm EST Nov 20 2026. Today's am file existed (9 items from refresh); applied promotion rule — none of the 9 am items were promoted. 5 new items added to pm, all distinct from am. Primary scrape_sweep and rss_sweep not executed this run because DNS blocking persists on lab/blog primaries (blog.google, anthropic.com, openai.com, huggingface.co, cnbc.com, finance.yahoo.com, testingcatalog.com, aiweekly.co, aitoolly.com, theneuron.ai all ENOTFOUND). All discovery via WebSearch result snippets, triangulated across multiple outlets per item. Items: (1) Tier 1 ANT day-2 trading — Friday Nov 20 ~10% drop from Thursday's $97.17 close, midday $86.20 per Google Finance, broader AI selloff per CNBC. Deliberately NEW rather than promoted-from-am since the day-2-in-down-tape story is structurally distinct from Thursday's day-1 pop. Digest fires at 1pm ET so no official 4pm close in snapshot. (2) Tier 1 Gemini 4 Neon — launched Nov 18, missed by prior runs. Mid-tier Gemini 4 between Carbon and Hydrogen. $3/$15 per M matches Fable 5.2 pricing exactly. Vals Index #2 at 70.87%, Coding Agent Index #1 at 58.6. Also notes that Nov 20 enrichment's 'Gemini 4 Argon correction' was an over-correction — Neon and Argon are both real separate variants. (3) Tier 2 Snap Easy Lens CLI — Nov 18, Claude Code/Cursor/Codex support, 100+ AR blocks, 50+ asset generators, free. Example of the emerging 'ship a CLI for your users' AI editor' pattern that also explains Google's Jules exit guide. (4) Tier 2 Kling Image 4.0 (Kuaishou) — Nov 17, native 8K (~66MP), 2,000 chars readable text, image sets of 10 with element retention. Distinct from Kling 4.0 video model (Oct). (5) Tier 3 Nothing screenless AI device — December launch confirmed via Pei teaser in last 48h, specific date Dec 8 is speculation only. First serious post-Humane/Rabbit entry. hero_images null across all 5 items (primaries unreachable in this egress)."
+    },
+    {
       "run_id": "2026-11-20T12:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
