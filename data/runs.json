@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-20T06:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-20T06:00:00Z",
+      "ended_at": "2026-11-20T06:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 58000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 10000,
+        "output_write": 6000
+      },
+      "fetches_made": 11,
+      "items_input": 7,
+      "items_output": 7,
+      "items_added": 0,
+      "items_kept": 7,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-20-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EDT Nov 20 2026. Read yesterday's 2026-11-19-pm (7 items) and ran focused web searches for each. All 7 items kept + enriched; 0 dropped. Substantial enrichment for item 1 (ANT first-day close $97.17 up 17% — supersedes intraday-only data from digest), item 2 (Qwen4-Max Code Arena #6 debut + Kimi K3.1 Pro comparison + Brokaw critique), item 3 (Google exit guide points Jules users to Claude Code), item 4 (Replit NumPy scaling benchmarks 4x/17x/19x on 13 tasks), item 5 (Sage S2.1 Flash A18B active parameters — resolves open MoE routing question), item 6 (Perception SCU pricing + MAI-Cyber-1-Flash 96% CyberGym), item 7 (MAI slate availability and pricing details). Late-breaking pass yielded 0 items — no fresh Tier-1 releases from Anthropic, OpenAI, Google, DeepSeek, Kimi, or Qwen in the 12h window (checked model release trackers, no new HuggingFace trending at this hour). DNS blocking persists on this session: simonwillison.net, api.substack.com, anthropic.com, blog.google, microsoft.ai, techcommunity.microsoft.com, huggingface.co all ENOTFOUND. All enrichment details triangulated across multiple secondary sources via WebSearch. One correction surfaced: yesterday's refresh item referenced 'Gemini 4 Neon' — Google's current flagship is Gemini 4 Argon; noted in item 2 revision log. hero_images null across all 7 items."
+    },
+    {
       "run_id": "2026-11-19T17:30:00Z-digest",
       "phase": "digest",
       "status": "success",
