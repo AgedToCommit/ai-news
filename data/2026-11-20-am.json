@@ -2,12 +2,13 @@
   "snapshot_id": "2026-11-20-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-20",
-  "generated_at": "2026-11-20T06:20:00Z",
-  "generated_at_local": "2026-11-20T01:20:00-05:00",
+  "generated_at": "2026-11-20T12:35:00Z",
+  "generated_at_local": "2026-11-20T07:35:00-05:00",
   "phase_history": [
-    { "phase": "enrichment", "ran_at": "2026-11-20T06:00:00Z", "duration_ms": 1200000 }
+    { "phase": "enrichment", "ran_at": "2026-11-20T06:00:00Z", "duration_ms": 1200000 },
+    { "phase": "refresh",    "ran_at": "2026-11-20T12:00:00Z", "duration_ms": 2100000 }
   ],
-  "tier_counts": { "1": 2, "2": 5, "3": 0 },
+  "tier_counts": { "1": 3, "2": 6, "3": 0 },
   "items": [
     {
       "id": "anthropic-ipo-nasdaq-ant-debut-nov19",
@@ -417,6 +418,106 @@
           "source": "Thurrott — 'Ignite 2026: Microsoft AI Announces 7 New Models'",
           "url": "https://www.thurrott.com/?p=343999",
           "take": "Headline count at seven (versus six in the CryptoBriefing version). Captures the Maia 200 in-production hardware detail."
+        }
+      ]
+    },
+    {
+      "id": "openai-gpt-62-astra-sol-nov17",
+      "tier": 1,
+      "title": "OpenAI releases GPT-6.2 Astra and Sol — Astra API drops 20% to $8/$40 per M, 1M context, tighter cyber safeguards",
+      "summary": "OpenAI released GPT-6.2 Astra and GPT-6.2 Sol on November 17, 2026, in ChatGPT Work, Codex, and the API (model IDs: gpt-6.2-astra and gpt-6.2-sol). Astra is positioned for demanding professional work — documents, presentations, spreadsheets, code, and scientific research — with a 1M-token context window and API pricing at $8 input / $40 output per million tokens, down 20% from GPT-6 Astra's prior rates ($10/$50). Sol targets everyday tasks and routine multi-step work at $2/$10 per million tokens, unchanged from GPT-6.1 Sol. Both models include tighter safeguards for cybersecurity assistance. Long-context pricing kicks in above 272K tokens: Astra rises to $16/$60, Sol to $4/$15. An ultrafast speed tier costs 3× standard API rates through February 28, 2027, rising to 6× from March 1, 2027. Within Codex, Astra defaults to a 272K context window and Sol to 500K. Both models roll out to ChatGPT Plus, Pro, Enterprise, and Edu users through Work and Codex.",
+      "link": "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531",
+      "why_it_matters": "GPT-6.2's main practical change relative to GPT-6.1 is the Astra price cut: 20% off input and output at standard context, down to $8/$40 per M from $10/$50. That now matches Anthropic's Claude Fable 5.2 list rate — which means the tier-1 US frontier coding models are sitting at the same headline price. The Sol pricing is unchanged ($2/$10), maintaining the gap that made Sol the default for high-volume automated work. For Python scripts routing between models, the practical change is that Astra is now cost-equivalent to Fable 5.2 (rather than notably more expensive), which makes the routing decision between them a performance question rather than a cost question. The 1M context window for both models matches what Qwen4-Max launched with this week (at a lower price), which signals that 1M context is becoming a table-stakes baseline for frontier models rather than a differentiator. The long-context pricing step (above 272K tokens) is the most surprising design choice — the per-token rate more than doubles past that threshold, which is an unusual pricing cliff and means the effective cost of 1M-context tasks is quite different from the headline $8/$40. The tighter cyber safeguards at launch are described as affecting 'higher-risk cybersecurity assistance' — similar in framing to MAI-Cyber-2-Flash's restricted-access launch (see Microsoft item), suggesting US labs are adding explicit policy layers around security-use-case model access in parallel with the EU AI Act's tiered-risk framework going into force next year.",
+      "why_it_matters_brief": "GPT-6.2 Astra cuts to $8/$40 per M — now matching Fable 5.2 pricing — with 1M context, but watch the pricing cliff above 272K tokens where rates more than double.",
+      "source": {
+        "name": "OpenAI Developer Community ('GPT-6.2 Astra and Sol are now available', Nov 17 2026); DataCamp ('GPT-6.2 Astra and Sol: Features, Benchmarks, Tests & Pricing'); DEV.to/modelflare_dev ('GPT-6.2 Astra vs. Sol: Benchmarks and API Pricing'); gcn.com ('OpenAI launches GPT-6.2 Astra and Sol AI models'); emergent.sh ('OpenAI Launches GPT-6.2 Astra and Sol Models'); casrai.org ('OpenAI releases GPT-6.2 Astra and Sol with cheaper API pricing and tighter cyber safeguards')",
+        "type": "scrape",
+        "url": "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-20T12:35:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-20T12:35:00Z",
+          "by": "refresh",
+          "change": "created — GPT-6.2 Astra and Sol launched Nov 17, 2026 in ChatGPT Work, Codex, and API. Astra: $8/$40 per M (down 20% from $10/$50), 272K default context in Codex, 1M window, long-context pricing above 272K tokens ($16/$60). Sol: $2/$10 per M unchanged from GPT-6.1. Ultrafast tier 3× through Feb 28 2027, 6× from Mar 1. Both models have tighter cybersecurity safeguards. Item missed in prior runs — Nov 17 digest focused on Nvidia Q3 / Replit / Sage; Nov 19 digest dominated by Anthropic IPO. Sources: OpenAI Developer Community, DataCamp, gcn.com, emergent.sh, casrai.org, DEV.to. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI Developer Community — 'GPT-6.2 Astra and Sol are now available' (Nov 17 2026)",
+          "url": "https://community.openai.com/t/gpt-6-2-astra-and-sol-are-now-available/1417531",
+          "take": "Official launch thread. Confirms the model IDs (gpt-6.2-astra, gpt-6.2-sol), ChatGPT Work + Codex + API availability, and the rollout to Plus/Pro/Enterprise/Edu users."
+        },
+        {
+          "source": "DataCamp — 'GPT-6.2 Astra and Sol: Features, Benchmarks, Tests & Pricing'",
+          "url": "https://www.datacamp.com/blog/gpt-6-2-astra-and-sol",
+          "take": "Developer-oriented overview. Source for the 1M context window, the Codex default windows (272K for Astra, 500K for Sol), and the professional-vs-everyday positioning framing."
+        },
+        {
+          "source": "DEV.to/modelflare_dev — 'GPT-6.2 Astra vs. Sol: Benchmarks and API Pricing'",
+          "url": "https://dev.to/modelflare_dev/gpt-62-astra-vs-sol-benchmarks-and-api-pricing-2n8p",
+          "take": "Pricing comparison table. Source for the full tiered pricing: standard ($8/$40, $2/$10), long-context (>272K: $16/$60, $4/$15), and ultrafast (3× through Feb 28 2027, 6× from Mar 1 2027)."
+        },
+        {
+          "source": "casrai.org — 'OpenAI releases GPT-6.2 Astra and Sol with cheaper API pricing and tighter cyber safeguards'",
+          "url": "https://casrai.org/news/openai-gpt-6-2-astra-sol-release-2026",
+          "take": "Source for the cyber-safeguards framing. Positions the tighter security controls as a launch feature alongside the price reduction, not an afterthought."
+        }
+      ]
+    },
+    {
+      "id": "google-genie-4-gemini-api-nov19",
+      "tier": 2,
+      "title": "Google opens Genie 4 to Gemini API developers — 720p interactive worlds at $0.10/sec, 120s cap, WebRTC/WebSocket, v1beta",
+      "summary": "Google made Genie 4 available through the Gemini API's Interactions API and Google AI Studio on November 19, 2026, the day after the consumer Project Genie launched for Google AI Ultra subscribers. Genie 4 generates continuous 720p video at 24fps with 48kHz stereo audio — real-time interactive environments that respond to movement and text inputs rather than static video generation. The model runs under the ID `models/genie-4` on the Interactions v1beta endpoint. Access requires a paid-tier Gemini API key; there is no free tier. Session flow: create an interaction, connect over WebRTC (browser) or WebSocket (Python/Node), send a world setup event, then send movement or text inputs. Ephemeral tokens are minted by the developer's backend for browser WebRTC connections. Pricing is approximately $0.10 per second of streamed output; sessions have a 120-second hard cap, making the maximum per-session cost roughly $12. Known gaps at launch: no portrait 9:16 output, no configurable frame rate, no live microphone or webcam input, no function calling, no Search grounding, no structured outputs, and no session resumption. Google's AI Studio release notes label the model generally available, but the Interactions interface carries a v1beta designation; several secondary sources describe it as preview.",
+      "link": "https://aistudio.google.com/docs/genie",
+      "why_it_matters": "Genie 4 is fundamentally different from the LLM-and-RAG tools in this feed — it's a real-time interactive world model, not a text generation system. The API surface is WebRTC or WebSocket, not HTTP requests and JSON completions, which means building something with it looks more like writing a game networking client than calling Claude or the OpenAI API. At $0.10/second with a 120-second cap, the max session cost is $12 — high enough that this isn't a hobby toy yet, but low enough to prototype with one or two sessions. The genuinely interesting design constraint is the 120-second hard cap: each session is a discrete real-time experience, not an ongoing persistent world. The absence of session resumption is the structural limitation — you can't save state and pick up where you left off, which keeps this out of persistent-simulation use cases for now. For Gabe's Python stack, the WebSocket path (Python + websockets library or similar) is the accessible entry point; the browser WebRTC path works without a backend if you mint ephemeral tokens correctly. The broader signal is that the API surface for AI is now pluralizing: not just HTTP text completion and tool calls, but also real-time streaming world models over WebSocket/WebRTC. The routing and cost-optimization logic developers have been building for text models doesn't apply — this is a separate skill set entirely worth being aware of.",
+      "why_it_matters_brief": "Genie 4 is in the Gemini API as WebRTC/WebSocket sessions — 720p interactive worlds at $0.10/sec, 120s cap — the first real-time world model in a production developer API.",
+      "source": {
+        "name": "Google AI Studio docs ('Interactive world generation with Genie 4'); TestingCatalog ('Google opens Genie 4 world model to developers in Gemini API'); OrcaRouter ('Genie 4 API Pricing: $0.10 a Second, Billed Until You Stop'); Unite.ai ('Google Opens Genie 4 World Generation to Gemini API Developers'); ai-tldr.dev ('Genie 4 in the Gemini API'); Superpower Daily ('Google brings Genie 4's interactive AI worlds to developers through its API')",
+        "type": "scrape",
+        "url": "https://aistudio.google.com/docs/genie"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-20T12:35:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-20T12:35:00Z",
+          "by": "refresh",
+          "change": "created — Google Genie 4 opened to Gemini API developers Nov 19 2026, day after Project Genie consumer launch (Nov 18, AI Ultra subscribers). model/genie-4 on Interactions v1beta. 720p/24fps/48kHz stereo. $0.10/sec, 120s hard cap (~$12 max). WebRTC (browser) or WebSocket (Python/Node). No session resumption, no portrait mode, no live mic/cam input. Sources: AI Studio docs, TestingCatalog, OrcaRouter, Unite.ai, ai-tldr.dev. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Google AI Studio docs — 'Interactive world generation with Genie 4'",
+          "url": "https://aistudio.google.com/docs/genie",
+          "take": "Official documentation. Source for the model ID (models/genie-4), v1beta Interactions API endpoint, session flow, and the gap list (no portrait, no mic, no session resumption)."
+        },
+        {
+          "source": "OrcaRouter — 'Genie 4 API Pricing: $0.10 a Second, Billed Until You Stop'",
+          "url": "https://www.orcarouter.ai/blog/genie-4-gemini-api-pricing",
+          "take": "Source for the per-second pricing ($0.10) and the 120-second session cap that makes $12 the maximum per-session cost."
+        },
+        {
+          "source": "TestingCatalog — 'Google opens Genie 4 world model to developers in Gemini API'",
+          "url": "https://www.testingcatalog.com/google-opens-genie-4-world-model-to-developers-in-gemini-api/",
+          "take": "Covers the WebRTC vs. WebSocket split and the ephemeral-token requirement for browser connections."
+        },
+        {
+          "source": "Unite.ai — 'Google Opens Genie 4 World Generation to Gemini API Developers'",
+          "url": "https://www.unite.ai/google-opens-genie-4-world-generation-to-gemini-api-developers/",
+          "take": "Distinguishes Project Genie (consumer, launched Nov 18 for AI Ultra) from the developer API release (Nov 19) — two separate surfaces on the same underlying model."
         }
       ]
     }
