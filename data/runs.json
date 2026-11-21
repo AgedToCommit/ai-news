@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-21T12:30:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-21T12:00:00Z",
+      "ended_at": "2026-11-21T12:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 55000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 43000,
+        "curation": 7000,
+        "output_write": 3000
+      },
+      "fetches_made": 13,
+      "items_input": 11,
+      "items_output": 7,
+      "items_added": 2,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-21-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EST Sat Nov 21 2026. Standard path — today's am file existed (5 items from enrichment). DNS blocking persists on primary lab/blog domains; all research via WebSearch. ANT confirmed close ($88.91, day range $83.05-$92.56, low $0.05 above $83 IPO price) added as revision to existing tier-1 item (anthropic-ant-day2-selloff-nov20). 2 new items added: (1) Thinking Machines Lab Inkling 2 Mini open-weight 26.4B looped MoE, Apache 2.0, Nov 20 — missed by prior runs due to ANT-IPO focus; (2) Alibaba Qwen4-Max GA Nov 16, $1.50/$4.50/1M flat-rate 1M context — missed by prior runs. GPT-Live-1.1 (unverified — GPT-Live-1 is Sept 2026 only), Claude Code 2.1.330/30-day (not confirmed), Nothing Dec 8 date (not confirmed), Genie 4 Ultra rollout (confirmed Nov 18 but outside 5-hour window and not added). hero_images null across all items (og:image fetches not possible under current DNS constraints)."
+    },
+    {
       "run_id": "2026-11-21T07:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
