@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-21T07:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-21T07:00:00Z",
+      "ended_at": "2026-11-21T07:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 34000,
+        "curation": 9000,
+        "output_write": 5000
+      },
+      "fetches_made": 11,
+      "items_input": 5,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-21-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EST Sat Nov 21 2026. Read yesterday's 2026-11-20-pm (5 items) and ran focused web searches for each. All 5 items kept + enriched; 0 dropped. Substantial enrichment: item 1 (ANT: overnight searches did NOT surface a verified Nasdaq 4pm close for Friday Nov 20 — closest indexed data remain intraday snapshots plus Nasdaq Private Market's pre-IPO secondary estimate of $88.34 from Oct 28; added ticker-hygiene note that Investing.com international surfaces still list ANTP alongside the correct ANT), item 2 (Gemini 4 Neon: pulled Google's full comparison table via OfficeChai/CryptoBriefing coverage — SWE-sweep (Antigravity) 39.0% vs Opus 5.5 10.1% vs Sol 8.3%; CursorBench 4.1 Neon 65.4% vs Opus 5.5 58.1%; Opus 5.5 still ahead on Terminal-Bench 4.1 and FrontierCode 2.0; Sol wins Chartography. Added critical harness-sensitivity callout: 12.8% mini-SWE vs 39.0% Antigravity, 3x spread on same model. Added 9to5Google detail that Neon replaces Argon as default in Gemini app for Pro/Ultra. Added Dec 1 2026 Argon API price-rise signal (one source says public API rates double after Nov 30). Added DeepMind model-card note that full Safety & Security Report was pending at launch. Added Google's 2.45% cheating-shortcut disclosure), item 3 (Snap Easy Lens CLI: promoted newsroom.snap.com URL to primary link. Added Snap's own stated motivation from developer docs — growing Claude Code use in its community — as unusually candid vendor language. Added VR.org's packaging-polish critique: single npm install is good, three-platform native binaries is a day-1 polish footnote), item 4 (Kling Image 4.0: added Photoworkout's specific 1,400-char cheat-sheet test result — three small text errors in one 8K image — as the hard data point behind the 2,000-char readable-text claim. Added Chinese-language ifeng/Zhidongxi hands-on findings: yellow-and-black costume swap blended cleanly, weapon-edit details looked rough, dense Chinese-text magazine poster had hierarchy but weak design and some text errors), item 5 (Nothing device: corrected the source — primary announcement was Carl Pei's 'Toolmakers' essay on X from Nov 4 2026, not 'in the last 48 hours' as the digest implied. Added the 17-day silence observation as itself a signal. Added Nothing's separately pre-announced AI-linked smart glasses and earbuds as a tension with Pei's 'couldn't have been an app' framing). Late-breaking pass: 0 items added. Searches on late-breaking releases (DeepSeek/Qwen/Kimi overnight, OpenAI/Anthropic/Google Nov 20-21, HuggingFace trending, ThursdAI recap, Techmeme Friday top story) surfaced no confirmed releases strictly within the last 12 hours — Qwen4-Max is API-only with smaller open-weights 'soon' but no date, no Kimi/DeepSeek overnight drops, no new OpenAI/Anthropic/Google launches in the window, and no fresh third-party dev reactions to Gemini 4 Neon surfaced yet (Simon Willison's indexed posts stop at Nov 10-12). DNS blocking persists on primary lab/blog domains this egress (anthropic.com, blog.google, huggingface.co, cnbc.com, finance.yahoo.com, techcrunch.com, newsroom.snap.com, kling.ai, simonwillison.net all ENOTFOUND); all enrichment details triangulated across multiple secondary sources via WebSearch. hero_images null across all 5 items (og:image fetches not possible under current DNS constraints)."
+    },
+    {
       "run_id": "2026-11-20T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
