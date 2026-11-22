@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-22T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-22T12:00:00Z",
+      "ended_at": "2026-11-22T12:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 18000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 15000,
+        "curation": 1500,
+        "output_write": 1500
+      },
+      "fetches_made": 5,
+      "items_input": 0,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-22-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EST Sun Nov 22 2026. Standard path — today's am file existed (3 items from enrichment). DNS blocking persists on primary lab/blog domains; all research via WebSearch. 5 web searches swept: (1) AI news Nov 22 2026 overnight — no confirmed new announcements, most recent indexed items from Nov 16–21; aggregator mentioned 'Fable 5.5 today' but this is an unverified rumor originating from an Oct mid-month Azure screenshot that was subsequently removed with no Anthropic confirmation — not added; (2) DeepSeek/Qwen Nov 22 — no new releases; newest confirmed Qwen item is Qwen4-Max Nov 16, already in am file; newest DeepSeek is V4.1-Flash-1017 from Oct 17; (3) ANT tokenized weekend price — Securitize/Dinari platforms trading 24/7 but no specific Nov 22 quote indexed; tokenized proxy at ~$97.59 (IPO day figure) with weekend drift expected; not material enough to trigger a revision given no concrete number; (4) Fable 5.5 extended search — multiple analysis sites confirm no official Anthropic release; Azure catalog entry from mid-October was pulled the next day; not adding; (5) Codex CLI 0.170.0 date check — confirmed Nov 18, 2026, outside the 5-hour refresh window; not added. 0 new items this run. Weekend tape confirmed quiet — consistent with Nov 21 and Nov 22 enrichment patterns. Note: prior agent runs (Nov 18–22) had committed to a detached HEAD rather than the main branch; this refresh run includes all those accumulated data files in the same push (the checkout a1a767a -- data/ approach recovered them)."
+    },
+    {
       "run_id": "2026-11-22T07:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
