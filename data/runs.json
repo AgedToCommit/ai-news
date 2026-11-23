@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-23T06:45:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-23T06:15:00Z",
+      "ended_at": "2026-11-23T06:45:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 36000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 24000,
+        "curation": 8500,
+        "output_write": 3000
+      },
+      "fetches_made": 8,
+      "items_input": 3,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-23-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EST Mon Nov 23 2026. Yesterday's pm file (2026-11-22-pm.json) was intentionally empty per the no-promotion-by-default rule — its notes route this enrichment to prune/enrich the three items in yesterday's am file (2026-11-22-am.json), following the precedent set by the 2026-11-01-am enrichment run (which did the same when 2026-10-31-pm was empty). DNS blocking persists on primary lab/blog domains (openai.com, anthropic.com, deepmind.google, huggingface.co, interconnects.ai, simonwillison.net, news.baeke.info all ENOTFOUND); all research via WebSearch. 8 web searches ran: (1) general AI news Nov 22 2026 overnight — no confirmed announcements; indexed trackers (nocode.mba, capitalandcompute, thursdai 2026-11) stop at Nov 17–19; (2) weekend model-release check across Anthropic/OpenAI/Google/DeepSeek/Qwen/Meta Nov 21-22 — no new releases confirmed, DeepSeek release tracker shows a Nov 23 forecast which is a forecast, not a launch; (3) Claude Code v2.1.330 search — not released as of Sun Nov 22 23:00 EST, extended the no-release watch (now ~84 hours quiet, longest observed in November); (4) DeepSeek V4 / Qwen4 / Kimi K3 Nov 23 — most recent confirmed items from July-August 2026, nothing new; (5) general AI breakthroughs weekend search — nothing dated Nov 22; (6) Nathan Lambert Interconnects Nov 21-22 — his 'Banning Open Source AI Would Be A Mistake' op-ed dates to June 19 2026, not weekend of Nov 22; the Apple Podcasts '20 hr ago' caption appears to refer to a syndication re-post, not a new publication; (7) Hugging Face weekend trending / Chinese labs dominance — news.baeke.info Nov 21 analysis piece surfaced but ENOTFOUND; kucoin/the-decoder/equalocean secondary reporting confirms the 41% Chinese-download figure already covered in Nov 7 and Nov 14 snapshots — not materially new; (8) GPT-6.2 Astra reception Nov 22 follow-up — Theo Browne's self-moderation ('likely overreacting') and Dan Shipper/Every + McKay Wrigley takes surfaced from MindStudio's weekend roundup, added to item 1. Decisions: (1) openai-gpt-6-2-astra-coding-failures-reception-nov20 — KEEP+ENRICH. Added Theo Browne's self-moderation ('likely overreacting' + code-review bug-spotting credit), Dan Shipper/Every writing-regression finding, McKay Wrigley 'pretty good ad for Anthropic's IPO' framing, Matthew Berman's measured take. Updated summary, why_it_matters, and why_it_matters_brief. Title adjusted from 'four days in' to 'six days in' plus the Theo-softening clause. promoted_from_am set to true. (2) anthropic-ant-wall-street-initiates-coverage-nov19 — KEEP+ENRICH (light). Added tokenized-price divergence detail ($262 to ~$1,622 across weekend trackers, confirming these are noisy proxies, not a weekend print). Re-anchored on Monday Nov 23 open being the first real post-weekend test. Updated summary, why_it_matters, and why_it_matters_brief. promoted_from_am set to true. (3) anthropic-claude-code-2-1-329-tasks-forks-nov19 — KEEP+ENRICH (light). Extended the no-release watch through Mon Nov 23 early AM (~84 hours, longest quiet-period in November). Added the cadence-detection framing: if no v2.1.330 ships by EOD Mon, that is itself newsworthy. Updated title to add the Mon/Tue release-window hook, summary, why_it_matters, and why_it_matters_brief. promoted_from_am set to true. Late-breaking pass: no new Tier-1 or Tier-2 items surfaced in the last 12 hours that weren't already in the am. Consistent with the Nov 22 pm empty-digest result and the broader weekend-quiet-tape pattern. 0 items added. All 3 am items preserved, 0 dropped. hero_image remains null for all three items (OpenAI/Anthropic/Havoptic primary pages DNS-blocked from this egress; no secondary page surfaced with an og:image that passed sanity check)."
+    },
+    {
       "run_id": "2026-11-22T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
