@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-24T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-24T12:00:00Z",
+      "ended_at": "2026-11-24T12:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1000,
+        "deep_fetch": 0,
+        "discovery_search": 31000,
+        "curation": 4000,
+        "output_write": 2000
+      },
+      "fetches_made": 9,
+      "items_input": 10,
+      "items_output": 12,
+      "items_added": 2,
+      "items_kept": 10,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-24-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EST Tue Nov 24 2026. Standard path — today's am file existed (10 items from enrichment). DNS blocking persists on primary lab/blog domains; all research via WebSearch. 9 web searches swept the last ~5 hours since the 2:28am enrichment: (1) AI model releases overnight Nov 24 — no new Tier-1 releases in last 5 hours; GLM-5.4 (Nov 23) already in am file; (2) Claude Code v2.1.330 — no release confirmed; v2.1.329 is still latest; (3) DeepSeek/Qwen/Mistral Nov 24 — no confirmed releases; (4) Pachocki perplexity cap lab responses — 72+ hour silence from Anthropic, Google DeepMind, xAI, Chinese labs confirmed, now past the inflection point; (5) Nvidia stock Nov 24 — Bloomberg confirms Japan stocks rebound on Huang reinstatement; (6) Nvidia SEC 8-K confirmation — Nov 22 8-K confirms reinstatement; (7) overnight Asia/Europe AI news — surfaces Claude Ship (Nov 23, Anthropic, missed by enrichment) and Gemini 4 Neon (Nov 18, Google, missed by prior digests); (8) Anthropic Claude Ship — TechCrunch Nov 23 confirmed: Code Review GA, PR Steward + Claude Approvals in beta; (9) Google Gemini 4 Neon — confirmed launched Nov 18, missed in prior snapshots; $3/$15 per 1M, 1M context, claims parity with Claude Opus 5.5 and GPT-6.2 Sol. 2 new items added: google-gemini-4-neon-nov18 (Tier 1) and anthropic-claude-ship-pr-approval-nov23 (Tier 2). Revision notes added to nvidia (Japan market rebound) and pachocki (72h+ silence past inflection point)."
+    },
+    {
       "run_id": "2026-11-24T07:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",

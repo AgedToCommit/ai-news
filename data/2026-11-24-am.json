@@ -2,18 +2,23 @@
   "snapshot_id": "2026-11-24-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-24",
-  "generated_at": "2026-11-24T07:00:00Z",
-  "generated_at_local": "2026-11-24T02:00:00-05:00",
+  "generated_at": "2026-11-24T12:25:00Z",
+  "generated_at_local": "2026-11-24T07:25:00-05:00",
   "phase_history": [
     {
       "phase": "enrichment",
       "ran_at": "2026-11-24T07:00:00Z",
       "duration_ms": 0
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-11-24T12:00:00Z",
+      "duration_ms": 1500000
     }
   ],
   "tier_counts": {
-    "1": 4,
-    "2": 2,
+    "1": 5,
+    "2": 3,
     "3": 4
   },
   "items": [
@@ -47,6 +52,11 @@
           "at": "2026-11-24T07:00:00Z",
           "by": "enrichment",
           "change": "No 8-K or Form 4 for the Mon Nov 23 reinstatement surfaced in overnight checks; independent-director committee has not published any further findings. Mon Nov 23 intraday +30-33% move stands as the market datapoint; Tue Nov 24 pre-market and open are the next real tape to watch. The DOJ Megaspeed case and the 'Alice Huang' foreign-intelligence angle remain the two open investigations with no overnight updates."
+        },
+        {
+          "at": "2026-11-24T12:00:00Z",
+          "by": "refresh",
+          "change": "Asian market confirmation: Bloomberg reports 'Japan Stocks Rebound as Huang's Return Resuscitates AI Trade' — positive early overnight reaction from Asian tech stocks. US Nov 24 open remains the next concrete tape to watch; no clean premarket price confirmed in refresh sweep."
         }
       ],
       "takes": [
@@ -152,6 +162,11 @@
           "at": "2026-11-24T07:00:00Z",
           "by": "enrichment",
           "change": "~48-hour silence from Anthropic, Google DeepMind, xAI, and the Chinese labs holds as of Tue Nov 24 2am EST. No frontier-lab public response on perplexity-cap coordination. Silence past the 72-hour mark (Wed Nov 25) is the inflection to watch — longer than that is effectively a polite industry refusal rather than deliberation. The essay itself has not been pulled or edited at openai.com; Altman's 'most important thing we've published in awhile' framing is unchanged."
+        },
+        {
+          "at": "2026-11-24T12:00:00Z",
+          "by": "refresh",
+          "change": "72+ hour silence from Anthropic, Google DeepMind, xAI, and Chinese labs holds through Nov 24 7am EST. No public response to the perplexity-cap proposal from any frontier lab. The 72-hour inflection point has now passed — absent a response today, the silence is trending from 'deliberation' toward the polite-industry-refusal reading flagged in the enrichment notes."
         }
       ],
       "takes": [
@@ -559,6 +574,96 @@
           "source": "Phys.org — 'Anthropic Claude math greatest riddle'",
           "url": "https://phys.org/news/2026-11-anthropic-claude-math-greatest-riddle.html",
           "take": "Phys.org's framing of the Alpöge+Claude Riemann claim as potential open-problem research mathematics. Read skeptically — the framing assumes the proof verifies, which is still unresolved."
+        }
+      ]
+    },
+    {
+      "id": "google-gemini-4-neon-nov18",
+      "tier": 1,
+      "title": "Google ships Gemini 4 Neon — 3x faster than Carbon at ~60% lower API cost, claims parity with Claude Opus 5.5 and GPT-6.2 Sol, $3/$15 per 1M tokens input/output, 1M-token context",
+      "summary": "Google launched Gemini 4 Neon on November 18, 2026. Neon sits between Gemini 4 Hydrogen and Carbon in Google's model lineup, offering what Google claims is Carbon-equivalent reasoning and coding performance at three times the speed and roughly 60% lower cost per task. API pricing: $3 per 1M tokens input, $15 per 1M output, with a 1M-token context window (one source lists 2M — check official API docs). Available immediately in the Gemini app for AI Pro and Ultra subscribers and in the Google AI API. Google's own benchmark comparisons claim Neon matches or exceeds Claude Opus 5.5 and GPT-6.2 Sol on overall quality. The 3x speed figure is sourced from partner Glean's early-access quote (Thai Tran); Google's own model card numbers are the authoritative check.",
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "why_it_matters": "Gemini 4 Neon is Google's answer to the mid-tier inference pricing war that Anthropic (Fable 5.2), OpenAI (GPT-6.2 Sol at $2/$10), and Mistral (Large 4) have all entered at different price points. At $3/$15 per 1M tokens, Neon is priced above GPT-6.2 Sol but significantly below Gemini 4 Carbon and Claude Opus 5.5. The interesting claim is not the speed — 'faster than our own flagship' is easy to achieve by distillation — but the benchmark parity claim against Opus 5.5 and Sol. If those numbers hold under independent evaluation, it means Google has closed the gap at a mid-tier price point that actually matters for production API costs. For anyone running Python inference workloads on the Google AI API, the practical move is to A/B test Neon against Fable 5.2 on your actual task distribution before accepting the benchmark framing at face value. The 1M-token context window is the specific thing to verify: a 2M-context model at this price point would be significantly more competitive for long-document or long-context RAG workloads. One honest caveat: the 'matches Claude Opus 5.5' claim is from Google's own positioning, not from an independent evaluator like Artificial Analysis or LMSYS. Neon was announced Nov 18 but wasn't captured in the last several days of digest/enrichment runs — it got overshadowed by the Nvidia story and the OpenAI/Pachocki cycle in the same week.",
+      "why_it_matters_brief": "Google's Gemini 4 Neon ships at $3/$15 per 1M tokens claiming Carbon-tier reasoning at 3x speed — the benchmark parity claim against Claude Opus 5.5 and GPT-6.2 Sol needs independent validation, but the mid-tier pricing war just got a new entrant.",
+      "source": {
+        "name": "Google Blog ('Introducing Gemini 4 Neon'); 9to5Google; Digital Trends ('can hang with Claude Opus 5.5 and GPT-6.2 Sol for less'); NewsBytesApp ('3x faster, 60% cheaper')",
+        "type": "scrape",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-24T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-24T12:00:00Z",
+          "by": "refresh",
+          "change": "created — Google Gemini 4 Neon launched Nov 18 2026, missed in Nov 18-24 digests due to simultaneous Nvidia/OpenAI Pachocki/Google Computer Use news cycle. Neon sits Hydrogen-Carbon, $3/$15 per 1M tokens, 1M-token context (2M in one source — check API docs). Google claims parity with Claude Opus 5.5 and GPT-6.2 Sol. Available AI Pro/Ultra and Google AI API. 3x speed figure from Glean early-access partner."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Google Blog — 'Introducing Gemini 4 Neon'",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+          "take": "Primary announcement. Source for the positioning between Hydrogen and Carbon, the AI Pro/Ultra subscription rollout, and the speed and cost claims."
+        },
+        {
+          "source": "Digital Trends — 'Google says Gemini 4 Neon can hang with Claude Opus 5.5 and GPT-6.2 Sol for less'",
+          "url": "https://digitaltrends.com/computing/google-says-gemini-4-neon-can-hang-with-claude-opus-5-5-and-gpt-6-2-sol-for-less",
+          "take": "Covers the benchmark comparison claim directly. Source for the 'matches Claude Opus 5.5 and GPT-6.2 Sol at lower cost' positioning."
+        },
+        {
+          "source": "NewsBytesApp — 'Google launches Gemini 4 Neon: It's 3x faster, 60% cheaper'",
+          "url": "https://www.newsbytesapp.com/news/science/google-launches-gemini-4-neon-ai-model-check-features/story",
+          "take": "Source for the 3x speed and 60% cost reduction figures. Useful for the absolute pricing ($3/$15 per 1M) and the Google AI Pro/Ultra distribution channels."
+        },
+        {
+          "source": "9to5Google — 'Gemini 4 Neon announcement'",
+          "url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/",
+          "take": "9to5Google's coverage of the Nov 18 announcement. First independent technical writeup after the Google Blog post."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-ship-pr-approval-nov23",
+      "tier": 2,
+      "title": "Anthropic launches Claude Ship — Code Review GA, PR Steward and Claude Approvals in beta, giving AI agents the ability to autonomously approve pull requests on Team and Enterprise plans",
+      "summary": "Anthropic announced Claude Ship on November 23, 2026, a suite of GitHub-integrated agents for code-review workflows. Code Review is generally available; PR Steward (automated PR lifecycle management) and Claude Approvals (autonomous PR approval based on developer-set rules) are in beta. Claude Approvals can autonomously approve suitable changes without human sign-off — Anthropic recommends starting in observe-only mode and setting monthly spending limits. Available for Claude Team and Enterprise subscribers connecting GitHub repositories; usage is billed per token, with organization cost proportional to repo activity and review depth.",
+      "link": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+      "why_it_matters": "Claude Approvals is the first time Anthropic has shipped an agent that can formally approve changes in a software-development workflow — not just suggest, comment, or flag, but actually press the approve button on a pull request. That's a qualitative shift from 'AI as reviewer' to 'AI as reviewer and gatekeeper,' and it arrives at a moment when every frontier lab is racing to build the full 'AI software engineer' stack. For Gabe's Python and HTML/CSS work, the immediate practical relevance is modest — Claude Ship is gated to Claude Team and Enterprise plans, priced for teams rather than individual hobbyists. The developer-workflow angle matters more as a signal about where the tooling is heading: within 12-18 months this category will almost certainly include single-developer plans, and the architecture of 'agent reads PR context, applies rules, approves or comments' is exactly the kind of autonomous loop Claude Code's own harness is already built on. The security note in coverage is worth taking seriously: when an AI agent can both fix code and then approve the fix it wrote, the instruction-boundary problem (untrusted content in PR comments redirecting the agent) is exactly the same risk the OpenRouter/Dragos canary-prompt story surfaced. Anthropic recommends observe-only mode first. One concrete data point to watch: whether Claude Approvals integrates with GitHub's branch protection rules at the CODEOWNERS level — if it does, it effectively becomes a signing key in the CI pipeline, a much higher privilege than 'reviewer account.' That integration detail is not confirmed in launch coverage.",
+      "why_it_matters_brief": "Claude Approvals is Anthropic's first agent that can formally approve (not just review) pull requests — the 'AI as gatekeeper' pattern ships today, gated to Team/Enterprise GitHub repos.",
+      "source": {
+        "name": "TechCrunch ('Anthropic launches Claude Ship'); CyberPress ('Anthropic launches Claude Ship AI Agents')",
+        "type": "scrape",
+        "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-24T12:00:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-24T12:00:00Z",
+          "by": "refresh",
+          "change": "created — Anthropic Claude Ship launched Nov 23 2026. Code Review GA, PR Steward + Claude Approvals in beta. Claude Approvals can autonomously approve PRs based on developer-set rules. Available Team/Enterprise GitHub plans, billed per token. Recommend observe-only mode first; set monthly spending limits. Missed by enrichment's late-breaking pass — added at refresh."
+        }
+      ],
+      "takes": [
+        {
+          "source": "TechCrunch — 'Anthropic launches Claude Ship'",
+          "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+          "take": "First major outlet to cover the launch. Source for Code Review GA status, the two beta agents, the token billing model, and Anthropic's own observe-only-mode recommendation."
+        },
+        {
+          "source": "CyberPress — 'Anthropic Launches Claude Ship AI Agents to Automatically Review, Fix, and Approve Code Changes'",
+          "url": "https://cyberpress.org/anthropic-launches-claude-ship-ai-agents/",
+          "take": "Covers the security caveat: source files, comments, and review discussions may contain untrusted material, making instruction boundaries important when an agent can propose fixes or approve changes."
         }
       ]
     }
