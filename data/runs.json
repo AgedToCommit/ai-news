@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-25T07:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-25T07:00:00Z",
+      "ended_at": "2026-11-25T07:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 45000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 2000,
+        "discovery_search": 35000,
+        "curation": 4000,
+        "output_write": 4000
+      },
+      "fetches_made": 11,
+      "items_input": 4,
+      "items_output": 4,
+      "items_added": 0,
+      "items_kept": 4,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-25-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EST Wed Nov 25 2026. Standard path — yesterday's pm (2026-11-24-pm.json) had 4 items (Tier 1 ANT IPO, Tier 2 custom-silicon narrative, Tier 3 AWS re:Invent preview, Tier 3 LangChain Series C). DNS blocking persists on primary lab/blog domains; all research via WebSearch. 11 web searches: (1) ANT Nov 25 price — no confirmed Nov 25 pre-market or Wednesday session data surfaced, searches returned only Nov 19-24 reporting; quiet-tape itself a signal; kept + enriched; (2) custom silicon Nov 25 — no new OpenAI/Anthropic/Google silicon announcements overnight; narrative intact, AWS re:Invent is next catalyst; kept + enriched; (3) AWS re:Invent Nov 25 — no new preview content; added NVLink Fusion compat detail for Trainium 4 from Constellation + Register; kept + enriched; (4) LangChain Series C details — new material: GIC + DFJ Growth as new investors, IVP + Sapphire follow-on, $460M total disclosed funding (~$425M audited), 2.4x markup over Oct-2025 $1.25B B round, ~435 FTE → 850 target end-2027, WSJ first-reported; kept + significantly enriched; (5) AI model release Nov 25 general sweep — nothing confirmed, no new Tier-1 lab releases; (6) Nov 25 specific-date search — mostly stale aggregator pages, no confirmed Nov 25 announcements; (7) Claude Code v2.1.330 — not released, v2.1.329 still current; (8) Nvidia Nov 24-25 price — Nov 17-18 reporting dominates, no Nov 24-25 close data; (9) Axios AI safety employees-unsafe-to-release — no Nov 2026 direct Axios URL surfaced, only earlier Aug/Sept 2026 coverage; folded as cross-reference inside ANT item as before; (10) Chinese labs Qwen/Kimi/DeepSeek/GLM Nov 25 — nothing new, GLM-5.4 (Nov 23) already in am file, Kimi K3.1 Pro weights promised Nov 4 unconfirmed; (11) Agent framework open-source Nov 25 — nothing confirmed as late-breaking. Late-breaking pass: 0 items added. No Tier-1 or Tier-2 releases confirmed in the last 12 hours (since Nov 24 19:00Z). All 4 pm items kept + enriched. 0 dropped. Next refresh at 7am EST will sweep Asia/Europe overnight."
+    },
+    {
       "run_id": "2026-11-24T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
