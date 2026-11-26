@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-26T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-26T18:00:00Z",
+      "ended_at": "2026-11-26T18:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 52000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 3000,
+        "deep_fetch": 0,
+        "discovery_search": 35000,
+        "curation": 13500,
+        "output_write": 500
+      },
+      "fetches_made": 13,
+      "items_input": 14,
+      "items_output": 8,
+      "items_added": 8,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-26-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest phase, 1pm EST Thu Nov 26 2026 (Thanksgiving Day \u2014 slow US news cycle as expected). Today's am file (2026-11-26-am.json) had 9 items with 0 Tier-1, so no promotion-rule candidates to evaluate. DNS blocking persists; all research via WebSearch (standard + extended). 13 web searches across Nov 25-26 window: (1) general AI news sweep; (2) Nov 25 model-release targeted; (3) open-source LLM Hugging Face; (4) dev-tool/framework releases; (5) Google/DeepMind Nov 25; (6) Sakana Namazu Small deep search; (7) Cognition SWE-2.1 deep search; (8) ChatGPT+Codex unified meter; (9) EU \u20ac50B fund; (10) Pydantic AI v2.74/v2.75; (11) arxiv breakthroughs; (12) OpenAI/Anthropic specific; (13) Anthropic Rust rewrite + VP\u2260VNP verification. Items added (8): (1) Anthropic VP\u2260VNP Claude-authored proof (Tier 1, US, Nov 23 \u2014 73,000-line Lean formalization, no human verification yet); (2) Anthropic Messages API Rust rewrite (Tier 1, US, Nov 25 \u2014 70% CPU/80% memory, differential-testing-against-Python-oracle methodology); (3) Sakana Namazu Small (Tier 2, Asia, Nov 25 \u2014 30B continued-pretrain on Nemotron 3 Nano base, beats 120B Super 60.1 vs 56.2 avg on 25 benchmarks); (4) Cognition SWE-2.1 (Tier 2, US, Nov 24 \u2014 RL on Kimi K3, Terminal-Bench 50.0 from 24.2, four sandbox-escape findings during training); (5) Pydantic AI v2.74/v2.75 (Tier 2, Global, Nov 24-25 \u2014 computer-use contract across Docker/Daytona/E2B/Modal/K8s/OpenSandbox, OpenAI/Anthropic/Google native formats); (6) EU Sovereign Tech Equity Fund (Tier 3, EU, Nov 25 \u2014 \u20ac50B direct equity for AI/quantum, 1:6 leverage target); (7) XPENG IRON + Yoyo-01 at AI Day 2026 (Tier 3, Asia, Nov 25 \u2014 Turing Physical AI Architecture = VLA 3.0, 2027 release); (8) OpenAI ChatGPT+Codex unified usage meter (Tier 3, US, Oct 31 confirmed, December effective \u2014 Nov 26 Pro-user rollout begins). Final snapshot: 8 items, tier_counts {1:2, 2:3, 3:3}."
+    },
+    {
       "run_id": "2026-11-26T12:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",
@@ -27,7 +55,7 @@
       "fallback_did_enrichment": false,
       "error": null,
       "partial": false,
-      "notes": "Refresh phase, 7am EDT Thu Nov 26 2026 (Thanksgiving). Standard path — today's am file (2026-11-26-am.json) existed with 6 items from enrichment. DNS blocking persists; all research via WebSearch. 6 web searches: (1) AI news Nov 26 general sweep — surfaced Claude Ship, Gemini 4 Neon, Axios safety scoop, Australia Digital Duty of Care; (2) lab-specific Nov 26 announcements — no breaking news today from major labs; (3) AI model release open-source Nov 26 — nothing confirmed today; (4) Claude Ship deep search — confirmed TechCrunch/HelpNet/Decrypt coverage; three-agent bundle: Code Review (GA Oct 15), PR Steward + Claude Approvals (beta Nov 23); (5) Axios safety scoop Nov 24 — confirmed at axios.com/2026/11/24, 20+ anonymous sources, 'cover story' CoT framing; (6) Tidal Dec 9 deletion — could not confirm specific Dec 9 date, story is from June 2026 policy. Items added: (1) Claude Ship (Tier 2, US) — missed by Nov 25 digest and Nov 26 enrichment; (2) Axios unreleased frontier models safety scoop (Tier 2, Global) — missed by Nov 25 digest and Nov 26 enrichment; (3) Australia Digital Duty of Care (Tier 3, Global) — House passed Oct 28, Senate review Nov 20 committee report. 0 existing items dropped. No Tier 1 items in file so no re-pass. Final am file: 9 items, tier_counts {1:0, 2:5, 3:4}."
+      "notes": "Refresh phase, 7am EDT Thu Nov 26 2026 (Thanksgiving). Standard path \u2014 today's am file (2026-11-26-am.json) existed with 6 items from enrichment. DNS blocking persists; all research via WebSearch. 6 web searches: (1) AI news Nov 26 general sweep \u2014 surfaced Claude Ship, Gemini 4 Neon, Axios safety scoop, Australia Digital Duty of Care; (2) lab-specific Nov 26 announcements \u2014 no breaking news today from major labs; (3) AI model release open-source Nov 26 \u2014 nothing confirmed today; (4) Claude Ship deep search \u2014 confirmed TechCrunch/HelpNet/Decrypt coverage; three-agent bundle: Code Review (GA Oct 15), PR Steward + Claude Approvals (beta Nov 23); (5) Axios safety scoop Nov 24 \u2014 confirmed at axios.com/2026/11/24, 20+ anonymous sources, 'cover story' CoT framing; (6) Tidal Dec 9 deletion \u2014 could not confirm specific Dec 9 date, story is from June 2026 policy. Items added: (1) Claude Ship (Tier 2, US) \u2014 missed by Nov 25 digest and Nov 26 enrichment; (2) Axios unreleased frontier models safety scoop (Tier 2, Global) \u2014 missed by Nov 25 digest and Nov 26 enrichment; (3) Australia Digital Duty of Care (Tier 3, Global) \u2014 House passed Oct 28, Senate review Nov 20 committee report. 0 existing items dropped. No Tier 1 items in file so no re-pass. Final am file: 9 items, tier_counts {1:0, 2:5, 3:4}."
     },
     {
       "run_id": "2026-11-26T06:30:00Z-enrichment",
@@ -7506,90 +7534,6 @@
       "error": null,
       "partial": false,
       "notes": "Standard path \u2014 yesterday's pm file (2026-08-27-pm.json) existed with 2 items (Nvidia-HuggingFace acquisition Tier 1, AWS-Nvidia 2M-GPU Tier 2). Both survived enrichment with substantial new overnight context: (1) HF item added Delangue-rejected-$500M-Nvidia-investment backstory (his TechCrunch Equity podcast quote about preserving investor balance), HF 2023 baseline valuation ($4.5B \u2192 $12.9B is 2.87x), Fortune/Forbes/TechSpot/QZ mainstream pickup, Delangue-Huang public alignment on open-source AI policy, and the fact that if it closes it would surpass Mellanox ($7B in 2020) as Nvidia's largest completed acquisition. (2) AWS item added the bimodal Aug 27 investor reaction \u2014 Nvidia +8% (24/7 Wall St, BigGo V-shaped rebound), Amazon -1.4% to $256.84 (TradingView/GuruFocus), Nasdaq +1.5%, hyperscaler capex now at 102% of cloud revenue (Yahoo Finance capex-shock framing), Berkshire reportedly exited remaining Amazon position, TechCrunch 'Amazon tripled Nvidia order' framing (1M+2M=3M), StorageReview deep-dive on Vera CPU + NVHBM + Trainium NVLink integration. Late-breaking additions: (a) AM Intelligence 9,000 Nvidia Vera Rubin NVL72 GPUs for Hyderabad AI factory ($8B capex, first tranche of planned 1 GW across India/US/Finland/Malaysia, Greenko renewable-power backing addressing electricity-supply constraint, first frontier AI cluster in Asia on Vera Rubin) \u2014 Tier 2, Asia region, complements US-heavy pm items; (b) Grok 4.6 cross-cloud landing on Amazon Bedrock (GA) + Microsoft Foundry Models (preview) + Google Enterprise Agent Platform simultaneously Aug 27 \u2014 Tier 2, US region, distribution story more than model story (500k context, held pricing flat at $2/$6); Microsoft Foundry deployment particularly notable as Azure has historically been OpenAI-exclusive. Considered but excluded: Alibaba WAN 3.0 (already in 2026-08-25-am.json), Gemini 3.6 Flash + 3.5 Flash-Lite GA (routine product rollout, Tier 3 at best), OpenAI Brazil expansion (Tier 3), ChatGPT temporary-chat controls (Tier 3), AWS Mechanical Turk shutdown (already in 2026-08-27-am.json). No pruning \u2014 both pm items had substantial new context to add. WebFetch remained blocked by proxy; used WebSearch exclusively (9 queries). No cap hit."
-    },
-    {
-      "run_id": "2026-08-27T17:15:00Z-digest",
-      "phase": "digest",
-      "status": "success",
-      "started_at": "2026-08-27T17:00:00Z",
-      "ended_at": "2026-08-27T17:15:00Z",
-      "wall_time_ms": 900000,
-      "tokens_used": 46000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 1500,
-        "deep_fetch": 0,
-        "discovery_search": 22000,
-        "curation": 15500,
-        "output_write": 7000
-      },
-      "fetches_made": 15,
-      "items_input": 6,
-      "items_output": 2,
-      "items_added": 2,
-      "items_kept": 0,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-27-pm",
-      "error": null,
-      "partial": false,
-      "notes": "WebFetch blocked by proxy for CNBC/TechStartups/Claude.com/ReleaseBot; used WebSearch exclusively (15 queries) for the sweep. Primary Aug 27 story: Nvidia reportedly agreed to acquire Hugging Face for $12.9B (The Information broke it, CNBC/TechCrunch confirmed, Business Insider said talks not yet signed) \u2014 Tier 1, not in am file. Secondary: AWS+Nvidia announced 2M additional GPUs for 2027-2028 (Blackwell Ultra + Rubin + Rubin Ultra) \u2014 Tier 2 infra story extending Nvidia earnings narrative from am. Considered but excluded: Anthropic Cowork built-in browser (Aug 26 announcement, staged rollout across Aug 12-27), Claude Academy (Aug 20), Nvidia CFO $50B AI-labs + $500B financing commitments (too close to am file Nvidia earnings item). Promotion rule not applied \u2014 no am item deepened enough to warrant promotion."
-    },
-    {
-      "run_id": "2026-08-27T11:47:00Z-refresh",
-      "phase": "refresh",
-      "status": "success",
-      "started_at": "2026-08-27T11:00:00Z",
-      "ended_at": "2026-08-27T11:47:00Z",
-      "wall_time_ms": 2820000,
-      "tokens_used": 51200,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 4800,
-        "deep_fetch": 0,
-        "discovery_search": 31200,
-        "curation": 9400,
-        "output_write": 5800
-      },
-      "fetches_made": 14,
-      "items_input": 6,
-      "items_output": 9,
-      "items_added": 1,
-      "items_kept": 8,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-27-am",
-      "fallback_did_enrichment": false,
-      "error": null,
-      "partial": false,
-      "notes": "Standard path \u2014 am file existed (enrichment completed at 06:30Z). WebFetch blocked by proxy, used WebSearch exclusively for sweep (14 queries). Primary new item: Z.ai GLM-5.3-Flash (Tier 1, MIT open weights, 320B MoE/18B active, natively multimodal, 1M context). Tier-1 re-pass: added revision to Nvidia Q2 FY27 item noting NVDA premarket reversal (+6% pre-market Aug 27 per CNBC). Searches also checked GPT-Live, MiniMax on Bedrock, OpenAI IPO S-1, EU AI Act, Slack Code, Mistral x HUMAIN, Anthropic first profit \u2014 all too old (pre-06:30Z since filter). Digitimes Nvidia custom-silicon analysis (Aug 27) considered but subsumed by existing Jalape\u00f1o item coverage."
-    },
-    {
-      "run_id": "2026-08-27T06:30:00Z-enrichment",
-      "phase": "enrichment",
-      "status": "success",
-      "started_at": "2026-08-27T06:23:31Z",
-      "ended_at": "2026-08-27T06:30:00Z",
-      "wall_time_ms": 389000,
-      "tokens_used": 165000,
-      "tokens_breakdown": {
-        "rss_sweep": 0,
-        "scrape_sweep": 0,
-        "tier_ranking": 0,
-        "deep_fetch": 62000,
-        "discovery_search": 48000,
-        "curation": 39000,
-        "output_write": 16000
-      },
-      "fetches_made": 12,
-      "items_input": 6,
-      "items_output": 8,
-      "items_added": 2,
-      "items_kept": 6,
-      "items_dropped": 0,
-      "snapshot_written": "2026-08-27-am",
-      "error": null,
-      "partial": false
     }
   ]
 }
