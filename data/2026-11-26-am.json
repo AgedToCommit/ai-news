@@ -1,0 +1,342 @@
+{
+  "snapshot_id": "2026-11-26-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-11-26",
+  "generated_at": "2026-11-26T06:30:00Z",
+  "generated_at_local": "2026-11-26T01:30:00-05:00",
+  "phase_history": [
+    {
+      "phase": "digest",
+      "ran_at": "2026-11-25T18:00:00Z",
+      "duration_ms": 900000
+    },
+    {
+      "phase": "enrichment",
+      "ran_at": "2026-11-26T06:30:00Z",
+      "duration_ms": 1800000
+    }
+  ],
+  "tier_counts": {
+    "1": 0,
+    "2": 3,
+    "3": 3
+  },
+  "items": [
+    {
+      "id": "cisco-openai-shirudo-agentic-ai-security-nov23",
+      "tier": 2,
+      "title": "Cisco and OpenAI launch Shirudo — an open-source eBPF-based runtime shield for agentic AI infrastructure, built from the Tetragon lineage",
+      "summary": "Cisco and OpenAI announced Shirudo on November 23, 2026 as an open-source project that lets AI agents patch running Linux systems without a reboot. The project evolves the Cilium/Isovalent Tetragon runtime-security stack with an agent-driven loop: an AI agent finds a vulnerability, generates and tests a temporary 'shield', and the shield only goes live after evidence-based safety checks. Shields are generated and tested within human-defined boundaries, and Shirudo sits inside a wider Cisco–OpenAI 'Secure Infrastructure Project' that is inviting developers, kernel engineers and platform builders to contribute. Overnight enrichment surfaces the project's technical pedigree: Daniel Borkmann and John Fastabend of Isovalent (Cisco's eBPF subsidiary and Tetragon maintainers) presented Shirudo at the Linux Plumbers Conference eBPF track on October 5-7, 2026, framing it as 'an agentless BPF-based security platform tailored for agentic workloads' with no config DSL — i.e., the security policy is derived from agent intent rather than hand-written rules.",
+      "link": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html",
+      "why_it_matters": "This is the first major open-source runtime-security project that treats 'an AI agent is patching my production Linux host' as a primary workflow rather than an edge case. The practical angle: eBPF lets Shirudo observe syscalls and attach safety policies at the kernel level without taking the host down — meaning the agent-driven patch loop happens in-place on running workloads, which is the hard problem everyone else has been solving by adding a human-in-the-loop gate. The LPC October 2026 talk from the Isovalent/Tetragon maintainers is the bit that confirms the lineage is real engineering rather than marketing framing: Borkmann and Fastabend built the production Cilium/Tetragon stack that runs under Google Kubernetes Engine's native observability layer, and the 'no config DSL' design decision is a direct lesson from Tetragon's experience where custom policy languages get in the way of fast iteration. For Python developers who already deploy on Linux (which is most Python shops), Shirudo is specifically the kind of infrastructure layer that becomes invisible once it ships: you don't call its API from your app, but the servers your code runs on will be patched by agents checking against this policy. The remaining caveats are honest ones: this is an agent-driven security system where the agent writes code that runs on a production kernel, and even with policy guardrails, the failure mode is severe if the agent generates a shield that creates a new vulnerability. Worth tracking how Cisco and OpenAI document the review loop for agent-generated shields in the first production releases — that's the specific place the security story lives or dies.",
+      "why_it_matters_brief": "Shirudo's Tetragon pedigree is confirmed by an LPC 2026 talk from Isovalent's Borkmann and Fastabend — agent-driven kernel patching from the engineers who built the production eBPF security stack.",
+      "source": {
+        "name": "Cisco Newsroom; SiliconANGLE ('Cisco and OpenAI launch Shirudo open-source infrastructure shield to prevent AI-driven cyberattacks'); Isovalent Blog; Linux Plumbers Conference eBPF track (Oct 2026); CryptoBriefing",
+        "type": "scrape",
+        "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — Cisco/OpenAI Shirudo announced Nov 23 2026. eBPF-based, Tetragon-evolved runtime security for AI agents patching Linux hosts. Agent generates + tests temporary shields, shields go live only after evidence-based safety checks. Sits inside Secure Infrastructure Project. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "added LPC October 2026 eBPF-track talk by Borkmann + Fastabend (Isovalent/Tetragon maintainers) confirming the Shirudo pedigree and the 'no config DSL' design decision. Updated summary, why_it_matters, and brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "SiliconANGLE — 'Cisco and OpenAI launch Shirudo open-source infrastructure shield to prevent AI-driven cyberattacks'",
+          "url": "https://siliconangle.com/2026/11/23/cisco-and-openai-launch-shirudo-an-open-source-infrastructure-shield-to-protect-against-ai-driven-cyberattacks/",
+          "take": "Independent write-up confirms the eBPF basis and the agent-driven shield-generation loop. Notes the project is positioned specifically against AI-driven attacker tooling, where defenders also need agent speed."
+        },
+        {
+          "source": "Isovalent Blog — 'Cisco and OpenAI introduce Shirudo'",
+          "url": "https://isovalent.com/blog/post/cisco-openai-shirudo/",
+          "take": "From the Tetragon maintainers themselves — confirms the lineage and spells out how Shirudo's agent primitives differ from Tetragon's current policy layer."
+        },
+        {
+          "source": "Linux Plumbers Conference 2026 — eBPF track, Shirudo talk by Daniel Borkmann and John Fastabend (Isovalent)",
+          "url": "https://lpc.events/event/20/contributions/2437/",
+          "take": "The engineering-depth source: Isovalent's Borkmann + Fastabend frame Shirudo as an agentless, BPF-based security platform with no config DSL — the specific design decision to watch against Tetragon's current rule-authoring UX."
+        }
+      ]
+    },
+    {
+      "id": "x-square-robot-wall-oss-1-0-vla-foundation-nov23",
+      "tier": 2,
+      "title": "X Square Robot ships WALL-OSS-1.0 — a vision-language-action foundation model trained natively (not VLM-then-action), 55.1% zero-shot across 312 real-robot tasks",
+      "summary": "X Square Robot announced WALL-OSS-1.0 on November 23, 2026, framing it as a 'native' VLA foundation model where vision, language and action are co-trained from scratch rather than bolted onto a pretrained vision-language model. The company reports 55.1% zero-shot success across 312 real-robot tasks with no task-specific demos or fine-tuning — a vendor number, not independently verified yet. The architecture pairs a flow-matching action expert that outputs continuous robot commands with real-time chunking for smooth movements; a generative-supervision variant (WALL-OSS-1.0-Gen) learns from first-person video of human manipulation. The family includes Lite, Nano, Gen and AR variants; a WALL-OSS-1.0-Lite checkpoint built on Qwen3.5 (32-step dual-arm action chunk for the ARX X5 robot) is public on Hugging Face, and the company also points to a WALL-API-1.0 for developers and an XR Harness agentic framework for task planning + execution. Overnight enrichment anchors the version jump: the predecessor, WALL-OSS-0.5 (released May 28, 2026), was a 4B VLA on a 3B VLM backbone that hit 100% zero-shot on Block Sorting and 96% on Fruit Sorting but had above-80% zero-shot on only 2 of 17 real-robot tasks (per the technical report); after fine-tuning it reached 60.5% average task progress on 15 real-robot tasks, reportedly leading π0.5 by 17.5 points on X Square's internal benchmark. The 1.0's leap — 55.1% zero-shot across 312 tasks (vs 2/17 for 0.5) — is the specific delta to interrogate when independent benchmarks land.",
+      "link": "https://www.globenewswire.com/news-release/2026/11/23/3408046/0/en/x-square-robot-introduces-wall-oss-1-0-understand-more-act-better-a-native-foundation-model-for-the-physical-world.html",
+      "why_it_matters": "The 'native VLA' framing is the interesting technical bet. Most VLA models (RT-2, OpenVLA, Pi0, and Google DeepMind's Gemini Robotics line) start from a pretrained VLM and attach an action head after the fact; WALL-OSS-1.0 claims to co-train the three modalities from the start, which is the kind of architecture decision that either produces a step-change in generalization or quietly underperforms the shoulder-of-giants approach. The 55.1% zero-shot number is the specific thing to watch skeptically — 312 tasks is a larger eval than the typical demo set, but it's still vendor-reported, and 'zero-shot' in VLA land usually means 'no task-specific finetuning' rather than 'no exposure to similar environments'. The 0.5-to-1.0 comparison is the most honest internal check right now: 0.5 reached 100% on narrow tasks like Block Sorting but cleared 80% zero-shot on only 2 of 17 real-robot tasks, while 1.0 claims 55.1% across 312. If you believe the task-distribution expansion is apples-to-apples, that's genuine generalization progress; if 1.0's 312-task eval includes narrower tasks than 0.5's 17-task eval, the number is softer than it looks. For Python developers, the actual-use angle is the public Lite checkpoint: it's a 4B model on a Qwen3.5 backbone, which means you can pull it off HuggingFace and run inference on consumer hardware if you have the robot arm hardware to plug it into. XR Harness is the layer that matters for anyone building agent-shaped robotics applications — it's framed as task planning + model execution + robot control, which is the full stack the LangChain-for-robotics market is currently missing. Compare to DeepMind's Gemini Robotics 2.5 (am-file item from Nov 10, 96% success on Mercedes-Benz production tasks): different problem framing — Gemini Robotics optimizes for industrial assembly where the task space is narrow and performance matters, WALL-OSS-1.0 optimizes for generalization across heterogeneous tasks. Both approaches are credible; the comparison will clarify when independent benchmarks land.",
+      "why_it_matters_brief": "WALL-OSS-1.0's 55.1% across 312 tasks is a big jump from 0.5's 2-of-17 above-80% zero-shot — the 0.5-to-1.0 benchmark-expansion delta is the honest thing to interrogate before trusting the native-VLA generalization claim.",
+      "source": {
+        "name": "GlobeNewswire ('X Square Robot Introduces WALL-OSS-1.0'); Manila Times (syndicated); Hugging Face (x-square-robot/wall-oss-1.0-lite-robodojo); X Square Robot official X post; WALL-OSS-0.5 technical report (arxiv 2509.11766); IEEE Spectrum coverage of 0.5",
+        "type": "scrape",
+        "url": "https://www.globenewswire.com/news-release/2026/11/23/3408046/0/en/x-square-robot-introduces-wall-oss-1-0-understand-more-act-better-a-native-foundation-model-for-the-physical-world.html"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — X Square Robot WALL-OSS-1.0 announced Nov 23 2026. Native VLA (not VLM-then-action), 55.1% zero-shot across 312 real-robot tasks (vendor number). Flow-matching action expert + real-time chunking, generative-supervision variant from first-person video. Lite/Nano/Gen/AR family; Lite checkpoint public on HF, 4B Qwen3.5 backbone, ARX X5 robot. XR Harness agentic framework. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "added WALL-OSS-0.5 baseline context (May 28 2026 release, 4B on 3B VLM, 100%/96% zero-shot on Block/Fruit Sorting, above-80% on only 2 of 17 real-robot tasks, 60.5% after fine-tuning on 15 tasks). Framed the 0.5→1.0 delta as the honest thing to interrogate. Updated summary, why_it_matters, and brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "X Square Robot on X — 'Introducing WALL-OSS-1.0: Understand More. Act Better.'",
+          "url": "https://x.com/XSquareRobot/status/2124767551959757162",
+          "take": "Primary company announcement — explicitly contrasts native VLA pretraining against VLM-then-action, and lays out the 55.1% zero-shot claim with the task count."
+        },
+        {
+          "source": "Hugging Face — x-square-robot/wall-oss-1.0-lite-robodojo",
+          "url": "https://huggingface.co/x-square-robot/wall-oss-1.0-lite-robodojo",
+          "take": "Public Lite checkpoint — 4B, Qwen3.5 backbone, 32-step action chunk for dual-arm ARX X5. The specific thing you can actually download and run."
+        },
+        {
+          "source": "WALL-OSS-0.5 technical report (arxiv 2509.11766)",
+          "url": "https://arxiv.org/html/2509.11766v1",
+          "take": "Baseline for comparison — the 0.5 report's 100% / 96% narrow-task zero-shot vs. only 2-of-17 above-80% on broader real-robot tasks is the specific prior number to anchor skepticism about the 1.0 claim against."
+        }
+      ]
+    },
+    {
+      "id": "claude-code-code-mode-cross-cloud-nov23",
+      "tier": 2,
+      "title": "Claude Code 2.1.331 ships Code Mode cross-cloud (Nov 23), 2.1.332 follows two days later with Sonnet 5.5 and Opus 5.5 as default aliases on Microsoft Foundry",
+      "summary": "The Claude Code changelog landed a Nov 23, 2026 entry (v2.1.331) rolling Code Mode out to terminal sessions across all four major Claude hosting surfaces: Amazon Bedrock, Google Cloud's Agent Platform, Microsoft Foundry and Claude Platform on AWS. Code Mode is the feature introduced in v2.1.323 where Claude writes JavaScript to call its tools in a batch rather than invoking them one at a time, cutting round-trips on multi-tool workflows. The Nov 23 change is the cross-provider GA — before this, the experimental opt-in only worked cleanly on direct Anthropic API, and tool calls through Bedrock/Vertex/Foundry had to pay the usual per-tool-call latency tax. Overnight enrichment: version 2.1.332 shipped Nov 25, 2026 with substantial follow-on changes to the cross-cloud story — the `sonnet` model alias on Google Cloud's Agent Platform and Microsoft Foundry now points to Sonnet 5.5, Foundry's `opus` alias points to Opus 5.5, the default model on Foundry becomes Sonnet 5.5, and terminal/VS Code sessions moved to Sonnet 5 or 5.5 on Bedrock Mantle, Agent Platform and Foundry now start in auto mode by default (disable with `disableAutoMode: 'disable'`). 2.1.332 also adds MCP server skills (beta, shown as `server:skill` in the `/` menu) and a new `PreSkillShellCommand` hook event for refusing a skill or command's inline shell commands as it loads. Note: Sonnet on Amazon Bedrock stays on Sonnet 4.5, so Bedrock customers don't get the alias bump yet.",
+      "link": "https://code.claude.com/docs/en/changelog",
+      "why_it_matters": "This is the specific kind of release that sounds like a plumbing update and is actually a meaningful cost + speed change for anyone orchestrating multi-tool agent calls through a cloud provider instead of direct Anthropic API. Concrete example: a research-agent workflow that reads 5 files, runs 3 grep searches and writes 2 edits used to be 10 separate tool-call round-trips to the model; in Code Mode, Claude writes a short JavaScript block that invokes its tool primitives in sequence and gets the results back in one hop. The per-tool-call latency through Bedrock or Vertex has historically been 2-3x direct Anthropic API latency because of the extra provider-side authentication + proxying, so Code Mode's batching saves more wall-clock time on those providers specifically than it does on direct API. The 2.1.332 Nov 25 follow-on is the piece worth tracking separately: Foundry users on the `sonnet` alias quietly jump from Sonnet 4.x to Sonnet 5.5 the next time they upgrade, and Foundry's default model becomes Sonnet 5.5 — meaning any Python-side Claude SDK session running against Foundry-hosted Claude without an explicit model pin will get the upgraded model automatically. Bedrock stays on Sonnet 4.5 as the `sonnet` alias default, which is the specific asymmetry to watch: Bedrock customers who want parity need to pin `claude-sonnet-5-5` explicitly. For Gabe's HTML/CSS/Python stack, the direct relevance is twofold — Python SDK sessions running against Bedrock-hosted Claude now get the Code Mode speedup direct-API users have had since v2.1.323, and if any of your SDK clients hit Foundry, the next `claude` upgrade quietly moves them to a newer model family. The other Nov 25 item worth flagging: MCP skills (beta) are now attachable from MCP servers directly, which is the plumbing that makes it easy to publish reusable skill definitions across teams. One caveat: Code Mode remains opt-in via organization-level setting rather than default-on, so you need to flip the toggle in Claude Platform admin before Python SDK sessions pick it up.",
+      "why_it_matters_brief": "Nov 23's Code Mode cross-cloud is confirmed in the primary changelog; the Nov 25 follow-on (2.1.332) moves Foundry's `sonnet` alias to Sonnet 5.5 and the default model to it — a quiet model upgrade for any Foundry client without an explicit pin.",
+      "source": {
+        "name": "Claude Code official changelog (code.claude.com/docs/en/changelog) — primary source, verified Nov 23 2.1.331 Code Mode entry and Nov 25 2.1.332 follow-on; gradually.ai Claude Code changelog aggregator; retroaitracker (claude 2.1.332 Nov 25)",
+        "type": "scrape",
+        "url": "https://code.claude.com/docs/en/changelog"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — Claude Code Nov 23 2026 changelog entry ships Code Mode cross-provider (Bedrock, Vertex, Foundry, Claude Platform on AWS). Code Mode was v2.1.323 experimental opt-in; Nov 23 is the cross-cloud GA. Latest stable 2.1.330 (Nov 20) per retroaitracker. MCP tasks also now work cleanly in terminal on Bedrock without feature-flag fetching. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "verified Nov 23 2.1.331 Code Mode entry in the primary changelog. Added Nov 25 2.1.332 follow-on: Foundry `sonnet` alias → Sonnet 5.5, Foundry `opus` alias → Opus 5.5, Foundry default model → Sonnet 5.5, auto mode as default on Bedrock Mantle/Vertex/Foundry for Sonnet 5/5.5, MCP server skills (beta), PreSkillShellCommand hook event. Noted Bedrock `sonnet` alias asymmetry (stays on 4.5). Updated title, summary, why_it_matters, and brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Claude Code docs — changelog (verified Nov 23 2.1.331 and Nov 25 2.1.332 entries)",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "take": "Primary source. The Nov 23 entry is the only authoritative statement that Code Mode is now cross-provider; the Nov 25 2.1.332 entry is the specific place to read the alias changes and the auto-mode-as-default change for Sonnet 5/5.5 on cloud providers."
+        },
+        {
+          "source": "Claude Code docs — what's new, 2026 w23",
+          "url": "https://code.claude.com/docs/en/whats-new/2026-w23",
+          "take": "Weekly digest framing — pulls the 2.1.331 + 2.1.332 highlights together with narrative context on how auto mode's default behavior changes for cloud customers."
+        },
+        {
+          "source": "retroaitracker — Claude Code 2.1.332 release notes",
+          "url": "https://retroaitracker.com/claude/release-notes",
+          "take": "Third-party release-notes tracker. Useful for confirming the Nov 25 2.1.332 top-of-tracker and for the specific improvement + bug-fix counts (19 + 93 per the official page)."
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-uk-launch-prep-nov23",
+      "tier": 3,
+      "title": "Meta preps Muse for UK launch 'within weeks' while HSBC, Nationwide, NatWest, Barclays and Lloyds block AI shopping agents — and UK Strong Customer Authentication rules require a human to confirm every purchase",
+      "summary": "The Times reported on November 23, 2026 that Meta is preparing to launch its Muse personal-agent product in the UK within weeks, and that retailer purchase partnerships are still being negotiated so British shoppers will be able to buy products directly from inside the agent. Overnight enrichment surfaces the five UK banks moving to block AI agents from customer accounts: HSBC, Nationwide, NatWest, Barclays and Lloyds (confirmed by The Telegraph reporting relayed through FourWeekMBA and Dealroom). The structural issue sitting underneath the blocks is the UK and EU Strong Customer Authentication rule, which was built on the assumption that a human — not an agent — confirms every electronic payment. Meta's current design partially works around this by asking the user to confirm purchases and emails before they go through, but the SCA rule means even a user-confirmed agent transaction has to route through bank-side identity checks that may flag agent behavior as fraud. Amazon has already blocked Muse from shopping on its site (September 2026) citing credential-handling concerns — Meta says Muse has no visibility into passwords or payment methods and credentials sit in secure storage, Amazon says the agent appears to capture and retain them. Meta's partnership with PayPal (announced September 22, 2026) is positioned as the workaround for retailers and banks that block direct card-rail access; a Retail Gazette headline describes the Meta UK launch as coming within weeks with senior Meta executives expected on the ground, no official date confirmed.",
+      "link": "https://www.retailgazette.co.uk/blog/2026/11/meta-launch-ai-shopping-assistant-muse-in-uk/",
+      "why_it_matters": "Two things make the UK launch worth tracking beyond 'another consumer AI assistant in another market'. First, the five specific banks — HSBC, Nationwide, NatWest, Barclays, Lloyds — cover roughly 75% of the UK consumer banking market by account count, which means the block isn't a fringe experiment but a near-sector-wide position. The regulatory basis is the Strong Customer Authentication rule under PSD2 (Payment Services Directive 2), which requires two-factor verification that assumes a human user — the banks' position is that an agent clicking 'confirm purchase' on behalf of a user may not satisfy the human-present test, even when the user explicitly authorized the agent in advance. The outcome of that first-week bank-interop fight will set the template for every agent trying to shop in Europe for the next 18 months, and the specific legal question — does an agent-mediated purchase satisfy SCA? — is the one to watch, because it's the hinge the whole European agentic commerce layer swings on. Second, the explicit-approval-for-purchases design is the model to watch against OpenAI's Dots (launched Sept 2026, no UK availability) and Perplexity's PayPal Instant Buy (which is the opposite design — one-click, no per-purchase confirmation). The PayPal partnership is the specific fallback: if the banks block direct card-rail access, Muse can route through PayPal's own agent-aware infrastructure, and PayPal has already struck equivalent deals with Perplexity and ChatGPT for the same reason. For Gabe: the concrete thing to track is whether Muse's UK launch ships without any bank partnerships (meaning PayPal becomes the de facto only checkout path) or with at least one UK bank cutting a Muse-specific deal — the second outcome would be the first crack in the UK bank wall, and a template for the next 12 months.",
+      "why_it_matters_brief": "Specific UK banks blocking Muse are HSBC/Nationwide/NatWest/Barclays/Lloyds — ~75% of UK consumer banking — and the real hinge is whether an agent-mediated purchase satisfies PSD2 Strong Customer Authentication at all.",
+      "source": {
+        "name": "Retail Gazette ('Meta to launch AI shopping assistant Muse in UK within weeks'); fourweekmba ('Meta Readies UK Muse Launch as 5 UK Banks Block AI Agents'); Dealroom ('Banks and retailers start blocking AI shopping agents including Meta's Muse'); The Times (first-reported, paywalled); Newsquawk (relayed); PaymentsJournal (Amazon-blocks-Muse context, September 2026)",
+        "type": "scrape",
+        "url": "https://www.retailgazette.co.uk/blog/2026/11/meta-launch-ai-shopping-assistant-muse-in-uk/"
+      },
+      "region": "EU",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — Meta Muse UK launch prep reported Nov 23 2026 (The Times, Retail Gazette). 'Within weeks', no confirmed date. Explicit purchase-approval design continues from US. Five UK banks reportedly blocking AI agents at payment rail — key launch-week question. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "named the five UK banks (HSBC, Nationwide, NatWest, Barclays, Lloyds). Added the PSD2 Strong Customer Authentication context — the specific regulatory hinge agent-mediated purchases swing on. Added the September 2026 Amazon-blocks-Muse credential-handling dispute and Meta's PayPal partnership (Sept 22 2026) as the specific fallback. Updated title, summary, why_it_matters, and brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Retail Gazette — 'Meta to launch AI shopping assistant Muse in UK within weeks'",
+          "url": "https://www.retailgazette.co.uk/blog/2026/11/meta-launch-ai-shopping-assistant-muse-in-uk/",
+          "take": "Primary consumer-retail trade press framing. Notes the 'within weeks' timeline and that retailer purchase partnerships are still being lined up."
+        },
+        {
+          "source": "fourweekmba — 'Meta Readies UK Muse Launch as 5 UK Banks Block AI Agents'",
+          "url": "https://fourweekmba.com/ai-meta-readies-uk-muse-launch-as-5-uk-banks-block-ai-agents/",
+          "take": "The important adjacent-datapoint — 5 UK banks (HSBC, Nationwide, NatWest, Barclays, Lloyds) moving to block agents at the payment rail. Notes the PSD2 SCA rule as the specific regulatory basis."
+        },
+        {
+          "source": "Dealroom — 'Banks and retailers start blocking AI shopping agents including Meta's Muse'",
+          "url": "https://dealroom.co/news/163856-banks-and-retailers-start-blocking-ai-shopping-agents-including-metas-mu/",
+          "take": "Broader-industry framing — ties the UK bank blocks to Amazon's September block and to the wider retailer pushback, confirming this is a sector-wide pattern rather than UK-specific."
+        }
+      ]
+    },
+    {
+      "id": "black-friday-2026-ai-shopping-amazon-perplexity-comet-lawsuit",
+      "tier": 3,
+      "title": "Black Friday 2026 landing with AI agents on both sides of the retail firewall — Amazon v. Perplexity (N.D. Cal. 3:25-cv-09514) is the precedent fight, Walmart's OpenAI Instant Checkout deal is the opposite template, Podqi's 15/8/4% risky-link spread is the first systematic safety number",
+      "summary": "With Black Friday landing Friday Nov 27, the agentic-commerce layer has consolidated around three positions. On the agent side: Perplexity relaunched its PayPal-backed Instant Buy flow as free-for-all-US-users, and OpenAI's ChatGPT Shopping (plus Instant Checkout, launched late September) is in full Black Friday push. On the retailer side: Walmart has partnered directly with OpenAI so ChatGPT users can buy Walmart items via Instant Checkout without leaving the chat interface. Amazon is on the opposite tack, having filed suit against Perplexity in the Northern District of California (case 3:25-cv-09514, filed November 4, 2025) to keep its Comet agentic browser from making purchases on amazon.com. Overnight enrichment surfaces the specific legal posture: Amazon's complaint alleges Perplexity's Comet 'covertly poses as a human customer' on Amazon; Amazon updated its terms of use in May 2026 to add 'agent terms' requiring AI agent providers to identify agents clearly, and claims Perplexity shipped a Comet update specifically to evade the resulting technical barrier. Perplexity has publicly called the suit a 'bully tactic' and framed Amazon's position as anti-competitive — specifically that Amazon wants to block Comet because the agent prevents Amazon from showing users its ads. No case ruling yet. On the independent-evaluation side: Podqi's audit of shopping answers found 15% risky/scam-flavored links for Perplexity, 8% for ChatGPT and 4% for Gemini. Salesforce is projecting 20% of holiday e-commerce traffic will come through chat agents this year. As of the Nov 26 enrichment sweep, no US AI lab has announced a Black Friday pricing cut on its API or subscription product.",
+      "link": "https://www.emarketer.com/content/perplexity-agentic-shopping-relaunch-paypal-black-friday",
+      "why_it_matters": "The Black Friday framing hides the actual story: this is the week agentic commerce becomes a question of which retailers let which agents through the door, and at what cost. The specific thing worth reading the Nov 4 2025 Amazon complaint for is the 'covertly poses as a human customer' framing — if a Northern District of California court agrees, the precedent extends far beyond Amazon/Perplexity: any retailer with an 'agent terms' ToS clause (Amazon added theirs in May 2026, and the industry is copying) will have a clear legal basis to block any agent that doesn't identify itself with a specific header or user-agent signature. The alternative template is Walmart: by signing the OpenAI Instant Checkout partnership, Walmart gets the opposite outcome — agent traffic through a single API gateway it controls, with retailer-friendly terms baked in. The Walmart model is better for the retailer (controlled integration, revenue share) and worse for the long tail of agent builders (gated API access, platform-specific contracts). Amazon's lawsuit is explicitly fighting the 'open browser agent' model that Comet represents, and the outcome sets the template for whether the next decade of agent-to-retailer traffic looks like the open web or like the app store. Podqi's audit numbers are the piece that actually matters for users: 15% Perplexity vs 4% Gemini risky-link rates is a 3.75x spread — a shopping agent with 15% bad links is by any practical measure an unsafe tool for anyone who doesn't inspect every URL. For Gabe, the practical takeaway: if you're trying anything an AI shopping agent can do this weekend, the risk floor is meaningfully lower with Gemini than with Perplexity by current measurement; and if you're building anything shopping-agent-shaped as a side project, the choice between 'open browser agent' (Comet-style, which Amazon is actively trying to make illegal) and 'platform-integrated agent' (ChatGPT-Walmart style, which is the retailer-sanctioned path) is now the specific strategic decision. One honest caveat: Podqi's methodology isn't peer-reviewed yet and the 15/8/4% numbers come from their single audit; expect the specific numbers to move as the methodology gets scrutinized, but the ordinal ranking (Perplexity > ChatGPT > Gemini on risky links) is consistent with other reporting.",
+      "why_it_matters_brief": "Amazon v. Perplexity (3:25-cv-09514) is the precedent fight over whether a retailer's ToS can require agents to identify themselves — a ruling for Amazon turns 'agent terms' into a legal moat; a ruling for Perplexity keeps the open browser-agent model viable.",
+      "source": {
+        "name": "eMarketer ('Perplexity plans to roll out a free agentic shopping product for US users'); eWeek ('OpenAI Turns ChatGPT Into Holiday Shopping Assistant'); Bloomberg ('Amazon Sues to Stop Perplexity From Using AI Tool to Buy Stuff'); Retail Dive ('Amazon sues Perplexity over AI shopping agents'); Digital Commerce 360 ('Perplexity Amazon lawsuit threat bullying'); Consumer Reports Innovation ('AI News & Marketplace Roundup: Autonomous Shopping & the Agent Economy'); Podqi shopping-link audit (relayed via Notebookcheck); Salesforce holiday-season forecasting (20% chat-agent traffic)",
+        "type": "scrape",
+        "url": "https://www.emarketer.com/content/perplexity-agentic-shopping-relaunch-paypal-black-friday"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — Black Friday 2026 AI shopping landscape: Perplexity + PayPal Instant Buy free-for-all-US, Walmart's dedicated agent gateway, Amazon suing Perplexity over Comet, ChatGPT Shopping + Instant Checkout. Podqi audit: Perplexity 15% / ChatGPT 8% / Gemini 4% risky links. Salesforce: 20% holiday traffic via chat agents. No US AI-lab Black Friday pricing cut yet. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "added lawsuit case number (3:25-cv-09514, N.D. Cal., filed Nov 4 2025), Amazon's May 2026 'agent terms' ToS update context, Perplexity's 'bully tactic' response, and the Walmart-OpenAI Instant Checkout partnership as the specific contrast template (corrects earlier 'dedicated agent gateway' framing — it's an OpenAI partnership, not a general gateway). Updated title, summary, why_it_matters, and brief."
+        }
+      ],
+      "takes": [
+        {
+          "source": "eMarketer — 'Perplexity plans to roll out a free agentic shopping product for US users'",
+          "url": "https://www.emarketer.com/content/perplexity-agentic-shopping-relaunch-paypal-black-friday",
+          "take": "Primary trade-press take on Perplexity's relaunch and the PayPal partnership scope — 5,000+ merchants confirmed."
+        },
+        {
+          "source": "Bloomberg — 'Amazon Sues to Stop Perplexity From Using AI Tool to Buy Stuff'",
+          "url": "https://www.bloomberg.com/news/articles/2025-11-04/amazon-demands-perplexity-stop-ai-agent-from-making-purchases",
+          "take": "Primary legal-filing framing. Establishes the Nov 4 2025 filing date and the 'covertly poses as a human customer' allegation that will be the precedent-setting language if Amazon wins."
+        },
+        {
+          "source": "Retail Dive — 'Amazon sues Perplexity AI over shopping agents'",
+          "url": "https://www.retaildive.com/news/amazon-sues-perplexity-ai-shopping-agents/804871/",
+          "take": "Retail-industry framing. Confirms Amazon's May 2026 'agent terms' ToS update as the formal technical barrier Comet is alleged to have been designed to evade."
+        },
+        {
+          "source": "Digital Commerce 360 — 'Perplexity Amazon lawsuit threat bullying'",
+          "url": "https://www.digitalcommerce360.com/2025/11/05/perplexity-amazon-lawsuit-threat-bullying/",
+          "take": "Perplexity's public response — frames the suit as anti-competitive, specifically arguing Amazon wants to block Comet because it prevents Amazon from showing ads."
+        },
+        {
+          "source": "Consumer Reports Innovation — 'AI News & Marketplace Roundup: Autonomous Shopping & the Agent Economy'",
+          "url": "https://innovation.consumerreports.org/ai-news-marketplace-roundup-autonomous-shopping-the-agent-economy",
+          "take": "Independent consumer-advocacy framing. Flags the agent-rogue cybersecurity-attack class and the retailer-pushback dynamic — Shopify/Amazon starting to resist external AI-agent traffic."
+        }
+      ]
+    },
+    {
+      "id": "apple-siri-ai-eight-apps-testflight-only-nov23",
+      "tier": 3,
+      "title": "Apple's Siri AI story clarified — the Developer Preview opened to all developers Nov 3 via App Intents (iOS 27.3 beta), but third-party distribution stays dev-signed-and-internal-TestFlight-only until App Store submissions open in spring 2027",
+      "summary": "Overnight enrichment substantially revises yesterday's framing. Apple opened the Siri AI Developer Preview to any developer on November 3, 2026, available in the iOS 27.3, iPadOS 27.3, macOS 27.3 and visionOS 27.3 betas. Developers connect apps through App Intents without a new entitlement or sign-up program. However — and this is where the earlier 'internal TestFlight only' framing was right — testing is limited to development-signed builds and internal TestFlight testers; external TestFlight distribution and App Store submissions are not supported. Apple has committed to opening App Store submissions for Siri AI-powered apps in spring 2027 (per Magica's reporting, no exact date). Apple has also started shipping Siri AI features across its own first-party apps on a schedule it controls (secondary aggregator reporting lists eight: Messages, Mail, Notes, Photos, Calendar, Reminders, Safari, Music, though this specific count is not confirmed in an Apple newsroom post). So the correct current state: third-party developers can build and internally test Siri AI integrations today, but cannot ship them to real users through the App Store until spring 2027.",
+      "link": "https://9to5mac.com/2026/11/03/developers-can-now-create-advanced-app-skills-for-siri-ai",
+      "why_it_matters": "The gap between 'Apple first-party apps have Siri AI' and 'third-party developers can ship Siri AI features to real users' is now bounded by a specific calendar date — spring 2027, roughly WWDC-adjacent timing — rather than being open-ended as the earlier framing suggested. That's a meaningful change in the story for Python/HTML/CSS developers who build anything Mac- or iOS-adjacent: the Siri AI roadmap now has a public ship date for third-party distribution, which is the information indie developers at Ulysses, Craft, Things, and Fantastical have been waiting for since WWDC 2026. The practical reading: Apple appears to be following the same pattern as original Apple Intelligence (shipped first-party apps months before the third-party SDK stabilized), but this time with a public commitment to a spring-2027 open-distribution date. The App Intents design decision is the specific technical bit worth paying attention to — App Intents is the framework Apple has been investing in since iOS 16, so Siri AI integration through App Intents (no new entitlement, no new SDK) means the surface area a developer has to learn is small and most existing App Intents-adopters are already most of the way there. For Gabe: if you're not a current App Intents adopter there's still nothing to usefully build against today, but if you follow the Apple-developer narrative, the specific thing to watch between now and spring 2027 is whether the App Store submission date holds or slips. A slip past WWDC 2027 (early June) would repeat the Apple-Intelligence-rollout credibility hit; a hold or early landing would meaningfully rehabilitate the narrative. One honest caveat: Magica's spring-2027 target is not an Apple newsroom confirmation, so the specific date framing may shift.",
+      "why_it_matters_brief": "Apple's Siri AI story has a date now — the Developer Preview is open to all via App Intents (Nov 3), and third-party App Store submissions are committed for spring 2027 — rehabilitating an Apple-dev narrative the earlier framing undersold.",
+      "source": {
+        "name": "9to5mac ('Developers can now create advanced app skills for Siri AI', Nov 3 2026); Apple Developer News (developer.apple.com/news); eWeek ('Apple Opens Siri AI to App Developers, but App Store Release Comes Later'); Magica ('Apple opens custom Siri AI integrations in developer preview'); iclarified ('Apple opens Siri AI app integrations to all developers')",
+        "type": "scrape",
+        "url": "https://9to5mac.com/2026/11/03/developers-can-now-create-advanced-app-skills-for-siri-ai"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-25T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-25T18:00:00Z",
+          "by": "digest",
+          "change": "created — Apple ships Siri AI features across 8 first-party apps per Nov 23 reporting, third-party Siri Intelligence SDK remains internal TestFlight only. No official Apple newsroom post. Pattern mirrors original Apple Intelligence rollout in 2024-2025. Key watch: whether WWDC 2027 public dev preview lands. hero_image null."
+        },
+        {
+          "at": "2026-11-26T06:30:00Z",
+          "by": "enrichment",
+          "change": "substantial correction — Apple opened Siri AI Developer Preview to ANY developer on Nov 3 2026 via App Intents (iOS 27.3/iPadOS 27.3/macOS 27.3/visionOS 27.3 betas). Earlier 'internal TestFlight only' framing was only right about distribution, not developer access. Added spring-2027 App Store submission commitment per Magica. Updated title, summary, why_it_matters, brief; swapped primary link from aiweekly.co to 9to5mac Nov 3 original reporting."
+        }
+      ],
+      "takes": [
+        {
+          "source": "9to5mac — 'Developers can now create advanced app skills for Siri AI' (Nov 3 2026)",
+          "url": "https://9to5mac.com/2026/11/03/developers-can-now-create-advanced-app-skills-for-siri-ai",
+          "take": "Primary indie-Apple-press framing of the Nov 3 developer-preview opening. Confirms the App Intents design and the internal-TestFlight-only distribution limit."
+        },
+        {
+          "source": "Apple Developer News — 'Siri AI is now open to all developers'",
+          "url": "https://developer.apple.com/news?id=gdk2umrf",
+          "take": "Primary-source Apple announcement. Confirms the Nov 3 developer-access opening is an Apple-sanctioned move, not a leak."
+        },
+        {
+          "source": "eWeek — 'Apple Opens Siri AI to App Developers, but App Store Release Comes Later'",
+          "url": "https://www.eweek.com/news/apple-siri-ai-developer-preview/",
+          "take": "Captures the specific gap — developers can build and test, but real-user distribution is the piece that's still gated. Useful for anchoring the 'bounded by spring 2027' framing."
+        },
+        {
+          "source": "Magica — 'Apple opens custom Siri AI integrations in developer preview'",
+          "url": "https://magica.com/news/apple-opens-siri-ai-preview-to-any-app",
+          "take": "The specific source reporting the spring 2027 App Store submission timeline. Not an Apple newsroom confirmation, so the exact date may shift."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
