@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-26T12:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-26T12:00:00Z",
+      "ended_at": "2026-11-26T12:25:00Z",
+      "wall_time_ms": 1500000,
+      "tokens_used": 38000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2000,
+        "deep_fetch": 0,
+        "discovery_search": 26000,
+        "curation": 9000,
+        "output_write": 1000
+      },
+      "fetches_made": 6,
+      "items_input": 10,
+      "items_output": 9,
+      "items_added": 3,
+      "items_kept": 6,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-26-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EDT Thu Nov 26 2026 (Thanksgiving). Standard path — today's am file (2026-11-26-am.json) existed with 6 items from enrichment. DNS blocking persists; all research via WebSearch. 6 web searches: (1) AI news Nov 26 general sweep — surfaced Claude Ship, Gemini 4 Neon, Axios safety scoop, Australia Digital Duty of Care; (2) lab-specific Nov 26 announcements — no breaking news today from major labs; (3) AI model release open-source Nov 26 — nothing confirmed today; (4) Claude Ship deep search — confirmed TechCrunch/HelpNet/Decrypt coverage; three-agent bundle: Code Review (GA Oct 15), PR Steward + Claude Approvals (beta Nov 23); (5) Axios safety scoop Nov 24 — confirmed at axios.com/2026/11/24, 20+ anonymous sources, 'cover story' CoT framing; (6) Tidal Dec 9 deletion — could not confirm specific Dec 9 date, story is from June 2026 policy. Items added: (1) Claude Ship (Tier 2, US) — missed by Nov 25 digest and Nov 26 enrichment; (2) Axios unreleased frontier models safety scoop (Tier 2, Global) — missed by Nov 25 digest and Nov 26 enrichment; (3) Australia Digital Duty of Care (Tier 3, Global) — House passed Oct 28, Senate review Nov 20 committee report. 0 existing items dropped. No Tier 1 items in file so no re-pass. Final am file: 9 items, tier_counts {1:0, 2:5, 3:4}."
+    },
+    {
       "run_id": "2026-11-26T06:30:00Z-enrichment",
       "phase": "enrichment",
       "status": "success",
