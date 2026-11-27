@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-27T18:00:00Z-digest",
+      "phase": "digest",
+      "status": "success",
+      "started_at": "2026-11-27T18:00:00Z",
+      "ended_at": "2026-11-27T18:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 48000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 2500,
+        "deep_fetch": 0,
+        "discovery_search": 32000,
+        "curation": 13000,
+        "output_write": 500
+      },
+      "fetches_made": 17,
+      "items_input": 11,
+      "items_output": 6,
+      "items_added": 6,
+      "items_kept": 0,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-27-pm",
+      "error": null,
+      "partial": false,
+      "notes": "Digest phase, 1pm EST Fri Nov 27 2026 (Black Friday — slow US news cycle as expected, similar pattern to Nov 26 Thanksgiving). Today's am file (2026-11-27-am.json) had 4 items with 1 Tier-1 (Anthropic Messages API Rust rewrite, already corrected during 7am enrichment); no promotion-rule candidates triggered since none of the am items materially deepened in the six hours since 7am refresh. DNS blocking persists; all research via WebSearch. 17 web searches (standard mode) covering: (1) general AI news Nov 27; (2) Anthropic/OpenAI/Google Nov 27; (3) Qwen/DeepSeek/ByteDance Nov 27; (4) Hugging Face new open-weights sweep; (5) dev-tools/frameworks late-November; (6) Simon Willison blog Nov 26-27; (7) AWS re:Invent 2026 pre-event; (8) NeurIPS 2026 papers; (9) Grok/Mistral/Cohere/Perplexity late-November; (10) Nov 27 tech news targeted; (11) OpenAI Dec 11 GPT-5 deprecation; (12) Google Gemini Nov 27; (13) Meta Llama Nov 2026 weights; (14) chip/robot/humanoid Nov 27; (15) Python library/MCP/agent Nov 25-27; (16) Anthropic/alignment/benchmark/acquisition sweeps; (17) GPT-5.6 Luna + Cohere acquisitions verification. Key finding: Black Friday US cycle is very quiet as expected; no new Nov 27 US-lab model releases. Six items added: (1) 'openai-gpt5-o3-december-11-deprecation-deadline' (Tier 2, Global) — 14-day warning window for OpenAI Dec 11 shutdown of gpt-5-2025-08-07, gpt-5-pro-2025-10-06, o3-2025-04-16; replacement map confirmed against OpenAI's own deprecations docs (gpt-5.6-sol / terra / luna); important disambiguation versus yesterday's refresh-notes concern (this is a REAL event, not a conflation with the ChatGPT+Codex unified-meter rollout). (2) 'arena-agent-arena-index-launch-nov18' (Tier 2, US) — Arena (formerly LMArena) launched Agent Arena Index Nov 18 with 2.9M user sessions since June 4; Fable 5.2 Max at 1463 leads by 134 points per secondary coverage; four-signal methodology (completion / satisfaction / terminal-tool reliability / responsiveness). (3) 'redhat-developer-hub-2-1-agent-ready-portal-mcp' (Tier 2, US) — Red Hat Developer Hub 2.1 announced at KubeCon NA 2026 Salt Lake City (Nov 10-13), GA expected 'later this month' (now); AI catalog for models/agents/MCP servers, MCP server shipping in DH 2.1, upgraded in-portal assistant (formerly Developer Lightspeed), 10-month lifecycle, Developer Preview on Agent Skills + ARM64. (4) 'cohere-cubic-aisle-close-cyber-secure-coding-nov10-13' (Tier 3, Global) — Cohere closed AISLE Nov 10 (rebrands as Cohere Cyber, Prague-based, led by SVP Ondrej Vlcek) and cubic Nov 13 (London, led by founder Paul Sanglé-Ferrière, becomes secure coding vertical); no terms disclosed; Aleph Alpha merger still pending. (5) 'nvidia-rubin-hpc-sc26-salt-lake-city-50k-cuda-nov16' (Tier 3, US) — NVIDIA Rubin HPC chip announced at SC26 Nov 16; 50,000+ CUDA cores; 2028 shipping; new scientific research libraries; NVIDIA entering HPC market segment. (6) 'anthropic-nasdaq100-inclusion-december-21-post-ipo' (Tier 3, US) — ANT on track for Nasdaq 100 inclusion Dec 21; IPO Nov 19 at $83 opening $111.50 (~$2T implied valuation); first-day fade to ~$97; context: six sessions below IPO price per prior-digest reporting. Items considered but not added: (a) Fable 5.2 release + Nov 10 RSP securities filing — mentioned in TAI #229 as Nov 9/10, but current session identifier is Opus 4.7 not Fable 5.2 and could not find primary Anthropic sourcing within session scope, skipped to avoid propagating unverifiable release detail; (b) Grok 4.8 soft rollout — Musk Nov 18 announcement, developer docs still on Grok 4.7, status unchanged from prior digest window; (c) LoCo arxiv 2611.04814 (Nov 3) and CPU-ARC 2611.09891 (Nov 6) — interesting Tier 2 papers but 3+ weeks old, outside freshness window; (d) MCP Python SDK v2.0.0 / Anthropic Python SDK v0.119+ — mentioned in dev.to digest but no primary-sourced date within target window; (e) OpenAI Pierre/Code Storage acquisition Nov 4 and Salesforce Listen Labs Nov 2 — too old; (f) Marvell-Lumentum $115B deal Nov 2 — too old and more AI infrastructure than software. Promotion rule: not invoked. Final snapshot: 6 items, tier_counts {1:0, 2:3, 3:3}. Verification posture: given yesterday's enrichment dropped 5-of-8 pm items for unverifiability, this digest deliberately favored stories with authoritative primary sourcing (OpenAI docs, Arena blog, Red Hat docs, SC26 trade press, confirmed Cohere closes) over fresh-but-unverifiable aggregator signal."
+    },
+    {
       "run_id": "2026-11-27T11:00:00Z-refresh",
       "phase": "refresh",
       "status": "success",

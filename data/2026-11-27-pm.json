@@ -1,0 +1,277 @@
+{
+  "snapshot_id": "2026-11-27-pm",
+  "snapshot_type": "pm",
+  "calendar_date": "2026-11-27",
+  "generated_at": "2026-11-27T18:05:00Z",
+  "generated_at_local": "2026-11-27T13:05:00-05:00",
+  "phase_history": [
+    {
+      "phase": "digest",
+      "ran_at": "2026-11-27T18:00:00Z",
+      "duration_ms": 1800000
+    }
+  ],
+  "tier_counts": {
+    "1": 0,
+    "2": 3,
+    "3": 3
+  },
+  "items": [
+    {
+      "id": "openai-gpt5-o3-december-11-deprecation-deadline",
+      "tier": 2,
+      "title": "OpenAI's December 11 shutdown of gpt-5, gpt-5-pro and o3 API snapshots is 14 days out — the authoritative replacement map is gpt-5.6-sol (plus reasoning=pro for gpt-5-pro), gpt-5.6-terra (mini) and gpt-5.6-luna (nano)",
+      "summary": "OpenAI's official deprecations page (developers.openai.com/api/docs/deprecations) confirms the December 11, 2026 removal of three summer-2025 API snapshots: gpt-5-2025-08-07, gpt-5-pro-2025-10-06, and o3-2025-04-16. The notice went out to affected developers on June 11, 2026, giving the standard six-month warning window for generally-available models. The authoritative replacement map on OpenAI's table: gpt-5.6-sol for gpt-5 and o3 (bare), gpt-5.6-sol with reasoning_effort set to pro for gpt-5-pro, gpt-5.6-terra for the mini snapshots, and gpt-5.6-luna for the nano snapshots. Important clarification versus yesterday's refresh-notes concern: this shutdown is a real, confirmed event on OpenAI's own developer docs and is NOT a conflation with the separate GPT-5.6 unification work. A separate community forum post quotes replacement names (gpt-5.4-mini, gpt-5.4-nano) that conflict with the official table — treat the official docs as canonical. One third-party article also suggests GPT-6 Astra as a recommended successor, which also conflicts with the docs. Scope: the API-tier snapshots are what's being removed; ChatGPT's consumer tiers are governed by the separate unified-meter rollout tracked elsewhere.",
+      "link": "https://developers.openai.com/api/docs/deprecations",
+      "why_it_matters": "This is the kind of deadline worth a reminder two weeks out rather than two days out. If you have anything running against the gpt-5 or o3 API snapshots — a cron job, a batch script, a notebook with a pinned model id — you have 14 days from today to swap it over. The migration itself is straightforward: in Python, replace the model=\"gpt-5-2025-08-07\" or model=\"o3-2025-04-16\" string with model=\"gpt-5.6-sol\", and for the gpt-5-pro path add reasoning_effort=\"pro\" to the API call. mini → gpt-5.6-terra, nano → gpt-5.6-luna. The specific thing to watch: any Python code that hard-codes dated snapshot strings (the \"-2025-08-07\" style). Those are exactly the identifiers that will stop responding on December 11. OpenAI's deprecations page is the canonical source — don't trust any blog or forum post that gives different replacement names, because at least two popular secondary sources are quoting conflicting model ids. Cost-wise, gpt-5.6-sol is priced roughly in the same band as gpt-5 was, so this is a pure substitution, not a pricing change. If you're on API tier billing, this is unrelated to the separate ChatGPT+Codex unified-meter rollout tracked in today's am digest; API billing stays its own system through the December change.",
+      "why_it_matters_brief": "Two-week warning: gpt-5, gpt-5-pro and o3 API snapshots shut down December 11 — swap pinned model strings to gpt-5.6-sol/terra/luna per OpenAI's deprecations table, not the conflicting model names in secondary blogs.",
+      "source": {
+        "name": "OpenAI Developer Docs — Deprecations (developers.openai.com/api/docs/deprecations); OpenAI Community forum (deprecation notice thread 1379553); aiengineerguide 'GPT-5 retirement date'; ecorpit.com shutdown migration guide",
+        "type": "scrape",
+        "url": "https://developers.openai.com/api/docs/deprecations"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — OpenAI Dec 11 2026 deprecation of gpt-5-2025-08-07, gpt-5-pro-2025-10-06 and o3-2025-04-16. Replacement map per official docs: gpt-5.6-sol for gpt-5 and o3; gpt-5.6-sol + reasoning_effort=pro for gpt-5-pro; gpt-5.6-terra for mini; gpt-5.6-luna for nano. Original notice went out June 11 2026. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI Developer Docs — Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "take": "Authoritative source for the December 11 removal and the gpt-5.6-sol/terra/luna replacement map. The notice to affected developers went out on June 11, 2026, meeting OpenAI's stated six-month advance window for GA model retirements."
+        },
+        {
+          "source": "ecorpit.com — 'GPT-5 deprecation December 2026: gpt-5, mini and o3 end 11 Dec, 30-day plan'",
+          "url": "https://ecorpit.com/openai-gpt-5-o3-shutdown-december-2026-migration/",
+          "take": "Secondary developer-facing migration guide. Walks through a 30-day cutover plan for teams running pinned snapshots in production."
+        }
+      ]
+    },
+    {
+      "id": "arena-agent-arena-index-launch-nov18",
+      "tier": 2,
+      "title": "Arena (formerly LMArena) launched the Agent Arena Index on November 18 — 2.9M user sessions since June, six focused sub-indexes, and Fable 5.2 Max at 1463 leads by 134 points",
+      "summary": "On November 18, 2026, Arena — the evaluation platform that rebranded from LMArena earlier in the year — launched its Agent Arena Index alongside six focused sub-indexes (specialized by task type). The index's underlying dataset: more than 2.9 million user sessions collected since June 4, 2026, when the original Agent Arena leaderboard went live on Hugging Face. The methodology combines four signals: task completion, user satisfaction, terminal-tool reliability, and responsiveness to corrections. The reported top model at launch is Anthropic's Claude Fable 5.2 (Max) at 1463, with a 134-point lead over the field — a gap significantly larger than the model-to-model gaps Arena has previously surfaced. Arena has also noted that its rescaling from the original leaderboard leaves rankings unchanged; the separate Alignment Index remains as a parallel measure alongside the new Agent Arena Index. Source caveat: the specific Fable 5.2 score of 1463 and the 134-point lead come from secondary coverage (cryptobriefing.com, digg.com), not yet from Arena's own blog post (which does carry the methodology but didn't surface a date in search); treat the specific numbers as reported.",
+      "link": "https://arena.ai/blog/introducing-the-agent-arena-index",
+      "why_it_matters": "Agent evaluation has been the piece of the AI benchmarking stack that's been weakest for the longest — benchmarks like SWE-Bench and Terminal-Bench measure specific slices, but there hasn't been a general-purpose 'how good is this agent at agentic work' leaderboard backed by millions of real user sessions. Arena's Index is the first to publish at this scale (2.9M sessions is roughly 500K sessions a month since launch), and the four-signal methodology — completion, satisfaction, terminal-tool reliability, responsiveness to corrections — is a reasonable coverage of what actually matters in day-to-day agent use. For Gabe specifically: this is the most useful read on 'which agent should I actually try first' questions. If you're picking between Claude Code, Cursor, OpenAI's Codex surface, and open-source agent frameworks, the Agent Arena Index gives you a holistic ranking that reflects real users on real tasks rather than a self-reported benchmark number from a model-release blog post. The 134-point lead for Fable 5.2 is the specific signal worth internalizing — in recent-history Arena terms, that's a very large gap, and it suggests the agentic-work ceiling has moved materially higher this quarter. Methodological caveat: Arena still has the structural issue that users self-select which tasks to run on which agents, so the rankings reflect the realized workload distribution rather than a controlled comparison — but that's also exactly what makes them useful as a picking-which-to-try signal.",
+      "why_it_matters_brief": "First agent eval leaderboard backed by 2.9M real user sessions — Fable 5.2 Max's 134-point lead is the specific signal that the agentic-work ceiling moved materially higher this quarter.",
+      "source": {
+        "name": "Arena blog ('Introducing the Agent Arena Index'); Crypto Briefing ('Arena launches Agent Arena Index'); Digg AI coverage; Hugging Face datasets (lmarena-ai/leaderboard-dataset)",
+        "type": "scrape",
+        "url": "https://arena.ai/blog/introducing-the-agent-arena-index"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Arena Agent Arena Index launched Nov 18 2026. 2.9M user sessions since June 4 2026. Four-signal methodology: completion / satisfaction / terminal-tool reliability / responsiveness to corrections. Reported top model: Claude Fable 5.2 Max at 1463, 134-point lead (score and lead from secondary coverage only). Six focused sub-indexes. Separate Alignment Index remains. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Crypto Briefing — 'Arena launches Agent Arena Index'",
+          "url": "https://cryptobriefing.com/arena-launches-agent-arena-index/",
+          "take": "Primary dated secondary coverage. Reports the Nov 18 launch, the 2.9M session dataset, and the Fable 5.2 Max score of 1463 with the 134-point lead."
+        },
+        {
+          "source": "Arena blog — 'Introducing the Agent Arena Index' (arena.ai)",
+          "url": "https://arena.ai/blog/introducing-the-agent-arena-index",
+          "take": "Primary methodology post from Arena. Describes the index as a holistic view of agentic performance across all types of agentic work, spanning the 2.9M+ user sessions."
+        },
+        {
+          "source": "Hugging Face — lmarena-ai/leaderboard-dataset",
+          "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+          "take": "The underlying dataset. Notes that Agent Arena data starts from its release on June 4, 2026 — the five-and-a-half-month collection window behind the Index."
+        }
+      ]
+    },
+    {
+      "id": "redhat-developer-hub-2-1-agent-ready-portal-mcp",
+      "tier": 2,
+      "title": "Red Hat Developer Hub 2.1 reaches late-November GA — AI catalog spans models, AI agents and MCP servers, with an in-portal MCP server and an upgraded intelligent assistant",
+      "summary": "Red Hat announced Developer Hub 2.1 at KubeCon + CloudNativeCon NA 2026 in Salt Lake City (November 10-13 window). General availability is set for later this month — a window that lines up with this week. Developer Hub is Red Hat's open-source-based enterprise developer portal built on the Backstage project; version 2.1 is the first release to position the product as 'agent-ready' for enterprise AI work. Headline additions: an AI catalog that lets platform teams register models, AI agents and MCP servers running on Red Hat AI, alongside skills and rules — the assets then sit in the portal with defined ownership and discoverability. An MCP server is coming in Developer Hub 2.1 itself. The in-portal assistant, formerly branded as Developer Lightspeed, has been upgraded. The product lifecycle is extended to 10 months, and the frontend has been reworked to simplify plugin customization. Several items ship as Developer Preview rather than GA: Agent Skills support for the Intelligent Assistant and ARM64 cluster support. Red Hat frames the product as platform engineering's tool for enterprises dealing with the growing sprawl of agent and MCP server deployments.",
+      "link": "https://sdtimes.com/open-source/red-hat-advances-red-hat-developer-hub-as-an-agent-ready-enterprise-developer-portal/",
+      "why_it_matters": "This is the platform-engineering answer to the 'we have 40 teams each running their own MCP server and nobody knows what's deployed' problem. If you work in a company where more than one team is building AI-assisted workflows, the sprawl of models, agent definitions, and MCP servers is the specific thing that makes enterprise AI adoption get stuck — not any individual model's capability. Developer Hub's bet is that the solution is a catalog pattern (same as Backstage's original pattern for microservices): every model, agent, and MCP server gets a registration with defined ownership, so when someone wants to use an existing capability they can find it and when something breaks there's a named human responsible. For Gabe specifically: not directly Python-stack adjacent on day one, but the architectural pattern is useful to understand. If you build a small MCP server for your own use (which is a very reasonable Python project), the convention Red Hat is pushing is 'register it in a catalog so it's discoverable.' That pattern — treating MCP servers as catalog entries with ownership and SLAs — is how enterprise AI is likely to scale into real workloads. The in-portal MCP server is the specific bit worth noting: it means Developer Hub itself exposes an MCP interface, so an agent in the catalog can query Developer Hub about what other agents are in the catalog. That's the recursive-tooling pattern that makes agent orchestration tractable without hand-rolling a service directory. Honest caveat: GA is 'expected later this month' per the SD Times writeup — the exact ship date within the final week of November isn't locked.",
+      "why_it_matters_brief": "Platform engineering's answer to MCP-server sprawl — a Backstage-based catalog where every model, agent and MCP server has registered ownership, with Developer Hub itself exposing an MCP interface for agent-on-agent discovery.",
+      "source": {
+        "name": "SD Times ('Red Hat Advances Red Hat Developer Hub as an Agent-Ready Enterprise Developer Portal'); Red Hat Developer Hub 2.1 release docs (docs.redhat.com); Network World ('Red Hat joins race to be air traffic controller for AI agents'); Digital Today Korea",
+        "type": "scrape",
+        "url": "https://sdtimes.com/open-source/red-hat-advances-red-hat-developer-hub-as-an-agent-ready-enterprise-developer-portal/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Red Hat Developer Hub 2.1 announced at KubeCon NA 2026 (Salt Lake City, Nov 10-13). GA 'expected later this month'. Built on Backstage. AI catalog for models/agents/MCP servers. MCP server coming in DH 2.1. In-portal assistant upgraded from Developer Lightspeed. 10-month lifecycle. Agent Skills support for Intelligent Assistant and ARM64 in Developer Preview. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "SD Times — 'Red Hat Advances Red Hat Developer Hub as an Agent-Ready Enterprise Developer Portal'",
+          "url": "https://sdtimes.com/open-source/red-hat-advances-red-hat-developer-hub-as-an-agent-ready-enterprise-developer-portal/",
+          "take": "Primary trade-press coverage of the KubeCon NA announcement. Confirms the AI catalog scope (models + agents + MCP servers), the 10-month lifecycle, and the Developer Preview status of Agent Skills and ARM64."
+        },
+        {
+          "source": "Network World — 'Red Hat joins race to be air traffic controller for AI agents'",
+          "url": "https://www.networkworld.com/article/4247825/red-hat-joins-race-to-be-air-traffic-controller-for-ai-agents.html",
+          "take": "Enterprise-IT framing. Notes that an MCP server is coming in Red Hat Developer Hub 2.1, expected to be generally available later this month."
+        },
+        {
+          "source": "Red Hat Developer Hub 2.1 release docs (docs.redhat.com)",
+          "url": "https://docs.redhat.com/en/documentation/red_hat_developer_hub/2.1/whats_new-developer_preview",
+          "take": "Primary docs. Developer Preview feature list confirms Agent Skills support for the Intelligent Assistant and ARM64 cluster support ship below GA, so production use must stay on the GA feature set."
+        }
+      ]
+    },
+    {
+      "id": "cohere-cubic-aisle-close-cyber-secure-coding-nov10-13",
+      "tier": 3,
+      "title": "Cohere closed its AISLE acquisition November 10 and cubic November 13 — the Toronto lab now has a dedicated cyber business (as Cohere Cyber, Prague-based) and a secure-coding vertical led by cubic's founder",
+      "summary": "Cohere closed two acquisitions in a four-day span: AISLE on November 10 (announced October 15) and cubic on November 13. Both deals were disclosed without financial terms. AISLE, a vulnerability-discovery startup, has been rebranded as Cohere Cyber and will operate as Cohere's dedicated cybersecurity business; AISLE co-founder Ondrej Vlcek takes a Senior Vice President role leading the new unit, and Cohere plans to make Prague its global center for AI cybersecurity work. The cubic acquisition brings in the London-based AI code-review company whose team will set up Cohere's secure coding vertical under founder and CEO Paul Sanglé-Ferrière; cubic will continue running its existing product. These are Cohere's third and fourth announced deals of 2026, and leave the separately-announced merger with Aleph Alpha still in final stages (not yet closed). The pattern — a sovereign-AI platform assembling a cybersecurity stack plus a secure-coding front end — fits Cohere's framing of enterprise AI for regulated industries.",
+      "link": "https://letsdatascience.com/news/cohere-completes-aisle-acquisition-and-brings-on-cubic-team-3aabd2e4",
+      "why_it_matters": "This matters more as a sign of where enterprise AI is actually going than as a flashy model-release story. Cohere is the lab that's spent the least time chasing frontier-benchmark headlines and the most time building a platform for regulated industries — banks, healthcare, government — where sovereignty, security, and auditability dominate the buying decision. The specific bet with the AISLE-plus-cubic combination is that enterprise AI's next bottleneck isn't model capability, it's defensive tooling: AISLE handles the 'is this agent being attacked' question, cubic handles the 'is this AI-generated code safe to ship' question. The Prague-based Cohere Cyber is a specifically European framing (Prague has been building a reputation as a cybersecurity hub since the Avast-Prague era), and it fits with Cohere's sovereign-AI pitch — if you're a European bank buying from Cohere, you'd prefer the security backend to be European-based rather than routing through Silicon Valley. For Gabe: not directly Python-stack adjacent, but the cubic side is interesting as a lens on 'AI code review as a product.' cubic was focused on reviewing AI-generated diffs for security and correctness, which is exactly the review step most hobbyist coders skip when accepting Claude or Copilot suggestions. Watching how this productizes into Cohere's stack over the next quarter is a useful read on what the review layer in an agentic coding workflow looks like.",
+      "why_it_matters_brief": "Cohere's bet: enterprise AI's next bottleneck is defensive tooling, not model capability — AISLE handles attack detection against agents, cubic handles 'is this AI-generated diff safe to ship', and both close in a four-day span.",
+      "source": {
+        "name": "Let's Data Science ('Cohere Completes AISLE Acquisition and Brings On cubic Team'); Unite.AI; Pulse 2.0; Cyber Magazine; AI Magazine; Four Week MBA",
+        "type": "scrape",
+        "url": "https://letsdatascience.com/news/cohere-completes-aisle-acquisition-and-brings-on-cubic-team-3aabd2e4"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Cohere closed AISLE acquisition Nov 10 2026 (announced Oct 15) and cubic acquisition Nov 13 2026. AISLE rebrands as Cohere Cyber, Prague-based, led by co-founder Ondrej Vlcek as SVP. cubic (London) led by founder Paul Sanglé-Ferrière, becomes Cohere's secure coding vertical. No terms disclosed. Third and fourth 2026 deals. Aleph Alpha merger still pending close. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Let's Data Science — 'Cohere Completes AISLE Acquisition and Brings On cubic Team'",
+          "url": "https://letsdatascience.com/news/cohere-completes-aisle-acquisition-and-brings-on-cubic-team-3aabd2e4",
+          "take": "Primary consolidated secondary coverage. Confirms the Nov 10 AISLE close and the Nov 13 cubic close, both with no terms disclosed, and names the leadership transitions."
+        },
+        {
+          "source": "Cyber Magazine — 'Why is Cohere Acquiring Agentic AI Cybersecurity firm AISLE?'",
+          "url": "https://cybermagazine.com/news/why-did-cohere-acquire-agentic-ai-cybersecurity-firm-aisle",
+          "take": "Context on AISLE's agentic-AI cybersecurity positioning, aligning with Cohere's regulated-industries enterprise-AI pitch."
+        },
+        {
+          "source": "Pulse 2.0 — 'Cohere Expands Sovereign AI Platform With AISLE Acquisition And Cubic Team Addition'",
+          "url": "https://pulse2.com/cohere-expands-sovereign-ai-platform-with-aisle-acquisition-and-cubic-team-addition/",
+          "take": "Secondary framing. Positions the two acquisitions as a joint expansion of Cohere's sovereign AI platform, with Prague as the designated cybersecurity center."
+        }
+      ]
+    },
+    {
+      "id": "nvidia-rubin-hpc-sc26-salt-lake-city-50k-cuda-nov16",
+      "tier": 3,
+      "title": "NVIDIA debuted the Rubin HPC chip at SC26 on November 16 — 50,000+ CUDA cores for scientific research, with a 2028 shipping window, extending the Rubin architecture beyond agentic AI into HPC workloads",
+      "summary": "At the SC26 supercomputing conference on November 16, 2026, NVIDIA announced the Rubin HPC chip — a specialized variant of the Rubin platform targeted specifically at scientific research workloads. The headline spec: over 50,000 CUDA cores per chip. NVIDIA's framing positions the chip alongside a new set of scientific research libraries, extending the Rubin platform (first unveiled at CES 2026 and expanded at GTC 2026) beyond its agentic AI and LLM-inference core use cases into dedicated HPC territory. The shipping window announced is 2028, which is far enough out to make this more a roadmap commitment than an immediate product. Background context: the full Rubin family now spans six-plus chip variants including Vera (CPU), Rubin CPX (expected end-of-2026), and a current production Vera Rubin platform shipping to enterprise customers. The SC26 announcement also shipped as part of a broader expansion of NVIDIA's AI infrastructure push into HPC, which traditionally has been a market dominated by specialized vendors rather than general-purpose GPU companies.",
+      "link": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries/",
+      "why_it_matters": "This is the specific announcement that tells you what NVIDIA thinks the next decade's GPU-cluster workload mix looks like. For most of the last five years, the HPC market and the AI-training market have been treated as nearby-but-separate worlds — HPC meant weather simulation, molecular dynamics, Monte Carlo risk — but the two workloads have been converging as AI methods get adopted inside traditional scientific computing (think protein folding, materials discovery, climate modeling). Rubin HPC with 50,000+ CUDA cores per chip is NVIDIA's explicit bet that the GPU vendor who owns AI training also wants to own what the scientific-research market builds on top. For Gabe specifically: not directly Python-stack adjacent in the sense that you'll touch one of these chips, but the ecosystem downstream is very Python-adjacent. Scientific computing on GPUs has always been dominated by Python wrappers (CuPy, PyTorch, JAX, Numba with CUDA), and if NVIDIA's HPC push ships with a new scientific research library stack, that library stack will almost certainly expose Python APIs first. The specific thing to watch is whether this move pulls GPU-accelerated scientific Python further into the mainstream for domains that have historically been Fortran/MPI shops. The 2028 shipping window is the main caveat — this is a roadmap commitment, not something you'd plan a project around today.",
+      "why_it_matters_brief": "NVIDIA bets the GPU vendor that owns AI training should own scientific HPC too — 50,000+ CUDA cores for research workloads in 2028, with a new scientific research library stack as the entry point.",
+      "source": {
+        "name": "SiliconANGLE ('NVIDIA debuts new Rubin HPC chip scientific research libraries'); Network World ('NVIDIA expands AI infrastructure push into high-performance computing')",
+        "type": "scrape",
+        "url": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries/"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — NVIDIA Rubin HPC chip announced at SC26 (Supercomputing 2026 conference) on Nov 16 2026. 50,000+ CUDA cores. 2028 shipping. Part of a new scientific research libraries package. Extends Rubin platform (CES 2026 debut, GTC 2026 expansion) from AI to HPC workloads. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "SiliconANGLE — 'NVIDIA debuts new Rubin HPC chip scientific research libraries'",
+          "url": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries/",
+          "take": "Primary dated trade-press coverage of the SC26 announcement. Confirms the 50,000+ CUDA core spec, the 2028 ship window, and the accompanying scientific research library stack."
+        },
+        {
+          "source": "Network World — 'NVIDIA expands AI infrastructure push into high-performance computing'",
+          "url": "https://www.networkworld.com/article/4250303/nvidia-expands-ai-infrastructure-push-into-high-performance-computing.html",
+          "take": "Secondary analytical framing. Positions Rubin HPC as NVIDIA explicitly entering the HPC market segment, which has historically been dominated by specialized vendors rather than GPU-first companies."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-nasdaq100-inclusion-december-21-post-ipo",
+      "tier": 3,
+      "title": "Anthropic (ANT) is on track to join the Nasdaq 100 on December 21 — the fastest post-IPO index addition in memory, following the November 19 Nasdaq debut that opened at $111.50 against the $83 offer",
+      "summary": "Anthropic, trading under the ticker ANT since its November 19, 2026 Nasdaq debut, is on track for addition to the Nasdaq 100 index on December 21 — an unusually fast inclusion window for a newly-listed stock. The IPO itself was the largest on record by several measures: shares priced at $83 (above the original $70-$78 range) and opened at $111.50, roughly 34% above the offering price, giving the company an implied valuation of around $2 trillion at the open (reports range from $81.3B capital raised on ~980M shares to ~$2.01T valuation). The first-day price action was less kind: reports put ANT at $95.69 by 1:55pm ET and $93.10 by 1:20pm ET on debut day, with one source citing a $97.17 first-day close. The specific framing worth tracking: ANT closed its sixth session below the IPO price on November 25 per prior-digest reporting (close ~$81.91, -6.55%, intraday range $75.61-$83.49) — so index-inclusion plus the Dec 21 date lands as a forced-buy catalyst event for every passive-index fund that tracks the Nasdaq 100. That mechanical demand is the thing that could move the price regardless of the underlying narrative.",
+      "link": "https://foxbusiness.com/markets/anthropic-begins-trading-nasdaq-record-breaking-ipo",
+      "why_it_matters": "This is the specific calendar event that institutional investors have been tracking since the IPO filing — and it's worth noting even for someone not actively trading ANT, because the mechanics are a useful case study in how 'passive' index-fund flows actually work. When a stock joins the Nasdaq 100, every ETF and mutual fund that tracks the index has to buy enough of it to match its index weighting, within a short window around the inclusion date. For a stock as large as Anthropic (~$2T valuation at open) joining with significant weight, that forced-buy pressure is measured in tens of billions of dollars of demand, concentrated into a few trading sessions around December 21. The interesting read is how this interacts with the current price action: ANT's spent its first six sessions below the IPO price, which means the market's current view is roughly 'priced for perfection, overshot'; the December 21 inclusion then provides a mechanical demand catalyst that's independent of any fundamental news. Watching the price action from here to Dec 21 is a useful real-time view of 'passive index inflows versus active fundamental trading' as a single stock plays it out. For Gabe: not directly relevant to Python code, but Anthropic is the organization behind Claude Code, and understanding how AI-lab IPO mechanics play out is useful context for how the AI industry's capital structure is reshaping itself — the next decade's AI tooling will be partly funded by this valuation cycle, and knowing how retail/institutional/passive flows interact is how you read the signals.",
+      "why_it_matters_brief": "Dec 21 Nasdaq 100 inclusion is the forced-buy catalyst event for every passive fund tracking the index — ANT's six sessions below IPO price make this a real-time case study of passive flows versus active fundamentals.",
+      "source": {
+        "name": "Fox Business ('Anthropic begins trading on Nasdaq in record-breaking IPO'); TechRepublic ('Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut'); Al Jazeera ('Anthropic starts trading in the US after blockbuster IPO'); Benzinga; Motley Fool",
+        "type": "scrape",
+        "url": "https://foxbusiness.com/markets/anthropic-begins-trading-nasdaq-record-breaking-ipo"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "digest",
+      "enriched_overnight": false,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Anthropic (ticker ANT) on track for Nasdaq 100 inclusion Dec 21 2026. IPO Nov 19, priced at $83 (above $70-$78 range), opened at $111.50 (~34% above offer), implied valuation ~$2T at open. First-day: dipped to $93.10 by 1:20pm ET, ~$97.17 close (per NeoTeo/CNBC single source). Prior digest reporting: six sessions below IPO price through Nov 25. hero_image null."
+        }
+      ],
+      "takes": [
+        {
+          "source": "TechRepublic — 'Anthropic IPO: Claude Maker Opens at $111.50 in Record Nasdaq Debut'",
+          "url": "https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/",
+          "take": "Primary trade-press coverage of the Nov 19 debut. Confirms the $83 IPO price, $111.50 opening print, 34% above-offer open, and the Nasdaq 100 December 21 inclusion track."
+        },
+        {
+          "source": "Motley Fool — 'Why Anthropic Stock Is Up (and Down) Today'",
+          "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/",
+          "take": "Investor-facing analysis of the first-day price action. Notes the intraday fade from the $111.50 open to midday prints near $93-95, matching the pattern of 'priced for perfection, overshot'."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": []
+}
