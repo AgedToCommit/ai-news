@@ -1,6 +1,35 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-27T11:00:00Z-refresh",
+      "phase": "refresh",
+      "status": "success",
+      "started_at": "2026-11-27T11:00:00Z",
+      "ended_at": "2026-11-27T11:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 22500,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 1500,
+        "deep_fetch": 0,
+        "discovery_search": 18000,
+        "curation": 2500,
+        "output_write": 500
+      },
+      "fetches_made": 18,
+      "items_input": 2,
+      "items_output": 4,
+      "items_added": 1,
+      "items_kept": 3,
+      "items_dropped": 0,
+      "snapshot_written": "2026-11-27-am",
+      "fallback_did_enrichment": false,
+      "error": null,
+      "partial": false,
+      "notes": "Refresh phase, 7am EST Fri Nov 27 2026 (Black Friday). Standard path — today's am file existed from enrichment run. Sweep window: since 2026-11-27T07:30:00Z (enrichment ended_at). Network scope restricted: direct WebFetch to huggingface.co, simonwillison.net, interconnects.ai, llm-stats.com, nhimg.org, releasebot.io, emergent.sh, dev.to, blog.jetbrains.com, community.openai.com, theneuron.ai, samonai.substack.com, virginradiodubai.com, csuite.so, aitoolly.com all failed DNS resolution — RSS sweep and direct scrape sweep fully blocked. Used WebSearch exclusively (18 search queries). Black Friday: US labs quiet. 1 new item added from Asia/UAE cycle: 'uae-fedai-17-partners-nov27' (Tier 3) — UAE FedAI National Integrated Agentic AI Ecosystem first partner cohort ceremony on Nov 27 with 17 partners; sourced from AI news aggregator snippets (theneuron.ai, Virgin Radio Dubai), partner names reported but not independently verified against primary UAE government release. Items considered but not added: (1) GPT-5.6 sunset date — multiple Nov 27 digests referenced this but it appears to conflate the Dec 11 retirement of older gpt-5/o3 2025-vintage API models (confirmed) with a GPT-5.6 deprecation (not confirmed); dropped to avoid propagating the confusion. (2) Nvidia SE Asia server halt — real story but dated Nov 17-18, outside the 5-hour refresh window. (3) China AI models (Qwen/DeepSeek/ByteDance) — no Nov 27 releases found."
+    },
+    {
       "run_id": "2026-11-27T07:00:00Z-enrichment",
       "phase": "enrichment",
       "status": "partial",
