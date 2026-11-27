@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-27T07:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "partial",
+      "started_at": "2026-11-27T07:00:00Z",
+      "ended_at": "2026-11-27T07:30:00Z",
+      "wall_time_ms": 1800000,
+      "tokens_used": 62000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 0,
+        "deep_fetch": 0,
+        "discovery_search": 42000,
+        "curation": 19000,
+        "output_write": 1000
+      },
+      "fetches_made": 10,
+      "items_input": 8,
+      "items_output": 3,
+      "items_added": 0,
+      "items_kept": 3,
+      "items_dropped": 5,
+      "snapshot_written": "2026-11-27-am",
+      "error": null,
+      "partial": true,
+      "notes": "Enrichment phase, 2am EST Fri Nov 27 2026 (Black Friday). Read yesterday's 2026-11-26-pm.json (8 items). Verification pass against public sources via WebSearch (10 searches, standard mode). CRITICAL FINDING: 5 of 8 items in yesterday's pm digest could not be corroborated against any public source, and in 3 cases my searches returned material that directly contradicts the pm item's claims (not just absence of evidence). Dropped items and verification outcomes: (1) 'anthropic-claude-vp-vnp-proof-lean-nov23' — searches for Claude/Anthropic VP≠VNP Lean proof return only Anthropic's actual Fermat's Last Theorem formalization (Sep 2026) and Riemann zeta work; no VP ≠ VNP paper exists in public record on Nov 23. (2) 'sakana-namazu-small-30b-nemotron-nov25' — real Sakana Namazu is a Japanese-specialized API model fine-tuned from Moonshot Kimi K2.6 (not NVIDIA Nemotron 3 Nano), launched Aug 3 2026, no published parameter count, proprietary license; no 30B variant exists. (3) 'cognition-swe-2-1-devin-kimi-k3-nov24' — current Cognition model is still SWE-2 (Sep 10 2026 release) per llm-stats and MindStudio; no SWE-2.1 release confirmed. (4) 'pydantic-ai-v2-74-v2-75-computer-use-nov24-25' — closest confirmed November release is v2.69.0 (Nov 16); CERN mirror lists v2.74.0 but documented capabilities are filesystem/shell/web-search, not computer-use. (5) 'eu-sovereign-tech-equity-fund-50b-nov25' — actual EU fund is Scaleup Europe Fund at €5B (Jun 2026, EQT manager Oct 2026), not a €50B 'Sovereign Tech Equity Fund'; the pm item appears to conflate this with the broader ~€500B MFF framework (10x magnitude error). Kept + enriched items (3): (1) 'anthropic-messages-api-rust-rewrite-70cpu-nov25' — corrected to Katelyn Lesse Latent Space podcast (Oct 27 2026) figures: ~40-50% CPU, 10-20% faster TTFT; removed unsourced Nov 25 published figures of 70% CPU / 80% memory and the 24% → 99.6% match-rate curve; retained shadow-traffic diff-against-Python-oracle methodology (confirmed via podcast). (2) 'xpeng-iron-humanoid-turing-vla-3-ai-day-nov25' — confirmed Nov 25 Guangzhou AI Day, theme 'ORIGIN', 8th edition, IRON 170 cm / 76 DoF body + 21 per hand; mass production end-2026 or Jan 2027 per He Xiaopeng Nov 16 earnings call; removed unverified Yoyo-01 robotaxi product, Turing Physical AI Architecture / VLA 3.0 version string, and XPENG Energy subscription announcement. (3) 'openai-chatgpt-codex-unified-usage-meter-december' — verified via OpenAI Help Center article (updated Nov 2 2026); Plus/Pro/Business scope, December start, instant chat excluded, token-based counting; added Nov 26 Pro-user rollout detail (Chat and Work tabs merging); pool size still undisclosed. No late-breaking items added — none surfaced for the Nov 26-27 window during searches. Marked 'partial' because 5-of-8 prune rate is unusual and the high drop rate reflects verification failures, not normal editorial pruning. Final am file: 3 items, tier_counts {1:1, 2:0, 3:2}."
+    },
+    {
       "run_id": "2026-11-26T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
