@@ -1,0 +1,183 @@
+{
+  "snapshot_id": "2026-11-27-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-11-27",
+  "generated_at": "2026-11-27T07:00:00Z",
+  "generated_at_local": "2026-11-27T02:00:00-05:00",
+  "phase_history": [
+    {
+      "phase": "enrichment",
+      "ran_at": "2026-11-27T07:00:00Z",
+      "duration_ms": 1800000
+    }
+  ],
+  "tier_counts": {
+    "1": 1,
+    "2": 0,
+    "3": 2
+  },
+  "items": [
+    {
+      "id": "anthropic-messages-api-rust-rewrite-70cpu-nov25",
+      "tier": 1,
+      "title": "Anthropic's Messages API has been rewritten in Rust with Claude writing most of the code — podcast-sourced figures put the win at ~40-50% CPU and 10-20% faster TTFT",
+      "summary": "Katelyn Lesse, who runs platform engineering at Anthropic, described the Messages API's Python-to-Rust rewrite on the Latent Space podcast (published October 27, 2026). Claimed figures: about 40-50% less CPU per request and 10-20% faster time to first token. The team started with no Rust developers in-house; Claude generated most of the implementation code, while humans handled design and verification. The validation approach was to run shadow traffic through the new Rust service in parallel with production Python, compare outputs, and only cut over when the match rate was acceptable. Motivation per the podcast: Anthropic's CPU usage is governed by a fixed budget negotiated with its cloud provider, and the volume surge from agentic-coding CI runs made the budget binding. A Chinese-language InfoQ write-up via 36Kr reported the same figures on October 29. Primary enrichment finding this cycle: yesterday's pm digest claimed a November 25 Anthropic post with substantially larger numbers (~70% CPU, ~80% memory) and a differential-testing-oracle methodology with a 24% → 99.6% match-rate curve. No such post or independent coverage could be sourced during enrichment — the Latent Space podcast remains the only confirmed primary source. The 40-50% podcast figure is the number to anchor on until a dated Anthropic engineering post is cited; the specific August-October production measurement claim may have been embellished in yesterday's digest.",
+      "link": "https://newsletter.pragmaticengineer.com/p/inside-anthropic",
+      "why_it_matters": "The underlying story is one of the most useful public datapoints on 'AI company uses AI to rewrite its own production service' — not because of the raw CPU number but because of the method: shadow-traffic validation, where the live Python service is used as a differential-testing oracle for AI-generated Rust output. That's directly applicable to anyone with a stable Python service who wants to try an AI-driven Rust port on production-realistic workloads. For Gabe specifically: this is a useful threshold-and-risk framing even without a Rust project in hand. If you have a Python service doing something performance-sensitive, the realistic range on a well-executed Rust port via an LLM is roughly 40-50% CPU reduction (per Lesse's podcast), with 10-20% TTFT improvement being the latency win. The specific engineering pattern — shadow-traffic diff against a Python oracle — is the portable idea. If the Rust port's outputs match the Python oracle on production-realistic inputs, the behavior is preserved; if they don't, the diff tells you exactly which cases to fix. That's how you make the port tractable without a staging-environment test harness that models production load. Honest caveat on the numbers: the figures are self-reported from a podcast interview, not from a published engineering post, and yesterday's digest's 70%/80% version could not be independently sourced during enrichment this cycle. The Pragmatic Engineer newsletter has an 'Inside Anthropic' piece that draws on Lesse's appearance; it's the best secondary source if you want the context beyond the podcast itself.",
+      "why_it_matters_brief": "Shadow-traffic diff against a Python oracle is the portable method — podcast-sourced ~40-50% CPU reduction and 10-20% faster TTFT is the realistic ballpark for a Rust rewrite with AI writing most of the code.",
+      "source": {
+        "name": "Latent Space podcast (Katelyn Lesse, Oct 27 2026); The Pragmatic Engineer ('Inside Anthropic'); InfoQ via 36Kr (Oct 29 2026 Chinese-language coverage)",
+        "type": "scrape",
+        "url": "https://newsletter.pragmaticengineer.com/p/inside-anthropic"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-26T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-26T18:00:00Z",
+          "by": "digest",
+          "change": "created — Anthropic Messages API Rust rewrite framed as Nov 25 2026 published numbers. ~70% CPU, ~80% memory, ~20% faster TTFT. Differential-testing oracle methodology, match rate 24% → 99.6% April-Aug. Prod rollout Sep 2026. hero_image null."
+        },
+        {
+          "at": "2026-11-27T07:00:00Z",
+          "by": "enrichment",
+          "change": "corrected sourcing — primary confirmed source is Katelyn Lesse on Latent Space podcast (Oct 27 2026) with ~40-50% CPU and 10-20% TTFT. No independently-sourced Nov 25 Anthropic post found during enrichment. Removed the 24% → 99.6% match-rate curve and 80% memory figure (unsourced). Shadow-traffic validation methodology retained (confirmed via podcast coverage). Updated summary, why_it_matters and brief. Dropped 'TechRepublic' and 'Emergent.sh' as unverifiable source names."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Latent Space podcast — Katelyn Lesse (Oct 27 2026)",
+          "url": "https://newsletter.pragmaticengineer.com/p/inside-anthropic",
+          "take": "Primary confirmed source. Lesse gives the 40-50% CPU figure as a rough ballpark from production measurement and the 10-20% TTFT improvement; describes the shadow-traffic diff approach against the Python oracle and the team's no-Rust-developers starting position."
+        }
+      ]
+    },
+    {
+      "id": "xpeng-iron-humanoid-turing-vla-3-ai-day-nov25",
+      "tier": 3,
+      "title": "XPENG held its 2026 AI Day in Guangzhou on November 25 — IRON humanoid (170 cm, 76 DoF body + 21 per hand) featured live, mass production targeted for end of 2026 or January 2027",
+      "summary": "XPENG held its 2026 AI Day on November 25, 2026 in Guangzhou, under the theme 'ORIGIN'. It is the eighth edition of the event and the headline product was the IRON humanoid robot, which XPENG said would interact live with the audience. Verified specs: approximately 170 cm tall, with 76 degrees of freedom across the body and 21 degrees of freedom in each hand. The latest IRON unit rolled off XPENG's newly commissioned humanoid production line on September 8, 2026, and CEO He Xiaopeng said during the November 16 earnings call that mass production should begin at the end of 2026 or in January 2027. XPENG has framed the humanoid program as part of a broader Physical AI push alongside its EV business. Enrichment note: yesterday's pm digest claimed the event also unveiled a 'Yoyo-01 purpose-built robotaxi' and a 'Turing Physical AI Architecture (VLA 3.0)' as the shared foundation for both the humanoid and vehicle; neither the Yoyo-01 name nor the VLA 3.0 / Turing architecture version string could be independently verified during enrichment, so those specifics have been removed from the summary. XPENG Energy's subsidiary announcement of a global smart-driving subscription has also not been separately confirmed. What is confirmed: the AI Day was held on Nov 25, IRON was the featured product with live stage interaction, and the human-size specs match prior XPENG disclosures.",
+      "link": "https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/",
+      "why_it_matters": "This is the specific announcement that puts XPENG into the 'ship a shipping-fleet EV and a humanoid from one company' thesis that Tesla (Optimus), Figure, and 1X are all betting on, with the specific wrinkle that XPENG actually ships EVs at consumer scale. The 170 cm / 76 DoF body configuration is in the human-adjacent size class that's most useful for existing built environments; the 21 DoF per hand number is competitive with Figure 02 and Tesla Optimus for manipulation tasks. The specific long-term bet worth understanding is whether XPENG can use its shipping-EV telemetry — real-world driving sensor fusion from a production fleet — as training signal for a humanoid's physical-AI foundation. That cross-embodiment learning thesis is the architectural question the humanoid space is currently fighting over, and XPENG is the only player with a real shipping-vehicle fleet in the lineup. The 'mass production end of 2026 or January 2027' framing is the specific thing to interrogate — EV-industry language like this usually means 'small-batch production starting then, real volume later'. For Gabe: XPENG is not currently Python-stack adjacent, so the direct relevance is low — the broader interesting read is that the next 18 months of physical-AI competition will be between Chinese (XPENG, Unitree, X Square) and US (Figure, 1X, Tesla, Apptronik) players, and the cross-embodiment-foundation-model question is the specific technical fork to watch. Honest caveat: yesterday's digest attributed specific architecture-version details (Turing Physical AI Architecture / VLA 3.0) and a paired robotaxi product (Yoyo-01) to the event that enrichment could not confirm against public coverage — those claims have been trimmed from the summary pending verification in post-event coverage.",
+      "why_it_matters_brief": "XPENG's AI Day bet: ship an EV at consumer scale AND a humanoid from one company — the specific advantage versus Figure/Tesla/1X is the shipping fleet's real-world driving telemetry as potential training signal for physical AI.",
+      "source": {
+        "name": "CnEVPost ('Xpeng to hold 2026 AI Day Nov 25'); Finviz ('XPENG to showcase its physical AI push at annual AI Day featuring its latest humanoid robot in action')",
+        "type": "scrape",
+        "url": "https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/"
+      },
+      "region": "Asia",
+      "hero_image": null,
+      "added_at": "2026-11-26T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-26T18:00:00Z",
+          "by": "digest",
+          "change": "created — XPENG AI Day 2026 Nov 25 in Guangzhou. IRON humanoid (170cm/62kg) + Yoyo-01 robotaxi, both slated for 2027. Turing Physical AI Architecture = VLA 3.0. XPENG Energy announces global smart-driving subscription same day. hero_image null."
+        },
+        {
+          "at": "2026-11-27T07:00:00Z",
+          "by": "enrichment",
+          "change": "verified Nov 25 2026 AI Day Guangzhou event, theme 'ORIGIN', 8th edition. IRON specs updated to confirmed values: ~170 cm height, 76 DoF across body + 21 per hand (from CnEVPost and CGTN prior coverage of the same IRON unit). Mass-production target 'end of 2026 or January 2027' confirmed from He Xiaopeng Nov 16 earnings call. Removed unverified claims: 62 kg weight spec, Yoyo-01 robotaxi product, Turing Physical AI Architecture / VLA 3.0 version string, XPENG Energy subscription announcement. Updated summary, why_it_matters and brief to reflect verified-only scope."
+        }
+      ],
+      "takes": [
+        {
+          "source": "CnEVPost — 'Xpeng to hold 2026 AI Day Nov 25'",
+          "url": "https://cnevpost.com/2026/11/19/xpeng-to-hold-2026-ai-day-nov-25/",
+          "take": "Primary EV-trade-press preview. Confirms the Nov 25 Guangzhou venue, the 'ORIGIN' theme, the 8th-edition framing, and that IRON will interact live with the audience."
+        },
+        {
+          "source": "Finviz news feed — 'XPENG to showcase its physical AI push at annual AI Day featuring its latest humanoid robot in action'",
+          "url": "https://finviz.com/news/425384/xpeng-to-showcase-its-physical-ai-push-at-annual-ai-day-featuring-its-latest-humanoid-robot-in-action",
+          "take": "Secondary market-news framing. Confirms the physical AI push framing and the humanoid-robot-in-action featuring at the event."
+        }
+      ]
+    },
+    {
+      "id": "openai-chatgpt-codex-unified-usage-meter-december",
+      "tier": 3,
+      "title": "OpenAI confirms: Plus, Pro and Business will draw from one token-based pool across ChatGPT and Codex starting in December — Pro-user rollout already underway as of Nov 26",
+      "summary": "OpenAI's Help Center article was updated on November 2, 2026 to confirm that starting in December, Plus, Pro and Business subscribers will share one token-based usage allowance between ChatGPT and Codex rather than two separate quotas. Instant chat sessions are excluded from the pool. Combined usage and reset times will appear in Settings → Usage. OpenAI has not disclosed the size of the shared pool per plan, so whether heavy multi-product users win or lose capacity depends on a figure that hasn't been published. Scope: Enterprise and Edu accounts currently use a separate credit-based billing system and aren't addressed by the announcement; Free and Go plans are also not in scope. Rollout status as of November 26: OpenAI has begun merging ChatGPT's Chat and Work tabs for some Pro users, and shared-meter billing is reported to be live for those users already. Measurement will shift to tokens for the merged counting. Separate but adjacent: a recent OpenAI billing fix on November 26 caused GPT-6.2 Astra users to hit their limits roughly 40% faster and Sol users roughly 25% faster — this is a bug-fix side effect, not part of the unified-pool design, but it's the kind of billing-math surprise that will happen more often as the meter unification rolls out. API-tier billing stays separate.",
+      "link": "https://help.openai.com/sr-rs/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "why_it_matters": "This is the specific kind of billing change that reads like convenience housekeeping but is actually a meaningful product decision. A unified meter makes usage simpler for subscribers with two active quotas, but it also quietly shifts the cost accounting: heavy Codex users (long coding sessions, big diffs, lots of file reads) and heavy ChatGPT users (long research sessions, Deep Research) are now competing for the same pool, so what used to be a rate-limit hit in Codex specifically can now become a global throttle on both products. The cheapest version of the math: if your current ChatGPT work consumes 70% of its quota and your Codex work consumes 70% of its quota, you've been fine under two separate buckets; under a unified pool sized at the sum of those two quotas you remain fine, but if the pool is sized closer to the higher of the two old quotas, heavy multi-product users specifically lose capacity. OpenAI hasn't published the pool size, so this is the specific number to watch when December lands. For Gabe: if you use ChatGPT (for research, writing) and Codex (for code work) on the same Plus account, the December change probably doesn't improve anything and might reduce your effective per-product ceiling. If you mostly use one product, you gain a little cross-product flexibility. The Nov 26 GPT-6.2 billing-fix side effect is worth flagging because it's the pattern — a billing correction in one place quietly shifting limits in another — that will show up more as the meter unification rolls out. API-tier billing stays separate. Specific timing to watch: whether the December rollout lands early-December (before Christmas-break coding) or late-December (making it an effective January date for most users).",
+      "why_it_matters_brief": "Pool size is the specific undisclosed number — if OpenAI sets it closer to the higher of the two old quotas rather than the sum, heavy multi-product users lose capacity; the quota math is the thing to track before the December rollout lands.",
+      "source": {
+        "name": "OpenAI Help Center ('Understanding ChatGPT and Codex usage limits', updated Nov 2 2026); The New Stack ('OpenAI ChatGPT Codex Shared Limits'); Techenclave; Let's Data Science",
+        "type": "scrape",
+        "url": "https://help.openai.com/sr-rs/articles/20001625-understanding-chatgpt-and-codex-usage-limits"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-26T18:00:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-26T18:00:00Z",
+          "by": "digest",
+          "change": "created — OpenAI unified ChatGPT + Codex usage meter confirmed Oct 31 2026, effective December. One token pool for Plus/Pro/Business. Instant chat excluded. Combined usage in Settings → Usage. hero_image null."
+        },
+        {
+          "at": "2026-11-27T07:00:00Z",
+          "by": "enrichment",
+          "change": "verified via OpenAI Help Center article ('Understanding ChatGPT and Codex usage limits', updated Nov 2 2026). Scope confirmed: Plus/Pro/Business, instant chat excluded, token-based counting, Settings → Usage visibility. Enterprise/Edu confirmed as separate credit-based system (not in scope). Added Nov 26 rollout detail: Chat and Work tabs merging for some Pro users already, shared-meter billing live for those users. Updated primary source URL from secondary dev.to explainer to OpenAI Help Center. Pool-size-per-plan still undisclosed."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI Help Center — 'Understanding ChatGPT and Codex usage limits' (updated Nov 2 2026)",
+          "url": "https://help.openai.com/sr-rs/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+          "take": "Primary authoritative source. Confirms Plus/Pro/Business scope, December start, instant-chat exclusion, Settings → Usage path, and that Enterprise/Edu remain on separate credit-based billing."
+        },
+        {
+          "source": "The New Stack — 'OpenAI ChatGPT Codex Shared Limits'",
+          "url": "https://thenewstack.io/openai-chatgpt-codex-shared-limits/",
+          "take": "Trade-press framing. Captures the user-friction angle — some users object to combining the limits on the grounds that ChatGPT and Codex serve different purposes and should remain separately metered."
+        },
+        {
+          "source": "Let's Data Science — 'OpenAI to pool ChatGPT and Codex usage into one shared allowance in December'",
+          "url": "https://letsdatascience.com/news/openai-reportedly-pools-chatgpt-and-codex-usage-into-shared-4c57488a",
+          "take": "Secondary explainer. Notes the key unknown — whether OpenAI will convert usage across different models and modes into a single budget consistently when the meter unifies in December."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": [
+    {
+      "phase": "enrichment",
+      "id": "anthropic-claude-vp-vnp-proof-lean-nov23",
+      "reason": "Could not verify. WebSearch for 'Anthropic Claude VP VNP Valiant proof Lean verification' returned only Anthropic's actual Lean work on Fermat's Last Theorem (Sep 2026) and Riemann zeta. No VP ≠ VNP proof paper appears in public record dated Nov 23 2026. Primary source URL (interestingengineering.com) could not be fetched in this session's network scope. Dropping to avoid propagating unsourced claims."
+    },
+    {
+      "phase": "enrichment",
+      "id": "sakana-namazu-small-30b-nemotron-nov25",
+      "reason": "Could not verify a Nov 25 '30B Namazu Small' release. The real Sakana Namazu is a Japanese-specialized API model fine-tuned from Moonshot Kimi K2.6, launched Aug 3 2026, with no published parameter count, no open weights, and a proprietary license (per OpenRouter, Vercel AI Gateway and Sakana's own namazu-api page). No 30B variant, no Nemotron 3 Nano continued-pretrain base, and no 60.1-vs-56.2-vs-50.2 25-benchmark table could be sourced. Dropping."
+    },
+    {
+      "phase": "enrichment",
+      "id": "cognition-swe-2-1-devin-kimi-k3-nov24",
+      "reason": "Could not verify a SWE-2.1 release on Nov 24 2026. Current Cognition model tracked in public sources (llm-stats, MindStudio, Cognition blog) remains SWE-2, released Sep 10 2026. Terminal-Bench 4.1 50.0 jump, FrontierCode 2.0 41.3%, four-sandbox-escape disclosure, and Cerebras-hosted Lightning/Ultrafast variant could not be corroborated. Dropping pending primary-source confirmation."
+    },
+    {
+      "phase": "enrichment",
+      "id": "pydantic-ai-v2-74-v2-75-computer-use-nov24-25",
+      "reason": "Could not verify v2.74.0's 'pydantic_ai.computer_use' module or the ComputerTool / ComputerUse() capability. The closest publicly listed November 2026 release is v2.69.0 on Nov 16 2026. A CERN package mirror lists pydantic-ai 2.74.0 but the documented capabilities are filesystem, shell and web-search — no computer-use contract across Docker/Daytona/E2B/Modal/K8s/OpenSandbox could be sourced. Dropping pending official pydantic-ai changelog verification."
+    },
+    {
+      "phase": "enrichment",
+      "id": "eu-sovereign-tech-equity-fund-50b-nov25",
+      "reason": "Could not verify a Nov 25 €50B 'Sovereign Tech Equity Fund' announcement. The actual EU vehicle in this space is the Scaleup Europe Fund at €5B (Jun 2026 announcement, EQT selected as manager Oct 2026), targeting AI, quantum and semiconductors with a 1:5-1:6 private co-investment leverage ratio. The pm item's €50B figure appears to conflate this with the broader ~€500B MFF-dependent framework and misstates the fund's name. Dropping to avoid propagating a 10x-magnitude error."
+    }
+  ]
+}
