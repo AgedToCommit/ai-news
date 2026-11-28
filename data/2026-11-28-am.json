@@ -2,8 +2,8 @@
   "snapshot_id": "2026-11-28-am",
   "snapshot_type": "am",
   "calendar_date": "2026-11-28",
-  "generated_at": "2026-11-28T07:00:00Z",
-  "generated_at_local": "2026-11-28T02:00:00-05:00",
+  "generated_at": "2026-11-28T12:20:00Z",
+  "generated_at_local": "2026-11-28T07:20:00-05:00",
   "phase_history": [
     {
       "phase": "digest",
@@ -14,11 +14,16 @@
       "phase": "enrichment",
       "ran_at": "2026-11-28T07:00:00Z",
       "duration_ms": 1200000
+    },
+    {
+      "phase": "refresh",
+      "ran_at": "2026-11-28T12:00:00Z",
+      "duration_ms": 1200000
     }
   ],
   "tier_counts": {
     "1": 0,
-    "2": 3,
+    "2": 4,
     "3": 2
   },
   "items": [
@@ -284,6 +289,51 @@
           "source": "Motley Fool — 'Why Anthropic Stock Is Up (and Down) Today'",
           "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/",
           "take": "Investor-facing analysis of the first-day price action. Notes the intraday fade from the $111.50 open to midday prints near $93-95, matching the pattern of 'priced for perfection, overshot'."
+        }
+      ]
+    },
+    {
+      "id": "onemillion-bench-neurips-2026-agent-eval",
+      "tier": 2,
+      "title": "$OneMillion-Bench: NeurIPS 2026 paper benchmarks language agents on 400 expert-curated tasks worth $1M+ in professional time — across Law, Finance, Industry, Healthcare, and Natural Science",
+      "summary": "\"$OneMillion-Bench: How Far are Language Agents from Human Experts?\" is an accepted NeurIPS 2026 poster (conference: December 6-12 in Sydney, with Atlanta/Paris satellites Dec 9-13) that benchmarks language agents against senior professional experts across five domains. The benchmark's key distinction is economic-value scoring: each task is weighted by a senior expert's hourly rate multiplied by the time needed to resolve it, so the final score reflects billable professional work rather than raw accuracy. The 400 tasks together total more than $1 million in expert time, which is the naming source. Task selection has an adversarial filter: items are retained only if state-of-the-art agents fail to meet a predefined passing threshold, so the set deliberately targets the hard tail current agents miss. The dataset ships bilingual (English and Chinese) under Apache 2.0 on Hugging Face, with 80 entries per domain across five subsets. The preprint (arXiv 2603.07980) went up in March 2026; the NeurIPS virtual session poster page is live now ahead of the Dec 6 conference opening.",
+      "link": "https://arxiv.org/abs/2603.07980",
+      "why_it_matters": "Agent benchmarks have been in a rough patch — SWE-Bench and similar narrowly measure coding capability, and general-capability claims are hard to compare because every lab picks benchmarks that favor their model. OneMillion-Bench's approach is different in two specific ways: first, it deliberately curates tasks that current SOTA agents fail (so it's measuring actual gaps, not headroom), and second, it converts accuracy scores to economic-value scores using real professional hourly rates, which grounds the benchmark in something concrete — 'how much billable professional work can an agent handle?' rather than 'what's the accuracy on a test set?'. The five domains — Law, Finance, Industry, Healthcare, and Natural Science — are all areas where agents are commercially deployed but where the gap between demo and production is widest. The Apache 2.0 Hugging Face dataset means you can use it directly. For Gabe: this connects naturally to the Arena Agent Arena Index item already in this snapshot. Arena scores agentic task completion in aggregate across millions of real user sessions; OneMillion-Bench scores 'can the agent do the work a senior professional would charge for?' in five specific verticals. The two measures are complementary — Arena tells you which model performs best across general agent tasks, OneMillion-Bench tells you which professional domains still have the largest gap. The NeurIPS timing is worth noting: Dec 6 is 8 days out, so community discussion of these results is likely to surface in the next week.",
+      "why_it_matters_brief": "Agent benchmark that scores by professional economic value, not accuracy — 400 adversarially-filtered tasks (Law, Finance, Healthcare, etc.) that SOTA agents currently fail, now on Hugging Face Apache 2.0, NeurIPS Dec 6.",
+      "source": {
+        "name": "NeurIPS 2026 Poster Session (neurips.cc/virtual/2026/poster/139822); arXiv 2603.07980; Hugging Face (OneMillionBench/OneMillion-Bench)",
+        "type": "scrape",
+        "url": "https://arxiv.org/abs/2603.07980"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-28T12:20:00Z",
+      "added_by": "refresh",
+      "last_revision_by": "refresh",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-28T12:20:00Z",
+          "by": "refresh",
+          "change": "created — NeurIPS 2026 accepted poster on agent evaluation benchmark using economic-value scoring across 400 adversarially-filtered expert-curated tasks in 5 professional domains. Conference opens Dec 6 in Sydney."
+        }
+      ],
+      "takes": [
+        {
+          "source": "NeurIPS 2026 Virtual Poster Page — '$OneMillion-Bench: How Far are Language Agents from Human Experts?'",
+          "url": "https://neurips.cc/virtual/2026/poster/139822",
+          "take": "Accepted NeurIPS 2026 poster. Conference runs December 6-12, 2026 in Sydney (Atlanta/Paris satellites Dec 9-13). Virtual session pages went live after the November 4 camera-ready deadline."
+        },
+        {
+          "source": "arXiv 2603.07980 — '$OneMillion-Bench: How Far are Language Agents from Human Experts?'",
+          "url": "https://arxiv.org/abs/2603.07980",
+          "take": "Original preprint, submitted March 9, 2026. Describes economic-value scoring methodology (task weight = senior expert hourly rate × estimated resolution time), the adversarial task-selection filter (kept only if SOTA agents fail a passing threshold), and the bilingual English/Chinese dataset."
+        },
+        {
+          "source": "Hugging Face — OneMillionBench/OneMillion-Bench",
+          "url": "https://huggingface.co/datasets/OneMillionBench/OneMillion-Bench",
+          "take": "Dataset under Apache 2.0. Five domain subsets (Law, Finance, Industry, Healthcare, Natural Science), 80 expert-curated entries each, bilingual English/Chinese."
         }
       ]
     }
