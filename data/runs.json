@@ -1,6 +1,34 @@
 {
   "runs": [
     {
+      "run_id": "2026-11-28T07:00:00Z-enrichment",
+      "phase": "enrichment",
+      "status": "success",
+      "started_at": "2026-11-28T07:00:00Z",
+      "ended_at": "2026-11-28T07:20:00Z",
+      "wall_time_ms": 1200000,
+      "tokens_used": 32000,
+      "tokens_breakdown": {
+        "rss_sweep": 0,
+        "scrape_sweep": 0,
+        "tier_ranking": 500,
+        "deep_fetch": 0,
+        "discovery_search": 22000,
+        "curation": 9000,
+        "output_write": 500
+      },
+      "fetches_made": 9,
+      "items_input": 6,
+      "items_output": 5,
+      "items_added": 0,
+      "items_kept": 5,
+      "items_dropped": 1,
+      "snapshot_written": "2026-11-28-am",
+      "error": null,
+      "partial": false,
+      "notes": "Enrichment phase, 2am EST Sat Nov 28 2026. Input: yesterday's 2026-11-27-pm.json with 6 items. DNS blocking persists; all research via WebSearch (standard mode). 9 searches total: (1) OpenAI Dec 11 gpt-5/o3 deprecation update; (2) Arena Agent Arena Index update; (3) Red Hat Developer Hub 2.1 GA status; (4) Cohere/Aleph Alpha merger close status; (5) NVIDIA Rubin HPC follow-up benchmarks; (6) Anthropic ANT Nov 27 trading + Nasdaq 100; (7) OpenAI GPT-6/GPT-5.6 Luna replacement model clarification; (8) general AI news Nov 27-28 Black Friday cycle; (9) Simon Willison blog Nov 27. Four items received meaningful enrichment and one received major correction: (1) 'openai-gpt5-o3-december-11-deprecation-deadline' — IMPORTANT correction: OpenAI's deprecations page now maps replacements to gpt-6.1-sol / gpt-6.1-terra / gpt-6-luna on one snapshot and still shows gpt-5.6-sol / gpt-5.6-terra / gpt-5.6-luna on another snapshot of the same page. Yesterday's digest quoted the gpt-5.6-* mapping as authoritative; today's crawl shows this is no longer uniformly the case. Added o3-pro to the Dec 11 shutdown list. GPT-6 family (Astra/Sol/Luna) launched Sep 22 2026; GPT-6.1 Sol followed Sep 29. Recommended procedure updated to GET /v1/models + read shutdown_date field rather than trust any static table. (2) 'arena-agent-arena-index-launch-nov18' — four signals now named precisely (Task Completion, Praise vs Complaint, Steerability, Bash Reliability). Score discrepancy noted: CryptoBriefing/Digg report 1463/134-point lead; FourWeekMBA reports ~1448/112-point lead — reconciled as a rescaling event that left rank order unchanged. Added sub-index results from launch: Claude Sonnet 5 leads Tool Use; GPT-6.1 Terra leads separate Alignment Index. (3) 'redhat-developer-hub-2-1-agent-ready-portal-mcp' — GA now confirmed via Red Hat Security Advisory RHSA-2026:96391 dated Nov 9 2026, three days before the KubeCon NA 2026 announcement. Yesterday's 'GA expected later this month' is now 'GA already shipped Nov 9.' Primary source link moved from SD Times to the RHSA page. (4) 'nvidia-rubin-hpc-sc26-salt-lake-city-50k-cuda-nov16' — major reframe: Vera CPU HPC racks shipping from Dell/HPE/Lenovo/Supermicro in early 2027 (two months from now) added as near-term bookend to the 2028 Rubin HPC chip. Added FP64-to-FP4 precision range. HPCwire caveat: NVIDIA has not disclosed Rubin HPC FP64 throughput, the single most important number for traditional HPC workloads. No independent SC26 benchmarks exist; all performance figures remain NVIDIA-sourced. (5) 'anthropic-nasdaq100-inclusion-december-21-post-ipo' — major expansion from single-index inclusion to four-index sweep inside 10-day window: Russell 1000 (Dec 11, per FTSE Russell notice dated Nov 13), Nasdaq 100 (Dec 21, per Bloomberg), FTSE Global Equity Index Series (Dec 21, via fast entry), MSCI Large Cap. Primary source moved to Nasdaq.com. Dropped 1 item: (6) 'cohere-cubic-aisle-close-cyber-secure-coding-nov10-13' — no new substance in 24h window; Aleph Alpha merger still pending regulatory approval with no new close date; no executive announcements, product integrations, or terms disclosures since Nov 10/13 closes. Late-breaking pass: 0 items added. Black Friday cycle extremely quiet as expected (same pattern as yesterday's digest and the Nov 26 Thanksgiving refresh); no Tier-1 US-lab model releases on Nov 27-28; no new major announcements from Anthropic/OpenAI/Google/Meta/xAI/Mistral/Qwen/DeepSeek. Items considered but not added: (a) further OpenAI GPT-6 Astra/Sol/Luna details — context for existing items, not a new standalone story; (b) various Black Friday AI-tool-discount tracker pages — all retail deals, no substance; (c) Hugging Face trending model lists dated before Nov 27 — no fresh releases in the window. Final snapshot: 5 items, tier_counts {1:0, 2:3, 3:2}. Verification posture: conservative — one item dropped for lack of new substance rather than kept with weak enrichment, matching the Nov 27 pattern of favoring verifiable authoritative primary sourcing over fresh-but-unverifiable aggregator signal."
+    },
+    {
       "run_id": "2026-11-27T18:00:00Z-digest",
       "phase": "digest",
       "status": "success",
