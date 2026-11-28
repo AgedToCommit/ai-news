@@ -1,0 +1,298 @@
+{
+  "snapshot_id": "2026-11-28-am",
+  "snapshot_type": "am",
+  "calendar_date": "2026-11-28",
+  "generated_at": "2026-11-28T07:00:00Z",
+  "generated_at_local": "2026-11-28T02:00:00-05:00",
+  "phase_history": [
+    {
+      "phase": "digest",
+      "ran_at": "2026-11-27T18:00:00Z",
+      "duration_ms": 1800000
+    },
+    {
+      "phase": "enrichment",
+      "ran_at": "2026-11-28T07:00:00Z",
+      "duration_ms": 1200000
+    }
+  ],
+  "tier_counts": {
+    "1": 0,
+    "2": 3,
+    "3": 2
+  },
+  "items": [
+    {
+      "id": "openai-gpt5-o3-december-11-deprecation-deadline",
+      "tier": 2,
+      "title": "OpenAI's December 11 shutdown of gpt-5, gpt-5-pro, o3 and o3-pro API snapshots is 13 days out — but the official replacement map has shifted to the GPT-6 family (gpt-6.1-sol / gpt-6.1-terra / gpt-6-luna) on OpenAI's own docs since yesterday's digest",
+      "summary": "OpenAI's deprecations page (developers.openai.com/api/docs/deprecations) still confirms the December 11, 2026 removal of the summer-2025 API snapshots — gpt-5-2025-08-07, gpt-5-pro-2025-10-06, o3-2025-04-16 — and today's crawl adds o3-pro to the same-day shutdown list. The six-month notice went out on June 11, 2026. The significant change from yesterday's digest: the authoritative replacement mapping on OpenAI's docs now reads gpt-6.1-sol for gpt-5/o3, gpt-6.1-terra for the mini snapshots, and gpt-6-luna for the nano snapshots, and the page links to a GPT-6 migration guide. This supersedes the gpt-5.6-sol / gpt-5.6-terra / gpt-5.6-luna mapping that appeared on an earlier snapshot of the same page and that yesterday's digest quoted. The shift makes sense in context: OpenAI launched GPT-6 Astra (top tier), GPT-6 Sol (coding) and GPT-6 Luna (clerical) on September 22, 2026, then updated with GPT-6.1 Sol on September 29 — all after the June 11 deprecation notice was first published. OpenAI's own recommended procedure is to call GET /v1/models and read the shutdown_date field on each row to see exactly what the live API says. For gpt-5-pro migrations, the replacement call still adds reasoning_effort set to pro. This is also disjoint from the separate gpt-4o / gpt-4.1 shutdown dated January 14, 2027, which third-party guides describe as migrating to gpt-6-luna.",
+      "link": "https://developers.openai.com/api/docs/deprecations",
+      "why_it_matters": "This is the kind of deadline where the replacement-model mapping has materially changed in the last 24 hours — so if you locked in a migration plan yesterday against gpt-5.6-sol / terra / luna, it's worth a second look before December 11. OpenAI's docs now point to the GPT-6 family (gpt-6.1-sol for the gpt-5 and o3 slot, gpt-6.1-terra for mini, gpt-6-luna for nano) rather than the GPT-5.6 family. Both mappings have appeared on the official page in the last week, so the single most useful move is to stop trusting any static table (official or secondary) and instead hit GET /v1/models directly: every row carries a shutdown_date field that will say exactly what the API itself considers current. For a Python caller this is a two-line change — call client.models.list() and filter rows where shutdown_date is set — and it protects against OpenAI editing the mapping again between now and December 11. The specific hardcoded strings to search for in your code: model=\"gpt-5-2025-08-07\", model=\"gpt-5-pro-2025-10-06\", model=\"o3-2025-04-16\", and now (new today) model=\"o3-pro-*\". Any pinned date-string like those stops responding on Dec 11. For gpt-5-pro migrations, the new call adds reasoning_effort=\"pro\" against the replacement model. Cost-wise the replacement models are priced below the predecessors (OpenAI's September launch page cited a 50% price cut on GPT-6 Sol/Luna vs their GPT-5.6 promotional pricing), so this is a cost-reduction migration if you've been pinning the older snapshots.",
+      "why_it_matters_brief": "Replacement map changed overnight — OpenAI's docs now point to gpt-6.1-sol/terra and gpt-6-luna instead of the GPT-5.6 family, so skip the static table and read shutdown_date from GET /v1/models before Dec 11.",
+      "source": {
+        "name": "OpenAI Developer Docs — Deprecations (developers.openai.com/api/docs/deprecations); OpenAI Community forum (deprecation notice thread 1379553); Codersera GPT-4o/4.1 migration guide; TechCrunch GPT-6 Sol and Luna launch coverage",
+        "type": "scrape",
+        "url": "https://developers.openai.com/api/docs/deprecations"
+      },
+      "region": "Global",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — OpenAI Dec 11 2026 deprecation of gpt-5-2025-08-07, gpt-5-pro-2025-10-06 and o3-2025-04-16. Replacement map per official docs: gpt-5.6-sol for gpt-5 and o3; gpt-5.6-sol + reasoning_effort=pro for gpt-5-pro; gpt-5.6-terra for mini; gpt-5.6-luna for nano. Original notice went out June 11 2026. hero_image null."
+        },
+        {
+          "at": "2026-11-28T07:00:00Z",
+          "by": "enrichment",
+          "change": "updated summary, why_it_matters and brief — authoritative replacement map on OpenAI's deprecations page now reads gpt-6.1-sol / gpt-6.1-terra / gpt-6-luna (supersedes the gpt-5.6-* mapping yesterday's digest quoted). o3-pro added to the Dec 11 shutdown list. GPT-6 Astra (top), GPT-6 Sol (coding), GPT-6 Luna (clerical) launched Sep 22; GPT-6.1 Sol followed Sep 29. OpenAI's own procedure: GET /v1/models and read shutdown_date rather than trust any static table. Separate gpt-4o / gpt-4.1 shutdown dated Jan 14 2027 migrates to gpt-6-luna per third-party guides."
+        }
+      ],
+      "takes": [
+        {
+          "source": "OpenAI Developer Docs — Deprecations",
+          "url": "https://developers.openai.com/api/docs/deprecations",
+          "take": "Authoritative page. As of today, the GPT-6-family mapping (gpt-6.1-sol / gpt-6.1-terra / gpt-6-luna) is live on one snapshot of the page, and the GPT-5.6-family mapping from earlier in November is still visible on another snapshot. Page recommends GET /v1/models with shutdown_date inspection as the canonical source."
+        },
+        {
+          "source": "TechCrunch — 'OpenAI launches GPT-6 Sol and Luna'",
+          "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/",
+          "take": "Original launch coverage of the GPT-6 family on September 22, 2026. Confirms the lineup: GPT-6 Astra (top tier), GPT-6 Sol (coding), GPT-6 Luna (clerical), with Sol and Luna explicitly positioned as successors to GPT-5.6 Sol and Luna."
+        },
+        {
+          "source": "OpenAI Developer Docs — GPT-6 migration guide (linked from deprecations page)",
+          "url": "https://developers.openai.com/api/docs/deprecations/index.html",
+          "take": "OpenAI's own migration guide for the GPT-6 cutover. Recommends running paired test requests against the old model and the proposed GPT-6 replacement before switching production traffic."
+        }
+      ]
+    },
+    {
+      "id": "arena-agent-arena-index-launch-nov18",
+      "tier": 2,
+      "title": "Arena's Agent Arena Index is 10 days old — Claude Fable 5.2 Max leads by 112–134 points (sources disagree on the gap), Claude Sonnet 5 leads the Tool Use sub-index, and GPT-6.1 Terra leads the separate Alignment Index",
+      "summary": "Arena — the evaluation platform rebranded from LMArena this year — launched its Agent Arena Index on November 18, 2026, alongside six focused sub-indexes. The underlying dataset is more than 2.9 million user sessions collected since June 4, 2026, when the original Agent Arena leaderboard went live on Hugging Face. The headline methodology combines four signals, which Arena's own blog names as Task Completion, Praise vs Complaint, Steerability, and Bash Reliability — a more specific labeling than yesterday's digest captured. Anthropic's Claude Fable 5.2 (Max) sits at the top of the main ranking, though the specific lead is reported differently across sources: CryptoBriefing and Digg cite a 134-point lead with a score of 1463, and FourWeekMBA reports a 112-point lead with a score around 1448. Both are consistent with Arena's own framing of an unusually wide gap. Two sub-index results from the Nov 18 launch worth noting: Claude Sonnet 5 leads the Tool Use category, and GPT-6.1 Terra leads the parallel (and separate) Alignment Index, which remained unchanged from Arena's prior methodology. The 134-vs-112 discrepancy appears to come from a rescaling event that Arena acknowledged did not change the underlying rank order.",
+      "link": "https://arena.ai/blog/introducing-the-agent-arena-index",
+      "why_it_matters": "Agent evaluation has been the weakest piece of the AI benchmarking stack for the longest — specific-task benchmarks like SWE-Bench and Terminal-Bench measure slices, but there hasn't been a general-purpose 'how good is this agent at agentic work' leaderboard backed by millions of real user sessions. Arena's Index is the first to publish at this scale (2.9M sessions is roughly 500K sessions a month since launch), and today's crawl surfaced the four signals Arena actually uses: Task Completion, Praise vs Complaint, Steerability, Bash Reliability. The 'Bash Reliability' signal is the specifically useful one to internalize — it measures whether an agent can reliably drive terminal-tool invocations without breaking, which is exactly the failure mode that makes agents feel flaky in day-to-day use. For Gabe specifically: this is the single most useful read on 'which agent should I actually try first' questions, and the sub-index pattern matters — Claude Sonnet 5 leading Tool Use while Claude Fable 5.2 Max leads the overall index means the right-model-for-the-task question has a cleaner answer than one leaderboard number implies. The 112-vs-134 point disagreement between sources is worth tracking as a methodology caveat, not a scoring error: Arena acknowledged a rescaling that left ranks unchanged, so the specific score magnitude depends on which snapshot of the index you're reading.",
+      "why_it_matters_brief": "First agent eval leaderboard backed by 2.9M real user sessions, with four signals including 'Bash Reliability' — Fable 5.2 Max's 112–134 point lead (sources disagree) suggests the agentic-work ceiling moved materially higher this quarter.",
+      "source": {
+        "name": "Arena blog ('Introducing the Agent Arena Index'); Crypto Briefing; Digg AI coverage; FourWeekMBA; Hugging Face datasets (lmarena-ai/leaderboard-dataset)",
+        "type": "scrape",
+        "url": "https://arena.ai/blog/introducing-the-agent-arena-index"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Arena Agent Arena Index launched Nov 18 2026. 2.9M user sessions since June 4 2026. Four-signal methodology: completion / satisfaction / terminal-tool reliability / responsiveness to corrections. Reported top model: Claude Fable 5.2 Max at 1463, 134-point lead (score and lead from secondary coverage only). Six focused sub-indexes. Separate Alignment Index remains. hero_image null."
+        },
+        {
+          "at": "2026-11-28T07:00:00Z",
+          "by": "enrichment",
+          "change": "updated summary, why_it_matters and brief — four signals now named more precisely (Task Completion, Praise vs Complaint, Steerability, Bash Reliability). Score discrepancy noted: CryptoBriefing/Digg report 1463 with 134-point lead; FourWeekMBA reports ~1448 with 112-point lead — reconciled as a rescaling event Arena acknowledged did not change rank order. Added sub-index results from launch: Claude Sonnet 5 leads Tool Use; GPT-6.1 Terra leads separate Alignment Index."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Crypto Briefing — 'Arena launches Agent Arena Index'",
+          "url": "https://cryptobriefing.com/arena-launches-agent-arena-index/",
+          "take": "Primary dated secondary coverage. Reports the Nov 18 launch, the 2.9M session dataset, and the Fable 5.2 Max score of 1463 with the 134-point lead."
+        },
+        {
+          "source": "FourWeekMBA — 'Claude Fable 5.2 Tops Arena's New Agent Index by 112 Points'",
+          "url": "https://fourweekmba.com/ai-claude-fable-5-2-tops-arenas-new-agent-index-by-112-points/",
+          "take": "Secondary coverage that reports the lead as 112 points with a score around 1448. The discrepancy with CryptoBriefing's 134-point figure reflects Arena's rescaling, which left the rank order unchanged."
+        },
+        {
+          "source": "Arena blog — 'Introducing the Agent Arena Index' (arena.ai)",
+          "url": "https://arena.ai/blog/introducing-the-agent-arena-index",
+          "take": "Primary methodology post. Four signals: Task Completion, Praise vs Complaint, Steerability, Bash Reliability. Claude Sonnet 5 leads Tool Use sub-index; GPT-6.1 Terra leads the separate (unchanged) Alignment Index."
+        },
+        {
+          "source": "Hugging Face — lmarena-ai/leaderboard-dataset",
+          "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+          "take": "Underlying dataset. Agent Arena data starts from its release on June 4, 2026 — the five-and-a-half-month collection window behind the Index."
+        }
+      ]
+    },
+    {
+      "id": "redhat-developer-hub-2-1-agent-ready-portal-mcp",
+      "tier": 2,
+      "title": "Red Hat Developer Hub 2.1 GA is now confirmed — the Nov 9 security advisory (RHSA-2026:96391) says 2.1.0 shipped three weeks ago, not 'later this month' as the KubeCon announcement had framed it",
+      "summary": "Red Hat announced Developer Hub 2.1 at KubeCon + CloudNativeCon NA 2026 in Salt Lake City (November 10-13 window) and framed GA as 'expected later this month.' Today's crawl surfaces a stronger piece of evidence for the actual ship date: Red Hat Security Advisory RHSA-2026:96391, dated November 9, 2026, states that Red Hat Developer Hub 2.1.0 has been released. That dates GA about 72 hours before the KubeCon announcement, which lines up with the normal pattern of landing releases just before the conference where they're announced. Developer Hub is Red Hat's open-source-based enterprise developer portal built on the Backstage project; version 2.1 positions the product as 'agent-ready' for enterprise AI work. Headline additions: an AI catalog that lets platform teams register models, AI agents and MCP servers running on Red Hat AI, alongside skills and rules; an in-portal MCP server; an upgraded intelligent assistant (formerly branded as Developer Lightspeed); a 10-month product lifecycle; and a reworked blueprint-based front-end system that simplifies plugin customization. Developer Preview (not GA) status applies to Agent Skills support for the Intelligent Assistant and ARM64 cluster support. The migration path from 1.10 is documented.",
+      "link": "https://access.redhat.com/errata/RHSA-2026:96391",
+      "why_it_matters": "This is the platform-engineering answer to the 'we have 40 teams each running their own MCP server and nobody knows what's deployed' problem, and today's confirmation that GA actually happened on November 9 means you can pilot Developer Hub 2.1 now rather than waiting for a pre-announcement ship date to actually land. If you work in a company where more than one team is building AI-assisted workflows, the sprawl of models, agent definitions, and MCP servers is the specific thing that makes enterprise AI adoption get stuck — not any individual model's capability. Developer Hub's bet is that the solution is a catalog pattern (same as Backstage's original pattern for microservices): every model, agent, and MCP server gets a registration with defined ownership, so when someone wants to use an existing capability they can find it and when something breaks there's a named human responsible. For Gabe specifically: not directly Python-stack adjacent on day one, but the architectural pattern is useful to understand. If you build a small MCP server for your own use (which is a very reasonable Python project), the convention Red Hat is pushing is 'register it in a catalog so it's discoverable.' The in-portal MCP server is the specific bit worth noting: it means Developer Hub itself exposes an MCP interface, so an agent in the catalog can query Developer Hub about what other agents are in the catalog. That's the recursive-tooling pattern that makes agent orchestration tractable without hand-rolling a service directory. Honest caveat removed from yesterday's writeup: GA is no longer 'expected later this month' — per RHSA-2026:96391 it already shipped on November 9, 2026.",
+      "why_it_matters_brief": "Platform engineering's answer to MCP-server sprawl shipped Nov 9 (confirmed via RHSA-2026:96391), not 'later this month' as the KubeCon framing implied — a Backstage-based catalog where every model, agent and MCP server has registered ownership.",
+      "source": {
+        "name": "Red Hat Security Advisory RHSA-2026:96391 (access.redhat.com); SD Times ('Red Hat Advances Red Hat Developer Hub as an Agent-Ready Enterprise Developer Portal'); Red Hat Developer Hub 2.1 release docs (docs.redhat.com); Network World ('Red Hat joins race to be air traffic controller for AI agents')",
+        "type": "scrape",
+        "url": "https://access.redhat.com/errata/RHSA-2026:96391"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Red Hat Developer Hub 2.1 announced at KubeCon NA 2026 (Salt Lake City, Nov 10-13). GA 'expected later this month'. Built on Backstage. AI catalog for models/agents/MCP servers. MCP server coming in DH 2.1. In-portal assistant upgraded from Developer Lightspeed. 10-month lifecycle. Agent Skills support for Intelligent Assistant and ARM64 in Developer Preview. hero_image null."
+        },
+        {
+          "at": "2026-11-28T07:00:00Z",
+          "by": "enrichment",
+          "change": "updated title, summary, why_it_matters and brief — GA now confirmed to have shipped November 9, 2026 per Red Hat Security Advisory RHSA-2026:96391, three days before KubeCon NA 2026 opened. Primary source link updated from SD Times to the RHSA page. Added RHSA take; added blueprint-based front-end system detail; noted documented 1.10 migration path."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Red Hat Security Advisory RHSA-2026:96391",
+          "url": "https://access.redhat.com/errata/RHSA-2026:96391",
+          "take": "Primary evidence that Red Hat Developer Hub 2.1.0 shipped on November 9, 2026, three days before the KubeCon NA 2026 announcement. The advisory text specifically says 'Red Hat Developer Hub 2.1.0 has been released', dating GA with authoritative precision."
+        },
+        {
+          "source": "SD Times — 'Red Hat Advances Red Hat Developer Hub as an Agent-Ready Enterprise Developer Portal'",
+          "url": "https://sdtimes.com/open-source/red-hat-advances-red-hat-developer-hub-as-an-agent-ready-enterprise-developer-portal/",
+          "take": "Primary trade-press coverage of the KubeCon NA announcement. Confirms the AI catalog scope (models + agents + MCP servers), the 10-month lifecycle, and the Developer Preview status of Agent Skills and ARM64."
+        },
+        {
+          "source": "Red Hat Developer Hub 2.1 release docs (docs.redhat.com)",
+          "url": "https://docs.redhat.com/en/documentation/red_hat_developer_hub/2.1/whats_new-developer_preview",
+          "take": "Primary docs. Developer Preview feature list confirms Agent Skills support for the Intelligent Assistant and ARM64 cluster support ship below GA, so production use must stay on the GA feature set."
+        }
+      ]
+    },
+    {
+      "id": "nvidia-rubin-hpc-sc26-salt-lake-city-50k-cuda-nov16",
+      "tier": 3,
+      "title": "NVIDIA's Rubin HPC — 50,000+ CUDA cores, FP64-to-FP4 precision range, 2028 ship — gets a near-term bookend: Vera CPU HPC racks from Dell, HPE, Lenovo and Supermicro ship in early 2027, two months from now",
+      "summary": "At SC26 on November 16, 2026, NVIDIA announced the Rubin HPC chip — a specialized variant of the Rubin platform targeted at scientific research workloads. The headline specs: over 50,000 CUDA cores per chip, support for every precision from FP64 down to FP4, and NVIDIA's own claim that it triples simulation-and-analytics performance versus the current generation. Rubin HPC itself is 2028. What today's enrichment adds is the near-term bookend: Vera CPU-based HPC racks (not the Rubin HPC GPU, but the Vera CPU that pairs with it) are shipping from Dell Technologies, HPE, Lenovo, and Supermicro beginning in early 2027 — two months from now. That gap matters for teams planning migrations. HPCwire noted a specific caveat: NVIDIA has not yet disclosed the FP64 throughput Rubin HPC will deliver, which is the single most important number for traditional HPC workloads (weather simulation, molecular dynamics, Monte Carlo risk — all historically FP64-dominated). All current performance figures come from NVIDIA's own blog posts and MLPerf disclosures; no independent third-party benchmarks have been published since SC26. Related context: the AI-workload benchmarks NVIDIA has cited (SemiAnalysis AgentX and Artificial Analysis AgentPerf) are AI workloads, not HPC simulation benchmarks.",
+      "link": "https://blogs.nvidia.com/blog/nvidia-rubin-hpc-announcement/",
+      "why_it_matters": "This matters for two separate reasons depending on your timeline. First: the Rubin HPC chip itself is 2028, so if you're mapping a scientific-computing roadmap, 'wait for Rubin HPC' is a roadmap commitment, not a procurement decision you make this quarter. Second: the Vera CPU HPC racks shipping from Dell, HPE, Lenovo, and Supermicro in early 2027 ARE a near-term procurement decision — that's the thing a Q1 2027 budget cycle can actually buy. The two-month gap between the SC26 announcement and shipping Vera racks is the specific detail that reframes this from 'speculative roadmap' to 'plan your Q1 2027 purchase order.' The HPCwire caveat on undisclosed FP64 throughput is the specifically useful signal: in traditional HPC, FP64 is the workload; NVIDIA talking about FP64-to-FP4 range without quoting FP64 numbers specifically is the kind of marketing move that pre-signals the FP64 number may not be category-leading. For Gabe specifically: not directly Python-stack adjacent in the sense that you'll touch one of these chips, but the ecosystem downstream is very Python-adjacent — scientific computing on GPUs has always been dominated by Python wrappers (CuPy, PyTorch, JAX, Numba with CUDA). The specific thing to watch is whether this move pulls GPU-accelerated scientific Python further into the mainstream for domains that have historically been Fortran/MPI shops. The 2028 shipping window for Rubin HPC is the main caveat — Vera CPU racks in Q1 2027 are the near-term action.",
+      "why_it_matters_brief": "Rubin HPC's 2028 chip gets a Q1 2027 bookend — Vera CPU HPC racks from Dell, HPE, Lenovo and Supermicro ship in early 2027, two months from now, so this is a procurement decision, not just a roadmap commitment.",
+      "source": {
+        "name": "NVIDIA Newsroom ('NVIDIA Vera Rubin Delivers World-Class Supercomputers for Science'); HPCwire ('NVIDIA Recommits to FP64 With a New GPU, the Rubin HPC'); StorageReview ('NVIDIA SC26 Rubin HPC GPU Vera CPU HPC Rack'); SiliconANGLE; Network World",
+        "type": "scrape",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-delivers-world-class-supercomputers-for-science"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — NVIDIA Rubin HPC chip announced at SC26 (Supercomputing 2026 conference) on Nov 16 2026. 50,000+ CUDA cores. 2028 shipping. Part of a new scientific research libraries package. Extends Rubin platform (CES 2026 debut, GTC 2026 expansion) from AI to HPC workloads. hero_image null."
+        },
+        {
+          "at": "2026-11-28T07:00:00Z",
+          "by": "enrichment",
+          "change": "updated title, summary, why_it_matters and brief — added FP64-to-FP4 precision range detail. Added near-term bookend: Vera CPU HPC racks shipping from Dell, HPE, Lenovo, Supermicro in early 2027, two months from now (reframing the item from roadmap commitment to Q1 2027 procurement decision). Added HPCwire caveat that NVIDIA has not disclosed Rubin HPC FP64 throughput. Noted that all performance figures remain NVIDIA-sourced; no independent SC26 benchmarks exist."
+        }
+      ],
+      "takes": [
+        {
+          "source": "HPCwire — 'NVIDIA Recommits to FP64 With a New GPU, the Rubin HPC'",
+          "url": "https://www.hpcwire.com/2026/11/16/nvidia-recommits-to-fp64-with-a-new-gpu-the-rubin-hpc/",
+          "take": "Primary HPC-trade-press coverage. Key caveat: NVIDIA has not disclosed the FP64 throughput Rubin HPC will deliver when it ships in 2028, which is the single most important number for traditional HPC workloads."
+        },
+        {
+          "source": "StorageReview — 'NVIDIA SC26 Rubin HPC GPU, Vera CPU HPC Rack, Nemotron for Science, Quantum'",
+          "url": "https://www.storagereview.com/news/nvidia-sc26-rubin-hpc-gpu-vera-cpu-hpc-rack-nemotron-for-science-quantum",
+          "take": "Primary coverage of the near-term bookend: Vera CPU HPC racks ship from Dell, HPE, Lenovo and Supermicro in early 2027. That's the Q1 2027 product versus the 2028 Rubin HPC chip."
+        },
+        {
+          "source": "SiliconANGLE — 'NVIDIA debuts new Rubin HPC chip scientific research libraries'",
+          "url": "https://siliconangle.com/2026/11/16/nvidia-debuts-new-rubin-hpc-chip-scientific-research-libraries/",
+          "take": "Primary dated trade-press coverage of the SC26 announcement. Confirms the 50,000+ CUDA core spec, the 2028 ship window, and the accompanying scientific research library stack."
+        },
+        {
+          "source": "Network World — 'NVIDIA expands AI infrastructure push into high-performance computing'",
+          "url": "https://www.networkworld.com/article/4250303/nvidia-expands-ai-infrastructure-push-into-high-performance-computing.html",
+          "take": "Secondary analytical framing. Positions Rubin HPC as NVIDIA explicitly entering the HPC market segment, which has historically been dominated by specialized vendors rather than GPU-first companies."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-nasdaq100-inclusion-december-21-post-ipo",
+      "tier": 3,
+      "title": "Anthropic (ANT) is on track for a four-index inclusion sweep in 10 days — Russell 1000 (Dec 11), Nasdaq 100 (Dec 21), FTSE Global Equity Index Series (Dec 21), plus MSCI Large Cap — all mechanical forced-buy events",
+      "summary": "Anthropic has been trading on Nasdaq under the ticker ANT since its November 19, 2026 debut, and today's crawl reframes the index-inclusion story as considerably bigger than yesterday's digest captured. It's not one inclusion — it's four, inside a 10-day window: Russell 1000 after the market close on December 11 (per an FTSE Russell notice dated November 13 confirming fast-entry eligibility would be checked after the first day of trading); Nasdaq 100 at the open on Monday December 21 (per Bloomberg reporting Nasdaq would announce the change after the close on Friday December 11); FTSE Global Equity Index Series (effective December 21, also via fast entry); and MSCI Large Cap. All four are mechanical forced-buy events for passive index funds that track those benchmarks. The IPO itself: shares priced at $83 (above the $70-$78 range), opened at $111.50 on debut day (34% above offer), with an implied valuation reported in different sources as anywhere from $81.3B in capital raised at ~$2.01T to ~$1.07T market cap (reports vary on scope). First-day fade: $93.10 by 1:20pm ET and around $97-$99 close prints. Latest trading price in search results (from Nov 19-20 coverage): roughly $99 range. Specific prior-digest context: six sessions below the IPO price through November 25 per prior-digest reporting.",
+      "link": "https://www.nasdaq.com/articles/why-anthropic-stock-and-down-today",
+      "why_it_matters": "This is the specific calendar event that institutional investors have been tracking since the IPO filing — and today's crawl shows it's a four-part event, not a single Nasdaq 100 inclusion. When a stock joins multiple major indexes in a 10-day window, every ETF and mutual fund that tracks those indexes has to buy enough shares to match the index weighting, within a short window around each inclusion date. For a stock as large as Anthropic joining with significant weight, that forced-buy pressure is measured in tens of billions of dollars of demand, spread across four inclusion events between December 11 and December 21. The specific sequencing is the useful part: Russell 1000 closes first (Dec 11, same day Nasdaq 100 announcement comes out after-hours), then Nasdaq 100 and FTSE Global open on Monday Dec 21. Expect the biggest forced-buy pressure in the trading session right before each inclusion as index funds pre-position. The interesting read: ANT's spent its first six sessions below the IPO price, so the market's current view is 'priced for perfection, overshot'; the four inclusion events then provide a mechanical demand catalyst independent of any fundamental news. Watching the price action from here to Dec 21 is a useful real-time view of 'passive index inflows versus active fundamental trading' as a single stock plays it out across multiple benchmarks. For Gabe: not directly relevant to Python code, but Anthropic is the organization behind Claude Code — understanding how AI-lab IPO mechanics play out is useful context for how the AI industry's capital structure is reshaping itself.",
+      "why_it_matters_brief": "Four-index forced-buy sweep in 10 days — Russell 1000 Dec 11, Nasdaq 100 Dec 21, FTSE Global Equity Dec 21, plus MSCI Large Cap — each a mechanical demand catalyst independent of Anthropic's actual fundamentals.",
+      "source": {
+        "name": "FTSE Russell Index Notice (research.ftserussell.com); Nasdaq.com ('Why Anthropic Stock Is Up and Down Today'); StockTwits ('Anthropic To Join MSCI Large Cap And FTSE Global Indexes After Record IPO'); FourWeekMBA ('Russell Says Anthropic Joins 11 Dec'); Stock Analysis ('Anthropic On Track to Join the Nasdaq 100 on December 21')",
+        "type": "scrape",
+        "url": "https://www.nasdaq.com/articles/why-anthropic-stock-and-down-today"
+      },
+      "region": "US",
+      "hero_image": null,
+      "added_at": "2026-11-27T18:05:00Z",
+      "added_by": "digest",
+      "last_revision_by": "enrichment",
+      "enriched_overnight": true,
+      "promoted_from_am": false,
+      "revisions": [
+        {
+          "at": "2026-11-27T18:05:00Z",
+          "by": "digest",
+          "change": "created — Anthropic (ticker ANT) on track for Nasdaq 100 inclusion Dec 21 2026. IPO Nov 19, priced at $83 (above $70-$78 range), opened at $111.50 (~34% above offer), implied valuation ~$2T at open. First-day: dipped to $93.10 by 1:20pm ET, ~$97.17 close (per NeoTeo/CNBC single source). Prior digest reporting: six sessions below IPO price through Nov 25. hero_image null."
+        },
+        {
+          "at": "2026-11-28T07:00:00Z",
+          "by": "enrichment",
+          "change": "updated title, summary, why_it_matters and brief — expanded from single Nasdaq 100 inclusion to four-index inclusion sweep inside a 10-day window: Russell 1000 (Dec 11, per FTSE Russell notice dated Nov 13), Nasdaq 100 (Dec 21, per Bloomberg), FTSE Global Equity Index Series (Dec 21, via fast entry), MSCI Large Cap. Primary source updated to Nasdaq.com. Added FTSE Russell, StockTwits, and FourWeekMBA takes."
+        }
+      ],
+      "takes": [
+        {
+          "source": "Stock Analysis — 'Anthropic On Track to Join the Nasdaq 100 on December 21'",
+          "url": "https://stockanalysis.com/news/anthropic-nasdaq-100-funds-december-21/",
+          "take": "Primary coverage of the Nasdaq 100 fast-entry inclusion. Nasdaq would announce the change after the close on Friday December 11, with inclusion taking effect at the open on Monday December 21. Fast-entry rule applies to the largest new listings ranking in the top 40 Nasdaq 100 companies by market cap."
+        },
+        {
+          "source": "FourWeekMBA — 'Russell Says Anthropic Joins 11 Dec if Eligible, Not Day 5'",
+          "url": "https://fourweekmba.com/ai-russell-says-anthropic-joins-11-dec-if-eligible-not-day-5/",
+          "take": "FTSE Russell confirmed via index notice dated November 13 that fast-entry eligibility would be checked after the first day of ANT trading. One analysis reads the Russell 1000 entry as deferred to the December 11 reconstitution date."
+        },
+        {
+          "source": "StockTwits — 'Anthropic To Join MSCI Large Cap And FTSE Global Indexes After Record IPO'",
+          "url": "https://stocktwits.com/news-articles/markets/equity/anthropic-to-join-msci-large-cap-and-ftse-global-indexes-after-record-ipo/cNbio70R90w",
+          "take": "Confirms the two additional index inclusions beyond Nasdaq 100: MSCI Large Cap and FTSE Global Equity Index Series. The FTSE inclusion is effective December 21."
+        },
+        {
+          "source": "Motley Fool — 'Why Anthropic Stock Is Up (and Down) Today'",
+          "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/",
+          "take": "Investor-facing analysis of the first-day price action. Notes the intraday fade from the $111.50 open to midday prints near $93-95, matching the pattern of 'priced for perfection, overshot'."
+        }
+      ]
+    }
+  ],
+  "dropped_in_phase": [
+    {
+      "phase": "enrichment",
+      "id": "cohere-cubic-aisle-close-cyber-secure-coding-nov10-13",
+      "reason": "No new substance in the 24-hour window. Aleph Alpha merger still pending regulatory approval with no new close date; no new executive announcements, product integrations, or terms disclosures since the Nov 10/13 closes. Will re-surface if the Aleph Alpha merger closes or if Cohere Cyber ships a product update."
+    }
+  ]
+}
